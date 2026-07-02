@@ -30,7 +30,11 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  font-family: 'Inter', -apple-system,
+    'PingFang SC', 'PingFang TC',
+    'Microsoft YaHei', 'Microsoft JhengHei',
+    'Noto Sans CJK SC', 'Noto Sans CJK TC',
+    system-ui, sans-serif;
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
@@ -40,12 +44,19 @@ body {
 
 /* ── Type Tokens ── */
 .serif {
-  font-family: 'Instrument Serif', 'Times New Roman', serif;
+  font-family: 'Instrument Serif',
+    'Songti SC', 'Songti TC',
+    'SimSun', 'PMingLiU',
+    'Noto Serif CJK SC', 'Noto Serif CJK TC',
+    'Times New Roman', serif;
   font-weight: 400;
   letter-spacing: -0.01em;
 }
 .mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'JetBrains Mono',
+    'PingFang SC', 'PingFang TC',
+    'Microsoft YaHei', 'Microsoft JhengHei',
+    monospace;
 }
 .eyebrow {
   font-family: 'JetBrains Mono', monospace;
@@ -74,6 +85,20 @@ body {
   font-size: 12px;
   color: var(--ink-4);
   letter-spacing: 0.04em;
+}
+
+/* ── CJK typography overrides ── */
+/* Tighten letter-spacing on eyebrows — Chinese typography uses minimal spacing. */
+:root:lang(zh-CN) .eyebrow,
+:root:lang(zh-HK) .eyebrow,
+:root:lang(zh-CN) .eyebrow-ink,
+:root:lang(zh-HK) .eyebrow-ink {
+  letter-spacing: 0.04em;
+}
+/* CJK glyphs sit taller — give serif headings more vertical room. */
+:root:lang(zh-CN) .serif,
+:root:lang(zh-HK) .serif {
+  line-height: 1.15;
 }
 
 /* ── Navigation Sidebar ── */
@@ -161,6 +186,46 @@ body {
   height: 16px;
   background: var(--accent);
   box-shadow: 0 0 8px var(--accent);
+}
+
+/* ── Language Switcher (bottom of nav sidebar) ── */
+.nav-lang {
+  flex-shrink: 0;
+  padding: 16px 24px 28px;
+  border-top: 1px solid var(--ink-3);
+  margin-top: auto;
+}
+
+.nav-lang-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.nav-lang a {
+  display: block;
+  padding: 7px 0 7px 12px;
+  margin-left: -12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-4);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-lang a:hover {
+  color: var(--paper);
+}
+
+.nav-lang a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
 }
 
 /* ── Main Content ── */

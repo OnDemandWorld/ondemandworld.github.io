@@ -48,8 +48,8 @@
       backdrop.addEventListener('click', closeNav);
     }
 
-    // Close nav on link click (mobile)
-    var navLinks = document.querySelectorAll('.nav-links a');
+    // Close nav on link click (mobile) — covers both section nav and lang switcher.
+    var navLinks = document.querySelectorAll('.nav-links a, .nav-lang a');
     navLinks.forEach(function (link) {
       link.addEventListener('click', closeNav);
     });
@@ -83,11 +83,39 @@
     });
   }
 
+  function getCurrentLang() {
+    var path = window.location.pathname;
+    if (path.indexOf('/zh-cn') !== -1) return 'zh-CN';
+    if (path.indexOf('/zh-hk') !== -1) return 'zh-HK';
+    return 'en';
+  }
+
+  function initLangSwitcher() {
+    var current = getCurrentLang();
+    var hash = window.location.hash || '';
+    var links = document.querySelectorAll('.nav-lang a');
+
+    links.forEach(function (link) {
+      var lang = link.getAttribute('data-lang');
+      // Highlight the current locale.
+      if (lang === current) {
+        link.classList.add('active');
+      }
+      // Preserve the current section anchor across language switches,
+      // so clicking 简体中文 while reading #modules lands on /zh-cn/#modules.
+      var baseHref = link.getAttribute('href').split('#')[0];
+      link.setAttribute('href', baseHref + hash);
+    });
+  }
+
   function init() {
     scaleSlides();
     initNav();
     initScrollSpy();
+    initLangSwitcher();
     window.addEventListener('resize', scaleSlides);
+    // Re-apply hash preservation when the user navigates within the page.
+    window.addEventListener('hashchange', initLangSwitcher);
   }
 
   if (document.readyState === 'loading') {

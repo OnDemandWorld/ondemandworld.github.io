@@ -1,0 +1,12 @@
+# This repo is the GitHub Pages output for the ODW.ai org site.
+# Track only the final site files; ignore everything else by default.
+*
+!index.html
+!styles.css
+!app.js
+!.gitignore
+!.github/
+!zh-cn/
+!zh-cn/index.html
+!zh-hk/
+!zh-hk/index.html
