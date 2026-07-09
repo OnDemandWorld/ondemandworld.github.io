@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recap — FAQ for Business Users</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="subtitle">Recap FAQ</div>
+  <h1>Recap FAQ</h1>
+  <p>On-device meeting transcription — local audio capture, Whisper-powered transcription, structured summaries, action items. Answers for business leaders, no technical background required.</p>
+  <span class="last-updated">Last updated: 2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">Home</a>
+    <span class="sep">→</span>
+    <a href="./index.html">FAQ</a>
+    <span class="sep">→</span>
+    <a href="./suite.html">Suite</a>
+    <span class="sep">→</span>
+    <span>Recap</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search questions… (e.g. 'transcription', 'Whisper', 'on-device', 'action items', 'sovereignty', 'HIPAA')">
+  </div>
+  <div class="controls">
+    <button onclick="expandAll()">＋ Expand all</button>
+    <button onclick="collapseAll()">− Collapse all</button>
+    <button onclick="window.print()">🖨️ Print / Save PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>Jump to a section</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> The Basics</a>
+      <a href="#s2"><span class="num">2</span> Transcription & Audio</a>
+      <a href="#s3"><span class="num">3</span> Our Solution's Strengths</a>
+      <a href="#s4"><span class="num">4</span> Summaries & Action Items</a>
+      <a href="#s5"><span class="num">5</span> Security & Privacy</a>
+      <a href="#s6"><span class="num">6</span> Models & AI</a>
+      <a href="#s7"><span class="num">7</span> Deployment & Setup</a>
+      <a href="#s8"><span class="num">8</span> Cost & Pricing</a>
+      <a href="#s9"><span class="num">9</span> Scaling & Operations</a>
+      <a href="#s10"><span class="num">10</span> Integration & Workflows</a>
+      <a href="#s11"><span class="num">11</span> Limitations & Roadmap</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">No questions matched your search. Try a broader keyword.</div>
+
+  <!-- SECTION 1: THE BASICS -->
+  <div class="section" id="s1">
+    <div class="section-header"><span class="icon">01 · OVERVIEW</span><h2>The Basics — What Is Recap?</h2><span class="count">9 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">What is ODW.ai Recap in plain English?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap is a <strong>meeting transcription and intelligence tool</strong> that runs entirely on your device. It captures audio from your meetings (Zoom, Teams, Google Meet, or any other platform), transcribes the conversation locally, and generates structured summaries with action items.</p>
+        <p>Here's how it works:</p>
+        <ol>
+          <li><strong>Audio capture:</strong> Recap captures system audio (what you hear through your speakers/headphones) — no cloud bots joining your meetings</li>
+          <li><strong>Transcription:</strong> Audio is transcribed locally using Whisper (open-source speech recognition)</li>
+          <li><strong>Summarization:</strong> AI generates a summary, extracts action items, and identifies decisions</li>
+          <li><strong>Organization:</strong> Transcripts and summaries are stored locally, searchable, and exportable</li>
+        </ol>
+        <p>The key difference from other meeting tools: <strong>everything happens on your device</strong>. No audio or transcripts are sent to the cloud. Full sovereignty.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What problem does Recap solve?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Organizations face a tension between two needs:</p>
+        <ul>
+          <li><strong>Workflow automation:</strong> Cloud-based meeting tools (Otter.ai, Fireflies, Grain) are convenient but require sending your meeting audio to their servers</li>
+          <li><strong>Data sovereignty:</strong> Regulated industries, privacy-conscious teams, and organizations in data-residency contexts can't send sensitive conversations to third-party servers</li>
+        </ul>
+        <p>Recap solves this by providing <strong>on-device meeting intelligence</strong>. Your audio and transcripts never leave your machine. No cloud bots silently joining calls. No transcripts sitting on a vendor's servers.</p>
+        <div class="callout info"><strong>The result</strong>You get the benefits of meeting intelligence (summaries, action items, searchable transcripts) without sacrificing data sovereignty.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Who is Recap for?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap is designed for <strong>regulated and privacy-conscious organizations</strong>:</p>
+        <ul>
+          <li><strong>Legal firms:</strong> Attorney-client privilege requires keeping meeting conversations confidential</li>
+          <li><strong>Healthcare:</strong> HIPAA-adjacent workflows where patient discussions can't be sent to cloud services</li>
+          <li><strong>Financial services:</strong> Fintech and financial institutions with strict data controls</li>
+          <li><strong>Government contractors:</strong> Defense-adjacent SMBs handling sensitive government data</li>
+          <li><strong>EU-based organizations:</strong> GDPR data-minimization requirements</li>
+          <li><strong>Any organization:</strong> Where "no cloud bot joining our call" is a hard requirement</li>
+        </ul>
+        <p>If you can't use Otter.ai or Fireflies because of data sovereignty concerns, Recap is for you.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How is Recap different from Otter.ai or Fireflies?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The key difference is <strong>deployment model</strong>:</p>
+        <table>
+          <thead><tr><th>Aspect</th><th>ODW.ai Recap</th><th>Otter.ai / Fireflies / Grain</th></tr></thead>
+          <tbody>
+            <tr><td>Audio processing</td><td>✅ On-device — never leaves your machine</td><td>❌ Sent to vendor's cloud servers</td></tr>
+            <tr><td>Meeting bots</td><td>✅ No bots — captures system audio</td><td>❌ Cloud bots join your meetings</td></tr>
+            <tr><td>Data sovereignty</td><td>✅ Full control</td><td>❌ Vendor has access to your audio</td></tr>
+            <tr><td>Platform support</td><td>✅ Any platform (Zoom, Teams, Meet, etc.)</td><td>⚠️ Platform-specific bots</td></tr>
+            <tr><td>Transcription model</td><td>✅ Local (Whisper) or your choice</td><td>❌ Vendor's proprietary model</td></tr>
+            <tr><td>Price</td><td>Free core or $49-$199/month</td><td>$10-$30/user/month</td></tr>
+          </tbody>
+        </table>
+        <p>If you need meeting intelligence but can't send audio to the cloud, Recap is the only option.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Recap work with Zoom, Teams, and Google Meet?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap works with <strong>any meeting platform</strong>:</p>
+        <ul>
+          <li><strong>Zoom</strong></li>
+          <li><strong>Microsoft Teams</strong></li>
+          <li><strong>Google Meet</strong></li>
+          <li><strong>Webex</strong></li>
+          <li><strong>Any other platform:</strong> If you can hear audio through your speakers/headphones, Recap can capture it</li>
+        </ul>
+        <p>Recap captures <strong>system audio</strong> — whatever you hear through your speakers or headphones. It doesn't need to integrate with specific meeting platforms or use platform-specific bots.</p>
+        <div class="callout tip"><strong>Platform-agnostic</strong>Recap works with any meeting platform because it captures audio at the system level, not the application level.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Recap require a cloud bot to join my meetings?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>No.</strong> Recap does <strong>not</strong> use cloud bots. This is a key differentiator.</p>
+        <p>Cloud-based meeting tools (Otter.ai, Fireflies, Grain) send a bot to join your meeting as a participant. The bot records the audio and sends it to the cloud for processing.</p>
+        <p>Recap works differently:</p>
+        <ul>
+          <li><strong>No bot:</strong> Recap doesn't join your meeting as a participant</li>
+          <li><strong>System audio capture:</strong> Recap captures the audio you hear through your speakers/headphones</li>
+          <li><strong>Local processing:</strong> Audio is transcribed and processed on your device</li>
+        </ul>
+        <p>Your meeting participants don't see a bot joining. Your audio never leaves your device. Full sovereignty.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Is Recap a standalone product or part of a suite?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap is <strong>both</strong>:</p>
+        <ul>
+          <li><strong>Standalone:</strong> You can use Recap by itself for on-device meeting transcription and summaries</li>
+          <li><strong>Suite-integrated:</strong> Recap is part of the ODW.ai suite and integrates with other modules:
+            <ul>
+              <li><strong>Vault:</strong> Meeting summaries and decisions auto-sync to your knowledge base</li>
+              <li><strong>Loop:</strong> Action items auto-sync to your workflow automation</li>
+            </ul>
+          </li>
+        </ul>
+        <p>The free core works standalone. Suite integration (Vault/Loop sync) is part of the paid tier.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What does "on-device" mean?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>"On-device" means <strong>all processing happens on your computer</strong>:</p>
+        <ul>
+          <li><strong>Audio capture:</strong> Happens on your device</li>
+          <li><strong>Transcription:</strong> Happens on your device (using local Whisper models)</li>
+          <li><strong>Summarization:</strong> Happens on your device (using local LLMs)</li>
+          <li><strong>Storage:</strong> Happens on your device (encrypted local storage)</li>
+        </ul>
+        <p>No audio, transcripts, or summaries are sent to the cloud. No data leaves your machine.</p>
+        <p>This is critical for sovereignty-focused organizations. You can't claim data sovereignty if your meeting tool is sending your audio to a cloud vendor.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Do I need technical skills to use Recap?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>No.</strong> Recap is designed for non-technical users:</p>
+        <ul>
+          <li><strong>Installation:</strong> Download and install like any other app (macOS, Windows, Linux)</li>
+          <li><strong>Setup:</strong> Configure audio source (system audio) and you're ready</li>
+          <li><strong>Usage:</strong> Start a meeting, Recap automatically captures and transcribes</li>
+          <li><strong>Review:</strong> View transcripts, summaries, and action items in the web UI</li>
+        </ul>
+        <p>No coding, no command line, no technical expertise required. If you can use Zoom, you can use Recap.</p>
+        <div class="callout tip"><strong>Time to first transcript</strong>Target: &lt;5 minutes from install to first transcript.</div>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 2: TRANSCRIPTION & AUDIO -->
+  <div class="section" id="s2">
+    <div class="section-header"><span class="icon">02 · SOVEREIGNTY</span><h2>Transcription & Audio</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">How accurate is Recap's transcription?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap uses <strong>Whisper</strong> (OpenAI's open-source speech recognition model), which is state-of-the-art:</p>
+        <ul>
+          <li><strong>Word Error Rate (WER):</strong> ≤8% on standard business English meetings (measured against human transcription baseline)</li>
+          <li><strong>Speaker diarization:</strong> Identifies different speakers (who said what)</li>
+          <li><strong>Noise handling:</strong> Handles background noise, multiple speakers, accents</li>
+        </ul>
+        <p>Accuracy depends on:</p>
+        <ul>
+          <li><strong>Audio quality:</strong> Clear audio = better accuracy</li>
+          <li><strong>Model size:</strong> Larger models (Whisper large-v3) are more accurate but slower</li>
+          <li><strong>Language:</strong> English is best supported (v1.0); other languages coming in v1.1</li>
+        </ul>
+        <div class="callout info"><strong>Comparison</strong>Whisper's accuracy is comparable to cloud-based transcription services (Otter.ai, Fireflies) for English meetings.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What is Whisper?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Whisper</strong> is OpenAI's open-source speech recognition model. It's one of the most accurate transcription models available:</p>
+        <ul>
+          <li><strong>Open source:</strong> Free to use, auditable code</li>
+          <li><strong>Multi-language:</strong> Supports 99 languages (English is best in v1.0)</li>
+          <li><strong>Robust:</strong> Handles accents, background noise, multiple speakers</li>
+          <li><strong>Local:</strong> Runs on your device — no cloud dependency</li>
+        </ul>
+        <p>Recap uses Whisper-family models (whisper.cpp, faster-whisper) optimized for local inference. You can choose between small (fast, less accurate), medium (balanced), or large (slow, most accurate) models.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can Recap transcribe in real-time?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap supports <strong>real-time streaming transcription</strong>:</p>
+        <ul>
+          <li><strong>Streaming mode:</strong> See transcripts appear in real-time as people speak (latency ≤2 seconds)</li>
+          <li><strong>Batch mode:</strong> Transcribe the entire meeting after it ends (faster, more accurate)</li>
+        </ul>
+        <p>Real-time transcription is useful for:</p>
+        <ul>
+          <li>Following along during the meeting</li>
+          <li>Catching things you missed</li>
+          <li>Live captioning for accessibility</li>
+        </ul>
+        <p>For maximum accuracy, we recommend batch mode (transcribe after the meeting ends).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can Recap identify different speakers?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap includes <strong>speaker diarization</strong> (identifying who said what):</p>
+        <ul>
+          <li><strong>Automatic:</strong> Recap automatically detects different speakers</li>
+          <li><strong>Labels:</strong> Speakers are labeled as "Speaker 1", "Speaker 2", etc.</li>
+          <li><strong>Manual labeling:</strong> You can rename speakers (e.g., "Speaker 1" → "John")</li>
+        </ul>
+        <p>Speaker diarization is done locally using open-source models — no cloud processing required.</p>
+        <div class="callout tip"><strong>Accuracy</strong>Speaker diarization is ~85-90% accurate for clear audio with distinct voices. For overlapping speech or similar voices, accuracy may be lower.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What audio formats does Recap support?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap captures <strong>system audio</strong> (whatever you hear through your speakers/headphones). It doesn't import audio files — it captures live audio.</p>
+        <p>Supported audio sources:</p>
+        <ul>
+          <li><strong>System audio:</strong> Audio from any application (Zoom, Teams, Meet, etc.)</li>
+          <li><strong>Microphone:</strong> Your microphone (for capturing your own voice)</li>
+          <li><strong>Both:</strong> Capture system audio + microphone simultaneously</li>
+        </ul>
+        <p>Recap doesn't support importing pre-recorded audio files (MP3, WAV, etc.) in v1.0. This is planned for v1.1.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can Recap transcribe phone calls?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>No.</strong> Recap only captures <strong>system audio</strong> — audio from applications running on your computer (Zoom, Teams, Meet, etc.).</p>
+        <p>Recap does <strong>not</strong> support:</p>
+        <ul>
+          <li><strong>Phone calls:</strong> Traditional phone calls (cellular, landline)</li>
+          <li><strong>SIP/VoIP:</strong> SIP-based phone systems</li>
+          <li><strong>Mobile apps:</strong> Recap is desktop-only (macOS, Windows, Linux)</li>
+        </ul>
+        <p>If you need to transcribe phone calls, you'll need a dedicated phone recording solution.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I export transcripts?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap supports <strong>multiple export formats</strong>:</p>
+        <ul>
+          <li><strong>Markdown:</strong> .md files (readable, editable)</li>
+          <li><strong>PDF:</strong> Formatted PDF documents</li>
+          <li><strong>Plain text:</strong> .txt files</li>
+          <li><strong>JSON:</strong> Structured data (for programmatic use)</li>
+        </ul>
+        <p>You can export:</p>
+        <ul>
+          <li>Full transcript (with timestamps and speaker labels)</li>
+          <li>Summary only</li>
+          <li>Action items only</li>
+          <li>All of the above</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I search past meetings?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap includes <strong>full-text search</strong> across all past meetings:</p>
+        <ul>
+          <li><strong>Search transcripts:</strong> Find specific phrases or topics</li>
+          <li><strong>Search summaries:</strong> Find meetings by summary content</li>
+          <li><strong>Search action items:</strong> Find specific action items across all meetings</li>
+          <li><strong>Filter by date:</strong> Narrow search by date range</li>
+          <li><strong>Filter by tags:</strong> Filter by custom tags or auto-generated topics</li>
+        </ul>
+        <p>Search is local (on your device) — no cloud indexing required.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 3: OUR SOLUTION'S STRENGTHS -->
+  <div class="section" id="s3">
+    <div class="section-header"><span class="icon">03 · INTEGRATION</span><h2>Our Solution's Strengths & Design</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">What are the top advantages of Recap over other meeting tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>Feature</th><th>ODW.ai Recap</th><th>Typical Alternatives</th></tr></thead>
+          <tbody>
+            <tr><td>Audio processing</td><td>✅ On-device — full sovereignty</td><td>❌ Cloud — data sent to vendor</td></tr>
+            <tr><td>Meeting bots</td><td>✅ No bots — system audio capture</td><td>❌ Cloud bots join meetings</td></tr>
+            <tr><td>Platform support</td><td>✅ Any platform (system audio)</td><td>⚠️ Platform-specific bots</td></tr>
+            <tr><td>Transcription model</td><td>✅ Local (Whisper) or your choice</td><td>❌ Vendor's proprietary model</td></tr>
+            <tr><td>Open source</td><td>✅ Core is open source</td><td>❌ Proprietary</td></tr>
+            <tr><td>Suite integration</td><td>✅ Native ODW.ai integration</td><td>❌ Requires custom integration</td></tr>
+            <tr><td>Price</td><td>Free core or $49-$199/month</td><td>$10-$30/user/month</td></tr>
+          </tbody>
+        </table>
+        <p>Recap competes on <strong>sovereignty + platform-agnostic design</strong>. If you need on-device processing and can't use cloud bots, Recap is the best option.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How does Recap compare to Whisper-based DIY tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>There are open-source Whisper-based tools (WhisperLive, MeetingBaize), but they have different design priorities:</p>
+        <table>
+          <thead><tr><th>Aspect</th><th>ODW.ai Recap</th><th>Whisper-based DIY tools</th></tr></thead>
+          <tbody>
+            <tr><td>Structured output</td><td>✅ Summaries, action items, decisions</td><td>❌ Transcription only</td></tr>
+            <tr><td>Suite integration</td><td>✅ Vault/Loop sync</td><td>❌ None</td></tr>
+            <tr><td>User experience</td><td>✅ Polished UI, easy setup</td><td>⚠️ Technical, requires setup</td></tr>
+            <tr><td>Speaker diarization</td><td>✅ Built-in</td><td>⚠️ Requires additional setup</td></tr>
+            <tr><td>Support</td><td>✅ Paid support available</td><td>❌ Community only</td></tr>
+          </tbody>
+        </table>
+        <p>DIY tools are great for experimentation, but not production-ready for business use. Recap is designed for regulated businesses that need reliability, structure, and support.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How does Recap compare to Zoom AI or Teams Copilot?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Zoom AI and Teams Copilot are platform-native meeting features, but they have limitations:</p>
+        <table>
+          <thead><tr><th>Aspect</th><th>ODW.ai Recap</th><th>Zoom AI / Teams Copilot</th></tr></thead>
+          <tbody>
+            <tr><td>Platform support</td><td>✅ Any platform (system audio)</td><td>❌ Locked to one platform</td></tr>
+            <tr><td>Audio processing</td><td>✅ On-device</td><td>❌ Cloud-processed</td></tr>
+            <tr><td>Data sovereignty</td><td>✅ Full control</td><td>❌ Data sent to vendor</td></tr>
+            <tr><td>Suite integration</td><td>✅ ODW.ai suite (Vault, Loop)</td><td>❌ Platform-specific</td></tr>
+            <tr><td>Model choice</td><td>✅ Your choice (local or API)</td><td>❌ Vendor's model</td></tr>
+          </tbody>
+        </table>
+        <p>Zoom AI/Teams Copilot are convenient if you're 100% on one platform and don't have sovereignty requirements. If you use multiple platforms or need sovereignty, Recap is the better choice.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What does "sovereign" mean in this context?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>"Sovereign" means <strong>full control over your meeting data</strong>:</p>
+        <ul>
+          <li><strong>Audio location:</strong> Your meeting audio stays on your device</li>
+          <li><strong>Processing:</strong> All transcription and summarization happens on your device</li>
+          <li><strong>No external dependencies:</strong> No audio sent to OpenAI, Otter.ai, or any third party</li>
+          <li><strong>Auditability:</strong> You can inspect the code, logs, and data flows</li>
+        </ul>
+        <p>This is critical for regulated industries. You can't claim data sovereignty if your meeting tool is sending your audio to a cloud vendor.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I use Recap fully offline (no internet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap supports <strong>fully offline operation</strong>:</p>
+        <ul>
+          <li><strong>Local models:</strong> Whisper (transcription) and LLMs (summarization) run on your device</li>
+          <li><strong>No internet required:</strong> Recap doesn't need internet access for transcription, summarization, or any core functionality</li>
+          <li><strong>Air-gapped:</strong> Deploy in air-gapped environments (no internet access at all)</li>
+        </ul>
+        <p>This is critical for government, military, and high-security environments where internet access is restricted or prohibited.</p>
+        <div class="callout warning"><strong>Hardware requirements</strong>Running local models requires decent hardware. For real-time transcription, we recommend a modern CPU (M1/M2/M3 for macOS, Intel i7+ or AMD Ryzen 7+ for Windows/Linux) or GPU (NVIDIA recommended).</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Is Recap's code auditable?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap's core is <strong>open source</strong>:</p>
+        <ul>
+          <li><strong>Transparent:</strong> All code is publicly available on GitHub</li>
+          <li><strong>Auditable:</strong> You (or your security team) can inspect the code for vulnerabilities, backdoors, or data exfiltration</li>
+          <li><strong>Verifiable:</strong> You can verify that Recap does what it claims — no hidden telemetry, no data sent to third parties</li>
+        </ul>
+        <p>This is critical for sovereignty-focused organizations. You should be able to verify what your meeting tools are doing.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can Recap handle multiple languages?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>English only in v1.0.</strong> Multi-language support is planned for v1.1 (Q4 2026).</p>
+        <p>Whisper (the underlying transcription model) supports 99 languages, but v1.0 of Recap is optimized for English. Multi-language support will include:</p>
+        <ul>
+          <li><strong>Spanish</strong></li>
+          <li><strong>French</strong></li>
+          <li><strong>German</strong></li>
+          <li><strong>Chinese (Mandarin)</strong></li>
+          <li><strong>Japanese</strong></li>
+          <li><strong>And more</strong></li>
+        </ul>
+        <p>If you need multi-language support before v1.1, contact us — we may be able to provide early access.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can Recap handle large meetings (2+ hours)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap can handle <strong>meetings of any length</strong>:</p>
+        <ul>
+          <li><strong>No time limit:</strong> Recap can transcribe meetings of any duration</li>
+          <li><strong>Batch processing:</strong> For long meetings, batch mode is recommended (transcribe after the meeting ends)</li>
+          <li><strong>Storage:</strong> Transcripts and summaries are stored locally — no cloud storage limits</li>
+        </ul>
+        <p>For very long meetings (2+ hours), we recommend:</p>
+        <ul>
+          <li><strong>Batch mode:</strong> Transcribe after the meeting ends (faster, more accurate)</li>
+          <li><strong>Sufficient disk space:</strong> Ensure you have enough disk space for audio and transcripts</li>
+        </ul>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 4: SUMMARIES & ACTION ITEMS -->
+  <div class="section" id="s4">
+    <div class="section-header"><span class="icon">04 · SECURITY</span><h2>Summaries & Action Items</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">What kind of summaries does Recap generate?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap generates <strong>structured summaries</strong>:</p>
+        <ul>
+          <li><strong>Executive summary:</strong> 2-3 sentence overview of the meeting</li>
+          <li><strong>Key topics:</strong> List of main topics discussed</li>
+          <li><strong>Decisions:</strong> List of decisions made during the meeting</li>
+          <li><strong>Action items:</strong> List of action items with assignees and deadlines (if stated)</li>
+          <li><strong>Key quotes:</strong> Important quotes from the meeting</li>
+        </ul>
+        <p>Summaries are generated using local LLMs (e.g., Llama 3, Mistral) — no cloud processing required.</p>
+        <div class="callout tip"><strong>Customizable</strong>You can customize summary templates (e.g., focus on decisions, action items, or specific topics).</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How does Recap extract action items?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap uses <strong>AI-powered extraction</strong> to identify action items:</p>
+        <ul>
+          <li><strong>Keyword detection:</strong> Identifies phrases like "I'll do X", "Can you handle Y?", "Let's follow up on Z"</li>
+          <li><strong>Assignee detection:</strong> Identifies who is responsible for each action item</li>
+          <li><strong>Deadline detection:</strong> Identifies deadlines if stated (e.g., "by Friday", "next week")</li>
+          <li><strong>Context understanding:</strong> Understands the context to distinguish actual action items from general discussion</li>
+        </ul>
+        <p>Target: <strong>≥85% precision, ≥75% recall</strong> (human-evaluated sample).</p>
+        <p>Action items are extracted locally using LLMs — no cloud processing required.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I edit summaries and action items?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. All summaries and action items are <strong>fully editable</strong>:</p>
+        <ul>
+          <li><strong>Edit summaries:</strong> Modify the generated summary to add context or correct errors</li>
+          <li><strong>Edit action items:</strong> Add, remove, or modify action items</li>
+          <li><strong>Reassign:</strong> Change assignees or deadlines</li>
+          <li><strong>Add notes:</strong> Add your own notes to the summary</li>
+        </ul>
+        <p>Edits are saved locally and synced with the original transcript.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I customize summary templates?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap supports <strong>custom output templates</strong>:</p>
+        <ul>
+          <li><strong>Pre-built templates:</strong> Executive summary, detailed summary, action items only, decisions only</li>
+          <li><strong>Custom templates:</strong> Create your own templates (e.g., focus on specific topics, include/exclude sections)</li>
+          <li><strong>Per-meeting templates:</strong> Use different templates for different types of meetings (e.g., standup vs. board meeting)</li>
+        </ul>
+        <p>Templates are defined in YAML or Markdown — no coding required.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I share summaries with my team?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap supports <strong>team sharing</strong> (paid tier):</p>
+        <ul>
+          <li><strong>Shared workspaces:</strong> Create shared workspaces for your team</li>
+          <li><strong>Access control:</strong> Control who can view/edit meeting summaries</li>
+          <li><strong>Notifications:</strong> Notify team members when new summaries are available</li>
+          <li><strong>Comments:</strong> Team members can add comments to summaries</li>
+        </ul>
+        <p>For the free tier, summaries are local-only (single user). Team features require the paid tier.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I export action items to my task management tool?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap supports <strong>action item export</strong>:</p>
+        <ul>
+          <li><strong>Manual export:</strong> Export action items as CSV, JSON, or Markdown</li>
+          <li><strong>Loop sync:</strong> Auto-sync action items to ODW.ai Loop (workflow automation) — paid tier</li>
+          <li><strong>Custom integrations:</strong> Use the API to integrate with your task management tool (Jira, Asana, Trello, etc.)</li>
+        </ul>
+        <p>Loop sync automatically creates tasks, assigns them, and sets deadlines based on the extracted action items.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I search for specific decisions across all meetings?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap includes <strong>decision search</strong>:</p>
+        <ul>
+          <li><strong>Search decisions:</strong> Find specific decisions across all past meetings</li>
+          <li><strong>Filter by date:</strong> Narrow search by date range</li>
+          <li><strong>Filter by topic:</strong> Filter by meeting topic or custom tags</li>
+          <li><strong>View context:</strong> Click on a decision to see the full meeting transcript and context</li>
+        </ul>
+        <p>This is useful for tracking what was decided, when, and by whom — critical for accountability and audit trails.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How accurate are the summaries?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Summary quality depends on:</p>
+        <ul>
+          <li><strong>Transcription accuracy:</strong> Better transcription = better summaries</li>
+          <li><strong>LLM quality:</strong> Better LLMs (e.g., Llama 3 70B) generate better summaries</li>
+          <li><strong>Meeting clarity:</strong> Clear, structured meetings = better summaries</li>
+        </ul>
+        <p>Target: <strong>≥4.0/5.0</strong> in user satisfaction surveys.</p>
+        <p>Summaries are AI-generated, so they may not be perfect. We recommend reviewing and editing summaries for important meetings.</p>
+        <div class="callout tip"><strong>Human review</strong>For critical meetings (board meetings, legal discussions), always review and edit the AI-generated summary before sharing.</div>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 5: SECURITY & PRIVACY -->
+  <div class="section" id="s5">
+    <div class="section-header"><span class="icon">05 · DEPLOYMENT</span><h2>Security & Privacy</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">Is Recap secure?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap is built with <strong>security best practices</strong>:</p>
+        <ul>
+          <li><strong>On-device processing:</strong> All audio, transcripts, and summaries stay on your device</li>
+          <li><strong>Encryption:</strong> AES-256 encryption for local storage</li>
+          <li><strong>Access control:</strong> Password protection, role-based access (paid tier)</li>
+          <li><strong>Audit logging:</strong> Tamper-evident logs of all access (paid tier)</li>
+          <li><strong>Open source:</strong> Code is auditable — you can verify there are no backdoors or data exfiltration</li>
+        </ul>
+        <p>Recap is designed for regulated industries. If you can use Recap, you can pass a compliance audit.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does ODW.ai have access to my meeting data?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>No.</strong> Recap runs entirely on your device. ODW.ai has zero access to your audio, transcripts, or summaries.</p>
+        <p>Unlike cloud-based meeting tools (Otter.ai, Fireflies), Recap doesn't send your audio to a third party. Everything stays on your machine.</p>
+        <p>This is critical for sovereignty-focused organizations. You can't claim data sovereignty if your meeting tool is sending your audio to a cloud vendor.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Recap comply with HIPAA?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap is <strong>HIPAA-compatible</strong>:</p>
+        <ul>
+          <li><strong>On-device processing:</strong> PHI stays on your device — no data sent to third parties</li>
+          <li><strong>Encryption:</strong> AES-256 encryption for local storage</li>
+          <li><strong>Access control:</strong> Password protection, role-based access</li>
+          <li><strong>Audit logging:</strong> Tamper-evident logs of all access</li>
+        </ul>
+        <p>Recap helps you meet the <strong>technical safeguards</strong> required by HIPAA. You still need to address administrative and physical safeguards separately.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Recap comply with GDPR?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap is <strong>GDPR-compatible</strong>:</p>
+        <ul>
+          <li><strong>Data residency:</strong> All data stays on your device (or your infrastructure for team deployments)</li>
+          <li><strong>Right to erasure:</strong> Delete meetings and associated data on request</li>
+          <li><strong>Right to access:</strong> Export meeting data on request</li>
+          <li><strong>Data minimization:</strong> No data sent to third parties</li>
+        </ul>
+        <p>Recap helps you meet the <strong>technical and organizational measures</strong> required by GDPR (Article 32). You still need to address legal and procedural requirements separately.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I deploy Recap in an air-gapped environment?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap supports <strong>air-gapped deployment</strong> (no internet access):</p>
+        <ul>
+          <li><strong>Offline installation:</strong> Install Recap without internet access</li>
+          <li><strong>Local models:</strong> All models (Whisper, LLMs) run on your device — no API calls to external services</li>
+          <li><strong>No external dependencies:</strong> Recap doesn't require internet access for transcription, summarization, or any core functionality</li>
+        </ul>
+        <p>Air-gapped deployment is common for government contractors, military, and high-security environments.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What happens if someone accesses my meeting data without permission?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap provides <strong>access control</strong> (paid tier):</p>
+        <ul>
+          <li><strong>Password protection:</strong> Require a password to access Recap</li>
+          <li><strong>Role-based access:</strong> Control who can view/edit meeting summaries</li>
+          <li><strong>Audit logging:</strong> All access is logged (who accessed what, when)</li>
+          <li><strong>Alerting:</strong> Get notified of unauthorized access attempts</li>
+        </ul>
+        <p>For the free tier, Recap is single-user (local only). If someone has physical access to your device and your password, they can access your data — so use strong passwords and encryption.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I set retention policies (auto-delete old meetings)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap supports <strong>retention policies</strong> (paid tier):</p>
+        <ul>
+          <li><strong>Auto-delete:</strong> Automatically delete meetings after N days (e.g., 30 days, 90 days, 1 year)</li>
+          <li><strong>Per-workspace policies:</strong> Different retention policies for different workspaces</li>
+          <li><strong>Manual override:</strong> Mark specific meetings as "do not delete"</li>
+        </ul>
+        <p>This is useful for compliance (e.g., GDPR data minimization) and storage management.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Is Recap's code auditable?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap's core is <strong>open source</strong>:</p>
+        <ul>
+          <li><strong>Transparent:</strong> All code is publicly available on GitHub</li>
+          <li><strong>Auditable:</strong> You (or your security team) can inspect the code for vulnerabilities, backdoors, or data exfiltration</li>
+          <li><strong>Verifiable:</strong> You can verify that Recap does what it claims — no hidden telemetry, no data sent to third parties</li>
+        </ul>
+        <p>This is critical for sovereignty-focused organizations. You should be able to verify what your meeting tools are doing.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 6: MODELS & AI -->
+  <div class="section" id="s6">
+    <div class="section-header"><span class="icon">06 · COMPLIANCE</span><h2>Models & AI</h2><span class="count">7 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">Which AI models does Recap use?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap uses <strong>open-source models</strong> for transcription and summarization:</p>
+        <p><strong>Transcription:</strong></p>
+        <ul>
+          <li><strong>Whisper:</strong> OpenAI's open-source speech recognition model (whisper.cpp, faster-whisper)</li>
+          <li><strong>Model sizes:</strong> Small (fast, less accurate), Medium (balanced), Large (slow, most accurate)</li>
+        </ul>
+        <p><strong>Summarization:</strong></p>
+        <ul>
+          <li><strong>Llama 3:</strong> Meta's open-source LLM (8B, 70B)</li>
+          <li><strong>Mistral:</strong> Mistral AI's open-source LLM</li>
+          <li><strong>Other:</strong> Any model compatible with Ollama or llama.cpp</li>
+        </ul>
+        <p>You can choose which models to use based on your priorities (speed vs. accuracy vs. resource usage).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I use API-based models (OpenAI, Anthropic)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Not in v1.0.</strong> Recap is designed for on-device processing — no cloud API support in v1.0.</p>
+        <p>This is by design. Recap's core promise is sovereignty — no data leaves your device. Adding API support would break that promise.</p>
+        <p>If you need API-based models (for higher quality), you can:</p>
+        <ul>
+          <li><strong>Use local models:</strong> Llama 3 70B, Mistral Large, etc. — quality is approaching API models</li>
+          <li><strong>Wait for v2.0:</strong> API support is planned for v2.0 (Q2 2027) with strict opt-in and data controls</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I choose the right Whisper model?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Choosing a Whisper model depends on your priorities:</p>
+        <table>
+          <thead><tr><th>Model</th><th>Speed</th><th>Accuracy</th><th>Resource Usage</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Whisper small</strong></td><td>✅ Fast</td><td>⚠️ Good</td><td>✅ Low</td></tr>
+            <tr><td><strong>Whisper medium</strong></td><td>⚠️ Medium</td><td>✅ Better</td><td>⚠️ Medium</td></tr>
+            <tr><td><strong>Whisper large-v3</strong></td><td>❌ Slow</td><td>✅ Best</td><td>❌ High</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Recommendation:</strong></p>
+        <ul>
+          <li><strong>Real-time transcription:</strong> Use Whisper small or medium (fast enough for streaming)</li>
+          <li><strong>Batch transcription:</strong> Use Whisper large-v3 (most accurate, no time pressure)</li>
+          <li><strong>Low-resource devices:</strong> Use Whisper small (runs on older hardware)</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I choose the right summarization model?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Choosing a summarization model depends on your priorities:</p>
+        <table>
+          <thead><tr><th>Model</th><th>Speed</th><th>Quality</th><th>Resource Usage</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Llama 3 8B</strong></td><td>✅ Fast</td><td>⚠️ Good</td><td>✅ Low</td></tr>
+            <tr><td><strong>Llama 3 70B</strong></td><td>❌ Slow</td><td>✅ Best</td><td>❌ High</td></tr>
+            <tr><td><strong>Mistral 7B</strong></td><td>✅ Fast</td><td>⚠️ Good</td><td>✅ Low</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Recommendation:</strong></p>
+        <ul>
+          <li><strong>Fast summaries:</strong> Use Llama 3 8B or Mistral 7B (good quality, fast)</li>
+          <li><strong>Best quality:</strong> Use Llama 3 70B (best quality, but slow and resource-intensive)</li>
+          <li><strong>Low-resource devices:</strong> Use Llama 3 8B or Mistral 7B (runs on older hardware)</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I swap models?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap is <strong>model-agnostic</strong> — you can swap models at any time:</p>
+        <ul>
+          <li><strong>No code changes:</strong> Just update the model configuration in the settings</li>
+          <li><strong>Per-meeting:</strong> Use different models for different meetings (e.g., small model for standups, large model for board meetings)</li>
+          <li><strong>Download models:</strong> Download new models via the UI (one-click)</li>
+        </ul>
+        <p>This future-proofs your investment — when better models are released, you can adopt them immediately without re-architecting your system.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What if a new, better model is released? Can I use it?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap is <strong>model-agnostic</strong> — you can use any compatible model:</p>
+        <ul>
+          <li><strong>Whisper-family:</strong> Any Whisper variant (whisper.cpp, faster-whisper, distil-whisper, etc.)</li>
+          <li><strong>LLM-family:</strong> Any LLM compatible with Ollama or llama.cpp (Llama 3, Mistral, Gemma, Qwen, etc.)</li>
+          <li><strong>Custom models:</strong> If you have a custom model, you can integrate it via the API</li>
+        </ul>
+        <p>When better models are released, you can adopt them immediately — no code changes, no vendor lock-in.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I fine-tune models for my domain?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Not in Recap v1.0.</strong> Recap uses existing models — it doesn't support fine-tuning.</p>
+        <p>However, you can:</p>
+        <ul>
+          <li><strong>Use custom prompts:</strong> Customize the summarization prompt to guide the model's behavior (e.g., "Focus on legal decisions" or "Extract action items for the engineering team")</li>
+          <li><strong>Fine-tune externally:</strong> Fine-tune a model outside of Recap (using tools like Hugging Face Transformers), then use the fine-tuned model in Recap via Ollama or llama.cpp</li>
+        </ul>
+        <p>Fine-tuning support is planned for v2.0 (Q2 2027).</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 7: DEPLOYMENT & SETUP -->
+  <div class="section" id="s7">
+    <div class="section-header"><span class="icon">07 · MODELS</span><h2>Deployment & Setup</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">How do I install Recap?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap is available for <strong>macOS, Windows, and Linux</strong>:</p>
+        <ul>
+          <li><strong>macOS:</strong> Download the .dmg file from odw.ai/recap, drag to Applications</li>
+          <li><strong>Windows:</strong> Download the .exe installer from odw.ai/recap, run the installer</li>
+          <li><strong>Linux:</strong> Download the .deb (Ubuntu/Debian) or .rpm (Fedora/RHEL) package, install via package manager</li>
+        </ul>
+        <p>Installation takes <strong>&lt;2 minutes</strong>. No technical skills required.</p>
+        <div class="callout tip"><strong>Time to first transcript</strong>After installation, you can transcribe your first meeting in &lt;5 minutes.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What are the system requirements?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap's requirements depend on your usage:</p>
+        <table>
+          <thead><tr><th>Component</th><th>Minimum</th><th>Recommended</th></tr></thead>
+          <tbody>
+            <tr><td><strong>OS</strong></td><td>macOS 12+, Windows 10+, Ubuntu 22.04+</td><td>macOS 14+ (Apple Silicon), Windows 11, Ubuntu 24.04</td></tr>
+            <tr><td><strong>CPU</strong></td><td>Intel i5 / AMD Ryzen 5 / Apple M1</td><td>Intel i7+ / AMD Ryzen 7+ / Apple M2+</td></tr>
+            <tr><td><strong>RAM</strong></td><td>8 GB</td><td>16+ GB</td></tr>
+            <tr><td><strong>Storage</strong></td><td>2 GB (app + models)</td><td>10+ GB (for meeting storage)</td></tr>
+            <tr><td><strong>GPU (optional)</strong></td><td>None (CPU inference)</td><td>NVIDIA GPU (for faster inference)</td></tr>
+          </tbody>
+        </table>
+        <p>For real-time transcription, we recommend a modern CPU (M1/M2/M3 for macOS, Intel i7+ or AMD Ryzen 7+ for Windows/Linux). GPU is optional but speeds up inference.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Do I need technical skills to set up Recap?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>No.</strong> Recap is designed for non-technical users:</p>
+        <ul>
+          <li><strong>Installation:</strong> Download and install like any other app</li>
+          <li><strong>Setup:</strong> Configure audio source (system audio) and you're ready</li>
+          <li><strong>Usage:</strong> Start a meeting, Recap automatically captures and transcribes</li>
+        </ul>
+        <p>No coding, no command line, no technical expertise required. If you can use Zoom, you can use Recap.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I deploy Recap for my team?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap supports <strong>team deployments</strong> (paid tier):</p>
+        <ul>
+          <li><strong>Self-hosted server:</strong> Deploy Recap on a central server (Docker-based) for team access</li>
+          <li><strong>Shared workspaces:</strong> Create shared workspaces for your team</li>
+          <li><strong>Access control:</strong> Control who can view/edit meeting summaries</li>
+          <li><strong>Admin dashboard:</strong> Monitor usage, manage users, configure settings</li>
+        </ul>
+        <p>Team deployments require some technical setup (Docker, networking). We provide deployment guides and support.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I configure audio capture?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap captures <strong>system audio</strong> — whatever you hear through your speakers/headphones:</p>
+        <ol>
+          <li><strong>Open Recap settings:</strong> Click the gear icon in the Recap UI</li>
+          <li><strong>Select audio source:</strong> Choose "System Audio" (captures all audio from your computer)</li>
+          <li><strong>Optional — Microphone:</strong> If you want to capture your own voice, enable "Microphone" as well</li>
+          <li><strong>Test:</strong> Click "Test Audio" to verify Recap is capturing audio correctly</li>
+        </ol>
+        <p>That's it. Recap will automatically capture audio from any meeting platform (Zoom, Teams, Meet, etc.).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I preview Recap before going live?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap offers a <strong>free core tier</strong>:</p>
+        <ul>
+          <li><strong>No time limit:</strong> Use the free tier forever</li>
+          <li><strong>Full features:</strong> On-device transcription, local summaries, action item extraction</li>
+          <li><strong>No credit card:</strong> No payment information required</li>
+        </ul>
+        <p>The free tier is perfect for testing Recap with your meetings. If you like it, you can upgrade to the paid tier for team features and suite integration.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I update Recap?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap updates <strong>automatically</strong>:</p>
+        <ul>
+          <li><strong>Desktop app:</strong> Recap checks for updates on startup and prompts you to install</li>
+          <li><strong>Manual update:</strong> You can also check for updates manually via the settings menu</li>
+          <li><strong>Models:</strong> Model updates are separate — you can update models via the model manager in the UI</li>
+        </ul>
+        <p>Updates are typically small and fast (&lt;5 minutes to install).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I use Recap on multiple devices?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. You can install Recap on <strong>multiple devices</strong>:</p>
+        <ul>
+          <li><strong>Free tier:</strong> Single-user, local-only (each device has its own data)</li>
+          <li><strong>Paid tier:</strong> Sync data across devices (optional)</li>
+          <li><strong>Team tier:</strong> Centralized server, multiple users access the same data</li>
+        </ul>
+        <p>For the free tier, each device operates independently — no sync between devices. For the paid tier, you can optionally sync data across your devices.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 8: COST & PRICING -->
+  <div class="section" id="s8">
+    <div class="section-header"><span class="icon">08 · LANGUAGES</span><h2>Cost & Pricing</h2><span class="count">7 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">How much does Recap cost?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap pricing is based on <strong>features and deployment</strong>:</p>
+        <table>
+          <thead><tr><th>Tier</th><th>Price</th><th>Includes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Free Core</strong></td><td>$0</td><td>On-device transcription, local summaries, action items, single-user</td></tr>
+            <tr><td><strong>Pro</strong></td><td>$49/month</td><td>Free core + team workspaces, shared meetings, advanced export</td></tr>
+            <tr><td><strong>Enterprise</strong></td><td>$199/month</td><td>Pro + Vault/Loop sync, audit logging, retention policies, priority support</td></tr>
+            <tr><td><strong>Suite Bundle</strong></td><td>Custom pricing</td><td>Recap + all ODW.ai modules (Desk, Voice, Vault, Shield, etc.)</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Note:</strong> Recap is not sold standalone for enterprise — it's part of the ODW.ai suite bundle. Contact us for suite pricing.</p>
+        <div class="callout info"><strong>Note</strong>Pricing is illustrative and subject to change. Contact us for current pricing and custom quotes.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Is Recap cheaper than Otter.ai or Fireflies?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>It depends.</strong> Otter.ai and Fireflies cost $10-$30/user/month. For a 10-person team, that's $100-$300/month.</p>
+        <p>Recap costs $0-$199/month (flat rate, not per user for the free core). For a 10-person team:</p>
+        <ul>
+          <li><strong>Free tier:</strong> $0 (but single-user per device, no sync)</li>
+          <li><strong>Pro tier:</strong> $49/month (team workspaces, shared meetings)</li>
+          <li><strong>Enterprise tier:</strong> $199/month (suite integration, audit logging)</li>
+        </ul>
+        <p>For small teams, Recap is <strong>cheaper</strong>. For large teams, Otter.ai/Fireflies may be cheaper per user — but Recap offers sovereignty, which they don't.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Are there any hidden costs?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>No hidden costs. The total cost of ownership includes:</p>
+        <ul>
+          <li><strong>Recap subscription:</strong> Monthly fee based on tier (or $0 for free core)</li>
+          <li><strong>Infrastructure:</strong> You pay for your own devices (if self-hosting)</li>
+        </ul>
+        <p>That's it. No setup fees, no surprise charges, no per-user fees (for the free core).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Is the free tier really free?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. The <strong>free core tier is 100% free</strong>:</p>
+        <ul>
+          <li><strong>No time limit:</strong> Use it forever</li>
+          <li><strong>No feature limits:</strong> On-device transcription, local summaries, action items</li>
+          <li><strong>No user limits:</strong> Install on as many devices as you want (single-user per device)</li>
+        </ul>
+        <p>The only limitations:</p>
+        <ul>
+          <li><strong>Team features:</strong> Shared workspaces, team sync, audit logging are paid</li>
+          <li><strong>Suite integration:</strong> Vault/Loop sync is paid (Enterprise tier or suite bundle)</li>
+          <li><strong>Support:</strong> Community support only (GitHub issues, Discord). No email or priority support.</li>
+        </ul>
+        <p>We believe in open source. If you don't need team features or suite integration, you can use Recap for free forever.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What payment methods do you accept?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>We accept:</p>
+        <ul>
+          <li><strong>Credit/debit cards:</strong> Visa, Mastercard, American Express (via Stripe)</li>
+          <li><strong>Bank transfer:</strong> For annual subscriptions or enterprise customers</li>
+          <li><strong>Cryptocurrency:</strong> Bitcoin, Ethereum, USDC (for privacy-conscious customers)</li>
+        </ul>
+        <p>Invoicing is available for annual subscriptions. Contact us for details.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. We offer a <strong>30-day money-back guarantee</strong>. If you're not satisfied within the first 30 days, contact us for a full refund — no questions asked.</p>
+        <p>After 30 days, you can cancel anytime. You'll continue to have access until the end of your billing period, but no refund is provided for partial months.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Is Recap included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Yes.</strong> Recap is part of the ODW.ai suite. You can:</p>
+        <ul>
+          <li><strong>Purchase Recap standalone:</strong> Use Recap by itself (free core or paid tier)</li>
+          <li><strong>Purchase the full suite:</strong> Get Desk, Voice, Vault, Recap, Shield, and other modules at a discounted price</li>
+        </ul>
+        <p>The suite bundle includes Recap at a 20-30% discount compared to purchasing separately. And all modules integrate natively — Recap feeds meeting intelligence into Vault (knowledge base) and Loop (workflow automation).</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 9: SCALING & OPERATIONS -->
+  <div class="section" id="s9">
+    <div class="section-header"><span class="icon">09 · PRICING</span><h2>Scaling & Operations</h2><span class="count">7 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">How many meetings can Recap handle?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap can handle <strong>unlimited meetings</strong>:</p>
+        <ul>
+          <li><strong>No meeting limit:</strong> Transcribe as many meetings as you want</li>
+          <li><strong>No time limit:</strong> Transcribe meetings of any duration</li>
+          <li><strong>Storage:</strong> Limited only by your disk space (typical meeting = 50-200 MB)</li>
+        </ul>
+        <p>For large volumes (100+ meetings per week), we recommend:</p>
+        <ul>
+          <li><strong>Sufficient disk space:</strong> Ensure you have enough storage for audio and transcripts</li>
+          <li><strong>Batch mode:</strong> Transcribe after meetings end (faster, more accurate)</li>
+          <li><strong>Team deployment:</strong> Use a central server for team access (paid tier)</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How many users can Recap support?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap supports <strong>unlimited users</strong>:</p>
+        <ul>
+          <li><strong>Free tier:</strong> Single-user per device (each user has their own local data)</li>
+          <li><strong>Pro tier:</strong> Team workspaces with multiple users</li>
+          <li><strong>Enterprise tier:</strong> Centralized server, unlimited users</li>
+        </ul>
+        <p>For team deployments, Recap scales horizontally — add more server resources to handle more users.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What happens if Recap crashes during a meeting?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>If Recap crashes, your audio is <strong>not lost</strong>:</p>
+        <ul>
+          <li><strong>Audio buffer:</strong> Recap buffers audio locally — if it crashes, the buffered audio is saved</li>
+          <li><strong>Auto-restart:</strong> Recap automatically restarts and resumes capturing audio</li>
+          <li><strong>Manual recovery:</strong> You can manually recover the buffered audio and transcribe it later</li>
+        </ul>
+        <p>For critical meetings, we recommend:</p>
+        <ul>
+          <li><strong>Test before:</strong> Test Recap before important meetings</li>
+          <li><strong>Backup recording:</strong> Use a backup recording method (e.g., Zoom's built-in recording) for critical meetings</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I monitor Recap's performance?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap includes a <strong>performance dashboard</strong>:</p>
+        <ul>
+          <li><strong>System health:</strong> CPU, memory, disk usage</li>
+          <li><strong>Transcription metrics:</strong> Number of meetings transcribed, average transcription time, accuracy estimates</li>
+          <li><strong>Model metrics:</strong> Which models are being used, resource usage</li>
+          <li><strong>Storage metrics:</strong> Disk space used by meetings, transcripts, and models</li>
+        </ul>
+        <p>For team deployments, the admin dashboard provides additional metrics (user activity, workspace usage, etc.).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I back up Recap data?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap data is stored locally on your device. Back up using standard backup tools:</p>
+        <ul>
+          <li><strong>macOS:</strong> Time Machine, or manually copy the Recap data folder</li>
+          <li><strong>Windows:</strong> File History, or manually copy the Recap data folder</li>
+          <li><strong>Linux:</strong> rsync, or manually copy the Recap data folder</li>
+        </ul>
+        <p>Recap data location:</p>
+        <ul>
+          <li><strong>macOS:</strong> <code>~/Library/Application Support/Recap/</code></li>
+          <li><strong>Windows:</strong> <code>%APPDATA%\Recap\</code></li>
+          <li><strong>Linux:</strong> <code>~/.config/Recap/</code></li>
+        </ul>
+        <p>We recommend backing up this folder regularly (e.g., daily via Time Machine or cloud sync).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I use Recap for multiple teams or departments?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap supports <strong>team workspaces</strong> (paid tier):</p>
+        <ul>
+          <li><strong>Separate workspaces:</strong> Create separate workspaces for different teams or departments</li>
+          <li><strong>Access control:</strong> Control who can access which workspaces</li>
+          <li><strong>Isolation:</strong> Each workspace has its own meetings, summaries, and settings</li>
+        </ul>
+        <p>This is useful for organizations with strict data separation requirements or multi-team deployments.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I train my team to use Recap?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap is designed to be <strong>intuitive</strong>, but we provide training resources:</p>
+        <ul>
+          <li><strong>Documentation:</strong> Comprehensive user guides for admins and end users</li>
+          <li><strong>Video tutorials:</strong> Step-by-step walkthroughs of key features</li>
+          <li><strong>Onboarding session:</strong> For paid customers, we offer a 1-hour onboarding session (remote)</li>
+          <li><strong>Support:</strong> Priority support for Pro and Enterprise customers</li>
+        </ul>
+        <p>Most teams are productive within 30 minutes of training. The UI is particularly intuitive — no technical skills required for end users.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 10: INTEGRATION & WORKFLOWS -->
+  <div class="section" id="s10">
+    <div class="section-header"><span class="icon">10 · ONBOARDING</span><h2>Integration & Workflows</h2><span class="count">7 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">How does Recap integrate with other ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap integrates <strong>natively</strong> with other ODW.ai products (paid tier):</p>
+        <ul>
+          <li><strong>Vault:</strong> Meeting summaries and decisions auto-sync to your knowledge base</li>
+          <li><strong>Loop:</strong> Action items auto-sync to your workflow automation (create tasks, assign, set deadlines)</li>
+          <li><strong>Shield:</strong> Recap emits audit logs to Shield for governance and compliance</li>
+        </ul>
+        <p>If you're using the ODW.ai suite, Recap integration is automatic — no separate configuration required.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I sync meeting summaries to Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap can <strong>auto-sync meeting summaries to Vault</strong> (Enterprise tier or suite bundle):</p>
+        <ul>
+          <li><strong>Auto-sync:</strong> Meeting summaries and decisions are automatically indexed in Vault</li>
+          <li><strong>Searchable:</strong> Meeting content becomes searchable in Vault alongside other documents</li>
+          <li><strong>Bi-directional:</strong> Vault entries can reference source meetings</li>
+          <li><strong>Configurable:</strong> Choose which meetings sync, which tags trigger sync, etc.</li>
+        </ul>
+        <p>This turns your meetings into a searchable knowledge base — no more losing important decisions in meeting notes.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I sync action items to Loop?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap can <strong>auto-sync action items to Loop</strong> (Enterprise tier or suite bundle):</p>
+        <ul>
+          <li><strong>Auto-create tasks:</strong> Action items are automatically created as tasks in Loop</li>
+          <li><strong>Assignees:</strong> Tasks are assigned to the correct people (detected from the meeting)</li>
+          <li><strong>Deadlines:</strong> Deadlines are set based on what was stated in the meeting</li>
+          <li><strong>Workflows:</strong> Action items can trigger workflows (e.g., "When action item is created → notify assignee → set reminder")</li>
+        </ul>
+        <p>This turns your meetings into actionable workflows — no more manual task creation after meetings.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I integrate Recap with my calendar?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Not in v1.0.</strong> Recap doesn't integrate with calendars in v1.0.</p>
+        <p>Recap captures system audio regardless of calendar — it doesn't need to know about your meetings in advance. You just start a meeting, and Recap automatically captures and transcribes.</p>
+        <p>Calendar integration (auto-start transcription based on calendar events) is planned for v1.1 (Q4 2026).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I integrate Recap with Slack or Teams?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Not directly.</strong> Recap doesn't post to Slack or Teams channels in v1.0.</p>
+        <p>However, you can:</p>
+        <ul>
+          <li><strong>Export and share:</strong> Export summaries as Markdown or PDF, then share via Slack/Teams</li>
+          <li><strong>Loop integration:</strong> If you're using ODW.ai Loop, you can configure Loop to post summaries to Slack/Teams</li>
+          <li><strong>Custom integration:</strong> Use the API to build a custom integration with Slack/Teams</li>
+        </ul>
+        <p>Native Slack/Teams integration is planned for v1.2 (Q1 2027).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Recap provide an API?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Not in v1.0.</strong> Recap doesn't provide a public API in v1.0.</p>
+        <p>API access is planned for v1.2 (Q1 2027). The API will allow:</p>
+        <ul>
+          <li><strong>Query meetings:</strong> Retrieve meeting transcripts, summaries, and action items</li>
+          <li><strong>Trigger transcription:</strong> Programmatically transcribe audio files</li>
+          <li><strong>Integrate with custom tools:</strong> Build custom integrations with Recap</li>
+        </ul>
+        <p>In the meantime, you can use the export features (Markdown, JSON) to integrate with other tools.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I use Recap with my existing AI tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Recap can be used with existing AI tools:</p>
+        <ul>
+          <li><strong>Export transcripts:</strong> Export transcripts as JSON, then use them in your AI pipelines</li>
+          <li><strong>Export summaries:</strong> Export summaries as Markdown, then use them in your knowledge base</li>
+          <li><strong>Custom integrations:</strong> Use the export features to integrate with LangChain, LlamaIndex, etc.</li>
+        </ul>
+        <p>Recap is designed to be a <strong>meeting intelligence layer</strong> — it provides transcription and summarization, and you can use the output in your existing workflows.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 11: LIMITATIONS & ROADMAP -->
+  <div class="section" id="s11">
+    <div class="section-header"><span class="icon">11 · ROADMAP</span><h2>Limitations & Roadmap</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">What can't Recap do (yet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap is powerful, but it has limitations in v1.0:</p>
+        <ul>
+          <li><strong>English only:</strong> Multi-language support planned for v1.1 (Q4 2026)</li>
+          <li><strong>No video recording:</strong> Audio-only (video adds significant complexity)</li>
+          <li><strong>No real-time translation:</strong> Transcription only; translation is a future consideration</li>
+          <li><strong>No mobile apps:</strong> Desktop-only for v1.0 (meetings happen on desktop)</li>
+          <li><strong>No phone call recording:</strong> Only system audio (no phone call recording)</li>
+          <li><strong>No public API:</strong> API planned for v1.2 (Q1 2027)</li>
+          <li><strong>No calendar integration:</strong> Planned for v1.1 (Q4 2026)</li>
+          <li><strong>No cloud API support:</strong> On-device only in v1.0 (API support planned for v2.0)</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Will Recap support more languages?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Yes.</strong> Multi-language support is planned for v1.1 (Q4 2026):</p>
+        <ul>
+          <li><strong>Spanish</strong></li>
+          <li><strong>French</strong></li>
+          <li><strong>German</strong></li>
+          <li><strong>Chinese (Mandarin)</strong></li>
+          <li><strong>Japanese</strong></li>
+          <li><strong>And more</strong></li>
+        </ul>
+        <p>Whisper (the underlying transcription model) already supports 99 languages — v1.0 of Recap is just optimized for English. v1.1 will expand language support.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Will Recap support video recording?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Not in the current roadmap.</strong> Video recording adds significant complexity (storage, processing, UI) and is not needed for transcription value.</p>
+        <p>Recap is focused on <strong>audio transcription and meeting intelligence</strong>. If you need video recording, we recommend using your meeting platform's built-in recording (Zoom, Teams, Meet) or a dedicated video recording tool.</p>
+        <p>If video recording is a must-have for your use case, contact us — we may reconsider based on customer demand.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Will Recap support real-time translation?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Planned for v2.0 (Q2 2027).</strong> Real-time translation will include:</p>
+        <ul>
+          <li><strong>Live translation:</strong> Translate speech in real-time (e.g., someone speaks English, you see Spanish subtitles)</li>
+          <li><strong>Post-meeting translation:</strong> Translate transcripts and summaries after the meeting</li>
+          <li><strong>Multi-language support:</strong> Translate between 50+ languages</li>
+        </ul>
+        <p>This is a high-priority feature for global teams and multilingual organizations.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Key milestones:</p>
+        <ul>
+          <li><strong>v1.0 (Q3 2026):</strong> MVP launch. On-device transcription, local summaries, action items, macOS/Windows/Linux support.</li>
+          <li><strong>v1.1 (Q4 2026):</strong> Multi-language support, calendar integration, improved speaker diarization.</li>
+          <li><strong>v1.2 (Q1 2027):</strong> Public API, Slack/Teams integration, advanced analytics.</li>
+          <li><strong>v2.0 (Q2 2027):</strong> Real-time translation, cloud API support (opt-in), model fine-tuning.</li>
+        </ul>
+        <p>Roadmap is subject to change based on customer feedback. Contact us for the latest roadmap or to request features.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">When should I NOT use Recap?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Recap is not the right fit if:</p>
+        <ul>
+          <li><strong>You don't have sovereignty requirements:</strong> If you don't care about data sovereignty, cloud-based tools (Otter.ai, Fireflies) are easier (no local processing).</li>
+          <li><strong>You need video recording:</strong> Recap is audio-only. If you need video, use your meeting platform's built-in recording.</li>
+          <li><strong>You need phone call recording:</strong> Recap only captures system audio. If you need phone call recording, use a dedicated phone recording solution.</li>
+          <li><strong>You need mobile apps:</strong> Recap is desktop-only. If you need mobile transcription, use a mobile-first tool.</li>
+          <li><strong>You need real-time translation:</strong> Recap doesn't support translation in v1.0. If you need translation, wait for v2.0 or use a dedicated translation tool.</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Recap guarantee 100% accurate transcription?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>No.</strong> No AI transcription system can guarantee 100% accuracy. Recap's accuracy depends on:</p>
+        <ul>
+          <li><strong>Audio quality:</strong> Clear audio = better accuracy</li>
+          <li><strong>Model size:</strong> Larger models (Whisper large-v3) are more accurate</li>
+          <li><strong>Speaker clarity:</strong> Clear speakers = better accuracy</li>
+          <li><strong>Background noise:</strong> Less noise = better accuracy</li>
+        </ul>
+        <p>Target: <strong>≤8% Word Error Rate (WER)</strong> on standard business English meetings. This means 92%+ accuracy.</p>
+        <p>For critical meetings (legal, medical), we recommend human review of the transcript.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I get started?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Three paths:</p>
+        <ol>
+          <li><strong>Free download:</strong> Download Recap from odw.ai/recap. No credit card required. Try it with your meetings and see if it works for your use case.</li>
+          <li><strong>Demo:</strong> Book a demo with our team. We'll walk you through Recap, answer your questions, and help you evaluate if it's right for your business.</li>
+          <li><strong>Contact sales:</strong> For enterprise customers or suite bundles, contact our sales team for a tailored quote.</li>
+        </ol>
+        <div class="callout tip"><strong>Ready to start?</strong>Visit <code>odw.ai/recap</code> to download Recap or book a demo.</div>
+      </div></div></div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Recap — FAQ for Business Users</strong></p>
+    <p>Version 2.0 · Draft for review</p>
+    <p>Based on: PRD v1.0, SAD v1.0, TSD v1.0, TBK v1.0 (2026-06-23)</p>
+    <p><a href="suite.html">← Back to Suite FAQ</a></p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => { button.parentElement.classList.toggle('open'); });
+  });
+  function expandAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.add('open')); }
+  function collapseAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); }
+  const searchInput = document.getElementById('searchInput');
+  const noResults = document.getElementById('noResults');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.section').forEach(section => {
+      let sectionHas = 0;
+      section.querySelectorAll('.faq-item').forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        const match = q === '' || txt.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) { sectionHas++; visibleCount++; if (q !== '') item.classList.add('open'); }
+        else { item.classList.remove('open'); }
+      });
+      section.style.display = sectionHas === 0 && q !== '' ? 'none' : '';
+    });
+    noResults.style.display = (visibleCount === 0 && q !== '') ? 'block' : 'none';
+  });
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

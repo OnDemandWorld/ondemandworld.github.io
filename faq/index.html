@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — ODW.ai</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+<link rel="stylesheet" href="./styles.css">
+<style>
+/* Hub-page specific styles */
+.hub-header {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: var(--ink);
+  color: var(--paper);
+}
+.hub-header .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.hub-header .eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+.hub-header h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  max-width: 20ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hub-header h1 em {
+  color: var(--accent);
+  font-style: italic;
+}
+.hub-header p {
+  font-size: 1.125rem;
+  color: var(--accent-2);
+  max-width: 56ch;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.hub-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+.tier-section {
+  margin-bottom: 60px;
+}
+.tier-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--rule);
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.faq-card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 32px -12px rgba(0,0,0,0.15);
+}
+.faq-card.draft {
+  background: var(--paper-2);
+  border-style: dashed;
+}
+.faq-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.faq-card-icon {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2rem;
+  color: var(--accent);
+  font-weight: 400;
+  line-height: 1;
+}
+.faq-card-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.faq-card-status.live {
+  background: rgba(31, 122, 77, 0.12);
+  color: var(--good);
+}
+.faq-card-status.draft {
+  background: rgba(181, 137, 0, 0.12);
+  color: var(--warn);
+}
+.faq-card h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.faq-card-desc {
+  font-size: 0.9375rem;
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+.faq-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--ink-4);
+  letter-spacing: 0.02em;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+}
+.faq-card-meta .count {
+  color: var(--accent);
+  font-weight: 600;
+}
+.faq-card-arrow {
+  margin-left: auto;
+  color: var(--accent);
+  font-size: 1.125rem;
+  transition: transform 0.2s;
+}
+.faq-card:hover .faq-card-arrow {
+  transform: translateX(4px);
+}
+.hub-footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid var(--rule);
+  margin-top: 60px;
+}
+.hub-footer p {
+  font-size: 1rem;
+  color: var(--ink-3);
+  margin-bottom: 12px;
+}
+.hub-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.hub-footer a:hover {
+  color: var(--accent-ink);
+}
+</style>
+</head>
+<body>
+
+<div class="hub-header">
+  <div class="eyebrow">Everything you asked (and a few you didn't)</div>
+  <h1>Every hard question about every module, <em>answered honestly</em>.</h1>
+  <p>Search anything, or start with the module you're evaluating. 940 questions across 11 documents — the most comprehensive FAQ in sovereign AI.</p>
+</div>
+
+<div class="hub-container">
+  <div class="breadcrumbs" style="margin-bottom:30px;">
+    <a href="../index.html">Home</a>
+    <span class="sep">→</span>
+    <span>FAQ</span>
+  </div>
+
+  <!-- CROSS-SUITE -->
+  <div class="tier-section">
+    <div class="tier-label">Cross-Suite</div>
+    <div class="faq-grid">
+      <a href="./suite.html" class="faq-card">
+        <div class="faq-card-header">
+          <div class="faq-card-icon">⊞</div>
+          <div class="faq-card-status live">Live</div>
+        </div>
+        <h2>Suite FAQ</h2>
+        <p class="faq-card-desc">Sovereignty, security, deployment, compliance, pricing — how everything works together across all 10 modules.</p>
+        <div class="faq-card-meta">
+          <span class="count">92 questions</span>
+          <span>·</span>
+          <span>12 sections</span>
+          <span class="faq-card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- LIVE MODULES -->
+  <div class="tier-section">
+    <div class="tier-label">Live Modules · Open Source</div>
+    <div class="faq-grid">
+      <a href="./desk.html" class="faq-card">
+        <div class="faq-card-header">
+          <div class="faq-card-icon">D</div>
+          <div class="faq-card-status live">Live</div>
+        </div>
+        <h2>Desk FAQ</h2>
+        <p class="faq-card-desc">WhatsApp-first omnichannel support agent. PII redaction, RAG-grounded answers, clean human handoff.</p>
+        <div class="faq-card-meta">
+          <span class="count">92 questions</span>
+          <span>·</span>
+          <span>12 sections</span>
+          <span class="faq-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="./vault.html" class="faq-card">
+        <div class="faq-card-header">
+          <div class="faq-card-icon">V</div>
+          <div class="faq-card-status live">Live</div>
+        </div>
+        <h2>Vault FAQ</h2>
+        <p class="faq-card-desc">Sovereign knowledge copilot. Pre-flight RAG pipeline with hybrid retrieval, offline capability, open-model support.</p>
+        <div class="faq-card-meta">
+          <span class="count">86 questions</span>
+          <span>·</span>
+          <span>12 sections</span>
+          <span class="faq-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="./loop.html" class="faq-card">
+        <div class="faq-card-header">
+          <div class="faq-card-icon">L</div>
+          <div class="faq-card-status live">Live</div>
+        </div>
+        <h2>Loop FAQ</h2>
+        <p class="faq-card-desc">Agentic workflow orchestration. React Flow canvas, Fastify backend, DAG execution engine.</p>
+        <div class="faq-card-meta">
+          <span class="count">85 questions</span>
+          <span>·</span>
+          <span>12 sections</span>
+          <span class="faq-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="./recap.html" class="faq-card">
+        <div class="faq-card-header">
+          <div class="faq-card-icon">R</div>
+          <div class="faq-card-status live">Live</div>
+        </div>
+        <h2>Recap FAQ</h2>
+        <p class="faq-card-desc">On-device meeting intelligence. Local transcription, AI summarisation, structured tasks that write back to your tools.</p>
+        <div class="faq-card-meta">
+          <span class="count">85 questions</span>
+          <span>·</span>
+          <span>12 sections</span>
+          <span class="faq-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="./pulse.html" class="faq-card">
+        <div class="faq-card-header">
+          <div class="faq-card-icon">P</div>
+          <div class="faq-card-status live">Live</div>
+        </div>
+        <h2>Pulse FAQ</h2>
+        <p class="faq-card-desc">Multilingual marketing generation. Content and campaigns with real cultural adaptation, built-in A/B experimentation.</p>
+        <div class="faq-card-meta">
+          <span class="count">82 questions</span>
+          <span>·</span>
+          <span>12 sections</span>
+          <span class="faq-card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ROADMAP -->
+  <div class="tier-section">
+    <div class="tier-label">Roadmap · Design Drafts</div>
+    <div class="faq-grid">
+      <a href="./voice.html" class="faq-card draft">
+        <div class="faq-card-header">
+          <div class="faq-card-icon">V</div>
+          <div class="faq-card-status draft">Design Draft</div>
+        </div>
+        <h2>Voice FAQ</h2>
+        <p class="faq-card-desc">AI receptionist. Inbound calls, appointment booking, structured handoff. Your voice, your script, your data.</p>
+        <div class="faq-card-meta">
+          <span class="count">83 questions</span>
+          <span>·</span>
+          <span>Module in development</span>
+          <span class="faq-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="./hunt.html" class="faq-card draft">
+        <div class="faq-card-header">
+          <div class="faq-card-icon">H</div>
+          <div class="faq-card-status draft">Design Draft</div>
+        </div>
+        <h2>Hunt FAQ</h2>
+        <p class="faq-card-desc">AI SDR, human-in-the-loop. Research and sequencing that requires human approval before anything sends.</p>
+        <div class="faq-card-meta">
+          <span class="count">85 questions</span>
+          <span>·</span>
+          <span>Module in development</span>
+          <span class="faq-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="./books.html" class="faq-card draft">
+        <div class="faq-card-header">
+          <div class="faq-card-icon">B</div>
+          <div class="faq-card-status draft">Design Draft</div>
+        </div>
+        <h2>Books FAQ</h2>
+        <p class="faq-card-desc">AI bookkeeping. Receipt capture, categorisation, reconciliation, monthly close. Plugs into your accounting stack.</p>
+        <div class="faq-card-meta">
+          <span class="count">85 questions</span>
+          <span>·</span>
+          <span>Module in development</span>
+          <span class="faq-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="./people.html" class="faq-card draft">
+        <div class="faq-card-header">
+          <div class="faq-card-icon">P</div>
+          <div class="faq-card-status draft">Design Draft</div>
+        </div>
+        <h2>People FAQ</h2>
+        <p class="faq-card-desc">AI hiring. CV screening, structured interviews, scheduling. Bias auditing built in — EU AI Act aware by design.</p>
+        <div class="faq-card-meta">
+          <span class="count">85 questions</span>
+          <span>·</span>
+          <span>Module in development</span>
+          <span class="faq-card-arrow">→</span>
+        </div>
+      </a>
+
+      <a href="./shield.html" class="faq-card draft">
+        <div class="faq-card-header">
+          <div class="faq-card-icon">S</div>
+          <div class="faq-card-status draft">Design Draft</div>
+        </div>
+        <h2>Shield FAQ</h2>
+        <p class="faq-card-desc">SMB cybersecurity. Phishing detection, credential hygiene, threat monitoring — sized for teams without a security engineer.</p>
+        <div class="faq-card-meta">
+          <span class="count">86 questions</span>
+          <span>·</span>
+          <span>Module in development</span>
+          <span class="faq-card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="hub-footer">
+    <p>Can't find what you're looking for?</p>
+    <p><a href="mailto:hello@odw.ai">Email hello@odw.ai</a> or <a href="../index.html#contact">get in touch</a>.</p>
+  </div>
+</div>
+
+</body>
+</html>

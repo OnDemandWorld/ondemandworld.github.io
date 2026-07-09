@@ -1,121 +1,169 @@
+/* ─────────────────────────────────────────────────────────────
+   ODW.AI · v2 responsive prototype — behavior
+   Progressive enhancement only. Site works without JS.
+   ───────────────────────────────────────────────────────────── */
+
 (function () {
   'use strict';
 
-  const SLIDE_WIDTH = 1920;
-  const SLIDE_HEIGHT = 1080;
+  const $  = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
-  function scaleSlides() {
-    const sections = document.querySelectorAll('.slide-section');
-    sections.forEach(function (section) {
-      const container = section.querySelector('.slide-container');
-      if (!container) return;
-      const sectionWidth = section.clientWidth;
-      const scale = sectionWidth / SLIDE_WIDTH;
-      container.style.transform = 'scale(' + scale + ')';
-      section.style.height = Math.ceil(SLIDE_HEIGHT * scale) + 'px';
-    });
-  }
-
+  /* ── Mobile navigation ─────────────────────────────────── */
   function initNav() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    const backdrop = document.querySelector('.nav-backdrop');
+    const toggle   = $('.nav-toggle');
+    const nav      = $('.mobile-nav');
+    const backdrop = $('.nav-backdrop');
+    if (!toggle || !nav) return;
 
-    function closeNav() {
-      nav.classList.remove('open');
-      navToggle.classList.remove('active');
-      backdrop.classList.remove('active');
-    }
+    const setOpen = (open) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('open', open);
+      backdrop && backdrop.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
 
-    function openNav() {
-      nav.classList.add('open');
-      navToggle.classList.add('active');
-      backdrop.classList.add('active');
-    }
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      setOpen(open);
+    });
 
-    if (navToggle && nav) {
-      navToggle.addEventListener('click', function () {
-        if (nav.classList.contains('open')) {
-          closeNav();
-        } else {
-          openNav();
-        }
-      });
-    }
+    backdrop && backdrop.addEventListener('click', () => setOpen(false));
 
-    // Close nav when clicking backdrop
-    if (backdrop) {
-      backdrop.addEventListener('click', closeNav);
-    }
+    // Close nav on link click (mobile)
+    $$('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', () => setOpen(false));
+    });
 
-    // Close nav on link click (mobile) — covers both section nav and lang switcher.
-    var navLinks = document.querySelectorAll('.nav-links a, .nav-lang a');
-    navLinks.forEach(function (link) {
-      link.addEventListener('click', closeNav);
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        setOpen(false);
+        toggle.focus();
+      }
     });
   }
 
+  /* ── Scroll spy (highlights current section in sidebar/mobile nav) ── */
   function initScrollSpy() {
-    var sections = document.querySelectorAll('.slide-section[id]');
-    var navLinks = document.querySelectorAll('.nav-links a');
+    const sections = $$('main section[id]');
+    const allLinks = $$('.sidebar-nav a, .mobile-nav a');
+    if (!sections.length || !allLinks.length || !('IntersectionObserver' in window)) return;
 
-    if (!sections.length || !navLinks.length) return;
-
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          var id = entry.target.getAttribute('id');
-          navLinks.forEach(function (link) {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + id) {
-              link.classList.add('active');
-            }
+          const id = entry.target.id;
+          allLinks.forEach(link => {
+            const match = link.getAttribute('href') === '#' + id;
+            if (match) link.setAttribute('aria-current', 'true');
+            else       link.removeAttribute('aria-current');
           });
         }
       });
     }, {
-      rootMargin: '-30% 0px -70% 0px',
+      rootMargin: '-30% 0px -60% 0px',
       threshold: 0
     });
 
-    sections.forEach(function (section) {
-      observer.observe(section);
+    sections.forEach(s => observer.observe(s));
+  }
+
+  /* ── Copy-to-clipboard button ──────────────────────────── */
+  function initCopyButtons() {
+    $$('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const text = btn.dataset.copy || '';
+        try {
+          await navigator.clipboard.writeText(text);
+          const labelEl = btn.querySelector('.copy-label');
+          const iconEl  = btn.querySelector('.copy-icon');
+          const originalLabel = labelEl ? labelEl.textContent : '';
+          const originalIcon  = iconEl  ? iconEl.textContent  : '';
+          if (labelEl) labelEl.textContent = 'Copied';
+          if (iconEl)  iconEl.textContent  = '✓';
+          btn.classList.add('copied');
+          // Optional: haptic feedback on Android
+          if (navigator.vibrate) navigator.vibrate(10);
+          setTimeout(() => {
+            if (labelEl) labelEl.textContent = originalLabel;
+            if (iconEl)  iconEl.textContent  = originalIcon;
+            btn.classList.remove('copied');
+          }, 1800);
+        } catch (err) {
+          console.warn('Clipboard failed:', err);
+        }
+      });
     });
   }
 
-  function getCurrentLang() {
-    var path = window.location.pathname;
-    if (path.indexOf('/zh-cn') !== -1) return 'zh-CN';
-    if (path.indexOf('/zh-hk') !== -1) return 'zh-HK';
-    return 'en';
-  }
+  /* ── Sticky CTA bar: hide on scroll-down, show on scroll-up ── */
+  function initStickyCta() {
+    const bar = $('.sticky-cta');
+    if (!bar) return;
 
-  function initLangSwitcher() {
-    var current = getCurrentLang();
-    var hash = window.location.hash || '';
-    var links = document.querySelectorAll('.nav-lang a');
+    let lastY = window.scrollY;
+    let ticking = false;
 
-    links.forEach(function (link) {
-      var lang = link.getAttribute('data-lang');
-      // Highlight the current locale.
-      if (lang === current) {
-        link.classList.add('active');
+    // Hide when near footer (contact section already has its own CTAs)
+    const contact = $('#contact');
+
+    const update = () => {
+      const y = window.scrollY;
+      const goingDown = y > lastY && y > 200;
+
+      // Hide when contact section is in view
+      let inContact = false;
+      if (contact) {
+        const rect = contact.getBoundingClientRect();
+        inContact = rect.top < window.innerHeight * 0.7;
       }
-      // Preserve the current section anchor across language switches,
-      // so clicking 简体中文 while reading #modules lands on /zh-cn/#modules.
-      var baseHref = link.getAttribute('href').split('#')[0];
-      link.setAttribute('href', baseHref + hash);
-    });
+
+      bar.classList.toggle('hidden', goingDown || inContact);
+      lastY = y;
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
   }
 
+  /* ── Reveal on scroll (subtle fade-in for cards) ────────── */
+  function initReveal() {
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const targets = $$('.pillar, .module-card, .principle, .vertical-card, .service-card, .stack-layer, .feature-item');
+    targets.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(12px)';
+      el.style.transition = 'opacity 500ms cubic-bezier(0.4,0,0.2,1), transform 500ms cubic-bezier(0.4,0,0.2,1)';
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+
+    targets.forEach(el => io.observe(el));
+  }
+
+  /* ── Init ───────────────────────────────────────────────── */
   function init() {
-    scaleSlides();
     initNav();
     initScrollSpy();
-    initLangSwitcher();
-    window.addEventListener('resize', scaleSlides);
-    // Re-apply hash preservation when the user navigates within the page.
-    window.addEventListener('hashchange', initLangSwitcher);
+    initCopyButtons();
+    initStickyCta();
+    initReveal();
   }
 
   if (document.readyState === 'loading') {

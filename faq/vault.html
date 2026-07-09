@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vault — FAQ for Business Users</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="subtitle">Vault FAQ</div>
+  <h1>Vault FAQ</h1>
+  <p>Sovereign knowledge base — document ingestion, embeddings, RAG retrieval, model-agnostic inference. Answers for business leaders, no technical background required.</p>
+  <span class="last-updated">Last updated: 2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">Home</a>
+    <span class="sep">→</span>
+    <a href="./index.html">FAQ</a>
+    <span class="sep">→</span>
+    <a href="./suite.html">Suite</a>
+    <span class="sep">→</span>
+    <span>Vault</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search questions… (e.g. 'RAG', 'embeddings', 'documents', 'sovereignty', 'HIPAA', 'local models')">
+  </div>
+  <div class="controls">
+    <button onclick="expandAll()">＋ Expand all</button>
+    <button onclick="collapseAll()">− Collapse all</button>
+    <button onclick="window.print()">🖨️ Print / Save PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>Jump to a section</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> The Basics</a>
+      <a href="#s2"><span class="num">2</span> Document Ingestion & Processing</a>
+      <a href="#s3"><span class="num">3</span> Our Solution's Strengths</a>
+      <a href="#s4"><span class="num">4</span> Retrieval & Querying</a>
+      <a href="#s5"><span class="num">5</span> Security & Privacy</a>
+      <a href="#s6"><span class="num">6</span> Models & AI</a>
+      <a href="#s7"><span class="num">7</span> Deployment & Setup</a>
+      <a href="#s8"><span class="num">8</span> Cost & Pricing</a>
+      <a href="#s9"><span class="num">9</span> Scaling & Operations</a>
+      <a href="#s10"><span class="num">10</span> Integration & Workflows</a>
+      <a href="#s11"><span class="num">11</span> Limitations & Roadmap</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">No questions matched your search. Try a broader keyword.</div>
+
+  <!-- SECTION 1: THE BASICS -->
+  <div class="section" id="s1">
+    <div class="section-header"><span class="icon">01 · OVERVIEW</span><h2>The Basics — What Is Vault?</h2><span class="count">9 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">What is ODW.ai Vault in plain English?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault is a <strong>self-hosted knowledge base</strong> that uses AI to help you find information in your documents. It's like a super-powered search engine for your company's internal knowledge.</p>
+        <p>Here's how it works:</p>
+        <ol>
+          <li><strong>You upload documents:</strong> PDFs, Word files, web pages, spreadsheets, etc.</li>
+          <li><strong>Vault processes them:</strong> Breaks them into chunks, creates AI embeddings (numerical representations of meaning)</li>
+          <li><strong>You ask questions:</strong> "What's our refund policy?" or "Show me precedents for non-compete clauses"</li>
+          <li><strong>Vault finds answers:</strong> Retrieves relevant document sections and uses AI to generate a concise answer</li>
+        </ol>
+        <p>The key difference from regular search: Vault understands <strong>meaning</strong>, not just keywords. It can find relevant information even if the exact words aren't in your query.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What problem does Vault solve?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Businesses have a knowledge problem:</p>
+        <ul>
+          <li><strong>Information is scattered:</strong> Documents, wikis, emails, Slack messages, databases — knowledge is everywhere</li>
+          <li><strong>Search is broken:</strong> Keyword search misses context. Searching "refund policy" won't find "customer returns" even if they're the same thing</li>
+          <li><strong>AI tools require sending data to the cloud:</strong> Cloud AI services (ChatGPT, Glean, etc.) require sending your documents to their servers — a dealbreaker for regulated industries</li>
+        </ul>
+        <p>Vault solves this by providing <strong>self-hosted AI-powered knowledge retrieval</strong>. Your documents stay on your infrastructure. No data leaves your servers. Full sovereignty.</p>
+        <div class="callout info"><strong>The result</strong>Employees find answers in seconds instead of hours. No more digging through folders or asking colleagues "where's that document?"</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Who is Vault for?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault is designed for <strong>regulated and data-residency-sensitive organizations</strong>:</p>
+        <ul>
+          <li><strong>Healthcare:</strong> HIPAA-compliant knowledge retrieval for patient records, clinical guidelines, policies</li>
+          <li><strong>Legal:</strong> Privileged document search for case files, precedents, contracts — without sending data to cloud AI</li>
+          <li><strong>Financial services:</strong> Regulatory document search, compliance knowledge base, audit trails</li>
+          <li><strong>Government:</strong> Classified document retrieval with full data sovereignty</li>
+          <li><strong>EU-based enterprises:</strong> GDPR-compliant knowledge management with data residency controls</li>
+        </ul>
+        <p>If you have sensitive documents and can't send them to cloud AI services, Vault is for you.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What does "RAG" mean?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>RAG = Retrieval-Augmented Generation.</strong> It's the technology behind Vault.</p>
+        <p>Here's how it works:</p>
+        <ol>
+          <li><strong>Retrieval:</strong> When you ask a question, Vault first <em>retrieves</em> relevant document sections (using AI embeddings and vector search)</li>
+          <li><strong>Augmented:</strong> Those document sections are <em>augmented</em> (added) to the AI's context</li>
+          <li><strong>Generation:</strong> The AI then <em>generates</em> an answer based on the retrieved context</li>
+        </ol>
+        <p>Why this matters:</p>
+        <ul>
+          <li><strong>Accuracy:</strong> The AI answers based on your actual documents, not hallucinated from training data</li>
+          <li><strong>Traceability:</strong> You can see which documents the answer came from</li>
+          <li><strong>Up-to-date:</strong> The AI uses your latest documents, not stale training data</li>
+        </ul>
+        <div class="callout tip"><strong>Simple analogy</strong>RAG is like giving the AI a reference book (your documents) to consult before answering. It can't make things up — it has to cite the source.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How is Vault different from ChatGPT or other AI tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Key differences:</p>
+        <table>
+          <thead><tr><th>Aspect</th><th>ODW.ai Vault</th><th>ChatGPT / Cloud AI</th></tr></thead>
+          <tbody>
+            <tr><td>Data location</td><td>✅ Self-hosted — stays on your infrastructure</td><td>❌ Sent to OpenAI/Anthropic servers</td></tr>
+            <tr><td>Knowledge source</td><td>✅ Your documents (RAG)</td><td>❌ Training data (may be outdated)</td></tr>
+            <tr><td>Accuracy</td><td>✅ Grounded in your documents, citable</td><td>⚠️ May hallucinate or be outdated</td></tr>
+            <tr><td>Privacy</td><td>✅ Full sovereignty</td><td>❌ Data sent to third party</td></tr>
+            <tr><td>Compliance</td><td>✅ HIPAA, GDPR, SOC 2 compatible</td><td>❌ May not meet regulatory requirements</td></tr>
+            <tr><td>Cost</td><td>Free (self-hosted) or $99-$499/month</td><td>$20-$200/user/month</td></tr>
+          </tbody>
+        </table>
+        <p>ChatGPT is a general-purpose AI assistant. Vault is a <strong>knowledge retrieval system</strong> specifically designed for your internal documents. Use ChatGPT for general questions; use Vault for company-specific knowledge.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How is Vault different from Glean or Onyx?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Glean and Onyx are excellent cloud RAG platforms, but they have different design priorities:</p>
+        <table>
+          <thead><tr><th>Aspect</th><th>ODW.ai Vault</th><th>Glean / Onyx</th></tr></thead>
+          <tbody>
+            <tr><td>Deployment</td><td>✅ Self-hosted</td><td>❌ Cloud SaaS</td></tr>
+            <tr><td>Data sovereignty</td><td>✅ Full control</td><td>❌ Data sent to vendor</td></tr>
+            <tr><td>Open source</td><td>✅ Core is open source</td><td>❌ Proprietary</td></tr>
+            <tr><td>Model choice</td><td>✅ Model-agnostic (local or API)</td><td>⚠️ Limited to vendor's models</td></tr>
+            <tr><td>Price</td><td>Free (self-hosted) or $99-$499/month</td><td>$10-$30/user/month</td></tr>
+            <tr><td>Target market</td><td>Regulated SMBs</td><td>General enterprise</td></tr>
+          </tbody>
+        </table>
+        <p>Choose Glean/Onyx if you don't have sovereignty requirements and want a managed service. Choose Vault if you need full data control or want to self-host.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Is Vault open source?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Yes.</strong> Vault's core is open source (Apache 2.0 license). You can:</p>
+        <ul>
+          <li><strong>Self-host for free:</strong> Download, deploy, and use Vault without paying anything</li>
+          <li><strong>Modify the code:</strong> Customize Vault to your needs</li>
+          <li><strong>Contribute:</strong> Submit pull requests, report bugs, join the community</li>
+        </ul>
+        <p>The <strong>enterprise layer</strong> (SSO, advanced RBAC, audit logging, compliance features, premium support) is paid. This is how we fund development.</p>
+        <div class="callout info"><strong>Open source commitment</strong>We believe in transparent, auditable code — especially for sovereignty-focused organizations. You should be able to verify what your AI tools are doing.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What does "sovereign" mean in this context?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>"Sovereign" means <strong>full control over your data</strong>:</p>
+        <ul>
+          <li><strong>Data location:</strong> Your documents stay on your infrastructure (on-premises or private cloud)</li>
+          <li><strong>Processing:</strong> All AI processing (embeddings, retrieval, generation) happens on your infrastructure</li>
+          <li><strong>No external dependencies:</strong> No data sent to OpenAI, Anthropic, or any third party (unless you choose to use their APIs)</li>
+          <li><strong>Auditability:</strong> You can inspect the code, logs, and data flows</li>
+        </ul>
+        <p>This is critical for regulated industries. You can't claim data sovereignty if your AI tool is sending your documents to a cloud vendor.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Do I need technical skills to use Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>For deployment:</strong> Yes. Vault is self-hosted, so you need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure. This is typically a DevOps engineer or IT consultant.</p>
+        <p><strong>For day-to-day use:</strong> No. The admin console is designed for non-technical users (knowledge managers, compliance officers). You can upload documents, create knowledge bases, and query the system without writing code.</p>
+        <p><strong>For developers:</strong> Vault provides a REST API and SDKs (Python, JavaScript) for custom integrations. Developers can build custom workflows, integrate Vault into internal tools, etc.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 2: DOCUMENT INGESTION & PROCESSING -->
+  <div class="section" id="s2">
+    <div class="section-header"><span class="icon">02 · SOVEREIGNTY</span><h2>Document Ingestion & Processing</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">What document formats does Vault support?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault supports a wide range of document formats:</p>
+        <ul>
+          <li><strong>PDF:</strong> Text-based PDFs (scanned PDFs require OCR — see below)</li>
+          <li><strong>DOCX:</strong> Microsoft Word documents</li>
+          <li><strong>HTML:</strong> Web pages</li>
+          <li><strong>Markdown:</strong> .md files</li>
+          <li><strong>Plain text:</strong> .txt files</li>
+          <li><strong>CSV:</strong> Comma-separated values (structured data)</li>
+          <li><strong>JSON:</strong> Structured data</li>
+        </ul>
+        <p>Additional formats (PPTX, XLSX, email formats) are planned for future releases.</p>
+        <div class="callout warning"><strong>Scanned PDFs</strong>Scanned PDFs (images of text) require OCR (Optical Character Recognition) to extract text. Vault includes basic OCR, but for high-volume or complex documents, we recommend using a dedicated OCR tool (e.g., Tesseract, Adobe Acrobat) before uploading.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How does Vault process documents?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault processes documents in three steps:</p>
+        <ol>
+          <li><strong>Chunking:</strong> Documents are broken into smaller chunks (typically 500-1,000 words each). This makes retrieval more precise — instead of returning an entire 50-page document, Vault returns the specific paragraphs that answer your question.</li>
+          <li><strong>Embedding:</strong> Each chunk is converted into a numerical representation (embedding) using an AI model. Embeddings capture the <em>meaning</em> of the text — similar meanings have similar embeddings.</li>
+          <li><strong>Storage:</strong> Embeddings are stored in a vector database. When you query Vault, your question is also converted into an embedding, and Vault finds the most similar document chunks.</li>
+        </ol>
+        <p>This entire process happens automatically when you upload documents. No manual configuration required.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What is "chunking" and why does it matter?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Chunking</strong> is the process of breaking documents into smaller pieces. It matters because:</p>
+        <ul>
+          <li><strong>Precision:</strong> Instead of returning an entire 50-page document, Vault returns the specific paragraphs that answer your question</li>
+          <li><strong>Context window:</strong> AI models have limited context windows (how much text they can process at once). Chunking ensures each piece fits within the context window</li>
+          <li><strong>Efficiency:</strong> Smaller chunks are faster to retrieve and process</li>
+        </ul>
+        <p>Vault offers three chunking strategies:</p>
+        <ul>
+          <li><strong>Fixed-size:</strong> Chunks are a fixed number of words (e.g., 500 words). Simple, predictable.</li>
+          <li><strong>Semantic:</strong> Chunks are based on meaning — sentences with similar meaning are grouped together. More accurate, but slower.</li>
+          <li><strong>Structural:</strong> Chunks are based on document structure (headings, paragraphs, sections). Best for well-structured documents.</li>
+        </ul>
+        <div class="callout tip"><strong>Recommendation</strong>Start with fixed-size chunking (default). If accuracy is poor, switch to semantic or structural chunking.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What are embeddings?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Embeddings</strong> are numerical representations of text. They capture the <em>meaning</em> of text in a way that AI can understand.</p>
+        <p>Here's how they work:</p>
+        <ul>
+          <li>Each piece of text (a sentence, paragraph, or chunk) is converted into a list of numbers (e.g., [0.12, -0.34, 0.56, ...])</li>
+          <li>Text with similar meanings has similar embeddings (numbers are close together)</li>
+          <li>Text with different meanings has different embeddings (numbers are far apart)</li>
+        </ul>
+        <p>Example:</p>
+        <ul>
+          <li>"How do I request a refund?" and "What's the return policy?" have <strong>similar</strong> embeddings (same meaning)</li>
+          <li>"How do I request a refund?" and "What's the weather today?" have <strong>different</strong> embeddings (different meanings)</li>
+        </ul>
+        <p>Vault uses embeddings to find relevant document chunks when you ask a question. Your question is converted into an embedding, and Vault finds document chunks with similar embeddings.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I upload documents in bulk?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>bulk upload</strong>:</p>
+        <ul>
+          <li><strong>Web UI:</strong> Drag and drop multiple files or folders</li>
+          <li><strong>API:</strong> Upload files programmatically via REST API</li>
+          <li><strong>Connectors:</strong> Sync documents from external sources (file system, S3, WebDAV, SharePoint)</li>
+        </ul>
+        <p>For large document collections (1,000+ files), we recommend using connectors or the API. The web UI is best for smaller uploads (10-100 files).</p>
+        <div class="callout tip"><strong>Processing time</strong>Upload is instant, but processing (chunking + embedding) takes time. For 1,000 documents, expect 10-30 minutes of processing time (depending on document size and your hardware).</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I connect Vault to external data sources?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault includes a <strong>connector framework</strong> for external data sources:</p>
+        <ul>
+          <li><strong>File system:</strong> Sync documents from local or network drives</li>
+          <li><strong>S3-compatible:</strong> Sync from AWS S3, MinIO, or other S3-compatible storage</li>
+          <li><strong>WebDAV:</strong> Sync from WebDAV servers (e.g., Nextcloud, ownCloud)</li>
+          <li><strong>SharePoint:</strong> Sync from Microsoft SharePoint (Enterprise tier)</li>
+          <li><strong>Google Drive:</strong> Sync from Google Drive (Enterprise tier)</li>
+          <li><strong>Custom:</strong> Build your own connector using the connector SDK</li>
+        </ul>
+        <p>Connectors can sync on a schedule (e.g., every hour) or in real-time (via webhooks).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What happens if I update a document? Does Vault re-process it?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>incremental updates</strong>:</p>
+        <ul>
+          <li><strong>File change detection:</strong> Vault detects when a file is modified (via file system monitoring or connector sync)</li>
+          <li><strong>Re-processing:</strong> Vault re-processes only the changed document (not the entire knowledge base)</li>
+          <li><strong>Versioning:</strong> Vault keeps track of document versions — you can see which version of a document was used to answer a query</li>
+        </ul>
+        <p>This ensures your knowledge base is always up-to-date without re-processing everything from scratch.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I organize documents into knowledge bases?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>multiple knowledge bases</strong>:</p>
+        <ul>
+          <li><strong>Separation:</strong> Create separate knowledge bases for different teams, projects, or document types (e.g., "HR Policies", "Engineering Docs", "Legal Contracts")</li>
+          <li><strong>Isolation:</strong> Each knowledge base has its own documents, embeddings, and access controls</li>
+          <li><strong>Query scope:</strong> Query a specific knowledge base or search across all knowledge bases</li>
+          <li><strong>Permissions:</strong> Control who can access which knowledge bases (Enterprise tier)</li>
+        </ul>
+        <p>This is useful for multi-tenant deployments (e.g., MSPs managing multiple customers) or organizations with strict data separation requirements.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 3: OUR SOLUTION'S STRENGTHS -->
+  <div class="section" id="s3">
+    <div class="section-header"><span class="icon">03 · INTEGRATION</span><h2>Our Solution's Strengths & Design</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">What are the top advantages of Vault over other RAG platforms?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>Feature</th><th>ODW.ai Vault</th><th>Typical Alternatives</th></tr></thead>
+          <tbody>
+            <tr><td>Deployment</td><td>✅ Self-hosted — full sovereignty</td><td>❌ Cloud SaaS — data sent to vendor</td></tr>
+            <tr><td>Open source</td><td>✅ Core is open source (Apache 2.0)</td><td>❌ Proprietary or limited open source</td></tr>
+            <tr><td>Model choice</td><td>✅ Model-agnostic (local or API)</td><td>⚠️ Limited to specific models</td></tr>
+            <tr><td>Per-task model routing</td><td>✅ Switch models per query</td><td>❌ Fixed model</td></tr>
+            <tr><td>Price</td><td>Free (self-hosted) or $99-$499/month</td><td>$10-$30/user/month</td></tr>
+            <tr><td>Suite integration</td><td>✅ Native ODW.ai integration</td><td>❌ Requires custom integration</td></tr>
+            <tr><td>Enterprise features</td><td>✅ SSO, RBAC, audit logging, compliance</td><td>⚠️ Varies</td></tr>
+          </tbody>
+        </table>
+        <p>Vault competes on <strong>sovereignty + model flexibility</strong>. If you need full data control and want to choose your AI models, Vault is the best option.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How does Vault compare to PrivateGPT or Quivr?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>PrivateGPT and Quivr are open-source RAG tools, but they have different design priorities:</p>
+        <table>
+          <thead><tr><th>Aspect</th><th>ODW.ai Vault</th><th>PrivateGPT / Quivr</th></tr></thead>
+          <tbody>
+            <tr><td>Production readiness</td><td>✅ Enterprise-grade</td><td>⚠️ Experimental / hobbyist</td></tr>
+            <tr><td>Multi-tenancy</td><td>✅ Built-in</td><td>❌ Single-user only</td></tr>
+            <tr><td>Access control</td><td>✅ RBAC, document-level permissions</td><td>❌ None or basic</td></tr>
+            <tr><td>Audit logging</td><td>✅ Tamper-evident logs</td><td>❌ None</td></tr>
+            <tr><td>Model routing</td><td>✅ Per-task model selection</td><td>⚠️ Fixed model</td></tr>
+            <tr><td>Support</td><td>✅ Paid support available</td><td>❌ Community only</td></tr>
+          </tbody>
+        </table>
+        <p>PrivateGPT/Quivr are great for experimentation, but not production-ready for enterprise use. Vault is designed for regulated businesses that need reliability, security, and support.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What does "model-agnostic" mean?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Model-agnostic</strong> means Vault works with any AI model — you're not locked into a specific vendor.</p>
+        <p>Vault supports:</p>
+        <ul>
+          <li><strong>Local models:</strong> Run models on your own hardware via Ollama, vLLM, or llama.cpp (full sovereignty)</li>
+          <li><strong>API-based models:</strong> Use OpenAI, Anthropic, Google, or custom endpoints (when you need frontier capabilities)</li>
+          <li><strong>Embedding models:</strong> Choose any embedding model (OpenAI, Cohere, sentence-transformers, etc.)</li>
+        </ul>
+        <p>You can even <strong>switch models per query</strong> — use a local model for simple questions (fast, sovereign) and an API model for complex questions (more capable).</p>
+        <div class="callout tip"><strong>Flexibility</strong>Model-agnostic means you can switch models as better ones are released — no code changes, no vendor lock-in.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I use Vault fully offline (no internet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>fully offline deployment</strong>:</p>
+        <ul>
+          <li><strong>Local models:</strong> Run embedding and generation models on your own hardware (via Ollama, vLLM, llama.cpp)</li>
+          <li><strong>No external dependencies:</strong> Vault doesn't require internet access for inference, embeddings, or any core functionality</li>
+          <li><strong>Air-gapped:</strong> Deploy in air-gapped environments (no internet access at all)</li>
+        </ul>
+        <p>This is critical for government, military, and high-security environments where internet access is restricted or prohibited.</p>
+        <div class="callout warning"><strong>Hardware requirements</strong>Running local models requires GPU hardware (NVIDIA GPUs recommended). CPU-only inference is possible but slow for large models.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How accurate is Vault's retrieval?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault's retrieval accuracy depends on several factors:</p>
+        <ul>
+          <li><strong>Embedding model:</strong> Better embedding models = better retrieval. We recommend state-of-the-art models (e.g., OpenAI text-embedding-3-large, Cohere embed-v3)</li>
+          <li><strong>Chunking strategy:</strong> Semantic chunking is more accurate than fixed-size chunking (but slower)</li>
+          <li><strong>Document quality:</strong> Well-structured, clear documents = better retrieval</li>
+          <li><strong>Query clarity:</strong> Clear, specific questions = better retrieval</li>
+        </ul>
+        <p>Target: <strong>≥85% MRR@10</strong> (Mean Reciprocal Rank at 10) on benchmark corpus. This means the correct answer is in the top 10 results 85% of the time.</p>
+        <div class="callout info"><strong>Tuning</strong>If accuracy is poor, try: (1) switching to a better embedding model, (2) using semantic chunking, (3) adjusting chunk size, (4) rephrasing queries.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I customize the retrieval strategy?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault provides <strong>configurable retrieval strategies</strong>:</p>
+        <ul>
+          <li><strong>Similarity search:</strong> Find the most similar document chunks (default)</li>
+          <li><strong>Hybrid search:</strong> Combine similarity search with keyword search (BM25). Better for queries with specific terms.</li>
+          <li><strong>Re-ranking:</strong> Use a cross-encoder model to re-rank results after initial retrieval. More accurate, but slower.</li>
+          <li><strong>Metadata filtering:</strong> Filter results by metadata (e.g., only return documents from a specific department, date range, etc.)</li>
+        </ul>
+        <p>For developers: Vault's retrieval pipeline is modular — you can write custom retrieval logic using the SDK.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Vault support multiple languages?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>multi-language documents</strong>:</p>
+        <ul>
+          <li><strong>Document ingestion:</strong> Upload documents in any language (English, Chinese, Spanish, French, etc.)</li>
+          <li><strong>Embedding models:</strong> Use multi-language embedding models (e.g., multilingual-e5, OpenAI text-embedding-3-large)</li>
+          <li><strong>Query:</strong> Ask questions in any language — Vault retrieves relevant documents regardless of language</li>
+        </ul>
+        <p>The UI is currently English-only (v1), but multi-language UI is planned for v1.1.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Is Vault's code auditable?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault's core is <strong>open source</strong> (Apache 2.0 license):</p>
+        <ul>
+          <li><strong>Transparent:</strong> All code is publicly available on GitHub</li>
+          <li><strong>Auditable:</strong> You (or your security team) can inspect the code for vulnerabilities, backdoors, or data exfiltration</li>
+          <li><strong>Verifiable:</strong> You can verify that Vault does what it claims — no hidden telemetry, no data sent to third parties</li>
+        </ul>
+        <p>This is critical for sovereignty-focused organizations. You should be able to verify what your AI tools are doing.</p>
+        <div class="callout tip"><strong>Security audits</strong>We welcome third-party security audits. If your organization requires a security audit before adopting Vault, contact us — we'll cooperate fully.</div>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 4: RETRIEVAL & QUERYING -->
+  <div class="section" id="s4">
+    <div class="section-header"><span class="icon">04 · SECURITY</span><h2>Retrieval & Querying</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">How do I ask questions in Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault provides multiple ways to query:</p>
+        <ul>
+          <li><strong>Web UI:</strong> Type questions in the search bar (like Google)</li>
+          <li><strong>API:</strong> Send queries via REST API (for custom integrations)</li>
+          <li><strong>SDK:</strong> Use Python or JavaScript SDKs (for developers)</li>
+        </ul>
+        <p>Example queries:</p>
+        <ul>
+          <li>"What's our refund policy?"</li>
+          <li>"Show me precedents for non-compete clauses"</li>
+          <li>"Summarize the Q3 financial report"</li>
+          <li>"What are the HIPAA requirements for data encryption?"</li>
+        </ul>
+        <p>Vault retrieves relevant document chunks and uses AI to generate a concise answer. You can also view the source documents for verification.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I see which documents Vault used to answer a question?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault provides <strong>source citations</strong>:</p>
+        <ul>
+          <li><strong>Answer:</strong> AI-generated answer based on retrieved documents</li>
+          <li><strong>Sources:</strong> List of document chunks used to generate the answer (with document name, page number, and relevant text)</li>
+          <li><strong>Confidence score:</strong> How confident Vault is in the answer (based on retrieval similarity)</li>
+        </ul>
+        <p>This allows you to verify the answer and trace it back to the original documents — critical for regulated industries where accuracy and auditability matter.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What if Vault can't find an answer?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>If Vault can't find relevant documents, it will say <strong>"I don't know"</strong> instead of making something up.</p>
+        <p>This is a key feature of RAG — the AI is grounded in your documents. If the information isn't in your knowledge base, Vault won't hallucinate an answer.</p>
+        <p>You can also configure Vault to:</p>
+        <ul>
+          <li><strong>Return partial answers:</strong> "I found some related information, but I'm not sure if it fully answers your question"</li>
+          <li><strong>Suggest related queries:</strong> "I couldn't find an answer, but you might want to try searching for X"</li>
+          <li><strong>Flag for review:</strong> "This question couldn't be answered — consider adding relevant documents to the knowledge base"</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I ask follow-up questions?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>conversational queries</strong>:</p>
+        <ul>
+          <li><strong>Context retention:</strong> Vault remembers the context of your previous questions in the same session</li>
+          <li><strong>Follow-up:</strong> Ask "Can you elaborate on that?" or "What about the exceptions?" and Vault understands the context</li>
+          <li><strong>Session management:</strong> Each conversation is a separate session — context doesn't bleed between sessions</li>
+        </ul>
+        <p>This makes Vault feel like a conversation with a knowledgeable colleague, not just a search engine.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I filter queries by metadata?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>metadata filtering</strong>:</p>
+        <ul>
+          <li><strong>Document metadata:</strong> Filter by document attributes (e.g., department, author, date, document type)</li>
+          <li><strong>Custom metadata:</strong> Add custom metadata to documents (e.g., tags, categories, classification level)</li>
+          <li><strong>Query-time filtering:</strong> "Show me HR policies from 2025" or "Find legal contracts classified as 'confidential'"</li>
+        </ul>
+        <p>This is useful for large knowledge bases where you want to narrow the search scope.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How fast is Vault's query response?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Query speed depends on your setup:</p>
+        <table>
+          <thead><tr><th>Component</th><th>Local (on-premises)</th><th>API-based (OpenAI, etc.)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Retrieval</strong></td><td>100-500ms</td><td>100-500ms</td></tr>
+            <tr><td><strong>Generation</strong></td><td>1-5 seconds (depends on GPU)</td><td>1-3 seconds (depends on model)</td></tr>
+            <tr><td><strong>Total</strong></td><td>1-6 seconds</td><td>1-4 seconds</td></tr>
+          </tbody>
+        </table>
+        <p>For latency-sensitive applications, we recommend:</p>
+        <ul>
+          <li>Using fast embedding models (e.g., sentence-transformers/all-MiniLM-L6-v2)</li>
+          <li>Using fast generation models (e.g., Llama 3 8B for local, GPT-4o-mini for API)</li>
+          <li>Enabling caching (frequently asked questions are cached)</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I export query results?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>query result export</strong>:</p>
+        <ul>
+          <li><strong>Web UI:</strong> Download results as PDF, Markdown, or plain text</li>
+          <li><strong>API:</strong> Retrieve results in JSON format (for programmatic use)</li>
+          <li><strong>Batch export:</strong> Export multiple query results at once (for reporting or analysis)</li>
+        </ul>
+        <p>This is useful for generating reports, sharing answers with colleagues, or archiving query results for compliance purposes.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I see query history and analytics?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault provides <strong>query analytics</strong> (Enterprise tier):</p>
+        <ul>
+          <li><strong>Query history:</strong> See all queries asked by all users (with timestamps, users, and results)</li>
+          <li><strong>Usage patterns:</strong> Identify frequently asked questions, popular knowledge bases, and common topics</li>
+          <li><strong>Cost attribution:</strong> Track API costs per user, team, or knowledge base (if using API-based models)</li>
+          <li><strong>Unanswered queries:</strong> Identify questions Vault couldn't answer — these are gaps in your knowledge base</li>
+        </ul>
+        <p>This helps you understand how Vault is being used and where to improve your knowledge base.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 5: SECURITY & PRIVACY -->
+  <div class="section" id="s5">
+    <div class="section-header"><span class="icon">05 · DEPLOYMENT</span><h2>Security & Privacy</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">Is Vault secure?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault is built with <strong>security best practices</strong>:</p>
+        <ul>
+          <li><strong>Self-hosted:</strong> Runs on your infrastructure — no data leaves your servers</li>
+          <li><strong>Encryption:</strong> AES-256 at rest, TLS 1.3 in transit</li>
+          <li><strong>Access control:</strong> RBAC, document-level permissions, SSO (Enterprise tier)</li>
+          <li><strong>Audit logging:</strong> Tamper-evident logs of all access and queries (Enterprise tier)</li>
+          <li><strong>Open source:</strong> Code is auditable — you can verify there are no backdoors or data exfiltration</li>
+        </ul>
+        <p>Vault is designed for regulated industries. If you can use Vault, you can pass a compliance audit.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does ODW.ai have access to my Vault data?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>No.</strong> Vault is self-hosted on your infrastructure. ODW.ai has zero access to your documents, queries, or embeddings.</p>
+        <p>Unlike cloud RAG platforms (Glean, Onyx), Vault doesn't send telemetry to a third party. Everything stays on your servers.</p>
+        <p>This is critical for sovereignty-focused organizations. You can't claim data sovereignty if your RAG tool is sending your documents to a cloud vendor.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I control who accesses which documents?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault provides <strong>fine-grained access control</strong> (Enterprise tier):</p>
+        <ul>
+          <li><strong>Knowledge base-level:</strong> Control who can access which knowledge bases (e.g., HR team can access "HR Policies", legal team can access "Legal Contracts")</li>
+          <li><strong>Document-level:</strong> Control who can access specific documents (e.g., only managers can access "Executive Compensation")</li>
+          <li><strong>Role-based:</strong> Assign roles (Admin, Editor, Viewer) with different permissions</li>
+          <li><strong>Attribute-based:</strong> Control access based on user attributes (department, clearance level, etc.)</li>
+        </ul>
+        <p>Access control is enforced at query time — if a user doesn't have permission to access a document, Vault won't return it in query results.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Vault support SSO?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>SSO (Single Sign-On)</strong> via SAML 2.0 and OIDC (Enterprise tier):</p>
+        <ul>
+          <li><strong>Okta:</strong> Native integration</li>
+          <li><strong>Azure AD / Entra ID:</strong> Native integration</li>
+          <li><strong>Google Workspace:</strong> Native integration</li>
+          <li><strong>Other:</strong> Any SAML 2.0 or OIDC-compliant identity provider</li>
+        </ul>
+        <p>SSO allows users to log in to Vault using their existing corporate credentials — no separate username/password to remember.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Vault comply with HIPAA?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault is <strong>HIPAA-compatible</strong>:</p>
+        <ul>
+          <li><strong>Self-hosted:</strong> PHI stays on your infrastructure — no data sent to third parties</li>
+          <li><strong>Encryption:</strong> AES-256 at rest, TLS 1.3 in transit</li>
+          <li><strong>Access control:</strong> RBAC, document-level permissions, audit logging</li>
+          <li><strong>Audit logging:</strong> Tamper-evident logs of all access to PHI</li>
+          <li><strong>BAA:</strong> If using ODW.ai-hosted Vault (Enterprise tier), we'll sign a Business Associate Agreement</li>
+        </ul>
+        <p>Vault helps you meet the <strong>technical safeguards</strong> required by HIPAA. You still need to address administrative and physical safeguards separately.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Vault comply with GDPR?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault is <strong>GDPR-compatible</strong>:</p>
+        <ul>
+          <li><strong>Data residency:</strong> All data stays on your infrastructure (or in your chosen region if using private cloud)</li>
+          <li><strong>Right to erasure:</strong> Delete documents and associated embeddings on request</li>
+          <li><strong>Right to access:</strong> Export user data on request</li>
+          <li><strong>Data processing records:</strong> Audit logs track all data processing activities</li>
+        </ul>
+        <p>Vault helps you meet the <strong>technical and organizational measures</strong> required by GDPR (Article 32). You still need to address legal and procedural requirements separately.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I deploy Vault in an air-gapped environment?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>air-gapped deployment</strong> (no internet access):</p>
+        <ul>
+          <li><strong>Offline installation:</strong> Install Vault without internet access (Docker images, offline packages)</li>
+          <li><strong>Local models:</strong> Run embedding and generation models on your own hardware (no API calls to external services)</li>
+          <li><strong>No external dependencies:</strong> Vault doesn't require internet access for updates, telemetry, or license validation</li>
+        </ul>
+        <p>Air-gapped deployment is common for government contractors, military, and high-security environments.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What happens if someone queries sensitive documents?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault enforces <strong>access control at query time</strong>:</p>
+        <ul>
+          <li><strong>Permission check:</strong> Before returning results, Vault checks if the user has permission to access each document</li>
+          <li><strong>Filtering:</strong> If a user doesn't have permission, the document is filtered out of results — they never see it</li>
+          <li><strong>Audit logging:</strong> All queries are logged (who queried what, when, and what results were returned)</li>
+        </ul>
+        <p>Example: A junior employee queries "Show me executive compensation." If they don't have permission to access the "Executive Compensation" document, Vault returns no results — and the query is logged for audit purposes.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 6: MODELS & AI -->
+  <div class="section" id="s6">
+    <div class="section-header"><span class="icon">06 · COMPLIANCE</span><h2>Models & AI</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">Which AI models does Vault support?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault is <strong>model-agnostic</strong> — it supports a wide range of models:</p>
+        <p><strong>Embedding models:</strong></p>
+        <ul>
+          <li><strong>OpenAI:</strong> text-embedding-3-small, text-embedding-3-large</li>
+          <li><strong>Cohere:</strong> embed-english-v3.0, embed-multilingual-v3.0</li>
+          <li><strong>Local:</strong> sentence-transformers (all-MiniLM-L6-v2, all-mpnet-base-v2, etc.)</li>
+          <li><strong>Custom:</strong> Any model that exposes an OpenAI-compatible API</li>
+        </ul>
+        <p><strong>Generation models:</strong></p>
+        <ul>
+          <li><strong>Local:</strong> Llama 3, Mistral, Gemma, Qwen (via Ollama, vLLM, llama.cpp)</li>
+          <li><strong>API:</strong> OpenAI (GPT-4o, GPT-4o-mini), Anthropic (Claude 3.5 Sonnet), Google (Gemini 1.5 Pro)</li>
+          <li><strong>Custom:</strong> Any model that exposes an OpenAI-compatible API</li>
+        </ul>
+        <p>You can switch models at any time — no code changes required.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I use local models (fully offline)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>local models</strong> via:</p>
+        <ul>
+          <li><strong>Ollama:</strong> Easiest way to run local models. Supports Llama 3, Mistral, Gemma, etc.</li>
+          <li><strong>vLLM:</strong> High-performance inference server for production workloads</li>
+          <li><strong>llama.cpp:</strong> Lightweight, CPU-friendly inference (good for edge devices)</li>
+        </ul>
+        <p>Local models run on your own hardware — no data leaves your infrastructure. Full sovereignty.</p>
+        <div class="callout warning"><strong>Hardware requirements</strong>Local models require GPU hardware (NVIDIA GPUs recommended). CPU-only inference is possible but slow for large models. For production use, we recommend at least one NVIDIA A100 or equivalent.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I use API-based models (OpenAI, Anthropic)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>API-based models</strong>:</p>
+        <ul>
+          <li><strong>OpenAI:</strong> GPT-4o, GPT-4o-mini, text-embedding-3-large</li>
+          <li><strong>Anthropic:</strong> Claude 3.5 Sonnet, Claude 3 Opus</li>
+          <li><strong>Google:</strong> Gemini 1.5 Pro</li>
+          <li><strong>Custom:</strong> Any model that exposes an OpenAI-compatible API</li>
+        </ul>
+        <p>API-based models are useful when you need frontier capabilities (e.g., complex reasoning, long context windows) that local models can't match yet.</p>
+        <div class="callout warning"><strong>Data sovereignty</strong>If you use API-based models, your queries and document chunks are sent to the API provider. This may violate sovereignty requirements for regulated industries. Use local models for maximum sovereignty.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I switch models per query?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>per-task model routing</strong>:</p>
+        <ul>
+          <li><strong>Simple queries:</strong> Use a fast, local model (e.g., Llama 3 8B) — fast, sovereign, cheap</li>
+          <li><strong>Complex queries:</strong> Use a powerful API model (e.g., GPT-4o) — more capable, but data leaves your infrastructure</li>
+          <li><strong>Custom routing:</strong> Define rules (e.g., "If query contains PHI, use local model only")</li>
+        </ul>
+        <p>This gives you the best of both worlds: sovereignty for sensitive queries, capability for complex queries.</p>
+        <div class="callout tip"><strong>Cost optimization</strong>Use local models for 80% of queries (fast, free) and API models for 20% of queries (complex, paid). This reduces API costs by 80%.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I choose the right embedding model?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Choosing an embedding model depends on your priorities:</p>
+        <table>
+          <thead><tr><th>Model</th><th>Speed</th><th>Accuracy</th><th>Cost</th><th>Sovereignty</th></tr></thead>
+          <tbody>
+            <tr><td><strong>sentence-transformers/all-MiniLM-L6-v2</strong></td><td>✅ Fast</td><td>⚠️ Good</td><td>✅ Free (local)</td><td>✅ Full</td></tr>
+            <tr><td><strong>sentence-transformers/all-mpnet-base-v2</strong></td><td>⚠️ Medium</td><td>✅ Better</td><td>✅ Free (local)</td><td>✅ Full</td></tr>
+            <tr><td><strong>OpenAI text-embedding-3-large</strong></td><td>✅ Fast</td><td>✅ Best</td><td>❌ Paid</td><td>❌ None</td></tr>
+            <tr><td><strong>Cohere embed-v3</strong></td><td>✅ Fast</td><td>✅ Best</td><td>❌ Paid</td><td>❌ None</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Recommendation:</strong></p>
+        <ul>
+          <li><strong>Maximum sovereignty:</strong> Use sentence-transformers (local, free)</li>
+          <li><strong>Maximum accuracy:</strong> Use OpenAI text-embedding-3-large or Cohere embed-v3 (API, paid)</li>
+          <li><strong>Balanced:</strong> Start with sentence-transformers, upgrade to OpenAI/Cohere if accuracy is poor</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I choose the right generation model?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Choosing a generation model depends on your priorities:</p>
+        <table>
+          <thead><tr><th>Model</th><th>Speed</th><th>Quality</th><th>Cost</th><th>Sovereignty</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Llama 3 8B (local)</strong></td><td>✅ Fast</td><td>⚠️ Good</td><td>✅ Free</td><td>✅ Full</td></tr>
+            <tr><td><strong>Llama 3 70B (local)</strong></td><td>⚠️ Slow</td><td>✅ Better</td><td>✅ Free</td><td>✅ Full</td></tr>
+            <tr><td><strong>GPT-4o-mini (API)</strong></td><td>✅ Fast</td><td>✅ Good</td><td>❌ Paid</td><td>❌ None</td></tr>
+            <tr><td><strong>GPT-4o (API)</strong></td><td>⚠️ Medium</td><td>✅ Best</td><td>❌ Paid</td><td>❌ None</td></tr>
+            <tr><td><strong>Claude 3.5 Sonnet (API)</strong></td><td>⚠️ Medium</td><td>✅ Best</td><td>❌ Paid</td><td>❌ None</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Recommendation:</strong></p>
+        <ul>
+          <li><strong>Maximum sovereignty:</strong> Use Llama 3 8B or 70B (local, free)</li>
+          <li><strong>Maximum quality:</strong> Use GPT-4o or Claude 3.5 Sonnet (API, paid)</li>
+          <li><strong>Balanced:</strong> Use Llama 3 8B for simple queries, GPT-4o-mini for complex queries</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I fine-tune models for my domain?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Not in Vault v1.</strong> Vault uses existing models — it doesn't support fine-tuning.</p>
+        <p>However, you can:</p>
+        <ul>
+          <li><strong>Use retrieval:</strong> RAG is often more effective than fine-tuning for domain-specific knowledge. Instead of fine-tuning the model on your documents, just retrieve the relevant documents at query time.</li>
+          <li><strong>Prompt engineering:</strong> Customize the system prompt to guide the model's behavior (e.g., "You are a legal assistant. Answer questions based on the provided legal documents.")</li>
+          <li><strong>Fine-tune externally:</strong> Fine-tune a model outside of Vault (using tools like Hugging Face Transformers), then use the fine-tuned model in Vault via a custom endpoint.</li>
+        </ul>
+        <p>Fine-tuning support is planned for v2.0 (Q2 2027).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What if a new, better model is released? Can I switch?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault is <strong>model-agnostic</strong> — you can switch models at any time:</p>
+        <ul>
+          <li><strong>No code changes:</strong> Just update the model configuration in the admin console</li>
+          <li><strong>No re-embedding:</strong> If you switch generation models, you don't need to re-embed your documents (embeddings are model-specific, but you can keep using the old embeddings or re-embed with the new model)</li>
+          <li><strong>Per-query switching:</strong> Use different models for different queries (e.g., local model for simple queries, API model for complex queries)</li>
+        </ul>
+        <p>This future-proofs your investment — when better models are released, you can adopt them immediately without re-architecting your system.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 7: DEPLOYMENT & SETUP -->
+  <div class="section" id="s7">
+    <div class="section-header"><span class="icon">07 · MODELS</span><h2>Deployment & Setup</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">How do I deploy Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault offers three deployment options:</p>
+        <ol>
+          <li><strong>Docker Compose:</strong> Easiest. One command (<code>docker-compose up</code>) and you're running. Best for development and small deployments.</li>
+          <li><strong>Kubernetes (Helm):</strong> Production-ready. Helm chart provided. Best for large deployments, high availability, auto-scaling.</li>
+          <li><strong>Bare metal:</strong> For advanced users. Install directly on Linux servers. Maximum control, but requires more setup.</li>
+        </ol>
+        <p>For most customers, <strong>Docker Compose is the fastest path</strong>. For production, we recommend Kubernetes.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How long does setup take?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Setup time depends on your deployment:</p>
+        <ul>
+          <li><strong>Docker Compose:</strong> 30 minutes. Pull images, configure environment variables, run <code>docker-compose up</code>.</li>
+          <li><strong>Kubernetes:</strong> 2-4 hours. Deploy Helm chart, configure ingress, set up storage, test.</li>
+          <li><strong>Bare metal:</strong> 1-2 days. Install dependencies, configure services, test.</li>
+        </ul>
+        <p>Target: <strong>&lt;4 hours from download to first query</strong> (for Docker Compose deployment).</p>
+        <div class="callout tip"><strong>First query</strong>After deployment, you need to upload documents and wait for processing (chunking + embedding). For 100 documents, expect 5-15 minutes of processing time.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Do I need technical staff to run Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>For deployment:</strong> Yes. Vault is self-hosted, so you need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure. This is typically a DevOps engineer or IT consultant.</p>
+        <p><strong>For day-to-day use:</strong> No. The admin console is designed for non-technical users (knowledge managers, compliance officers). You can upload documents, create knowledge bases, and query the system without writing code.</p>
+        <p><strong>For developers:</strong> Vault provides a REST API and SDKs (Python, JavaScript) for custom integrations. Developers can build custom workflows, integrate Vault into internal tools, etc.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What are the system requirements for Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault's requirements depend on your deployment:</p>
+        <table>
+          <thead><tr><th>Component</th><th>Minimum</th><th>Recommended</th></tr></thead>
+          <tbody>
+            <tr><td><strong>CPU</strong></td><td>2 cores</td><td>4+ cores</td></tr>
+            <tr><td><strong>RAM</strong></td><td>8 GB</td><td>16+ GB</td></tr>
+            <tr><td><strong>Storage</strong></td><td>50 GB SSD</td><td>200+ GB SSD (depends on document volume)</td></tr>
+            <tr><td><strong>GPU (for local models)</strong></td><td>None (use API models)</td><td>NVIDIA A100 or equivalent (for local models)</td></tr>
+            <tr><td><strong>OS</strong></td><td>Linux (Ubuntu 20.04+, RHEL 8+)</td><td>Ubuntu 22.04 LTS</td></tr>
+          </tbody>
+        </table>
+        <p>If you use API-based models (OpenAI, Anthropic), you don't need a GPU. If you use local models, GPU is strongly recommended.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I deploy Vault on AWS/GCP/Azure?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault can be deployed on any cloud provider:</p>
+        <ul>
+          <li><strong>AWS:</strong> Use EC2 (for Docker Compose) or EKS (for Kubernetes). Use S3 for document storage, RDS for metadata.</li>
+          <li><strong>GCP:</strong> Use GCE (for Docker Compose) or GKE (for Kubernetes). Use GCS for document storage, Cloud SQL for metadata.</li>
+          <li><strong>Azure:</strong> Use VMs (for Docker Compose) or AKS (for Kubernetes). Use Blob Storage for document storage, Azure SQL for metadata.</li>
+        </ul>
+        <p>We provide deployment guides for each cloud provider. For production, we recommend Kubernetes with managed databases (RDS, Cloud SQL, Azure SQL).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I migrate from another RAG platform to Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault provides <strong>migration tools</strong>:</p>
+        <ul>
+          <li><strong>Import documents:</strong> Upload your existing documents (PDF, DOCX, etc.)</li>
+          <li><strong>Import embeddings:</strong> If your previous platform exported embeddings, you can import them (if they use the same embedding model)</li>
+          <li><strong>Re-embedding:</strong> If embeddings aren't compatible, Vault can re-embed your documents (takes time, but ensures accuracy)</li>
+        </ul>
+        <p>Migration typically takes 1-2 weeks. We provide migration guides and support for common platforms (Glean, Onyx, PrivateGPT).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I configure Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault is configured via the <strong>admin console</strong> (web-based UI) or environment variables:</p>
+        <ul>
+          <li><strong>Model providers:</strong> Configure embedding and generation models (local or API)</li>
+          <li><strong>Storage:</strong> Configure document storage (local, S3, GCS, Azure Blob)</li>
+          <li><strong>Database:</strong> Configure metadata database (PostgreSQL, MySQL)</li>
+          <li><strong>Vector database:</strong> Configure vector storage (Qdrant, Weaviate, Milvus, Chroma)</li>
+          <li><strong>Authentication:</strong> Configure SSO, RBAC (Enterprise tier)</li>
+        </ul>
+        <p>Most configuration is done through the UI. For advanced users, Vault also supports configuration via YAML files or environment variables.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I preview Vault before going live?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault includes a <strong>sandbox mode</strong>:</p>
+        <ul>
+          <li><strong>Test environment:</strong> Deploy Vault in a test environment with sample documents</li>
+          <li><strong>Experiment:</strong> Test different models, chunking strategies, and retrieval configurations</li>
+          <li><strong>Evaluate:</strong> Measure accuracy, latency, and cost before going live</li>
+        </ul>
+        <p>We recommend spending 1-2 days testing in sandbox mode before deploying to production.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 8: COST & PRICING -->
+  <div class="section" id="s8">
+    <div class="section-header"><span class="icon">08 · LANGUAGES</span><h2>Cost & Pricing</h2><span class="count">7 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">How much does Vault cost?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault pricing is based on <strong>deployment mode and features</strong>:</p>
+        <table>
+          <thead><tr><th>Tier</th><th>Price</th><th>Includes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Community (Free)</strong></td><td>$0</td><td>Self-hosted, core features, community support</td></tr>
+            <tr><td><strong>Pro</strong></td><td>$99/month</td><td>Self-hosted, all core features, email support</td></tr>
+            <tr><td><strong>Enterprise</strong></td><td>$299-$499/month</td><td>Self-hosted, enterprise features (SSO, RBAC, audit logging), priority support</td></tr>
+            <tr><td><strong>Managed</strong></td><td>Custom pricing</td><td>ODW.ai hosts and manages Vault for you (private cloud)</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Additional costs:</strong></p>
+        <ul>
+          <li><strong>API costs:</strong> If you use API-based models (OpenAI, Anthropic), you pay the API provider directly</li>
+          <li><strong>Infrastructure:</strong> You pay for your own servers/cloud (if self-hosting)</li>
+        </ul>
+        <div class="callout info"><strong>Note</strong>Pricing is illustrative and subject to change. Contact us for current pricing and custom quotes.</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Is Vault cheaper than Glean or Onyx?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Yes, significantly.</strong> Glean and Onyx typically cost $10-$30/user/month. For a 100-person company, that's $1,000-$3,000/month.</p>
+        <p>Vault costs $0-$499/month (flat rate, not per user). For a 100-person company, Vault is <strong>2-30x cheaper</strong>.</p>
+        <p>And Vault is self-hosted — you get full sovereignty. Glean/Onyx are cloud SaaS — you send them your documents.</p>
+        <p>Of course, Glean/Onyx are managed services (no infrastructure to manage), while Vault requires self-hosting. But if you have the infrastructure and need sovereignty, Vault is the clear winner on cost.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Are there any hidden costs?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>No hidden costs. The total cost of ownership includes:</p>
+        <ul>
+          <li><strong>Vault subscription:</strong> Monthly fee based on tier (or $0 for Community)</li>
+          <li><strong>API costs:</strong> If you use API-based models (OpenAI, Anthropic), you pay the API provider directly</li>
+          <li><strong>Infrastructure:</strong> You pay for your own servers/cloud (if self-hosting)</li>
+        </ul>
+        <p>That's it. No setup fees, no surprise charges, no per-user fees.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Is the free tier really free?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. The <strong>Community tier is 100% free</strong>:</p>
+        <ul>
+          <li><strong>No time limit:</strong> Use it forever</li>
+          <li><strong>No feature limits:</strong> All core features included (document ingestion, RAG, API, etc.)</li>
+          <li><strong>No user limits:</strong> Unlimited users</li>
+          <li><strong>No document limits:</strong> Unlimited documents</li>
+        </ul>
+        <p>The only limitations:</p>
+        <ul>
+          <li><strong>Enterprise features:</strong> SSO, advanced RBAC, audit logging, compliance features are paid</li>
+          <li><strong>Support:</strong> Community support only (GitHub issues, Discord). No email or priority support.</li>
+        </ul>
+        <p>We believe in open source. If you don't need enterprise features, you can use Vault for free forever.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What payment methods do you accept?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>We accept:</p>
+        <ul>
+          <li><strong>Credit/debit cards:</strong> Visa, Mastercard, American Express (via Stripe)</li>
+          <li><strong>Bank transfer:</strong> For annual subscriptions or enterprise customers</li>
+          <li><strong>Cryptocurrency:</strong> Bitcoin, Ethereum, USDC (for privacy-conscious customers)</li>
+        </ul>
+        <p>Invoicing is available for annual subscriptions. Contact us for details.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. We offer a <strong>30-day money-back guarantee</strong>. If you're not satisfied within the first 30 days, contact us for a full refund — no questions asked.</p>
+        <p>After 30 days, you can cancel anytime. You'll continue to have access until the end of your billing period, but no refund is provided for partial months.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Is Vault included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Yes.</strong> Vault is part of the ODW.ai suite. You can:</p>
+        <ul>
+          <li><strong>Purchase Vault standalone:</strong> Use Vault by itself (for knowledge retrieval)</li>
+          <li><strong>Purchase the full suite:</strong> Get Desk, Voice, Vault, Shield, and other modules at a discounted price</li>
+        </ul>
+        <p>The suite bundle includes Vault at a 20-30% discount compared to purchasing separately. And all modules integrate natively — Vault serves as the knowledge backend for Desk, Voice, and other modules.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 9: SCALING & OPERATIONS -->
+  <div class="section" id="s9">
+    <div class="section-header"><span class="icon">09 · PRICING</span><h2>Scaling & Operations</h2><span class="count">7 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">How many documents can Vault handle?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault scales horizontally:</p>
+        <ul>
+          <li><strong>Small deployments:</strong> 1,000-10,000 documents (Docker Compose, single node)</li>
+          <li><strong>Medium deployments:</strong> 10,000-100,000 documents (Kubernetes, 3+ nodes)</li>
+          <li><strong>Large deployments:</strong> 100,000-1,000,000+ documents (Kubernetes, auto-scaling, distributed vector database)</li>
+        </ul>
+        <p>For very large deployments (1M+ documents), we recommend:</p>
+        <ul>
+          <li>Distributed vector database (Qdrant cluster, Milvus cluster)</li>
+          <li>Managed PostgreSQL (RDS, Cloud SQL)</li>
+          <li>Auto-scaling Kubernetes cluster</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How many users can Vault support?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault supports <strong>unlimited users</strong> (no per-user limits):</p>
+        <ul>
+          <li><strong>Community tier:</strong> Unlimited users</li>
+          <li><strong>Pro tier:</strong> Unlimited users</li>
+          <li><strong>Enterprise tier:</strong> Unlimited users</li>
+        </ul>
+        <p>Vault scales horizontally — add more nodes to handle more concurrent users. Typical deployments support 100-1,000 concurrent users per node.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What happens if Vault goes down?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>If Vault goes down, query functionality is unavailable, but your documents are safe:</p>
+        <ul>
+          <li><strong>Documents:</strong> Stored in your database (PostgreSQL) and vector database (Qdrant, Weaviate, etc.) — not lost</li>
+          <li><strong>Recovery:</strong> Restart Vault, and it reconnects to your databases</li>
+          <li><strong>High availability:</strong> For production, deploy Vault with multiple replicas (Kubernetes) and a managed database (RDS, Cloud SQL)</li>
+        </ul>
+        <p>For high-availability deployments, we recommend:</p>
+        <ul>
+          <li><strong>Kubernetes:</strong> 3+ replicas across availability zones</li>
+          <li><strong>Managed database:</strong> RDS, Cloud SQL, or Azure SQL (99.9% uptime SLA)</li>
+          <li><strong>Load balancer:</strong> Distribute traffic across replicas</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I monitor Vault's performance?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault includes a <strong>monitoring dashboard</strong>:</p>
+        <ul>
+          <li><strong>System health:</strong> CPU, memory, disk, network usage</li>
+          <li><strong>Query metrics:</strong> Number of queries per second, latency (p50, p95), error rate</li>
+          <li><strong>Document metrics:</strong> Number of documents, chunks, embeddings</li>
+          <li><strong>Model metrics:</strong> API costs, token usage, model latency</li>
+        </ul>
+        <p>You can also export metrics to external monitoring tools (Prometheus, Grafana, Datadog) via standard protocols.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I back up Vault data?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault data is stored in two places:</p>
+        <ul>
+          <li><strong>Metadata database:</strong> PostgreSQL (document metadata, user data, etc.). Back up using standard PostgreSQL tools (pg_dump, WAL archiving).</li>
+          <li><strong>Vector database:</strong> Qdrant, Weaviate, Milvus, or Chroma (embeddings). Back up using the vector database's native backup tools.</li>
+          <li><strong>Documents:</strong> Stored in file system or object storage (S3, GCS, Azure Blob). Back up using standard file/object storage backup tools.</li>
+        </ul>
+        <p>We recommend:</p>
+        <ul>
+          <li><strong>Daily backups:</strong> Automated backups of all three components</li>
+          <li><strong>Off-site storage:</strong> Store backups in a different location (e.g., S3, GCS, off-site server)</li>
+          <li><strong>Test restores:</strong> Periodically test restoring from backups to ensure they work</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I use Vault for multiple teams or departments?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>multi-tenancy</strong>:</p>
+        <ul>
+          <li><strong>Knowledge bases:</strong> Create separate knowledge bases for different teams or departments (e.g., "HR", "Engineering", "Legal")</li>
+          <li><strong>Access control:</strong> Control who can access which knowledge bases (Enterprise tier)</li>
+          <li><strong>Isolation:</strong> Each knowledge base has its own documents, embeddings, and permissions</li>
+          <li><strong>Query scope:</strong> Query a specific knowledge base or search across all knowledge bases</li>
+        </ul>
+        <p>This is useful for organizations with strict data separation requirements or multi-tenant deployments (e.g., MSPs managing multiple customers).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I train my team to use Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault is designed to be <strong>intuitive</strong>, but we provide training resources:</p>
+        <ul>
+          <li><strong>Documentation:</strong> Comprehensive user guides for admins, knowledge managers, and end users</li>
+          <li><strong>Video tutorials:</strong> Step-by-step walkthroughs of key features</li>
+          <li><strong>Onboarding session:</strong> For paid customers, we offer a 1-hour onboarding session (remote)</li>
+          <li><strong>Support:</strong> Priority support for Pro and Enterprise customers</li>
+        </ul>
+        <p>Most teams are productive within 1-2 hours of training. The web UI is particularly intuitive — no technical skills required for end users.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 10: INTEGRATION & WORKFLOWS -->
+  <div class="section" id="s10">
+    <div class="section-header"><span class="icon">10 · ONBOARDING</span><h2>Integration & Workflows</h2><span class="count">7 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">How does Vault integrate with other ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault integrates <strong>natively</strong> with all ODW.ai products:</p>
+        <ul>
+          <li><strong>Desk:</strong> Uses Vault as the knowledge backend for customer support AI</li>
+          <li><strong>Voice:</strong> Uses Vault as the knowledge backend for voice assistant</li>
+          <li><strong>Shield:</strong> Vault emits audit logs to Shield for governance and compliance</li>
+          <li><strong>Other modules:</strong> Any ODW.ai module that needs knowledge retrieval uses Vault</li>
+        </ul>
+        <p>If you're using the ODW.ai suite, Vault integration is automatic — no separate configuration required.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Vault provide an API?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault provides a <strong>REST API</strong> for programmatic access:</p>
+        <ul>
+          <li><strong>Document management:</strong> Upload, delete, and manage documents via API</li>
+          <li><strong>Query:</strong> Send queries and retrieve results via API</li>
+          <li><strong>Knowledge base management:</strong> Create, delete, and manage knowledge bases via API</li>
+          <li><strong>Admin:</strong> Configure models, chunking strategies, and other settings via API</li>
+        </ul>
+        <p>The API is fully documented (OpenAPI/Swagger) and supports authentication via API keys or OAuth 2.0.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Vault provide SDKs?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault provides <strong>SDKs</strong> for popular languages:</p>
+        <ul>
+          <li><strong>Python:</strong> <code>pip install odw-vault</code></li>
+          <li><strong>JavaScript/TypeScript:</strong> <code>npm install @odw/vault</code></li>
+        </ul>
+        <p>SDKs wrap the REST API and provide a more convenient interface for developers:</p>
+        <pre><code>from odw_vault import VaultClient
+
+client = VaultClient(api_key="your-api-key")
+results = client.query("What's our refund policy?", knowledge_base="hr-policies")
+print(results.answer)</code></pre>
+        <p>SDKs are open source and available on GitHub.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I integrate Vault with my internal tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault can be integrated with internal tools via:</p>
+        <ul>
+          <li><strong>REST API:</strong> Call Vault's API from your internal tools (web apps, mobile apps, scripts)</li>
+          <li><strong>SDKs:</strong> Use Python or JavaScript SDKs for easier integration</li>
+          <li><strong>Webhooks:</strong> Vault can send webhooks when documents are added/updated/deleted (for event-driven workflows)</li>
+        </ul>
+        <p>Common integrations:</p>
+        <ul>
+          <li><strong>Slack:</strong> Build a Slack bot that queries Vault</li>
+          <li><strong>Microsoft Teams:</strong> Build a Teams bot that queries Vault</li>
+          <li><strong>Internal web apps:</strong> Embed Vault's query UI in your internal portal</li>
+          <li><strong>Custom workflows:</strong> Use Vault's API in automated workflows (e.g., auto-summarize new documents)</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I connect Vault to my document management system?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault includes a <strong>connector framework</strong> for external data sources:</p>
+        <ul>
+          <li><strong>SharePoint:</strong> Sync documents from Microsoft SharePoint (Enterprise tier)</li>
+          <li><strong>Google Drive:</strong> Sync documents from Google Drive (Enterprise tier)</li>
+          <li><strong>Confluence:</strong> Sync pages from Atlassian Confluence (Enterprise tier)</li>
+          <li><strong>File system:</strong> Sync documents from local or network drives</li>
+          <li><strong>S3-compatible:</strong> Sync from AWS S3, MinIO, or other S3-compatible storage</li>
+          <li><strong>Custom:</strong> Build your own connector using the connector SDK</li>
+        </ul>
+        <p>Connectors can sync on a schedule (e.g., every hour) or in real-time (via webhooks).</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I embed Vault's query UI in my website or app?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault provides an <strong>embeddable query widget</strong>:</p>
+        <ul>
+          <li><strong>JavaScript widget:</strong> Embed a chat-style query UI in your website or web app</li>
+          <li><strong>Customizable:</strong> Customize the widget's appearance (colors, logo, etc.) to match your brand</li>
+          <li><strong>Authentication:</strong> Widget respects Vault's access control — users only see documents they have permission to access</li>
+        </ul>
+        <p>This is useful for:</p>
+        <ul>
+          <li><strong>Customer-facing:</strong> Embed a knowledge base in your customer portal</li>
+          <li><strong>Employee-facing:</strong> Embed a knowledge base in your internal portal</li>
+          <li><strong>Product integration:</strong> Embed Vault's query UI in your product as a feature</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Can I use Vault with my existing AI tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault can be used with existing AI tools:</p>
+        <ul>
+          <li><strong>LangChain:</strong> Use Vault as a retriever in LangChain pipelines</li>
+          <li><strong>LlamaIndex:</strong> Use Vault as a retriever in LlamaIndex pipelines</li>
+          <li><strong>Custom RAG:</strong> Use Vault's API in your custom RAG pipelines</li>
+        </ul>
+        <p>Vault is designed to be a <strong>knowledge layer</strong> — it provides retrieval, and you can use any AI tool for generation.</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 11: LIMITATIONS & ROADMAP -->
+  <div class="section" id="s11">
+    <div class="section-header"><span class="icon">11 · ROADMAP</span><h2>Limitations & Roadmap</h2><span class="count">8 questions</span></div>
+
+    <div class="faq-item"><button class="faq-question">What can't Vault do (yet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault is powerful, but it has limitations in v1.0:</p>
+        <ul>
+          <li><strong>No real-time streaming:</strong> Vault supports batch and near-real-time ingestion, but not sub-second streaming</li>
+          <li><strong>No mobile apps:</strong> No native iOS/Android apps (web UI is mobile-friendly, but no native apps)</li>
+          <li><strong>No voice/audio ingestion:</strong> Can't ingest audio files (e.g., meeting recordings) — text only</li>
+          <li><strong>No video analysis:</strong> Can't analyze video content</li>
+          <li><strong>No workflow automation:</strong> Vault is a knowledge layer, not a workflow engine (use other ODW.ai modules for that)</li>
+          <li><strong>English-only UI:</strong> UI is English-only (v1) — multi-language UI planned for v1.1</li>
+          <li><strong>No model fine-tuning:</strong> Vault uses existing models — can't fine-tune models (planned for v2.0)</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Will Vault support more document formats?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Yes.</strong> We're adding support for more document formats in v1.1 (Q4 2026):</p>
+        <ul>
+          <li><strong>PPTX:</strong> PowerPoint presentations</li>
+          <li><strong>XLSX:</strong> Excel spreadsheets</li>
+          <li><strong>Email formats:</strong> EML, MSG (Outlook)</li>
+          <li><strong>OCR:</strong> Improved OCR for scanned PDFs and images</li>
+        </ul>
+        <p>If you need a specific format, let us know — we prioritize based on customer demand.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Will Vault support voice/audio ingestion?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Planned for v1.2 (Q1 2027).</strong> Voice/audio ingestion will include:</p>
+        <ul>
+          <li><strong>Transcription:</strong> Automatically transcribe audio files (meeting recordings, voice memos) using Whisper or other ASR models</li>
+          <li><strong>Speaker diarization:</strong> Identify who said what in meeting recordings</li>
+          <li><strong>Searchable transcripts:</strong> Ingest transcripts into Vault for retrieval</li>
+        </ul>
+        <p>This is a high-priority feature for customers who want to search meeting recordings and voice memos.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Will Vault support multi-language UI?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Planned for v1.1 (Q4 2026).</strong> Multi-language UI will include:</p>
+        <ul>
+          <li><strong>Chinese (Simplified and Traditional)</strong></li>
+          <li><strong>Spanish</strong></li>
+          <li><strong>French</strong></li>
+          <li><strong>German</strong></li>
+          <li><strong>Japanese</strong></li>
+        </ul>
+        <p>The query engine already supports multi-language documents and queries — only the UI is English-only in v1.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Key milestones:</p>
+        <ul>
+          <li><strong>v1.0 (Q3 2026):</strong> MVP launch. Document ingestion, RAG, model-agnostic inference, multi-tenancy, REST API, SDKs.</li>
+          <li><strong>v1.1 (Q4 2026):</strong> Additional document formats (PPTX, XLSX, email), multi-language UI, improved OCR.</li>
+          <li><strong>v1.2 (Q1 2027):</strong> Voice/audio ingestion (transcription, speaker diarization), advanced analytics.</li>
+          <li><strong>v2.0 (Q2 2027):</strong> Model fine-tuning, advanced retrieval strategies (hybrid search, re-ranking), workflow automation.</li>
+        </ul>
+        <p>Roadmap is subject to change based on customer feedback. Contact us for the latest roadmap or to request features.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">When should I NOT use Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault is not the right fit if:</p>
+        <ul>
+          <li><strong>You don't have sovereignty requirements:</strong> If you don't care about data sovereignty, cloud RAG platforms (Glean, Onyx) are easier (no infrastructure to manage).</li>
+          <li><strong>You need real-time streaming:</strong> Vault supports batch and near-real-time ingestion, but not sub-second streaming. If you need real-time, use a dedicated streaming platform.</li>
+          <li><strong>You need workflow automation:</strong> Vault is a knowledge layer, not a workflow engine. If you need complex workflows, use a dedicated workflow tool (or other ODW.ai modules).</li>
+          <li><strong>You need a chatbot UI:</strong> Vault provides the knowledge layer, but not a polished chatbot UI. If you need a turnkey chatbot, use a dedicated chatbot platform (or integrate Vault with your own UI).</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">Does Vault guarantee 100% accurate answers?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>No.</strong> No AI system can guarantee 100% accuracy. Vault's accuracy depends on:</p>
+        <ul>
+          <li><strong>Document quality:</strong> Clear, well-structured documents = better accuracy</li>
+          <li><strong>Embedding model:</strong> Better embedding models = better retrieval</li>
+          <li><strong>Generation model:</strong> Better generation models = better answers</li>
+          <li><strong>Query clarity:</strong> Clear, specific questions = better answers</li>
+        </ul>
+        <p>Target: <strong>≥85% MRR@10</strong> (Mean Reciprocal Rank at 10). This means the correct answer is in the top 10 results 85% of the time.</p>
+        <p>Vault provides <strong>source citations</strong> so you can verify answers. If accuracy is poor, try improving document quality, switching to a better model, or rephrasing queries.</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question">How do I get started?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Three paths:</p>
+        <ol>
+          <li><strong>Free trial:</strong> Download Vault and deploy it yourself. No credit card required. Try it with your documents and see if it works for your use case.</li>
+          <li><strong>Demo:</strong> Book a demo with our team. We'll walk you through Vault, answer your questions, and help you evaluate if it's right for your business.</li>
+          <li><strong>Contact sales:</strong> For enterprise customers or custom deployments (on-premises, air-gapped), contact our sales team for a tailored quote.</li>
+        </ol>
+        <div class="callout tip"><strong>Ready to start?</strong>Visit <code>odw.ai/vault</code> to download Vault or book a demo.</div>
+      </div></div></div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Vault — FAQ for Business Users</strong></p>
+    <p>Version 2.0 · Draft for review</p>
+    <p>Based on: PRD v1.0, SAD v1.0, TSD v1.0, TBK v1.0 (2026-06-23)</p>
+    <p><a href="suite.html">← Back to Suite FAQ</a></p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => { button.parentElement.classList.toggle('open'); });
+  });
+  function expandAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.add('open')); }
+  function collapseAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); }
+  const searchInput = document.getElementById('searchInput');
+  const noResults = document.getElementById('noResults');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.section').forEach(section => {
+      let sectionHas = 0;
+      section.querySelectorAll('.faq-item').forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        const match = q === '' || txt.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) { sectionHas++; visibleCount++; if (q !== '') item.classList.add('open'); }
+        else { item.classList.remove('open'); }
+      });
+      section.style.display = sectionHas === 0 && q !== '' ? 'none' : '';
+    });
+    noResults.style.display = (visibleCount === 0 && q !== '') ? 'block' : 'none';
+  });
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

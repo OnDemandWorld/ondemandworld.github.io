@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desk — FAQ for Business Users</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="subtitle">Desk FAQ</div>
+  <h1>Desk FAQ</h1>
+  <p>Self-hosted, WhatsApp-first AI customer support — answers for business leaders, no technical background required.</p>
+  <span class="last-updated">Last updated: 2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">Home</a>
+    <span class="sep">→</span>
+    <a href="./index.html">FAQ</a>
+    <span class="sep">→</span>
+    <a href="./suite.html">Suite</a>
+    <span class="sep">→</span>
+    <span>Desk</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search questions… (e.g. 'WhatsApp', 'security', 'cost', 'privacy')">
+  </div>
+
+  <div class="controls">
+    <button onclick="expandAll()">＋ Expand all</button>
+    <button onclick="collapseAll()">− Collapse all</button>
+    <button onclick="window.print()">🖨️ Print / Save PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>Jump to a section</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> The Basics</a>
+      <a href="#s2"><span class="num">2</span> WhatsApp & Channels</a>
+      <a href="#s3"><span class="num">3</span> Our Solution's Strengths</a>
+      <a href="#s4"><span class="num">4</span> AI Accuracy & Trust</a>
+      <a href="#s5"><span class="num">5</span> Security & Privacy</a>
+      <a href="#s6"><span class="num">6</span> Knowledge Base & Data</a>
+      <a href="#s7"><span class="num">7</span> Deployment & Setup</a>
+      <a href="#s8"><span class="num">8</span> Cost & Pricing</a>
+      <a href="#s9"><span class="num">9</span> Scaling & Operations</a>
+      <a href="#s10"><span class="num">10</span> Brand Voice & Guardrails</a>
+      <a href="#s11"><span class="num">11</span> Limitations & Roadmap</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">No questions matched your search. Try a broader keyword.</div>
+
+  <!-- ================= SECTION 1: THE BASICS ================= -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <span class="icon">💬</span>
+      <h2>1. The Basics — What Is Desk?</h2>
+      <span class="count">9 questions</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What is ODW.ai Desk in plain English?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk is an AI-powered customer support agent that lives on <strong>WhatsApp</strong> (and other messaging channels). Think of it as a very knowledgeable front-desk receptionist who never sleeps — it reads your company's documents, understands your products and policies, and answers customer questions automatically, 24/7.</p>
+        <p>When a question is too complex or sensitive for the AI, it hands the conversation over to a human agent — with full context so the human doesn't have to start from scratch.</p>
+        <p>Crucially, Desk runs on <strong>your own infrastructure</strong>. Your customer conversations never touch third-party servers unless you explicitly choose to use a cloud AI model.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What problem does Desk solve?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Three problems, in order of importance:</p>
+        <ol>
+          <li><strong>Data sovereignty.</strong> Customer support conversations contain names, phone numbers, order details, health information, financial data. Cloud-based tools (Intercom, Zendesk AI, Ada) send all of this to third-party servers — often in jurisdictions that conflict with data-residency laws like GDPR, HIPAA, or PDPA. Desk keeps everything on your own servers.</li>
+          <li><strong>WhatsApp is underserved.</strong> WhatsApp is the dominant support channel in most of the world outside the US (2+ billion users). Yet most self-hosted support tools bolt WhatsApp on as an afterthought. Desk is designed WhatsApp-first.</li>
+          <li><strong>Repetitive questions overwhelm teams.</strong> Most support teams spend 60-80% of their time answering the same questions. Desk automates this, freeing humans for complex, high-value conversations.</li>
+        </ol>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How is Desk different from ChatGPT or other general AI chatbots?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>ChatGPT knows a lot about the general internet but knows <strong>nothing about your company</strong>. Ask it "What's your return policy?" and it will guess or refuse.</p>
+        <p>Desk is the opposite: it knows <strong>your documents inside out</strong>. It retrieves answers from your own knowledge base (product manuals, policy documents, FAQs) and can cite the exact source. It also speaks in <strong>your brand voice</strong>, follows <strong>your response policies</strong>, and keeps data on <strong>your servers</strong>.</p>
+        <p>Think of ChatGPT as a brilliant stranger, and Desk as a trained employee who has read your entire employee handbook.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What does "self-hosted" mean and why does it matter?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>"Self-hosted" means Desk runs on <strong>your own servers</strong> — either a machine in your office, a private cloud you control (AWS, Azure, GCP), or a server rented from a hosting provider. No one else has access to the hardware.</p>
+        <p>This matters because:</p>
+        <ul>
+          <li><strong>Privacy:</strong> Customer conversation data never leaves your infrastructure (unless you choose to route some queries to cloud AI models).</li>
+          <li><strong>Compliance:</strong> You can satisfy data-residency requirements (GDPR, HIPAA, PDPA) because you control where data physically lives.</li>
+          <li><strong>No vendor lock-in:</strong> You own the deployment. If you stop paying for the software license, your data is still there, exportable, yours.</li>
+        </ul>
+        <div class="callout info">
+          <strong>Analogy</strong>
+          Cloud SaaS is like renting a hotel room — convenient, but the hotel owns everything. Self-hosted is like owning your house — more responsibility, but total control.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What is a "conversation" in Desk?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>A conversation is a continuous thread of messages between a customer and Desk (or a human agent). It starts when a customer sends their first message and ends when the conversation is marked as resolved.</p>
+        <p>Each conversation has a <strong>state</strong>: it can be <em>active</em> (AI is handling it), <em>escalated</em> (a human agent has taken over), <em>pending</em> (waiting for customer reply), or <em>resolved</em> (closed). The state machine ensures nothing falls through the cracks.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What does "model-agnostic" mean?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>"Model-agnostic" means Desk doesn't force you to use one specific AI brain. You can choose:</p>
+        <ul>
+          <li><strong>Local models</strong> (e.g., Llama, Mistral) — run entirely on your own hardware. Maximum privacy, no per-message cost.</li>
+          <li><strong>Frontier models</strong> (e.g., GPT-4, Claude) — cloud-based, higher quality for complex questions, but data leaves your server.</li>
+          <li><strong>Hybrid routing</strong> — Desk automatically picks the right model per query. PII-heavy questions stay local; complex reasoning goes to frontier models.</li>
+        </ul>
+        <p>You're not locked into any single AI provider. Switch models anytime without changing your setup.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What is the ODW.ai suite and how does Desk fit in?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>ODW.ai is a suite of AI products for businesses. Desk is one module in that suite. The most important sibling is <strong>Vault</strong> — the suite's knowledge base and document intelligence platform.</p>
+        <p>Desk integrates deeply with Vault: when a customer asks a question, Desk queries Vault to find the relevant documents, then generates an answer grounded in those documents. If you already use Vault, Desk works in minutes — your knowledge base is already there.</p>
+        <p>Desk also shares authentication (single sign-on), user management, and billing with the rest of the suite.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Who is Desk designed for?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Three primary audiences:</p>
+        <ol>
+          <li><strong>Regulated businesses</strong> (10–500 employees) — healthcare clinics, legal firms, fintech startups, government contractors, education institutions. These organizations need data sovereignty and can't send customer conversations to cloud SaaS.</li>
+          <li><strong>Businesses in regions with strict data-localization laws</strong> — EU (GDPR), Brazil (LGPD), India, Southeast Asia (PDPA). Desk lets you keep data within your jurisdiction.</li>
+          <li><strong>Developer-led companies and agencies</strong> — teams that want to white-label or deeply customize their support stack without vendor lock-in.</li>
+        </ol>
+        <p>Desk is <em>not</em> designed for businesses that need 200+ integrations, visual flow builders, or full CRM functionality. It's focused on AI-first support with sovereignty.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can Desk replace my human support team?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>No — and it's not designed to. Desk <strong>augments</strong> your human team, not replaces it.</p>
+        <p>Typical outcomes: Desk handles 60-80% of conversations end-to-end without human intervention (repetitive questions, FAQs, status checks). The remaining 20-40% — complex issues, emotional customers, edge cases — are escalated to human agents with full context.</p>
+        <p>The goal is to free your humans from repetitive work so they can focus on high-value conversations that actually need empathy and judgment.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 2: WHATSAPP & CHANNELS ================= -->
+  <div class="section" id="s2">
+    <div class="section-header">
+      <span class="icon">📱</span>
+      <h2>2. WhatsApp & Channels</h2>
+      <span class="count">9 questions</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Why is Desk "WhatsApp-first" and not just "WhatsApp-compatible"?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Most open-source support tools (Chatwoot, Botpress) add WhatsApp as an afterthought — a connector bolted onto a web-chat-first architecture. This leads to awkward UX: message templates don't work properly, the 24-hour window isn't tracked, agent handoff is clunky.</p>
+        <p>Desk was designed from day one around WhatsApp's constraints and strengths:</p>
+        <ul>
+          <li><strong>24-hour session window</strong> — tracked natively. Desk knows when the window expires and switches to template messages automatically.</li>
+          <li><strong>Message templates</strong> — built-in management for approved templates (order confirmations, appointment reminders).</li>
+          <li><strong>Rich media</strong> — images, documents, location sharing all handled as first-class message types.</li>
+          <li><strong>Agent handoff</strong> — designed for the WhatsApp experience, not adapted from a web chat paradigm.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What are the two WhatsApp integration options?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk offers <strong>two paths</strong> to connect WhatsApp — no other self-hosted solution offers both:</p>
+        <table>
+          <thead><tr><th></th><th>WhatsApp Business API</th><th>WhatsApp Baileys Bridge</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Best for</strong></td><td>Enterprise, regulated businesses</td><td>SMBs, rapid deployment</td></tr>
+            <tr><td><strong>Meta verification required?</strong></td><td>Yes (Meta Business Manager)</td><td>No</td></tr>
+            <tr><td><strong>Setup time</strong></td><td>Hours to days (verification)</td><td>&lt;30 minutes (QR code pairing)</td></tr>
+            <tr><td><strong>Official support from Meta</strong></td><td>Yes</td><td>No (unofficial bridge)</td></tr>
+            <tr><td><strong>Compliance</strong></td><td>Full enterprise compliance</td><td>Good for most use cases</td></tr>
+            <tr><td><strong>Tier</strong></td><td>Paid</td><td>Free</td></tr>
+          </tbody>
+        </table>
+        <p>Choose Business API if you need Meta's official stamp of approval (healthcare, finance, government). Choose Baileys Bridge if you want to test Desk in 30 minutes without paperwork.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What is the WhatsApp Baileys Bridge?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The Baileys Bridge is a <strong>quick-start WhatsApp connector</strong> that works by linking to WhatsApp Web — similar to how WhatsApp Web/Desktop works on your computer. You scan a QR code, and Desk can send and receive messages on that WhatsApp number.</p>
+        <p><strong>Advantages:</strong></p>
+        <ul>
+          <li>No Meta Business verification needed</li>
+          <li>Setup in under 30 minutes</li>
+          <li>Works with any WhatsApp account (personal or business)</li>
+          <li>Free to use</li>
+        </ul>
+        <p><strong>Limitations:</strong></p>
+        <ul>
+          <li>Unofficial — not endorsed by Meta</li>
+          <li>Session can expire (typically 30 days, auto-reconnectable)</li>
+          <li>Not suitable for very high-volume deployments</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Tip</strong>
+          Use Baileys Bridge for prototyping and small-to-medium deployments. Switch to the official Business API when you need enterprise compliance or scale beyond ~1,000 conversations/day.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What is the WhatsApp Business API and how do I get access?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The WhatsApp Business API is Meta's <strong>official channel</strong> for businesses to message customers at scale. It's the same API that large companies use for order notifications, appointment reminders, and customer support.</p>
+        <p><strong>To get access:</strong></p>
+        <ol>
+          <li>Create a <strong>Meta Business Manager</strong> account (if you don't have one)</li>
+          <li>Verify your business with Meta (requires business documents — registration certificate, utility bill)</li>
+          <li>Request WhatsApp Business API access through Meta or a Business Solution Provider (BSP)</li>
+          <li>Wait for approval (typically 1-5 business days)</li>
+        </ol>
+        <p>Once approved, Desk connects directly to the API. You get official green-tick verification (optional), message templates, and full Meta support.</p>
+        <div class="callout warning">
+          <strong>Heads up</strong>
+          Meta charges per conversation (not per message). Pricing varies by country and conversation type (marketing, utility, service). Budget ~$0.03-$0.08 per conversation in most markets.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What is the "24-hour window" in WhatsApp?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>WhatsApp's Business API has a rule: once a customer sends you a message, you have <strong>24 hours</strong> to reply with free-form messages. After 24 hours, the "session window" closes and you can only send <strong>pre-approved template messages</strong> (e.g., "Your order has shipped") until the customer messages you again.</p>
+        <p>Desk tracks this window automatically. If a conversation is approaching the 24-hour limit, Desk will:</p>
+        <ul>
+          <li>Switch to template messages for proactive outreach</li>
+          <li>Alert your agent inbox that the session is expiring</li>
+          <li>Log the window state for compliance auditing</li>
+        </ul>
+        <p>You don't need to manage this manually — Desk handles it.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What other channels does Desk support besides WhatsApp?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk supports multiple channels via a <strong>pluggable adapter system</strong>. Current and planned channels:</p>
+        <table>
+          <thead><tr><th>Channel</th><th>Status</th><th>Priority</th></tr></thead>
+          <tbody>
+            <tr><td>WhatsApp Business API</td><td>✅ Available (MVP)</td><td>First-class</td></tr>
+            <tr><td>WhatsApp Baileys Bridge</td><td>✅ Available (MVP)</td><td>First-class</td></tr>
+            <tr><td>Web chat widget</td><td>✅ Available (MVP)</td><td>Second-class</td></tr>
+            <tr><td>Email (IMAP/SMTP)</td><td>✅ Available (MVP)</td><td>Second-class</td></tr>
+            <tr><td>Telegram</td><td>🔜 Planned (v1.1)</td><td>Optional module</td></tr>
+            <tr><td>Discord</td><td>🔜 Planned (v1.1)</td><td>Optional module</td></tr>
+            <tr><td>Slack</td><td>🔜 Planned (v1.1)</td><td>Optional module</td></tr>
+            <tr><td>Signal</td><td>🔜 Planned (v1.1)</td><td>Optional module</td></tr>
+            <tr><td>iMessage</td><td>🔜 Planned (v1.1)</td><td>Optional module</td></tr>
+          </tbody>
+        </table>
+        <p>WhatsApp is the primary focus. Other channels are optional modules you can enable as needed.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I use Desk with multiple WhatsApp numbers?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Desk supports <strong>multiple channel adapter instances</strong>. You can connect multiple WhatsApp numbers (e.g., one for sales, one for support, one for each region) and manage them all from a single Desk deployment.</p>
+        <p>Each adapter instance has its own configuration, credentials, and message routing rules. Conversations from different numbers are kept separate but visible in the same agent inbox.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Does Desk support WhatsApp message templates?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. For WhatsApp Business API connections, Desk includes <strong>template management</strong>:</p>
+        <ul>
+          <li>Create, edit, and submit templates to Meta for approval</li>
+          <li>Track template approval status</li>
+          <li>Use templates for proactive messages outside the 24-hour window</li>
+          <li>Template variables (e.g., <code>{{customer_name}}</code>, <code>{{order_id}}</code>) are populated automatically from conversation context</li>
+        </ul>
+        <p>For Baileys Bridge connections, template messages are not available (the bridge uses free-form messages only).</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can customers send images, documents, or voice messages?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Desk handles <strong>rich media messages</strong>:</p>
+        <ul>
+          <li><strong>Images:</strong> Customers can send photos (e.g., of a damaged product). Desk can analyze them or route to a human agent.</li>
+          <li><strong>Documents:</strong> PDFs, Word files, spreadsheets — Desk can extract text and use it in the conversation.</li>
+          <li><strong>Voice messages:</strong> WhatsApp voice notes are transcribed (using Whisper or similar) and processed as text.</li>
+          <li><strong>Location:</strong> If a customer shares their location, Desk can use it for context (e.g., "Find the nearest branch").</li>
+        </ul>
+        <p>All media is stored securely in your infrastructure (S3-compatible storage or local filesystem).</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 3: OUR SOLUTION'S STRENGTHS ================= -->
+  <div class="section" id="s3">
+    <div class="section-header">
+      <span class="icon">🏗️</span>
+      <h2>3. Our Solution's Strengths & Design</h2>
+      <span class="count">9 questions</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What are the top advantages of Desk over off-the-shelf support tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>Feature</th><th>Desk (ODW.ai)</th><th>Typical Alternatives</th></tr></thead>
+          <tbody>
+            <tr><td>Data sovereignty</td><td>✅ Fully self-hosted, data never leaves your servers</td><td>❌ Cloud SaaS, data on vendor servers</td></tr>
+            <tr><td>WhatsApp support</td><td>✅ First-class, dual-path (Business API + Baileys)</td><td>⚠️ Bolted-on, limited features</td></tr>
+            <tr><td>Knowledge base</td><td>✅ Deep Vault integration, RAG with citations</td><td>⚠️ Basic or proprietary</td></tr>
+            <tr><td>Model flexibility</td><td>✅ Model-agnostic (local + frontier)</td><td>❌ Locked to vendor's AI</td></tr>
+            <tr><td>PII protection</td><td>✅ Built-in PII Shield, auto-redaction</td><td>❌ Manual or none</td></tr>
+            <tr><td>Brand voice</td><td>✅ Configurable persona, guardrails</td><td>❌ Generic bot responses</td></tr>
+            <tr><td>Compliance</td><td>✅ Audit logs, data export/deletion, retention policies</td><td>⚠️ Limited</td></tr>
+            <tr><td>Vendor lock-in</td><td>✅ None — export everything anytime</td><td>❌ Proprietary formats</td></tr>
+          </tbody>
+        </table>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How does Desk compare to Chatwoot or Botpress?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Chatwoot and Botpress are excellent open-source tools, but they have different design priorities:</p>
+        <table>
+          <thead><tr><th>Aspect</th><th>Desk</th><th>Chatwoot / Botpress</th></tr></thead>
+          <tbody>
+            <tr><td>Primary channel</td><td>WhatsApp-first</td><td>Web chat-first, WhatsApp added later</td></tr>
+            <tr><td>AI architecture</td><td>Model-agnostic, RAG with Vault</td><td>Basic AI or rules-based</td></tr>
+            <tr><td>Knowledge base</td><td>Deep integration with Vault (document intelligence)</td><td>Basic FAQ matching or external integration</td></tr>
+            <tr><td>PII handling</td><td>Built-in PII Shield with auto-redaction</td><td>Manual or none</td></tr>
+            <tr><td>Brand voice</td><td>Configurable persona + guardrails</td><td>Limited or none</td></tr>
+            <tr><td>Suite integration</td><td>Part of ODW.ai suite (shared auth, billing, UI)</td><td>Standalone</td></tr>
+          </tbody>
+        </table>
+        <p>Choose Chatwoot/Botpress if you need a general-purpose, web-chat-first tool with lots of integrations. Choose Desk if WhatsApp is your primary channel and you need data sovereignty + AI intelligence.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How does the AI pipeline work? (Step-by-step)<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>When a customer sends a message, here's what happens behind the scenes:</p>
+        <ol>
+          <li><strong>Channel Gateway</strong> — receives the message from WhatsApp (or other channel) and normalizes it into a standard format.</li>
+          <li><strong>Message Router</strong> — identifies the customer, loads their conversation history, and decides: should AI handle this, or a human?</li>
+          <li><strong>Conversation Manager</strong> — saves the message, updates the conversation state, and starts SLA timers (how long has the customer been waiting?).</li>
+          <li><strong>PII Shield</strong> — scans the message for personally identifiable information (names, phone numbers, credit cards). If PII is detected, it's redacted before sending to cloud AI models, or the query is routed to a local model only.</li>
+          <li><strong>Policy Engine</strong> — checks if the message triggers any response policies (e.g., competitor mentions, legal disclaimers). If a hard rule matches, a template response is sent immediately.</li>
+          <li><strong>Model Router</strong> — decides which AI model to use (local or frontier) based on PII detection, complexity, and your routing policy.</li>
+          <li><strong>Persona Service</strong> — composes the system prompt with your brand voice (tone, vocabulary, do's/don'ts).</li>
+          <li><strong>Vault Client</strong> — queries your knowledge base (Vault) for relevant documents. Retrieves the top 5-10 most relevant chunks.</li>
+          <li><strong>AI Engine</strong> — sends the customer's question + retrieved documents + brand persona to the AI model. Gets a response back.</li>
+          <li><strong>Confidence Scorer</strong> — calculates how confident the AI is in its answer. If confidence is below your threshold, the conversation is escalated to a human.</li>
+          <li><strong>Policy Engine (post-check)</strong> — validates the AI's response against your policies. If it violates a rule (e.g., mentions a competitor), it's rewritten or blocked.</li>
+          <li><strong>Outbound Dispatcher</strong> — formats the response for WhatsApp and sends it back to the customer.</li>
+        </ol>
+        <p>Total latency: <strong>&lt;5 seconds</strong> for local models, <strong>&lt;8 seconds</strong> for frontier models.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What is the PII Shield and why is it important?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>PII</strong> stands for <em>Personally Identifiable Information</em> — names, phone numbers, email addresses, credit card numbers, health records, etc.</p>
+        <p>The PII Shield is a component that <strong>scans every message</strong> (inbound and outbound) for PII. When it detects PII:</p>
+        <ul>
+          <li><strong>Redaction:</strong> PII is replaced with placeholders (e.g., "John Smith" → <code>[NAME]</code>) before the message is sent to a cloud AI model.</li>
+          <li><strong>Routing:</strong> If PII is detected, the query is automatically routed to a <strong>local model only</strong> — it never touches a cloud API. This ensures sensitive data stays on your servers.</li>
+          <li><strong>Override:</strong> Admins can configure PII patterns (e.g., add industry-specific identifiers) and override routing rules if needed.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Why this matters</strong>
+          Cloud AI providers (OpenAI, Anthropic) have strict policies against processing PII. If you accidentally send customer health data to GPT-4, you could violate their terms <em>and</em> HIPAA. The PII Shield prevents this automatically.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How does confidence-based routing work?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>After the AI generates a response, Desk calculates a <strong>confidence score</strong> (0-100%) indicating how sure the AI is that its answer is correct and relevant.</p>
+        <p>You set a <strong>confidence threshold</strong> (e.g., 70%). If the AI's confidence is:</p>
+        <ul>
+          <li><strong>Above threshold:</strong> Response is sent to the customer automatically.</li>
+          <li><strong>Below threshold:</strong> Conversation is escalated to a human agent. The AI's draft response is shown to the agent as a suggestion, but the human reviews and sends it.</li>
+        </ul>
+        <p>This ensures the AI only handles questions it's confident about. Complex, ambiguous, or edge-case questions are handed off to humans — no guessing, no hallucination.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What happens when the AI doesn't know the answer?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Three things can happen, depending on your configuration:</p>
+        <ol>
+          <li><strong>Escalation to human:</strong> If confidence is below your threshold, the conversation is escalated. A human agent sees the question + the AI's draft response (if any) and can take over.</li>
+          <li><strong>Graceful fallback:</strong> The AI can be configured to say "I'm not sure about that. Let me connect you with a human who can help" — and then escalate.</li>
+          <li><strong>Restricted topics mode:</strong> You can configure Desk to <em>never</em> answer questions outside your knowledge base. If a question can't be answered from your documents, it's escalated immediately — no guessing.</li>
+        </ol>
+        <p>Desk never makes up answers. If it doesn't know, it says so and hands off.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How does human agent handoff work?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>When a conversation is escalated (low confidence, PII detected, or customer requests a human):</p>
+        <ol>
+          <li><strong>Agent Inbox notification:</strong> The conversation appears in the agent inbox with a flag: "Escalated by AI — low confidence" or "PII detected — routed to local model."</li>
+          <li><strong>Context transfer:</strong> The human agent sees the full conversation history, the customer's profile, and the AI's draft response (if any).</li>
+          <li><strong>Takeover:</strong> The agent clicks "Take Over." From that point, the AI stops auto-responding. The human handles the conversation.</li>
+          <li><strong>Resolution:</strong> When the agent resolves the conversation, they mark it as "Resolved." Future messages from that customer go back to the AI (unless you configure it differently).</li>
+        </ol>
+        <p>Agents can also <strong>proactively take over</strong> any conversation — they don't have to wait for escalation.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What is the agent inbox?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The agent inbox is a <strong>web-based interface</strong> where human agents can:</p>
+        <ul>
+          <li>View all conversations (AI-handled, escalated, pending, resolved)</li>
+          <li>Take over conversations from the AI</li>
+          <li>Respond to customers directly</li>
+          <li>See real-time updates via WebSocket (no page refresh needed)</li>
+          <li>Filter conversations by status, channel, customer, or tag</li>
+          <li>View SLA timers (how long has this customer been waiting?)</li>
+        </ul>
+        <p>The inbox is designed for speed — agents can handle multiple conversations in parallel, switch between them instantly, and see AI-suggested responses as drafts.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What SLA tracking does Desk provide?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk tracks two key SLA metrics:</p>
+        <ul>
+          <li><strong>First-response time:</strong> How long does it take for the customer to get a reply after sending their first message? (Target: &lt;5 seconds for AI, &lt;5 minutes for human handoff.)</li>
+          <li><strong>Resolution time:</strong> How long does it take to fully resolve the conversation? (Target varies by business.)</li>
+        </ul>
+        <p>SLA timers are enforced automatically. If a conversation exceeds your SLA threshold, Desk can:</p>
+        <ul>
+          <li>Alert the agent inbox</li>
+          <li>Escalate to a supervisor</li>
+          <li>Log the SLA breach for reporting</li>
+        </ul>
+        <p>You configure SLA thresholds in the admin dashboard.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 4: AI ACCURACY & TRUST ================= -->
+  <div class="section" id="s4">
+    <div class="section-header">
+      <span class="icon">🎯</span>
+      <h2>4. AI Accuracy & Trust</h2>
+      <span class="count">8 questions</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How does Desk avoid hallucination (making up answers)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk uses multiple layers to prevent hallucination:</p>
+        <ol>
+          <li><strong>Retrieval-Augmented Generation (RAG):</strong> The AI doesn't answer from memory. It retrieves relevant documents from your knowledge base (Vault) and generates answers <em>grounded in those documents</em>. If the documents don't contain the answer, the AI says so.</li>
+          <li><strong>Confidence scoring:</strong> Every response gets a confidence score. Low-confidence responses are escalated to humans — they're never sent to customers automatically.</li>
+          <li><strong>Policy guardrails:</strong> You can configure Desk to <em>never</em> answer questions outside your knowledge base (restricted topics mode). No guessing allowed.</li>
+          <li><strong>Source citations:</strong> Every AI response includes citations to the source documents. Agents (and customers, if you enable it) can verify the answer by reading the original document.</li>
+          <li><strong>Post-generation validation:</strong> The Policy Engine checks every response against your rules. If it violates a policy (e.g., mentions a competitor), it's rewritten or blocked.</li>
+        </ol>
+        <div class="callout info">
+          <strong>Key principle</strong>
+          Desk is designed to be honest. If it doesn't know, it says so. It never guesses.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What happens if the AI gives a wrong answer?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Three safeguards:</p>
+        <ol>
+          <li><strong>Prevention:</strong> Confidence scoring + policy guardrails catch most errors before the response is sent.</li>
+          <li><strong>Detection:</strong> If a customer says "That's wrong" or "I disagree," the conversation is flagged for human review.</li>
+          <li><strong>Correction:</strong> Human agents can take over, correct the answer, and mark the conversation as resolved. The correction is logged for future analysis.</li>
+        </ol>
+        <p>You can also review AI-handled conversations in the agent inbox to spot patterns and improve the knowledge base.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I see which documents the AI used to generate an answer?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Every AI response includes <strong>source citations</strong> — links to the exact documents and page numbers the AI used. These citations are:</p>
+        <ul>
+          <li>Visible to human agents in the agent inbox</li>
+          <li>Optionally visible to customers (you can enable/disable this in settings)</li>
+          <li>Logged in the audit trail for compliance</li>
+        </ul>
+        <p>This transparency lets you verify the AI's answers and build trust with customers.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How accurate is the AI?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Accuracy depends on three factors:</p>
+        <ol>
+          <li><strong>Quality of your knowledge base:</strong> If your documents are clear, complete, and up-to-date, the AI will be accurate. Garbage in, garbage out.</li>
+          <li><strong>Model choice:</strong> Frontier models (GPT-4, Claude) are more accurate than local models (Llama, Mistral), but less private.</li>
+          <li><strong>Configuration:</strong> Confidence thresholds, policy guardrails, and restricted topics mode all affect accuracy.</li>
+        </ol>
+        <p>Typical outcomes: <strong>60-80% of conversations</strong> are resolved by AI without human intervention. The remaining 20-40% are escalated to humans (either because the AI wasn't confident, or the customer requested a human).</p>
+        <div class="callout tip">
+          <strong>Tip</strong>
+          Start with a high confidence threshold (e.g., 80%) to ensure the AI only handles easy questions. As you review AI-handled conversations and improve your knowledge base, you can lower the threshold gradually.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I test the AI before going live?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Desk includes a <strong>Persona Preview/Test Tool</strong> that lets you:</p>
+        <ul>
+          <li>Simulate customer conversations in a sandbox environment</li>
+          <li>Test how the AI responds to specific questions</li>
+          <li>Preview the AI's tone and brand voice</li>
+          <li>Verify that policy guardrails are working</li>
+        </ul>
+        <p>You can also run Desk in <strong>"shadow mode"</strong> — the AI processes real customer messages and generates draft responses, but doesn't send them. Instead, drafts are logged for human review. This lets you evaluate AI performance before enabling auto-response.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How does Desk handle multi-turn conversations?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk maintains <strong>conversation context</strong> across multiple messages. When a customer sends a follow-up question, the AI has access to:</p>
+        <ul>
+          <li>The full conversation history (previous messages)</li>
+          <li>The customer's profile (name, past conversations, preferences)</li>
+          <li>The retrieved documents from previous turns</li>
+        </ul>
+        <p>This allows the AI to handle complex, multi-step conversations naturally. For example:</p>
+        <ul>
+          <li>Customer: "What's your return policy?"</li>
+          <li>AI: "Our return policy is 30 days..."</li>
+          <li>Customer: "What about electronics?"</li>
+          <li>AI: "For electronics, the return window is 14 days..." (understands "electronics" refers to the return policy context)</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What languages does Desk support?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk supports <strong>English and Chinese</strong> (Simplified and Traditional) out of the box. The AI can detect the customer's language and respond in the same language.</p>
+        <p>Additional languages can be added by:</p>
+        <ul>
+          <li>Configuring the AI model to support them (most frontier models support 50+ languages)</li>
+          <li>Adding knowledge base documents in those languages</li>
+          <li>Configuring the brand persona for language-specific tone and vocabulary</li>
+        </ul>
+        <div class="callout warning">
+          <strong>Limitation</strong>
+          Multi-language support beyond English + Chinese is a stretch goal for v1.1. Quality may vary for languages not well-represented in the AI model's training data.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can the AI execute actions (e.g., create a refund, book an appointment)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Not in v1.0.</strong> Desk is designed to <em>answer questions</em>, not execute transactions. This is a deliberate design choice — executing actions (creating refunds, booking appointments, modifying orders) introduces significant complexity and risk.</p>
+        <p>For v1.0, if a customer needs an action taken, the AI escalates to a human agent who can perform the action in your backend systems.</p>
+        <p>Generative actions are planned for a future release (v1.2+), but will require explicit configuration and approval workflows to ensure safety.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 5: SECURITY & PRIVACY ================= -->
+  <div class="section" id="s5">
+    <div class="section-header">
+      <span class="icon">🔒</span>
+      <h2>5. Security & Privacy</h2>
+      <span class="count">9 questions</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Where is my data stored?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>All data is stored <strong>on your own infrastructure</strong>:</p>
+        <ul>
+          <li><strong>Conversation data:</strong> PostgreSQL database (on your server)</li>
+          <li><strong>Media files:</strong> S3-compatible storage (your bucket) or local filesystem</li>
+          <li><strong>Knowledge base:</strong> Vault (your deployment)</li>
+          <li><strong>Configuration:</strong> PostgreSQL database</li>
+          <li><strong>Audit logs:</strong> PostgreSQL database</li>
+        </ul>
+        <p>No data is sent to ODW.ai servers. No data is sent to cloud AI providers unless you explicitly configure frontier model routing (and even then, PII is redacted).</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Is Desk compliant with GDPR, HIPAA, PDPA?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk is <strong>compatible with</strong> GDPR, HIPAA, PDPA, and other data-protection regulations — but compliance depends on <strong>how you deploy it</strong>.</p>
+        <p>Desk provides the tools you need for compliance:</p>
+        <ul>
+          <li><strong>Data sovereignty:</strong> All data stays on your servers. You control where it physically lives (important for data-residency requirements).</li>
+          <li><strong>Data export:</strong> Export all customer data in standard formats (JSON, CSV) for subject access requests.</li>
+          <li><strong>Data deletion:</strong> Delete customer data on request (GDPR "right to erasure"). Deletion is logged in the audit trail.</li>
+          <li><strong>Retention policies:</strong> Configure how long data is kept (e.g., "delete conversations after 2 years").</li>
+          <li><strong>Audit logs:</strong> Every AI decision, data access, and configuration change is logged.</li>
+          <li><strong>PII Shield:</strong> Automatically redacts PII before sending to cloud AI models.</li>
+        </ul>
+        <div class="callout info">
+          <strong>Important</strong>
+          Desk gives you the tools, but <em>you</em> are responsible for configuring them correctly and ensuring your deployment meets regulatory requirements. Consult your legal team for specific compliance advice.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What encryption does Desk use?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk uses industry-standard encryption:</p>
+        <ul>
+          <li><strong>In transit:</strong> TLS 1.3 for all network communication (HTTPS, WebSocket, database connections).</li>
+          <li><strong>At rest:</strong> AES-256 encryption for sensitive data in the database (e.g., customer PII, API keys). PostgreSQL Transparent Data Encryption (TDE) or filesystem encryption for the entire database.</li>
+          <li><strong>WhatsApp Baileys sessions:</strong> Encrypted auth credentials stored in the database.</li>
+        </ul>
+        <p>You can also enable <strong>end-to-end encryption</strong> for specific use cases (e.g., healthcare) by configuring additional encryption layers.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I run Desk completely offline (no internet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Partially.</strong> Desk can run with <strong>local models only</strong> (no internet for AI inference), but it still needs internet for:</p>
+        <ul>
+          <li><strong>WhatsApp Business API:</strong> Requires internet to connect to Meta's servers.</li>
+          <li><strong>WhatsApp Baileys Bridge:</strong> Requires internet to connect to WhatsApp Web.</li>
+          <li><strong>License validation:</strong> Periodic license checks (can be configured for offline validation with a license file).</li>
+        </ul>
+        <p>If you need <strong>fully offline operation</strong> (e.g., air-gapped network), you can:</p>
+        <ul>
+          <li>Use local models only (Ollama, vLLM)</li>
+          <li>Use a private WhatsApp bridge (e.g., on-premise WhatsApp Business API gateway)</li>
+          <li>Use offline license validation</li>
+        </ul>
+        <p>Fully offline operation is possible but requires custom configuration. Contact us for details.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How does Desk handle PII in conversations?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The <strong>PII Shield</strong> scans every message for personally identifiable information:</p>
+        <ul>
+          <li><strong>Detection:</strong> Uses NER (Named Entity Recognition) models and regex patterns to detect names, phone numbers, email addresses, credit card numbers, health records, etc.</li>
+          <li><strong>Redaction:</strong> PII is replaced with placeholders (e.g., "John Smith" → <code>[NAME]</code>) before sending to cloud AI models.</li>
+          <li><strong>Routing:</strong> If PII is detected, the query is automatically routed to a local model only — it never touches a cloud API.</li>
+          <li><strong>Configuration:</strong> Admins can add custom PII patterns (e.g., industry-specific identifiers like patient IDs, policy numbers).</li>
+        </ul>
+        <p>PII detection runs on <strong>every message</strong>, inbound and outbound. You can configure the sensitivity level (strict, moderate, lenient) in the admin dashboard.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What audit trails does Desk provide?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk maintains a <strong>tamper-evident audit log</strong> of every significant event:</p>
+        <ul>
+          <li>Every AI decision (model used, confidence score, retrieved documents, response generated)</li>
+          <li>Every policy decision (guardrail triggered, response rewritten/blocked)</li>
+          <li>Every data access (who accessed which conversation, when)</li>
+          <li>Every configuration change (who changed what, when)</li>
+          <li>Every data export/deletion request</li>
+        </ul>
+        <p>Audit logs are stored in the PostgreSQL database and can be exported to SIEM systems (Splunk, ELK) for analysis. Logs are immutable — once written, they cannot be modified or deleted (only archived).</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I export or delete customer data?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Desk provides <strong>compliance tooling</strong> for data export and deletion:</p>
+        <ul>
+          <li><strong>Data export:</strong> Export all data for a specific customer (conversations, profile, media) in JSON or CSV format. Useful for GDPR "subject access requests."</li>
+          <li><strong>Data deletion:</strong> Delete all data for a specific customer. Deletion is permanent and logged in the audit trail. Useful for GDPR "right to erasure."</li>
+          <li><strong>Bulk operations:</strong> Export or delete data for multiple customers at once.</li>
+          <li><strong>Retention policies:</strong> Configure automatic data deletion after a specified period (e.g., "delete conversations after 2 years").</li>
+        </ul>
+        <p>All export/deletion operations are performed by admins through the admin dashboard or via API.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Does ODW.ai have access to my data?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>No.</strong> Desk is self-hosted. ODW.ai has <strong>zero access</strong> to your data — conversations, knowledge base, configuration, audit logs, everything stays on your servers.</p>
+        <p>The only communication between your Desk deployment and ODW.ai is:</p>
+        <ul>
+          <li><strong>License validation:</strong> Periodic checks to verify your license is valid (can be disabled for offline deployments).</li>
+          <li><strong>Support:</strong> If you contact support, you may share logs or configuration — but this is voluntary and controlled by you.</li>
+        </ul>
+        <p>ODW.ai cannot access your data remotely. There is no "backdoor" or remote administration capability.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What happens if my server is compromised?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>If your server is compromised, the attacker could potentially access:</p>
+        <ul>
+          <li>Conversation data (customer messages, AI responses)</li>
+          <li>Knowledge base documents</li>
+          <li>Configuration (including API keys for WhatsApp, AI models, etc.)</li>
+          <li>Audit logs</li>
+        </ul>
+        <p><strong>Mitigation:</strong></p>
+        <ul>
+          <li><strong>Encryption at rest:</strong> Even if the database files are stolen, they're encrypted.</li>
+          <li><strong>Network security:</strong> Use firewalls, VPNs, and access controls to restrict who can access the server.</li>
+          <li><strong>Regular backups:</strong> Back up your data to a secure, separate location.</li>
+          <li><strong>Monitoring:</strong> Use the audit logs to detect suspicious activity.</li>
+          <li><strong>Incident response:</strong> If compromised, rotate all API keys, change passwords, and review audit logs to assess the breach.</li>
+        </ul>
+        <p>Desk provides the tools for security, but <strong>you are responsible</strong> for securing your infrastructure. If you're not comfortable managing server security, consider using a managed hosting provider.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 6: KNOWLEDGE BASE & DATA ================= -->
+  <div class="section" id="s6">
+    <div class="section-header">
+      <span class="icon">📚</span>
+      <h2>6. Knowledge Base & Data</h2>
+      <span class="count">8 questions</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How does Desk access my company's knowledge base?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk integrates with <strong>Vault</strong> — the ODW.ai suite's knowledge base and document intelligence platform. When a customer asks a question:</p>
+        <ol>
+          <li>Desk sends the question to Vault's retrieval API.</li>
+          <li>Vault searches its document corpus and returns the top 5-10 most relevant chunks (paragraphs).</li>
+          <li>Desk includes these chunks in the AI's prompt, so the AI generates an answer grounded in your documents.</li>
+        </ol>
+        <p>If you already use Vault, Desk works in minutes — your knowledge base is already there. If you don't use Vault yet, you'll need to set it up first (separate product).</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What file formats does Vault support?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault supports <strong>15+ file formats</strong>:</p>
+        <ul>
+          <li><strong>Documents:</strong> PDF, Word (DOCX), PowerPoint (PPTX), Excel (XLSX), plain text (TXT, MD)</li>
+          <li><strong>Web content:</strong> HTML, Markdown</li>
+          <li><strong>Archives:</strong> ZIP (extracts and processes contents)</li>
+          <li><strong>Media:</strong> Images (OCR), audio/video (transcription)</li>
+          <li><strong>Code:</strong> Source code files (for technical documentation)</li>
+          <li><strong>Other:</strong> CSV, JSON, XML</li>
+        </ul>
+        <p>Vault uses industry-standard <strong>PRONOM format signatures</strong> to identify file types (not just file extensions), so it handles misnamed files correctly.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I update the knowledge base?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault supports <strong>incremental updates</strong>:</p>
+        <ul>
+          <li>Add new documents — only new files are processed.</li>
+          <li>Update existing documents — only changed files are re-processed (detected via SHA-256 hash).</li>
+          <li>Delete documents — removed from the knowledge base immediately.</li>
+        </ul>
+        <p>You don't need to re-process the entire knowledge base every time you make a change. Updates are fast and efficient.</p>
+        <p>You can also schedule <strong>automatic sync</strong> from folders (e.g., SharePoint, Google Drive, local filesystem) so the knowledge base stays up-to-date automatically.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I exclude certain documents from the knowledge base?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault provides multiple ways to exclude documents:</p>
+        <ul>
+          <li><strong>Folder-level exclusion:</strong> Exclude entire folders (e.g., "HR/Confidential").</li>
+          <li><strong>File-level exclusion:</strong> Exclude specific files (e.g., "salary_data.xlsx").</li>
+          <li><strong>Pattern-based exclusion:</strong> Exclude files matching a pattern (e.g., "*.private").</li>
+          <li><strong>Pre-processing review:</strong> Before processing, Vault generates a report of all discovered files. You can review and exclude sensitive files before they're indexed.</li>
+        </ul>
+        <p>Excluded files are never processed or indexed. They remain in your filesystem but are invisible to the AI.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How does Vault handle duplicate files?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault uses <strong>SHA-256 hash-based deduplication</strong>:</p>
+        <ul>
+          <li>Every file is fingerprinted with a SHA-256 hash (a unique digital signature).</li>
+          <li>If two files have the same hash, they're identical — Vault processes only one copy.</li>
+          <li>This works even if the files have different names or are in different folders.</li>
+        </ul>
+        <p>Deduplication saves processing time and storage space. It also ensures the AI doesn't retrieve the same document multiple times under different names.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What is "contextual retrieval" and why does it matter?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>When Vault processes documents, it chops them into small pieces (chunks) — usually a paragraph or two. But when a chunk is isolated, it loses context. A chunk that says "the maximum was 8 degrees" has no idea whether it's talking about a slope, a temperature, or a rotation angle.</p>
+        <p><strong>Contextual retrieval</strong> fixes this: before storing each chunk, Vault asks a small AI model to write a one-sentence context tag like "This chunk describes the slope tolerance for the delivery robot in Section 4 of the deployment manual." That tag rides along with the chunk into the vector database.</p>
+        <p>Anthropic reported a <strong>20-30% reduction in retrieval failures</strong> using this technique. Vault implements it by default. It's one of the biggest reasons Desk's answers stay accurate on messy, real-world document collections.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I use multiple knowledge bases (e.g., one per department)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Vault supports <strong>multiple collections</strong>. You can create separate collections for:</p>
+        <ul>
+          <li>Departments (Sales, Support, HR, Legal)</li>
+          <li>Products (Product A, Product B, Product C)</li>
+          <li>Regions (North America, Europe, Asia-Pacific)</li>
+          <li>Languages (English, Chinese, Spanish)</li>
+        </ul>
+        <p>Desk can be configured to query specific collections based on the conversation context. For example, if a customer asks about Product A, Desk queries the Product A collection. If they ask about shipping, Desk queries the Support collection.</p>
+        <p>This ensures the AI retrieves the most relevant documents and doesn't mix information from different contexts.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How large can the knowledge base be?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Vault can handle <strong>very large knowledge bases</strong>:</p>
+        <ul>
+          <li><strong>Documents:</strong> Thousands to tens of thousands of documents.</li>
+          <li><strong>Chunks:</strong> Hundreds of thousands to millions of chunks.</li>
+          <li><strong>Storage:</strong> Limited only by your server's disk space and PostgreSQL/ChromaDB capacity.</li>
+        </ul>
+        <p>Performance depends on your infrastructure. For very large knowledge bases (100k+ documents), you may need to:</p>
+        <ul>
+          <li>Use a powerful server (16+ GB RAM, SSD storage)</li>
+          <li>Optimize PostgreSQL and ChromaDB performance</li>
+          <li>Use Redis caching to speed up retrieval</li>
+        </ul>
+        <p>For most businesses (1k-10k documents), a standard server is sufficient.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 7: DEPLOYMENT & SETUP ================= -->
+  <div class="section" id="s7">
+    <div class="section-header">
+      <span class="icon">🚀</span>
+      <h2>7. Deployment & Setup</h2>
+      <span class="count">9 questions</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I deploy Desk?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk is deployed via <strong>Docker Compose</strong> (single-node) or <strong>Kubernetes Helm chart</strong> (clustered). The simplest path:</p>
+        <ol>
+          <li>Install Docker and Docker Compose on your server.</li>
+          <li>Download the Desk Docker Compose file (<code>docker-compose.yml</code>).</li>
+          <li>Configure environment variables (database credentials, WhatsApp API keys, etc.).</li>
+          <li>Run <code>docker-compose up</code>.</li>
+          <li>Access the admin dashboard at <code>http://your-server:8000</code>.</li>
+          <li>Complete the setup wizard (connects WhatsApp, Vault, configures AI models).</li>
+        </ol>
+        <p>Total setup time: <strong>&lt;30 minutes</strong> for Baileys Bridge, <strong>&lt;2 hours</strong> for Business API (including Meta verification).</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What hardware do I need?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Hardware requirements depend on your deployment:</p>
+        <table>
+          <thead><tr><th>Component</th><th>Minimum</th><th>Recommended</th></tr></thead>
+          <tbody>
+            <tr><td><strong>CPU</strong></td><td>4 cores</td><td>8+ cores</td></tr>
+            <tr><td><strong>RAM</strong></td><td>8 GB</td><td>16+ GB (32 GB for local AI models)</td></tr>
+            <tr><td><strong>Storage</strong></td><td>50 GB SSD</td><td>200+ GB SSD</td></tr>
+            <tr><td><strong>Network</strong></td><td>100 Mbps</td><td>1 Gbps</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Notes:</strong></p>
+        <ul>
+          <li>If you use <strong>local AI models</strong> (Ollama, vLLM), you need a GPU (NVIDIA RTX 3060+ or better) or a very powerful CPU.</li>
+          <li>If you use <strong>frontier models only</strong> (OpenAI, Anthropic), you can run Desk on a modest server (4 cores, 8 GB RAM).</li>
+          <li>For <strong>high-volume deployments</strong> (1,000+ conversations/day), use Kubernetes with horizontal scaling.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I run Desk on a cloud server (AWS, Azure, GCP)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Desk can run on any cloud provider:</p>
+        <ul>
+          <li><strong>AWS:</strong> EC2, ECS, EKS (Kubernetes)</li>
+          <li><strong>Azure:</strong> VMs, Container Instances, AKS (Kubernetes)</li>
+          <li><strong>GCP:</strong> Compute Engine, Cloud Run, GKE (Kubernetes)</li>
+          <li><strong>Other:</strong> DigitalOcean, Linode, Hetzner, etc.</li>
+        </ul>
+        <p>Running on a cloud server gives you:</p>
+        <ul>
+          <li>Scalability (add more resources as needed)</li>
+          <li>High availability (multi-region deployment)</li>
+          <li>Managed backups and snapshots</li>
+        </ul>
+        <p>But remember: even on a cloud server, <strong>you control the data</strong>. It's still self-hosted — ODW.ai has no access.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I run Desk on-premise (in my office)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Desk can run on an on-premise server in your office. This is ideal for:</p>
+        <ul>
+          <li>Businesses with strict data-residency requirements (data must stay on-premise)</li>
+          <li>Businesses with existing server infrastructure</li>
+          <li>Businesses that want full control over hardware and network</li>
+        </ul>
+        <p><strong>Requirements:</strong></p>
+        <ul>
+          <li>A dedicated server (or VM) with Docker installed</li>
+          <li>Static IP address or domain name (for WhatsApp webhooks)</li>
+          <li>Internet connection (for WhatsApp API, license validation)</li>
+          <li>IT staff to manage the server (updates, backups, security)</li>
+        </ul>
+        <p>On-premise deployment gives you maximum control but requires more IT overhead than cloud deployment.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do I need technical staff to run Desk?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Yes, initially.</strong> Desk is designed for technical operators (DevOps-literate). You need someone who can:</p>
+        <ul>
+          <li>Deploy and configure Docker containers</li>
+          <li>Manage a PostgreSQL database</li>
+          <li>Configure WhatsApp API credentials</li>
+          <li>Monitor server health and performance</li>
+          <li>Perform updates and backups</li>
+        </ul>
+        <p><strong>Day-to-day operation</strong> is non-technical: admins configure the system via the web dashboard, agents use the agent inbox, and the AI handles conversations automatically.</p>
+        <p>If you don't have technical staff, you can:</p>
+        <ul>
+          <li>Hire a DevOps consultant for initial setup (1-2 days)</li>
+          <li>Use a managed hosting provider (we can recommend partners)</li>
+          <li>Wait for a managed SaaS offering (planned for v2, not yet available)</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I update Desk to a new version?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Updates are performed via Docker:</p>
+        <ol>
+          <li>Pull the new Docker image: <code>docker pull odwai/desk:latest</code></li>
+          <li>Restart the containers: <code>docker-compose down && docker-compose up -d</code></li>
+          <li>Database migrations run automatically on startup.</li>
+        </ol>
+        <p>Total update time: <strong>&lt;5 minutes</strong> (plus downtime during restart).</p>
+        <p>For zero-downtime updates, use Kubernetes with rolling deployments.</p>
+        <div class="callout warning">
+          <strong>Important</strong>
+          Always back up your database before updating. While migrations are tested thoroughly, bugs can happen.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I white-label Desk (rebrand it for my clients)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Desk supports <strong>white-labeling</strong>:</p>
+        <ul>
+          <li><strong>Custom branding:</strong> Replace the ODW.ai logo with your logo. Customize colors, fonts, and UI elements.</li>
+          <li><strong>Custom domain:</strong> Run Desk on your own domain (e.g., <code>support.yourcompany.com</code>).</li>
+          <li><strong>Custom email:</strong> Use your own email address for notifications and alerts.</li>
+        </ul>
+        <p>White-labeling is ideal for:</p>
+        <ul>
+          <li>Agencies that want to resell Desk to their clients</li>
+          <li>Large enterprises that want a unified brand experience</li>
+          <li>SaaS companies that want to embed AI support in their product</li>
+        </ul>
+        <p>White-labeling is available in the paid tier.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Does Desk integrate with my existing tools (CRM, helpdesk, etc.)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Not in v1.0.</strong> Desk is designed as a standalone support tool with deep Vault integration. CRM integrations (Salesforce, HubSpot), helpdesk integrations (Zendesk, Freshdesk), and other third-party connectors are <strong>out of scope for v1.0</strong>.</p>
+        <p>However, Desk provides a <strong>REST API</strong> that you can use to build custom integrations:</p>
+        <ul>
+          <li>Export conversation data to your CRM</li>
+          <li>Import customer profiles from your database</li>
+          <li>Trigger workflows in other systems (e.g., create a ticket when a conversation is escalated)</li>
+        </ul>
+        <p>Pre-built integrations are planned for v1.2+ based on customer demand.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What's the setup wizard and how does it work?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The <strong>setup wizard</strong> is a step-by-step guide that walks you through the initial configuration:</p>
+        <ol>
+          <li><strong>Welcome:</strong> Introduction to Desk and overview of the setup process.</li>
+          <li><strong>WhatsApp connection:</strong> Connect WhatsApp Business API or Baileys Bridge. Test sending/receiving messages.</li>
+          <li><strong>Vault connection:</strong> Connect to your Vault deployment. Test knowledge retrieval.</li>
+          <li><strong>AI model configuration:</strong> Choose local models, frontier models, or hybrid routing. Test AI inference.</li>
+          <li><strong>Brand persona:</strong> Configure your brand voice (tone, vocabulary, do's/don'ts). Preview how the AI sounds.</li>
+          <li><strong>Response policies:</strong> Configure guardrails (competitor mentions, legal disclaimers, etc.).</li>
+          <li><strong>Go live:</strong> Enable auto-response and start handling conversations.</li>
+        </ol>
+        <p>The wizard validates each step before proceeding, so you know everything is working before going live.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 8: COST & PRICING ================= -->
+  <div class="section" id="s8">
+    <div class="section-header">
+      <span class="icon">💰</span>
+      <h2>8. Cost & Pricing</h2>
+      <span class="count">8 questions</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How much does Desk cost?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk has a <strong>freemium model</strong>:</p>
+        <table>
+          <thead><tr><th>Tier</th><th>Price</th><th>Includes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Free</strong></td><td>$0</td><td>Self-hosted chatbot, web chat + email channels, single agent, basic Vault integration</td></tr>
+            <tr><td><strong>Paid</strong></td><td>~$250/month (illustrative)</td><td>WhatsApp Business connector, multi-agent routing, advanced compliance, SLA-backed support</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Additional costs:</strong></p>
+        <ul>
+          <li><strong>Server hosting:</strong> $20-$200/month depending on your infrastructure (cloud or on-premise).</li>
+          <li><strong>WhatsApp Business API:</strong> Meta charges per conversation (~$0.03-$0.08 per conversation, varies by country).</li>
+          <li><strong>Frontier AI models:</strong> If you use OpenAI/Anthropic, you pay per token (~$0.01-$0.03 per conversation).</li>
+          <li><strong>Local AI models:</strong> Free (but requires GPU hardware).</li>
+        </ul>
+        <div class="callout info">
+          <strong>Note</strong>
+          Pricing is illustrative and subject to change. Contact us for current pricing and custom quotes.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What's included in the free tier?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The free tier includes:</p>
+        <ul>
+          <li><strong>Channels:</strong> Web chat widget + email (IMAP/SMTP). WhatsApp Baileys Bridge is also free.</li>
+          <li><strong>AI:</strong> Single AI persona, basic Vault integration, local model support.</li>
+          <li><strong>Agents:</strong> Single agent mode (one AI persona, no multi-agent routing).</li>
+          <li><strong>Features:</strong> Basic conversation management, agent inbox, admin dashboard.</li>
+        </ul>
+        <p>The free tier is <strong>fully functional</strong> — it's not a trial or a limited demo. You can run a production support operation on the free tier.</p>
+        <p>What's <strong>not</strong> included: WhatsApp Business API (paid), multi-agent routing (paid), advanced compliance features (paid), SLA-backed support (paid).</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What's included in the paid tier?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The paid tier adds:</p>
+        <ul>
+          <li><strong>WhatsApp Business API:</strong> Official Meta integration (requires Meta verification).</li>
+          <li><strong>Multi-agent routing:</strong> Different AI personas for different topics (e.g., Sales bot, Support bot).</li>
+          <li><strong>Advanced compliance:</strong> Audit exports, data-retention policies, GDPR/HIPAA tooling.</li>
+          <li><strong>SLA-backed support:</strong> Priority bug fixes, guaranteed response times, dedicated support channel.</li>
+          <li><strong>White-labeling:</strong> Custom branding, custom domain.</li>
+        </ul>
+        <p>The paid tier is ideal for businesses that need enterprise features, official WhatsApp integration, or professional support.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How does local vs. frontier model pricing compare?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>Model Type</th><th>Cost per Conversation</th><th>Privacy</th><th>Quality</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Local (Ollama, vLLM)</strong></td><td>$0 (free)</td><td>✅ Maximum (data never leaves your server)</td><td>Good (depends on model)</td></tr>
+            <tr><td><strong>Frontier (OpenAI, Anthropic)</strong></td><td>~$0.01-$0.03</td><td>❌ Data sent to cloud provider</td><td>✅ Excellent</td></tr>
+            <tr><td><strong>Hybrid (auto-routing)</strong></td><td>~$0.005-$0.015 (avg)</td><td>⚠️ Mixed (PII stays local)</td><td>✅ Very good</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Recommendation:</strong> Start with hybrid routing. Use local models for simple questions (FAQs, status checks) and frontier models for complex questions (troubleshooting, edge cases). This balances cost, privacy, and quality.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Are there any hidden costs?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>No hidden costs. The total cost of ownership includes:</p>
+        <ul>
+          <li><strong>Desk license:</strong> Free or paid tier (see above).</li>
+          <li><strong>Server hosting:</strong> Your infrastructure cost (cloud or on-premise).</li>
+          <li><strong>WhatsApp API:</strong> Meta's per-conversation charges (if using Business API).</li>
+          <li><strong>Frontier AI models:</strong> Per-token charges from OpenAI/Anthropic (if using frontier models).</li>
+        </ul>
+        <p>That's it. No setup fees, no per-user fees, no surprise charges.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Is there a free trial?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The <strong>free tier</strong> is effectively a permanent free trial — no time limit, no credit card required. You can run the free tier indefinitely.</p>
+        <p>If you want to test the paid tier features (WhatsApp Business API, multi-agent routing, etc.), we offer a <strong>14-day free trial</strong> of the paid tier. No credit card required. At the end of the trial, you can downgrade to the free tier or subscribe.</p>
+        <p>Contact us to start your free trial.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What payment methods do you accept?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>We accept:</p>
+        <ul>
+          <li><strong>Credit/debit cards:</strong> Visa, Mastercard, American Express (via Stripe).</li>
+          <li><strong>Bank transfer:</strong> For annual subscriptions or large deployments.</li>
+          <li><strong>Cryptocurrency:</strong> Bitcoin, Ethereum, USDC (for privacy-conscious customers).</li>
+        </ul>
+        <p>Invoicing is available for annual subscriptions. Contact us for details.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. We offer a <strong>30-day money-back guarantee</strong> for paid subscriptions. If you're not satisfied within the first 30 days, contact us for a full refund — no questions asked.</p>
+        <p>After 30 days, you can cancel anytime. You'll continue to have access until the end of your billing period, but no refund is provided for partial months.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 9: SCALING & OPERATIONS ================= -->
+  <div class="section" id="s9">
+    <div class="section-header">
+      <span class="icon">📈</span>
+      <h2>9. Scaling & Operations</h2>
+      <span class="count">8 questions</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How many conversations can Desk handle?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk is designed to scale:</p>
+        <ul>
+          <li><strong>Single-node (Docker Compose):</strong> ~1,000 concurrent conversations, ~10,000 messages/hour.</li>
+          <li><strong>Clustered (Kubernetes):</strong> 10,000+ concurrent conversations, ~100,000 messages/hour (horizontal scaling).</li>
+        </ul>
+        <p>Performance depends on your infrastructure (CPU, RAM, database tuning) and AI model latency. For very high-volume deployments (100k+ conversations/day), we recommend Kubernetes with auto-scaling.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can Desk handle multiple languages at once?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Desk can handle conversations in <strong>multiple languages simultaneously</strong>. The AI detects the customer's language and responds in the same language.</p>
+        <p>For best results:</p>
+        <ul>
+          <li>Add knowledge base documents in all supported languages.</li>
+          <li>Configure the brand persona for each language (tone and vocabulary may differ).</li>
+          <li>Use frontier models (GPT-4, Claude) for best multi-language quality.</li>
+        </ul>
+        <p>Out of the box, Desk supports English and Chinese (Simplified + Traditional). Additional languages can be added by configuring the AI model and knowledge base.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I run multiple AI personas (e.g., one for sales, one for support)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Yes, in the paid tier.</strong> Multi-agent routing lets you configure different AI personas for different topics or channels:</p>
+        <ul>
+          <li><strong>Sales bot:</strong> Optimistic, persuasive, focused on product benefits.</li>
+          <li><strong>Support bot:</strong> Empathetic, technical, focused on problem-solving.</li>
+          <li><strong>Billing bot:</strong> Formal, precise, focused on accuracy.</li>
+        </ul>
+        <p>Each persona has its own brand voice, knowledge base collection, and response policies. Conversations are routed to the appropriate persona based on intent detection or channel.</p>
+        <p>The free tier supports a single AI persona only.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I monitor Desk's performance?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk provides <strong>built-in monitoring</strong>:</p>
+        <ul>
+          <li><strong>Admin dashboard:</strong> Real-time metrics (conversations handled, AI resolution rate, average response time, escalation rate).</li>
+          <li><strong>Health checks:</strong> API endpoint (<code>/health</code>) for monitoring tools (Prometheus, Datadog, etc.).</li>
+          <li><strong>Logs:</strong> Structured logs (JSON format) for every significant event. Can be exported to SIEM systems.</li>
+          <li><strong>Metrics:</strong> Prometheus-compatible metrics endpoint (<code>/metrics</code>) for Grafana dashboards.</li>
+        </ul>
+        <p>For Kubernetes deployments, we provide <strong>Grafana dashboards</strong> out of the box — pre-configured visualizations for all key metrics.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I back up my data?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk stores all data in PostgreSQL and S3-compatible storage. Back up both:</p>
+        <ul>
+          <li><strong>PostgreSQL:</strong> Use <code>pg_dump</code> for logical backups or filesystem snapshots for physical backups. Schedule daily backups to a separate location (e.g., S3, another server).</li>
+          <li><strong>S3 storage:</strong> Enable versioning and cross-region replication. Or use S3-compatible backup tools (rclone, restic).</li>
+        </ul>
+        <p>Desk also provides <strong>backup and restore tooling</strong>:</p>
+        <ul>
+          <li><code>desk backup</code> — creates a full backup (database + media files) as a single archive.</li>
+          <li><code>desk restore</code> — restores from a backup archive.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Tip</strong>
+          Test your backups regularly. A backup you've never restored is a backup you can't trust.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What happens if Desk goes down?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>If Desk goes down:</p>
+        <ul>
+          <li><strong>WhatsApp messages:</strong> Queued by WhatsApp and delivered when Desk comes back online (within the 24-hour window).</li>
+          <li><strong>Web chat messages:</strong> Lost (web chat doesn't queue messages). Consider displaying a "We're offline" message on your website.</li>
+          <li><strong>Email messages:</strong> Queued by the sender's email server and delivered when Desk comes back online.</li>
+        </ul>
+        <p><strong>High availability:</strong> For mission-critical deployments, use Kubernetes with multiple replicas. If one replica fails, traffic is automatically routed to healthy replicas.</p>
+        <p><strong>Monitoring:</strong> Set up alerts (email, Slack, PagerDuty) to notify you immediately if Desk goes down.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I train my team to use Desk?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk is designed to be intuitive, but we provide training resources:</p>
+        <ul>
+          <li><strong>Documentation:</strong> Comprehensive user guides for admins and agents.</li>
+          <li><strong>Video tutorials:</strong> Step-by-step walkthroughs of key features.</li>
+          <li><strong>Onboarding session:</strong> For paid customers, we offer a 1-hour onboarding session (remote) to walk your team through the system.</li>
+          <li><strong>Support:</strong> Paid customers get priority support via email/chat.</li>
+        </ul>
+        <p>Most teams are productive within 1-2 hours of training. The agent inbox is particularly intuitive — agents can start handling conversations immediately.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I customize Desk's behavior?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Desk is highly configurable:</p>
+        <ul>
+          <li><strong>Brand persona:</strong> Configure tone, vocabulary, formality, do's/don'ts. Make Desk sound like your brand.</li>
+          <li><strong>Response policies:</strong> Configure guardrails (competitor mentions, legal disclaimers, restricted topics).</li>
+          <li><strong>Routing rules:</strong> Configure which conversations go to AI vs. human agents. Set confidence thresholds.</li>
+          <li><strong>SLA timers:</strong> Configure first-response and resolution time targets.</li>
+          <li><strong>PII detection:</strong> Add custom PII patterns (e.g., industry-specific identifiers).</li>
+          <li><strong>Knowledge base:</strong> Curate which documents the AI can access. Exclude sensitive files.</li>
+        </ul>
+        <p>All configuration is done via the admin dashboard — no code changes required.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 10: BRAND VOICE & GUARDRAILS ================= -->
+  <div class="section" id="s10">
+    <div class="section-header">
+      <span class="icon">🎨</span>
+      <h2>10. Brand Voice & Guardrails</h2>
+      <span class="count">7 questions</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I make Desk sound like my brand?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Desk includes a <strong>Brand Persona</strong> system that lets you configure:</p>
+        <ul>
+          <li><strong>Tone:</strong> Friendly, professional, formal, casual, empathetic, etc.</li>
+          <li><strong>Vocabulary:</strong> Industry-specific terms, jargon, acronyms your team uses.</li>
+          <li><strong>Formality:</strong> How formal or casual the AI should be.</li>
+          <li><strong>Do's and don'ts:</strong> Specific phrases to use or avoid. (e.g., "Always say 'we' instead of 'I'", "Never use the word 'cheap' — say 'affordable' instead.")</li>
+          <li><strong>Few-shot examples:</strong> Provide example conversations that demonstrate your brand voice.</li>
+        </ul>
+        <p>The brand persona is injected into every AI response, so Desk consistently represents your brand — whether it's a restaurant taking bookings or a law firm providing legal information.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What are response policies (guardrails)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Response policies are <strong>rules that control what the AI can and cannot say</strong>. Examples:</p>
+        <ul>
+          <li><strong>Competitor mentions:</strong> If a customer asks about a competitor, the AI redirects: "I'm not the best person to compare us to [competitor], but I can tell you about our strengths..."</li>
+          <li><strong>Pricing questions:</strong> If a customer asks about pricing, the AI redirects to a human: "Pricing depends on your specific needs. Let me connect you with our sales team."</li>
+          <li><strong>Legal/medical disclaimers:</strong> If a customer asks for legal or medical advice, the AI adds a disclaimer: "I'm an AI assistant, not a lawyer/doctor. This information is for general guidance only. Please consult a professional for advice specific to your situation."</li>
+          <li><strong>Restricted topics:</strong> Certain topics are off-limits (e.g., politics, religion). If a customer brings up a restricted topic, the AI redirects or escalates.</li>
+        </ul>
+        <p>Policies are enforced by the <strong>Policy Engine</strong>, which runs before and after AI generation. Every policy decision is logged in the audit trail.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I test the brand persona before going live?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Desk includes a <strong>Persona Preview/Test Tool</strong> that lets you:</p>
+        <ul>
+          <li>Simulate customer conversations in a sandbox environment.</li>
+          <li>Test how the AI responds to specific questions.</li>
+          <li>Preview the AI's tone and brand voice.</li>
+          <li>Verify that response policies are working correctly.</li>
+        </ul>
+        <p>You can iterate on the brand persona until it sounds right. Once you're satisfied, you can deploy it to production.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I use a fine-tuned AI model for my brand voice?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Yes, in v1.1 (paid tier).</strong> Desk supports loading <strong>LoRA/QLoRA adapters</strong> — fine-tuned model extensions that encode your brand voice at the model level (not just the prompt level).</p>
+        <p>How it works:</p>
+        <ol>
+          <li>You train a LoRA adapter externally (using your own conversation data, brand guidelines, etc.).</li>
+          <li>You upload the adapter to Desk.</li>
+          <li>Desk loads the adapter and uses it for inference.</li>
+        </ol>
+        <p>Fine-tuned models provide <strong>more consistent brand voice</strong> than prompt-based personas, especially for complex or nuanced brands.</p>
+        <div class="callout warning">
+          <strong>Limitation</strong>
+          Desk consumes (does not produce) fine-tuned artifacts. You're responsible for training the LoRA adapter externally. We provide documentation and support, but training is not included in the standard offering.
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What happens if the AI violates a response policy?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The <strong>Policy Engine</strong> runs two checks:</p>
+        <ol>
+          <li><strong>Pre-generation hook:</strong> Before the AI generates a response, the Policy Engine checks if the customer's message triggers any policies (e.g., competitor mention). If a hard rule matches, a template response is sent immediately — the AI is skipped.</li>
+          <li><strong>Post-generation hook:</strong> After the AI generates a response, the Policy Engine validates it against active policies. If it violates a rule (e.g., mentions a competitor), the response is:
+            <ul>
+              <li><strong>Rewritten:</strong> The AI is asked to regenerate the response without the violation.</li>
+              <li><strong>Blocked:</strong> A template response is sent instead.</li>
+              <li><strong>Escalated:</strong> The conversation is escalated to a human agent.</li>
+            </ul>
+          </li>
+        </ol>
+        <p>Every policy decision is logged in the audit trail, so you can review what happened and why.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I configure different brand personas for different channels?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Not in v1.0.</strong> In v1.0, you configure a single brand persona per Desk deployment. All channels (WhatsApp, web chat, email) use the same persona.</p>
+        <p>Multi-persona support (different personas for different channels or topics) is planned for v1.1 (paid tier). This will allow you to:</p>
+        <ul>
+          <li>Use a casual persona on WhatsApp and a formal persona on email.</li>
+          <li>Use a sales-focused persona for product inquiries and a support-focused persona for troubleshooting.</li>
+          <li>Use different personas for different regions or languages.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I version and rollback brand persona changes?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Yes, in v1.1.</strong> Brand persona versioning lets you:</p>
+        <ul>
+          <li>Save multiple versions of your brand persona.</li>
+          <li>Compare versions side-by-side.</li>
+          <li>Rollback to a previous version if a change doesn't work out.</li>
+        </ul>
+        <p>This is useful for:</p>
+        <ul>
+          <li>Testing new personas without risking your production setup.</li>
+          <li>Reverting to a previous persona if a change causes issues.</li>
+          <li>Auditing who changed what and when.</li>
+        </ul>
+        <p>In v1.0, you can manually export/import persona configurations, but there's no built-in versioning.</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 11: LIMITATIONS & ROADMAP ================= -->
+  <div class="section" id="s11">
+    <div class="section-header">
+      <span class="icon">🚧</span>
+      <h2>11. Limitations & Roadmap</h2>
+      <span class="count">8 questions</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What can't Desk do (yet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk is powerful, but it has limitations in v1.0:</p>
+        <ul>
+          <li><strong>No generative actions:</strong> Desk answers questions but doesn't execute transactions (create refunds, book appointments, modify orders). Planned for v1.2+.</li>
+          <li><strong>No visual flow builder:</strong> You can't drag-and-drop to design conversation flows. Desk is AI-first, not rules-first.</li>
+          <li><strong>Limited integrations:</strong> No pre-built CRM, helpdesk, or analytics integrations in v1.0. REST API is available for custom integrations.</li>
+          <li><strong>Single persona (free tier):</strong> Free tier supports one AI persona only. Multi-persona is in the paid tier.</li>
+          <li><strong>Limited channels:</strong> WhatsApp, web chat, and email only. Telegram, Discord, Slack, Signal, iMessage are planned for v1.1.</li>
+          <li><strong>No mobile admin app:</strong> Admin dashboard is web-only. No native mobile app.</li>
+          <li><strong>No multi-tenant SaaS:</strong> Desk is self-hosted only. We don't offer a managed cloud version (yet).</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">When will you add support for Telegram, Discord, Slack?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Telegram, Discord, Slack, Signal, and iMessage adapters are planned for <strong>v1.1 (Q4 2026)</strong>. They will be optional modules you can enable as needed.</p>
+        <p>The channel adapter plugin system is already in place — adding new channels is a matter of implementing the adapter interface, not architectural changes.</p>
+        <p>If you need a specific channel urgently, contact us. We may be able to prioritize it based on customer demand.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Will Desk ever support generative actions (e.g., creating refunds)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Planned for v1.2+.</strong> Generative actions (executing transactions like creating refunds, booking appointments, modifying orders) are a major feature, but they require significant safety and approval workflows.</p>
+        <p>When implemented, generative actions will:</p>
+        <ul>
+          <li>Require explicit configuration and approval workflows.</li>
+          <li>Log every action in the audit trail.</li>
+          <li>Support rollback (undo) for critical actions.</li>
+          <li>Be optional — you can disable generative actions entirely if you only want Q&A.</li>
+        </ul>
+        <p>No specific release date yet. We're prioritizing stability and security for v1.0/v1.1 first.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Will you offer a managed SaaS version (hosted by ODW.ai)?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>Not in v1.0 or v1.1.</strong> Desk is self-hosted only. We believe self-hosting is the right choice for our target market (regulated businesses, data-residency-sensitive contexts).</p>
+        <p>A managed SaaS offering is being considered for <strong>v2+</strong>, but it's not committed. If there's enough demand, we may offer a hybrid model: self-hosted for sensitive data, managed for non-sensitive workloads.</p>
+        <p>If you need a managed solution today, we can recommend partner hosting providers who can manage Desk for you.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Is there a risk of vendor lock-in?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p><strong>No.</strong> Desk is designed to avoid vendor lock-in:</p>
+        <ul>
+          <li><strong>Data portability:</strong> Export all data (conversations, knowledge base, configuration) in standard formats (JSON, CSV). No proprietary formats.</li>
+          <li><strong>Model flexibility:</strong> Switch AI models anytime (local ↔ frontier, OpenAI ↔ Anthropic ↔ local). No lock-in to any AI provider.</li>
+          <li><strong>Self-hosted:</strong> You own the deployment. If you stop paying for the license, your data is still there, exportable, yours.</li>
+          <li><strong>Open standards:</strong> Desk uses open standards where possible (PostgreSQL, Redis, Docker, Kubernetes). No proprietary infrastructure.</li>
+        </ul>
+        <p>You can leave Desk anytime. We'd rather earn your business than trap you.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Key milestones:</p>
+        <ul>
+          <li><strong>v1.0 (Q3 2026):</strong> MVP launch. WhatsApp-first, Vault integration, model-agnostic AI, brand persona, response policies.</li>
+          <li><strong>v1.1 (Q4 2026):</strong> Multi-channel expansion (Telegram, Discord, Slack, Signal, iMessage), multi-persona support, LoRA adapter support, persona versioning.</li>
+          <li><strong>v1.2 (Q1 2027):</strong> Generative actions (execute transactions), pre-built integrations (CRM, helpdesk), advanced analytics.</li>
+          <li><strong>v2.0 (Q2 2027):</strong> Managed SaaS offering (maybe), visual flow builder (maybe), mobile admin app (maybe).</li>
+        </ul>
+        <p>Roadmap is subject to change based on customer feedback and market demand. Contact us for the latest roadmap or to request features.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">When should I NOT use Desk?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Desk is not the right fit if:</p>
+        <ul>
+          <li><strong>You need 200+ integrations:</strong> Desk is focused on AI-first support with sovereignty, not a broad integration platform. If you need Salesforce, HubSpot, Zendesk, Slack, and 50 other tools connected out of the box, Desk is not for you (yet).</li>
+          <li><strong>You need a visual flow builder:</strong> Desk is AI-first, not rules-first. If you want to drag-and-drop to design conversation flows, use a tool like Landbot or Botpress.</li>
+          <li><strong>You need a general-purpose chatbot framework:</strong> Desk is for customer support, not marketing bots, lead-gen funnels, or internal tooling.</li>
+          <li><strong>You don't have technical staff:</strong> Desk requires DevOps-literate operators for deployment and maintenance. If you don't have technical staff, wait for a managed SaaS offering or use a partner hosting provider.</li>
+          <li><strong>You need SMS, Instagram, LINE, WeChat:</strong> These channels are out of scope for v1.0 and v1.1. They may be considered for v2 based on market demand.</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I get started?<span class="toggle">＋</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Three paths:</p>
+        <ol>
+          <li><strong>Self-service (free tier):</strong> Download Desk, deploy it on your server, and start using it. No credit card required. Full documentation is available at <code>docs.odw.ai/desk</code>.</li>
+          <li><strong>Guided setup (paid tier):</strong> Contact us for a 1-hour onboarding session. We'll walk you through deployment, configuration, and best practices.</li>
+          <li><strong>Managed hosting (partner):</strong> If you don't have technical staff, we can recommend partner hosting providers who can deploy and manage Desk for you.</li>
+        </ol>
+        <p>For all paths, we recommend starting with the <strong>WhatsApp Baileys Bridge</strong> (free, &lt;30 minutes setup) to test Desk before committing to the official Business API.</p>
+        <div class="callout tip">
+          <strong>Ready to start?</strong>
+          Visit <code>odw.ai/desk</code> to download Desk or contact us for a demo.
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Desk — FAQ for Business Users</strong></p>
+    <p>Version 2.0 · Draft for review</p>
+    <p>Based on: TBK v1.2, TSD v1.2, SAD v1.2, PRD v1.2 (2026-06-24)</p>
+    <p><a href="suite.html">← Back to Suite FAQ</a></p>
+  </div>
+
+</div>
+
+<script>
+  // Accordion toggle
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+
+  // Expand / collapse all
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.add('open'));
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  }
+
+  // Search
+  const searchInput = document.getElementById('searchInput');
+  const noResults = document.getElementById('noResults');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.section').forEach(section => {
+      let sectionHas = 0;
+      section.querySelectorAll('.faq-item').forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        const match = q === '' || txt.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) { sectionHas++; visibleCount++; if (q !== '') item.classList.add('open'); }
+        else { item.classList.remove('open'); }
+      });
+      section.style.display = sectionHas === 0 && q !== '' ? 'none' : '';
+    });
+    noResults.style.display = (visibleCount === 0 && q !== '') ? 'block' : 'none';
+  });
+
+  // Deep-link support
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

@@ -1,12 +1,38 @@
 # This repo is the GitHub Pages output for the ODW.ai org site.
 # Track only the final site files; ignore everything else by default.
+
+# Ignore everything by default
 *
+
+# Allow final site files
 !index.html
 !styles.css
 !app.js
 !.gitignore
 !.github/
+
+# Favicons
+!favicon.svg
+!favicon.png
+
+# Logo files
+!odwai-logo-*.png
+
+# FAQ directory
+!faq/
+!faq/index.html
+!faq/styles.css
+!faq/*.html
+
+# Localization directories
 !zh-cn/
 !zh-cn/index.html
 !zh-hk/
 !zh-hk/index.html
+
+# Explicitly exclude internal docs (even if in allowed directories)
+*.md
+*.txt
+*.log
+.DS_Store
+v2-wip/

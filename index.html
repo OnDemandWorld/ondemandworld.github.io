@@ -2,508 +2,661 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ODW.ai — Open-source operational AI for the world's SMEs</title>
-  <meta name="description" content="ODW.ai is an open-source suite of operational AI modules for small and medium businesses — customer service, knowledge, workflows, finance, sales and more. Free to self-host.">
-  <link rel="alternate" hreflang="en"    href="https://ondemandworld.github.io/">
-  <link rel="alternate" hreflang="zh-CN" href="https://ondemandworld.github.io/zh-cn/">
-  <link rel="alternate" hreflang="zh-HK" href="https://ondemandworld.github.io/zh-hk/">
-  <link rel="alternate" hreflang="x-default" href="https://ondemandworld.github.io/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#14110F" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F6F2EC" media="(prefers-color-scheme: light)">
+  <title>ODW.ai — Open-source operational AI for small and medium businesses</title>
+  <meta name="description" content="Ten focused, open-source AI modules — customer service, knowledge, workflows, meetings, marketing and more — that share one identity, one data boundary, and one audit trail. Free to self-host.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ODW.ai — Open-source operational AI for SMBs">
+  <meta property="og:description" content="Ten focused AI modules under one open codebase. Self-host free, or bring us in for setup and support. Sovereign by design.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://odw.ai/">
+  <meta property="og:image" content="https://odw.ai/odwai-logo-2048x651.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ODW.ai — Open-source operational AI for SMBs">
+  <meta name="twitter:description" content="Ten focused AI modules under one open codebase. Self-host free, or bring us in for setup and support. Sovereign by design.">
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
-<!-- ── Navigation ── -->
-<button class="nav-toggle" aria-label="Toggle navigation">
-  <span></span><span></span><span></span>
-</button>
+<!-- Skip link (a11y) -->
+<a href="#main" class="skip-link">Skip to content</a>
 
-<nav class="nav">
-  <div class="nav-brand">ODW<span class="dot">.</span>AI</div>
-  <ul class="nav-links">
-    <li><a href="#cover">Home</a></li>
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- NAVIGATION -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<!-- Mobile / tablet: fixed top bar -->
+<header class="topbar" role="banner">
+  <a href="#cover" class="topbar-logo" aria-label="ODW.AI home">
+    <img src="./odwai-logo-600x191.png" alt="ODW.AI" width="99" height="32">
+  </a>
+  <div class="topbar-actions">
+    <a href="https://github.com/OnDemandWorld" class="gh-pill" target="_blank" rel="noopener noreferrer" aria-label="Star on GitHub">
+      <span class="star" aria-hidden="true">★</span>
+      <span>Star</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile nav sheet -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Primary">
+  <ul>
     <li><a href="#why-now">Why ODW</a></li>
     <li><a href="#platform">Platform</a></li>
     <li><a href="#modules">Modules</a></li>
+    <li><a href="./faq/index.html">FAQ</a></li>
     <li><a href="#open-source">Open Source</a></li>
     <li><a href="#sovereign">Sovereign</a></li>
     <li><a href="#solutions">Solutions</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <div class="nav-lang">
-    <div class="nav-lang-label">Language</div>
-    <a href="/" data-lang="en">English</a>
-    <a href="/zh-cn/" data-lang="zh-CN">简体中文</a>
-    <a href="/zh-hk/" data-lang="zh-HK">繁體中文</a>
+  <div class="mobile-nav-lang">
+    <div class="mobile-nav-lang-label">Language</div>
+    <a href="./index.html" data-lang="en">English</a>
+    <a href="./zh-cn/index.html" data-lang="zh-CN">简体中文</a>
+    <a href="./zh-hk/index.html" data-lang="zh-HK">繁體中文</a>
+  </div>
+  <div class="mobile-nav-cta">
+    <a href="https://github.com/OnDemandWorld" class="btn btn-primary btn-full" target="_blank" rel="noopener noreferrer">★ Star on GitHub</a>
+    <a href="mailto:hello@odw.ai" class="btn btn-ghost btn-full">Talk to us</a>
   </div>
 </nav>
+<div class="nav-backdrop" aria-hidden="true"></div>
 
-<!-- Backdrop for mobile nav -->
-<div class="nav-backdrop"></div>
-
-<!-- ── Main Content ── -->
-<main class="main">
-
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 01 · COVER / HERO -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="cover">
-  <div class="slide-container">
-    <!-- Eyebrow -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">Open-source operational AI · For small and medium businesses</div>
-    <!-- Main headline -->
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:240px; width:1700px; font-size:128px; line-height:0.96; letter-spacing:-0.025em; color:var(--ink); z-index:10;">
-      The <span style="color:var(--accent); font-style:italic;">operational AI</span><br>
-      layer for the world's<br>
-      small businesses.
-    </div>
-    <!-- Subhead -->
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:720px; width:1100px; font-size:28px; line-height:1.4; color:var(--ink-2); font-weight:400;">
-      Ten focused AI modules — customer service, knowledge, workflows, finance,<br>
-      sales and more — under one identity, one bill, one privacy posture.<br>
-      Free to self-host. Built in the open.
-    </div>
-    <!-- Right column stats -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1380px; top:720px; width:444px; height:260px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1412px; top:748px; width:380px; font-size:12px; color:var(--accent); letter-spacing:0.18em; z-index:10;">AT A GLANCE</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1412px; top:784px; width:380px; font-size:20px; color:var(--paper); line-height:1.6; z-index:10;">
-      <strong style="color:var(--accent);">10</strong> Modules<br>
-      <strong style="color:var(--accent);">4</strong> Live &amp; open source<br>
-      <strong style="color:var(--accent);">100%</strong> Self-hostable<br>
-      <strong style="color:var(--accent);">∞</strong> No per-seat lock-in
-    </div>
-    <!-- Decorative coral accent block -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
+<!-- Desktop sidebar (≥1200px) -->
+<aside class="sidebar" aria-label="Section navigation">
+  <div class="sidebar-brand">
+    <a href="#cover" aria-label="ODW.AI home">
+      <img src="./odwai-logo-dark-600x191.png" alt="ODW.AI">
+    </a>
   </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 02 · WHY NOW -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="why-now">
-  <div class="slide-container">
-    <!-- Eyebrow + title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">The SME wallet is open</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:64px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      Small businesses have stopped experimenting.<br>
-      They're <em style="color:var(--accent);">buying</em> — and looking for one<br>
-      trusted layer to bring it all together.
-    </div>
-    <!-- Three pillars -->
-    <!-- Pillar 1 -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:460px; width:552px; height:500px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:492px; width:200px; font-size:13px; color:var(--accent); letter-spacing:0.18em;">01 · ADOPTION</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:128px; top:532px; width:488px; font-size:128px; color:var(--ink); z-index:10;">+132%</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:128px; top:692px; width:488px; font-size:22px; line-height:1.4; color:var(--ink-2); font-weight:500; z-index:10;">
-      OECD firm AI adoption rose from 8.7% to 20.2% in two years.
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:128px; top:792px; width:488px; font-size:18px; line-height:1.5; color:var(--ink-3); z-index:10;">
-      The typical small business now runs a <strong style="color:var(--ink);">median of 5 AI tools</strong> — and 62% plan to spend more.
-    </div>
-    <div data-object="true" data-object-type="textbox" class="source" style="position:absolute; left:128px; top:912px; width:488px; z-index:10;">Source: OECD · US Chamber · SBE Council</div>
-    <!-- Pillar 2 -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:684px; top:460px; width:552px; height:500px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:716px; top:492px; width:200px; font-size:13px; color:var(--accent); letter-spacing:0.18em;">02 · ARCHITECTURE</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:716px; top:532px; width:488px; font-size:96px; color:var(--ink); z-index:10;">Agentic</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:716px; top:692px; width:488px; font-size:22px; line-height:1.4; color:var(--ink-2); font-weight:500; z-index:10;">
-      The shape has settled: agents that act across tools, not just chat.
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:716px; top:792px; width:488px; font-size:18px; line-height:1.5; color:var(--ink-3); z-index:10;">
-      The opportunity is no longer the model — it's <strong style="color:var(--ink);">orchestration, data, and trust</strong>.
-    </div>
-    <div data-object="true" data-object-type="textbox" class="source" style="position:absolute; left:716px; top:912px; width:488px; z-index:10;">Source: CB Insights · Y Combinator</div>
-    <!-- Pillar 3 (dark) -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1272px; top:460px; width:552px; height:500px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1304px; top:492px; width:200px; font-size:13px; color:var(--accent-2); letter-spacing:0.18em; z-index:10;">03 · TRUST</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:1304px; top:532px; width:488px; font-size:128px; color:var(--paper); z-index:10;">Open</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1304px; top:692px; width:488px; font-size:22px; line-height:1.4; color:var(--paper); font-weight:500; z-index:10;">
-      SMEs are wary of the cloud, the "AI tax," and vendor lock-in.
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1304px; top:792px; width:488px; font-size:18px; line-height:1.5; color:var(--accent-2); z-index:10;">
-      Our answer: <strong style="color:var(--paper);">give the code away</strong>. Run it yourself, inspect every line, own it.
-    </div>
-    <div data-object="true" data-object-type="textbox" class="source" style="position:absolute; left:1304px; top:912px; width:488px; color:var(--ink-4); z-index:10;">Open-core · self-host first</div>
+  <ul class="sidebar-nav">
+    <li><a href="#cover">Home</a></li>
+    <li><a href="#why-now">Why ODW</a></li>
+    <li><a href="#platform">Platform</a></li>
+    <li><a href="#modules">Modules</a></li>
+    <li><a href="./faq/index.html">FAQ</a></li>
+    <li><a href="#open-source">Open Source</a></li>
+    <li><a href="#sovereign">Sovereign</a></li>
+    <li><a href="#solutions">Solutions</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="sidebar-footer">
+    <div class="sidebar-footer-label">Language</div>
+    <a href="./index.html" data-lang="en">English</a>
+    <a href="./zh-cn/index.html" data-lang="zh-CN">简体中文</a>
+    <a href="./zh-hk/index.html" data-lang="zh-HK">繁體中文</a>
   </div>
-</section>
+</aside>
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 03 · PLATFORM / STACK -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="platform">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">One platform</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:64px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      One engine. <em style="color:var(--accent);">Ten modules.</em> One identity.
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:320px; width:1200px; font-size:22px; line-height:1.5; color:var(--ink-2);">
-      Every module shares the same authentication, billing, privacy posture, and orchestration layer —<br>
-      so they compose into multi-step agents instead of becoming yet another disconnected tool.
-    </div>
-    <!-- Stack layers -->
-    <!-- Layer 1: Surface -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:440px; width:1728px; height:88px; background:var(--accent-soft); border:1px solid var(--accent-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:464px; width:200px; font-size:12px; color:var(--accent-ink); letter-spacing:0.16em; z-index:10;">SURFACE</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:456px; width:400px; font-size:36px; color:var(--ink); z-index:10;">Your business</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:464px; width:1032px; font-size:16px; color:var(--ink-2); line-height:1.4; z-index:10;">WhatsApp, web, voice, email, social — the channels your customers actually use.</div>
-    <!-- Layer 2: Modules -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:540px; width:1728px; height:88px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:564px; width:200px; font-size:12px; color:var(--ink-3); letter-spacing:0.16em; z-index:10;">MODULES</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:556px; width:400px; font-size:36px; color:var(--ink); z-index:10;">The ten</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:564px; width:1032px; font-size:16px; color:var(--ink-2); line-height:1.4; z-index:10;">Desk, Voice, Vault, Loop, Pulse, Recap, Hunt, Books, People, Shield — each a focused agent.</div>
-    <!-- Layer 3: Orchestration -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:640px; width:1728px; height:88px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:664px; width:200px; font-size:12px; color:var(--ink-3); letter-spacing:0.16em; z-index:10;">ORCHESTRATION</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:656px; width:400px; font-size:36px; color:var(--ink); z-index:10;">Loop engine</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:664px; width:1032px; font-size:16px; color:var(--ink-2); line-height:1.4; z-index:10;">Modules compose into multi-step workflows that reason, not just trigger.</div>
-    <!-- Layer 4: Knowledge -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:740px; width:1728px; height:88px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:764px; width:200px; font-size:12px; color:var(--ink-3); letter-spacing:0.16em; z-index:10;">KNOWLEDGE</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:756px; width:400px; font-size:36px; color:var(--ink); z-index:10;">Vault (RAG)</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:764px; width:1032px; font-size:16px; color:var(--ink-2); line-height:1.4; z-index:10;">Your data, your boundary. Retrieval grounded in your own documents and systems.</div>
-    <!-- Layer 5: Models -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:840px; width:1728px; height:88px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:864px; width:200px; font-size:12px; color:var(--ink-3); letter-spacing:0.16em; z-index:10;">MODELS</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:856px; width:400px; font-size:36px; color:var(--ink); z-index:10;">Bring your own</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:864px; width:1032px; font-size:16px; color:var(--ink-2); line-height:1.4; z-index:10;">Open models (Llama, Mistral, Qwen) self-hosted, or cloud models when you choose.</div>
-    <!-- Layer 6: Foundation -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:940px; width:1728px; height:88px; background:var(--accent); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:964px; width:200px; font-size:12px; color:var(--ink); letter-spacing:0.16em; font-weight:600; z-index:10;">FOUNDATION</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:956px; width:400px; font-size:36px; color:var(--ink); z-index:10;">Open source</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:964px; width:1032px; font-size:16px; color:var(--ink); line-height:1.4; font-weight:500; z-index:10;">Run it on your infrastructure. Inspect it. Extend it. Own it.</div>
-  </div>
-</section>
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- MAIN -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 04 · MODULES - CORE SUITE -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="modules">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">The portfolio</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:56px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      Ten modules across <em style="color:var(--accent);">three layers</em>.
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:310px; width:1200px; font-size:20px; line-height:1.5; color:var(--ink-2);">
-      Four are live and open source today; the rest land at launch.
-    </div>
-    <!-- Tier label -->
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:380px; width:600px; font-size:13px; color:var(--ink-3); letter-spacing:0.18em;">CORE SUITE · the operational foundation</div>
-    <!-- Card: Desk -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:420px; width:412px; height:280px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:124px; top:444px; width:240px; font-size:10px; color:var(--good); letter-spacing:0.14em; font-weight:600; z-index:10;">● LIVE · OPEN SOURCE</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:124px; top:466px; width:360px; font-size:40px; line-height:1; color:var(--ink); z-index:10;">ODW <span style="color:var(--accent);">Desk</span></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:124px; top:518px; width:360px; font-size:15px; color:var(--ink); font-weight:500; line-height:1.4; z-index:10;">Omnichannel front-desk agent</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:124px; top:546px; width:360px; font-size:13px; color:var(--ink-3); line-height:1.5; z-index:10;">WhatsApp, web, email, social, LINE, Telegram, SMS — multilingual out of the box.</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:124px; top:640px; width:360px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:124px; top:652px; width:60px; font-size:10px; color:var(--accent); letter-spacing:0.14em; z-index:10;">WHY ODW</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:124px; top:670px; width:360px; font-size:12px; color:var(--ink-2); line-height:1.4; z-index:10;">WhatsApp-first · resolves, doesn't just reply</div>
-    <!-- Card: Vault -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:528px; top:420px; width:412px; height:280px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:556px; top:444px; width:240px; font-size:10px; color:var(--good); letter-spacing:0.14em; font-weight:600; z-index:10;">● LIVE · OPEN SOURCE</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:556px; top:466px; width:360px; font-size:40px; line-height:1; color:var(--ink); z-index:10;">ODW <span style="color:var(--accent);">Vault</span></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:556px; top:518px; width:360px; font-size:15px; color:var(--ink); font-weight:500; line-height:1.4; z-index:10;">Sovereign knowledge copilot</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:556px; top:546px; width:360px; font-size:13px; color:var(--ink-3); line-height:1.5; z-index:10;">RAG answers grounded in your documents — with open models that run on your infrastructure.</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:556px; top:640px; width:360px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:556px; top:652px; width:60px; font-size:10px; color:var(--accent); letter-spacing:0.14em; z-index:10;">WHY ODW</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:556px; top:670px; width:360px; font-size:12px; color:var(--ink-2); line-height:1.4; z-index:10;">Your data never has to leave the building</div>
-    <!-- Card: Loop -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:960px; top:420px; width:412px; height:280px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:988px; top:444px; width:240px; font-size:10px; color:var(--good); letter-spacing:0.14em; font-weight:600; z-index:10;">● LIVE · OPEN SOURCE</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:988px; top:466px; width:360px; font-size:40px; line-height:1; color:var(--ink); z-index:10;">ODW <span style="color:var(--accent);">Loop</span></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:988px; top:518px; width:360px; font-size:15px; color:var(--ink); font-weight:500; line-height:1.4; z-index:10;">Agentic workflow orchestration</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:988px; top:546px; width:360px; font-size:13px; color:var(--ink-3); line-height:1.5; z-index:10;">Visual builder where modules compose into multi-step agents that reason.</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:988px; top:640px; width:360px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:988px; top:652px; width:60px; font-size:10px; color:var(--accent); letter-spacing:0.14em; z-index:10;">WHY ODW</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:988px; top:670px; width:360px; font-size:12px; color:var(--ink-2); line-height:1.4; z-index:10;">Open alternative to closed automation platforms</div>
-    <!-- Card: Recap -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1392px; top:420px; width:432px; height:280px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1420px; top:444px; width:240px; font-size:10px; color:var(--good); letter-spacing:0.14em; font-weight:600; z-index:10;">● LIVE · OPEN SOURCE</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1420px; top:466px; width:380px; font-size:40px; line-height:1; color:var(--ink); z-index:10;">ODW <span style="color:var(--accent);">Recap</span></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1420px; top:518px; width:380px; font-size:15px; color:var(--ink); font-weight:500; line-height:1.4; z-index:10;">Meetings &amp; tasks intelligence</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1420px; top:546px; width:380px; font-size:13px; color:var(--ink-3); line-height:1.5; z-index:10;">Transcribes meetings → tracked tasks with write-back to CRM, PM, Books.</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1420px; top:640px; width:380px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1420px; top:652px; width:60px; font-size:10px; color:var(--accent); letter-spacing:0.14em; z-index:10;">WHY ODW</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1420px; top:670px; width:380px; font-size:12px; color:var(--ink-2); line-height:1.4; z-index:10;">Output moves your systems, not just a doc</div>
-    <!-- Coming soon modules -->
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:720px; width:600px; font-size:13px; color:var(--ink-3); letter-spacing:0.18em;">COMING AT LAUNCH</div>
-    <!-- Voice -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:760px; width:280px; height:220px; background:var(--paper-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:116px; top:784px; width:240px; font-size:32px; color:var(--ink); z-index:10;">Voice</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:116px; top:824px; width:240px; font-size:13px; color:var(--ink-3); line-height:1.4; z-index:10;">AI receptionist · never miss a call</div>
-    <!-- Pulse -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:396px; top:760px; width:280px; height:220px; background:var(--paper-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:416px; top:784px; width:240px; font-size:32px; color:var(--ink); z-index:10;">Pulse</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:416px; top:824px; width:240px; font-size:13px; color:var(--ink-3); line-height:1.4; z-index:10;">Localised marketing · WeChat, LINE native</div>
-    <!-- Hunt -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:696px; top:760px; width:280px; height:220px; background:var(--paper-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:716px; top:784px; width:240px; font-size:32px; color:var(--ink); z-index:10;">Hunt</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:716px; top:824px; width:240px; font-size:13px; color:var(--ink-3); line-height:1.4; z-index:10;">AI SDR · human-in-the-loop</div>
-    <!-- Books -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:996px; top:760px; width:280px; height:220px; background:var(--paper-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1016px; top:784px; width:240px; font-size:32px; color:var(--ink); z-index:10;">Books</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1016px; top:824px; width:240px; font-size:13px; color:var(--ink-3); line-height:1.4; z-index:10;">AI bookkeeping · global GAAP</div>
-    <!-- People -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1296px; top:760px; width:260px; height:220px; background:var(--paper-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1316px; top:784px; width:220px; font-size:32px; color:var(--ink); z-index:10;">People</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1316px; top:824px; width:220px; font-size:13px; color:var(--ink-3); line-height:1.4; z-index:10;">AI hiring · compliance-first</div>
-    <!-- Shield -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1576px; top:760px; width:248px; height:220px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1596px; top:784px; width:208px; font-size:32px; color:var(--paper); z-index:10;">Shield</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1596px; top:824px; width:208px; font-size:13px; color:var(--accent-2); line-height:1.4; z-index:10;">SMB cybersecurity</div>
-  </div>
-</section>
+<main class="main" id="main">
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 05 · OPEN SOURCE -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="open-source">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">Open by default</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:72px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      We give the code away. <em style="color:var(--accent);">On purpose.</em>
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:340px; width:1400px; font-size:24px; line-height:1.5; color:var(--ink-2);">
-      ODW.ai is open source. Self-host the entire stack for free, forever — no seat limits, no usage meters, no lock-in.<br>
-      We earn our keep when you want help, not by holding your data hostage.
-    </div>
-    <!-- Three principles -->
-    <!-- 01 -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:480px; width:552px; height:440px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:128px; top:512px; width:120px; font-size:96px; color:var(--accent); z-index:10;">01</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:128px; top:620px; width:488px; font-size:40px; color:var(--ink); line-height:1.1; z-index:10;">Free to self-host</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:128px; top:690px; width:488px; font-size:18px; color:var(--ink-2); line-height:1.5; z-index:10;">
-      Clone it, run it on your own servers, and keep every byte of your data inside your boundary. No license fee, no per-seat tax.
-    </div>
-    <!-- 02 -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:684px; top:480px; width:552px; height:440px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:716px; top:512px; width:120px; font-size:96px; color:var(--accent); z-index:10;">02</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:716px; top:620px; width:488px; font-size:40px; color:var(--ink); line-height:1.1; z-index:10;">Inspect every line</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:716px; top:690px; width:488px; font-size:18px; color:var(--ink-2); line-height:1.5; z-index:10;">
-      No black boxes. Audit how your AI handles customer data, see exactly what models run, and extend anything you need.
-    </div>
-    <!-- 03 (highlighted) -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1272px; top:480px; width:552px; height:440px; background:var(--accent-soft); border:1px solid var(--accent-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:1304px; top:512px; width:120px; font-size:96px; color:var(--accent); z-index:10;">03</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1304px; top:620px; width:488px; font-size:36px; color:var(--ink); line-height:1.1; z-index:10;">We make money on services</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1304px; top:690px; width:488px; font-size:18px; color:var(--ink-2); line-height:1.5; z-index:10;">
-      Consulting, customization, deployment and ongoing support. You get the code for free — we get paid to make it work brilliantly for you.
-    </div>
-    <!-- CTA -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:960px; width:400px; height:64px; background:var(--ink); z-index:5;"></div>
-    <a href="https://github.com/OnDemandWorld" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:978px; width:400px; font-size:16px; color:var(--paper); text-align:center; font-weight:600; z-index:10; text-decoration:none; cursor:pointer;" target="_blank" rel="noopener noreferrer">BROWSE THE CODE ↗</a>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:520px; top:960px; width:300px; height:64px; background:#FFFFFF; border:1px solid var(--rule); z-index:5;"></div>
-    <a href="mailto:hello@odw.ai" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:520px; top:978px; width:300px; font-size:16px; color:var(--ink); text-align:center; font-weight:500; z-index:10; text-decoration:none; cursor:pointer;">GET EXPERT HELP</a>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 06 · SOVEREIGN -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="sovereign">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">Sovereign by design</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:64px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      Your data stays <em style="color:var(--accent);">yours</em>.
-    </div>
-    <!-- Left: Features -->
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:360px; width:800px; font-size:20px; color:var(--ink); line-height:1.6;">
-      <div style="margin-bottom:32px;">
-        <strong style="color:var(--accent);">→</strong>&nbsp;&nbsp;<strong>Run it where you want</strong><br>
-        <span style="color:var(--ink-3); font-size:17px; margin-left:28px;">On your own servers, your private cloud, or air-gapped. Nothing has to leave your premises.</span>
-      </div>
-      <div style="margin-bottom:32px;">
-        <strong style="color:var(--accent);">→</strong>&nbsp;&nbsp;<strong>Open models included</strong><br>
-        <span style="color:var(--ink-3); font-size:17px; margin-left:28px;">Llama, Mistral and Qwen run locally — with optional cloud burst when you decide it's appropriate.</span>
-      </div>
-      <div style="margin-bottom:32px;">
-        <strong style="color:var(--accent);">→</strong>&nbsp;&nbsp;<strong>Compliance built in</strong><br>
-        <span style="color:var(--ink-3); font-size:17px; margin-left:28px;">GDPR, PDPO, PDPA and the EU AI Act addressed as defaults, designed for regulated SMBs from day one.</span>
-      </div>
-      <div>
-        <strong style="color:var(--accent);">→</strong>&nbsp;&nbsp;<strong>One privacy posture</strong><br>
-        <span style="color:var(--ink-3); font-size:17px; margin-left:28px;">Every module shares the same data boundary and audit trail — not ten different policies to reconcile.</span>
+<!-- ─── 01 · HERO ─── -->
+<section class="hero" id="cover" aria-labelledby="hero-h1">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="eyebrow">Open-source operational AI · Built for SMBs</span>
+      <h1 class="hero-headline" id="hero-h1">
+        The <em>operational AI</em> layer for the world's small businesses.
+      </h1>
+      <p class="hero-sub">
+        Ten focused AI modules — customer service, knowledge, workflows, meetings, marketing and more — under one identity, one data boundary, one audit trail. Free to self-host. Built in the open.
+      </p>
+      <div class="cta-row">
+        <a href="https://github.com/OnDemandWorld" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">★</span> Star on GitHub
+        </a>
+        <a href="#modules" class="btn btn-ghost btn-lg">See the modules</a>
       </div>
     </div>
-    <!-- Right: Panel -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1000px; top:360px; width:824px; height:620px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1040px; top:400px; width:744px; font-size:13px; color:var(--accent); letter-spacing:0.18em; z-index:10;">THE PRINCIPLE</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1040px; top:450px; width:744px; font-size:48px; line-height:1.1; color:var(--paper); z-index:10;">
-      The moat isn't the model.<br>
-      It's <em style="color:var(--accent);">where the data lives</em><br>
-      — and who controls it.
+
+    <aside class="hero-side" aria-label="Project stats">
+      <div class="hero-stats">
+        <div class="hero-stats-label">At a glance</div>
+        <dl class="hero-stats-list">
+          <dt class="num">10</dt><dd>Modules across the stack</dd>
+          <dt class="num">5</dt><dd>Live &amp; open source today</dd>
+          <dt class="num">100%</dt><dd>Self-hostable</dd>
+          <dt class="num">∞</dt><dd>No seats, no meters, no lock-in</dd>
+        </dl>
+      </div>
+    </aside>
+
+    <!-- TODO: Quickstart terminal temporarily disabled — reinstate after bug fixes
+    <figure class="terminal" aria-label="Install command">
+      <figcaption class="terminal-head">
+        <span class="terminal-head-label">Quickstart</span>
+        <button class="copy-btn" data-copy="git clone https://github.com/OnDemandWorld/odw-loop && cd odw-loop && docker compose up" aria-label="Copy install command">
+          <span class="copy-icon" aria-hidden="true">⧉</span>
+          <span class="copy-label">Copy</span>
+        </button>
+      </figcaption>
+      <pre><code><span class="prompt">$</span> git clone https://github.com/OnDemandWorld/odw-loop
+<span class="prompt">$</span> cd odw-loop && docker compose up
+<span class="comment"># open http://localhost:3000 — build your first workflow</span></code></pre>
+    </figure>
+    -->
+  </div>
+</section>
+
+<!-- ─── 02 · WHY NOW ─── -->
+<section class="section" id="why-now" aria-labelledby="why-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">The SME wallet is open</span>
+      <h2 id="why-h2">
+        Small businesses have stopped experimenting. They're <em class="accent italic">buying</em> — and looking for one trusted layer to bring it all together.
+      </h2>
     </div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1040px; top:660px; width:744px; height:1px; background:var(--ink-3); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1040px; top:690px; width:744px; font-size:18px; line-height:1.5; color:var(--accent-2); z-index:10;">
-      Most AI vendors send your business data to a cloud you can't see. ODW.ai is designed for the opposite: full transparency, full ownership, full control.
+
+    <div class="grid grid-3">
+      <article class="pillar">
+        <div class="pillar-label">01 · Adoption</div>
+        <div class="big-num">+132%</div>
+        <p class="pillar-body">OECD firm-level AI adoption more than doubled in two years — from 8.7% to 20.2%.</p>
+        <p class="pillar-detail">The typical small business now runs a <strong>median of 5 AI tools</strong> — and 62% plan to spend more next year.</p>
+        <p class="source pillar-source">Source: OECD · US Chamber of Commerce · SBE Council</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-label">02 · Architecture</div>
+        <div class="big-num" style="font-size:clamp(2.5rem,4vw+1rem,5rem);">Agentic</div>
+        <p class="pillar-body">The shape has settled: agents that act across tools, not chatbots that only reply.</p>
+        <p class="pillar-detail">The moat is no longer the model — it's <strong>orchestration, data, and trust</strong>. That's the layer we build.</p>
+        <p class="source pillar-source">Source: CB Insights · Y Combinator W25 cohort</p>
+      </article>
+
+      <article class="pillar dark">
+        <div class="pillar-label">03 · Trust</div>
+        <div class="big-num">Open</div>
+        <p class="pillar-body">SMEs are wary of the cloud, the "AI tax," and vendor lock-in.</p>
+        <p class="pillar-detail">Our answer: <strong>give the code away</strong>. Run it yourself, inspect every line, own every byte.</p>
+        <p class="source pillar-source">Open-core · self-host first · no per-seat tax</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 07 · SOLUTIONS / VERTICAL PACKS -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="solutions">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">Vertical solutions</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:60px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      Ready-made bundles for <em style="color:var(--accent);">your industry</em>.
+<!-- ─── 03 · PLATFORM ─── -->
+<section class="section" id="platform" aria-labelledby="platform-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">One platform</span>
+      <h2 id="platform-h2">
+        One engine. <em class="accent italic">Ten modules.</em> One boundary.
+      </h2>
+      <p class="lead">
+        Every module shares the same authentication, orchestration, privacy posture, and audit trail — so they compose into multi-step agents that actually reason across your business, instead of piling up as ten disconnected SaaS logins.
+      </p>
     </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:320px; width:1400px; font-size:22px; line-height:1.5; color:var(--ink-2);">
-      The same modules, pre-configured and compliance-tuned for the way your industry actually works — so you deploy in days, not months.
-    </div>
-    <!-- Clinics -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:420px; width:560px; height:520px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:420px; width:560px; height:6px; background:var(--accent); z-index:6;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:452px; width:240px; font-size:12px; color:var(--accent); letter-spacing:0.2em; font-weight:600; z-index:10;">FOR CLINICS</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:128px; top:480px; width:496px; font-size:42px; line-height:1.05; color:var(--paper); z-index:10;">ODW.ai for Clinics</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:128px; top:580px; width:496px; font-size:17px; color:var(--accent-2); line-height:1.5; z-index:10;">Booking, reminders, intake summarisation and claims pre-fill — HIPAA / PDPO-configured out of the box for healthcare practices.</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:128px; top:700px; width:496px; height:1px; background:var(--ink-3); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:720px; width:240px; font-size:11px; color:var(--accent); letter-spacing:0.16em; z-index:10;">MODULES IN BUNDLE</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:128px; top:750px; width:496px; font-size:28px; color:var(--paper); z-index:10;">Desk · Voice · Recap · People</div>
-    <!-- Pro Services -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:680px; top:420px; width:560px; height:520px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:680px; top:420px; width:560px; height:6px; background:var(--accent); z-index:6;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:712px; top:452px; width:300px; font-size:12px; color:var(--accent); letter-spacing:0.2em; font-weight:600; z-index:10;">FOR PROFESSIONAL SERVICES</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:712px; top:480px; width:496px; font-size:42px; line-height:1.05; color:var(--ink); z-index:10;">ODW.ai for Pro Services</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:712px; top:580px; width:496px; font-size:17px; color:var(--ink-3); line-height:1.5; z-index:10;">Accountants, consultants and boutiques. Automate knowledge work, outreach and the books — high value, high willingness to pay.</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:712px; top:700px; width:496px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:712px; top:720px; width:240px; font-size:11px; color:var(--accent); letter-spacing:0.16em; z-index:10;">MODULES IN BUNDLE</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:712px; top:750px; width:496px; font-size:28px; color:var(--ink); z-index:10;">Vault · Hunt · Books · Recap</div>
-    <!-- Retail & F&B -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1264px; top:420px; width:560px; height:520px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1264px; top:420px; width:560px; height:6px; background:var(--accent); z-index:6;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1296px; top:452px; width:300px; font-size:12px; color:var(--accent); letter-spacing:0.2em; font-weight:600; z-index:10;">FOR RETAIL &amp; F&amp;B</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1296px; top:480px; width:496px; font-size:42px; line-height:1.05; color:var(--ink); z-index:10;">ODW.ai for Retail &amp; F&amp;B</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1296px; top:580px; width:496px; font-size:17px; color:var(--ink-3); line-height:1.5; z-index:10;">Restaurants, cafés and small chains. WhatsApp- and Instagram-first customer engagement, voice ordering and localised marketing.</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1296px; top:700px; width:496px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1296px; top:720px; width:240px; font-size:11px; color:var(--accent); letter-spacing:0.16em; z-index:10;">MODULES IN BUNDLE</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1296px; top:750px; width:496px; font-size:28px; color:var(--ink); z-index:10;">Desk · Voice · Pulse · Books</div>
-    <!-- Footer note -->
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:970px; width:1500px; font-size:15px; color:var(--ink-3); font-style:italic;">
-      More on the way: Real Estate · Home Services · Education · Legal. Need a vertical that isn't here yet? Let's build it together.
+
+    <div class="stack">
+      <div class="stack-layer surface">
+        <div class="stack-label">SURFACE</div>
+        <div class="stack-title">Your business</div>
+        <div class="stack-desc">WhatsApp, web, voice, email, social — the channels your customers already use.</div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-label">MODULES</div>
+        <div class="stack-title">The Ten</div>
+        <div class="stack-desc">Desk · Voice · Vault · Loop · Pulse · Recap · Hunt · Books · People · Shield — each a focused, self-contained agent.</div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-label">ORCHESTRATION</div>
+        <div class="stack-title">Loop engine</div>
+        <div class="stack-desc">Modules compose into multi-step workflows that reason across tools — not just fire-and-forget triggers.</div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-label">KNOWLEDGE</div>
+        <div class="stack-title">Vault (RAG)</div>
+        <div class="stack-desc">Retrieval grounded in your own documents and systems. Your data never has to leave your infrastructure.</div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-label">MODELS</div>
+        <div class="stack-title">Bring your own</div>
+        <div class="stack-desc">Open models (Llama, Mistral, Qwen) run locally by default. Optional cloud burst when you decide it's appropriate.</div>
+      </div>
+      <div class="stack-layer foundation">
+        <div class="stack-label">FOUNDATION</div>
+        <div class="stack-title">Open source</div>
+        <div class="stack-desc">Run it on your infrastructure. Inspect it. Extend it. Own it. Apache 2.0 and MIT throughout.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 08 · SERVICES / PRICING -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="services">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">How we work with you</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:56px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      The software is free. The <em style="color:var(--accent);">expertise</em><br>
-      is where we add value.
+<!-- ─── 04 · MODULES ─── -->
+<section class="section" id="modules" aria-labelledby="modules-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">The portfolio</span>
+      <h2 id="modules-h2">
+        Ten modules across <em class="accent italic">three layers</em>.
+      </h2>
+      <p class="lead">
+        Five are live and open source today. The rest arrive as we build them in the open — no vaporware, no waitlist gates. Watch the repos.
+      </p>
     </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:330px; width:1400px; font-size:22px; line-height:1.5; color:var(--ink-2);">
-      Self-host everything at no cost, or let our team get you live, customise modules to your workflow, and keep things running.
+
+    <div class="tier-label">Core suite · live and open source</div>
+
+    <div class="module-track live">
+      <!-- Desk -->
+      <article class="module-card">
+        <div class="module-status live"><span class="dot" aria-hidden="true"></span> LIVE · OPEN SOURCE · PYTHON</div>
+        <h3 class="module-name">ODW <span class="brand">Desk</span></h3>
+        <p class="module-tagline">Omnichannel front-desk agent</p>
+        <p class="module-desc">WhatsApp, web, email, LINE, Telegram, SMS. PII redaction, RAG-grounded answers, clean human handoff.</p>
+        <div class="module-why">
+          <div class="module-why-label">Why ODW</div>
+          <div class="module-why-text">WhatsApp-first · resolves, doesn't just reply</div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <a class="module-link" href="https://github.com/OnDemandWorld/odw-desk" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB ↗</a>
+            <a class="module-link" href="./faq/desk.html">FAQ →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Vault -->
+      <article class="module-card">
+        <div class="module-status live"><span class="dot" aria-hidden="true"></span> LIVE · OPEN SOURCE · PYTHON</div>
+        <h3 class="module-name">ODW <span class="brand">Vault</span></h3>
+        <p class="module-tagline">Sovereign knowledge copilot</p>
+        <p class="module-desc">Pre-flight RAG pipeline with hybrid retrieval, offline capability, open-model support. Indexed inside your boundary.</p>
+        <div class="module-why">
+          <div class="module-why-label">Why ODW</div>
+          <div class="module-why-text">Your data never has to leave the building</div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <a class="module-link" href="https://github.com/OnDemandWorld/odw-vault" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB ↗</a>
+            <a class="module-link" href="./faq/vault.html">FAQ →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Loop -->
+      <article class="module-card">
+        <div class="module-status live"><span class="dot" aria-hidden="true"></span> LIVE · OPEN SOURCE · TYPESCRIPT</div>
+        <h3 class="module-name">ODW <span class="brand">Loop</span></h3>
+        <p class="module-tagline">Agentic workflow orchestration</p>
+        <p class="module-desc">React Flow canvas, Fastify backend, DAG execution engine. Modules plug in as nodes; workflows compose into multi-step reasoning.</p>
+        <div class="module-why">
+          <div class="module-why-label">Why ODW</div>
+          <div class="module-why-text">Open alternative to closed automation platforms</div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <a class="module-link" href="https://github.com/OnDemandWorld/odw-loop" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB ↗</a>
+            <a class="module-link" href="./faq/loop.html">FAQ →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Recap -->
+      <article class="module-card">
+        <div class="module-status live"><span class="dot" aria-hidden="true"></span> LIVE · OPEN SOURCE · RUST</div>
+        <h3 class="module-name">ODW <span class="brand">Recap</span></h3>
+        <p class="module-tagline">On-device meeting intelligence</p>
+        <p class="module-desc">Local transcription, AI summarisation, structured tasks that write back to your CRM, PM tool, and books. Fast on the laptop you already own.</p>
+        <div class="module-why">
+          <div class="module-why-label">Why ODW</div>
+          <div class="module-why-text">Nothing leaves the device · no cloud dependency</div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <a class="module-link" href="https://github.com/OnDemandWorld/odw-recap" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB ↗</a>
+            <a class="module-link" href="./faq/recap.html">FAQ →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Pulse -->
+      <article class="module-card">
+        <div class="module-status live"><span class="dot" aria-hidden="true"></span> LIVE · OPEN SOURCE · PYTHON</div>
+        <h3 class="module-name">ODW <span class="brand">Pulse</span></h3>
+        <p class="module-tagline">Multilingual marketing generation</p>
+        <p class="module-desc">Content and campaigns with real cultural adaptation, built-in A/B experimentation, and infra sovereignty. One brief, many locales.</p>
+        <div class="module-why">
+          <div class="module-why-label">Why ODW</div>
+          <div class="module-why-text">Made for teams across markets, not just languages</div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <a class="module-link" href="https://github.com/OnDemandWorld/odw-pulse" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB ↗</a>
+            <a class="module-link" href="./faq/pulse.html">FAQ →</a>
+          </div>
+        </div>
+      </article>
     </div>
-    <!-- Pricing cards -->
-    <!-- Self-Host -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:440px; width:400px; height:540px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:124px; top:468px; width:344px; font-size:12px; color:var(--ink-3); letter-spacing:0.18em; z-index:10;">SELF-HOST</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:124px; top:500px; width:344px; font-size:64px; color:var(--ink); z-index:10;">Free</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:124px; top:580px; width:344px; font-size:16px; color:var(--ink-2); line-height:1.5; z-index:10;">For teams who want to run it all themselves.</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:124px; top:650px; width:344px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:124px; top:680px; width:344px; font-size:15px; color:var(--ink-3); line-height:1.8; z-index:10;">
-      ✓ All open-source modules<br>
-      ✓ Full source code &amp; docs<br>
-      ✓ Community support<br>
-      ✓ No seat or usage limits
+
+    <p class="scroll-hint"><span aria-hidden="true">←</span> Swipe for more modules <span aria-hidden="true">→</span></p>
+
+    <div class="tier-label">Roadmap · shipping in the open</div>
+
+    <div class="module-track roadmap">
+      <article class="module-card roadmap-tile">
+        <div class="module-status roadmap"><span class="dot" aria-hidden="true"></span> ROADMAP</div>
+        <h3 class="module-name">Voice</h3>
+        <p class="module-tagline">AI receptionist</p>
+        <p class="module-desc">Inbound calls, appointment booking, structured handoff. Your voice, your script, your data.</p>
+        <div class="module-why">
+          <a class="module-link" href="./faq/voice.html">READ THE DESIGN DRAFT →</a>
+        </div>
+      </article>
+      <article class="module-card roadmap-tile">
+        <div class="module-status roadmap"><span class="dot" aria-hidden="true"></span> ROADMAP</div>
+        <h3 class="module-name">Hunt</h3>
+        <p class="module-tagline">AI SDR, human-in-the-loop</p>
+        <p class="module-desc">Research and sequencing that requires a human approval before anything sends. No spray, no spam.</p>
+        <div class="module-why">
+          <a class="module-link" href="./faq/hunt.html">READ THE DESIGN DRAFT →</a>
+        </div>
+      </article>
+      <article class="module-card roadmap-tile">
+        <div class="module-status roadmap"><span class="dot" aria-hidden="true"></span> ROADMAP</div>
+        <h3 class="module-name">Books</h3>
+        <p class="module-tagline">AI bookkeeping</p>
+        <p class="module-desc">Receipt capture, categorisation, reconciliation, monthly close. Plugs into your existing accounting stack.</p>
+        <div class="module-why">
+          <a class="module-link" href="./faq/books.html">READ THE DESIGN DRAFT →</a>
+        </div>
+      </article>
+      <article class="module-card roadmap-tile">
+        <div class="module-status roadmap"><span class="dot" aria-hidden="true"></span> ROADMAP</div>
+        <h3 class="module-name">People</h3>
+        <p class="module-tagline">AI hiring</p>
+        <p class="module-desc">CV screening, structured interviews, scheduling. Bias auditing built in — EU AI Act aware by design.</p>
+        <div class="module-why">
+          <a class="module-link" href="./faq/people.html">READ THE DESIGN DRAFT →</a>
+        </div>
+      </article>
+      <article class="module-card roadmap-tile dark">
+        <div class="module-status roadmap"><span class="dot" aria-hidden="true"></span> ROADMAP</div>
+        <h3 class="module-name">Shield</h3>
+        <p class="module-tagline">SMB cybersecurity</p>
+        <p class="module-desc">Phishing detection, credential hygiene, threat monitoring — sized for teams without a security engineer.</p>
+        <div class="module-why">
+          <a class="module-link" href="./faq/shield.html">READ THE DESIGN DRAFT →</a>
+        </div>
+      </article>
     </div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:124px; top:900px; width:344px; height:48px; background:var(--paper-2); z-index:5;"></div>
-    <a href="https://github.com/OnDemandWorld" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:124px; top:914px; width:344px; font-size:14px; color:var(--ink); text-align:center; z-index:10; text-decoration:none; cursor:pointer;" target="_blank" rel="noopener noreferrer">GET THE CODE ↗</a>
-    <!-- Deploy -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:520px; top:440px; width:400px; height:540px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:548px; top:468px; width:344px; font-size:12px; color:var(--ink-3); letter-spacing:0.18em; z-index:10;">DEPLOY</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:548px; top:500px; width:344px; font-size:48px; color:var(--ink); z-index:10;">Managed setup</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:548px; top:580px; width:344px; font-size:16px; color:var(--ink-2); line-height:1.5; z-index:10;">We get you live on your infrastructure, fast.</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:548px; top:650px; width:344px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:548px; top:680px; width:344px; font-size:15px; color:var(--ink-3); line-height:1.8; z-index:10;">
-      ✓ Guided installation<br>
-      ✓ Data &amp; channel integration<br>
-      ✓ Model configuration<br>
-      ✓ Team onboarding
-    </div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:548px; top:900px; width:344px; height:48px; background:var(--paper-2); z-index:5;"></div>
-    <a href="mailto:hello@odw.ai" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:548px; top:914px; width:344px; font-size:14px; color:var(--ink); text-align:center; z-index:10; text-decoration:none; cursor:pointer;">TALK TO US</a>
-    <!-- Customise (featured) -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:944px; top:440px; width:400px; height:540px; background:var(--accent-soft); border:2px solid var(--accent); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:972px; top:468px; width:344px; font-size:12px; color:var(--accent-ink); letter-spacing:0.18em; font-weight:600; z-index:10;">CUSTOMISE</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:972px; top:500px; width:344px; font-size:48px; color:var(--ink); z-index:10;">Consulting</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:972px; top:580px; width:344px; font-size:16px; color:var(--ink-2); line-height:1.5; z-index:10;">Modules tailored to how your business actually runs.</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:972px; top:650px; width:344px; height:1px; background:var(--accent-2); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:972px; top:680px; width:344px; font-size:15px; color:var(--ink-2); line-height:1.8; z-index:10;">
-      ✓ Custom modules &amp; workflows<br>
-      ✓ Vertical configuration<br>
-      ✓ Compliance hardening<br>
-      ✓ Priority support
-    </div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:972px; top:900px; width:344px; height:48px; background:var(--accent); z-index:5;"></div>
-    <a href="mailto:hello@odw.ai" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:972px; top:914px; width:344px; font-size:14px; color:var(--ink); text-align:center; font-weight:600; z-index:10; text-decoration:none; cursor:pointer;">BOOK A CONSULTATION</a>
-    <!-- Scale -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1368px; top:440px; width:456px; height:540px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1396px; top:468px; width:400px; font-size:12px; color:var(--accent-2); letter-spacing:0.18em; z-index:10;">SCALE</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:1396px; top:500px; width:400px; font-size:48px; color:var(--paper); z-index:10;">Enterprise</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1396px; top:580px; width:400px; font-size:16px; color:var(--accent-2); line-height:1.5; z-index:10;">Sovereign deployments with SLAs and ongoing partnership.</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1396px; top:650px; width:400px; height:1px; background:var(--ink-3); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1396px; top:680px; width:400px; font-size:15px; color:var(--paper); line-height:1.8; z-index:10;">
-      ✓ Air-gapped / private cloud<br>
-      ✓ Dedicated support &amp; SLAs<br>
-      ✓ Roadmap collaboration<br>
-      ✓ White-label options
-    </div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1396px; top:900px; width:400px; height:48px; background:var(--paper); z-index:5;"></div>
-    <a href="mailto:hello@odw.ai" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1396px; top:914px; width:400px; font-size:14px; color:var(--ink); text-align:center; z-index:10; text-decoration:none; cursor:pointer;">CONTACT SALES</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 09 · CONTACT / CTA -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section slide-dark" id="contact">
-  <div class="slide-container" style="background:var(--ink);">
-    <!-- Full-bleed dark bg -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--ink); z-index:1;"></div>
-    <!-- Eyebrow -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:200px; width:1200px; color:var(--accent);">Get started</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:200px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <!-- Big hero text -->
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:260px; width:1700px; font-size:108px; line-height:1.0; letter-spacing:-0.025em; color:var(--paper); z-index:10;">
-      Own your AI.<br>
-      <em style="color:var(--accent);">Start in the open.</em>
+<!-- ─── 05 · OPEN SOURCE ─── -->
+<section class="section" id="open-source" aria-labelledby="os-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">Why we give the code away</span>
+      <h2 id="os-h2">
+        The moat isn't the model. It's <em class="accent italic">where the data lives</em> — and who controls it.
+      </h2>
+      <p class="lead">
+        Self-host the entire stack for free, forever — no seat limits, no usage meters, no lock-in. We earn our keep when you want help, not by holding your data hostage.
+      </p>
     </div>
-    <!-- Subtext -->
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:580px; width:1200px; font-size:28px; line-height:1.5; color:var(--accent-2); z-index:10;">
-      Browse the code today, or talk to the team about getting<br>
-      ODW.ai running for your business.
+
+    <div class="grid grid-3">
+      <article class="principle">
+        <div class="principle-num">01</div>
+        <h3 class="principle-title">Free to self-host, forever</h3>
+        <p class="principle-body">Clone it. Run it on your servers. Keep every byte inside your boundary. No license fee, no per-seat tax, no usage meters.</p>
+      </article>
+      <article class="principle">
+        <div class="principle-num">02</div>
+        <h3 class="principle-title">Inspect every line</h3>
+        <p class="principle-body">No black boxes. Audit exactly how your AI handles customer data, see which models run where, and extend anything you need.</p>
+      </article>
+      <article class="principle featured">
+        <div class="principle-num">03</div>
+        <h3 class="principle-title">We earn our keep on services</h3>
+        <p class="principle-body">Deployment, customisation, vertical configuration, ongoing support. You get the code for free — we get paid to make it work brilliantly for you.</p>
+      </article>
     </div>
-    <!-- CTA buttons -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:720px; width:400px; height:80px; background:var(--accent); z-index:5;"></div>
-    <a href="https://github.com/OnDemandWorld" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:746px; width:400px; font-size:18px; color:var(--ink); text-align:center; font-weight:700; z-index:10; text-decoration:none; cursor:pointer;" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB ↗</a>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:520px; top:720px; width:400px; height:80px; background:var(--paper); z-index:5;"></div>
-    <a href="mailto:hello@odw.ai" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:520px; top:746px; width:400px; font-size:18px; color:var(--ink); text-align:center; font-weight:600; z-index:10; text-decoration:none; cursor:pointer;">EMAIL HELLO@ODW.AI</a>
-    <!-- Footer info -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:0; top:920px; width:1920px; height:160px; background:rgba(255,255,255,0.03); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:960px; width:600px; font-size:14px; color:var(--ink-4); letter-spacing:0.04em; z-index:10;">© 2026 ODW.AI · ONDEMANDWORLD</div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:990px; width:600px; font-size:14px; color:var(--ink-4); letter-spacing:0.04em; z-index:10;">OPEN SOURCE · SELF-HOSTABLE · BUILT FOR THE WORLD</div>
+
+    <div class="cta-row">
+      <a href="https://github.com/OnDemandWorld" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">★ Star on GitHub ↗</a>
+      <a href="mailto:hello@odw.ai" class="btn btn-ghost">Get expert help</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 06 · SOVEREIGN ─── -->
+<section class="section" id="sovereign" aria-labelledby="sov-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">Sovereign by design</span>
+      <h2 id="sov-h2">
+        Your data stays <em class="accent italic">yours</em>.
+      </h2>
+    </div>
+
+    <div class="sovereign-grid">
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="arrow" aria-hidden="true">→</span>
+          <div>
+            <div class="feature-title">Run it where you want</div>
+            <p class="feature-desc">On your own servers, your private cloud, or fully air-gapped. Nothing has to leave your premises unless you send it there.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="arrow" aria-hidden="true">→</span>
+          <div>
+            <div class="feature-title">Open models included</div>
+            <p class="feature-desc">Llama, Mistral, and Qwen ship configured and ready to run locally. Cloud models remain an option — never a requirement.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="arrow" aria-hidden="true">→</span>
+          <div>
+            <div class="feature-title">Compliance built in</div>
+            <p class="feature-desc">GDPR, PDPO, PDPA, and the EU AI Act addressed as defaults — not compliance-washed afterthoughts. Designed for regulated SMBs from day one.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="arrow" aria-hidden="true">→</span>
+          <div>
+            <div class="feature-title">One boundary, one audit trail</div>
+            <p class="feature-desc">Every module shares the same data boundary, authentication, and audit log — not ten different policies to reconcile at your next audit.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="quote-panel">
+        <div class="quote-panel-label">The principle</div>
+        <blockquote class="quote-panel-text">
+          The moat isn't the model. It's <em>where the data lives</em> — and who controls it.
+        </blockquote>
+        <p class="quote-panel-detail">
+          Most AI vendors quietly send your business data to a cloud you can't see, indexed by systems you can't audit, on models you don't own. ODW.ai is designed for the opposite: full transparency, full ownership, full control.
+        </p>
+      </aside>
+    </div>
+
+    <p style="margin-top:var(--sp-6); font-size:0.9375rem; color:var(--ink-3); text-align:center;">
+      <em>Deeper questions on compliance?</em>
+      <a href="./faq/suite.html#sovereignty" style="color:var(--accent); font-weight:600; margin-left:4px;">See the Sovereignty FAQ →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ─── 07 · SOLUTIONS ─── -->
+<section class="section" id="solutions" aria-labelledby="sol-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">Vertical solutions</span>
+      <h2 id="sol-h2">
+        Ready-made bundles for <em class="accent italic">your industry</em>.
+      </h2>
+      <p class="lead">
+        The same open modules, pre-configured and compliance-tuned for how your industry actually works — so you deploy in days, not months. Every bundle is still self-hostable, still open source, still yours.
+      </p>
+    </div>
+
+    <div class="grid grid-3">
+      <article class="vertical-card dark">
+        <div class="vertical-label">For clinics</div>
+        <h3 class="vertical-title">ODW.ai for Clinics</h3>
+        <p class="vertical-desc">Booking, reminders, intake summarisation, and claims pre-fill — HIPAA and PDPO-configured out of the box for healthcare practices. Nothing patient-identifiable leaves your premises.</p>
+        <div class="vertical-bundle">
+          <div class="vertical-bundle-label">Modules in bundle</div>
+          <div class="vertical-bundle-list">Desk · Voice · Recap · People</div>
+        </div>
+      </article>
+
+      <article class="vertical-card">
+        <div class="vertical-label">For professional services</div>
+        <h3 class="vertical-title">ODW.ai for Pro Services</h3>
+        <p class="vertical-desc">Accountants, consultants, agencies, and boutique firms. Automate knowledge work, outbound research, and bookkeeping — the high-value, high-willingness-to-pay end of AI adoption.</p>
+        <div class="vertical-bundle">
+          <div class="vertical-bundle-label">Modules in bundle</div>
+          <div class="vertical-bundle-list">Vault · Hunt · Books · Recap</div>
+        </div>
+      </article>
+
+      <article class="vertical-card">
+        <div class="vertical-label">For retail &amp; F&amp;B</div>
+        <h3 class="vertical-title">ODW.ai for Retail &amp; F&amp;B</h3>
+        <p class="vertical-desc">Restaurants, cafés, and small chains. WhatsApp- and Instagram-first customer engagement, voice ordering, and locally-adapted marketing that respects each store's neighbourhood.</p>
+        <div class="vertical-bundle">
+          <div class="vertical-bundle-label">Modules in bundle</div>
+          <div class="vertical-bundle-list">Desk · Voice · Pulse · Books</div>
+        </div>
+      </article>
+    </div>
+
+    <p class="source" style="margin-top:var(--sp-6); font-style:italic; font-family:'Inter',sans-serif; font-size:0.9375rem; color:var(--ink-3);">
+      More on the way: Real Estate · Home Services · Education · Legal. We build verticals with design partners — talk to us if yours isn't here yet.
+    </p>
+  </div>
+</section>
+
+<!-- ─── 08 · SERVICES ─── -->
+<section class="section" id="services" aria-labelledby="svc-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">How we work with you</span>
+      <h2 id="svc-h2">
+        The software is free. The <em class="accent italic">expertise</em> is where we add value.
+      </h2>
+      <p class="lead">
+        Self-host the whole stack at no cost, forever. Or bring us in to get you live, tailor modules to how your business actually runs, and keep things humming. You choose which parts we're involved in — and you can walk away with the code any time.
+      </p>
+    </div>
+
+    <div class="grid grid-4">
+      <article class="service-card">
+        <div class="service-label">Self-host</div>
+        <div class="service-price">Free</div>
+        <p class="service-tag">For teams who want to run everything themselves.</p>
+        <ul class="service-features">
+          <li>Every open-source module</li>
+          <li>Full source code &amp; documentation</li>
+          <li>Community support (GitHub, Discord)</li>
+          <li>No seat limits, no usage caps</li>
+        </ul>
+        <a href="https://github.com/OnDemandWorld" class="btn btn-ghost btn-full" target="_blank" rel="noopener noreferrer">Get the code ↗</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-label">Deploy</div>
+        <div class="service-price">Managed setup</div>
+        <p class="service-tag">We get you live on your infrastructure, fast.</p>
+        <ul class="service-features">
+          <li>Guided installation on your infra</li>
+          <li>Data &amp; channel integration</li>
+          <li>Model selection &amp; configuration</li>
+          <li>Team onboarding &amp; handover</li>
+        </ul>
+        <a href="mailto:hello@odw.ai" class="btn btn-ghost btn-full">Talk to us</a>
+      </article>
+
+      <article class="service-card featured">
+        <div class="service-label">Customise</div>
+        <div class="service-price">Consulting</div>
+        <p class="service-tag">Modules tailored to how your business actually runs.</p>
+        <ul class="service-features">
+          <li>Custom modules &amp; workflow design</li>
+          <li>Vertical &amp; locale configuration</li>
+          <li>Compliance hardening for your regulator</li>
+          <li>Priority support with a named contact</li>
+        </ul>
+        <a href="mailto:hello@odw.ai" class="btn btn-primary btn-full">Book a consultation</a>
+      </article>
+
+      <article class="service-card dark">
+        <div class="service-label">Scale</div>
+        <div class="service-price">Enterprise</div>
+        <p class="service-tag">Sovereign deployments with SLAs and roadmap influence.</p>
+        <ul class="service-features">
+          <li>Air-gapped / private-cloud deployment</li>
+          <li>Dedicated support with contractual SLAs</li>
+          <li>Roadmap collaboration &amp; early access</li>
+          <li>White-label &amp; reseller options</li>
+        </ul>
+        <a href="mailto:hello@odw.ai" class="btn btn-primary btn-full">Contact sales</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 09 · CONTACT ─── -->
+<section class="section dark" id="contact" aria-labelledby="contact-h2">
+  <div class="section-inner">
+    <span class="eyebrow">Get started</span>
+    <h2 class="hero-headline" id="contact-h2" style="max-width:22ch; margin-top:var(--sp-4);">
+      Own your AI.<br><em>Start in the open.</em>
+    </h2>
+    <p class="hero-sub" style="color:var(--accent-2); max-width:56ch;">
+      Clone the code today, or talk to the team about getting ODW.ai running for your business. The path from "curious" to "in production" is shorter than you think.
+    </p>
+
+    <div class="cta-row">
+      <a href="https://github.com/OnDemandWorld" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">★ Star on GitHub ↗</a>
+      <a href="mailto:hello@odw.ai" class="btn btn-ghost btn-lg" style="color:var(--paper); border-color:var(--ink-3);">Email hello@odw.ai</a>
+    </div>
+
+    <div class="footer-links">
+      <a href="./faq/index.html">FAQ →</a>
+      <a href="https://github.com/OnDemandWorld" target="_blank" rel="noopener noreferrer">Community →</a>
+      <a href="https://github.com/OnDemandWorld" target="_blank" rel="noopener noreferrer">Roadmap →</a>
+      <a href="./faq/suite.html#sovereignty">Security &amp; compliance →</a>
+    </div>
+
+    <div class="footer-meta">
+      <div class="mono">© 2026 ODW.AI · ONDEMANDWORLD</div>
+      <div>Built in the open · Apache 2.0 and MIT · Made for the world's SMBs</div>
+      <div class="mono">Terms · Privacy · License summary · Responsible disclosure</div>
+    </div>
   </div>
 </section>
 
 </main>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- MOBILE STICKY CTA BAR -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<div class="sticky-cta" aria-label="Get started">
+  <div class="sticky-cta-msg">Own your AI.<br>Self-host free.</div>
+  <a href="https://github.com/OnDemandWorld" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Star on GitHub">
+    <span aria-hidden="true">★</span> Star
+  </a>
+  <a href="mailto:hello@odw.ai" class="btn btn-secondary">Talk</a>
+</div>
 
 <script src="./app.js"></script>
 </body>
