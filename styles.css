@@ -202,6 +202,7 @@ a { color: inherit; text-decoration: none; }
   height: 32px;
 }
 .topbar-logo img { height: 32px; width: auto; }
+.topbar-logo .logo-light { display: block; }
 .topbar-logo .logo-dark { display: none; }
 
 /* Show dark logo in dark mode for topbar (dark background) */
@@ -1253,6 +1254,7 @@ a { color: inherit; text-decoration: none; }
     margin-bottom: var(--sp-4);
   }
   .sidebar-brand img { height: 32px; width: auto; }
+  .sidebar-brand .logo-dark { display: block; }
   .sidebar-brand .logo-light { display: none; }
 
   /* Show light logo in dark mode for sidebar (light background) */
