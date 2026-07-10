@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hunt — FAQ for Business Users</title>
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
   <div class="subtitle">Hunt FAQ</div>
   <h1>Hunt FAQ</h1>
   <p>AI outbound sales co-pilot — prospect research, personalized outreach, follow-up cadences, human-in-the-loop. Answers for business leaders, no technical background required.</p>
@@ -28,7 +33,7 @@
     <span>Hunt</span>
   </div>
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search questions… (e.g. 'prospect', 'outreach', 'deliverability', 'compliance', 'sovereignty', 'cadence')">
+    <input type="text" id="searchInput" aria-label="Search questions" placeholder="Search questions… (e.g. 'prospect', 'outreach', 'deliverability', 'compliance', 'sovereignty', 'cadence')">
   </div>
   <div class="controls">
     <button onclick="expandAll()">＋ Expand all</button>
@@ -59,8 +64,8 @@
   <div class="section" id="s1">
     <div class="section-header"><span class="icon">01 · OVERVIEW</span><h2>The Basics — What Is Hunt?</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What is ODW.ai Hunt in plain English?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">What is ODW.ai Hunt in plain English?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
         <p>Hunt is an <strong>AI-powered outbound sales co-pilot</strong>. It helps small B2B sales teams run outbound at the volume and quality of a much larger team.</p>
         <p>Here's how it works:</p>
         <ol>
@@ -73,8 +78,8 @@
         <p>The key difference from other outbound tools: <strong>self-hosted, human-in-the-loop, suite-integrated</strong>. Your prospect data stays on your infrastructure, and no message goes out without human approval.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What problem does Hunt solve?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">What problem does Hunt solve?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
         <p>Small B2B sales teams face compounding challenges:</p>
         <ul>
           <li><strong>Volume vs. quality:</strong> Outbound at scale demands personalization, but personalization at scale without AI is impossible for small teams</li>
@@ -86,8 +91,8 @@
         <p>Hunt solves this by providing <strong>self-hosted, human-in-the-loop outbound automation</strong> with native pipeline integration.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Who is Hunt for?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">Who is Hunt for?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
         <p>Hunt is designed for <strong>small B2B sales teams (2-10 reps)</strong>, particularly in regulated industries:</p>
         <ul>
           <li><strong>SaaS companies:</strong> Selling to other businesses</li>
@@ -100,8 +105,8 @@
         <p>If you're a small sales team trying to punch above your weight, Hunt is for you.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How is Hunt different from Apollo or Clay?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">How is Hunt different from Apollo or Clay?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
         <p>Apollo and Clay are <strong>cloud-based outbound tools</strong>. Hunt is a <strong>self-hosted, human-in-the-loop outbound co-pilot</strong>.</p>
         <table>
           <thead><tr><th>Aspect</th><th>ODW.ai Hunt</th><th>Apollo / Clay</th></tr></thead>
@@ -117,8 +122,8 @@
         <p>If you need data sovereignty and human oversight, Hunt is the better choice.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does "human-in-the-loop" mean for Hunt?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">What does "human-in-the-loop" mean for Hunt?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
         <p>"Human-in-the-loop" means <strong>no outbound message is sent without human approval</strong>:</p>
         <ul>
           <li><strong>AI drafts:</strong> AI generates personalized emails, LinkedIn messages, call scripts</li>
@@ -135,8 +140,8 @@
         <div class="callout tip"><strong>Quality over volume</strong>Hunt optimizes for deliverability and reply rate, not volume. High volume without quality destroys sender reputation.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Hunt a standalone product or part of a suite?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">Is Hunt a standalone product or part of a suite?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
         <p>Hunt is <strong>both</strong>:</p>
         <ul>
           <li><strong>Standalone:</strong> You can use Hunt by itself for outbound sales</li>
@@ -151,8 +156,8 @@
         <p>The suite integration is what makes Hunt powerful — outreach is grounded in your actual knowledge base, and prospects flow seamlessly into your pipeline.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does "sovereign" mean in this context?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">What does "sovereign" mean in this context?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
         <p>"Sovereign" means <strong>full control over prospect and CRM data</strong>:</p>
         <ul>
           <li><strong>Data location:</strong> All prospect lists, CRM records, and outreach content stay on your infrastructure</li>
@@ -163,15 +168,15 @@
         <p>This is critical for regulated industries. You can't claim data sovereignty if your outbound tool is sending prospect PII to a cloud vendor.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical skills to use Hunt?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">Do I need technical skills to use Hunt?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
         <p><strong>For deployment:</strong> Yes. Hunt is self-hosted, so you need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure.</p>
         <p><strong>For day-to-day use:</strong> No. The web UI is designed for non-technical users (sales reps, sales managers). You can build prospect lists, generate outreach, manage cadences, and review messages without writing code.</p>
         <p><strong>For developers:</strong> Hunt provides a REST API and SDKs for custom integrations.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Hunt improve deliverability?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">How does Hunt improve deliverability?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
         <p>Hunt provides <strong>deliverability best practices</strong>:</p>
         <ul>
           <li><strong>Domain reputation monitoring:</strong> Track your domain's sender reputation</li>
@@ -189,8 +194,8 @@
   <div class="section" id="s2">
     <div class="section-header"><span class="icon">02 · SOVEREIGNTY</span><h2>Prospecting & Outreach</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How does Hunt identify prospects?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">How does Hunt identify prospects?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
         <p>Hunt provides <strong>AI-powered prospect identification</strong>:</p>
         <ul>
           <li><strong>ICP matching:</strong> Define your Ideal Customer Profile (industry, company size, role, etc.) — Hunt matches prospects</li>
@@ -201,8 +206,8 @@
         <p>Hunt doesn't provide prospect data itself — you bring your own data sources (or use integrations with data providers).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Hunt personalize outreach?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">How does Hunt personalize outreach?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
         <p>Hunt uses <strong>Vault-grounded personalization</strong>:</p>
         <ol>
           <li><strong>Prospect research:</strong> AI generates context-rich prospect profiles (company info, recent news, pain points)</li>
@@ -214,8 +219,8 @@
         <div class="callout tip"><strong>Grounding</strong>Hunt doesn't generate generic outreach — it's grounded in your actual knowledge base and the prospect's specific context.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Hunt generate multi-step cadences?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">Can Hunt generate multi-step cadences?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
         <p>Yes. Hunt provides <strong>multi-step, multi-channel cadences</strong>:</p>
         <ul>
           <li><strong>Email sequences:</strong> Cold email, warm follow-up, breakup email</li>
@@ -227,8 +232,8 @@
         <p>You can create templates for common cadences (e.g., "7-day cold outreach", "30-day nurture") or build custom cadences.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I A/B test different outreach messages?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">Can I A/B test different outreach messages?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>A/B testing</strong>:</p>
         <ul>
           <li><strong>Multi-variant generation:</strong> Generate multiple variants of the same message (different subject lines, different angles)</li>
@@ -239,8 +244,8 @@
         <p>This is useful for optimizing subject lines, messaging angles, and CTAs.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Hunt generate LinkedIn messages?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">Can Hunt generate LinkedIn messages?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
         <p>Yes, but with <strong>important limitations</strong>:</p>
         <ul>
           <li><strong>Drafts only:</strong> Hunt generates LinkedIn message drafts, but <strong>you must send them manually</strong></li>
@@ -251,8 +256,8 @@
         <div class="callout warning"><strong>LinkedIn ToS</strong>Never use tools that automatically send LinkedIn messages — you risk account termination.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Hunt generate call scripts?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">Can Hunt generate call scripts?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
         <p>Yes. Hunt provides <strong>call script generation</strong>:</p>
         <ul>
           <li><strong>Talk tracks:</strong> Opening, value proposition, qualifying questions, objection handlers, closing</li>
@@ -263,8 +268,8 @@
         <p>Call scripts are a guide, not a script to read verbatim. Use them to structure your conversation.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I review messages in batch?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">Can I review messages in batch?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
         <p>Yes. Hunt provides <strong>batch review</strong>:</p>
         <ul>
           <li><strong>Review queue:</strong> All AI-drafted messages go to a review queue</li>
@@ -275,8 +280,8 @@
         <p>Batch review saves time — you can review 50 messages in 10 minutes instead of reviewing each individually.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I set different approval levels for different messages?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">Can I set different approval levels for different messages?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
         <p>Yes. Hunt provides <strong>configurable trust levels</strong>:</p>
         <ul>
           <li><strong>Full review:</strong> Every message requires approval (default for new users)</li>
@@ -292,8 +297,8 @@
   <div class="section" id="s3">
     <div class="section-header"><span class="icon">03 · INTEGRATION</span><h2>Our Solution's Strengths & Design</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What are the top advantages of Hunt over other outbound tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">What are the top advantages of Hunt over other outbound tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
         <table>
           <thead><tr><th>Feature</th><th>ODW.ai Hunt</th><th>Typical Outbound Tools</th></tr></thead>
           <tbody>
@@ -309,8 +314,8 @@
         <p>Hunt competes on <strong>sovereignty + human oversight + pipeline integration</strong>. If you need data control and compliance, Hunt is the best option.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Hunt enable a 3-person team to perform like a 10-person team?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">How does Hunt enable a 3-person team to perform like a 10-person team?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
         <p>Hunt automates the <strong>administrative burden</strong> of outbound:</p>
         <ul>
           <li><strong>Prospect research:</strong> AI generates context-rich profiles in seconds (vs. 15-30 minutes of manual research per prospect)</li>
@@ -327,8 +332,8 @@
         <div class="callout tip"><strong>Focus on judgment</strong>Hunt frees your team to focus on human judgment (qualifying prospects, building relationships) instead of admin.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Hunt maintain message quality?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">How does Hunt maintain message quality?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
         <p>Hunt maintains quality through <strong>multiple mechanisms</strong>:</p>
         <ul>
           <li><strong>Vault grounding:</strong> All messages are grounded in your brand voice, product context, and case studies</li>
@@ -340,8 +345,8 @@
         <p>Target: <strong>&gt;5% positive reply rate for cold outreach, &gt;15% for warm outreach</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Hunt handle high-volume outbound?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">Can Hunt handle high-volume outbound?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
         <p>Yes, but with <strong>quality guardrails</strong>:</p>
         <ul>
           <li><strong>Sending limits:</strong> Configurable daily caps to protect sender reputation</li>
@@ -353,8 +358,8 @@
         <div class="callout warning"><strong>Anti-metric</strong>We do not optimize for "emails sent per day." Volume for volume's sake is counterproductive.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use Hunt for inbound lead follow-up?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">Can I use Hunt for inbound lead follow-up?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>inbound lead follow-up</strong>:</p>
         <ul>
           <li><strong>Lead import:</strong> Import inbound leads from your website, forms, events</li>
@@ -365,8 +370,8 @@
         <p>Hunt is primarily designed for outbound, but it works well for inbound follow-up too.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Hunt integrate with my CRM?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">Can Hunt integrate with my CRM?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>CRM integrations</strong>:</p>
         <ul>
           <li><strong>HubSpot:</strong> Bidirectional sync (prospects, activities, deals)</li>
@@ -376,15 +381,15 @@
         <p>CRM integration ensures your prospect data, activities, and deals are synchronized across systems.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Hunt handle multi-language outreach?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">Can Hunt handle multi-language outreach?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
         <p><strong>Not in v1.0.</strong> Multi-language outreach is planned for v1.1 (Q4 2026).</p>
         <p>In v1.0, Hunt focuses on <strong>English-only outreach</strong>.</p>
         <p>If you need multi-language outreach before v1.1, contact us — we may be able to provide early access or a workaround using Pulse (our multilingual content generation tool).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Hunt replace my SDR team?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">Can Hunt replace my SDR team?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
         <p><strong>No.</strong> Hunt is designed to <strong>augment</strong> your SDR team, not replace it.</p>
         <p>Hunt automates administrative tasks (research, personalization, cadence management), freeing your SDRs to focus on:</p>
         <ul>
@@ -400,8 +405,8 @@
   <div class="section" id="s4">
     <div class="section-header"><span class="icon">04 · SECURITY</span><h2>Deliverability & Compliance</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Does Hunt comply with CAN-SPAM?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">Does Hunt comply with CAN-SPAM?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
         <p>Yes. Hunt enforces <strong>CAN-SPAM compliance</strong>:</p>
         <ul>
           <li><strong>Physical address:</strong> All emails include your physical mailing address (required by CAN-SPAM)</li>
@@ -412,8 +417,8 @@
         <p>Hunt makes it easy to comply with CAN-SPAM — the requirements are built into the system.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Hunt comply with GDPR?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">Does Hunt comply with GDPR?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
         <p>Yes. Hunt is <strong>GDPR-compatible</strong>:</p>
         <ul>
           <li><strong>Consent tracking:</strong> Track prospect consent for outreach</li>
@@ -425,8 +430,8 @@
         <p>Hunt helps you meet the <strong>technical and organizational measures</strong> required by GDPR. You still need to address legal and procedural requirements separately.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Hunt comply with LinkedIn Terms of Service?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">Does Hunt comply with LinkedIn Terms of Service?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
         <p>Yes. Hunt is designed for <strong>LinkedIn ToS compliance</strong>:</p>
         <ul>
           <li><strong>Drafts only:</strong> Hunt generates LinkedIn message drafts, but <strong>you must send them manually</strong></li>
@@ -437,8 +442,8 @@
         <div class="callout warning"><strong>LinkedIn ToS</strong>Never use tools that automatically send LinkedIn messages — you risk account termination.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Hunt protect my domain reputation?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">How does Hunt protect my domain reputation?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
         <p>Hunt provides <strong>domain reputation protection</strong>:</p>
         <ul>
           <li><strong>Warm-up guidance:</strong> Gradually increase sending volume to build reputation</li>
@@ -450,8 +455,8 @@
         <p>Target: <strong>&gt;98% deliverability rate, &lt;2% bounce rate, &lt;0.1% spam complaint rate</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use multiple sending domains?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">Can I use multiple sending domains?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>multiple sending domains</strong>:</p>
         <ul>
           <li><strong>Domain rotation:</strong> Rotate across multiple domains to distribute load</li>
@@ -461,8 +466,8 @@
         <p>Using multiple domains reduces the risk of any single domain being blacklisted.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I track email opens and clicks?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">Can I track email opens and clicks?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
         <p>Yes. Hunt provides <strong>email tracking</strong>:</p>
         <ul>
           <li><strong>Open tracking:</strong> Track when prospects open your emails</li>
@@ -474,8 +479,8 @@
         <div class="callout info"><strong>Privacy note</strong>Some prospects block tracking pixels. Hunt handles this gracefully — tracking is best-effort, not guaranteed.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I suppress certain prospects from outreach?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">Can I suppress certain prospects from outreach?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
         <p>Yes. Hunt provides <strong>suppression lists</strong>:</p>
         <ul>
           <li><strong>Opt-out list:</strong> Prospects who've unsubscribed</li>
@@ -486,8 +491,8 @@
         <p>Suppression lists ensure you don't accidentally contact prospects you shouldn't.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I export compliance reports?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">Can I export compliance reports?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
         <p>Yes. Hunt provides <strong>compliance report exports</strong>:</p>
         <ul>
           <li><strong>Formats:</strong> PDF, JSON, CSV</li>
@@ -502,8 +507,8 @@
   <div class="section" id="s5">
     <div class="section-header"><span class="icon">05 · DEPLOYMENT</span><h2>Security & Privacy</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Is Hunt secure?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">Is Hunt secure?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
         <p>Yes. Hunt is built with <strong>security best practices</strong>:</p>
         <ul>
           <li><strong>Self-hosted:</strong> All prospect data stays on your infrastructure</li>
@@ -515,15 +520,15 @@
         <p>Hunt is designed for regulated industries. If you can use Hunt, you can pass a compliance audit.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does ODW.ai have access to my prospect data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">Does ODW.ai have access to my prospect data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
         <p><strong>No.</strong> Hunt is self-hosted on your infrastructure. ODW.ai has zero access to your prospect data.</p>
         <p>Unlike cloud-based outbound tools (Apollo, Clay), Hunt doesn't send prospect PII to a third party. Everything stays on your servers.</p>
         <p>This is critical for regulated industries. You can't claim data sovereignty if your outbound tool is sending prospect PII to a cloud vendor.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I deploy Hunt in an air-gapped environment?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">Can I deploy Hunt in an air-gapped environment?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>air-gapped deployment</strong> (no internet access):</p>
         <ul>
           <li><strong>Offline installation:</strong> Install Hunt without internet access</li>
@@ -533,8 +538,8 @@
         <p>Air-gapped deployment is common for government contractors, military, and high-security environments.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I control who can access prospect data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">Can I control who can access prospect data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
         <p>Yes. Hunt provides <strong>role-based access control</strong> (via Shield integration):</p>
         <ul>
           <li><strong>Admin:</strong> Full access — configure settings, manage users, view all data</li>
@@ -545,8 +550,8 @@
         <p>You can also set per-campaign permissions (e.g., only the assigned rep can see prospects for a specific campaign).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I track who accessed prospect data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">Can I track who accessed prospect data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
         <p>Yes. Hunt provides <strong>audit logging</strong> (via Shield integration):</p>
         <ul>
           <li><strong>Who:</strong> Which user accessed the data</li>
@@ -557,8 +562,8 @@
         <p>All audit logs are tamper-evident and can be exported for compliance purposes.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if someone accesses prospect data without permission?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">What happens if someone accesses prospect data without permission?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
         <p>Hunt provides <strong>access control and alerting</strong>:</p>
         <ul>
           <li><strong>Access control:</strong> Role-based access prevents unauthorized access</li>
@@ -569,8 +574,8 @@
         <p>For critical incidents, you can generate a full audit report for regulators or legal counsel.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Hunt's code auditable?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">Is Hunt's code auditable?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
         <p>Yes. Hunt's core is <strong>open source</strong>:</p>
         <ul>
           <li><strong>Transparent:</strong> All code is publicly available on GitHub</li>
@@ -580,8 +585,8 @@
         <p>This is critical for sovereignty-focused organizations. You should be able to verify what your outbound tools are doing.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Hunt comply with HIPAA?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">Does Hunt comply with HIPAA?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
         <p>Hunt is <strong>HIPAA-compatible</strong> for healthcare sales:</p>
         <ul>
           <li><strong>On-premise processing:</strong> Prospect data stays on your infrastructure</li>
@@ -597,8 +602,8 @@
   <div class="section" id="s6">
     <div class="section-header"><span class="icon">06 · COMPLIANCE</span><h2>Models & AI</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Which AI models does Hunt use?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">Which AI models does Hunt use?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
         <p>Hunt is <strong>model-agnostic</strong> — it supports a wide range of models:</p>
         <ul>
           <li><strong>Local models:</strong> Llama 3, Mistral, Gemma, Qwen (via Ollama, vLLM, llama.cpp)</li>
@@ -608,8 +613,8 @@
         <p>You can switch models at any time — no code changes required.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use local models (fully offline)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">Can I use local models (fully offline)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>local models</strong> via:</p>
         <ul>
           <li><strong>Ollama:</strong> Easiest way to run local models. Supports Llama 3, Mistral, Gemma, etc.</li>
@@ -620,8 +625,8 @@
         <div class="callout warning"><strong>Hardware requirements</strong>Local models require GPU hardware (NVIDIA GPUs recommended). CPU-only inference is possible but slow for large models.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use API-based models (OpenAI, Anthropic)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">Can I use API-based models (OpenAI, Anthropic)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>API-based models</strong>:</p>
         <ul>
           <li><strong>OpenAI:</strong> GPT-4o, GPT-4o-mini</li>
@@ -634,8 +639,8 @@
         <div class="callout warning"><strong>Data sovereignty</strong>If you use API-based models, prospect data is sent to the API provider. This may violate sovereignty requirements. Use local models for maximum sovereignty.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I choose the right model?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">How do I choose the right model?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
         <p>Choosing a model depends on your priorities:</p>
         <table>
           <thead><tr><th>Model</th><th>Speed</th><th>Quality</th><th>Cost</th><th>Sovereignty</th></tr></thead>
@@ -655,8 +660,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What if a new, better model is released? Can I switch?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">What if a new, better model is released? Can I switch?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
         <p>Yes. Hunt is <strong>model-agnostic</strong> — you can switch models at any time:</p>
         <ul>
           <li><strong>No code changes:</strong> Just update the model configuration in the admin console</li>
@@ -665,8 +670,8 @@
         <p>This future-proofs your investment — when better models are released, you can adopt them immediately without re-architecting your system.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I fine-tune models for my sales process?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">Can I fine-tune models for my sales process?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
         <p><strong>Not in Hunt v1.0.</strong> Hunt uses existing models — it doesn't support fine-tuning.</p>
         <p>However, you can:</p>
         <ul>
@@ -677,8 +682,8 @@
         <p>Fine-tuning support is planned for v2.0 (Q2 2027).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Hunt send autonomous outreach?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">Does Hunt send autonomous outreach?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
         <p><strong>No.</strong> Hunt is designed so that <strong>no outreach is sent without human approval</strong> (by default).</p>
         <p>This is a <strong>quality-first design</strong>. Hunt literally cannot:</p>
         <ul>
@@ -694,8 +699,8 @@
   <div class="section" id="s7">
     <div class="section-header"><span class="icon">07 · MODELS</span><h2>Deployment & Setup</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How do I deploy Hunt?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">How do I deploy Hunt?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
         <p>Hunt offers three deployment options:</p>
         <ol>
           <li><strong>Docker Compose:</strong> Easiest. One command (<code>docker-compose up</code>) and you're running. Best for development and small deployments.</li>
@@ -705,8 +710,8 @@
         <p>For most customers, <strong>Docker Compose is the fastest path</strong>. For production, we recommend Kubernetes.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How long does setup take?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">How long does setup take?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
         <p>Setup time depends on your deployment:</p>
         <ul>
           <li><strong>Docker Compose:</strong> 30 minutes. Pull images, configure environment variables, run <code>docker-compose up</code>.</li>
@@ -722,15 +727,15 @@
         <p>Target: <strong>&lt;2 hours from signup to first campaign launched</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical staff to run Hunt?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">Do I need technical staff to run Hunt?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
         <p><strong>For deployment:</strong> Yes. Hunt is self-hosted, so you need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure.</p>
         <p><strong>For day-to-day use:</strong> No. The web UI is designed for non-technical users (sales reps, sales managers). You can build prospect lists, generate outreach, manage cadences, and review messages without writing code.</p>
         <p><strong>For developers:</strong> Hunt provides a REST API and SDKs for custom integrations.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What are the system requirements for Hunt?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">What are the system requirements for Hunt?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
         <p>Hunt's requirements depend on your deployment:</p>
         <table>
           <thead><tr><th>Component</th><th>Minimum</th><th>Recommended</th></tr></thead>
@@ -745,8 +750,8 @@
         <p>If you use API-based models (OpenAI, Anthropic), you don't need a GPU. If you use local models, GPU is strongly recommended.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I deploy Hunt on AWS/GCP/Azure?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">Can I deploy Hunt on AWS/GCP/Azure?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
         <p>Yes. Hunt can be deployed on any cloud provider:</p>
         <ul>
           <li><strong>AWS:</strong> Use EC2 (for Docker Compose) or EKS (for Kubernetes)</li>
@@ -756,8 +761,8 @@
         <p>We provide deployment guides for each cloud provider. For production, we recommend Kubernetes with managed databases.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I migrate from my existing outbound tool?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">Can I migrate from my existing outbound tool?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>outbound tool migration</strong>:</p>
         <ul>
           <li><strong>Import prospects:</strong> Import prospect lists from Apollo, Clay, Outreach, etc.</li>
@@ -768,8 +773,8 @@
         <p>Migration typically takes 1-2 days depending on data volume and complexity.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I preview Hunt before going live?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">Can I preview Hunt before going live?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
         <p>Yes. Hunt includes a <strong>sandbox mode</strong>:</p>
         <ul>
           <li><strong>Test environment:</strong> Deploy Hunt in a test environment with sample data</li>
@@ -779,8 +784,8 @@
         <p>We recommend spending 1-2 days testing in sandbox mode before deploying to production.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I update Hunt to a new version?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">How do I update Hunt to a new version?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
         <p><strong>For Docker Compose:</strong> Pull the new image, restart containers.</p>
         <p><strong>For Kubernetes:</strong> Update the Helm chart, rolling update.</p>
         <p><strong>For bare metal:</strong> Follow the upgrade guide in the documentation.</p>
@@ -792,8 +797,8 @@
   <div class="section" id="s8">
     <div class="section-header"><span class="icon">08 · LANGUAGES</span><h2>Cost & Pricing</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How much does Hunt cost?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">How much does Hunt cost?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
         <p>Hunt pricing is based on <strong>features and deployment</strong>:</p>
         <table>
           <thead><tr><th>Tier</th><th>Price</th><th>Includes</th></tr></thead>
@@ -812,8 +817,8 @@
         <div class="callout info"><strong>Note</strong>Pricing is illustrative and subject to change. Contact us for current pricing and custom quotes.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Hunt cheaper than Apollo or Clay?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">Is Hunt cheaper than Apollo or Clay?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
         <p><strong>It depends.</strong> Apollo costs $59-$119/user/month. Clay costs $149-$349/user/month.</p>
         <p>Hunt costs $149-$699/month (unlimited users for Enterprise). For a 3-person team:</p>
         <ul>
@@ -825,8 +830,8 @@
         <p>However, Hunt requires you to manage your own infrastructure. If you factor in infrastructure costs, the total cost of ownership may be higher.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Are there any hidden costs?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">Are there any hidden costs?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
         <p>No hidden costs. The total cost of ownership includes:</p>
         <ul>
           <li><strong>Hunt subscription:</strong> Monthly fee based on tier</li>
@@ -837,8 +842,8 @@
         <p>That's it. No setup fees, no surprise charges, no per-prospect fees.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What payment methods do you accept?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">What payment methods do you accept?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
         <p>We accept:</p>
         <ul>
           <li><strong>Credit/debit cards:</strong> Visa, Mastercard, American Express (via Stripe)</li>
@@ -848,14 +853,14 @@
         <p>Invoicing is available for annual subscriptions. Contact us for details.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
         <p>Yes. We offer a <strong>30-day money-back guarantee</strong>. If you're not satisfied within the first 30 days, contact us for a full refund — no questions asked.</p>
         <p>After 30 days, you can cancel anytime. You'll continue to have access until the end of your billing period, but no refund is provided for partial months.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Hunt included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">Is Hunt included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
         <p><strong>Yes.</strong> Hunt is part of the ODW.ai suite. You can:</p>
         <ul>
           <li><strong>Purchase Hunt standalone:</strong> Use Hunt by itself</li>
@@ -864,8 +869,8 @@
         <p>The suite bundle includes Hunt at a 20-30% discount compared to purchasing separately. And all modules integrate natively — Hunt uses Vault for knowledge grounding, Loop for pipeline automation, Shield for governance.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I pay per user or per prospect?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">Do I pay per user or per prospect?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
         <p><strong>Neither.</strong> Hunt pricing is <strong>unlimited</strong> — no per-user or per-prospect fees.</p>
         <p>You pay a flat monthly fee based on your tier (Pro or Enterprise). Manage as many prospects and users as you want.</p>
         <p>The only variable costs are:</p>
@@ -880,8 +885,8 @@
   <div class="section" id="s9">
     <div class="section-header"><span class="icon">09 · PRICING</span><h2>Scaling & Operations</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How many prospects can Hunt handle?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">How many prospects can Hunt handle?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
         <p>Hunt can handle <strong>unlimited prospects</strong>:</p>
         <ul>
           <li><strong>No prospect limit:</strong> Manage as many as you want</li>
@@ -896,8 +901,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How many users can Hunt support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">How many users can Hunt support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
         <p>Hunt supports <strong>unlimited users</strong>:</p>
         <ul>
           <li><strong>Pro tier:</strong> 3 users</li>
@@ -906,8 +911,8 @@
         <p>Hunt scales horizontally — add more nodes to handle more concurrent users. Typical deployments support 50-200 concurrent users per node.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if Hunt goes down?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">What happens if Hunt goes down?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
         <p>If Hunt goes down, outbound operations are unavailable, but your data is safe:</p>
         <ul>
           <li><strong>Data storage:</strong> All data is stored in your database (PostgreSQL) — not lost</li>
@@ -922,8 +927,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I monitor Hunt's performance?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">How do I monitor Hunt's performance?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
         <p>Hunt includes a <strong>monitoring dashboard</strong>:</p>
         <ul>
           <li><strong>System health:</strong> CPU, memory, disk, network usage</li>
@@ -934,8 +939,8 @@
         <p>You can also export metrics to external monitoring tools (Prometheus, Grafana, Datadog) via standard protocols.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I back up Hunt data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">How do I back up Hunt data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
         <p>Hunt data is stored in PostgreSQL. Back up using standard PostgreSQL tools:</p>
         <ul>
           <li><strong>Automated backups:</strong> Configure daily backups via pg_dump or WAL archiving</li>
@@ -945,8 +950,8 @@
         <p>Hunt provides backup guides and scripts for common deployment modes (Docker, Kubernetes, on-premises).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use Hunt for multiple brands or clients?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">Can I use Hunt for multiple brands or clients?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>multi-tenancy</strong>:</p>
         <ul>
           <li><strong>Multiple brands:</strong> Create separate workspaces for each brand</li>
@@ -956,8 +961,8 @@
         <p>This is useful for agencies managing multiple client outbound, or enterprises with multiple product lines.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I train my team to use Hunt?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">How do I train my team to use Hunt?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
         <p>Hunt is designed to be <strong>intuitive</strong>, but we provide training resources:</p>
         <ul>
           <li><strong>Documentation:</strong> Comprehensive user guides for admins and sales reps</li>
@@ -973,8 +978,8 @@
   <div class="section" id="s10">
     <div class="section-header"><span class="icon">10 · ONBOARDING</span><h2>Integration & Workflows</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How does Hunt integrate with other ODW.ai products?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">How does Hunt integrate with other ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
         <p>Hunt integrates <strong>natively</strong> with all ODW.ai products:</p>
         <ul>
           <li><strong>Vault:</strong> Brand voice, product positioning, case studies, objection handlers — Hunt uses Vault as grounding context for all generated outreach</li>
@@ -984,8 +989,8 @@
         <p>If you're using the ODW.ai suite, Hunt integration is automatic — no separate configuration required.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Hunt provide an API?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">Does Hunt provide an API?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
         <p>Yes. Hunt provides a <strong>REST API</strong> for programmatic access:</p>
         <ul>
           <li><strong>Prospect management:</strong> Create, update, retrieve prospects via API</li>
@@ -996,8 +1001,8 @@
         <p>The API is fully documented (OpenAPI/Swagger) and supports authentication via API keys or OAuth 2.0.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate Hunt with my email provider?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">Can I integrate Hunt with my email provider?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>email provider integrations</strong>:</p>
         <ul>
           <li><strong>Google Workspace:</strong> Gmail</li>
@@ -1007,8 +1012,8 @@
         <p>Email integration enables Hunt to send emails on your behalf (with human approval).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate Hunt with my CRM?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">Can I integrate Hunt with my CRM?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>CRM integrations</strong>:</p>
         <ul>
           <li><strong>HubSpot:</strong> Bidirectional sync (prospects, activities, deals)</li>
@@ -1018,8 +1023,8 @@
         <p>CRM integration ensures your prospect data, activities, and deals are synchronized across systems.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate Hunt with prospect data providers?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">Can I integrate Hunt with prospect data providers?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>prospect data provider integrations</strong>:</p>
         <ul>
           <li><strong>ZoomInfo:</strong> Import prospect data</li>
@@ -1030,8 +1035,8 @@
         <p>Hunt doesn't provide prospect data itself — you bring your own data sources (or use integrations with data providers).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate Hunt with my calendar?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">Can I integrate Hunt with my calendar?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
         <p>Yes. Hunt supports <strong>calendar integrations</strong>:</p>
         <ul>
           <li><strong>Google Workspace:</strong> Google Calendar</li>
@@ -1041,8 +1046,8 @@
         <p>Calendar integration enables automated meeting scheduling — when a prospect replies "let's schedule a call," Hunt can automatically send a scheduling link.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use Hunt with my existing AI tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">Can I use Hunt with my existing AI tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
         <p>Yes. Hunt can be used with existing AI tools:</p>
         <ul>
           <li><strong>LangChain:</strong> Use Hunt as an outbound tool in LangChain pipelines</li>
@@ -1057,8 +1062,8 @@
   <div class="section" id="s11">
     <div class="section-header"><span class="icon">11 · ROADMAP</span><h2>Limitations & Roadmap</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What can't Hunt do (yet)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">What can't Hunt do (yet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
         <p>Hunt is powerful, but it has limitations in v1.0:</p>
         <ul>
           <li><strong>No autonomous sending:</strong> Hunt requires human approval for all outbound (by default)</li>
@@ -1070,8 +1075,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Hunt support multi-language outreach?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">Will Hunt support multi-language outreach?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
         <p><strong>Yes.</strong> Multi-language support is planned for v1.1 (Q4 2026):</p>
         <ul>
           <li><strong>Spanish</strong></li>
@@ -1084,15 +1089,15 @@
         <p>This is a high-priority feature for global sales teams.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Hunt provide prospect data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">Will Hunt provide prospect data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
         <p><strong>Not in the current roadmap.</strong> Hunt is designed to be a <strong>bring-your-own-data</strong> tool.</p>
         <p>We believe this is the right architecture for sovereignty-focused customers — you control your data sources, not us.</p>
         <p>If you need prospect data, use integrations with data providers (ZoomInfo, Clearbit, Apollo) or bring your own lists.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
         <p>Key milestones:</p>
         <ul>
           <li><strong>v1.0 (Q3 2026):</strong> MVP launch. Self-hosted, human-in-the-loop, suite integration, deliverability focus.</li>
@@ -1103,8 +1108,8 @@
         <p>Roadmap is subject to change based on customer feedback. Contact us for the latest roadmap or to request features.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">When should I NOT use Hunt?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">When should I NOT use Hunt?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
         <p>Hunt is not the right fit if:</p>
         <ul>
           <li><strong>You don't have compliance requirements:</strong> If you don't care about data sovereignty or human oversight, cloud-based tools (Apollo, Clay) are easier (no infrastructure to manage).</li>
@@ -1115,8 +1120,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Hunt guarantee high reply rates?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">Does Hunt guarantee high reply rates?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
         <p><strong>No.</strong> No tool can guarantee reply rates — they depend on many factors (ICP fit, messaging quality, timing, market conditions).</p>
         <p>Hunt helps you <strong>optimize</strong> reply rates through:</p>
         <ul>
@@ -1128,8 +1133,8 @@
         <p>Target: <strong>&gt;5% positive reply rate for cold outreach, &gt;15% for warm outreach</strong>. But results vary by use case.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Hunt replace my SDR team?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">Can Hunt replace my SDR team?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
         <p><strong>No.</strong> Hunt is designed to <strong>augment</strong> your SDR team, not replace it.</p>
         <p>Hunt automates administrative tasks (research, personalization, cadence management), freeing your SDRs to focus on:</p>
         <ul>
@@ -1140,8 +1145,8 @@
         <p>Hunt makes your SDR team more efficient — it doesn't replace the human element that's critical to good sales.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I get started?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">How do I get started?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
         <p>Three paths:</p>
         <ol>
           <li><strong>Free trial:</strong> Download Hunt and deploy it yourself. No credit card required. Try it with your outbound process and see if it works for your use case.</li>
@@ -1162,10 +1167,24 @@
 
 <script>
   document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => { button.parentElement.classList.toggle('open'); });
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
   });
-  function expandAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.add('open')); }
-  function collapseAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); }
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
   const searchInput = document.getElementById('searchInput');
   const noResults = document.getElementById('noResults');
   searchInput.addEventListener('input', () => {
@@ -1188,6 +1207,34 @@
     const el = document.querySelector(window.location.hash);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
 </script>
 </body>
 </html>

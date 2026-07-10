@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Loop — FAQ for Business Users</title>
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
   <div class="subtitle">Loop FAQ</div>
   <h1>Loop FAQ</h1>
   <p>Workflow orchestration for sovereign AI agents — visual builder, agent-native, model-agnostic, zero data egress. Answers for business leaders, no technical background required.</p>
@@ -28,7 +33,7 @@
     <span>Loop</span>
   </div>
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search questions… (e.g. 'workflow', 'automation', 'orchestration', 'sovereignty', 'agent', 'trigger')">
+    <input type="text" id="searchInput" aria-label="Search questions" placeholder="Search questions… (e.g. 'workflow', 'automation', 'orchestration', 'sovereignty', 'agent', 'trigger')">
   </div>
   <div class="controls">
     <button onclick="expandAll()">＋ Expand all</button>
@@ -59,8 +64,8 @@
   <div class="section" id="s1">
     <div class="section-header"><span class="icon">01 · OVERVIEW</span><h2>The Basics — What Is Loop?</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What is ODW.ai Loop in plain English?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">What is ODW.ai Loop in plain English?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
         <p>Loop is the <strong>orchestration layer</strong> of the ODW.ai suite. It wires ODW's individual agents (Vault, Desk, Recap, etc.) into automated, multi-step workflows that run entirely on your own infrastructure.</p>
         <p>Here's how it works:</p>
         <ol>
@@ -73,8 +78,8 @@
         <p>The key difference from other workflow tools: <strong>agent-native, sovereign by design, model-agnostic</strong>. Loop understands ODW's agent primitives as first-class objects, and all data stays on your infrastructure.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What problem does Loop solve?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">What problem does Loop solve?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
         <p>Businesses face compounding challenges with AI agents:</p>
         <ul>
           <li><strong>Siloed agents:</strong> Individual agents (knowledge base, meeting intelligence, task management) operate in isolation — no coordination</li>
@@ -85,8 +90,8 @@
         <p>Loop solves this by providing <strong>agent-native orchestration</strong> with <strong>sovereignty by design</strong>. You can coordinate ODW's agents into production workflows without cloud dependency or vendor lock-in.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Who is Loop for?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">Who is Loop for?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
         <p>Loop is designed for <strong>SMBs in regulated or data-residency-sensitive contexts</strong>:</p>
         <ul>
           <li><strong>Legal:</strong> Law firms, legal tech — attorney-client privilege</li>
@@ -99,8 +104,8 @@
         <p>If you need to coordinate AI agents while keeping all data on your infrastructure, Loop is for you.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How is Loop different from Zapier or n8n?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">How is Loop different from Zapier or n8n?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
         <p>Zapier and n8n are <strong>general-purpose workflow tools</strong>. Loop is an <strong>agent-native orchestrator</strong>.</p>
         <table>
           <thead><tr><th>Aspect</th><th>ODW.ai Loop</th><th>Zapier / n8n</th></tr></thead>
@@ -115,8 +120,8 @@
         <p>If you need to orchestrate AI agents with full data control, Loop is the better choice.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does "agent-native" mean?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">What does "agent-native" mean?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
         <p>"Agent-native" means <strong>Loop understands ODW's agent primitives as first-class workflow objects</strong>:</p>
         <ul>
           <li><strong>Vault documents:</strong> Loop can read/write documents, search, run RAG queries, manage tags</li>
@@ -127,8 +132,8 @@
         <div class="callout tip"><strong>Why this matters</strong>Agent-native orchestration enables type-safe workflows, better error handling, and more intuitive workflow authoring.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Loop a standalone product or part of a suite?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">Is Loop a standalone product or part of a suite?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
         <p>Loop is <strong>both</strong>:</p>
         <ul>
           <li><strong>Standalone:</strong> You can use Loop by itself for workflow automation</li>
@@ -144,8 +149,8 @@
         <p>The suite integration is what makes Loop powerful — it can coordinate ODW's agents into production workflows with full semantic understanding.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does "sovereign by design" mean?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">What does "sovereign by design" mean?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
         <p>"Sovereign by design" means <strong>all workflow data stays on your infrastructure</strong>:</p>
         <ul>
           <li><strong>Zero data egress:</strong> No data leaves your infrastructure (unless you explicitly configure it)</li>
@@ -156,15 +161,15 @@
         <p>This is critical for regulated industries. You can't claim data sovereignty if your workflow tool is sending data to a cloud vendor.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical skills to use Loop?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">Do I need technical skills to use Loop?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
         <p><strong>For deployment:</strong> Yes. Loop is self-hosted, so you need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure.</p>
         <p><strong>For workflow authoring:</strong> No. Loop provides a <strong>visual drag-and-drop builder</strong> — non-engineers can compose workflows in under 30 minutes.</p>
         <p><strong>For advanced logic:</strong> Yes. Loop provides a code node (Python/TypeScript) for custom logic — engineers can drop into code without leaving the platform.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Loop replace Zapier or n8n?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">Can Loop replace Zapier or n8n?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
         <p><strong>It depends.</strong></p>
         <ul>
           <li><strong>If you need AI agent orchestration:</strong> Yes. Loop is purpose-built for coordinating AI agents (Vault, Desk, Recap, etc.)</li>
@@ -179,8 +184,8 @@
   <div class="section" id="s2">
     <div class="section-header"><span class="icon">02 · SOVEREIGNTY</span><h2>Workflow Authoring</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How do I create workflows in Loop?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">How do I create workflows in Loop?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
         <p>Loop provides a <strong>visual drag-and-drop builder</strong>:</p>
         <ol>
           <li><strong>Node library:</strong> Browse pre-built nodes (Vault, Desk, Recap, logic, code)</li>
@@ -193,8 +198,8 @@
         <p>Target: <strong>Non-engineers can build production workflows in under 30 minutes</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What types of nodes does Loop support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">What types of nodes does Loop support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
         <p>Loop supports <strong>multiple node types</strong>:</p>
         <ul>
           <li><strong>Agent nodes:</strong> Vault (read/write documents, search, RAG), Desk (tasks, projects, calendar), Recap (transcripts, action items, summaries)</li>
@@ -206,8 +211,8 @@
         <p>The node library is extensible — you can create custom nodes for your specific use cases.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use conditional logic in workflows?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">Can I use conditional logic in workflows?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>conditional branching</strong>:</p>
         <ul>
           <li><strong>If/else:</strong> Branch based on conditions (e.g., "if sentiment is negative, escalate to manager")</li>
@@ -218,8 +223,8 @@
         <p>Conditional logic enables complex workflows with dynamic behavior.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I write custom code in workflows?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">Can I write custom code in workflows?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
         <p>Yes. Loop provides a <strong>code node</strong>:</p>
         <ul>
           <li><strong>Languages:</strong> Python and TypeScript</li>
@@ -230,8 +235,8 @@
         <p>Code nodes are useful when visual nodes aren't sufficient — engineers can drop into code without leaving the platform.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I version-control my workflows?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">Can I version-control my workflows?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>git-backed version control</strong>:</p>
         <ul>
           <li><strong>Automatic commits:</strong> Every workflow change is committed to git</li>
@@ -242,8 +247,8 @@
         <p>Version control ensures you can track changes, collaborate safely, and roll back if something breaks.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Are there workflow templates?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">Are there workflow templates?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>pre-built workflow templates</strong>:</p>
         <ul>
           <li><strong>Meeting → Action Items → Tasks:</strong> Extract action items from meeting transcripts, create tasks in Desk</li>
@@ -255,8 +260,8 @@
         <div class="callout info"><strong>Community templates</strong>A community template marketplace is planned for v1.1 (Q4 2026).</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I test workflows before deploying?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">Can I test workflows before deploying?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>test mode</strong>:</p>
         <ul>
           <li><strong>Dry run:</strong> Execute the workflow with sample data</li>
@@ -267,8 +272,8 @@
         <p>Test mode ensures you can validate workflows before deploying to production.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I reuse workflow components?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">Can I reuse workflow components?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>sub-workflows</strong>:</p>
         <ul>
           <li><strong>Modular design:</strong> Create reusable workflow components</li>
@@ -284,8 +289,8 @@
   <div class="section" id="s3">
     <div class="section-header"><span class="icon">03 · INTEGRATION</span><h2>Our Solution's Strengths & Design</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What are the top advantages of Loop over other workflow tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">What are the top advantages of Loop over other workflow tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
         <table>
           <thead><tr><th>Feature</th><th>ODW.ai Loop</th><th>Typical Workflow Tools</th></tr></thead>
           <tbody>
@@ -300,8 +305,8 @@
         <p>Loop competes on <strong>agent-native orchestration + sovereignty + model-agnostic</strong>. If you need to coordinate AI agents with full data control, Loop is the best option.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Loop enable non-engineers to build workflows?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">How does Loop enable non-engineers to build workflows?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
         <p>Loop provides a <strong>low-code surface</strong>:</p>
         <ul>
           <li><strong>Visual builder:</strong> Drag-and-drop nodes, no coding required</li>
@@ -313,8 +318,8 @@
         <div class="callout tip"><strong>Code escape hatch</strong>For advanced logic, engineers can drop into Python/TypeScript without leaving the platform.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Loop ensure workflow reliability?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">How does Loop ensure workflow reliability?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
         <p>Loop provides <strong>reliability features</strong>:</p>
         <ul>
           <li><strong>Retry logic:</strong> Automatically retry failed nodes with configurable backoff</li>
@@ -326,8 +331,8 @@
         <p>Target: <strong>≥98% workflow execution success rate</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Loop handle complex, multi-step workflows?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">Can Loop handle complex, multi-step workflows?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>complex workflows</strong>:</p>
         <ul>
           <li><strong>Parallel execution:</strong> Run multiple branches simultaneously</li>
@@ -339,8 +344,8 @@
         <p>Loop is designed for production-grade workflows — not just simple automations.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I monitor workflow performance?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">Can I monitor workflow performance?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
         <p>Yes. Loop provides a <strong>metrics dashboard</strong>:</p>
         <ul>
           <li><strong>Success rate:</strong> % of successful workflow runs</li>
@@ -352,8 +357,8 @@
         <p>You can also export metrics to external monitoring tools (Prometheus, Grafana, Datadog) via standard protocols.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I get alerted when workflows fail?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">Can I get alerted when workflows fail?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>error alerting</strong>:</p>
         <ul>
           <li><strong>Webhook:</strong> Send alerts to your monitoring system</li>
@@ -364,8 +369,8 @@
         <p>Alerting ensures you can respond to failures quickly — before they impact business operations.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Loop handle high-volume workflows?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">Can Loop handle high-volume workflows?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>high-volume execution</strong>:</p>
         <ul>
           <li><strong>Scalable infrastructure:</strong> Kubernetes-based deployment scales horizontally</li>
@@ -381,8 +386,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Loop replace my existing orchestration tool?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">Can Loop replace my existing orchestration tool?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
         <p><strong>It depends.</strong></p>
         <ul>
           <li><strong>If you're orchestrating AI agents:</strong> Yes. Loop is purpose-built for coordinating AI agents (Vault, Desk, Recap, etc.)</li>
@@ -397,8 +402,8 @@
   <div class="section" id="s4">
     <div class="section-header"><span class="icon">04 · SECURITY</span><h2>Execution & Triggers</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How do workflows get triggered?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">How do workflows get triggered?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
         <p>Loop supports <strong>multiple trigger types</strong>:</p>
         <ul>
           <li><strong>Scheduled:</strong> Cron-style scheduling (e.g., "every day at 9am", "every hour")</li>
@@ -409,8 +414,8 @@
         <p>You can combine triggers (e.g., "run every hour OR when a file is uploaded").</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can workflows run on a schedule?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">Can workflows run on a schedule?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>cron-style scheduling</strong>:</p>
         <ul>
           <li><strong>Simple schedules:</strong> "Every hour", "Every day at 9am", "Every Monday"</li>
@@ -421,8 +426,8 @@
         <p>Scheduled workflows are useful for recurring tasks (e.g., "sync data every hour", "generate report every day").</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can workflows be triggered by events?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">Can workflows be triggered by events?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>event-driven triggers</strong>:</p>
         <ul>
           <li><strong>Webhooks:</strong> Trigger workflows via HTTP requests</li>
@@ -433,8 +438,8 @@
         <p>Event-driven workflows are useful for reactive automation (e.g., "when a customer submits a form, process the data").</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can workflows be triggered manually?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">Can workflows be triggered manually?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>manual triggers</strong>:</p>
         <ul>
           <li><strong>UI button:</strong> Click a button in the Loop console to run a workflow</li>
@@ -444,8 +449,8 @@
         <p>Manual triggers are useful for on-demand tasks (e.g., "generate report now", "sync data on demand").</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if a workflow fails?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">What happens if a workflow fails?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
         <p>Loop provides <strong>error handling</strong>:</p>
         <ul>
           <li><strong>Retry logic:</strong> Automatically retry failed nodes with configurable backoff</li>
@@ -457,8 +462,8 @@
         <p>Target: <strong>Mean time to recover from workflow failure ≤2 minutes</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I pause or stop a running workflow?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">Can I pause or stop a running workflow?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>workflow controls</strong>:</p>
         <ul>
           <li><strong>Pause:</strong> Pause a running workflow (resumable)</li>
@@ -469,8 +474,8 @@
         <p>These controls are useful for troubleshooting, maintenance, or stopping runaway workflows.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can workflows run in parallel?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">Can workflows run in parallel?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>parallel execution</strong>:</p>
         <ul>
           <li><strong>Parallel branches:</strong> Run multiple branches of a workflow simultaneously</li>
@@ -480,8 +485,8 @@
         <p>Parallel execution is useful for performance (e.g., "process 100 documents in parallel instead of sequentially").</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can workflows wait for external events?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">Can workflows wait for external events?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>wait nodes</strong>:</p>
         <ul>
           <li><strong>Time-based wait:</strong> Wait for a specific duration (e.g., "wait 5 minutes")</li>
@@ -496,8 +501,8 @@
   <div class="section" id="s5">
     <div class="section-header"><span class="icon">05 · DEPLOYMENT</span><h2>Security & Privacy</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Is Loop secure?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">Is Loop secure?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
         <p>Yes. Loop is built with <strong>security best practices</strong>:</p>
         <ul>
           <li><strong>Self-hosted:</strong> All workflow data stays on your infrastructure</li>
@@ -509,15 +514,15 @@
         <p>Loop is designed for regulated industries. If you can use Loop, you can pass a compliance audit.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does ODW.ai have access to my workflow data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">Does ODW.ai have access to my workflow data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
         <p><strong>No.</strong> Loop is self-hosted on your infrastructure. ODW.ai has zero access to your workflow data.</p>
         <p>Unlike cloud-based workflow tools (Zapier, n8n cloud), Loop doesn't send workflow data to a third party. Everything stays on your servers.</p>
         <p>This is critical for regulated industries. You can't claim data sovereignty if your workflow tool is sending data to a cloud vendor.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I deploy Loop in an air-gapped environment?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">Can I deploy Loop in an air-gapped environment?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>air-gapped deployment</strong> (no internet access):</p>
         <ul>
           <li><strong>Offline installation:</strong> Install Loop without internet access</li>
@@ -527,8 +532,8 @@
         <p>Air-gapped deployment is common for government contractors, military, and high-security environments.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I control who can create or run workflows?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">Can I control who can create or run workflows?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>role-based access control</strong> (via Shield integration):</p>
         <ul>
           <li><strong>Admin:</strong> Full access — create, edit, delete workflows, manage users</li>
@@ -539,8 +544,8 @@
         <p>You can also set per-workflow permissions (e.g., only specific users can run sensitive workflows).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I track who ran which workflows?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">Can I track who ran which workflows?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
         <p>Yes. Loop provides <strong>audit logging</strong> (via Shield integration):</p>
         <ul>
           <li><strong>Who:</strong> Which user ran the workflow</li>
@@ -551,8 +556,8 @@
         <p>All audit logs are tamper-evident and can be exported for compliance purposes.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if someone runs a workflow without permission?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">What happens if someone runs a workflow without permission?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
         <p>Loop provides <strong>access control and alerting</strong>:</p>
         <ul>
           <li><strong>Access control:</strong> Role-based access prevents unauthorized workflow execution</li>
@@ -563,8 +568,8 @@
         <p>For critical incidents, you can generate a full audit report for regulators or legal counsel.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Loop's code auditable?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">Is Loop's code auditable?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
         <p>Yes. Loop's core is <strong>open source</strong>:</p>
         <ul>
           <li><strong>Transparent:</strong> All code is publicly available on GitHub</li>
@@ -574,8 +579,8 @@
         <p>This is critical for sovereignty-focused organizations. You should be able to verify what your workflow tools are doing.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Loop comply with HIPAA?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">Does Loop comply with HIPAA?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
         <p>Loop is <strong>HIPAA-compatible</strong> for healthcare workflows:</p>
         <ul>
           <li><strong>On-premise processing:</strong> Workflow data stays on your infrastructure</li>
@@ -591,8 +596,8 @@
   <div class="section" id="s6">
     <div class="section-header"><span class="icon">06 · COMPLIANCE</span><h2>Models & AI</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Which AI models does Loop use?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">Which AI models does Loop use?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
         <p>Loop is <strong>model-agnostic</strong> — it supports a wide range of models:</p>
         <ul>
           <li><strong>Local models:</strong> Llama 3, Mistral, Gemma, Qwen (via Ollama, vLLM, llama.cpp)</li>
@@ -602,8 +607,8 @@
         <p>You can switch models at any time — no code changes required.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use local models (fully offline)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">Can I use local models (fully offline)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>local models</strong> via:</p>
         <ul>
           <li><strong>Ollama:</strong> Easiest way to run local models. Supports Llama 3, Mistral, Gemma, etc.</li>
@@ -614,8 +619,8 @@
         <div class="callout warning"><strong>Hardware requirements</strong>Local models require GPU hardware (NVIDIA GPUs recommended). CPU-only inference is possible but slow for large models.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use API-based models (OpenAI, Anthropic)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">Can I use API-based models (OpenAI, Anthropic)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>API-based models</strong>:</p>
         <ul>
           <li><strong>OpenAI:</strong> GPT-4o, GPT-4o-mini</li>
@@ -628,8 +633,8 @@
         <div class="callout warning"><strong>Data sovereignty</strong>If you use API-based models, workflow data is sent to the API provider. This may violate sovereignty requirements. Use local models for maximum sovereignty.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I choose the right model?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">How do I choose the right model?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
         <p>Choosing a model depends on your priorities:</p>
         <table>
           <thead><tr><th>Model</th><th>Speed</th><th>Quality</th><th>Cost</th><th>Sovereignty</th></tr></thead>
@@ -649,8 +654,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What if a new, better model is released? Can I switch?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">What if a new, better model is released? Can I switch?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
         <p>Yes. Loop is <strong>model-agnostic</strong> — you can switch models at any time:</p>
         <ul>
           <li><strong>No code changes:</strong> Just update the model configuration in the admin console</li>
@@ -659,8 +664,8 @@
         <p>This future-proofs your investment — when better models are released, you can adopt them immediately without re-architecting your system.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I fine-tune models for my workflows?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">Can I fine-tune models for my workflows?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
         <p><strong>Not in Loop v1.0.</strong> Loop uses existing models — it doesn't support fine-tuning.</p>
         <p>However, you can:</p>
         <ul>
@@ -671,8 +676,8 @@
         <p>Fine-tuning support is planned for v2.0 (Q2 2027).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Loop make autonomous decisions?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">Does Loop make autonomous decisions?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
         <p><strong>No.</strong> Loop is an <strong>orchestrator</strong>, not a decision-maker.</p>
         <p>Loop executes workflows as defined — it doesn't make decisions on its own. If you want human oversight, you can add approval nodes to workflows (e.g., "wait for human approval before sending email").</p>
         <p>This is a <strong>design choice</strong> — Loop gives you full control over when and how humans are involved in workflows.</p>
@@ -683,8 +688,8 @@
   <div class="section" id="s7">
     <div class="section-header"><span class="icon">07 · MODELS</span><h2>Deployment & Setup</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How do I deploy Loop?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">How do I deploy Loop?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
         <p>Loop offers three deployment options:</p>
         <ol>
           <li><strong>Docker Compose:</strong> Easiest. One command (<code>docker-compose up</code>) and you're running. Best for development and small deployments.</li>
@@ -694,8 +699,8 @@
         <p>For most customers, <strong>Docker Compose is the fastest path</strong>. For production, we recommend Kubernetes.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How long does setup take?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">How long does setup take?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
         <p>Setup time depends on your deployment:</p>
         <ul>
           <li><strong>Docker Compose:</strong> 30 minutes. Pull images, configure environment variables, run <code>docker-compose up</code>.</li>
@@ -711,15 +716,15 @@
         <p>Target: <strong>≤45 minutes from deployment to first workflow running</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical staff to run Loop?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">Do I need technical staff to run Loop?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
         <p><strong>For deployment:</strong> Yes. Loop is self-hosted, so you need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure.</p>
         <p><strong>For workflow authoring:</strong> No. Loop provides a <strong>visual drag-and-drop builder</strong> — non-engineers can compose workflows without writing code.</p>
         <p><strong>For developers:</strong> Loop provides a REST API and SDKs for custom integrations.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What are the system requirements for Loop?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">What are the system requirements for Loop?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
         <p>Loop's requirements depend on your deployment:</p>
         <table>
           <thead><tr><th>Component</th><th>Minimum</th><th>Recommended</th></tr></thead>
@@ -734,8 +739,8 @@
         <p>If you use API-based models (OpenAI, Anthropic), you don't need a GPU. If you use local models, GPU is strongly recommended.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I deploy Loop on AWS/GCP/Azure?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">Can I deploy Loop on AWS/GCP/Azure?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
         <p>Yes. Loop can be deployed on any cloud provider:</p>
         <ul>
           <li><strong>AWS:</strong> Use EC2 (for Docker Compose) or EKS (for Kubernetes)</li>
@@ -745,8 +750,8 @@
         <p>We provide deployment guides for each cloud provider. For production, we recommend Kubernetes with managed databases.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I migrate from my existing workflow tool?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">Can I migrate from my existing workflow tool?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>workflow migration</strong>:</p>
         <ul>
           <li><strong>Import workflows:</strong> Import workflows from Zapier, n8n, etc. (via JSON/YAML)</li>
@@ -756,8 +761,8 @@
         <p>Migration typically takes 1-2 days depending on workflow complexity.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I preview Loop before going live?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">Can I preview Loop before going live?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
         <p>Yes. Loop includes a <strong>sandbox mode</strong>:</p>
         <ul>
           <li><strong>Test environment:</strong> Deploy Loop in a test environment with sample data</li>
@@ -767,8 +772,8 @@
         <p>We recommend spending 1-2 days testing in sandbox mode before deploying to production.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I update Loop to a new version?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">How do I update Loop to a new version?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
         <p><strong>For Docker Compose:</strong> Pull the new image, restart containers.</p>
         <p><strong>For Kubernetes:</strong> Update the Helm chart, rolling update.</p>
         <p><strong>For bare metal:</strong> Follow the upgrade guide in the documentation.</p>
@@ -780,8 +785,8 @@
   <div class="section" id="s8">
     <div class="section-header"><span class="icon">08 · LANGUAGES</span><h2>Cost & Pricing</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How much does Loop cost?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">How much does Loop cost?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
         <p>Loop pricing is based on <strong>features and deployment</strong>:</p>
         <table>
           <thead><tr><th>Tier</th><th>Price</th><th>Includes</th></tr></thead>
@@ -799,8 +804,8 @@
         <div class="callout info"><strong>Note</strong>Pricing is illustrative and subject to change. Contact us for current pricing and custom quotes.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Loop cheaper than Zapier or n8n?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">Is Loop cheaper than Zapier or n8n?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
         <p><strong>It depends.</strong></p>
         <ul>
           <li><strong>Zapier:</strong> $20-$500+/month (depending on tasks and features)</li>
@@ -813,8 +818,8 @@
         <p>For most regulated SMBs, Loop is <strong>cheaper and more compliant</strong> than cloud-based alternatives.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Are there any hidden costs?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">Are there any hidden costs?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
         <p>No hidden costs. The total cost of ownership includes:</p>
         <ul>
           <li><strong>Loop subscription:</strong> Monthly fee based on tier (or free for Core)</li>
@@ -824,8 +829,8 @@
         <p>That's it. No setup fees, no surprise charges, no per-workflow fees.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What payment methods do you accept?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">What payment methods do you accept?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
         <p>We accept:</p>
         <ul>
           <li><strong>Credit/debit cards:</strong> Visa, Mastercard, American Express (via Stripe)</li>
@@ -835,15 +840,15 @@
         <p>Invoicing is available for annual subscriptions. Contact us for details.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
         <p>Yes. We offer a <strong>30-day money-back guarantee</strong> for paid tiers. If you're not satisfied within the first 30 days, contact us for a full refund — no questions asked.</p>
         <p>After 30 days, you can cancel anytime. You'll continue to have access until the end of your billing period, but no refund is provided for partial months.</p>
         <p>The Core tier is free, so there's no refund needed.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Loop included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">Is Loop included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
         <p><strong>Yes.</strong> Loop is part of the ODW.ai suite. You can:</p>
         <ul>
           <li><strong>Purchase Loop standalone:</strong> Use Loop by itself</li>
@@ -852,8 +857,8 @@
         <p>The suite bundle includes Loop at a 20-30% discount compared to purchasing separately. And all modules integrate natively — Loop orchestrates Vault, Desk, Recap, and other agents.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I pay per workflow or per execution?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">Do I pay per workflow or per execution?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
         <p><strong>Neither (for Core tier).</strong> Loop Core is <strong>free with unlimited workflows and executions</strong>.</p>
         <p>For Scale tier, pricing is <strong>usage-based</strong> — you pay for the resources you consume (CPU, memory, storage).</p>
         <p>The only variable cost is API costs (if you use API-based models). You pay the API provider directly for token usage.</p>
@@ -864,8 +869,8 @@
   <div class="section" id="s9">
     <div class="section-header"><span class="icon">09 · PRICING</span><h2>Scaling & Operations</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How many workflows can Loop handle?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">How many workflows can Loop handle?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
         <p>Loop can handle <strong>unlimited workflows</strong>:</p>
         <ul>
           <li><strong>No workflow limit:</strong> Create as many as you want</li>
@@ -880,8 +885,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How many users can Loop support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">How many users can Loop support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
         <p>Loop supports <strong>unlimited users</strong>:</p>
         <ul>
           <li><strong>Core tier:</strong> Unlimited users</li>
@@ -891,8 +896,8 @@
         <p>Loop scales horizontally — add more nodes to handle more concurrent users. Typical deployments support 50-200 concurrent users per node.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if Loop goes down?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">What happens if Loop goes down?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
         <p>If Loop goes down, workflow execution is unavailable, but your data is safe:</p>
         <ul>
           <li><strong>Data storage:</strong> All data is stored in your database (SQLite or PostgreSQL) — not lost</li>
@@ -907,8 +912,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I monitor Loop's performance?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">How do I monitor Loop's performance?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
         <p>Loop includes a <strong>monitoring dashboard</strong>:</p>
         <ul>
           <li><strong>System health:</strong> CPU, memory, disk, network usage</li>
@@ -919,8 +924,8 @@
         <p>You can also export metrics to external monitoring tools (Prometheus, Grafana, Datadog) via standard protocols.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I back up Loop data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">How do I back up Loop data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
         <p>Loop data is stored in SQLite (Core) or PostgreSQL (Scale). Back up using standard database tools:</p>
         <ul>
           <li><strong>SQLite:</strong> Copy the database file (simple, but requires downtime)</li>
@@ -931,8 +936,8 @@
         <p>Loop provides backup guides and scripts for common deployment modes (Docker, Kubernetes, on-premises).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use Loop for multiple teams or departments?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">Can I use Loop for multiple teams or departments?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>multi-tenancy</strong>:</p>
         <ul>
           <li><strong>Multiple workspaces:</strong> Create separate workspaces for each team or department</li>
@@ -942,8 +947,8 @@
         <p>This is useful for enterprises with multiple business units, or agencies managing multiple clients.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I train my team to use Loop?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">How do I train my team to use Loop?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
         <p>Loop is designed to be <strong>intuitive</strong>, but we provide training resources:</p>
         <ul>
           <li><strong>Documentation:</strong> Comprehensive user guides for admins and workflow authors</li>
@@ -959,8 +964,8 @@
   <div class="section" id="s10">
     <div class="section-header"><span class="icon">10 · ONBOARDING</span><h2>Integration & Workflows</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How does Loop integrate with other ODW.ai products?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">How does Loop integrate with other ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
         <p>Loop integrates <strong>natively</strong> with all ODW.ai products:</p>
         <ul>
           <li><strong>Vault:</strong> Knowledge base (documents, RAG, tags)</li>
@@ -971,8 +976,8 @@
         <p>If you're using the ODW.ai suite, Loop integration is automatic — no separate configuration required.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Loop provide an API?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">Does Loop provide an API?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
         <p>Yes. Loop provides a <strong>REST API</strong> for programmatic access:</p>
         <ul>
           <li><strong>Workflow management:</strong> Create, update, delete workflows via API</li>
@@ -983,8 +988,8 @@
         <p>The API is fully documented (OpenAPI/Swagger) and supports authentication via API keys or OAuth 2.0.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate Loop with external services?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">Can I integrate Loop with external services?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>external integrations</strong>:</p>
         <ul>
           <li><strong>HTTP requests:</strong> Call any REST API</li>
@@ -996,8 +1001,8 @@
         <p>External integrations enable Loop to connect with your existing systems and data sources.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate Loop with my existing AI tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">Can I integrate Loop with my existing AI tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
         <p>Yes. Loop can be used with existing AI tools:</p>
         <ul>
           <li><strong>LangChain:</strong> Use Loop as an orchestration layer in LangChain pipelines</li>
@@ -1007,8 +1012,8 @@
         <p>Loop is designed to be an <strong>orchestration layer</strong> — it coordinates AI agents, and you can use any AI tool for specific tasks.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I import/export workflows?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">Can I import/export workflows?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>workflow import/export</strong>:</p>
         <ul>
           <li><strong>Export:</strong> Export workflows as JSON or YAML</li>
@@ -1019,8 +1024,8 @@
         <p>Import/export is useful for backup, migration, and collaboration.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use Loop with my existing databases?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">Can I use Loop with my existing databases?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>database integrations</strong>:</p>
         <ul>
           <li><strong>PostgreSQL:</strong> Native support</li>
@@ -1031,8 +1036,8 @@
         <p>Database integrations enable Loop to read/write data from your existing databases.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use Loop with my existing file storage?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">Can I use Loop with my existing file storage?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
         <p>Yes. Loop supports <strong>file storage integrations</strong>:</p>
         <ul>
           <li><strong>Local filesystem:</strong> Read/write files on your server</li>
@@ -1048,8 +1053,8 @@
   <div class="section" id="s11">
     <div class="section-header"><span class="icon">11 · ROADMAP</span><h2>Limitations & Roadmap</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What can't Loop do (yet)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">What can't Loop do (yet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
         <p>Loop is powerful, but it has limitations in v1.0:</p>
         <ul>
           <li><strong>No managed SaaS:</strong> ODW.ai will not operate Loop in the cloud for customers (self-hosted only)</li>
@@ -1061,8 +1066,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Loop support natural-language workflow generation?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">Will Loop support natural-language workflow generation?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
         <p><strong>Yes.</strong> Natural-language workflow generation is planned for v1.1 (Q4 2026):</p>
         <ul>
           <li><strong>Describe workflows:</strong> "Build me a workflow that extracts action items from meeting transcripts and creates tasks"</li>
@@ -1072,8 +1077,8 @@
         <p>This is a high-priority feature for non-technical users who want to build workflows without using the visual builder.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Loop have a workflow marketplace?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">Will Loop have a workflow marketplace?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
         <p><strong>Yes.</strong> A community template marketplace is planned for v1.1 (Q4 2026):</p>
         <ul>
           <li><strong>Share templates:</strong> Share your workflows with the community</li>
@@ -1083,8 +1088,8 @@
         <p>This will enable the community to build a library of reusable workflow templates.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
         <p>Key milestones:</p>
         <ul>
           <li><strong>v1.0 (Q3 2026):</strong> MVP launch. Visual builder, agent-native orchestration, self-hosted, model-agnostic.</li>
@@ -1095,8 +1100,8 @@
         <p>Roadmap is subject to change based on customer feedback. Contact us for the latest roadmap or to request features.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">When should I NOT use Loop?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">When should I NOT use Loop?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
         <p>Loop is not the right fit if:</p>
         <ul>
           <li><strong>You need managed SaaS:</strong> If you don't want to manage your own infrastructure, Loop is not for you (self-hosted only)</li>
@@ -1106,8 +1111,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Loop guarantee workflow reliability?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">Does Loop guarantee workflow reliability?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
         <p><strong>No.</strong> No system can guarantee 100% reliability — failures happen (network issues, downstream service outages, etc.).</p>
         <p>Loop helps you <strong>maximize reliability</strong> through:</p>
         <ul>
@@ -1119,8 +1124,8 @@
         <p>Target: <strong>≥98% workflow execution success rate</strong>. But results vary by use case and infrastructure quality.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Loop replace my development team?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">Can Loop replace my development team?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
         <p><strong>No.</strong> Loop is designed to <strong>augment</strong> your development team, not replace it.</p>
         <p>Loop automates workflow orchestration, freeing your developers to focus on:</p>
         <ul>
@@ -1131,8 +1136,8 @@
         <p>Loop makes your development team more efficient — it doesn't replace the human element that's critical to good software.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I get started?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">How do I get started?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
         <p>Three paths:</p>
         <ol>
           <li><strong>Free Core tier:</strong> Download Loop and deploy it yourself. No credit card required. Try it with your workflows and see if it works for your use case.</li>
@@ -1153,10 +1158,24 @@
 
 <script>
   document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => { button.parentElement.classList.toggle('open'); });
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
   });
-  function expandAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.add('open')); }
-  function collapseAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); }
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
   const searchInput = document.getElementById('searchInput');
   const noResults = document.getElementById('noResults');
   searchInput.addEventListener('input', () => {
@@ -1179,6 +1198,34 @@
     const el = document.querySelector(window.location.hash);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
 </script>
 </body>
 </html>

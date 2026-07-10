@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ODW.ai Suite — FAQ for Business Users</title>
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
   <div class="subtitle">Cross-Suite FAQ</div>
   <h1>ODW.ai Suite FAQ</h1>
   <p>The sovereign AI suite — 10 modules, your infrastructure, your data, your models. Cross-product questions about sovereignty, security, deployment, compliance, and how everything works together.</p>
@@ -26,26 +31,12 @@
     <span>Suite</span>
   </div>
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search questions… (e.g. 'GDPR', 'air-gapped', 'pricing', 'model', 'deploy')">
+    <input type="text" id="searchInput" aria-label="Search questions" placeholder="Search questions… (e.g. 'GDPR', 'air-gapped', 'pricing', 'model', 'deploy')">
   </div>
   <div class="controls">
     <button onclick="expandAll()">＋ Expand all</button>
     <button onclick="collapseAll()">− Collapse all</button>
     <button onclick="window.print()">🖨️ Print / Save PDF</button>
-  </div>
-
-  <!-- SUITE MODULE CARDS -->
-  <div class="suite-grid">
-    <div class="suite-card"><div class="card-icon">V</div><h3>Vault</h3><p>Sovereign RAG knowledge platform</p></div>
-    <div class="suite-card"><div class="card-icon">L</div><h3>Loop</h3><p>Agent orchestration & workflows</p></div>
-    <div class="suite-card"><div class="card-icon">D</div><h3>Desk</h3><p>WhatsApp-first AI support</p></div>
-    <div class="suite-card"><div class="card-icon">R</div><h3>Recap</h3><p>On-device meeting transcription</p></div>
-    <div class="suite-card"><div class="card-icon">V</div><h3>Voice</h3><p>AI receptionist & phone agent</p></div>
-    <div class="suite-card"><div class="card-icon">P</div><h3>Pulse</h3><p>Multilingual content localization</p></div>
-    <div class="suite-card"><div class="card-icon">H</div><h3>Hunt</h3><p>Outbound sales co-pilot</p></div>
-    <div class="suite-card"><div class="card-icon">P</div><h3>People</h3><p>AI hiring & HR assistant</p></div>
-    <div class="suite-card"><div class="card-icon">B</div><h3>Books</h3><p>AI bookkeeping & close</p></div>
-    <div class="suite-card"><div class="card-icon">S</div><h3>Shield</h3><p>Governance & compliance layer</p></div>
   </div>
 
   <div class="toc">
@@ -73,8 +64,8 @@
   <div class="section" id="s1">
     <div class="section-header"><span class="icon">01 · OVERVIEW</span><h2>The Suite at a Glance</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What is ODW.ai?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">What is ODW.ai?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
         <p>ODW.ai is an <strong>open-source, data-sovereign AI suite for business</strong>. It's a platform of agentic modules that companies run on their own infrastructure, with their own data, using any model they choose.</p>
         <p>The suite has 10 modules covering the core business functions where AI creates value:</p>
         <ul>
@@ -92,8 +83,8 @@
         <p>Each module works standalone. Together, they form a complete sovereign AI stack.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Who is ODW.ai for?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">Who is ODW.ai for?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
         <p><strong>Primary:</strong> Small-to-midsize businesses (10–500 employees) in regulated or data-residency-sensitive contexts:</p>
         <ul>
           <li>Healthcare (HIPAA, patient data)</li>
@@ -107,8 +98,8 @@
         <p><strong>Secondary:</strong> Developers and self-hosters who adopt the open-source tools and become internal champions at their companies.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What makes ODW different from ChatGPT, Copilot, or other AI tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">What makes ODW different from ChatGPT, Copilot, or other AI tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
         <p>Three fundamental differences:</p>
         <ol>
           <li><strong>Ownership.</strong> ChatGPT and Copilot are cloud SaaS — your data goes to their servers. ODW runs on <em>your</em> infrastructure. Your data never leaves unless you choose.</li>
@@ -118,8 +109,8 @@
         <div class="callout info"><strong>Not a replacement for ChatGPT</strong>ODW doesn't compete with general-purpose AI chatbots. It competes with business SaaS tools (Intercom, Zendesk, Apollo, Otter, QuickBooks) — replacing them with sovereign, AI-powered alternatives.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need all 10 modules, or can I use just one?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">Do I need all 10 modules, or can I use just one?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
         <p>You can use any combination. Each module is fully functional on its own. There's no "all or nothing" commitment.</p>
         <p>Common starting points:</p>
         <ul>
@@ -132,8 +123,8 @@
         <p>Add modules over time as your needs evolve.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does "open-source" mean here? Can I really use it for free?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">What does "open-source" mean here? Can I really use it for free?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
         <p>Yes. The core of each module is open-source — you can download, deploy, and use it without paying license fees. The code is transparent and auditable.</p>
         <p>The business model is <strong>open-core</strong>:</p>
         <ul>
@@ -143,8 +134,8 @@
         <p>Revenue comes from support subscriptions, consulting, and a certified partner network — not from license sales or data.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is ODW a replacement for my existing SaaS tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">Is ODW a replacement for my existing SaaS tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
         <p>That's the goal. Each ODW module targets a specific SaaS category:</p>
         <table>
           <tr><th>ODW Module</th><th>Replaces</th></tr>
@@ -162,8 +153,8 @@
         <p>ODW competes on <strong>ownership, privacy, model-choice, and suite integration</strong> — not on feature breadth. It never competes head-on with incumbents on their strongest axis.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Which modules are ready now vs. planned?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">Which modules are ready now vs. planned?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
         <p><strong>Built (production-ready or beta):</strong></p>
         <ul>
           <li>Vault — sovereign RAG knowledge platform</li>
@@ -183,8 +174,8 @@
         <div class="callout info"><strong>Timeline</strong>Modules are being released incrementally. Check the ODW.ai website or GitHub for current availability and roadmap updates.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use ODW modules with my existing tools (Salesforce, HubSpot, Slack, etc.)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">Can I use ODW modules with my existing tools (Salesforce, HubSpot, Slack, etc.)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
         <p>Yes. ODW modules integrate with common business tools:</p>
         <ul>
           <li><strong>CRM:</strong> Salesforce, HubSpot (via API or Loop workflows)</li>
@@ -198,8 +189,8 @@
         <div class="callout tip"><strong>Migration tip</strong>If you're moving from a cloud SaaS (e.g., Intercom → Desk), data import tools are provided to minimize disruption.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's the strategic vision for the suite?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">What's the strategic vision for the suite?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
         <p>ODW's vision: become <strong>the sovereign alternative</strong> to cloud AI SaaS for business.</p>
         <p>The strategy is modular and compounding:</p>
         <ol>
@@ -217,8 +208,8 @@
   <div class="section" id="s2">
     <div class="section-header"><span class="icon">02 · SOVEREIGNTY</span><h2>Sovereign AI — What & Why</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What does "sovereign AI" actually mean?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">What does "sovereign AI" actually mean?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
         <p>Sovereign AI means <strong>you own and control the entire AI stack</strong> — the models, the data, the infrastructure. Nothing leaves your environment unless you explicitly allow it.</p>
         <p>Contrast with cloud AI (OpenAI, Anthropic, Google): you send data to their servers, they process it, you get a response. You don't control where your data goes, how long it's stored, or who has access.</p>
         <p>With ODW's sovereign AI suite:</p>
@@ -231,8 +222,8 @@
         <div class="callout info"><strong>Key point</strong>Sovereign doesn't mean "no cloud." You can run ODW on AWS, Azure, GCP, or your own data center. The point is that <em>you</em> control the infrastructure — not a SaaS vendor.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Why does sovereignty matter for my business?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">Why does sovereignty matter for my business?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
         <p>Three reasons:</p>
         <ol>
           <li><strong>Data protection:</strong> Your sensitive data (customer PII, financial records, HR documents, legal contracts) never touches a third-party server. Critical for healthcare (HIPAA), finance (SOC 2), legal (attorney-client privilege).</li>
@@ -242,8 +233,8 @@
         <div class="callout warning"><strong>Reality check</strong>Sovereignty comes with responsibility. You manage the infrastructure, handle security updates, and ensure backups. ODW provides tools to make this manageable, but it's not "set and forget" like cloud SaaS.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's the difference between "open-source" and "sovereign"?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">What's the difference between "open-source" and "sovereign"?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
         <p><strong>Open-source</strong> means the code is publicly available — anyone can inspect, modify, and deploy it. <strong>Sovereign</strong> means you control the infrastructure where the software runs.</p>
         <p>ODW is both:</p>
         <ul>
@@ -253,8 +244,8 @@
         <p>Not all open-source software is sovereign. If you deploy open-source software on a managed platform (Heroku, Vercel, AWS Lambda), the cloud provider still has access to your data. Sovereign means you control the entire stack — from code to hardware.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use cloud AI models (OpenAI, Anthropic) with ODW?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">Can I use cloud AI models (OpenAI, Anthropic) with ODW?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
         <p>Yes. ODW is <strong>model-agnostic</strong>. You can mix local models and cloud APIs:</p>
         <ul>
           <li>Use local models for sensitive data (customer PII, financial records)</li>
@@ -265,15 +256,15 @@
         <div class="callout tip"><strong>Best practice</strong>For maximum sovereignty, run local models for everything. For best performance/cost balance, use local models for sensitive data and cloud APIs for general tasks.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does ODW collect any telemetry or analytics from my deployment?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">Does ODW collect any telemetry or analytics from my deployment?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
         <p><strong>No.</strong> ODW does not collect any telemetry, analytics, or usage data from your deployment. There is no "phone home" behavior.</p>
         <p>When you deploy ODW, it runs entirely on your infrastructure with no outbound connections to ODW servers — unless you explicitly configure integrations with external services.</p>
         <p>This is a core principle of sovereign AI: you control everything, including what data leaves your environment.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if a cloud AI vendor changes their terms, pricing, or shuts down?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">What happens if a cloud AI vendor changes their terms, pricing, or shuts down?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
         <p>With cloud AI, you're exposed to:</p>
         <ul>
           <li>Sudden price increases (OpenAI has changed pricing multiple times)</li>
@@ -284,8 +275,8 @@
         <p>With ODW, your AI stack runs on your infrastructure. No vendor can pull the plug. If you use local models, you're completely independent. If you use cloud APIs, you can switch providers without re-architecting — the model-agnostic design means you're not locked in.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is sovereign AI only for large enterprises?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">Is sovereign AI only for large enterprises?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
         <p>No. ODW is specifically designed for <strong>SMBs (10–500 employees)</strong>. The whole point is to make sovereign AI accessible to companies that can't afford enterprise AI teams.</p>
         <p>How ODW makes this practical for SMBs:</p>
         <ul>
@@ -297,8 +288,8 @@
         <p>The infrastructure cost for a small deployment (one module, cloud APIs) is comparable to a SaaS subscription — but you own the data.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I run ODW completely offline (air-gapped)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">Can I run ODW completely offline (air-gapped)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
         <p>Yes. ODW can run in a fully air-gapped environment with zero internet connectivity.</p>
         <p>This is critical for:</p>
         <ul>
@@ -311,8 +302,8 @@
         <div class="callout info"><strong>Note</strong>Air-gapped mode means no cloud APIs or external integrations. You're limited to local models and your own infrastructure.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I explain "sovereign AI" to my board or compliance team?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">How do I explain "sovereign AI" to my board or compliance team?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
         <p>Frame it in terms they care about:</p>
         <ul>
           <li><strong>Risk reduction:</strong> "Our AI data never leaves our infrastructure. No third-party exposure. No supply chain risk from AI vendors."</li>
@@ -330,8 +321,8 @@
   <div class="section" id="s3">
     <div class="section-header"><span class="icon">03 · INTEGRATION</span><h2>How Modules Work Together</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How do the modules integrate with each other?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">How do the modules integrate with each other?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
         <p>Three integration layers:</p>
         <ol>
           <li><strong>Vault is the knowledge foundation.</strong> Desk, Hunt, Pulse, Voice, and People all pull from Vault to ground their responses in your actual documentation — not generic AI training data.</li>
@@ -342,8 +333,8 @@
         <div class="callout info"><strong>Key point</strong>Integration is optional. Use each module standalone, or connect them via Loop for automated workflows.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's the recommended order to deploy modules?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">What's the recommended order to deploy modules?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
         <p>Depends on your business, but here's a common pattern:</p>
         <ol>
           <li><strong>Phase 1 — Foundation (Weeks 1–2):</strong> Deploy Vault (knowledge base) and Shield (governance). Secure, auditable foundation.</li>
@@ -355,8 +346,8 @@
         <p>This is a suggestion, not a requirement. Start with what solves your most urgent problem.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">If I only use one module, do I miss out on anything?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">If I only use one module, do I miss out on anything?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
         <p>Each module is fully functional standalone. You don't need Vault to use Desk, or Shield to use Recap.</p>
         <p>What you <em>do</em> get from integration:</p>
         <ul>
@@ -367,8 +358,8 @@
         <p>Start standalone. Add integration when you see the value.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What is Vault's role in the suite?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">What is Vault's role in the suite?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
         <p>Vault is the <strong>knowledge foundation</strong>. It's the central knowledge base that other modules query to ground their AI responses in your actual documentation.</p>
         <p>Without Vault: AI modules use generic training data. They might hallucinate or give outdated answers.</p>
         <p>With Vault: AI modules answer from your uploaded documents, policies, product specs, and internal wiki. Responses include citations. Hallucination is dramatically reduced.</p>
@@ -381,8 +372,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What is Loop's role in the suite?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">What is Loop's role in the suite?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
         <p>Loop is the <strong>orchestration layer</strong>. It wires modules into automated, multi-step workflows.</p>
         <p>Examples:</p>
         <ul>
@@ -394,8 +385,8 @@
         <p>Loop has a visual builder for non-engineers and a code escape hatch (Python/TypeScript) for advanced logic.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What is Shield's role in the suite?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">What is Shield's role in the suite?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
         <p>Shield is the <strong>governance and compliance layer</strong>. It's the commercial backbone of the suite — the module where paid revenue concentrates, because governance is what enterprises pay for.</p>
         <p>Shield provides:</p>
         <ul>
@@ -408,8 +399,8 @@
         <p>Every other module generates compliance signals (SSO requirements, audit trail demands, data-residency constraints). Shield unifies them into a single governance plane.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can modules share data with each other securely?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">Can modules share data with each other securely?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
         <p>Yes. Data sharing between modules happens through controlled, auditable channels:</p>
         <ul>
           <li><strong>Vault queries:</strong> modules request knowledge from Vault through authenticated API calls. Access is controlled by Shield policies.</li>
@@ -419,8 +410,8 @@
         <p>Data never leaves your infrastructure during these transfers. All inter-module communication is encrypted and auditable.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's a real-world example of multi-module workflow?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">What's a real-world example of multi-module workflow?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
         <p><strong>Scenario: Regulated healthcare clinic</strong></p>
         <ol>
           <li><strong>Voice</strong> answers an inbound patient call, books an appointment</li>
@@ -435,8 +426,8 @@
         <p>Every module runs on the clinic's infrastructure. No patient data touches a third-party server.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical staff to manage multi-module integration?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">Do I need technical staff to manage multi-module integration?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
         <p>For basic integration: no. Loop's visual builder lets non-engineers compose workflows. Module connections (Vault → Desk, Recap → Loop) are pre-configured.</p>
         <p>For advanced integration: some technical capability helps. Custom connectors, complex conditional logic, and API integrations benefit from someone comfortable with Python/TypeScript.</p>
         <p>Options if you don't have in-house technical staff:</p>
@@ -454,8 +445,8 @@
   <div class="section" id="s4">
     <div class="section-header"><span class="icon">04 · SECURITY</span><h2>Security & Data Protection</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Where is my data stored?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">Where is my data stored?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
         <p>All data is stored on <strong>your own infrastructure</strong> — the servers, cloud accounts, or devices you control. ODW does not have any central servers that store your data.</p>
         <p>You can deploy on:</p>
         <ul>
@@ -467,8 +458,8 @@
         <p>You choose where data lives. It never touches ODW's servers — because there are none.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is my data encrypted?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">Is my data encrypted?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
         <p>Yes:</p>
         <ul>
           <li><strong>At rest:</strong> AES-256 encryption for stored data (databases, files, backups)</li>
@@ -477,8 +468,8 @@
         <p>You control the encryption keys. On cloud infrastructure, use customer-managed keys (CMK) for maximum control.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does ODW handle PII (personally identifiable information)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">How does ODW handle PII (personally identifiable information)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
         <p>ODW is designed so PII never leaves your infrastructure unless you explicitly allow it:</p>
         <ul>
           <li><strong>Local models:</strong> all processing of PII happens on your hardware. Zero exposure.</li>
@@ -489,8 +480,8 @@
         <div class="callout tip"><strong>Best practice</strong>For PII-heavy workloads (healthcare, finance, HR), use local models. Reserve cloud APIs for non-sensitive tasks.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I run ODW with zero internet connectivity?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">Can I run ODW with zero internet connectivity?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
         <p>Yes — full air-gapped deployment is supported. No internet required.</p>
         <p>Requirements for air-gapped mode:</p>
         <ul>
@@ -501,8 +492,8 @@
         <p>Trade-off: you're limited to local model capabilities. No access to frontier model quality (GPT-4, Claude). But for many business use cases, local models are sufficient — and the sovereignty gain is worth it.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I handle data breaches or security incidents?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">How do I handle data breaches or security incidents?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
         <p>Because ODW runs on your infrastructure, you're responsible for incident response. But ODW provides the tools:</p>
         <ul>
           <li><strong>Shield:</strong> audit logs, access control, anomaly detection</li>
@@ -518,8 +509,8 @@
         </ol>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Who has access to my data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">Who has access to my data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
         <p><strong>Only the people you authorize.</strong></p>
         <p>ODW has no access to your data — there are no ODW servers storing it. Access is controlled by:</p>
         <ul>
@@ -530,8 +521,8 @@
         <p>Shield provides the unified access control plane. You define who can see what, and every access event is logged.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does ODW compare to cloud SaaS on security?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">How does ODW compare to cloud SaaS on security?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
         <table>
           <tr><th>Aspect</th><th>Cloud SaaS</th><th>ODW (Sovereign)</th></tr>
           <tr><td>Data location</td><td>Vendor's servers</td><td>Your infrastructure</td></tr>
@@ -545,8 +536,8 @@
         <div class="callout warning"><strong>Trade-off</strong>With sovereign AI, you're responsible for security. Cloud SaaS vendors invest heavily in security teams. With ODW, you need to manage your own security — but you gain absolute control.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does ODW support data residency requirements?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">Does ODW support data residency requirements?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
         <p>Yes. Because you control where ODW is deployed, you control where data lives:</p>
         <ul>
           <li>Deploy in EU data centers for EU customer data (GDPR)</li>
@@ -557,8 +548,8 @@
         <p>Shield can enforce data residency policies — blocking any attempt to route data outside the configured boundary. This is a policy-level guarantee, not just a configuration suggestion.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What about supply chain security?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">What about supply chain security?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
         <p>ODW addresses supply chain risk at multiple levels:</p>
         <ul>
           <li><strong>Open-source code:</strong> auditable by anyone. No hidden backdoors in the application layer.</li>
@@ -582,8 +573,8 @@
   <div class="section" id="s5">
     <div class="section-header"><span class="icon">05 · DEPLOYMENT</span><h2>Deployment & Infrastructure</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What infrastructure do I need to run ODW?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">What infrastructure do I need to run ODW?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
         <p>Requirements depend on modules and model choice:</p>
         <p><strong>Minimal (single module, cloud APIs):</strong></p>
         <ul>
@@ -605,8 +596,8 @@
         <div class="callout tip"><strong>Start small</strong>Deploy one module on a laptop or small server, then scale as needed. You don't need enterprise infrastructure from day one.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I deploy on my existing cloud accounts (AWS, Azure, GCP)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">Can I deploy on my existing cloud accounts (AWS, Azure, GCP)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
         <p>Yes. ODW provides deployment guides and templates for:</p>
         <ul>
           <li><strong>AWS:</strong> EC2, ECS, EKS</li>
@@ -617,8 +608,8 @@
         <p>You deploy ODW in <em>your</em> cloud accounts — you control the infrastructure, the data, and the access policies. ODW doesn't operate any cloud infrastructure on your behalf.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I run ODW on a Mac with Apple Silicon?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">Can I run ODW on a Mac with Apple Silicon?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
         <p>Yes. ODW modules run on macOS with Apple Silicon (M1/M2/M3/M4). Local models run efficiently via MLX or llama.cpp, which are optimized for Apple's Neural Engine.</p>
         <p>This is particularly relevant for:</p>
         <ul>
@@ -629,8 +620,8 @@
         <p>For production deployments serving multiple users, a server or cloud instance is recommended. But for individual use or small teams, a Mac is a viable deployment target.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I update ODW modules?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">How do I update ODW modules?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
         <p>ODW modules are deployed as containers (Docker). Updates are straightforward:</p>
         <ol>
           <li>Pull the latest version from the ODW repository</li>
@@ -641,8 +632,8 @@
         <p>Always test updates in a staging environment before deploying to production.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if my server goes down?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">What happens if my server goes down?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
         <p>Single instance: the module is unavailable until you restore it.</p>
         <p>For high availability:</p>
         <ul>
@@ -658,8 +649,8 @@
         <div class="callout warning"><strong>Important</strong>Sovereignty means you're responsible for backups and disaster recovery. ODW provides the tools, but you need to configure and test your backup strategy.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need Kubernetes or is Docker enough?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">Do I need Kubernetes or is Docker enough?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
         <p>Docker is enough for most deployments. Kubernetes is only needed for:</p>
         <ul>
           <li>High availability across multiple nodes</li>
@@ -670,8 +661,8 @@
         <p>For a single team running a few modules, Docker Compose on a single server is perfectly adequate. Start simple, scale when you need to.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I deploy different modules on different servers?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">Can I deploy different modules on different servers?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
         <p>Yes. Modules are independent services. You can distribute them across your infrastructure however makes sense:</p>
         <ul>
           <li>Vault on a high-storage server (it holds your knowledge base)</li>
@@ -682,8 +673,8 @@
         <p>Modules communicate via REST APIs. As long as they can reach each other on your network, they work together regardless of physical location.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How much storage do I need?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">How much storage do I need?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
         <p>Depends on your usage:</p>
         <ul>
           <li><strong>ODW modules (without local models):</strong> ~5GB for application code, databases, and logs</li>
@@ -695,8 +686,8 @@
         <p>A reasonable starting point: 100GB for a single-module deployment with one local model. Scale storage as your knowledge base and usage grow.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do you provide Docker images and deployment templates?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">Do you provide Docker images and deployment templates?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
         <p>Yes:</p>
         <ul>
           <li><strong>Docker images:</strong> published for each module on Docker Hub / GitHub Container Registry</li>
@@ -714,8 +705,8 @@
   <div class="section" id="s6">
     <div class="section-header"><span class="icon">06 · COMPLIANCE</span><h2>Compliance & Regulations</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Is ODW compliant with GDPR, HIPAA, SOC 2?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">Is ODW compliant with GDPR, HIPAA, SOC 2?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
         <p>ODW is designed to help you comply — but compliance is ultimately your responsibility, because you control the infrastructure.</p>
         <p>ODW provides:</p>
         <ul>
@@ -727,8 +718,8 @@
         <p>For formal certification (SOC 2 audit, HIPAA assessment), engage a third-party auditor. ODW provides the technical controls; the auditor verifies your implementation.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does ODW comply with the EU AI Act?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">Does ODW comply with the EU AI Act?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
         <p>ODW modules are designed to meet EU AI Act requirements for their risk classification:</p>
         <ul>
           <li><strong>High-risk (People — hiring):</strong> human oversight, transparency, audit trails, conformity assessments</li>
@@ -739,8 +730,8 @@
         <div class="callout info"><strong>Note</strong>The EU AI Act is being phased in (2024–2026). ODW tracks the final regulations and updates accordingly.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What about data residency requirements in different countries?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">What about data residency requirements in different countries?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
         <p>Many regulations require data to stay within specific geographic boundaries:</p>
         <ul>
           <li><strong>GDPR:</strong> EU data must stay in the EU (or adequate jurisdictions)</li>
@@ -752,8 +743,8 @@
         <p>Because you control where ODW is deployed, you ensure data residency by deploying in the right jurisdiction. Shield enforces data residency policies — blocking any attempt to route data outside configured boundaries.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need to disclose AI usage to my customers?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">Do I need to disclose AI usage to my customers?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
         <p>Increasingly, yes. Multiple jurisdictions require AI chatbot disclosures:</p>
         <ul>
           <li><strong>EU AI Act:</strong> requires transparency when AI interacts with humans</li>
@@ -769,8 +760,8 @@
         <p>Shield can help generate compliant privacy notices based on your configuration.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does ODW help with audit readiness?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">How does ODW help with audit readiness?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
         <p>Shield turns weeks of audit preparation into minutes:</p>
         <ul>
           <li><strong>Immutable audit logs:</strong> every AI action is logged with timestamp, actor, action, and data accessed</li>
@@ -781,8 +772,8 @@
         <p>Target: produce auditor-ready evidence in under 1 hour (vs. industry baseline of days/weeks).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What about AI-specific regulations (beyond EU AI Act)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">What about AI-specific regulations (beyond EU AI Act)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
         <p>The regulatory landscape is evolving rapidly. ODW is designed to be adaptable:</p>
         <ul>
           <li><strong>US Executive Order on AI (2023):</strong> focuses on safety, security, and trustworthiness. ODW's model-agnostic design and audit trails support compliance.</li>
@@ -793,8 +784,8 @@
         <p>Shield's compliance framework is updated as new regulations emerge. The goal: ODW should make compliance <em>easier</em>, not harder, as the regulatory landscape expands.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can ODW help with vendor risk assessments?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">Can ODW help with vendor risk assessments?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
         <p>Yes. When your procurement team needs to assess ODW as a vendor:</p>
         <ul>
           <li><strong>Security documentation:</strong> architecture diagrams, data flow descriptions, encryption standards</li>
@@ -805,8 +796,8 @@
         <p>The fact that ODW is self-hosted means many vendor risk questions become moot — there's no third-party data processing to assess.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does ODW handle data subject rights (GDPR Article 15-22)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">How does ODW handle data subject rights (GDPR Article 15-22)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
         <p>ODW provides tools to fulfill data subject rights:</p>
         <ul>
           <li><strong>Right of access (Art. 15):</strong> export all data related to a specific individual</li>
@@ -818,8 +809,8 @@
         <p>Shield provides the workflow tools to process these requests systematically and log compliance.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What certifications does ODW hold?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">What certifications does ODW hold?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
         <p>As an open-source, self-hosted product, ODW itself doesn't hold certifications in the traditional SaaS sense (SOC 2 Type II, ISO 27001 certification). Those certifications apply to managed services.</p>
         <p>What ODW provides instead:</p>
         <ul>
@@ -837,8 +828,8 @@
   <div class="section" id="s7">
     <div class="section-header"><span class="icon">07 · MODELS</span><h2>AI Models & Flexibility</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What AI models does ODW support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">What AI models does ODW support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
         <p>ODW is model-agnostic. It supports both local and cloud models:</p>
         <p><strong>Local models (run on your infrastructure):</strong></p>
         <ul>
@@ -857,15 +848,15 @@
         <p>Mix and match — local models for sensitive data, cloud APIs for general tasks.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use my own fine-tuned models?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">Can I use my own fine-tuned models?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
         <p>Yes. ODW supports any model that follows standard APIs (OpenAI-compatible, Hugging Face transformers, etc.).</p>
         <p>If you have a fine-tuned model for your specific domain (legal, medical, financial), deploy it and point ODW modules to it.</p>
         <p>This is a key advantage of sovereign AI — you're not locked into a vendor's model. Use whatever model works best for your use case.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I switch models without disrupting my workflows?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">Can I switch models without disrupting my workflows?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
         <p>Yes. ODW's model-agnostic architecture means workflows reference <strong>capabilities</strong> (summarize, classify, extract), not specific models.</p>
         <p>You can:</p>
         <ul>
@@ -877,8 +868,8 @@
         <p>Switching models is a configuration change, not a code change.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do local models compare to cloud models in quality?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">How do local models compare to cloud models in quality?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
         <p>The gap has narrowed significantly. For many business tasks, local models are sufficient:</p>
         <table>
           <tr><th>Task</th><th>Local (7B–13B)</th><th>Local (70B+)</th><th>Cloud (GPT-4/Claude)</th></tr>
@@ -891,8 +882,8 @@
         <div class="callout tip"><strong>Practical approach</strong>Use local models for high-volume, routine tasks. Use cloud APIs for complex reasoning or creative tasks where quality matters more than sovereignty.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if my preferred cloud model provider goes down?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">What happens if my preferred cloud model provider goes down?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
         <p>ODW's model-agnostic design means you can configure fallback models:</p>
         <ul>
           <li>Primary: cloud API (e.g., OpenAI GPT-4)</li>
@@ -903,8 +894,8 @@
         <p>This is another advantage of having local models in the mix — they're your always-available fallback.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use different models for different modules?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">Can I use different models for different modules?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
         <p>Yes. Each module can be configured independently:</p>
         <ul>
           <li><strong>Vault:</strong> local embedding model + local LLM for RAG (maximum sovereignty for knowledge queries)</li>
@@ -916,8 +907,8 @@
         <p>This gives you fine-grained control over the sovereignty/quality trade-off per use case.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does ODW handle model hallucination?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">How does ODW handle model hallucination?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
         <p>ODW uses multiple strategies to reduce hallucination:</p>
         <ol>
           <li><strong>Vault grounding:</strong> modules answer from your actual documents, not generic training data. Responses include citations to source documents.</li>
@@ -928,8 +919,8 @@
         <p>No system eliminates hallucination entirely. ODW's approach: make hallucination detectable (citations), preventable (confidence thresholds), and recoverable (human escalation).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's the cost of running local models vs. cloud APIs?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">What's the cost of running local models vs. cloud APIs?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
         <p><strong>Local models:</strong></p>
         <ul>
           <li>Upfront: hardware cost (GPU server: $5K–$20K, or use existing Mac/laptop)</li>
@@ -952,8 +943,8 @@
   <div class="section" id="s8">
     <div class="section-header"><span class="icon">08 · LANGUAGES</span><h2>Languages & Localization</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What languages does ODW support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">What languages does ODW support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
         <p>ODW modules support 100+ languages, with particularly strong support for:</p>
         <ul>
           <li><strong>English</strong></li>
@@ -966,8 +957,8 @@
         <p>Vault supports bilingual search (e.g., search in English, find Chinese documents).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's the difference between translation and localization?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">What's the difference between translation and localization?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
         <p><strong>Translation</strong> converts words from one language to another. <strong>Localization</strong> adapts content for a specific market — adjusting tone, idiom, register, cultural references, and contextual framing.</p>
         <p>Example: A US marketing campaign saying "Hit a home run with our product" would be:</p>
         <ul>
@@ -977,8 +968,8 @@
         <p>Pulse does localization, not just translation. The output reads as natively authored in each target language, not like a translation.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Vault search across documents in different languages?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">Can Vault search across documents in different languages?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
         <p>Yes. Vault supports <strong>bilingual and multilingual search</strong>:</p>
         <ul>
           <li>Search in English → find Chinese documents</li>
@@ -989,8 +980,8 @@
         <p>This is critical for businesses operating across markets — a question in English can surface relevant knowledge from documents written in Chinese, Japanese, or any other language in your knowledge base.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Desk and Voice handle multilingual customers?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">Can Desk and Voice handle multilingual customers?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
         <p>Yes. Both Desk and Voice support multilingual conversations:</p>
         <ul>
           <li><strong>Auto-detection:</strong> the AI detects the customer's language and responds in the same language</li>
@@ -1000,8 +991,8 @@
         <p>A customer can message in Cantonese, get a response in Cantonese, drawn from English documentation — all automatically.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Pulse maintain brand voice across languages?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">Does Pulse maintain brand voice across languages?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
         <p>Yes. This is a key differentiator. Pulse is configured with your brand voice guidelines:</p>
         <ul>
           <li>Tone (formal, casual, authoritative, playful)</li>
@@ -1011,8 +1002,8 @@
         <p>When generating content in different languages, Pulse adapts the brand voice to each market's conventions while maintaining consistency. A playful brand in English becomes appropriately playful in Japanese — not a literal translation of the English tone, but a culturally appropriate equivalent.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What about right-to-left languages (Arabic, Hebrew)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">What about right-to-left languages (Arabic, Hebrew)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
         <p>ODW supports RTL languages in both display and content generation:</p>
         <ul>
           <li><strong>UI:</strong> interfaces render correctly for RTL languages</li>
@@ -1023,8 +1014,8 @@
         <p>For markets in the Middle East and North Africa, ODW provides the same sovereign, culturally-aware capabilities as for any other region.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I create content for multiple markets simultaneously?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">Can I create content for multiple markets simultaneously?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
         <p>Yes. Pulse supports batch content generation across markets:</p>
         <ul>
           <li>Write a product announcement in English</li>
@@ -1042,8 +1033,8 @@
   <div class="section" id="s9">
     <div class="section-header"><span class="icon">09 · PRICING</span><h2>Pricing & Licensing</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How much does ODW cost?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">How much does ODW cost?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
         <p>ODW operates on an open-core model:</p>
         <ul>
           <li><strong>Free core:</strong> individual modules with full basic features, no usage limits, no time limits</li>
@@ -1053,14 +1044,14 @@
         <div class="callout tip"><strong>ROI calculation</strong>If ODW replaces $50K/year in SaaS subscriptions (Intercom, Apollo, Otter, etc.) or frees up 20 hours/week of manual work, the tool pays for itself many times over.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is there a free trial?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">Is there a free trial?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
         <p>The free core is available <strong>indefinitely</strong> — no time limit, no credit card required. Deploy and use individual modules for free, forever.</p>
         <p>For the paid tier (cross-module integration, enterprise features), a 30-day trial is available. Contact ODW to get started.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's included in the free tier vs. paid?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">What's included in the free tier vs. paid?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
         <table>
           <tr><th>Feature</th><th>Free</th><th>Paid</th></tr>
           <tr><td>Individual modules</td><td>✅ Full</td><td>✅ Full</td></tr>
@@ -1077,8 +1068,8 @@
         </table>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is ODW really open-source? What license?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">Is ODW really open-source? What license?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
         <p>Yes, the core is open-source. The specific license varies by module but follows open-source standards (typically MIT or Apache 2.0 for the core).</p>
         <p>What "open-core" means in practice:</p>
         <ul>
@@ -1088,8 +1079,8 @@
         <p>The open-source core is genuinely useful on its own. The paid tier adds operational capabilities for larger deployments.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does ODW's pricing compare to the SaaS tools it replaces?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">How does ODW's pricing compare to the SaaS tools it replaces?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
         <p>Typical SaaS costs for a 50-person company:</p>
         <ul>
           <li>Intercom/Zendesk: $5,000–$20,000/year</li>
@@ -1102,15 +1093,15 @@
         <p>ODW replaces these with a single suite. Pricing is based on deployment scale, not per-seat. For most SMBs, ODW is significantly cheaper — and you own your data.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do you charge per seat or per module?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">Do you charge per seat or per module?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
         <p>Pricing is based on <strong>deployment scale</strong>, not per-seat or per-module.</p>
         <p>This is intentional — per-seat pricing penalizes companies for growing their team. Per-module pricing penalizes companies for using more of the suite.</p>
         <p>ODW's model: you pay based on the scale of your deployment (number of instances, HA requirements, support level). Use all 10 modules or just 1 — the pricing model doesn't penalize adoption.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What payment methods do you accept?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">What payment methods do you accept?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
         <p>For the paid tier:</p>
         <ul>
           <li>Bank transfer / wire (for enterprise contracts)</li>
@@ -1120,8 +1111,8 @@
         <p>Annual and multi-year contracts available with discounts. Contact ODW for details.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is there a partner/reseller program?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">Is there a partner/reseller program?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
         <p>Yes. ODW is building a <strong>certified partner network</strong>:</p>
         <ul>
           <li><strong>Deployment partners:</strong> handle setup, configuration, and ongoing management for clients</li>
@@ -1138,8 +1129,8 @@
   <div class="section" id="s10">
     <div class="section-header"><span class="icon">10 · ONBOARDING</span><h2>Getting Started & Onboarding</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How long does it take to get started?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">How long does it take to get started?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
         <p>Depends on deployment complexity:</p>
         <ul>
           <li><strong>Single module, laptop deployment:</strong> under 1 hour</li>
@@ -1149,8 +1140,8 @@
         <p>ODW provides deployment guides, Docker images, and professional onboarding services to accelerate setup.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical staff to deploy ODW?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">Do I need technical staff to deploy ODW?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
         <p>For basic deployment: minimal technical skill needed. If you can run Docker commands, you can deploy ODW.</p>
         <p>For advanced deployment (HA, multi-module, custom integrations): some DevOps capability helps.</p>
         <p>Options if you don't have in-house technical staff:</p>
@@ -1161,8 +1152,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's the onboarding process like?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">What's the onboarding process like?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
         <p>For free tier: self-service. Documentation, guides, and community support.</p>
         <p>For paid tier:</p>
         <ol>
@@ -1175,8 +1166,8 @@
         </ol>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I migrate data from my existing SaaS tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">Can I migrate data from my existing SaaS tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
         <p>Yes. ODW provides data import tools for common migration scenarios:</p>
         <ul>
           <li><strong>Intercom/Zendesk → Desk:</strong> conversation history, customer profiles, knowledge base articles</li>
@@ -1189,8 +1180,8 @@
         <div class="callout tip"><strong>Migration support</strong>Paid tier includes migration assistance. ODW's team helps plan and execute the data transfer to minimize disruption.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do you provide training?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">Do you provide training?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
         <p>Yes, at multiple levels:</p>
         <ul>
           <li><strong>Documentation:</strong> comprehensive guides for each module, including video tutorials</li>
@@ -1201,8 +1192,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What support options are available?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">What support options are available?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
         <table>
           <tr><th>Tier</th><th>Support</th><th>Response Time</th></tr>
           <tr><td>Free</td><td>Community (GitHub, forum)</td><td>Best-effort</td></tr>
@@ -1213,8 +1204,8 @@
         <p>Enterprise support includes proactive monitoring, quarterly business reviews, and priority feature requests.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I start with one module and add more later?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">Can I start with one module and add more later?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
         <p>Absolutely. This is the recommended approach:</p>
         <ol>
           <li>Start with the module that solves your most urgent problem</li>
@@ -1225,8 +1216,8 @@
         <p>There's no pressure to adopt the full suite. Many customers start with one module and expand organically over 6–12 months.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What if I need help choosing which modules to start with?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">What if I need help choosing which modules to start with?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
         <p>Book a discovery call with ODW. We'll assess:</p>
         <ul>
           <li>Your industry and compliance requirements</li>
@@ -1244,8 +1235,8 @@
   <div class="section" id="s11">
     <div class="section-header"><span class="icon">11 · ROADMAP</span><h2>Roadmap & Community</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What's on the ODW roadmap?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-86">What's on the ODW roadmap?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-86"><div class="faq-answer-inner">
         <p>Key areas of development:</p>
         <ul>
           <li><strong>Module releases:</strong> completing the remaining 6 modules (Voice, Pulse, Hunt, People, Books, Shield)</li>
@@ -1257,8 +1248,8 @@
         <p>Roadmap is influenced by community feedback and customer needs. File feature requests on GitHub.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How can I contribute to ODW?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-87">How can I contribute to ODW?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-87"><div class="faq-answer-inner">
         <p>ODW welcomes contributions:</p>
         <ul>
           <li><strong>Code:</strong> bug fixes, features, improvements via GitHub pull requests</li>
@@ -1270,8 +1261,8 @@
         <p>Target: 50+ external PRs/month by month 12. The community is a core part of ODW's development.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is there a community forum or chat?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-88">Is there a community forum or chat?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-88"><div class="faq-answer-inner">
         <p>Yes:</p>
         <ul>
           <li><strong>GitHub Discussions:</strong> feature requests, bug reports, technical questions</li>
@@ -1281,8 +1272,8 @@
         <p>These are the best places to get help, share feedback, and connect with other ODW users.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I request a feature?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-89">How do I request a feature?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-89"><div class="faq-answer-inner">
         <p>File a feature request on the relevant module's GitHub repository. Include:</p>
         <ul>
           <li>What problem you're trying to solve</li>
@@ -1292,8 +1283,8 @@
         <p>Feature requests are reviewed regularly. High-impact requests that serve multiple users are prioritized. Paid tier customers can also submit requests through their account manager.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I customize ODW for my specific industry?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-90">Can I customize ODW for my specific industry?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-90"><div class="faq-answer-inner">
         <p>Yes. ODW is designed to be configurable:</p>
         <ul>
           <li><strong>Healthcare:</strong> HIPAA-compliant handling, medical terminology in Vault</li>
@@ -1305,16 +1296,16 @@
         <p>For deep customization, the open-source code is available. Modify it to fit your exact needs. Or work with ODW's consulting team or a certified partner.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does ODW handle feedback and bug reports?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-91">How does ODW handle feedback and bug reports?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-91"><div class="faq-answer-inner">
         <p><strong>Bug reports:</strong> file on GitHub with reproduction steps. Critical bugs are prioritized and patched quickly.</p>
         <p><strong>Feedback:</strong> share via GitHub Discussions, community forum, or your account manager (paid tier).</p>
         <p><strong>Transparency:</strong> ODW publishes development updates, roadmap changes, and known issues. The community can see what's being worked on and why.</p>
         <p>Paid tier customers get direct access to the product team for feedback and feature discussions.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's the long-term vision for ODW?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-92">What's the long-term vision for ODW?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-92"><div class="faq-answer-inner">
         <p>ODW's long-term vision: become the default sovereign AI platform for business.</p>
         <p>The thesis: as AI becomes more powerful and more regulated, businesses will need AI they can trust — AI they own, control, and audit. Cloud AI works today, but the regulatory, geopolitical, and competitive risks are growing.</p>
         <p>ODW is building for that future:</p>
@@ -1353,7 +1344,9 @@ document.querySelectorAll('.faq-question').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.parentElement;
     item.classList.toggle('open');
-  });
+      const isExpanded = item.classList.contains('open');
+      button.setAttribute('aria-expanded', isExpanded);
+    });
 });
 
 // Expand all
@@ -1385,6 +1378,34 @@ searchInput.addEventListener('input', () => {
   noResults.style.display = visibleCount === 0 ? 'block' : 'none';
   if (query && visibleCount > 0) expandAll();
 });
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
 </script>
 </body>
 </html>

@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desk — 營運決策者常見問題</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
+  <div class="subtitle">Desk 常見問題</div>
+  <h1>Desk 常見問題</h1>
+  <p>自行架設、以 WhatsApp 為核心的 AI 客戶支援 — 為企業領導者提供問題解答，無需技術背景。</p>
+  <span class="last-updated">最後更新：2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">主頁</a>
+    <span class="sep">→</span>
+    <a href="./index.html">常見問題</a>
+    <span class="sep">→</span>
+    <a href="./suite.html">套件</a>
+    <span class="sep">→</span>
+    <span>Desk</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" aria-label="搜尋問題" placeholder="搜尋問題…（例如：「WhatsApp」、「安全」、「費用」、「私隱」）">
+  </div>
+
+  <div class="controls">
+    <button onclick="expandAll()">＋ 全部展開</button>
+    <button onclick="collapseAll()">－ 全部收合</button>
+    <button onclick="window.print()">🖨️ 列印／儲存為 PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>跳至章節</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> 基礎概念</a>
+      <a href="#s2"><span class="num">2</span> WhatsApp 與渠道</a>
+      <a href="#s3"><span class="num">3</span> 我們的解決方案優勢</a>
+      <a href="#s4"><span class="num">4</span> AI 準確度與信任</a>
+      <a href="#s5"><span class="num">5</span> 安全與私隱</a>
+      <a href="#s6"><span class="num">6</span> 知識庫與資料</a>
+      <a href="#s7"><span class="num">7</span> 部署與設定</a>
+      <a href="#s8"><span class="num">8</span> 費用與定價</a>
+      <a href="#s9"><span class="num">9</span> 擴展與營運</a>
+      <a href="#s10"><span class="num">10</span> 品牌語調與安全機制</a>
+      <a href="#s11"><span class="num">11</span> 限制與路線圖</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">沒有問題符合您的搜尋。請嘗試更廣泛的關鍵字。</div>
+
+  <!-- ================= SECTION 1: THE BASICS ================= -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <span class="icon">💬</span>
+      <h2>1. 基礎概念 — 什麼是 Desk？</h2>
+      <span class="count">9 個問題</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-1">用簡單的話解釋，ODW.ai Desk 是什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
+        <p>Desk 是一個在 <strong>WhatsApp</strong>（及其他即時通訊渠道）運行的 AI 驅動客戶支援助理。把它想像成一個從不休息、知識淵博的前台接待員 — 它閱讀您公司的文件，了解您的產品和政策，自動回答客戶問題，全天候服務。</p>
+        <p>當問題對 AI 來說過於複雜或敏感時，它會將對話交給人工客服 — 並提供完整脈絡，讓人工客服無需從頭開始。</p>
+        <p>重要的是，Desk 運行在 <strong>您自己的基礎設施上</strong>。您的客戶對話絕不會觸及第三方伺服器，除非您明確選擇使用雲端 AI 模型。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-2">Desk 要解決什麼問題？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
+        <p>按重要性順序解決三個問題：</p>
+        <ol>
+          <li><strong>資料主權。</strong> 客戶支援對話包含姓名、電話號碼、訂單詳情、健康資訊、財務資料。雲端工具（Intercom、Zendesk AI、Ada）將所有這些資料傳送至第三方伺服器 — 通常位於與歐盟通用資料保護規範、健康保險可攜性與問責性法案或個人資料保護法等資料居住法衝突的司法管轄區。Desk 將所有資料保留在您的伺服器上。</li>
+          <li><strong>WhatsApp 支援不足。</strong> WhatsApp 是美國以外大多數地區的主流支援渠道（20 億以上用戶）。然而大多數自行架設的支援工具都將 WhatsApp 作為附帶功能。Desk 是為 WhatsApp 設計的。</li>
+          <li><strong>重複性問題壓垮團隊。</strong> 大多數支援團隊花費 60-80% 的時間回答相同的問題。Desk 自動化處理這些問題，讓人工專注於複雜、高價值的對話。</li>
+        </ol>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-3">Desk 與 ChatGPT 或其他通用 AI 聊天機器人有何不同？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
+        <p>ChatGPT 對一般網際網路很了解，但對 <strong>您的公司一無所知</strong>。問它「你們的退貨政策是什麼？」它會猜測或拒絕回答。</p>
+        <p>Desk 則相反：它 <strong>深入了解您的文件</strong>。它從您自己的知識庫（產品手冊、政策文件、常見問題）檢索答案，並可引用確切來源。它還以 <strong>您的品牌語調</strong> 說話，遵循 <strong>您的回應政策</strong>，並將資料保留在 <strong>您的伺服器上</strong>。</p>
+        <p>把 ChatGPT 想像成一個聰明的陌生人，而 Desk 是一個讀過您整個員工手冊的訓練有素員工。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-4">「自行架設」是什麼意思，為什麼它很重要？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
+        <p>「自行架設」意味著 Desk 運行在 <strong>您自己的伺服器上</strong> — 要麼是您辦公室的機器，您控制的私有雲（AWS、Azure、GCP），要麼是從託管供應商租用的伺服器。其他人無法存取硬體。</p>
+        <p>這很重要，因為：</p>
+        <ul>
+          <li><strong>私隱：</strong> 客戶對話資料絕不會離開您的基礎設施（除非您選擇將某些查詢路由至雲端 AI 模型）。</li>
+          <li><strong>合規：</strong> 您可以滿足資料居住要求（歐盟通用資料保護規範、健康保險可攜性與問責性法案、個人資料保護法），因為您可以控制資料實際存放的位置。</li>
+          <li><strong>無供應商鎖定：</strong> 您擁有部署。如果您停止支付軟體授權費，您的資料仍然在那裡，可匯出，屬於您。</li>
+        </ul>
+        <div class="callout info">
+          <strong>類比</strong>
+          雲端 SaaS 就像租酒店房間 — 方便，但酒店擁有一切。自行架設就像擁有自己的房子 — 責任更大，但擁有完全控制權。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-5">Desk 中的「對話」是什麼意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
+        <p>對話是客戶與 Desk（或人工客服）之間持續的消息線程。從客戶發送第一條消息開始，到對話被標記為已解決時結束。</p>
+        <p>每個對話都有一個 <strong>狀態</strong>：可以是 <em>進行中</em>（AI 正在處理）、<em>已升級</em>（人工客服已接管）、<em>待處理</em>（等待客戶回覆）或 <em>已解決</em>（已關閉）。狀態機制確保沒有任何事情被遺漏。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-6">「模型無關」是什麼意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
+        <p>「模型無關」意味著 Desk 不強迫您使用一個特定的 AI 引擎。您可以選擇：</p>
+        <ul>
+          <li><strong>本地模型</strong>（例如 Llama、Mistral）— 完全在您自己的硬體上運行。最大私隱，無每條消息成本。</li>
+          <li><strong>前沿模型</strong>（例如 GPT-4、Claude）— 雲端基礎，對複雜問題有更高品質，但資料會離開您的伺服器。</li>
+          <li><strong>混合路由</strong> — Desk 根據查詢自動選擇合適的模型。涉及個人識別資訊的問題保留在本地；複雜推理問題交給前沿模型處理。</li>
+        </ul>
+        <p>您不會被鎖定在任何單一的 AI 供應商。隨時切換模型，無需更改設定。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-7">什麼是 ODW.ai 套件，Desk 如何融入其中？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
+        <p>ODW.ai 是一套為企業設計的 AI 產品。Desk 是該套件中的一個模組。最重要的關聯產品是 <strong>Vault</strong> — 套件的知識庫和文件智能平台。</p>
+        <p>Desk 與 Vault 深度整合：當客戶提問時，Desk 查詢 Vault 以尋找相關文件，然後根據這些文件生成答案。如果您已經使用 Vault，Desk 幾分鐘內就能運作 — 您的知識庫已經存在。</p>
+        <p>Desk 還與套件的其餘部分共用認證（單一登入）、使用者管理和帳單。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-8">Desk 是為誰設計的？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
+        <p>三個主要受眾：</p>
+        <ol>
+          <li><strong>受監管企業</strong>（10-500 名員工）— 醫療診所、律師行、金融科技初創企業、政府合約商、教育機構。這些組織需要資料主權，不能將客戶對話傳送到雲端 SaaS。</li>
+          <li><strong>受嚴格資料本地化法律約束的地區企業</strong> — 歐盟（歐盟通用資料保護規範）、巴西（LGPD）、印度、東南亞（個人資料保護法）。Desk 讓您將資料保留在司法管轄區內。</li>
+          <li><strong>開發人員主導的公司和機構</strong> — 希望白標籤或深度自訂支援堆疊而無供應商鎖定的團隊。</li>
+        </ol>
+        <p>Desk <em>不</em> 為需要 200+ 整合、視覺流程建構器或完整客戶關係管理功能的企業設計。它專注於以主權為核心的 AI 優先支援。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-9">Desk 可以取代我的人工支援團隊嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
+        <p>不可以 — 它也不是為此設計的。Desk <strong>增強</strong> 您的人工團隊，而非取代它。</p>
+        <p>典型結果：Desk 無需人工干預即可處理 60-80% 的對話（重複性問題、常見問題、狀態查詢）。剩餘的 20-40% — 複雜問題、情緒化客戶、邊緣情況 — 會升級至人工客服並提供完整脈絡。</p>
+        <p>目標是讓人類擺脫重複性工作，專注於真正需要同理心和判斷力的高價值對話。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 2: WHATSAPP & CHANNELS ================= -->
+  <div class="section" id="s2">
+    <div class="section-header">
+      <span class="icon">📱</span>
+      <h2>2. WhatsApp 與渠道</h2>
+      <span class="count">9 個問題</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-10">為什麼說 Desk 是「為 WhatsApp 設計」而非僅「相容 WhatsApp」？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
+        <p>大多數開源支援工具（Chatwoot、Botpress）將 WhatsApp 作為附帶功能 — 一個附加到以網頁聊天為核心架構的連接器。這導致體驗不順暢：訊息範本無法正常運作，24 小時視窗未被追蹤，客服交換生硬。</p>
+        <p>Desk 從第一天起就圍繞 WhatsApp 的限制和優勢設計：</p>
+        <ul>
+          <li><strong>24 小時會話視窗</strong> — 原生追蹤。Desk 知道視窗何時過期，並自動切換至範本訊息。</li>
+          <li><strong>訊息範本</strong> — 內建已批准範本管理（訂單確認、預約提醒）。</li>
+          <li><strong>豐富媒體</strong> — 圖像、文件、位置分享都作為一級訊息類型處理。</li>
+          <li><strong>客服交換</strong> — 為 WhatsApp 體驗設計，而非從網頁聊天模式適應而來。</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-11">WhatsApp 整合有哪兩種選項？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
+        <p>Desk 提供 <strong>兩種路徑</strong> 連接 WhatsApp — 沒有其他自行架設方案提供兩者：</p>
+        <table>
+          <thead><tr><th></th><th>WhatsApp Business API</th><th>WhatsApp Baileys 橋接器</th></tr></thead>
+          <tbody>
+            <tr><td><strong>最適合</strong></td><td>企業、受監管業務</td><td>中小企、快速部署</td></tr>
+            <tr><td><strong>需要 Meta 驗證？</strong></td><td>是（Meta 商業管理工具）</td><td>否</td></tr>
+            <tr><td><strong>設定時間</strong></td><td>數小時至數天（驗證）</td><td>&lt;30 分鐘（二維碼配對）</td></tr>
+            <tr><td><strong>來自 Meta 的官方支援</strong></td><td>是</td><td>否（非官方橋接器）</td></tr>
+            <tr><td><strong>合規</strong></td><td>完整企業合規</td><td>適合大多數使用場景</td></tr>
+            <tr><td><strong>等級</strong></td><td>付費</td><td>免費</td></tr>
+          </tbody>
+        </table>
+        <p>如果您需要 Meta 的官方認可（醫療、金融、政府），請選擇 Business API。如果您想在 30 分鐘內測試 Desk 而無需文書工作，請選擇 Baileys 橋接器。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-12">什麼是 WhatsApp Baileys 橋接器？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
+        <p>Baileys 橋接器是一個 <strong>快速啟動 WhatsApp 連接器</strong>，透過連接至 WhatsApp Web 運作 — 類似於您電腦上的 WhatsApp Web/桌面版運作方式。您掃描二維碼，Desk 就可以在該 WhatsApp 號碼上發送和接收訊息。</p>
+        <p><strong>優勢：</strong></p>
+        <ul>
+          <li>無需 Meta 商業驗證</li>
+          <li>30 分鐘內設定完成</li>
+          <li>適用於任何 WhatsApp 帳戶（個人或商業）</li>
+          <li>免費使用</li>
+        </ul>
+        <p><strong>限制：</strong></p>
+        <ul>
+          <li>非官方 — 未獲 Meta 認可</li>
+          <li>會話可能過期（通常 30 天，可自動重新連線）</li>
+          <li>不適合非常高量的部署</li>
+        </ul>
+        <div class="callout tip">
+          <strong>提示</strong>
+          對於原型設計和中小型部署，請使用 Baileys 橋接器。當需要企業合規或規模超過每天約 1,000 個對話時，請切換至官方 Business API。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-13">什麼是 WhatsApp Business API，我如何獲得存取權？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
+        <p>WhatsApp Business API 是 Meta <strong>官方渠道</strong>，讓企業大規模向客戶發送訊息。這是大型公司用於訂單通知、預約提醒和客戶支援的相同 API。</p>
+        <p><strong>如何獲得存取權：</strong></p>
+        <ol>
+          <li>創建 <strong>Meta 商業管理工具</strong> 帳戶（如果您沒有）</li>
+          <li>透過 Meta 驗證您的業務（需要業務文件 — 註冊證書、水電費帳單）</li>
+          <li>透過 Meta 或商業解決方案供應商（BSP）申請 WhatsApp Business API 存取權</li>
+          <li>等待批准（通常 1-5 個工作日）</li>
+        </ol>
+        <p>獲得批准後，Desk 直接連接至 API。您可以選擇官方綠色勾選驗證、訊息範本和完整 Meta 支援。</p>
+        <div class="callout warning">
+          <strong>注意</strong>
+          Meta 按對話收費（而非按訊息）。定價因國家和對話類型（行銷、實用、服務）而異。在大多數市場，預算約為每對話 $0.03-$0.08。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-14">WhatsApp 的「24 小時視窗」是什麼意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
+        <p>WhatsApp Business API 有一項規則：一旦客戶向您發送訊息，您就有 <strong>24 小時</strong> 以自由形式訊息回覆。24 小時後，「會話視窗」關閉，您只能發送 <strong>預先批准的範本訊息</strong>（例如：「您的訂單已發貨」），直到客戶再次向您發送訊息。</p>
+        <p>Desk 會自動追蹤此視窗。如果對話接近 24 小時限制，Desk 會：</p>
+        <ul>
+          <li>針對主動外展切換至範本訊息</li>
+          <li>通知您的客服收件箱會話即將過期</li>
+          <li>為合規審計記錄視窗狀態</li>
+        </ul>
+        <p>您無需手動管理 — Desk 會處理。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-15">除了 WhatsApp，Desk 還支援哪些其他渠道？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
+        <p>Desk 透過 <strong>可插拔適配器系統</strong> 支援多個渠道。目前和計劃中的渠道：</p>
+        <table>
+          <thead><tr><th>渠道</th><th>狀態</th><th>優先級</th></tr></thead>
+          <tbody>
+            <tr><td>WhatsApp Business API</td><td>✅ 可用（最小可行產品）</td><td>一級</td></tr>
+            <tr><td>WhatsApp Baileys 橋接器</td><td>✅ 可用（最小可行產品）</td><td>一級</td></tr>
+            <tr><td>網頁聊天小工具</td><td>✅ 可用（最小可行產品）</td><td>二級</td></tr>
+            <tr><td>電郵（IMAP/SMTP）</td><td>✅ 可用（最小可行產品）</td><td>二級</td></tr>
+            <tr><td>Telegram</td><td>🔜 計劃中（v1.1）</td><td>可選模組</td></tr>
+            <tr><td>Discord</td><td>🔜 計劃中（v1.1）</td><td>可選模組</td></tr>
+            <tr><td>Slack</td><td>🔜 計劃中（v1.1）</td><td>可選模組</td></tr>
+            <tr><td>Signal</td><td>🔜 計劃中（v1.1）</td><td>可選模組</td></tr>
+            <tr><td>iMessage</td><td>🔜 計劃中（v1.1）</td><td>可選模組</td></tr>
+          </tbody>
+        </table>
+        <p>WhatsApp 是主要焦點。其他渠道是您按需啟用的可選模組。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-16">我可以在多個 WhatsApp 號碼上使用 Desk 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
+        <p>可以。Desk 支援 <strong>多個渠道適配器實例</strong>。您可以連接多個 WhatsApp 號碼（例如：一個用於銷售，一個用於支援，一個用於每個地區），並從單一 Desk 部署管理它們。</p>
+        <p>每個適配器實例都有自己的設定、憑證和訊息路由規則。來自不同號碼的對話彼此分開，但在同一個客服收件箱中可見。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-17">Desk 是否支援 WhatsApp 訊息範本？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
+        <p>可以。對於 WhatsApp Business API 連接，Desk 包含 <strong>範本管理</strong>：</p>
+        <ul>
+          <li>創建、編輯和提交範本至 Meta 以供批准</li>
+          <li>追蹤範本批准狀態</li>
+          <li>用於 24 小時視窗外的主動訊息</li>
+          <li>範本變數（例如：<code>{{customer_name}}</code>、<code>{{order_id}}</code>）會根據對話脈絡自動填充</li>
+        </ul>
+        <p>對於 Baileys 橋接器連接，範本訊息不可用（橋接器僅使用自由形式訊息）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-18">客戶可以發送圖像、文件或語音訊息嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
+        <p>可以。Desk 處理 <strong>豐富媒體訊息</strong>：</p>
+        <ul>
+          <li><strong>圖像：</strong> 客戶可以發送照片（例如：損壞的產品）。Desk 可以分析它們或路由至人工客服。</li>
+          <li><strong>文件：</strong> PDF、Word 文件、試算表 — Desk 可以提取文字並在對話中使用。</li>
+          <li><strong>語音訊息：</strong> WhatsApp 語音留言會被轉錄（使用 Whisper 或類似工具）並作為文字處理。</li>
+          <li><strong>位置：</strong> 如果客戶分享其位置，Desk 可以使用它作為脈絡（例如：「查找最近的分行」）。</li>
+        </ul>
+        <p>所有媒體都安全地儲存在您的基礎設施上（符合 S3 的儲存空間或本地檔案系統）。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 3: OUR SOLUTION'S STRENGTHS ================= -->
+  <div class="section" id="s3">
+    <div class="section-header">
+      <span class="icon">🏗️</span>
+      <h2>3. 我們的解決方案優勢與設計</h2>
+      <span class="count">9 個問題</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-19">Desk 相比現成支援工具有哪些主要優勢？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>功能</th><th>Desk（ODW.ai）</th><th>典型替代方案</th></tr></thead>
+          <tbody>
+            <tr><td>資料主權</td><td>✅ 完全自行架設，資料絕不離開您的伺服器</td><td>❌ 雲端 SaaS，資料存放在供應商伺服器</td></tr>
+            <tr><td>WhatsApp 支援</td><td>✅ 一級支援，雙路徑（Business API + Baileys）</td><td>⚠️ 附帶功能，特性有限</td></tr>
+            <tr><td>知識庫</td><td>✅ 深度整合 Vault，RAG 附引用來源</td><td>⚠️ 基礎或專有</td></tr>
+            <tr><td>模型靈活性</td><td>✅ 模型無關（本地 + 前沿）</td><td>❌ 鎖定供應商 AI</td></tr>
+            <tr><td>個人識別資訊保護</td><td>✅ 內建 PII Shield，自動遮蔽</td><td>❌ 手動或無</td></tr>
+            <tr><td>品牌語調</td><td>✅ 可設定角色與安全機制</td><td>❌ 一般機器人回覆</td></tr>
+            <tr><td>合規</td><td>✅ 審計日誌、資料匯出/刪除、保留政策</td><td>⚠️ 有限</td></tr>
+            <tr><td>供應商鎖定</td><td>✅ 無 — 隨時可匯出所有資料</td><td>❌ 專有格式</td></tr>
+          </tbody>
+        </table>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-20">Desk 與 Chatwoot 或 Botpress 相比如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
+        <p>Chatwoot 和 Botpress 都是優秀的開源工具，但它們有不同的設計重點：</p>
+        <table>
+          <thead><tr><th>面向</th><th>Desk</th><th>Chatwoot / Botpress</th></tr></thead>
+          <tbody>
+            <tr><td>主要渠道</td><td>WhatsApp 優先</td><td>網頁聊天優先，WhatsApp 後來加入</td></tr>
+            <tr><td>AI 架構</td><td>模型無關，RAG 搭配 Vault</td><td>基礎 AI 或規則為主</td></tr>
+            <tr><td>知識庫</td><td>與 Vault 深度整合（文件智能）</td><td>基礎常見問題配對或外部整合</td></tr>
+            <tr><td>個人識別資訊處理</td><td>內建 PII Shield，自動遮蔽</td><td>手動或無</td></tr>
+            <tr><td>品牌語調</td><td>可設定角色 + 安全機制</td><td>有限或無</td></tr>
+            <tr><td>套件整合</td><td>ODW.ai 套件的一部分（共用認證、帳單、介面）</td><td>獨立運作</td></tr>
+          </tbody>
+        </table>
+        <p>如果您需要通用、以網頁聊天為核心的工具並有大量整合，請選擇 Chatwoot/Botpress。如果 WhatsApp 是您的主要渠道，且您需要資料主權 + AI 智能，請選擇 Desk。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-21">AI 管線如何運作？（逐步說明）<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
+        <p>當客戶發送訊息時，以下是背後發生的事情：</p>
+        <ol>
+          <li><strong>渠道閘道</strong> — 從 WhatsApp（或其他渠道）接收訊息並標準化格式。</li>
+          <li><strong>訊息路由器</strong> — 識別客戶，載入其對話歷史，並決定：應由 AI 處理還是人工處理？</li>
+          <li><strong>對話管理器</strong> — 儲存訊息，更新對話狀態，並啟動 SLA 計時器（客戶已等待多久？）。</li>
+          <li><strong>PII Shield</strong> — 掃描訊息中的個人識別資訊（姓名、電話號碼、信用卡號碼）。如偵測到個人識別資訊，在傳送至雲端 AI 模型前進行遮蔽，或將查詢僅路由至本地模型。</li>
+          <li><strong>政策引擎</strong> — 檢查訊息是否觸發任何回應政策（例如：競爭對手提及、法律免責聲明）。如觸發硬性規則，立即發送範本回覆。</li>
+          <li><strong>模型路由器</strong> — 根據個人識別資訊偵測、複雜度和您的路由政策，決定使用哪個 AI 模型（本地或前沿）。</li>
+          <li><strong>角色服務</strong> — 以您的品牌語調（語氣、詞彙、注意事項）組合系統提示詞。</li>
+          <li><strong>Vault 客戶端</strong> — 查詢您的知識庫（Vault）以取得相關文件。檢索最相關的 5-10 個片段。</li>
+          <li><strong>AI 引擎</strong> — 將客戶問題 + 檢索到的文件 + 品牌角色傳送至 AI 模型，取得回覆。</li>
+          <li><strong>信心評分器</strong> — 計算 AI 對其答案的信心程度。如信心低於您的門檻值，對話將升級至人工。</li>
+          <li><strong>政策引擎（後檢查）</strong> — 根據您的政策驗證 AI 回覆。如違反規則（例如：提及競爭對手），則重寫或封鎖。</li>
+          <li><strong>外發調度器</strong> — 為 WhatsApp 格式化回覆並發送回客戶。</li>
+        </ol>
+        <p>總延遲：本地模型 <strong>&lt;5 秒</strong>，前沿模型 <strong>&lt;8 秒</strong>。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-22">什麼是 PII Shield，為什麼它很重要？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
+        <p><strong>PII</strong> 代表<em>個人識別資訊</em>（Personally Identifiable Information）— 姓名、電話號碼、電郵地址、信用卡號碼、健康記錄等。</p>
+        <p>PII Shield 是一個<strong>掃描每條訊息</strong>（傳入和傳出）個人識別資訊的組件。當偵測到個人識別資訊時：</p>
+        <ul>
+          <li><strong>遮蔽：</strong> 個人識別資訊在傳送至雲端 AI 模型前被替換為佔位符（例如：「John Smith」→ <code>[NAME]</code>）。</li>
+          <li><strong>路由：</strong> 如偵測到個人識別資訊，查詢自動僅路由至<strong>本地模型</strong> — 絕不觸及雲端 API。確保敏感資料保留在您的伺服器上。</li>
+          <li><strong>覆寫：</strong> 管理員可以設定個人識別資訊模式（例如：新增行業特定識別碼），並在需要時覆寫路由規則。</li>
+        </ul>
+        <div class="callout tip">
+          <strong>為何重要</strong>
+          雲端 AI 供應商（OpenAI、Anthropic）嚴格禁止處理個人識別資訊。如果您不小心將客戶健康資料傳送給 GPT-4，您可能會違反其條款<em>及</em>健康保險可攜性與問責性法案。PII Shield 可自動防止這種情況。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-23">信心路由如何運作？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
+        <p>AI 生成回覆後，Desk 會計算一個<strong>信心分數</strong>（0-100%），顯示 AI 對其答案正確且相關的確定程度。</p>
+        <p>您設定一個<strong>信心門檻值</strong>（例如：70%）。如果 AI 的信心：</p>
+        <ul>
+          <li><strong>高於門檻值：</strong> 回覆自動發送給客戶。</li>
+          <li><strong>低於門檻值：</strong> 對話升級至人工客服。AI 的草稿回覆作為建議顯示給客服，但由人工審閱後發送。</li>
+        </ul>
+        <p>這確保 AI 只處理有信心的問題。複雜、模糊或邊緣情況的問題會交給人工 — 不猜測，不出現幻覺。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-24">當 AI 不知道答案時會發生什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
+        <p>根據您的設定，可能發生三種情況：</p>
+        <ol>
+          <li><strong>升級至人工：</strong> 如信心低於門檻值，對話會升級。人工客服看到問題 + AI 的草稿回覆（如有），可以接管。</li>
+          <li><strong>優雅降級：</strong> AI 可設定為說「我不確定。讓我為您連接一位能幫助您的人工客服」— 然後升級。</li>
+          <li><strong>限制主題模式：</strong> 您可以設定 Desk <em>絕不</em>回答知識庫以外的問題。如果問題無法從您的文件中回答，會立即升級 — 不猜測。</li>
+        </ol>
+        <p>Desk 絕不編造答案。不知道就說不知道，然後轉交。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-25">人工客服接管如何運作？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
+        <p>當對話被升級時（低信心、偵測到個人識別資訊，或客戶要求人工）：</p>
+        <ol>
+          <li><strong>客服收件箱通知：</strong> 對話出現在客服收件箱，附帶標記：「AI 升級 — 低信心」或「偵測到個人識別資訊 — 路由至本地模型」。</li>
+          <li><strong>脈絡轉移：</strong> 人工客服看到完整對話歷史、客戶資料和 AI 的草稿回覆（如有）。</li>
+          <li><strong>接管：</strong> 客服點擊「接管」。從那時起，AI 停止自動回覆。人工處理對話。</li>
+          <li><strong>解決：</strong> 客服解決對話後，標記為「已解決」。該客戶未來的訊息將返回 AI 處理（除非您另行設定）。</li>
+        </ol>
+        <p>客服也可以<strong>主動接管</strong>任何對話 — 無需等待升級。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-26">什麼是客服收件箱？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
+        <p>客服收件箱是一個<strong>網頁介面</strong>，人工客服可以：</p>
+        <ul>
+          <li>查看所有對話（AI 處理、已升級、待處理、已解決）</li>
+          <li>從 AI 接管對話</li>
+          <li>直接回覆客戶</li>
+          <li>透過 WebSocket 查看即時更新（無需重新整理頁面）</li>
+          <li>按狀態、渠道、客戶或標籤篩選對話</li>
+          <li>查看 SLA 計時器（該客戶已等待多久？）</li>
+        </ul>
+        <p>客服收件箱為速度而設計 — 客服可以平行處理多個對話，即時切換，並將 AI 建議的回覆視為草稿。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-27">Desk 提供哪些 SLA 追蹤？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
+        <p>Desk 追蹤兩個關鍵 SLA 指標：</p>
+        <ul>
+          <li><strong>首次回覆時間：</strong> 客戶發送第一條訊息後需要多久才能收到回覆？（目標：AI &lt;5 秒，人工接管 &lt;5 分鐘。）</li>
+          <li><strong>解決時間：</strong> 完全解決對話需要多久？（目標因企業而異。）</li>
+        </ul>
+        <p>SLA 計時器自動執行。如果對話超過您的 SLA 門檻值，Desk 可以：</p>
+        <ul>
+          <li>通知客服收件箱</li>
+          <li>升級至主管</li>
+          <li>記錄 SLA 違規以供報告</li>
+        </ul>
+        <p>您可以在管理員儀表板設定 SLA 門檻值。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 4: AI ACCURACY & TRUST ================= -->
+  <div class="section" id="s4">
+    <div class="section-header">
+      <span class="icon">🎯</span>
+      <h2>4. AI 準確度與信任</h2>
+      <span class="count">8 個問題</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-28">Desk 如何避免幻覺（編造答案）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
+        <p>Desk 使用多層機制防止幻覺：</p>
+        <ol>
+          <li><strong>檢索增強生成（RAG）：</strong> AI 不靠記憶回答。它從您的知識庫（Vault）檢索相關文件，並<em>基於這些文件</em>生成答案。如果文件中沒有答案，AI 會如實說明。</li>
+          <li><strong>信心評分：</strong> 每個回覆都有信心分數。低信心回覆會升級至人工 — 絕不自動發送給客戶。</li>
+          <li><strong>政策安全機制：</strong> 您可以設定 Desk <em>絕不</em>回答知識庫以外的問題（限制主題模式）。不允許猜測。</li>
+          <li><strong>來源引用：</strong> 每個 AI 回覆都包含來源文件的引用。客服（以及客戶，如果您啟用的話）可以透過閱讀原始文件驗證答案。</li>
+          <li><strong>生成後驗證：</strong> 政策引擎根據您的規則檢查每個回覆。如違反政策（例如：提及競爭對手），則重寫或封鎖。</li>
+        </ol>
+        <div class="callout info">
+          <strong>核心原則</strong>
+          Desk 的設計是誠實的。不知道就說不知道。絕不猜測。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-29">如果 AI 給出錯誤答案怎麼辦？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
+        <p>三道防線：</p>
+        <ol>
+          <li><strong>預防：</strong> 信心評分 + 政策安全機制在回覆發送前攔截大多數錯誤。</li>
+          <li><strong>偵測：</strong> 如果客戶說「這是錯的」或「我不同意」，對話會被標記進行人工審閱。</li>
+          <li><strong>糾正：</strong> 人工客服可以接管，糾正答案，並將對話標記為已解決。糾正會被記錄以供未來分析。</li>
+        </ol>
+        <p>您還可以在客服收件箱中審閱 AI 處理的對話，發現規律並改善知識庫。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-30">我可以看到 AI 使用了哪些文件來生成答案嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
+        <p>可以。每個 AI 回覆都包含<strong>來源引用</strong> — 連結至 AI 使用的確切文件和頁碼。這些引用：</p>
+        <ul>
+          <li>在客服收件箱中對人工客服可見</li>
+          <li>可選擇對客戶可見（您可以在設定中啟用/停用）</li>
+          <li>記錄在審計追蹤中以供合規</li>
+        </ul>
+        <p>這種透明度讓您驗證 AI 的答案並建立客戶信任。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-31">AI 有多準確？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
+        <p>準確度取決於三個因素：</p>
+        <ol>
+          <li><strong>知識庫品質：</strong> 如果您的文件清晰、完整且最新，AI 就會準確。垃圾進，垃圾出。</li>
+          <li><strong>模型選擇：</strong> 前沿模型（GPT-4、Claude）比本地模型（Llama、Mistral）更準確，但私隱性較低。</li>
+          <li><strong>設定：</strong> 信心門檻值、政策安全機制和限制主題模式都會影響準確度。</li>
+        </ol>
+        <p>典型結果：<strong>60-80% 的對話</strong>由 AI 解決，無需人工干預。剩餘的 20-40% 升級至人工（因為 AI 不確定，或客戶要求人工）。</p>
+        <div class="callout tip">
+          <strong>提示</strong>
+          從高信心門檻值開始（例如：80%），確保 AI 只處理簡單問題。當您審閱 AI 處理的對話並改善知識庫後，可以逐步降低門檻值。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-32">我可以在上線前測試 AI 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
+        <p>可以。Desk 包含<strong>角色預覽/測試工具</strong>，讓您：</p>
+        <ul>
+          <li>在沙盒環境中模擬客戶對話</li>
+          <li>測試 AI 如何回應特定問題</li>
+          <li>預覽 AI 的語氣和品牌語調</li>
+          <li>驗證政策安全機制是否運作</li>
+        </ul>
+        <p>您還可以以<strong>「影子模式」</strong>運行 Desk — AI 處理真實客戶訊息並生成草稿回覆，但不發送。草稿會被記錄供人工審閱。讓您啟用自動回覆前評估 AI 表現。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-33">Desk 如何處理多輪對話？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
+        <p>Desk 在多個訊息間維持<strong>對話脈絡</strong>。當客戶發送後續問題時，AI 可以存取：</p>
+        <ul>
+          <li>完整對話歷史（之前的訊息）</li>
+          <li>客戶資料（姓名、過去的對話、偏好）</li>
+          <li>之前輪次檢索到的文件</li>
+        </ul>
+        <p>這使 AI 能夠自然地處理複雜的多步驟對話。例如：</p>
+        <ul>
+          <li>客戶：「你們的退貨政策是什麼？」</li>
+          <li>AI：「我們的退貨政策是 30 天…」</li>
+          <li>客戶：「電子產品呢？」</li>
+          <li>AI：「電子產品的退貨期限是 14 天…」（理解「電子產品」指的是退貨政策脈絡）</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-34">Desk 支援哪些語言？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
+        <p>Desk 開箱即用支援<strong>英語和中文</strong>（簡體和繁體）。AI 可以偵測客戶的語言並以相同語言回覆。</p>
+        <p>可以透過以下方式新增其他語言：</p>
+        <ul>
+          <li>設定 AI 模型支援（大多數前沿模型支援 50+ 種語言）</li>
+          <li>新增該語言的知識庫文件</li>
+          <li>為該語言設定品牌角色的語氣和詞彙</li>
+        </ul>
+        <div class="callout warning">
+          <strong>限制</strong>
+          英語 + 中文以外的多語言支援是 v1.1 的延展目標。對於 AI 模型訓練資料中代表性不足的語言，品質可能有所差異。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-35">AI 可以執行操作嗎（例如：建立退款、預約）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
+        <p><strong>v1.0 不支援。</strong> Desk 的設計是<em>回答問題</em>，而非執行交易。這是一個刻意的設計選擇 — 執行操作（建立退款、預約、修改訂單）會引入顯著的複雜性和風險。</p>
+        <p>在 v1.0 中，如果客戶需要執行操作，AI 會升級至人工客服，由人工在您的後端系統中執行操作。</p>
+        <p>生成式操作計劃在未來版本（v1.2+）中推出，但需要明確設定和審批流程以確保安全。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 5: SECURITY & PRIVACY ================= -->
+  <div class="section" id="s5">
+    <div class="section-header">
+      <span class="icon">🔒</span>
+      <h2>5. 安全與私隱</h2>
+      <span class="count">9 個問題</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-36">我的資料儲存在哪裡？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
+        <p>所有資料都儲存在<strong>您自己的基礎設施上</strong>：</p>
+        <ul>
+          <li><strong>對話資料：</strong> PostgreSQL 資料庫（在您的伺服器上）</li>
+          <li><strong>媒體檔案：</strong> 符合 S3 的儲存空間（您的儲存桶）或本地檔案系統</li>
+          <li><strong>知識庫：</strong> Vault（您的部署）</li>
+          <li><strong>設定：</strong> PostgreSQL 資料庫</li>
+          <li><strong>審計日誌：</strong> PostgreSQL 資料庫</li>
+        </ul>
+        <p>沒有任何資料傳送至 ODW.ai 伺服器。除非您明確設定前沿模型路由（即使如此，個人識別資訊會被遮蔽），否則不會傳送至雲端 AI 供應商。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-37">Desk 是否符合歐盟通用資料保護規範、健康保險可攜性與問責性法案、個人資料保護法？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
+        <p>Desk <strong>兼容於</strong>歐盟通用資料保護規範（GDPR）、健康保險可攜性與問責性法案（HIPAA）、個人資料保護法（PDPA）及其他資料保護法規 — 但合規取決於<strong>您如何部署它</strong>。</p>
+        <p>Desk 提供合規所需的工具：</p>
+        <ul>
+          <li><strong>資料主權：</strong> 所有資料保留在您的伺服器上。您可以控制資料實際存放的位置（對資料居住要求很重要）。</li>
+          <li><strong>資料匯出：</strong> 以標準格式（JSON、CSV）匯出所有客戶資料，以供資料主體存取請求。</li>
+          <li><strong>資料刪除：</strong> 根據請求刪除客戶資料（歐盟通用資料保護規範「被遺忘權」）。刪除會記錄在審計追蹤中。</li>
+          <li><strong>保留政策：</strong> 設定資料保留期限（例如：「2 年後刪除對話」）。</li>
+          <li><strong>審計日誌：</strong> 每個 AI 決策、資料存取和設定變更都會被記錄。</li>
+          <li><strong>PII Shield：</strong> 傳送至雲端 AI 模型前自動遮蔽個人識別資訊。</li>
+        </ul>
+        <div class="callout info">
+          <strong>重要</strong>
+          Desk 提供工具，但<em>您</em>負責正確設定並確保您的部署符合法規要求。請就特定合規建議諮詢您的法律團隊。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-38">Desk 使用什麼加密？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
+        <p>Desk 使用業界標準加密：</p>
+        <ul>
+          <li><strong>傳輸中：</strong> 所有網路通訊使用 TLS 1.3（HTTPS、WebSocket、資料庫連線）。</li>
+          <li><strong>靜態：</strong> 資料庫中的敏感資料（例如：客戶個人識別資訊、API 金鑰）使用 AES-256 加密。PostgreSQL 透明資料加密（TDE）或檔案系統加密用於整個資料庫。</li>
+          <li><strong>WhatsApp Baileys 工作階段：</strong> 加密的認證憑證儲存在資料庫中。</li>
+        </ul>
+        <p>您也可以為特定使用場景（例如：醫療保健）啟用<strong>端對端加密</strong>，透過設定額外的加密層。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-39">我可以完全離線運行 Desk（無網路）嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
+        <p><strong>部分可以。</strong> Desk 可以僅使用<strong>本地模型</strong>運行（AI 推理無需網際網路），但仍需要網路用於：</p>
+        <ul>
+          <li><strong>WhatsApp Business API：</strong> 需要網路連接至 Meta 的伺服器。</li>
+          <li><strong>WhatsApp Baileys 橋接器：</strong> 需要網路連接至 WhatsApp Web。</li>
+          <li><strong>授權驗證：</strong> 定期授權檢查（可設定為使用授權檔案進行離線驗證）。</li>
+        </ul>
+        <p>如果您需要<strong>完全離線運行</strong>（例如：空氣隔離網路），您可以：</p>
+        <ul>
+          <li>僅使用本地模型（Ollama、vLLM）</li>
+          <li>使用私人 WhatsApp 橋接器（例如：內部部署 WhatsApp Business API 閘道）</li>
+          <li>使用離線授權驗證</li>
+        </ul>
+        <p>完全離線運行是可能的，但需要自訂設定。詳情請聯絡我們。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-40">Desk 如何處理對話中的個人識別資訊？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
+        <p><strong>PII Shield</strong> 掃描每條訊息中的個人識別資訊：</p>
+        <ul>
+          <li><strong>偵測：</strong> 使用 NER（命名實體識別）模型和正規表示式模式偵測姓名、電話號碼、電郵地址、信用卡號碼、健康記錄等。</li>
+          <li><strong>遮蔽：</strong> 個人識別資訊在傳送至雲端 AI 模型前被替換為佔位符（例如：「John Smith」→ <code>[NAME]</code>）。</li>
+          <li><strong>路由：</strong> 如偵測到個人識別資訊，查詢自動僅路由至本地模型 — 絕不觸及雲端 API。</li>
+          <li><strong>設定：</strong> 管理員可以新增自訂個人識別資訊模式（例如：行業特定識別碼如病患 ID、保單號碼）。</li>
+        </ul>
+        <p>個人識別資訊偵測在<strong>每條訊息</strong>上運行，傳入和傳出。您可以在管理員儀表板設定靈敏度級別（嚴格、適中、寬鬆）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-41">Desk 提供哪些審計追蹤？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
+        <p>Desk 維護每個重要事件的<strong>防篡改審計日誌</strong>：</p>
+        <ul>
+          <li>每個 AI 決策（使用的模型、信心分數、檢索的文件、生成的回覆）</li>
+          <li>每個政策決策（觸發的安全機制、重寫/封鎖的回覆）</li>
+          <li>每次資料存取（誰在何時存取了哪個對話）</li>
+          <li>每次設定變更（誰在何時更改了什麼）</li>
+          <li>每次資料匯出/刪除請求</li>
+        </ul>
+        <p>審計日誌儲存在 PostgreSQL 資料庫中，可匯出至 SIEM 系統（Splunk、ELK）進行分析。日誌是不可變的 — 一旦寫入，無法修改或刪除（只能封存）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-42">我可以匯出或刪除客戶資料嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
+        <p>可以。Desk 提供資料匯出和刪除的<strong>合規工具</strong>：</p>
+        <ul>
+          <li><strong>資料匯出：</strong> 以 JSON 或 CSV 格式匯出特定客戶的所有資料（對話、個人資料、媒體）。適用於歐盟通用資料保護規範「資料主體存取請求」。</li>
+          <li><strong>資料刪除：</strong> 刪除特定客戶的所有資料。刪除是永久性的，記錄在審計追蹤中。適用於歐盟通用資料保護規範「被遺忘權」。</li>
+          <li><strong>批量操作：</strong> 一次匯出或刪除多個客戶的資料。</li>
+          <li><strong>保留政策：</strong> 設定在指定期限後自動刪除資料（例如：「2 年後刪除對話」）。</li>
+        </ul>
+        <p>所有匯出/刪除操作由管理員透過管理員儀表板或 API 執行。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-43">ODW.ai 可以存取我的資料嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
+        <p><strong>不可以。</strong> Desk 是自行架設的。ODW.ai <strong>完全無法</strong>存取您的資料 — 對話、知識庫、設定、審計日誌，一切都保留在您的伺服器上。</p>
+        <p>您的 Desk 部署與 ODW.ai 之間唯一的通訊是：</p>
+        <ul>
+          <li><strong>授權驗證：</strong> 定期檢查以驗證您的授權是否有效（可為離線部署停用）。</li>
+          <li><strong>支援：</strong> 如果您聯繫支援，您可能分享日誌或設定 — 但這是自願的，由您控制。</li>
+        </ul>
+        <p>ODW.ai 無法遠端存取您的資料。沒有「後門」或遠端管理能力。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-44">如果我的伺服器被入侵怎麼辦？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
+        <p>如果您的伺服器被入侵，攻擊者可能潛在存取：</p>
+        <ul>
+          <li>對話資料（客戶訊息、AI 回覆）</li>
+          <li>知識庫文件</li>
+          <li>設定（包括 WhatsApp、AI 模型等的 API 金鑰）</li>
+          <li>審計日誌</li>
+        </ul>
+        <p><strong>緩解措施：</strong></p>
+        <ul>
+          <li><strong>靜態加密：</strong> 即使資料庫檔案被盜，它們也是加密的。</li>
+          <li><strong>網路安全：</strong> 使用防火牆、VPN 和存取控制來限制誰可以存取伺服器。</li>
+          <li><strong>定期備份：</strong> 將資料備份到安全的獨立位置。</li>
+          <li><strong>監控：</strong> 使用審計日誌偵測可疑活動。</li>
+          <li><strong>事件回應：</strong> 如被入侵，更換所有 API 金鑰，更改密碼，並審閱審計日誌以評估洩漏範圍。</li>
+        </ul>
+        <p>Desk 提供安全工具，但<strong>您負責</strong>保護您的基礎設施。如果您不習慣管理伺服器安全，請考慮使用託管託管供應商。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 6: KNOWLEDGE BASE & DATA ================= -->
+  <div class="section" id="s6">
+    <div class="section-header">
+      <span class="icon">📚</span>
+      <h2>6. 知識庫與資料</h2>
+      <span class="count">8 個問題</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-45">Desk 如何存取我公司的知識庫？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
+        <p>Desk 與 <strong>Vault</strong> 整合 — ODW.ai 套件的知識庫和文件智能平台。當客戶提問時：</p>
+        <ol>
+          <li>Desk 將問題傳送至 Vault 的檢索 API。</li>
+          <li>Vault 搜尋其文件語料庫並返回最相關的 5-10 個片段（段落）。</li>
+          <li>Desk 將這些片段包含在 AI 的提示詞中，讓 AI 基於您的文件生成答案。</li>
+        </ol>
+        <p>如果您已經使用 Vault，Desk 幾分鐘內就能運作 — 您的知識庫已經存在。如果您尚未使用 Vault，您需要先設定它（獨立產品）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-46">Vault 支援哪些檔案格式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
+        <p>Vault 支援 <strong>15+ 種檔案格式</strong>：</p>
+        <ul>
+          <li><strong>文件：</strong> PDF、Word（DOCX）、PowerPoint（PPTX）、Excel（XLSX）、純文字（TXT、MD）</li>
+          <li><strong>網頁內容：</strong> HTML、Markdown</li>
+          <li><strong>壓縮檔：</strong> ZIP（解壓並處理內容）</li>
+          <li><strong>媒體：</strong> 圖像（OCR）、音訊/視頻（轉錄）</li>
+          <li><strong>程式碼：</strong> 原始碼檔案（用於技術文件）</li>
+          <li><strong>其他：</strong> CSV、JSON、XML</li>
+        </ul>
+        <p>Vault 使用業界標準的 <strong>PRONOM 格式簽名</strong>識別檔案類型（不僅是副檔名），因此能正確處理錯誤命名的檔案。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-47">如何更新知識庫？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
+        <p>Vault 支援<strong>增量更新</strong>：</p>
+        <ul>
+          <li>新增文件 — 只處理新檔案。</li>
+          <li>更新現有文件 — 只有變更的檔案會被重新處理（透過 SHA-256 雜湊值偵測）。</li>
+          <li>刪除文件 — 立即從知識庫中移除。</li>
+        </ul>
+        <p>您不需要每次更改時重新處理整個知識庫。更新快速高效。</p>
+        <p>您還可以排程<strong>自動同步</strong>來自資料夾（例如：SharePoint、Google Drive、本地檔案系統），讓知識庫自動保持最新。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-48">我可以從知識庫中排除某些文件嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
+        <p>可以。Vault 提供多種排除文件的方式：</p>
+        <ul>
+          <li><strong>資料夾層級排除：</strong> 排除整個資料夾（例如：「HR/Confidential」）。</li>
+          <li><strong>檔案層級排除：</strong> 排除特定檔案（例如：「salary_data.xlsx」）。</li>
+          <li><strong>模式排除：</strong> 排除符合模式的檔案（例如：「*.private」）。</li>
+          <li><strong>預處理審閱：</strong> 處理前，Vault 會生成所有已發現檔案的報告。您可以在索引前審閱並排除敏感檔案。</li>
+        </ul>
+        <p>被排除的檔案絕不會被處理或索引。它們保留在您的檔案系統中，但對 AI 不可見。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-49">Vault 如何處理重複檔案？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
+        <p>Vault 使用<strong>基於 SHA-256 雜湊值的去重</strong>：</p>
+        <ul>
+          <li>每個檔案都以 SHA-256 雜湊值（唯一的數位簽名）指紋化。</li>
+          <li>如果兩個檔案具有相同的雜湊值，它們是相同的 — Vault 只處理一份副本。</li>
+          <li>即使檔案名稱不同或位於不同資料夾，此機制仍然有效。</li>
+        </ul>
+        <p>去重節省處理時間和儲存空間。它還確保 AI 不會以不同名稱多次檢索同一份文件。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-50">什麼是「脈絡檢索」，為什麼它很重要？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
+        <p>當 Vault 處理文件時，它將文件切成小片段（區塊）— 通常是一兩段。但當一個區塊被孤立時，它會失去脈絡。一個寫著「最大值為 8 度」的區塊，不知道它指的是坡度、溫度還是旋轉角度。</p>
+        <p><strong>脈絡檢索</strong>解決了這個問題：在儲存每個區塊之前，Vault 會要求一個小型 AI 模型撰寫一句話的脈絡標籤，例如：「此區塊描述部署手冊第 4 節中送貨機器人的坡度容差。」該標籤隨區塊一起進入向量資料庫。</p>
+        <p>Anthropic 報告使用此技術可<strong>減少 20-30% 的檢索失敗</strong>。Vault 預設實作此功能。這是 Desk 在凌亂的真實文件集合上保持答案準確的最大原因之一。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-51">我可以使用多個知識庫嗎（例如：每個部門一個）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
+        <p>可以。Vault 支援<strong>多個集合</strong>。您可以為以下內容建立獨立集合：</p>
+        <ul>
+          <li>部門（銷售、支援、人力資源、法務）</li>
+          <li>產品（產品 A、產品 B、產品 C）</li>
+          <li>地區（北美、歐洲、亞太）</li>
+          <li>語言（英語、中文、西班牙語）</li>
+        </ul>
+        <p>Desk 可以設定為根據對話脈絡查詢特定集合。例如，如果客戶詢問產品 A，Desk 查詢產品 A 集合。如果他們詢問配送，Desk 查詢支援集合。</p>
+        <p>這確保 AI 檢索最相關的文件，不會混合不同脈絡的資訊。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-52">知識庫可以有多大？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
+        <p>Vault 可以處理<strong>非常大的知識庫</strong>：</p>
+        <ul>
+          <li><strong>文件：</strong> 數千至數萬份文件。</li>
+          <li><strong>區塊：</strong> 數十萬至數百萬個區塊。</li>
+          <li><strong>儲存空間：</strong> 僅受限於您伺服器的磁碟空間和 PostgreSQL/ChromaDB 容量。</li>
+        </ul>
+        <p>效能取決於您的基礎設施。對於非常大的知識庫（10 萬+ 份文件），您可能需要：</p>
+        <ul>
+          <li>使用高性能伺服器（16+ GB RAM、SSD 儲存空間）</li>
+          <li>最佳化 PostgreSQL 和 ChromaDB 效能</li>
+          <li>使用 Redis 快取加速檢索</li>
+        </ul>
+        <p>對於大多數企業（1 千至 1 萬份文件），標準伺服器已足夠。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 7: DEPLOYMENT & SETUP ================= -->
+  <div class="section" id="s7">
+    <div class="section-header">
+      <span class="icon">🚀</span>
+      <h2>7. 部署與設定</h2>
+      <span class="count">9 個問題</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-53">我如何部署 Desk？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
+        <p>Desk 透過 <strong>Docker Compose</strong>（單節點）或 <strong>Kubernetes Helm chart</strong>（叢集）部署。最簡單的路徑：</p>
+        <ol>
+          <li>在伺服器上安裝 Docker 和 Docker Compose。</li>
+          <li>下載 Desk 的 Docker Compose 檔案（<code>docker-compose.yml</code>）。</li>
+          <li>設定環境變數（資料庫憑證、WhatsApp API 金鑰等）。</li>
+          <li>執行 <code>docker-compose up</code>。</li>
+          <li>存取管理員儀表板 <code>http://your-server:8000</code>。</li>
+          <li>完成設定精靈（連接 WhatsApp、Vault、設定 AI 模型）。</li>
+        </ol>
+        <p>總設定時間：Baileys 橋接器 <strong>&lt;30 分鐘</strong>，Business API <strong>&lt;2 小時</strong>（包括 Meta 驗證）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-54">我需要什麼硬體？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
+        <p>硬體需求取決於您的部署：</p>
+        <table>
+          <thead><tr><th>組件</th><th>最低</th><th>建議</th></tr></thead>
+          <tbody>
+            <tr><td><strong>CPU</strong></td><td>4 核心</td><td>8+ 核心</td></tr>
+            <tr><td><strong>RAM</strong></td><td>8 GB</td><td>16+ GB（本地 AI 模型需 32 GB）</td></tr>
+            <tr><td><strong>儲存空間</strong></td><td>50 GB SSD</td><td>200+ GB SSD</td></tr>
+            <tr><td><strong>網路</strong></td><td>100 Mbps</td><td>1 Gbps</td></tr>
+          </tbody>
+        </table>
+        <p><strong>備註：</strong></p>
+        <ul>
+          <li>如果您使用<strong>本地 AI 模型</strong>（Ollama、vLLM），您需要 GPU（NVIDIA RTX 3060+ 或更好）或非常強大的 CPU。</li>
+          <li>如果您僅使用<strong>前沿模型</strong>（OpenAI、Anthropic），您可以在適度伺服器上運行 Desk（4 核心，8 GB RAM）。</li>
+          <li>對於<strong>高量部署</strong>（每天 1,000+ 個對話），使用 Kubernetes 進行水平擴展。</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-55">我可以在雲端伺服器上運行 Desk 嗎（AWS、Azure、GCP）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
+        <p>可以。Desk 可以在任何雲端供應商上運行：</p>
+        <ul>
+          <li><strong>AWS：</strong> EC2、ECS、EKS（Kubernetes）</li>
+          <li><strong>Azure：</strong> VM、Container Instances、AKS（Kubernetes）</li>
+          <li><strong>GCP：</strong> Compute Engine、Cloud Run、GKE（Kubernetes）</li>
+          <li><strong>其他：</strong> DigitalOcean、Linode、Hetzner 等</li>
+        </ul>
+        <p>在雲端伺服器上運行為您提供：</p>
+        <ul>
+          <li>可擴展性（按需新增更多資源）</li>
+          <li>高可用性（多區域部署）</li>
+          <li>託管備份和快照</li>
+        </ul>
+        <p>但請記住：即使在雲端伺服器上，<strong>您控制資料</strong>。它仍然是自行架設的 — ODW.ai 無法存取。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-56">我可以在內部部署運行 Desk 嗎（在辦公室）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
+        <p>可以。Desk 可以在您辦公室的內部部署伺服器上運行。這適用於：</p>
+        <ul>
+          <li>有嚴格資料居住要求的企業（資料必須留在內部部署）</li>
+          <li>有現有伺服器基礎設施的企業</li>
+          <li>希望完全控制硬體和網路的企業</li>
+        </ul>
+        <p><strong>要求：</strong></p>
+        <ul>
+          <li>一台安裝了 Docker 的專用伺服器（或虛擬機器）</li>
+          <li>靜態 IP 位址或網域名稱（用於 WhatsApp webhook）</li>
+          <li>網際網路連線（用於 WhatsApp API、授權驗證）</li>
+          <li>IT 人員管理伺服器（更新、備份、安全）</li>
+        </ul>
+        <p>內部部署為您提供最大控制權，但比雲端部署需要更多 IT 管理負擔。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-57">我需要技術人員來運行 Desk 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
+        <p><strong>初始階段需要。</strong> Desk 是為技術營運人員（熟悉 DevOps）設計的。您需要有人可以：</p>
+        <ul>
+          <li>部署和設定 Docker 容器</li>
+          <li>管理 PostgreSQL 資料庫</li>
+          <li>設定 WhatsApp API 憑證</li>
+          <li>監控伺服器健康和效能</li>
+          <li>執行更新和備份</li>
+        </ul>
+        <p><strong>日常運作</strong>是非技術的：管理員透過網頁儀表板設定系統，客服使用客服收件箱，AI 自動處理對話。</p>
+        <p>如果您沒有技術人員，您可以：</p>
+        <ul>
+          <li>聘請 DevOps 顧問進行初始設定（1-2 天）</li>
+          <li>使用託管託管供應商（我們可以推薦合作夥伴）</li>
+          <li>等待託管 SaaS 服務（計劃在 v2 中推出，尚未推出）</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-58">如何將 Desk 更新到新版本？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
+        <p>更新透過 Docker 執行：</p>
+        <ol>
+          <li>拉取新的 Docker 映像：<code>docker pull odwai/desk:latest</code></li>
+          <li>重新啟動容器：<code>docker-compose down && docker-compose up -d</code></li>
+          <li>資料庫遷移在啟動時自動執行。</li>
+        </ol>
+        <p>總更新時間：<strong>&lt;5 分鐘</strong>（加上重新啟動期間的停機時間）。</p>
+        <p>對於零停機時間更新，使用 Kubernetes 的滾動部署。</p>
+        <div class="callout warning">
+          <strong>重要</strong>
+          更新前務必備份資料庫。雖然遷移經過嚴格測試，但 Bug 可能發生。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-59">我可以白標籤 Desk 嗎（為我的客戶重新品牌化）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
+        <p>可以。Desk 支援<strong>白標籤</strong>：</p>
+        <ul>
+          <li><strong>自訂品牌：</strong> 將 ODW.ai 標誌替換為您的標誌。自訂顏色、字型和使用介面元素。</li>
+          <li><strong>自訂網域：</strong> 在您自己的網域上運行 Desk（例如：<code>support.yourcompany.com</code>）。</li>
+          <li><strong>自訂電郵：</strong> 使用您自己的電郵地址接收通知和警報。</li>
+        </ul>
+        <p>白標籤適用於：</p>
+        <ul>
+          <li>希望向客戶轉售 Desk 的機構</li>
+          <li>希望統一品牌體驗的大型企業</li>
+          <li>希望在其產品中嵌入 AI 支援的 SaaS 公司</li>
+        </ul>
+        <p>白標籤在付費等級中可用。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-60">Desk 是否與我現有的工具整合（CRM、服務台等）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
+        <p><strong>v1.0 不支援。</strong> Desk 設計為具有深度 Vault 整合的獨立支援工具。CRM 整合（Salesforce、HubSpot）、服務台整合（Zendesk、Freshdesk）及其他第三方連接器在 <strong>v1.0 的範圍之外</strong>。</p>
+        <p>然而，Desk 提供 <strong>REST API</strong>，您可以用於建立自訂整合：</p>
+        <ul>
+          <li>將對話資料匯出至您的 CRM</li>
+          <li>從您的資料庫匯入客戶資料</li>
+          <li>在其他系統中觸發工作流程（例如：當對話升級時建立工單）</li>
+        </ul>
+        <p>預建整合計劃在 v1.2+ 中根據客戶需求推出。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-61">設定精靈是什麼，如何運作？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
+        <p><strong>設定精靈</strong>是逐步指南，帶您完成初始設定：</p>
+        <ol>
+          <li><strong>歡迎：</strong> Desk 簡介和設定流程概述。</li>
+          <li><strong>WhatsApp 連接：</strong> 連接 WhatsApp Business API 或 Baileys 橋接器。測試發送/接收訊息。</li>
+          <li><strong>Vault 連接：</strong> 連接至您的 Vault 部署。測試知識檢索。</li>
+          <li><strong>AI 模型設定：</strong> 選擇本地模型、前沿模型或混合路由。測試 AI 推理。</li>
+          <li><strong>品牌角色：</strong> 設定您的品牌語調（語氣、詞彙、注意事項）。預覽 AI 的聲音。</li>
+          <li><strong>回應政策：</strong> 設定安全機制（競爭對手提及、法律免責聲明等）。</li>
+          <li><strong>上線：</strong> 啟用自動回覆並開始處理對話。</li>
+        </ol>
+        <p>精靈在繼續前驗證每個步驟，讓您在上線前知道一切運作正常。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 8: COST & PRICING ================= -->
+  <div class="section" id="s8">
+    <div class="section-header">
+      <span class="icon">💰</span>
+      <h2>8. 費用與定價</h2>
+      <span class="count">8 個問題</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-62">Desk 費用是多少？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
+        <p>Desk 採用<strong>免費增值模式</strong>：</p>
+        <table>
+          <thead><tr><th>等級</th><th>價格</th><th>包含</th></tr></thead>
+          <tbody>
+            <tr><td><strong>免費</strong></td><td>$0</td><td>自行架設聊天機器人、網頁聊天 + 電郵渠道、單一客服、基礎 Vault 整合</td></tr>
+            <tr><td><strong>付費</strong></td><td>約 $250/月（說明性質）</td><td>WhatsApp Business 連接器、多客服路由、進階合規、SLA 支援</td></tr>
+          </tbody>
+        </table>
+        <p><strong>額外成本：</strong></p>
+        <ul>
+          <li><strong>伺服器託管：</strong> 每月 $20-$200，取決於您的基礎設施（雲端或內部部署）。</li>
+          <li><strong>WhatsApp Business API：</strong> Meta 按對話收費（每對話約 $0.03-$0.08，因國家而異）。</li>
+          <li><strong>前沿 AI 模型：</strong> 如果使用 OpenAI/Anthropic，按 token 收費（每對話約 $0.01-$0.03）。</li>
+          <li><strong>本地 AI 模型：</strong> 免費（但需要 GPU 硬體）。</li>
+        </ul>
+        <div class="callout info">
+          <strong>備註</strong>
+          定價為說明性質，可能會變更。請聯絡我們了解當前定價和自訂報價。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-63">免費等級包含什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
+        <p>免費等級包括：</p>
+        <ul>
+          <li><strong>渠道：</strong> 網頁聊天小工具 + 電郵（IMAP/SMTP）。WhatsApp Baileys 橋接器也是免費的。</li>
+          <li><strong>AI：</strong> 單一 AI 角色、基礎 Vault 整合、本地模型支援。</li>
+          <li><strong>客服：</strong> 單一客服模式（一個 AI 角色，無多客服路由）。</li>
+          <li><strong>功能：</strong> 基礎對話管理、客服收件箱、管理員儀表板。</li>
+        </ul>
+        <p>免費等級是<strong>功能完整的</strong> — 不是試用版或有限演示。您可以在免費等級上運行生產支援運作。</p>
+        <p><strong>不包含</strong>的項目：WhatsApp Business API（付費）、多客服路由（付費）、進階合規功能（付費）、SLA 支援（付費）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-64">付費等級包含什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
+        <p>付費等級新增：</p>
+        <ul>
+          <li><strong>WhatsApp Business API：</strong> 官方 Meta 整合（需要 Meta 驗證）。</li>
+          <li><strong>多客服路由：</strong> 不同主題的不同 AI 角色（例如：銷售機器人、支援機器人）。</li>
+          <li><strong>進階合規：</strong> 審計匯出、資料保留政策、歐盟通用資料保護規範/健康保險可攜性與問責性法案工具。</li>
+          <li><strong>SLA 支援：</strong> 優先 Bug 修復、保證回應時間、專用支援渠道。</li>
+          <li><strong>白標籤：</strong> 自訂品牌、自訂網域。</li>
+        </ul>
+        <p>付費等級適用於需要企業功能、官方 WhatsApp 整合或專業支援的企業。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-65">本地模型與前沿模型定價比較如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>模型類型</th><th>每對話成本</th><th>私隱</th><th>品質</th></tr></thead>
+          <tbody>
+            <tr><td><strong>本地（Ollama、vLLM）</strong></td><td>$0（免費）</td><td>✅ 最大（資料絕不離開您的伺服器）</td><td>良好（取決於模型）</td></tr>
+            <tr><td><strong>前沿（OpenAI、Anthropic）</strong></td><td>約 $0.01-$0.03</td><td>❌ 資料傳送至雲端供應商</td><td>✅ 優秀</td></tr>
+            <tr><td><strong>混合（自動路由）</strong></td><td>約 $0.005-$0.015（平均）</td><td>⚠️ 混合（個人識別資訊保留在本地）</td><td>✅ 非常好</td></tr>
+          </tbody>
+        </table>
+        <p><strong>建議：</strong> 從混合路由開始。對簡單問題使用本地模型（常見問題、狀態查詢），對複雜問題使用前沿模型（疑難排解、邊緣情況）。這平衡了成本、私隱和品質。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-66">有隱藏成本嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
+        <p>沒有隱藏成本。總擁有成本包括：</p>
+        <ul>
+          <li><strong>Desk 授權：</strong> 免費或付費等級（見上文）。</li>
+          <li><strong>伺服器託管：</strong> 您的基礎設施成本（雲端或內部部署）。</li>
+          <li><strong>WhatsApp API：</strong> Meta 的每對話費用（如果使用 Business API）。</li>
+          <li><strong>前沿 AI 模型：</strong> OpenAI/Anthropic 的每 token 費用（如果使用前沿模型）。</li>
+        </ul>
+        <p>就是這些。沒有設定費、沒有每使用者費、沒有意外費用。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-67">有免費試用嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
+        <p><strong>免費等級</strong>實際上是永久免費試用 — 無時間限制，無需信用卡。您可以無限期運行免費等級。</p>
+        <p>如果您想測試付費等級功能（WhatsApp Business API、多客服路由等），我們提供付費等級的 <strong>14 天免費試用</strong>。無需信用卡。試用結束後，您可以降級至免費等級或訂閱。</p>
+        <p>請聯絡我們開始免費試用。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-68">你們接受哪些付款方式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
+        <p>我們接受：</p>
+        <ul>
+          <li><strong>信用卡/扣帳卡：</strong> Visa、Mastercard、American Express（透過 Stripe）。</li>
+          <li><strong>銀行轉帳：</strong> 適用於年度訂閱或大型部署。</li>
+          <li><strong>加密貨幣：</strong> 比特幣、以太坊、USDC（適合注重私隱的客戶）。</li>
+        </ul>
+        <p>年度訂閱可開發票。詳情請聯絡我們。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-69">如果不滿意可以退款嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
+        <p>可以。我們為付費訂閱提供 <strong>30 天退款保證</strong>。如果您在前 30 天內不滿意，請聯絡我們獲得全額退款 — 無須解釋。</p>
+        <p>30 天後，您可以隨時取消。您將繼續擁有存取權直到帳單週期結束，但部分月份不提供退款。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 9: SCALING & OPERATIONS ================= -->
+  <div class="section" id="s9">
+    <div class="section-header">
+      <span class="icon">📈</span>
+      <h2>9. 擴展與營運</h2>
+      <span class="count">8 個問題</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-70">Desk 可以處理多少對話？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
+        <p>Desk 的設計具有可擴展性：</p>
+        <ul>
+          <li><strong>單節點（Docker Compose）：</strong> 約 1,000 個並發對話，約 10,000 條訊息/小時。</li>
+          <li><strong>叢集（Kubernetes）：</strong> 10,000+ 個並發對話，約 100,000 條訊息/小時（水平擴展）。</li>
+        </ul>
+        <p>效能取決於您的基礎設施（CPU、RAM、資料庫調優）和 AI 模型延遲。對於非常高量的部署（每天 10 萬+ 個對話），我們建議使用 Kubernetes 搭配自動擴展。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-71">Desk 可以同時處理多種語言嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
+        <p>可以。Desk 可以同時處理<strong>多種語言的對話</strong>。AI 偵測客戶的語言並以相同語言回覆。</p>
+        <p>為獲得最佳效果：</p>
+        <ul>
+          <li>在所有支援的語言中新增知識庫文件。</li>
+          <li>為每種語言設定品牌角色（語氣和詞彙可能不同）。</li>
+          <li>使用前沿模型（GPT-4、Claude）獲得最佳多語言品質。</li>
+        </ul>
+        <p>開箱即用，Desk 支援英語和中文（簡體 + 繁體）。可以透過設定 AI 模型和知識庫新增其他語言。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-72">我可以運行多個 AI 角色嗎（例如：一個用於銷售，一個用於支援）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
+        <p><strong>可以，在付費等級中。</strong>多客服路由讓您為不同主題或渠道設定不同的 AI 角色：</p>
+        <ul>
+          <li><strong>銷售機器人：</strong> 樂觀、說服力強，專注於產品優勢。</li>
+          <li><strong>支援機器人：</strong> 有同理心、技術性，專注於解決問題。</li>
+          <li><strong>帳單機器人：</strong> 正式、精確，專注於準確性。</li>
+        </ul>
+        <p>每個角色有自己的品牌語調、知識庫集合和回應政策。對話根據意圖偵測或渠道路由至適當的角色。</p>
+        <p>免費等級僅支援單一 AI 角色。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-73">如何監控 Desk 的效能？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
+        <p>Desk 提供<strong>內建監控</strong>：</p>
+        <ul>
+          <li><strong>管理員儀表板：</strong> 即時指標（處理的對話、AI 解決率、平均回應時間、升級率）。</li>
+          <li><strong>健康檢查：</strong> API 端點（<code>/health</code>）供監控工具使用（Prometheus、Datadog 等）。</li>
+          <li><strong>日誌：</strong> 每個重要事件的結構化日誌（JSON 格式）。可匯出至 SIEM 系統。</li>
+          <li><strong>指標：</strong> 符合 Prometheus 的指標端點（<code>/metrics</code>）供 Grafana 儀表板使用。</li>
+        </ul>
+        <p>對於 Kubernetes 部署，我們提供開箱即用的 <strong>Grafana 儀表板</strong> — 所有關鍵指標的預配置視覺化。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-74">如何備份我的資料？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
+        <p>Desk 將所有資料儲存在 PostgreSQL 和符合 S3 的儲存空間中。兩者都需要備份：</p>
+        <ul>
+          <li><strong>PostgreSQL：</strong> 使用 <code>pg_dump</code> 進行邏輯備份，或使用檔案系統快照進行實體備份。排程每日備份至獨立位置（例如：S3、另一台伺服器）。</li>
+          <li><strong>S3 儲存空間：</strong> 啟用版本控制和跨區域複寫。或使用符合 S3 的備份工具（rclone、restic）。</li>
+        </ul>
+        <p>Desk 還提供<strong>備份和還原工具</strong>：</p>
+        <ul>
+          <li><code>desk backup</code> — 建立完整備份（資料庫 + 媒體檔案）作為單一封存檔。</li>
+          <li><code>desk restore</code> — 從備份封存檔還原。</li>
+        </ul>
+        <div class="callout tip">
+          <strong>提示</strong>
+          定期測試您的備份。從未還原過的備份是不值得信任的備份。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-75">如果 Desk 宕機怎麼辦？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
+        <p>如果 Desk 宕機：</p>
+        <ul>
+          <li><strong>WhatsApp 訊息：</strong> 由 WhatsApp 排隊，在 Desk 重新上線時送達（在 24 小時視窗內）。</li>
+          <li><strong>網頁聊天訊息：</strong> 遺失（網頁聊天不排隊訊息）。請考慮在您的網站上顯示「我們已離線」訊息。</li>
+          <li><strong>電郵訊息：</strong> 由寄件者的電郵伺服器排隊，在 Desk 重新上線時送達。</li>
+        </ul>
+        <p><strong>高可用性：</strong> 對於關鍵任務部署，使用 Kubernetes 搭配多個副本。如果一個副本故障，流量自動路由至健康副本。</p>
+        <p><strong>監控：</strong> 設定警報（電郵、Slack、PagerDuty），在 Desk 宕機時立即通知您。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-76">如何訓練我的團隊使用 Desk？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
+        <p>Desk 的設計直覺易用，但我們提供培訓資源：</p>
+        <ul>
+          <li><strong>文件：</strong> 為管理員和客服提供全面的用戶指南。</li>
+          <li><strong>影片教學：</strong> 關鍵功能的逐步導覽。</li>
+          <li><strong>入門培訓：</strong> 對於付費客戶，我們提供 1 小時的入門培訓（遠端），帶您的團隊了解系統。</li>
+          <li><strong>支援：</strong> 付費客戶透過電郵/聊天獲得優先支援。</li>
+        </ul>
+        <p>大多數團隊在 1-2 小時的培訓後即可投入運作。客服收件箱特別直覺 — 客服可以立即開始處理對話。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-77">我可以自訂 Desk 的行為嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
+        <p>可以。Desk 具有高度可設定性：</p>
+        <ul>
+          <li><strong>品牌角色：</strong> 設定語氣、詞彙、正式程度、注意事項。讓 Desk 聽起來像您的品牌。</li>
+          <li><strong>回應政策：</strong> 設定安全機制（競爭對手提及、法律免責聲明、限制主題）。</li>
+          <li><strong>路由規則：</strong> 設定哪些對話由 AI 處理，哪些由人工客服處理。設定信心門檻值。</li>
+          <li><strong>SLA 計時器：</strong> 設定首次回覆和解決時間目標。</li>
+          <li><strong>PII 偵測：</strong> 新增自訂個人識別資訊模式（例如：行業特定識別碼）。</li>
+          <li><strong>知識庫：</strong> 管理 AI 可以存取的文件。排除敏感檔案。</li>
+        </ul>
+        <p>所有設定透過管理員儀表板完成 — 無需更改程式碼。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 10: BRAND VOICE & GUARDRAILS ================= -->
+  <div class="section" id="s10">
+    <div class="section-header">
+      <span class="icon">🎨</span>
+      <h2>10. 品牌語調與安全機制</h2>
+      <span class="count">7 個問題</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-78">我可以讓 Desk 聽起來像我的品牌嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
+        <p>可以。Desk 包含<strong>品牌角色</strong>系統，讓您設定：</p>
+        <ul>
+          <li><strong>語氣：</strong> 友善、專業、正式、隨意、有同理心等。</li>
+          <li><strong>詞彙：</strong> 行業特定術語、行話、您的團隊使用的縮寫。</li>
+          <li><strong>正式程度：</strong> AI 應該多正式或多隨意。</li>
+          <li><strong>注意事項：</strong> 要使用或避免的特定短語。（例如：「始終說『我們』而非『我』」、「絕不使用『便宜』這個詞 — 改說『實惠』」。）</li>
+          <li><strong>少樣本示例：</strong> 提供示範您品牌語調的示例對話。</li>
+        </ul>
+        <p>品牌角色注入每個 AI 回覆中，讓 Desk 一致地代表您的品牌 — 無論是接受預訂的餐廳還是提供法律資訊的律師行。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-79">什麼是回應政策（安全機制）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
+        <p>回應政策是<strong>控制 AI 可以說什麼和不可以說什麼的規則</strong>。例如：</p>
+        <ul>
+          <li><strong>競爭對手提及：</strong> 如果客戶詢問競爭對手，AI 重新導向：「我不太適合將我們與[競爭對手]比較，但我可以告訴您我們的優勢…」</li>
+          <li><strong>定價問題：</strong> 如果客戶詢問定價，AI 重新導向至人工：「定價取決於您的具體需求。讓我為您連接我們的銷售團隊。」</li>
+          <li><strong>法律/醫療免責聲明：</strong> 如果客戶尋求法律或醫療建議，AI 新增免責聲明：「我是 AI 助理，不是律師/醫生。此資訊僅供一般參考。請就您的具體情況諮詢專業人士。」</li>
+          <li><strong>限制主題：</strong> 某些主題是禁止的（例如：政治、宗教）。如果客戶提出限制主題，AI 會重新導向或升級。</li>
+        </ul>
+        <p>政策由<strong>政策引擎</strong>執行，在 AI 生成前後運行。每個政策決策都記錄在審計追蹤中。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-80">我可以在上線前測試品牌角色嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
+        <p>可以。Desk 包含<strong>角色預覽/測試工具</strong>，讓您：</p>
+        <ul>
+          <li>在沙盒環境中模擬客戶對話。</li>
+          <li>測試 AI 如何回應特定問題。</li>
+          <li>預覽 AI 的語氣和品牌語調。</li>
+          <li>驗證回應政策是否正確運作。</li>
+        </ul>
+        <p>您可以反覆調整品牌角色，直到滿意為止。滿意後，即可部署至生產環境。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-81">我可以使用微調 AI 模型來實現我的品牌語調嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
+        <p><strong>可以，在 v1.1 中（付費等級）。</strong> Desk 支援載入 <strong>LoRA/QLoRA 適配器</strong> — 微調的模型擴充功能，在模型層面（而非僅提示詞層面）編碼您的品牌語調。</p>
+        <p>運作方式：</p>
+        <ol>
+          <li>您在外部訓練 LoRA 適配器（使用您自己的對話資料、品牌指南等）。</li>
+          <li>您將適配器上傳至 Desk。</li>
+          <li>Desk 載入適配器並用於推理。</li>
+        </ol>
+        <p>微調模型比基於提示詞的角色提供更<strong>一致的品牌語調</strong>，特別是對於複雜或細緻的品牌。</p>
+        <div class="callout warning">
+          <strong>限制</strong>
+          Desk 消費（而非產生）微調產物。您負責在外部訓練 LoRA 適配器。我們提供文件和支援，但訓練不包含在標準服務中。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-82">如果 AI 違反回應政策會發生什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
+        <p><strong>政策引擎</strong>執行兩次檢查：</p>
+        <ol>
+          <li><strong>生成前掛鉤：</strong> AI 生成回覆前，政策引擎檢查客戶訊息是否觸發任何政策（例如：競爭對手提及）。如觸發硬性規則，立即發送範本回覆 — 跳過 AI。</li>
+          <li><strong>生成後掛鉤：</strong> AI 生成回覆後，政策引擎根據現行政策驗證。如違反規則（例如：提及競爭對手），回覆會：
+            <ul>
+              <li><strong>重寫：</strong> 要求 AI 在不違規的情況下重新生成回覆。</li>
+              <li><strong>封鎖：</strong> 改為發送範本回覆。</li>
+              <li><strong>升級：</strong> 對話升級至人工客服。</li>
+            </ul>
+          </li>
+        </ol>
+        <p>每個政策決策都記錄在審計追蹤中，讓您可以審閱發生了什麼以及原因。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-83">我可以為不同渠道設定不同的品牌角色嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
+        <p><strong>v1.0 不支援。</strong>在 v1.0 中，您為每個 Desk 部署設定單一品牌角色。所有渠道（WhatsApp、網頁聊天、電郵）使用相同的角色。</p>
+        <p>多角色支援（不同渠道或主題的不同角色）計劃在 v1.1 中推出（付費等級）。這將允許您：</p>
+        <ul>
+          <li>在 WhatsApp 上使用隨意角色，在電郵上使用正式角色。</li>
+          <li>對產品查詢使用銷售導向角色，對疑難排解使用支援導向角色。</li>
+          <li>為不同地區或語言使用不同角色。</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-84">我可以版本控制和回滾品牌角色變更嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
+        <p><strong>可以，在 v1.1 中。</strong>品牌角色版本控制讓您：</p>
+        <ul>
+          <li>儲存品牌角色的多個版本。</li>
+          <li>並排比較版本。</li>
+          <li>如果變更不成功，回滾至先前版本。</li>
+        </ul>
+        <p>這適用於：</p>
+        <ul>
+          <li>測試新角色而不影響生產設定。</li>
+          <li>如果變更導致問題，回復至先前角色。</li>
+          <li>審計誰在何時更改了什麼。</li>
+        </ul>
+        <p>在 v1.0 中，您可以手動匯出/匯入角色設定，但沒有內建版本控制。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 11: LIMITATIONS & ROADMAP ================= -->
+  <div class="section" id="s11">
+    <div class="section-header">
+      <span class="icon">🚧</span>
+      <h2>11. 限制與路線圖</h2>
+      <span class="count">8 個問題</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-85">Desk（目前）不能做什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
+        <p>Desk 功能強大，但在 v1.0 中有以下限制：</p>
+        <ul>
+          <li><strong>無生成式操作：</strong> Desk 回答問題但不執行交易（建立退款、預約、修改訂單）。計劃在 v1.2+ 中推出。</li>
+          <li><strong>無視覺流程建構器：</strong> 您無法拖放來設計對話流程。Desk 是 AI 優先，非規則優先。</li>
+          <li><strong>整合有限：</strong> v1.0 中沒有預建的 CRM、服務台或分析整合。REST API 可用於自訂整合。</li>
+          <li><strong>單一角色（免費等級）：</strong>免費等級僅支援一個 AI 角色。多角色在付費等級中。</li>
+          <li><strong>渠道有限：</strong> 僅支援 WhatsApp、網頁聊天和電郵。Telegram、Discord、Slack、Signal、iMessage 計劃在 v1.1 中推出。</li>
+          <li><strong>無流動管理應用程式：</strong> 管理員儀表板僅限網頁。沒有原生流動應用程式。</li>
+          <li><strong>無多租戶 SaaS：</strong> Desk 僅限自行架設。我們（目前）不提供託管雲端版本。</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-86">你們什麼時候會新增 Telegram、Discord、Slack 支援？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-86"><div class="faq-answer-inner">
+        <p>Telegram、Discord、Slack、Signal 和 iMessage 適配器計劃在 <strong>v1.1（2026 年第四季）</strong>中推出。它們是您按需啟用的可選模組。</p>
+        <p>渠道適配器外掛程式系統已經就位 — 新增新渠道是實作適配器介面的問題，而非架構變更。</p>
+        <p>如果您緊急需要特定渠道，請聯絡我們。我們可能會根據客戶需求優先處理。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-87">Desk 將來會支援生成式操作嗎（例如：建立退款）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-87"><div class="faq-answer-inner">
+        <p><strong>計劃在 v1.2+ 中推出。</strong>生成式操作（執行交易如建立退款、預約、修改訂單）是一個主要功能，但它們需要重要的安全和審批流程。</p>
+        <p>實作後，生成式操作將：</p>
+        <ul>
+          <li>需要明確設定和審批流程。</li>
+          <li>在審計追蹤中記錄每個操作。</li>
+          <li>支援關鍵操作的回滾（撤銷）。</li>
+          <li>為可選 — 如果您只需要問答，可以完全停用生成式操作。</li>
+        </ul>
+        <p>目前尚無具體發布日期。我們優先考慮 v1.0/v1.1 的穩定性和安全性。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-88">你們會提供託管 SaaS 版本（由 ODW.ai 託管）嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-88"><div class="faq-answer-inner">
+        <p><strong>v1.0 或 v1.1 中不會。</strong> Desk 僅限自行架設。我們相信自行架設對我們的目標市場（受監管企業、資料敏感脈絡）是正確的選擇。</p>
+        <p>託管 SaaS 服務正在<strong> v2+ </strong>中考慮，但尚未承諾。如果有足夠需求，我們可能會提供混合模式：敏感資料自行架設，非敏感工作負載託管。</p>
+        <p>如果您現在需要託管解決方案，我們可以推薦合作夥伴託管供應商為您管理 Desk。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-89">有供應商鎖定的風險嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-89"><div class="faq-answer-inner">
+        <p><strong>沒有。</strong> Desk 的設計避免供應商鎖定：</p>
+        <ul>
+          <li><strong>資料可攜性：</strong> 以標準格式（JSON、CSV）匯出所有資料（對話、知識庫、設定）。無專有格式。</li>
+          <li><strong>模型靈活性：</strong> 隨時切換 AI 模型（本地 ↔ 前沿，OpenAI ↔ Anthropic ↔ 本地）。不鎖定任何 AI 供應商。</li>
+          <li><strong>自行架設：</strong> 您擁有部署。如果您停止支付授權費，您的資料仍然在那裡，可匯出，屬於您。</li>
+          <li><strong>開放標準：</strong> Desk 盡可能使用開放標準（PostgreSQL、Redis、Docker、Kubernetes）。無專有基礎設施。</li>
+        </ul>
+        <p>您可以隨時離開 Desk。我們寧願贏得您的業務，而非困住您。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-90">未來 12 個月的路線圖是什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-90"><div class="faq-answer-inner">
+        <p>關鍵里程碑：</p>
+        <ul>
+          <li><strong>v1.0（2026 年第三季）：</strong> 最小可行產品發布。WhatsApp 優先、Vault 整合、模型無關 AI、品牌角色、回應政策。</li>
+          <li><strong>v1.1（2026 年第四季）：</strong> 多渠道擴展（Telegram、Discord、Slack、Signal、iMessage）、多角色支援、LoRA 適配器支援、角色版本控制。</li>
+          <li><strong>v1.2（2027 年第一季）：</strong> 生成式操作（執行交易）、預建整合（CRM、服務台）、進階分析。</li>
+          <li><strong>v2.0（2027 年第二季）：</strong> 託管 SaaS 服務（可能）、視覺流程建構器（可能）、流動管理應用程式（可能）。</li>
+        </ul>
+        <p>路線圖可能根據客戶反饋和市場需求變更。請聯絡我們了解最新路線圖或請求功能。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-91">什麼時候不應該使用 Desk？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-91"><div class="faq-answer-inner">
+        <p>Desk 不適合以下情況：</p>
+        <ul>
+          <li><strong>您需要 200+ 個整合：</strong> Desk 專注於以主權為核心的 AI 優先支援，而非廣泛的整合平台。如果您需要 Salesforce、HubSpot、Zendesk、Slack 和其他 50 個工具開箱即用連接，Desk 不適合您（目前）。</li>
+          <li><strong>您需要視覺流程建構器：</strong> Desk 是 AI 優先，非規則優先。如果您想拖放來設計對話流程，請使用 Landbot 或 Botpress 等工具。</li>
+          <li><strong>您需要通用聊天機器人框架：</strong> Desk 用於客戶支援，而非行銷機器人、潛在客戶漏斗或內部工具。</li>
+          <li><strong>您沒有技術人員：</strong> Desk 需要熟悉 DevOps 的營運人員進行部署和維護。如果您沒有技術人員，請等待託管 SaaS 服務或使用合作夥伴託管供應商。</li>
+          <li><strong>您需要 SMS、Instagram、LINE、WeChat：</strong> 這些渠道在 v1.0 和 v1.1 的範圍之外。可能會根據市場需求在 v2 中考慮。</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-92">如何開始使用？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-92"><div class="faq-answer-inner">
+        <p>三條路徑：</p>
+        <ol>
+          <li><strong>自助（免費等級）：</strong> 下載 Desk，部署在您的伺服器上，開始使用。無需信用卡。完整文件可在 <code>docs.odw.ai/desk</code> 取得。</li>
+          <li><strong>引導設定（付費等級）：</strong> 聯絡我們預約 1 小時入門培訓。我們會帶您完成部署、設定和最佳實踐。</li>
+          <li><strong>託管（合作夥伴）：</strong> 如果您沒有技術人員，我們可以推薦合作夥伴託管供應商為您部署和管理 Desk。</li>
+        </ol>
+        <p>對於所有路徑，我們建議從 <strong>WhatsApp Baileys 橋接器</strong>（免費，&lt;30 分鐘設定）開始測試 Desk，然後再承諾使用官方 Business API。</p>
+        <div class="callout tip">
+          <strong>準備開始？</strong>
+          造訪 <code>odw.ai/desk</code> 下載 Desk 或聯絡我們安排演示。
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Desk — 營運決策者常見問題</strong></p>
+    <p>第 2.0 版 · 審閱草案</p>
+    <p>基於：TBK v1.2、TSD v1.2、SAD v1.2、PRD v1.2（2026-06-24）</p>
+    <p><a href="./suite.html">← 回到套件常見問題</a></p>
+  </div>
+
+</div>
+
+<script>
+  // 手風琴切換
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      const isExpanded = item.classList.contains('open');
+      button.setAttribute('aria-expanded', isExpanded);
+    });
+  });
+
+  // 展開 / 收合全部
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  // 搜尋
+  const searchInput = document.getElementById('searchInput');
+  const noResults = document.getElementById('noResults');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.section').forEach(section => {
+      let sectionHas = 0;
+      section.querySelectorAll('.faq-item').forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        const match = q === '' || txt.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) { sectionHas++; visibleCount++; if (q !== '') item.classList.add('open'); }
+        else { item.classList.remove('open'); }
+      });
+      section.style.display = sectionHas === 0 && q !== '' ? 'none' : '';
+    });
+    noResults.style.display = (visibleCount === 0 && q !== '') ? 'block' : 'none';
+  });
+
+  // 深度連結支援
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1319 @@
+<!-- Translation status: DRAFT — needs native-speaker review before publish -->
+<!-- Last synced with English source: 2026-07-09 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vault — 企业用户常见问题</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../faq/styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
+  <div class="subtitle">Vault 常见问题</div>
+  <h1>Vault 常见问题</h1>
+  <p>主权知识库——文档导入、向量嵌入、RAG 检索、模型无关推理。面向业务负责人,无需技术背景。</p>
+  <span class="last-updated">最后更新:2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">首页</a>
+    <span class="sep">→</span>
+    <a href="./index.html">常见问题</a>
+    <span class="sep">→</span>
+    <a href="./suite.html">套件</a>
+    <span class="sep">→</span>
+    <span>Vault</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" aria-label="搜索问题" placeholder="搜索问题……(例如 'RAG'、'embeddings'、'documents'、'sovereignty'、'HIPAA'、'local models')">
+  </div>
+  <div class="controls">
+    <button onclick="expandAll()">＋ 展开全部</button>
+    <button onclick="collapseAll()">− 收起全部</button>
+    <button onclick="window.print()">🖨️ 打印 / 保存 PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>跳转到章节</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> 基础概念</a>
+      <a href="#s2"><span class="num">2</span> 文档导入与处理</a>
+      <a href="#s3"><span class="num">3</span> 方案优势</a>
+      <a href="#s4"><span class="num">4</span> 检索与查询</a>
+      <a href="#s5"><span class="num">5</span> 安全与隐私</a>
+      <a href="#s6"><span class="num">6</span> 模型与 AI</a>
+      <a href="#s7"><span class="num">7</span> 部署与配置</a>
+      <a href="#s8"><span class="num">8</span> 成本与定价</a>
+      <a href="#s9"><span class="num">9</span> 扩展与运维</a>
+      <a href="#s10"><span class="num">10</span> 集成与工作流</a>
+      <a href="#s11"><span class="num">11</span> 限制与路线图</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">没有匹配的问题,请尝试更宽泛的关键词。</div>
+
+  <!-- SECTION 1: THE BASICS -->
+  <div class="section" id="s1">
+    <div class="section-header"><span class="icon">01 · 概述</span><h2>基础概念 — 什么是 Vault?</h2><span class="count">9 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">用通俗的话说,ODW.ai Vault 是什么?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
+        <p>Vault 是一个<strong>自托管知识库</strong>,利用 AI 帮助您从文档中查找信息。它就像为公司内部知识打造的功能强大的搜索引擎。</p>
+        <p>工作原理如下:</p>
+        <ol>
+          <li><strong>您上传文档:</strong>PDF、Word 文件、网页、电子表格等</li>
+          <li><strong>Vault 处理文档:</strong>将文档拆分为片段,创建 AI 向量嵌入(意义的数值化表示)</li>
+          <li><strong>您提问:</strong>"我们的退款政策是什么?"或"展示竞业禁止条款的先例"</li>
+          <li><strong>Vault 找到答案:</strong>检索相关文档段落,并使用 AI 生成简洁答案</li>
+        </ol>
+        <p>与普通搜索的关键区别在于:Vault 理解<strong>语义</strong>,而不仅仅是关键词。即使查询中没有完全相同的词,它也能找到相关信息。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">Vault 解决什么问题?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
+        <p>企业面临知识管理难题:</p>
+        <ul>
+          <li><strong>信息分散:</strong>文档、Wiki、邮件、Slack 消息、数据库——知识无处不在</li>
+          <li><strong>搜索失效:</strong>关键词搜索会丢失上下文。搜索"退款政策"无法找到"客户退货",即使它们是同一回事</li>
+          <li><strong>AI 工具需要将数据发送到云端:</strong>云端 AI 服务(ChatGPT、Glean 等)要求将文档发送到他们的服务器——这对受监管行业而言往往是无法接受的</li>
+        </ul>
+        <p>Vault 通过提供<strong>自托管 AI 驱动的知识检索</strong>解决这一问题。您的文档留在您的基础设施上。数据不会离开您的服务器。完全主权。</p>
+        <div class="callout info"><strong>效果</strong>员工可以在几秒内找到答案,而不是几小时。无需再翻找文件夹或问同事"那个文件在哪里?"</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">Vault 适合谁?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
+        <p>Vault 专为<strong>受监管和数据驻留敏感型组织</strong>设计:</p>
+        <ul>
+          <li><strong>医疗行业:</strong>符合 HIPAA 的患者记录、临床指南、政策知识检索</li>
+          <li><strong>法律行业:</strong>案件档案、先例、合同的特权文档搜索——无需将数据发送到云端 AI</li>
+          <li><strong>金融服务:</strong>监管文档搜索、合规知识库、审计追踪</li>
+          <li><strong>政府机构:</strong>具有完全数据主权的机密文档检索</li>
+          <li><strong>欧盟企业:</strong>符合 GDPR 的知识管理,具有数据驻留控制</li>
+        </ul>
+        <p>如果您有敏感文档且无法将其发送到云端 AI 服务,Vault 就是为您准备的。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">"RAG"是什么意思?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
+        <p><strong>RAG = Retrieval-Augmented Generation(检索增强生成)。</strong>这是 Vault 背后的技术。</p>
+        <p>工作原理如下:</p>
+        <ol>
+          <li><strong>检索:</strong>当您提问时,Vault 首先<em>检索</em>相关文档段落(使用 AI 向量嵌入和向量搜索)</li>
+          <li><strong>增强:</strong>这些文档段落被<em>增强</em>(添加)到 AI 的上下文中</li>
+          <li><strong>生成:</strong>AI 然后基于检索到的上下文<em>生成</em>答案</li>
+        </ol>
+        <p>为什么这很重要:</p>
+        <ul>
+          <li><strong>准确性:</strong>AI 基于您的实际文档回答,而不是从训练数据中臆测</li>
+          <li><strong>可追溯性:</strong>您可以看到答案来自哪些文档</li>
+          <li><strong>时效性:</strong>AI 使用您的最新文档,而不是过时的训练数据</li>
+        </ul>
+        <div class="callout tip"><strong>简单类比</strong>RAG 就像在 AI 回答之前给它一本参考书(您的文档)查阅。它不能凭空编造——必须引用来源。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">Vault 与 ChatGPT 或其他 AI 工具有什么不同?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
+        <p>主要区别:</p>
+        <table>
+          <thead><tr><th>方面</th><th>ODW.ai Vault</th><th>ChatGPT / 云端 AI</th></tr></thead>
+          <tbody>
+            <tr><td>数据位置</td><td>✅ 自托管——保留在您的基础设施上</td><td>❌ 发送到 OpenAI/Anthropic 服务器</td></tr>
+            <tr><td>知识来源</td><td>✅ 您的文档(RAG)</td><td>❌ 训练数据(可能已过时)</td></tr>
+            <tr><td>准确性</td><td>✅ 基于您的文档,可引用</td><td>⚠️ 可能产生幻觉或过时</td></tr>
+            <tr><td>隐私</td><td>✅ 完全主权</td><td>❌ 数据发送到第三方</td></tr>
+            <tr><td>合规性</td><td>✅ 兼容 HIPAA、GDPR、SOC 2</td><td>❌ 可能无法满足监管要求</td></tr>
+            <tr><td>成本</td><td>免费(自托管)或 $99-$499/月</td><td>$20-$200/用户/月</td></tr>
+          </tbody>
+        </table>
+        <p>ChatGPT 是通用 AI 助手。Vault 是专为内部文档设计的<strong>知识检索系统</strong>。一般性问题用 ChatGPT;公司特定知识用 Vault。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">Vault 与 Glean 或 Onyx 有什么不同?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
+        <p>Glean 和 Onyx 是优秀的云端 RAG 平台,但设计重点不同:</p>
+        <table>
+          <thead><tr><th>方面</th><th>ODW.ai Vault</th><th>Glean / Onyx</th></tr></thead>
+          <tbody>
+            <tr><td>部署方式</td><td>✅ 自托管</td><td>❌ 云端 SaaS</td></tr>
+            <tr><td>数据主权</td><td>✅ 完全控制</td><td>❌ 数据发送到供应商</td></tr>
+            <tr><td>开源</td><td>✅ 核心开源</td><td>❌ 专有</td></tr>
+            <tr><td>模型选择</td><td>✅ 模型无关(本地或 API)</td><td>⚠️ 限于供应商模型</td></tr>
+            <tr><td>价格</td><td>免费(自托管)或 $99-$499/月</td><td>$10-$30/用户/月</td></tr>
+            <tr><td>目标市场</td><td>受监管的中小企业</td><td>一般企业</td></tr>
+          </tbody>
+        </table>
+        <p>如果您没有主权要求并需要托管服务,选择 Glean/Onyx。如果需要完全数据控制或自托管,选择 Vault。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">Vault 是开源的吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
+        <p><strong>是的。</strong>Vault 核心是开源的(Apache 2.0 许可证)。您可以:</p>
+        <ul>
+          <li><strong>免费自托管:</strong>下载、部署和使用 Vault,无需付费</li>
+          <li><strong>修改代码:</strong>根据需求定制 Vault</li>
+          <li><strong>贡献:</strong>提交拉取请求、报告漏洞、加入社区</li>
+        </ul>
+        <p><strong>企业层</strong>(SSO、高级 RBAC、审计日志、合规功能、高级支持)是付费的。这是我们资助开发的方式。</p>
+        <div class="callout info"><strong>开源承诺</strong>我们相信透明、可审计的代码——特别是对于注重主权的组织。您应该能够验证 AI 工具在做什么。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">在这个语境中"主权"是什么意思?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
+        <p>"主权"意味着<strong>完全控制您的数据</strong>:</p>
+        <ul>
+          <li><strong>数据位置:</strong>您的文档保留在您的基础设施上(本地或私有云)</li>
+          <li><strong>处理:</strong>所有 AI 处理(嵌入、检索、生成)都在您的基础设施上进行</li>
+          <li><strong>无外部依赖:</strong>不会将数据发送到 OpenAI、Anthropic 或任何第三方(除非您选择使用他们的 API)</li>
+          <li><strong>可审计:</strong>您可以检查代码、日志和数据流</li>
+        </ul>
+        <p>这对受监管行业至关重要。如果您的 AI 工具将文档发送到云端供应商,就无法声称数据主权。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">使用 Vault 需要技术技能吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
+        <p><strong>部署方面:</strong>需要。Vault 是自托管的,所以需要有人能够管理 Docker/Kubernetes、配置网络并监控基础设施。通常是 DevOps 工程师或 IT 顾问。</p>
+        <p><strong>日常使用:</strong>不需要。管理控制台为非技术用户(知识管理员、合规官)设计。您可以在不编写代码的情况下上传文档、创建知识库并查询系统。</p>
+        <p><strong>开发人员:</strong>Vault 提供 REST API 和 SDK(Python、JavaScript)用于自定义集成。开发人员可以构建自定义工作流、将 Vault 集成到内部工具等。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 2: DOCUMENT INGESTION & PROCESSING -->
+  <div class="section" id="s2">
+    <div class="section-header"><span class="icon">02 · 主权</span><h2>文档导入与处理</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">Vault 支持哪些文档格式?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
+        <p>Vault 支持广泛的文档格式:</p>
+        <ul>
+          <li><strong>PDF:</strong>基于文本的 PDF(扫描的 PDF 需要 OCR——见下文)</li>
+          <li><strong>DOCX:</strong>Microsoft Word 文档</li>
+          <li><strong>HTML:</strong>网页</li>
+          <li><strong>Markdown:</strong>.md 文件</li>
+          <li><strong>纯文本:</strong>.txt 文件</li>
+          <li><strong>CSV:</strong>逗号分隔值(结构化数据)</li>
+          <li><strong>JSON:</strong>结构化数据</li>
+        </ul>
+        <p>更多格式(PPTX、XLSX、电子邮件格式)计划在未来版本中支持。</p>
+        <div class="callout warning"><strong>扫描的 PDF</strong>扫描的 PDF(文本图像)需要 OCR(光学字符识别)来提取文本。Vault 包含基本 OCR,但对于大批量或复杂文档,我们建议在上传前使用专用 OCR 工具(如 Tesseract、Adobe Acrobat)。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">Vault 如何处理文档?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
+        <p>Vault 分三步处理文档:</p>
+        <ol>
+          <li><strong>分块:</strong>文档被拆分为较小的块(通常每块 500-1,000 字)。这使检索更精确——Vault 返回回答您问题的具体段落,而不是整个 50 页文档。</li>
+          <li><strong>嵌入:</strong>使用 AI 模型将每个块转换为数值表示(嵌入)。嵌入捕捉文本的<em>语义</em>——相似含义有相似的嵌入。</li>
+          <li><strong>存储:</strong>嵌入存储在向量数据库中。当您查询 Vault 时,您的问题也被转换为嵌入,Vault 找到最相似的文档块。</li>
+        </ol>
+        <p>整个过程在您上传文档时自动发生。无需手动配置。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">什么是"分块",为什么重要?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
+        <p><strong>分块</strong>是将文档拆分为较小片段的过程。重要的原因:</p>
+        <ul>
+          <li><strong>精确性:</strong>Vault 返回回答您问题的具体段落,而不是整个 50 页文档</li>
+          <li><strong>上下文窗口:</strong>AI 模型有有限的上下文窗口(一次能处理的文本量)。分块确保每个片段适合上下文窗口</li>
+          <li><strong>效率:</strong>较小的块检索和处理更快</li>
+        </ul>
+        <p>Vault 提供三种分块策略:</p>
+        <ul>
+          <li><strong>固定大小:</strong>块是固定字数(如 500 字)。简单、可预测。</li>
+          <li><strong>语义:</strong>块基于语义——将含义相似的句子分组。更准确,但更慢。</li>
+          <li><strong>结构化:</strong>块基于文档结构(标题、段落、章节)。最适合结构化良好的文档。</li>
+        </ul>
+        <div class="callout tip"><strong>建议</strong>从固定大小分块(默认)开始。如果准确性差,切换到语义或结构化分块。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">什么是向量嵌入?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
+        <p><strong>向量嵌入</strong>是文本的数值表示。它们以 AI 能理解的方式捕捉文本的<em>语义</em>。</p>
+        <p>工作原理如下:</p>
+        <ul>
+          <li>每段文本(句子、段落或块)被转换为数字列表(如 [0.12, -0.34, 0.56, ...])</li>
+          <li>含义相似的文本有相似的嵌入(数字接近)</li>
+          <li>含义不同的文本有不同的嵌入(数字相距较远)</li>
+        </ul>
+        <p>示例:</p>
+        <ul>
+          <li>"如何申请退款?"和"退货政策是什么?"有<strong>相似</strong>的嵌入(相同含义)</li>
+          <li>"如何申请退款?"和"今天天气怎么样?"有<strong>不同</strong>的嵌入(不同含义)</li>
+        </ul>
+        <p>Vault 使用嵌入在您提问时查找相关文档块。您的问题被转换为嵌入,Vault 找到具有相似嵌入的文档块。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">可以批量上传文档吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>批量上传</strong>:</p>
+        <ul>
+          <li><strong>Web 界面:</strong>拖放多个文件或文件夹</li>
+          <li><strong>API:</strong>通过 REST API 以编程方式上传文件</li>
+          <li><strong>连接器:</strong>从外部源同步文档(文件系统、S3、WebDAV、SharePoint)</li>
+        </ul>
+        <p>对于大型文档集合(1,000+ 文件),我们建议使用连接器或 API。Web 界面最适合小型上传(10-100 个文件)。</p>
+        <div class="callout tip"><strong>处理时间</strong>上传是即时的,但处理(分块 + 嵌入)需要时间。对于 1,000 个文档,预计需要 10-30 分钟处理时间(取决于文档大小和硬件)。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">可以将 Vault 连接到外部数据源吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
+        <p>可以。Vault 包含用于外部数据源的<strong>连接器框架</strong>:</p>
+        <ul>
+          <li><strong>文件系统:</strong>从本地或网络驱动器同步文档</li>
+          <li><strong>S3 兼容:</strong>从 AWS S3、MinIO 或其他 S3 兼容存储同步</li>
+          <li><strong>WebDAV:</strong>从 WebDAV 服务器同步(如 Nextcloud、ownCloud)</li>
+          <li><strong>SharePoint:</strong>从 Microsoft SharePoint 同步(企业版)</li>
+          <li><strong>Google Drive:</strong>从 Google Drive 同步(企业版)</li>
+          <li><strong>自定义:</strong>使用连接器 SDK 构建自己的连接器</li>
+        </ul>
+        <p>连接器可以按计划同步(如每小时)或实时同步(通过 Webhook)。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">如果更新文档,Vault 会重新处理吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
+        <p>会。Vault 支持<strong>增量更新</strong>:</p>
+        <ul>
+          <li><strong>文件变更检测:</strong>Vault 检测文件何时被修改(通过文件系统监控或连接器同步)</li>
+          <li><strong>重新处理:</strong>Vault 仅重新处理更改的文档(而不是整个知识库)</li>
+          <li><strong>版本控制:</strong>Vault 跟踪文档版本——您可以看到回答查询时使用了哪个版本的文档</li>
+        </ul>
+        <p>这确保您的知识库始终保持最新,无需从头重新处理所有内容。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">可以将文档组织到知识库中吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>多个知识库</strong>:</p>
+        <ul>
+          <li><strong>分离:</strong>为不同团队、项目或文档类型创建独立的知识库(如"人力资源政策"、"工程文档"、"法律合同")</li>
+          <li><strong>隔离:</strong>每个知识库有自己的文档、嵌入和访问控制</li>
+          <li><strong>查询范围:</strong>查询特定知识库或跨所有知识库搜索</li>
+          <li><strong>权限:</strong>控制谁可以访问哪些知识库(企业版)</li>
+        </ul>
+        <p>这对于多租户部署(如管理多个客户的 MSP)或有严格数据分离要求的组织很有用。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 3: OUR SOLUTION'S STRENGTHS -->
+  <div class="section" id="s3">
+    <div class="section-header"><span class="icon">03 · 集成</span><h2>方案优势与设计</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">Vault 相比其他 RAG 平台有哪些主要优势?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>功能</th><th>ODW.ai Vault</th><th>典型替代方案</th></tr></thead>
+          <tbody>
+            <tr><td>部署方式</td><td>✅ 自托管——完全主权</td><td>❌ 云端 SaaS——数据发送到供应商</td></tr>
+            <tr><td>开源</td><td>✅ 核心开源(Apache 2.0)</td><td>❌ 专有或有限开源</td></tr>
+            <tr><td>模型选择</td><td>✅ 模型无关(本地或 API)</td><td>⚠️ 限于特定模型</td></tr>
+            <tr><td>按任务模型路由</td><td>✅ 按查询切换模型</td><td>❌ 固定模型</td></tr>
+            <tr><td>价格</td><td>免费(自托管)或 $99-$499/月</td><td>$10-$30/用户/月</td></tr>
+            <tr><td>套件集成</td><td>✅ 原生 ODW.ai 集成</td><td>❌ 需要自定义集成</td></tr>
+            <tr><td>企业功能</td><td>✅ SSO、RBAC、审计日志、合规</td><td>⚠️ 各异</td></tr>
+          </tbody>
+        </table>
+        <p>Vault 在<strong>主权 + 模型灵活性</strong>方面具有竞争力。如果您需要完全数据控制并希望选择 AI 模型,Vault 是最佳选择。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">Vault 与 PrivateGPT 或 Quivr 相比如何?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
+        <p>PrivateGPT 和 Quivr 是开源 RAG 工具,但设计重点不同:</p>
+        <table>
+          <thead><tr><th>方面</th><th>ODW.ai Vault</th><th>PrivateGPT / Quivr</th></tr></thead>
+          <tbody>
+            <tr><td>生产就绪</td><td>✅ 企业级</td><td>⚠️ 实验性 / 爱好者级</td></tr>
+            <tr><td>多租户</td><td>✅ 内置</td><td>❌ 仅单用户</td></tr>
+            <tr><td>访问控制</td><td>✅ RBAC、文档级权限</td><td>❌ 无或基础</td></tr>
+            <tr><td>审计日志</td><td>✅ 防篡改日志</td><td>❌ 无</td></tr>
+            <tr><td>模型路由</td><td>✅ 按任务模型选择</td><td>⚠️ 固定模型</td></tr>
+            <tr><td>支持</td><td>✅ 提供付费支持</td><td>❌ 仅社区</td></tr>
+          </tbody>
+        </table>
+        <p>PrivateGPT/Quivr 适合实验,但不适合企业生产使用。Vault 专为需要可靠性、安全性和支持的受监管企业设计。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">"模型无关"是什么意思?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
+        <p><strong>模型无关</strong>意味着 Vault 可与任何 AI 模型配合使用——您不会被锁定在特定供应商。</p>
+        <p>Vault 支持:</p>
+        <ul>
+          <li><strong>本地模型:</strong>通过 Ollama、vLLM 或 llama.cpp 在自己的硬件上运行模型(完全主权)</li>
+          <li><strong>API 模型:</strong>使用 OpenAI、Anthropic、Google 或自定义端点(需要前沿能力时)</li>
+          <li><strong>嵌入模型:</strong>选择任何嵌入模型(OpenAI、Cohere、sentence-transformers 等)</li>
+        </ul>
+        <p>您甚至可以<strong>按查询切换模型</strong>——简单问题用本地模型(快速、主权),复杂问题用 API 模型(更强大)。</p>
+        <div class="callout tip"><strong>灵活性</strong>模型无关意味着随着更好模型的发布,您可以切换——无需代码更改,无供应商锁定。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">可以完全离线使用 Vault 吗(无互联网)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>完全离线部署</strong>:</p>
+        <ul>
+          <li><strong>本地模型:</strong>在自己的硬件上运行嵌入和生成模型(通过 Ollama、vLLM、llama.cpp)</li>
+          <li><strong>无外部依赖:</strong>Vault 推理、嵌入或任何核心功能都不需要互联网访问</li>
+          <li><strong>物理隔离(气隙)环境:</strong>部署在物理隔离(气隙)环境中(完全没有互联网访问)</li>
+        </ul>
+        <p>这对互联网访问受限或被禁止的政府、军事和高安全环境至关重要。</p>
+        <div class="callout warning"><strong>硬件要求</strong>运行本地模型需要 GPU 硬件(推荐 NVIDIA GPU)。可以进行纯 CPU 推理,但对大模型来说很慢。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">Vault 的检索准确率如何?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
+        <p>Vault 的检索准确率取决于几个因素:</p>
+        <ul>
+          <li><strong>嵌入模型:</strong>更好的嵌入模型 = 更好的检索。我们推荐使用最先进的模型(如 OpenAI text-embedding-3-large、Cohere embed-v3)</li>
+          <li><strong>分块策略:</strong>语义分块比固定大小分块更准确(但更慢)</li>
+          <li><strong>文档质量:</strong>结构良好、清晰的文档 = 更好的检索</li>
+          <li><strong>查询清晰度:</strong>清晰、具体的问题 = 更好的检索</li>
+        </ul>
+        <p>目标:基准语料库上<strong>≥85% MRR@10</strong>(前 10 个结果的平均倒数排名)。这意味着正确答案在 85% 的情况下出现在前 10 个结果中。</p>
+        <div class="callout info"><strong>调优</strong>如果准确性差,请尝试:(1) 切换到更好的嵌入模型,(2) 使用语义分块,(3) 调整块大小,(4) 改写查询。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">可以自定义检索策略吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
+        <p>可以。Vault 提供<strong>可配置的检索策略</strong>:</p>
+        <ul>
+          <li><strong>相似性搜索:</strong>查找最相似的文档块(默认)</li>
+          <li><strong>混合搜索:</strong>将相似性搜索与关键词搜索(BM25)结合。对包含特定术语的查询更有效。</li>
+          <li><strong>重排序:</strong>使用交叉编码器模型在初始检索后重新排序结果。更准确,但更慢。</li>
+          <li><strong>元数据过滤:</strong>按元数据过滤结果(如仅返回特定部门、日期范围的文档)</li>
+        </ul>
+        <p>对于开发人员:Vault 的检索管道是模块化的——您可以使用 SDK 编写自定义检索逻辑。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">Vault 支持多种语言吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
+        <p>支持。Vault 支持<strong>多语言文档</strong>:</p>
+        <ul>
+          <li><strong>文档导入:</strong>上传任何语言的文档(英语、中文、西班牙语、法语等)</li>
+          <li><strong>嵌入模型:</strong>使用多语言嵌入模型(如 multilingual-e5、OpenAI text-embedding-3-large)</li>
+          <li><strong>查询:</strong>用任何语言提问——Vault 检索相关文档,不分语言</li>
+        </ul>
+        <p>UI 目前仅支持英语(v1),但多语言 UI 计划在 v1.1 中推出。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">Vault 的代码可审计吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
+        <p>可以。Vault 核心是<strong>开源</strong>的(Apache 2.0 许可证):</p>
+        <ul>
+          <li><strong>透明:</strong>所有代码在 GitHub 上公开可用</li>
+          <li><strong>可审计:</strong>您(或您的安全团队)可以检查代码是否有漏洞、后门或数据泄露</li>
+          <li><strong>可验证:</strong>您可以验证 Vault 是否如其所述——没有隐藏的遥测,没有数据发送到第三方</li>
+        </ul>
+        <p>这对注重主权的组织至关重要。您应该能够验证 AI 工具在做什么。</p>
+        <div class="callout tip"><strong>安全审计</strong>我们欢迎第三方安全审计。如果您的组织在采用 Vault 前需要安全审计,请联系我们——我们将全力配合。</div>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 4: RETRIEVAL & QUERYING -->
+  <div class="section" id="s4">
+    <div class="section-header"><span class="icon">04 · 安全</span><h2>检索与查询</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">如何在 Vault 中提问?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
+        <p>Vault 提供多种查询方式:</p>
+        <ul>
+          <li><strong>Web 界面:</strong>在搜索栏中输入问题(像 Google 一样)</li>
+          <li><strong>API:</strong>通过 REST API 发送查询(用于自定义集成)</li>
+          <li><strong>SDK:</strong>使用 Python 或 JavaScript SDK(面向开发人员)</li>
+        </ul>
+        <p>查询示例:</p>
+        <ul>
+          <li>"我们的退款政策是什么?"</li>
+          <li>"展示竞业禁止条款的先例"</li>
+          <li>"总结第三季度财务报告"</li>
+          <li>"HIPAA 对数据加密的要求是什么?"</li>
+        </ul>
+        <p>Vault 检索相关文档块并使用 AI 生成简洁答案。您还可以查看源文档以进行验证。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">可以看到 Vault 用来回答问题的文档吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
+        <p>可以。Vault 提供<strong>来源引用</strong>:</p>
+        <ul>
+          <li><strong>答案:</strong>基于检索文档的 AI 生成答案</li>
+          <li><strong>来源:</strong>用于生成答案的文档块列表(包含文档名称、页码和相关文本)</li>
+          <li><strong>置信度分数:</strong>Vault 对答案的置信度(基于检索相似性)</li>
+        </ul>
+        <p>这使您能够验证答案并追溯到原始文档——对准确性和可审计性至关重要的受监管行业来说至关重要。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">如果 Vault 找不到答案怎么办?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
+        <p>如果 Vault 找不到相关文档,它会说<strong>"我不知道"</strong>,而不是编造答案。</p>
+        <p>这是 RAG 的一个关键特性——AI 基于您的文档。如果信息不在您的知识库中,Vault 不会产生幻觉。</p>
+        <p>您还可以配置 Vault 以:</p>
+        <ul>
+          <li><strong>返回部分答案:</strong>"我找到了一些相关信息,但不确定是否完全回答了您的问题"</li>
+          <li><strong>建议相关查询:</strong>"我找不到答案,但您可以尝试搜索 X"</li>
+          <li><strong>标记待审:</strong>"这个问题无法回答——考虑向知识库添加相关文档"</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">可以追问吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>对话式查询</strong>:</p>
+        <ul>
+          <li><strong>上下文保留:</strong>Vault 记住同一会话中您之前问题的上下文</li>
+          <li><strong>追问:</strong>问"能详细说明一下吗?"或"例外情况呢?"Vault 会理解上下文</li>
+          <li><strong>会话管理:</strong>每个对话是独立会话——上下文不会在会话间混淆</li>
+        </ul>
+        <p>这使 Vault 感觉像与知识渊博的同事对话,而不仅仅是搜索引擎。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">可以按元数据过滤查询吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>元数据过滤</strong>:</p>
+        <ul>
+          <li><strong>文档元数据:</strong>按文档属性过滤(如部门、作者、日期、文档类型)</li>
+          <li><strong>自定义元数据:</strong>为文档添加自定义元数据(如标签、类别、分类级别)</li>
+          <li><strong>查询时过滤:</strong>"显示 2025 年的人力资源政策"或"查找标记为'机密'的法律合同"</li>
+        </ul>
+        <p>这对于您想要缩小搜索范围的大型知识库很有用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">Vault 的查询响应速度如何?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
+        <p>查询速度取决于您的配置:</p>
+        <table>
+          <thead><tr><th>组件</th><th>本地(本地部署)</th><th>基于 API(OpenAI 等)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>检索</strong></td><td>100-500 毫秒</td><td>100-500 毫秒</td></tr>
+            <tr><td><strong>生成</strong></td><td>1-5 秒(取决于 GPU)</td><td>1-3 秒(取决于模型)</td></tr>
+            <tr><td><strong>总计</strong></td><td>1-6 秒</td><td>1-4 秒</td></tr>
+          </tbody>
+        </table>
+        <p>对于延迟敏感的应用,我们建议:</p>
+        <ul>
+          <li>使用快速嵌入模型(如 sentence-transformers/all-MiniLM-L6-v2)</li>
+          <li>使用快速生成模型(如本地的 Llama 3 8B,API 的 GPT-4o-mini)</li>
+          <li>启用缓存(经常问的问题会被缓存)</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">可以导出查询结果吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>查询结果导出</strong>:</p>
+        <ul>
+          <li><strong>Web 界面:</strong>将结果下载为 PDF、Markdown 或纯文本</li>
+          <li><strong>API:</strong>以 JSON 格式检索结果(用于编程使用)</li>
+          <li><strong>批量导出:</strong>一次导出多个查询结果(用于报告或分析)</li>
+        </ul>
+        <p>这对于生成报告、与同事共享答案或出于合规目的归档查询结果很有用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">可以查看查询历史和分析吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
+        <p>可以。Vault 提供<strong>查询分析</strong>(企业版):</p>
+        <ul>
+          <li><strong>查询历史:</strong>查看所有用户提出的所有查询(带时间戳、用户和结果)</li>
+          <li><strong>使用模式:</strong>识别经常问的问题、热门知识库和常见主题</li>
+          <li><strong>成本归因:</strong>跟踪每个用户、团队或知识库的 API 成本(如果使用基于 API 的模型)</li>
+          <li><strong>未回答查询:</strong>识别 Vault 无法回答的问题——这些是知识库的空白</li>
+        </ul>
+        <p>这帮助您了解 Vault 的使用情况以及改进知识库的方向。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 5: SECURITY & PRIVACY -->
+  <div class="section" id="s5">
+    <div class="section-header"><span class="icon">05 · 部署</span><h2>安全与隐私</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">Vault 安全吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
+        <p>安全。Vault 采用<strong>安全最佳实践</strong>构建:</p>
+        <ul>
+          <li><strong>自托管:</strong>在您的基础设施上运行——数据不会离开您的服务器</li>
+          <li><strong>加密:</strong>静态 AES-256,传输中 TLS 1.3</li>
+          <li><strong>访问控制:</strong>RBAC、文档级权限、SSO(企业版)</li>
+          <li><strong>审计日志:</strong>所有访问和查询的防篡改日志(企业版)</li>
+          <li><strong>开源:</strong>代码可审计——您可以验证没有后门或数据泄露</li>
+        </ul>
+        <p>Vault 专为受监管行业设计。如果您可以使用 Vault,就能通过合规审计。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">ODW.ai 能访问我的 Vault 数据吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
+        <p><strong>不能。</strong>Vault 在您的基础设施上自托管。ODW.ai 完全无法访问您的文档、查询或嵌入。</p>
+        <p>与云端 RAG 平台(Glean、Onyx)不同,Vault 不会将遥测数据发送到第三方。一切都留在您的服务器上。</p>
+        <p>这对注重主权的组织至关重要。如果您的 RAG 工具将文档发送到云端供应商,就无法声称数据主权。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">可以控制谁访问哪些文档吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
+        <p>可以。Vault 提供<strong>细粒度访问控制</strong>(企业版):</p>
+        <ul>
+          <li><strong>知识库级:</strong>控制谁可以访问哪些知识库(如人力资源团队可以访问"人力资源政策",法律团队可以访问"法律合同")</li>
+          <li><strong>文档级:</strong>控制谁可以访问特定文档(如只有经理可以访问"高管薪酬")</li>
+          <li><strong>基于角色:</strong>分配角色(管理员、编辑者、查看者)具有不同权限</li>
+          <li><strong>基于属性:</strong>基于用户属性(部门、安全级别等)控制访问</li>
+        </ul>
+        <p>访问控制在查询时执行——如果用户没有权限访问某文档,Vault 不会在查询结果中返回它。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">Vault 支持 SSO 吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
+        <p>支持。Vault 通过 SAML 2.0 和 OIDC 支持<strong>SSO(单点登录)</strong>(企业版):</p>
+        <ul>
+          <li><strong>Okta:</strong>原生集成</li>
+          <li><strong>Azure AD / Entra ID:</strong>原生集成</li>
+          <li><strong>Google Workspace:</strong>原生集成</li>
+          <li><strong>其他:</strong>任何符合 SAML 2.0 或 OIDC 的身份提供商</li>
+        </ul>
+        <p>SSO 允许用户使用现有的企业凭据登录 Vault——无需记住单独的用户名/密码。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">Vault 兼容 HIPAA 吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
+        <p>是的。Vault <strong>HIPAA 兼容</strong>:</p>
+        <ul>
+          <li><strong>自托管:</strong>PHI 保留在您的基础设施上——数据不会发送到第三方</li>
+          <li><strong>加密:</strong>静态 AES-256,传输中 TLS 1.3</li>
+          <li><strong>访问控制:</strong>RBAC、文档级权限、审计日志</li>
+          <li><strong>审计日志:</strong>所有 PHI 访问的防篡改日志</li>
+          <li><strong>BAA:</strong>如果使用 ODW.ai 托管的 Vault(企业版),我们会签署业务伙伴协议</li>
+        </ul>
+        <p>Vault 帮助您满足 HIPAA 要求的<strong>技术保障</strong>。您仍需要单独解决管理和物理保障。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">Vault 兼容 GDPR 吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
+        <p>是的。Vault <strong>GDPR 兼容</strong>:</p>
+        <ul>
+          <li><strong>数据驻留:</strong>所有数据保留在您的基础设施上(如果使用私有云,则在您选择的区域)</li>
+          <li><strong>删除权:</strong>根据请求删除文档及相关嵌入</li>
+          <li><strong>访问权:</strong>根据请求导出用户数据</li>
+          <li><strong>数据处理记录:</strong>审计日志跟踪所有数据处理活动</li>
+        </ul>
+        <p>Vault 帮助您满足 GDPR 要求的<strong>技术和组织措施</strong>(第 32 条)。您仍需要单独解决法律和程序要求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">可以在物理隔离(气隙)环境中部署 Vault 吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>物理隔离(气隙)部署</strong>(无互联网访问):</p>
+        <ul>
+          <li><strong>离线安装:</strong>在没有互联网访问的情况下安装 Vault(Docker 镜像、离线包)</li>
+          <li><strong>本地模型:</strong>在自己的硬件上运行嵌入和生成模型(无需调用外部服务的 API)</li>
+          <li><strong>无外部依赖:</strong>Vault 不需要互联网访问进行更新、遥测或许可证验证</li>
+        </ul>
+        <p>物理隔离(气隙)部署常见于政府承包商、军事和高安全环境。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">如果有人查询敏感文档会怎样?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
+        <p>Vault 在<strong>查询时执行访问控制</strong>:</p>
+        <ul>
+          <li><strong>权限检查:</strong>在返回结果之前,Vault 检查用户是否有权访问每个文档</li>
+          <li><strong>过滤:</strong>如果用户没有权限,文档会从结果中过滤掉——他们永远看不到</li>
+          <li><strong>审计日志:</strong>所有查询都会被记录(谁查询了什么、何时、返回了什么结果)</li>
+        </ul>
+        <p>示例:初级员工查询"显示高管薪酬"。如果他们无权访问"高管薪酬"文档,Vault 不返回结果——并且查询会被记录以供审计。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 6: MODELS & AI -->
+  <div class="section" id="s6">
+    <div class="section-header"><span class="icon">06 · 合规</span><h2>模型与 AI</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">Vault 支持哪些 AI 模型?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
+        <p>Vault 是<strong>模型无关</strong>的——它支持广泛的模型:</p>
+        <p><strong>嵌入模型:</strong></p>
+        <ul>
+          <li><strong>OpenAI:</strong>text-embedding-3-small、text-embedding-3-large</li>
+          <li><strong>Cohere:</strong>embed-english-v3.0、embed-multilingual-v3.0</li>
+          <li><strong>本地:</strong>sentence-transformers(all-MiniLM-L6-v2、all-mpnet-base-v2 等)</li>
+          <li><strong>自定义:</strong>任何提供 OpenAI 兼容 API 的模型</li>
+        </ul>
+        <p><strong>生成模型:</strong></p>
+        <ul>
+          <li><strong>本地:</strong>Llama 3、Mistral、Gemma、Qwen(通过 Ollama、vLLM、llama.cpp)</li>
+          <li><strong>API:</strong>OpenAI(GPT-4o、GPT-4o-mini)、Anthropic(Claude 3.5 Sonnet)、Google(Gemini 1.5 Pro)</li>
+          <li><strong>自定义:</strong>任何提供 OpenAI 兼容 API 的模型</li>
+        </ul>
+        <p>您可以随时切换模型——无需更改代码。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">可以使用本地模型(完全离线)吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>本地模型</strong>,通过:</p>
+        <ul>
+          <li><strong>Ollama:</strong>运行本地模型的最简单方式。支持 Llama 3、Mistral、Gemma 等。</li>
+          <li><strong>vLLM:</strong>用于生产工作负载的高性能推理服务器</li>
+          <li><strong>llama.cpp:</strong>轻量级、CPU 友好的推理(适合边缘设备)</li>
+        </ul>
+        <p>本地模型在您的硬件上运行——数据不会离开您的基础设施。完全主权。</p>
+        <div class="callout warning"><strong>硬件要求</strong>本地模型需要 GPU 硬件(推荐 NVIDIA GPU)。可以进行纯 CPU 推理,但对大模型来说很慢。对于生产使用,我们建议至少一块 NVIDIA A100 或同等产品。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">可以使用基于 API 的模型(OpenAI、Anthropic)吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>基于 API 的模型</strong>:</p>
+        <ul>
+          <li><strong>OpenAI:</strong>GPT-4o、GPT-4o-mini、text-embedding-3-large</li>
+          <li><strong>Anthropic:</strong>Claude 3.5 Sonnet、Claude 3 Opus</li>
+          <li><strong>Google:</strong>Gemini 1.5 Pro</li>
+          <li><strong>自定义:</strong>任何提供 OpenAI 兼容 API 的模型</li>
+        </ul>
+        <p>基于 API 的模型在您需要本地模型尚无法匹敌的前沿能力(如复杂推理、长上下文窗口)时很有用。</p>
+        <div class="callout warning"><strong>数据主权</strong>如果使用基于 API 的模型,您的查询和文档块会发送到 API 提供商。这可能违反受监管行业的主权要求。为获得最大主权,请使用本地模型。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">可以按查询切换模型吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>按任务模型路由</strong>:</p>
+        <ul>
+          <li><strong>简单查询:</strong>使用快速本地模型(如 Llama 3 8B)——快速、主权、低成本</li>
+          <li><strong>复杂查询:</strong>使用强大的 API 模型(如 GPT-4o)——更强大,但数据会离开您的基础设施</li>
+          <li><strong>自定义路由:</strong>定义规则(如"如果查询包含 PHI,仅使用本地模型")</li>
+        </ul>
+        <p>这为您提供了两全其美的方案:敏感查询的主权,复杂查询的能力。</p>
+        <div class="callout tip"><strong>成本优化</strong>80% 的查询使用本地模型(快速、免费),20% 的查询使用 API 模型(复杂、付费)。这将 API 成本降低 80%。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">如何选择合适的嵌入模型?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
+        <p>选择嵌入模型取决于您的优先事项:</p>
+        <table>
+          <thead><tr><th>模型</th><th>速度</th><th>准确性</th><th>成本</th><th>主权</th></tr></thead>
+          <tbody>
+            <tr><td><strong>sentence-transformers/all-MiniLM-L6-v2</strong></td><td>✅ 快速</td><td>⚠️ 良好</td><td>✅ 免费(本地)</td><td>✅ 完全</td></tr>
+            <tr><td><strong>sentence-transformers/all-mpnet-base-v2</strong></td><td>⚠️ 中等</td><td>✅ 更好</td><td>✅ 免费(本地)</td><td>✅ 完全</td></tr>
+            <tr><td><strong>OpenAI text-embedding-3-large</strong></td><td>✅ 快速</td><td>✅ 最佳</td><td>❌ 付费</td><td>❌ 无</td></tr>
+            <tr><td><strong>Cohere embed-v3</strong></td><td>✅ 快速</td><td>✅ 最佳</td><td>❌ 付费</td><td>❌ 无</td></tr>
+          </tbody>
+        </table>
+        <p><strong>建议:</strong></p>
+        <ul>
+          <li><strong>最大主权:</strong>使用 sentence-transformers(本地、免费)</li>
+          <li><strong>最大准确性:</strong>使用 OpenAI text-embedding-3-large 或 Cohere embed-v3(API、付费)</li>
+          <li><strong>平衡:</strong>从 sentence-transformers 开始,如果准确性差,升级到 OpenAI/Cohere</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">如何选择合适的生成模型?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
+        <p>选择生成模型取决于您的优先事项:</p>
+        <table>
+          <thead><tr><th>模型</th><th>速度</th><th>质量</th><th>成本</th><th>主权</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Llama 3 8B(本地)</strong></td><td>✅ 快速</td><td>⚠️ 良好</td><td>✅ 免费</td><td>✅ 完全</td></tr>
+            <tr><td><strong>Llama 3 70B(本地)</strong></td><td>⚠️ 慢</td><td>✅ 更好</td><td>✅ 免费</td><td>✅ 完全</td></tr>
+            <tr><td><strong>GPT-4o-mini(API)</strong></td><td>✅ 快速</td><td>✅ 良好</td><td>❌ 付费</td><td>❌ 无</td></tr>
+            <tr><td><strong>GPT-4o(API)</strong></td><td>⚠️ 中等</td><td>✅ 最佳</td><td>❌ 付费</td><td>❌ 无</td></tr>
+            <tr><td><strong>Claude 3.5 Sonnet(API)</strong></td><td>⚠️ 中等</td><td>✅ 最佳</td><td>❌ 付费</td><td>❌ 无</td></tr>
+          </tbody>
+        </table>
+        <p><strong>建议:</strong></p>
+        <ul>
+          <li><strong>最大主权:</strong>使用 Llama 3 8B 或 70B(本地、免费)</li>
+          <li><strong>最大质量:</strong>使用 GPT-4o 或 Claude 3.5 Sonnet(API、付费)</li>
+          <li><strong>平衡:</strong>简单查询使用 Llama 3 8B,复杂查询使用 GPT-4o-mini</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">可以针对我的领域微调模型吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
+        <p><strong>Vault v1 不支持。</strong>Vault 使用现有模型——不支持微调。</p>
+        <p>但是,您可以:</p>
+        <ul>
+          <li><strong>使用检索:</strong>RAG 通常比微调对领域特定知识更有效。无需在您的文档上微调模型,只需在查询时检索相关文档。</li>
+          <li><strong>提示工程:</strong>自定义系统提示以引导模型行为(如"您是一名法律助手。根据提供的法律文档回答问题。")</li>
+          <li><strong>外部微调:</strong>在 Vault 外部微调模型(使用 Hugging Face Transformers 等工具),然后通过自定义端点在 Vault 中使用微调后的模型。</li>
+        </ul>
+        <p>微调支持计划在 v2.0(2027 年第二季度)中推出。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">如果发布了新的更好的模型,可以切换吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
+        <p>可以。Vault 是<strong>模型无关</strong>的——您可以随时切换模型:</p>
+        <ul>
+          <li><strong>无需更改代码:</strong>只需在管理控制台更新模型配置</li>
+          <li><strong>无需重新嵌入:</strong>如果切换生成模型,不需要重新嵌入文档(嵌入是模型特定的,但您可以继续使用旧嵌入或用新模型重新嵌入)</li>
+          <li><strong>按查询切换:</strong>对不同查询使用不同模型(如简单查询用本地模型,复杂查询用 API 模型)</li>
+        </ul>
+        <p>这使您的投资面向未来——当更好的模型发布时,您可以立即采用,无需重新设计系统。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 7: DEPLOYMENT & SETUP -->
+  <div class="section" id="s7">
+    <div class="section-header"><span class="icon">07 · 模型</span><h2>部署与配置</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">如何部署 Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
+        <p>Vault 提供三种部署选项:</p>
+        <ol>
+          <li><strong>Docker Compose:</strong>最简单。一条命令(<code>docker-compose up</code>)即可运行。最适合开发和小型部署。</li>
+          <li><strong>Kubernetes(Helm):</strong>生产就绪。提供 Helm 图表。最适合大型部署、高可用性、自动扩展。</li>
+          <li><strong>裸机:</strong>面向高级用户。直接安装在 Linux 服务器上。最大控制,但需要更多设置。</li>
+        </ol>
+        <p>对于大多数客户,<strong>Docker Compose 是最快的路径</strong>。对于生产环境,我们建议 Kubernetes。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">配置需要多长时间?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
+        <p>配置时间取决于您的部署:</p>
+        <ul>
+          <li><strong>Docker Compose:</strong>30 分钟。拉取镜像、配置环境变量、运行 <code>docker-compose up</code>。</li>
+          <li><strong>Kubernetes:</strong>2-4 小时。部署 Helm 图表、配置入口、设置存储、测试。</li>
+          <li><strong>裸机:</strong>1-2 天。安装依赖、配置服务、测试。</li>
+        </ul>
+        <p>目标:<strong>从下载到首次查询 &lt;4 小时</strong>(对于 Docker Compose 部署)。</p>
+        <div class="callout tip"><strong>首次查询</strong>部署后,您需要上传文档并等待处理(分块 + 嵌入)。对于 100 个文档,预计需要 5-15 分钟处理时间。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">运行 Vault 需要技术人员吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
+        <p><strong>部署方面:</strong>需要。Vault 是自托管的,所以需要有人能够管理 Docker/Kubernetes、配置网络并监控基础设施。通常是 DevOps 工程师或 IT 顾问。</p>
+        <p><strong>日常使用:</strong>不需要。管理控制台为非技术用户(知识管理员、合规官)设计。您可以在不编写代码的情况下上传文档、创建知识库并查询系统。</p>
+        <p><strong>开发人员:</strong>Vault 提供 REST API 和 SDK(Python、JavaScript)用于自定义集成。开发人员可以构建自定义工作流、将 Vault 集成到内部工具等。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">Vault 的系统要求是什么?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
+        <p>Vault 的要求取决于您的部署:</p>
+        <table>
+          <thead><tr><th>组件</th><th>最低要求</th><th>推荐配置</th></tr></thead>
+          <tbody>
+            <tr><td><strong>CPU</strong></td><td>2 核</td><td>4+ 核</td></tr>
+            <tr><td><strong>内存</strong></td><td>8 GB</td><td>16+ GB</td></tr>
+            <tr><td><strong>存储</strong></td><td>50 GB SSD</td><td>200+ GB SSD(取决于文档量)</td></tr>
+            <tr><td><strong>GPU(用于本地模型)</strong></td><td>无(使用 API 模型)</td><td>NVIDIA A100 或同等产品(用于本地模型)</td></tr>
+            <tr><td><strong>操作系统</strong></td><td>Linux(Ubuntu 20.04+、RHEL 8+)</td><td>Ubuntu 22.04 LTS</td></tr>
+          </tbody>
+        </table>
+        <p>如果使用基于 API 的模型(OpenAI、Anthropic),不需要 GPU。如果使用本地模型,强烈建议使用 GPU。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">可以在 AWS/GCP/Azure 上部署 Vault 吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
+        <p>可以。Vault 可以部署在任何云提供商上:</p>
+        <ul>
+          <li><strong>AWS:</strong>使用 EC2(用于 Docker Compose)或 EKS(用于 Kubernetes)。使用 S3 存储文档,RDS 存储元数据。</li>
+          <li><strong>GCP:</strong>使用 GCE(用于 Docker Compose)或 GKE(用于 Kubernetes)。使用 GCS 存储文档,Cloud SQL 存储元数据。</li>
+          <li><strong>Azure:</strong>使用 VM(用于 Docker Compose)或 AKS(用于 Kubernetes)。使用 Blob Storage 存储文档,Azure SQL 存储元数据。</li>
+        </ul>
+        <p>我们为每个云提供商提供部署指南。对于生产环境,我们建议 Kubernetes 配合托管数据库(RDS、Cloud SQL、Azure SQL)。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">可以从其他 RAG 平台迁移到 Vault 吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
+        <p>可以。Vault 提供<strong>迁移工具</strong>:</p>
+        <ul>
+          <li><strong>导入文档:</strong>上传现有文档(PDF、DOCX 等)</li>
+          <li><strong>导入嵌入:</strong>如果之前的平台导出了嵌入,您可以导入它们(如果使用相同的嵌入模型)</li>
+          <li><strong>重新嵌入:</strong>如果嵌入不兼容,Vault 可以重新嵌入您的文档(需要时间,但确保准确性)</li>
+        </ul>
+        <p>迁移通常需要 1-2 周。我们为常见平台(Glean、Onyx、PrivateGPT)提供迁移指南和支持。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">如何配置 Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
+        <p>Vault 通过<strong>管理控制台</strong>(基于 Web 的 UI)或环境变量配置:</p>
+        <ul>
+          <li><strong>模型提供商:</strong>配置嵌入和生成模型(本地或 API)</li>
+          <li><strong>存储:</strong>配置文档存储(本地、S3、GCS、Azure Blob)</li>
+          <li><strong>数据库:</strong>配置元数据数据库(PostgreSQL、MySQL)</li>
+          <li><strong>向量数据库:</strong>配置向量存储(Qdrant、Weaviate、Milvus、Chroma)</li>
+          <li><strong>身份验证:</strong>配置 SSO、RBAC(企业版)</li>
+        </ul>
+        <p>大多数配置通过 UI 完成。对于高级用户,Vault 还支持通过 YAML 文件或环境变量配置。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">可以在上线前预览 Vault 吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
+        <p>可以。Vault 包含<strong>沙盒模式</strong>:</p>
+        <ul>
+          <li><strong>测试环境:</strong>在测试环境中部署 Vault,使用示例文档</li>
+          <li><strong>实验:</strong>测试不同模型、分块策略和检索配置</li>
+          <li><strong>评估:</strong>在上线前测量准确性、延迟和成本</li>
+        </ul>
+        <p>我们建议在部署到生产环境前花 1-2 天在沙盒模式下测试。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 8: COST & PRICING -->
+  <div class="section" id="s8">
+    <div class="section-header"><span class="icon">08 · 语言</span><h2>成本与定价</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">Vault 多少钱?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
+        <p>Vault 定价基于<strong>部署模式和功能</strong>:</p>
+        <table>
+          <thead><tr><th>版本</th><th>价格</th><th>包含</th></tr></thead>
+          <tbody>
+            <tr><td><strong>社区(免费)</strong></td><td>$0</td><td>自托管、核心功能、社区支持</td></tr>
+            <tr><td><strong>专业版</strong></td><td>$99/月</td><td>自托管、所有核心功能、邮件支持</td></tr>
+            <tr><td><strong>企业版</strong></td><td>$299-$499/月</td><td>自托管、企业功能(SSO、RBAC、审计日志)、优先支持</td></tr>
+            <tr><td><strong>托管版</strong></td><td>自定义定价</td><td>ODW.ai 为您托管和管理 Vault(私有云)</td></tr>
+          </tbody>
+        </table>
+        <p><strong>额外成本:</strong></p>
+        <ul>
+          <li><strong>API 成本:</strong>如果使用基于 API 的模型(OpenAI、Anthropic),直接向 API 提供商付费</li>
+          <li><strong>基础设施:</strong>您为自己的服务器/云付费(如果自托管)</li>
+        </ul>
+        <div class="callout info"><strong>注意</strong>定价为示例,可能会更改。请联系我们获取当前定价和自定义报价。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">Vault 比 Glean 或 Onyx 便宜吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
+        <p><strong>是的,显著更便宜。</strong>Glean 和 Onyx 通常成本为 $10-$30/用户/月。对于 100 人的公司,那就是 $1,000-$3,000/月。</p>
+        <p>Vault 成本为 $0-$499/月(固定费率,非按用户)。对于 100 人的公司,Vault <strong>便宜 2-30 倍</strong>。</p>
+        <p>而且 Vault 是自托管的——您获得完全主权。Glean/Onyx 是云端 SaaS——您将文档发送给他们。</p>
+        <p>当然,Glean/Onyx 是托管服务(无需管理基础设施),而 Vault 需要自托管。但如果您有基础设施且需要主权,Vault 在成本上是明显的赢家。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">有隐藏成本吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
+        <p>没有隐藏成本。总拥有成本包括:</p>
+        <ul>
+          <li><strong>Vault 订阅:</strong>基于版本的月费(社区版为 $0)</li>
+          <li><strong>API 成本:</strong>如果使用基于 API 的模型(OpenAI、Anthropic),直接向 API 提供商付费</li>
+          <li><strong>基础设施:</strong>您为自己的服务器/云付费(如果自托管)</li>
+        </ul>
+        <p>仅此而已。没有设置费、没有意外收费、没有按用户收费。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">免费版真的是免费的吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
+        <p>是的。<strong>社区版 100% 免费</strong>:</p>
+        <ul>
+          <li><strong>无时间限制:</strong>永久使用</li>
+          <li><strong>无功能限制:</strong>包含所有核心功能(文档导入、RAG、API 等)</li>
+          <li><strong>无用户限制:</strong>无限用户</li>
+          <li><strong>无文档限制:</strong>无限文档</li>
+        </ul>
+        <p>唯一的限制:</p>
+        <ul>
+          <li><strong>企业功能:</strong>SSO、高级 RBAC、审计日志、合规功能是付费的</li>
+          <li><strong>支持:</strong>仅社区支持(GitHub 问题、Discord)。无邮件或优先支持。</li>
+        </ul>
+        <p>我们相信开源。如果不需要企业功能,您可以永久免费使用 Vault。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">接受哪些付款方式?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
+        <p>我们接受:</p>
+        <ul>
+          <li><strong>信用卡/借记卡:</strong>Visa、Mastercard、American Express(通过 Stripe)</li>
+          <li><strong>银行转账:</strong>适用于年度订阅或企业客户</li>
+          <li><strong>加密货币:</strong>比特币、以太坊、USDC(面向注重隐私的客户)</li>
+        </ul>
+        <p>年度订阅提供发票。详情请联系我们。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">如果不满意可以退款吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
+        <p>可以。我们提供<strong>30 天退款保证</strong>。如果在最初 30 天内不满意,请联系我们获得全额退款——无需解释原因。</p>
+        <p>30 天后,您可以随时取消。您将继续拥有访问权限直到计费周期结束,但部分月份不提供退款。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">Vault 包含在 ODW.ai 套件包中吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
+        <p><strong>是的。</strong>Vault 是 ODW.ai 套件的一部分。您可以:</p>
+        <ul>
+          <li><strong>单独购买 Vault:</strong>单独使用 Vault(用于知识检索)</li>
+          <li><strong>购买完整套件:</strong>以折扣价获得 Desk、Voice、Vault、Shield 和其他模块</li>
+        </ul>
+        <p>套件包中 Vault 享有 20-30% 的折扣。而且所有模块原生集成——Vault 作为 Desk、Voice 和其他模块的知识后端。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 9: SCALING & OPERATIONS -->
+  <div class="section" id="s9">
+    <div class="section-header"><span class="icon">09 · 定价</span><h2>扩展与运维</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">Vault 可以处理多少文档?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
+        <p>Vault 水平扩展:</p>
+        <ul>
+          <li><strong>小型部署:</strong>1,000-10,000 个文档(Docker Compose,单节点)</li>
+          <li><strong>中型部署:</strong>10,000-100,000 个文档(Kubernetes,3+ 节点)</li>
+          <li><strong>大型部署:</strong>100,000-1,000,000+ 个文档(Kubernetes,自动扩展,分布式向量数据库)</li>
+        </ul>
+        <p>对于超大型部署(100 万+ 文档),我们建议:</p>
+        <ul>
+          <li>分布式向量数据库(Qdrant 集群、Milvus 集群)</li>
+          <li>托管 PostgreSQL(RDS、Cloud SQL)</li>
+          <li>自动扩展 Kubernetes 集群</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">Vault 可以支持多少用户?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
+        <p>Vault 支持<strong>无限用户</strong>(无按用户限制):</p>
+        <ul>
+          <li><strong>社区版:</strong>无限用户</li>
+          <li><strong>专业版:</strong>无限用户</li>
+          <li><strong>企业版:</strong>无限用户</li>
+        </ul>
+        <p>Vault 水平扩展——添加更多节点以处理更多并发用户。典型部署每节点支持 100-1,000 个并发用户。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">如果 Vault 宕机会怎样?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
+        <p>如果 Vault 宕机,查询功能不可用,但您的文档是安全的:</p>
+        <ul>
+          <li><strong>文档:</strong>存储在您的数据库(PostgreSQL)和向量数据库(Qdrant、Weaviate 等)中——不会丢失</li>
+          <li><strong>恢复:</strong>重启 Vault,它会重新连接到您的数据库</li>
+          <li><strong>高可用性:</strong>对于生产环境,使用多个副本(Kubernetes)和托管数据库(RDS、Cloud SQL)部署 Vault</li>
+        </ul>
+        <p>对于高可用性部署,我们建议:</p>
+        <ul>
+          <li><strong>Kubernetes:</strong>跨可用区的 3+ 副本</li>
+          <li><strong>托管数据库:</strong>RDS、Cloud SQL 或 Azure SQL(99.9% 正常运行时间 SLA)</li>
+          <li><strong>负载均衡器:</strong>在副本间分配流量</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">如何监控 Vault 的性能?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
+        <p>Vault 包含<strong>监控仪表板</strong>:</p>
+        <ul>
+          <li><strong>系统健康:</strong>CPU、内存、磁盘、网络使用率</li>
+          <li><strong>查询指标:</strong>每秒查询数、延迟(p50、p95)、错误率</li>
+          <li><strong>文档指标:</strong>文档数、块数、嵌入数</li>
+          <li><strong>模型指标:</strong>API 成本、令牌使用、模型延迟</li>
+        </ul>
+        <p>您还可以通过标准协议将指标导出到外部监控工具(Prometheus、Grafana、Datadog)。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">如何备份 Vault 数据?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
+        <p>Vault 数据存储在两个地方:</p>
+        <ul>
+          <li><strong>元数据数据库:</strong>PostgreSQL(文档元数据、用户数据等)。使用标准 PostgreSQL 工具备份(pg_dump、WAL 归档)。</li>
+          <li><strong>向量数据库:</strong>Qdrant、Weaviate、Milvus 或 Chroma(嵌入)。使用向量数据库的原生备份工具备份。</li>
+          <li><strong>文档:</strong>存储在文件系统或对象存储(S3、GCS、Azure Blob)中。使用标准文件/对象存储备份工具备份。</li>
+        </ul>
+        <p>我们建议:</p>
+        <ul>
+          <li><strong>每日备份:</strong>所有三个组件的自动备份</li>
+          <li><strong>异地存储:</strong>将备份存储在不同位置(如 S3、GCS、异地服务器)</li>
+          <li><strong>测试恢复:</strong>定期测试从备份恢复以确保其有效</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">可以为多个团队或部门使用 Vault 吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>多租户</strong>:</p>
+        <ul>
+          <li><strong>知识库:</strong>为不同团队或部门创建独立的知识库(如"人力资源"、"工程"、"法律")</li>
+          <li><strong>访问控制:</strong>控制谁可以访问哪些知识库(企业版)</li>
+          <li><strong>隔离:</strong>每个知识库有自己的文档、嵌入和权限</li>
+          <li><strong>查询范围:</strong>查询特定知识库或跨所有知识库搜索</li>
+        </ul>
+        <p>这对于有严格数据分离要求的组织或多租户部署(如管理多个客户的 MSP)很有用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">如何培训团队使用 Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
+        <p>Vault 旨在<strong>直观易用</strong>,但我们提供培训资源:</p>
+        <ul>
+          <li><strong>文档:</strong>为管理员、知识管理员和最终用户提供全面的用户指南</li>
+          <li><strong>视频教程:</strong>关键功能的逐步演练</li>
+          <li><strong>入职培训:</strong>对于付费客户,我们提供 1 小时的入职培训课程(远程)</li>
+          <li><strong>支持:</strong>为专业版和企业版客户提供优先支持</li>
+        </ul>
+        <p>大多数团队在 1-2 小时的培训后即可高效工作。Web 界面特别直观——最终用户无需技术技能。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 10: INTEGRATION & WORKFLOWS -->
+  <div class="section" id="s10">
+    <div class="section-header"><span class="icon">10 · 入职培训</span><h2>集成与工作流</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">Vault 如何与其他 ODW.ai 产品集成?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
+        <p>Vault 与所有 ODW.ai 产品<strong>原生集成</strong>:</p>
+        <ul>
+          <li><strong>Desk:</strong>使用 Vault 作为客户支持 AI 的知识后端</li>
+          <li><strong>Voice:</strong>使用 Vault 作为语音助手的知识后端</li>
+          <li><strong>Shield:</strong>Vault 将审计日志发送到 Shield 用于治理和合规</li>
+          <li><strong>其他模块:</strong>任何需要知识检索的 ODW.ai 模块都使用 Vault</li>
+        </ul>
+        <p>如果使用 ODW.ai 套件,Vault 集成是自动的——无需单独配置。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">Vault 提供 API 吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
+        <p>提供。Vault 提供用于编程访问的 <strong>REST API</strong>:</p>
+        <ul>
+          <li><strong>文档管理:</strong>通过 API 上传、删除和管理文档</li>
+          <li><strong>查询:</strong>通过 API 发送查询并检索结果</li>
+          <li><strong>知识库管理:</strong>通过 API 创建、删除和管理知识库</li>
+          <li><strong>管理:</strong>通过 API 配置模型、分块策略和其他设置</li>
+        </ul>
+        <p>API 有完整文档(OpenAPI/Swagger),支持通过 API 密钥或 OAuth 2.0 进行身份验证。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">Vault 提供 SDK 吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
+        <p>提供。Vault 为流行语言提供 <strong>SDK</strong>:</p>
+        <ul>
+          <li><strong>Python:</strong><code>pip install odw-vault</code></li>
+          <li><strong>JavaScript/TypeScript:</strong><code>npm install @odw/vault</code></li>
+        </ul>
+        <p>SDK 封装 REST API,为开发人员提供更便捷的接口:</p>
+        <pre><code>from odw_vault import VaultClient
+
+client = VaultClient(api_key="your-api-key")
+results = client.query("What's our refund policy?", knowledge_base="hr-policies")
+print(results.answer)</code></pre>
+        <p>SDK 是开源的,可在 GitHub 上获取。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">可以将 Vault 集成到我的内部工具吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
+        <p>可以。Vault 可以通过以下方式与内部工具集成:</p>
+        <ul>
+          <li><strong>REST API:</strong>从内部工具(Web 应用、移动应用、脚本)调用 Vault 的 API</li>
+          <li><strong>SDK:</strong>使用 Python 或 JavaScript SDK 简化集成</li>
+          <li><strong>Webhook:</strong>Vault 可以在文档添加/更新/删除时发送 Webhook(用于事件驱动的工作流)</li>
+        </ul>
+        <p>常见集成:</p>
+        <ul>
+          <li><strong>Slack:</strong>构建查询 Vault 的 Slack 机器人</li>
+          <li><strong>Microsoft Teams:</strong>构建查询 Vault 的 Teams 机器人</li>
+          <li><strong>内部 Web 应用:</strong>在内部门户中嵌入 Vault 的查询 UI</li>
+          <li><strong>自定义工作流:</strong>在自动化工作流中使用 Vault 的 API(如自动总结新文档)</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">可以将 Vault 连接到我的文档管理系统吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
+        <p>可以。Vault 包含用于外部数据源的<strong>连接器框架</strong>:</p>
+        <ul>
+          <li><strong>SharePoint:</strong>从 Microsoft SharePoint 同步文档(企业版)</li>
+          <li><strong>Google Drive:</strong>从 Google Drive 同步文档(企业版)</li>
+          <li><strong>Confluence:</strong>从 Atlassian Confluence 同步页面(企业版)</li>
+          <li><strong>文件系统:</strong>从本地或网络驱动器同步文档</li>
+          <li><strong>S3 兼容:</strong>从 AWS S3、MinIO 或其他 S3 兼容存储同步</li>
+          <li><strong>自定义:</strong>使用连接器 SDK 构建自己的连接器</li>
+        </ul>
+        <p>连接器可以按计划同步(如每小时)或实时同步(通过 Webhook)。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">可以将 Vault 的查询 UI 嵌入我的网站或应用吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
+        <p>可以。Vault 提供<strong>可嵌入的查询小部件</strong>:</p>
+        <ul>
+          <li><strong>JavaScript 小部件:</strong>在网站或 Web 应用中嵌入聊天式查询 UI</li>
+          <li><strong>可定制:</strong>自定义小部件的外观(颜色、徽标等)以匹配您的品牌</li>
+          <li><strong>身份验证:</strong>小部件遵守 Vault 的访问控制——用户只能看到他们有权限访问的文档</li>
+        </ul>
+        <p>这适用于:</p>
+        <ul>
+          <li><strong>面向客户:</strong>在客户门户中嵌入知识库</li>
+          <li><strong>面向员工:</strong>在内部门户中嵌入知识库</li>
+          <li><strong>产品集成:</strong>将 Vault 的查询 UI 作为功能嵌入您的产品</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">可以将 Vault 与现有 AI 工具一起使用吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
+        <p>可以。Vault 可以与现有 AI 工具一起使用:</p>
+        <ul>
+          <li><strong>LangChain:</strong>在 LangChain 管道中使用 Vault 作为检索器</li>
+          <li><strong>LlamaIndex:</strong>在 LlamaIndex 管道中使用 Vault 作为检索器</li>
+          <li><strong>自定义 RAG:</strong>在自定义 RAG 管道中使用 Vault 的 API</li>
+        </ul>
+        <p>Vault 旨在成为<strong>知识层</strong>——它提供检索,您可以使用任何 AI 工具进行生成。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 11: LIMITATIONS & ROADMAP -->
+  <div class="section" id="s11">
+    <div class="section-header"><span class="icon">11 · 路线图</span><h2>限制与路线图</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">Vault(目前)不能做什么?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
+        <p>Vault 功能强大,但在 v1.0 中有以下限制:</p>
+        <ul>
+          <li><strong>无实时流:</strong>Vault 支持批量和近实时导入,但不支持亚秒级流</li>
+          <li><strong>无移动应用:</strong>无原生 iOS/Android 应用(Web 界面对移动友好,但无原生应用)</li>
+          <li><strong>无语音/音频导入:</strong>无法导入音频文件(如会议录音)——仅支持文本</li>
+          <li><strong>无视频分析:</strong>无法分析视频内容</li>
+          <li><strong>无工作流自动化:</strong>Vault 是知识层,不是工作流引擎(使用其他 ODW.ai 模块)</li>
+          <li><strong>仅英语 UI:</strong>UI 仅支持英语(v1)——多语言 UI 计划在 v1.1 中推出</li>
+          <li><strong>无模型微调:</strong>Vault 使用现有模型——无法微调模型(计划在 v2.0 中推出)</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">Vault 会支持更多文档格式吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
+        <p><strong>会。</strong>我们将在 v1.1(2026 年第四季度)中添加对更多文档格式的支持:</p>
+        <ul>
+          <li><strong>PPTX:</strong>PowerPoint 演示文稿</li>
+          <li><strong>XLSX:</strong>Excel 电子表格</li>
+          <li><strong>电子邮件格式:</strong>EML、MSG(Outlook)</li>
+          <li><strong>OCR:</strong>改进的扫描 PDF 和图像 OCR</li>
+        </ul>
+        <p>如果您需要特定格式,请告诉我们——我们根据客户需求确定优先级。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">Vault 会支持语音/音频导入吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
+        <p><strong>计划在 v1.2(2027 年第一季度)。</strong>语音/音频导入将包括:</p>
+        <ul>
+          <li><strong>转录:</strong>使用 Whisper 或其他 ASR 模型自动转录音频文件(会议录音、语音备忘录)</li>
+          <li><strong>说话人分离:</strong>识别会议录音中谁说了什么</li>
+          <li><strong>可搜索转录:</strong>将转录导入 Vault 以进行检索</li>
+        </ul>
+        <p>这是希望搜索会议录音和语音备忘录的客户的高优先级功能。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">Vault 会支持多语言 UI 吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
+        <p><strong>计划在 v1.1(2026 年第四季度)。</strong>多语言 UI 将包括:</p>
+        <ul>
+          <li><strong>中文(简体和繁体)</strong></li>
+          <li><strong>西班牙语</strong></li>
+          <li><strong>法语</strong></li>
+          <li><strong>德语</strong></li>
+          <li><strong>日语</strong></li>
+        </ul>
+        <p>查询引擎已经支持多语言文档和查询——v1 中只有 UI 仅支持英语。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">未来 12 个月的路线图是什么?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
+        <p>关键里程碑:</p>
+        <ul>
+          <li><strong>v1.0(2026 年第三季度):</strong>MVP 发布。文档导入、RAG、模型无关推理、多租户、REST API、SDK。</li>
+          <li><strong>v1.1(2026 年第四季度):</strong>更多文档格式(PPTX、XLSX、电子邮件)、多语言 UI、改进的 OCR。</li>
+          <li><strong>v1.2(2027 年第一季度):</strong>语音/音频导入(转录、说话人分离)、高级分析。</li>
+          <li><strong>v2.0(2027 年第二季度):</strong>模型微调、高级检索策略(混合搜索、重排序)、工作流自动化。</li>
+        </ul>
+        <p>路线图可能会根据客户反馈更改。请联系我们获取最新路线图或请求功能。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">什么时候不应该使用 Vault?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
+        <p>Vault 不适合以下情况:</p>
+        <ul>
+          <li><strong>您没有主权要求:</strong>如果不关心数据主权,云端 RAG 平台(Glean、Onyx)更简单(无需管理基础设施)。</li>
+          <li><strong>您需要实时流:</strong>Vault 支持批量和近实时导入,但不支持亚秒级流。如果需要实时,请使用专用流平台。</li>
+          <li><strong>您需要工作流自动化:</strong>Vault 是知识层,不是工作流引擎。如果需要复杂工作流,请使用专用工作流工具(或其他 ODW.ai 模块)。</li>
+          <li><strong>您需要聊天机器人 UI:</strong>Vault 提供知识层,但不提供精美的聊天机器人 UI。如果需要开箱即用的聊天机器人,请使用专用聊天机器人平台(或将 Vault 与您自己的 UI 集成)。</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">Vault 保证 100% 准确的答案吗?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
+        <p><strong>不保证。</strong>没有 AI 系统能保证 100% 准确。Vault 的准确性取决于:</p>
+        <ul>
+          <li><strong>文档质量:</strong>清晰、结构良好的文档 = 更好的准确性</li>
+          <li><strong>嵌入模型:</strong>更好的嵌入模型 = 更好的检索</li>
+          <li><strong>生成模型:</strong>更好的生成模型 = 更好的答案</li>
+          <li><strong>查询清晰度:</strong>清晰、具体的问题 = 更好的答案</li>
+        </ul>
+        <p>目标:<strong>≥85% MRR@10</strong>(前 10 个结果的平均倒数排名)。这意味着正确答案在 85% 的情况下出现在前 10 个结果中。</p>
+        <p>Vault 提供<strong>来源引用</strong>,以便您可以验证答案。如果准确性差,请尝试提高文档质量、切换到更好的模型或改写查询。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-86">如何开始?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-86"><div class="faq-answer-inner">
+        <p>三条路径:</p>
+        <ol>
+          <li><strong>免费试用:</strong>下载 Vault 并自行部署。无需信用卡。用您的文档试用,看看是否适合您的用例。</li>
+          <li><strong>演示:</strong>与我们的团队预约演示。我们将向您介绍 Vault、回答您的问题并帮助您评估它是否适合您的业务。</li>
+          <li><strong>联系销售:</strong>对于企业客户或自定义部署(本地、物理隔离/气隙),请联系我们的销售团队获取定制报价。</li>
+        </ol>
+        <div class="callout tip"><strong>准备开始?</strong>访问 <code>odw.ai/vault</code> 下载 Vault 或预约演示。</div>
+      </div></div></div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Vault — 企业用户常见问题</strong></p>
+    <p>版本 2.0 · 待审草稿</p>
+    <p>基于:PRD v1.0、SAD v1.0、TSD v1.0、TBK v1.0 (2026-06-23)</p>
+    <p><a href="suite.html">← 返回套件常见问题</a></p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
+  });
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
+  const searchInput = document.getElementById('searchInput');
+  const noResults = document.getElementById('noResults');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.section').forEach(section => {
+      let sectionHas = 0;
+      section.querySelectorAll('.faq-item').forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        const match = q === '' || txt.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) { sectionHas++; visibleCount++; if (q !== '') item.classList.add('open'); }
+        else { item.classList.remove('open'); }
+      });
+      section.style.display = sectionHas === 0 && q !== '' ? 'none' : '';
+    });
+    noResults.style.display = (visibleCount === 0 && q !== '') ? 'block' : 'none';
+  });
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
+</script>
+</body>
+</html>

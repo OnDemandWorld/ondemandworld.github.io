@@ -1,0 +1,1233 @@
+<!-- Translation status: DRAFT — needs native-speaker review before publish -->
+<!-- Last synced with English source: 2026-07-10 -->
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loop — 商業用戶常見問題</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
+  <div class="subtitle">Loop 常見問題</div>
+  <h1>Loop 常見問題</h1>
+  <p>主權 AI 代理的工作流編排工具——視覺化建構器、代理原生、模型無關、零數據外洩。為企業決策者而設，無需技術背景。</p>
+  <span class="last-updated">最後更新：2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">首頁</a>
+    <span class="sep">→</span>
+    <a href="../index.html">常見問題</a>
+    <span class="sep">→</span>
+    <a href="./suite.html">套件</a>
+    <span class="sep">→</span>
+    <span>Loop</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" aria-label="搜尋問題" placeholder="搜尋問題……（例如：「工作流」、「自動化」、「編排」、「主權」、「代理」、「觸發」）">
+  </div>
+  <div class="controls">
+    <button onclick="expandAll()">＋ 展開全部</button>
+    <button onclick="collapseAll()">− 收合全部</button>
+    <button onclick="window.print()">🖨️ 列印 / 儲存為 PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>跳至章節</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> 基本概覽</a>
+      <a href="#s2"><span class="num">2</span> 工作流編寫</a>
+      <a href="#s3"><span class="num">3</span> 方案優勢</a>
+      <a href="#s4"><span class="num">4</span> 執行與觸發</a>
+      <a href="#s5"><span class="num">5</span> 安全與私隱</a>
+      <a href="#s6"><span class="num">6</span> 模型與 AI</a>
+      <a href="#s7"><span class="num">7</span> 部署與架設</a>
+      <a href="#s8"><span class="num">8</span> 費用與定價</a>
+      <a href="#s9"><span class="num">9</span> 擴展與營運</a>
+      <a href="#s10"><span class="num">10</span> 整合與工作流</a>
+      <a href="#s11"><span class="num">11</span> 限制與路線圖</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">沒有符合搜尋的問題。請嘗試更廣闊的關鍵字。</div>
+
+  <!-- SECTION 1: THE BASICS -->
+  <div class="section" id="s1">
+    <div class="section-header"><span class="icon">01 · 概覽</span><h2>基本概覽 — Loop 是什麼？</h2><span class="count">9 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">簡單而言，ODW.ai Loop 是什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
+        <p>Loop 是 ODW.ai 套件的<strong>編排層</strong>。它將 ODW 的各個代理（Vault、Desk、Recap 等）串連成自動化的多步驟工作流，全部在你的基建上運行。</p>
+        <p>運作方式如下：</p>
+        <ol>
+          <li><strong>視覺化建構器：</strong>拖放節點建立工作流（無需編碼）</li>
+          <li><strong>代理元件：</strong>使用預設節點處理 Vault（知識庫）、Desk（任務）、Recap（會議情報）</li>
+          <li><strong>觸發方式：</strong>工作流可按排程、事件或手動觸發</li>
+          <li><strong>執行：</strong>Loop 負責編排工作流，在代理之間傳遞數據</li>
+        </ol>
+        <p>工作流範例：「會議結束後 → 提取行動項目（Recap）→ 建立任務（Desk）→ 更新知識庫（Vault）」</p>
+        <p>與其他工作流工具的最大分別：<strong>代理原生、主權設計、模型無關</strong>。Loop 將 ODW 的代理元件視為一等物件，所有數據留在你的基建上。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">Loop 解決什麼問題？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
+        <p>企業在 AI 代理上面臨多重挑戰：</p>
+        <ul>
+          <li><strong>代理各自為政：</strong>各個代理（知識庫、會議情報、任務管理）獨立運作，缺乏協調</li>
+          <li><strong>雲端依賴：</strong>大部分工作流工具（Zapier、n8n）需要將數據傳送至其雲端，構成合規風險</li>
+          <li><strong>供應商綁定：</strong>工作流工具綁定特定 AI 模型或雲端供應商</li>
+          <li><strong>複雜性：</strong>建立多代理工作流需要深厚技術專長</li>
+        </ul>
+        <p>Loop 以<strong>代理原生編排</strong>配合<strong>主權設計</strong>解決這些問題。你可以在無需雲端依賴或供應商綁定的情況下，將 ODW 代理協調成生產工作流。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">Loop 適合哪些對象？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
+        <p>Loop 專為<strong>受監管或對數據駐留敏感的中小企</strong>而設：</p>
+        <ul>
+          <li><strong>法律：</strong>律師樓、法律科技——律師與客戶保密特權</li>
+          <li><strong>醫療：</strong>醫院、診所、醫療科技——類 HIPAA 工作流</li>
+          <li><strong>金融服務：</strong>銀行、金融科技、保險——嚴格的數據主權</li>
+          <li><strong>政府承辦商：</strong>國防、聯邦——嚴格的數據主權</li>
+          <li><strong>注重私隱的企業：</strong>歐盟、亞太、拉美地區——GDPR 合規</li>
+          <li><strong>任何企業：</strong>希望在無雲端依賴下自動化 AI 代理工作流</li>
+        </ul>
+        <p>如果你需要協調 AI 代理並同時確保所有數據留在你的基建上，Loop 正是為你而設。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">Loop 與 Zapier 或 n8n 有何分別？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
+        <p>Zapier 和 n8n 是<strong>通用工作流工具</strong>。Loop 是<strong>代理原生編排器</strong>。</p>
+        <table>
+          <thead><tr><th>面向</th><th>ODW.ai Loop</th><th>Zapier / n8n</th></tr></thead>
+          <tbody>
+            <tr><td>部署</td><td>✅ 自託管——完全掌控數據</td><td>❌ 僅雲端（Zapier）或自託管但非主權設計（n8n）</td></tr>
+            <tr><td>代理整合</td><td>✅ 代理原生（Vault、Desk、Recap 作為一等物件）</td><td>❌ 通用 webhook，無語意理解</td></tr>
+            <tr><td>數據主權</td><td>✅ 預設零數據外洩</td><td>❌ 數據傳送至雲端（Zapier）或非必然（n8n）</td></tr>
+            <tr><td>模型路由</td><td>✅ 模型無關（本機或 API）</td><td>❌ 綁定特定 AI 供應商</td></tr>
+            <tr><td>目標用途</td><td>✅ AI 代理編排</td><td>❌ 通用自動化</td></tr>
+          </tbody>
+        </table>
+        <p>如果你需要在完全掌控數據的前提下編排 AI 代理，Loop 是更佳選擇。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">「代理原生」是什麼意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
+        <p>「代理原生」代表<strong>Loop 將 ODW 的代理元件視為一等工作流物件</strong>：</p>
+        <ul>
+          <li><strong>Vault 文件：</strong>Loop 可以讀寫文件、搜尋、執行 RAG 查詢、管理標籤</li>
+          <li><strong>Desk 任務：</strong>Loop 可以建立／更新任務、管理項目、進行日曆操作</li>
+          <li><strong>Recap 逐字稿：</strong>Loop 可以匯入逐字稿、提取行動項目、摘要、分類</li>
+        </ul>
+        <p>不同於通用工作流工具（將代理視為不透明的 webhook），Loop 理解代理輸出的<strong>語意類型</strong>。來自 Vault 的「文件」是類型化物件，而非僅是 JSON 資料塊。</p>
+        <div class="callout tip"><strong>為何重要</strong>代理原生編排實現類型安全工作流、更佳錯誤處理，以及更直觀的工作流編寫。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">Loop 是獨立產品還是套件的一部分？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
+        <p>Loop <strong>兩者皆是</strong>：</p>
+        <ul>
+          <li><strong>獨立使用：</strong>你可以單獨使用 Loop 進行工作流自動化</li>
+          <li><strong>套件整合：</strong>Loop 是 ODW.ai 套件的編排層，並與其他模組整合：
+            <ul>
+              <li><strong>Vault：</strong>知識庫（文件、RAG、標籤）</li>
+              <li><strong>Desk：</strong>工作區（任務、項目、日曆）</li>
+              <li><strong>Recap：</strong>會議情報（逐字稿、行動項目、摘要）</li>
+              <li><strong>Shield：</strong>管治（審計日誌、合規報告）</li>
+            </ul>
+          </li>
+        </ul>
+        <p>套件整合正是 Loop 強大的原因——它可以憑完整語意理解將 ODW 代理協調成生產工作流。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">「主權設計」是什麼意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
+        <p>「主權設計」代表<strong>所有工作流數據留在你的基建上</strong>：</p>
+        <ul>
+          <li><strong>零數據外洩：</strong>沒有數據離開你的基建（除非你明確設定）</li>
+          <li><strong>本機執行：</strong>所有工作流在你的硬件上執行</li>
+          <li><strong>無遙測：</strong>不會將使用數據傳送至 ODW.ai（除非你選擇加入）</li>
+          <li><strong>氣隙隔離：</strong>Loop 可在氣隙環境中運行（無需互聯網存取）</li>
+        </ul>
+        <p>這對受監管行業至關重要。如果你的工作流工具正將數據傳送至雲端供應商，你就無法聲稱擁有數據主權。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">使用 Loop 需要技術技能嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
+        <p><strong>部署方面：</strong>需要。Loop 為自託管，因此你需要有人能管理 Docker/Kubernetes、設定網絡及監察基建。</p>
+        <p><strong>工作流編寫方面：</strong>不需要。Loop 提供<strong>視覺化拖放建構器</strong>——非工程人員可在 30 分鐘內組合工作流。</p>
+        <p><strong>進階邏輯方面：</strong>需要。Loop 提供代碼節點（Python/TypeScript）處理自訂邏輯——工程師可在不離開平台的情況下編寫代碼。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">Loop 可以取代 Zapier 或 n8n 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
+        <p><strong>視情況而定。</strong></p>
+        <ul>
+          <li><strong>如需 AI 代理編排：</strong>可以。Loop 專為協調 AI 代理（Vault、Desk、Recap 等）而設</li>
+          <li><strong>如需通用自動化：</strong>或許。Loop 可透過 webhook 整合外部服務，但在非 AI 用途上不及 Zapier/n8n 廣泛</li>
+        </ul>
+        <p>Loop 無意取代 Zapier/n8n 的通用自動化角色。它是<strong>ODW 主權代理套件的編排器</strong>。</p>
+        <p>如果你已在使用 ODW 代理並需要協調它們，Loop 是正確選擇。如果你需要自動化非 AI 工作流（例如「提交表單後發送電郵」），Zapier/n8n 可能更合適。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 2: WORKFLOW AUTHORING -->
+  <div class="section" id="s2">
+    <div class="section-header"><span class="icon">02 · 主權</span><h2>工作流編寫</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">如何在 Loop 建立工作流？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
+        <p>Loop 提供<strong>視覺化拖放建構器</strong>：</p>
+        <ol>
+          <li><strong>節點庫：</strong>瀏覽預設節點（Vault、Desk、Recap、邏輯、代碼）</li>
+          <li><strong>拖放：</strong>將節點拖到畫布上</li>
+          <li><strong>連接節點：</strong>在節點之間繪製連線以定義數據流向</li>
+          <li><strong>設定節點：</strong>設定參數、條件及錯誤處理</li>
+          <li><strong>測試：</strong>在測試模式運行工作流</li>
+          <li><strong>部署：</strong>啟動工作流投入生產</li>
+        </ol>
+        <p>目標：<strong>非工程人員可在 30 分鐘內建立生產工作流</strong>。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">Loop 支援哪些類型的節點？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
+        <p>Loop 支援<strong>多種節點類型</strong>：</p>
+        <ul>
+          <li><strong>代理節點：</strong>Vault（讀寫文件、搜尋、RAG）、Desk（任務、項目、日曆）、Recap（逐字稿、行動項目、摘要）</li>
+          <li><strong>邏輯節點：</strong>條件分支、迴圈、並行執行、錯誤處理</li>
+          <li><strong>代碼節點：</strong>Python 及 TypeScript 自訂邏輯</li>
+          <li><strong>觸發節點：</strong>排程（cron）、事件驅動（webhook、檔案監視）、手動</li>
+          <li><strong>整合節點：</strong>HTTP 請求、數據庫查詢、檔案操作</li>
+        </ul>
+        <p>節點庫可擴展——你可以為特定用途建立自訂節點。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">工作流可以使用條件邏輯嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>條件分支</strong>：</p>
+        <ul>
+          <li><strong>If/else：</strong>根據條件分支（例如「如情緒為負面，升級至經理」）</li>
+          <li><strong>Switch：</strong>根據值進行多向分支</li>
+          <li><strong>篩選：</strong>根據條件篩選數據</li>
+          <li><strong>迴圈：</strong>迭代清單（例如「為每個行動項目建立任務」）</li>
+        </ul>
+        <p>條件邏輯可實現具動態行為的複雜工作流。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">可以在工作流中撰寫自訂代碼嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>代碼節點</strong>：</p>
+        <ul>
+          <li><strong>語言：</strong>Python 及 TypeScript</li>
+          <li><strong>用途：</strong>自訂數據轉換、複雜邏輯、API 整合</li>
+          <li><strong>沙盒：</strong>代碼在安全沙盒中運行</li>
+          <li><strong>存取工作流上下文：</strong>代碼可以讀寫工作流變量</li>
+        </ul>
+        <p>代碼節點在視覺節點不足時非常有用——工程師可在不離開平台的情況下編寫代碼。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">可以對工作流進行版本控制嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>基於 git 的版本控制</strong>：</p>
+        <ul>
+          <li><strong>自動提交：</strong>每次工作流變更都會提交至 git</li>
+          <li><strong>分支：</strong>為實驗性工作流建立分支</li>
+          <li><strong>回滾：</strong>還原至先前版本</li>
+          <li><strong>協作：</strong>多名用戶可共同處理工作流（附衝突解決）</li>
+        </ul>
+        <p>版本控制確保你能追蹤變更、安全協作，並在出現問題時回滾。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">有工作流範本嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
+        <p>有。Loop 提供<strong>預設工作流範本</strong>：</p>
+        <ul>
+          <li><strong>會議 → 行動項目 → 任務：</strong>從會議逐字稿提取行動項目，在 Desk 建立任務</li>
+          <li><strong>文件 → 知識庫：</strong>匯入文件、提取關鍵資料、更新 Vault</li>
+          <li><strong>客戶查詢 → 回覆：</strong>將客戶查詢路由至合適代理，產生回覆</li>
+          <li><strong>合規檢查：</strong>用於監管合規的審計工作流</li>
+        </ul>
+        <p>範本只是起點——你可按特定用途自訂。</p>
+        <div class="callout info"><strong>社群範本</strong>社群範本市集計劃於 v1.1（2026 年第四季）推出。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">部署前可以測試工作流嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>測試模式</strong>：</p>
+        <ul>
+          <li><strong>模擬運行：</strong>以範例數據執行工作流</li>
+          <li><strong>逐步執行：</strong>逐節點執行工作流</li>
+          <li><strong>除錯：</strong>檢視每個節點的中間輸出</li>
+          <li><strong>日誌：</strong>檢視執行日誌以排查問題</li>
+        </ul>
+        <p>測試模式確保你可以在部署至生產前驗證工作流。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">可以重用工作流元件嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>子工作流</strong>：</p>
+        <ul>
+          <li><strong>模組化設計：</strong>建立可重用的工作流元件</li>
+          <li><strong>參數：</strong>將輸入傳遞至子工作流</li>
+          <li><strong>返回值：</strong>子工作流可返回輸出</li>
+          <li><strong>庫：</strong>建立可重用元件庫</li>
+        </ul>
+        <p>子工作流實現模組化、可維護的工作流設計——建立一次，到處重用。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 3: OUR SOLUTION'S STRENGTHS -->
+  <div class="section" id="s3">
+    <div class="section-header"><span class="icon">03 · 整合</span><h2>方案優勢與設計</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">Loop 相比其他工作流工具有何主要優勢？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>功能</th><th>ODW.ai Loop</th><th>一般工作流工具</th></tr></thead>
+          <tbody>
+            <tr><td>部署</td><td>✅ 自託管——完全掌控數據</td><td>❌ 僅雲端或非主權設計</td></tr>
+            <tr><td>代理整合</td><td>✅ 代理原生（語意理解）</td><td>❌ 通用 webhook，無語意理解</td></tr>
+            <tr><td>數據主權</td><td>✅ 預設零數據外洩</td><td>❌ 數據傳送至雲端</td></tr>
+            <tr><td>模型路由</td><td>✅ 模型無關（本機或 API）</td><td>❌ 綁定特定 AI 供應商</td></tr>
+            <tr><td>目標用途</td><td>✅ AI 代理編排</td><td>❌ 通用自動化</td></tr>
+            <tr><td>代碼逃生艙</td><td>✅ Python/TypeScript 代碼節點</td><td>⚠️ 有限或不支援代碼</td></tr>
+          </tbody>
+        </table>
+        <p>Loop 以<strong>代理原生編排 + 主權 + 模型無關</strong>取勝。如果你需要在完全掌控數據的前提下協調 AI 代理，Loop 是最佳選擇。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">Loop 如何讓非工程人員建立工作流？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
+        <p>Loop 提供<strong>低代碼介面</strong>：</p>
+        <ul>
+          <li><strong>視覺化建構器：</strong>拖放節點，無需編碼</li>
+          <li><strong>預設節點：</strong>常見操作一鍵完成</li>
+          <li><strong>範本：</strong>從預設工作流範本開始</li>
+          <li><strong>類型安全：</strong>系統防止無效連接（例如不能將「文件」連接到「數字」欄位）</li>
+        </ul>
+        <p>目標：<strong>非工程人員可在 30 分鐘內建立生產工作流</strong>。</p>
+        <div class="callout tip"><strong>代碼逃生艙</strong>進階邏輯方面，工程師可在不離開平台的情況下使用 Python/TypeScript。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">Loop 如何確保工作流可靠性？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
+        <p>Loop 提供<strong>可靠性功能</strong>：</p>
+        <ul>
+          <li><strong>重試邏輯：</strong>自動重試失敗的節點，可設定退避</li>
+          <li><strong>逾時控制：</strong>為每個節點設定逾時以防止卡住</li>
+          <li><strong>熔斷器：</strong>如下游服務不可用則停止工作流</li>
+          <li><strong>錯誤處理：</strong>為每個節點定義錯誤處理器</li>
+          <li><strong>執行歷史：</strong>完整記錄每次運行的輸入／輸出</li>
+        </ul>
+        <p>目標：<strong>≥98% 工作流執行成功率</strong>。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">Loop 可處理複雜的多步驟工作流嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
+        <p>可以。Loop 支援<strong>複雜工作流</strong>：</p>
+        <ul>
+          <li><strong>並行執行：</strong>同時運行多個分支</li>
+          <li><strong>迴圈：</strong>迭代清單（例如「對每份文件提取關鍵資料」）</li>
+          <li><strong>條件分支：</strong>基於數據的動態行為</li>
+          <li><strong>子工作流：</strong>模組化、可重用元件</li>
+          <li><strong>狀態管理：</strong>跨工作流運行追蹤狀態</li>
+        </ul>
+        <p>Loop 專為生產級工作流設計——不限於簡單自動化。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">可以監察工作流效能嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>指標儀表板</strong>：</p>
+        <ul>
+          <li><strong>成功率：</strong>成功運行的工作流百分比</li>
+          <li><strong>延遲：</strong>完成工作流所需時間</li>
+          <li><strong>吞吐量：</strong>每小時／每日工作流運行次數</li>
+          <li><strong>錯誤率：</strong>按節點追蹤失敗</li>
+          <li><strong>資源用量：</strong>CPU、記憶體、磁碟用量</li>
+        </ul>
+        <p>你亦可透過標準協議將指標匯出至外部監察工具（Prometheus、Grafana、Datadog）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">工作流失敗時可以收到警報嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>錯誤警報</strong>：</p>
+        <ul>
+          <li><strong>Webhook：</strong>發送警報至你的監察系統</li>
+          <li><strong>電郵：</strong>發送電郵警報</li>
+          <li><strong>Slack：</strong>發送警報至 Slack 頻道</li>
+          <li><strong>自訂：</strong>透過 API 整合你的警報系統</li>
+        </ul>
+        <p>警報確保你能快速回應失敗——在影響業務營運之前。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">Loop 可處理高流量工作流嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
+        <p>可以。Loop 支援<strong>高流量執行</strong>：</p>
+        <ul>
+          <li><strong>可擴展基建：</strong>基於 Kubernetes 的部署可水平擴展</li>
+          <li><strong>優先佇列：</strong>優先處理關鍵工作流（Scale 方案）</li>
+          <li><strong>並行執行：</strong>同時運行多個工作流</li>
+          <li><strong>批次處理：</strong>高效處理大型數據集</li>
+        </ul>
+        <p>對於高流量場景（每日 10,000+ 工作流運行），我們建議：</p>
+        <ul>
+          <li><strong>Kubernetes：</strong>用於自動擴展及高可用性</li>
+          <li><strong>受管數據庫：</strong>RDS、Cloud SQL 或 Azure SQL</li>
+          <li><strong>負載均衡器：</strong>在副本之間分配流量</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">Loop 可以取代現有的編排工具嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
+        <p><strong>視情況而定。</strong></p>
+        <ul>
+          <li><strong>如正在編排 AI 代理：</strong>可以。Loop 專為協調 AI 代理（Vault、Desk、Recap 等）而設</li>
+          <li><strong>如進行通用自動化：</strong>或許。Loop 可透過 webhook 整合外部服務，但在非 AI 用途上不及 Zapier/n8n 廣泛</li>
+        </ul>
+        <p>Loop 無意取代 Zapier/n8n 的通用自動化角色。它是<strong>ODW 主權代理套件的編排器</strong>。</p>
+        <p>如果你已在使用 ODW 代理並需要協調它們，Loop 是正確選擇。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 4: EXECUTION & TRIGGERS -->
+  <div class="section" id="s4">
+    <div class="section-header"><span class="icon">04 · 安全</span><h2>執行與觸發</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">工作流如何被觸發？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
+        <p>Loop 支援<strong>多種觸發類型</strong>：</p>
+        <ul>
+          <li><strong>排程：</strong>Cron 風格排程（例如「每日上午 9 時」、「每小時」）</li>
+          <li><strong>事件驅動：</strong>Webhook、檔案監視器、ODW 代理事件</li>
+          <li><strong>手動：</strong>介面按鈕、API 呼叫</li>
+          <li><strong>鏈式：</strong>由另一個工作流觸發</li>
+        </ul>
+        <p>你可以組合觸發方式（例如「每小時運行一次，或在上傳檔案時」）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">工作流可以按排程運行嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>Cron 風格排程</strong>：</p>
+        <ul>
+          <li><strong>簡單排程：</strong>「每小時」、「每日上午 9 時」、「每週一」</li>
+          <li><strong>複雜排程：</strong>Cron 表達式（例如「0 9 * * 1-5」= 工作日上午 9 時）</li>
+          <li><strong>時區感知：</strong>以你的本地時區排程</li>
+          <li><strong>錯過運行：</strong>設定錯過運行的行為（跳過、運行一次、全部運行）</li>
+        </ul>
+        <p>排程工作流適合定期任務（例如「每小時同步數據」、「每日產生報告」）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">工作流可由事件觸發嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>事件驅動觸發</strong>：</p>
+        <ul>
+          <li><strong>Webhook：</strong>透過 HTTP 請求觸發工作流</li>
+          <li><strong>檔案監視器：</strong>在檔案建立／修改時觸發工作流</li>
+          <li><strong>ODW 代理事件：</strong>在代理完成任務時觸發工作流（例如「會議結束後」）</li>
+          <li><strong>數據庫事件：</strong>在數據庫記錄變更時觸發工作流</li>
+        </ul>
+        <p>事件驅動工作流適合反應式自動化（例如「當客戶提交表單時處理數據」）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">工作流可以手動觸發嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>手動觸發</strong>：</p>
+        <ul>
+          <li><strong>介面按鈕：</strong>在 Loop 主控台點擊按鈕運行工作流</li>
+          <li><strong>API 呼叫：</strong>透過 REST API 觸發工作流</li>
+          <li><strong>CLI：</strong>透過命令列介面觸發工作流</li>
+        </ul>
+        <p>手動觸發適合按需任務（例如「立即產生報告」、「按需同步數據」）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">工作流失敗時會怎樣？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
+        <p>Loop 提供<strong>錯誤處理</strong>：</p>
+        <ul>
+          <li><strong>重試邏輯：</strong>自動重試失敗的節點，可設定退避</li>
+          <li><strong>錯誤處理器：</strong>為每個節點定義自訂錯誤處理器</li>
+          <li><strong>備用工作流：</strong>如主工作流失敗，運行備用工作流</li>
+          <li><strong>警報：</strong>收到失敗通知（webhook、電郵、Slack）</li>
+          <li><strong>執行歷史：</strong>檢視失敗運行情況以診斷問題</li>
+        </ul>
+        <p>目標：<strong>工作流失敗的平均復原時間 ≤2 分鐘</strong>。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">可以暫停或停止正在運行的工作流嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>工作流控制</strong>：</p>
+        <ul>
+          <li><strong>暫停：</strong>暫停正在運行的工作流（可恢復）</li>
+          <li><strong>停止：</strong>停止正在運行的工作流（不可恢復）</li>
+          <li><strong>取消：</strong>取消排程中的工作流</li>
+          <li><strong>停用：</strong>停用工作流（防止未來運行）</li>
+        </ul>
+        <p>這些控制在排查問題、維護或停止失控工作流時非常有用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">工作流可以並行運行嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
+        <p>可以。Loop 支援<strong>並行執行</strong>：</p>
+        <ul>
+          <li><strong>並行分支：</strong>同時運行工作流的多個分支</li>
+          <li><strong>並行工作流：</strong>同時運行多個工作流</li>
+          <li><strong>資源限制：</strong>設定並發限制以防止資源耗盡</li>
+        </ul>
+        <p>並行執行適合提升效能（例如「並行處理 100 份文件，而非逐份處理」）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">工作流可以等待外部事件嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>等待節點</strong>：</p>
+        <ul>
+          <li><strong>基於時間的等待：</strong>等待特定時長（例如「等待 5 分鐘」）</li>
+          <li><strong>基於事件的等待：</strong>等待外部事件（例如「等待 webhook 回調」）</li>
+          <li><strong>逾時：</strong>設定等待的逾時</li>
+        </ul>
+        <p>等待節點適合需要暫停及恢復的工作流（例如「發送審批請求、等待審批、繼續工作流」）。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 5: SECURITY & PRIVACY -->
+  <div class="section" id="s5">
+    <div class="section-header"><span class="icon">05 · 部署</span><h2>安全與私隱</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">Loop 安全嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
+        <p>安全。Loop 遵循<strong>安全最佳實踐</strong>建構：</p>
+        <ul>
+          <li><strong>自託管：</strong>所有工作流數據留在你的基建上</li>
+          <li><strong>加密：</strong>靜止時 AES-256，傳輸時 TLS 1.3</li>
+          <li><strong>存取控制：</strong>RBAC、SSO（透過 Shield 整合）</li>
+          <li><strong>審計日誌：</strong>所有工作流執行的防篡改日誌（透過 Shield）</li>
+          <li><strong>開源：</strong>代碼可審核——你可以驗證沒有後門或數據外洩</li>
+        </ul>
+        <p>Loop 為受監管行業而設。如果你能使用 Loop，就能通過合規審計。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">ODW.ai 能存取我的工作流數據嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
+        <p><strong>不能。</strong>Loop 在你的基建上自託管。ODW.ai 完全無法存取你的工作流數據。</p>
+        <p>不同於雲端工作流工具（Zapier、n8n 雲端），Loop 不會將工作流數據傳送給第三方。一切留在你的伺服器上。</p>
+        <p>這對受監管行業至關重要。如果你的工作流工具正將數據傳送至雲端供應商，你就無法聲稱擁有數據主權。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">可以在氣隙環境中部署 Loop 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
+        <p>可以。Loop 支援<strong>氣隙部署</strong>（無互聯網存取）：</p>
+        <ul>
+          <li><strong>離線安裝：</strong>在無互聯網存取下安裝 Loop</li>
+          <li><strong>本機模型：</strong>所有 AI 模型在你的裝置上運行——無需對外部服務進行 API 呼叫</li>
+          <li><strong>無外部依賴：</strong>Loop 的核心功能無需互聯網存取</li>
+        </ul>
+        <p>氣隙部署常見於政府承辦商、軍事及高安全環境。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">可以控制誰能建立或運行工作流嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>基於角色的存取控制</strong>（透過 Shield 整合）：</p>
+        <ul>
+          <li><strong>管理員：</strong>完全存取——建立、編輯、刪除工作流、管理用戶</li>
+          <li><strong>開發人員：</strong>建立及編輯工作流，但不能刪除或管理用戶</li>
+          <li><strong>營運人員：</strong>運行工作流、檢視執行歷史，但不能編輯工作流</li>
+          <li><strong>檢視者：</strong>唯讀存取</li>
+        </ul>
+        <p>你亦可設定每個工作流的權限（例如僅特定用戶可運行敏感工作流）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">可以追蹤誰運行了哪些工作流嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
+        <p>可以。Loop 提供<strong>審計日誌</strong>（透過 Shield 整合）：</p>
+        <ul>
+          <li><strong>誰：</strong>哪位用戶運行了工作流</li>
+          <li><strong>什麼：</strong>運行了哪個工作流</li>
+          <li><strong>何時：</strong>時間戳</li>
+          <li><strong>輸入／輸出：</strong>完整記錄每次運行的輸入／輸出</li>
+        </ul>
+        <p>所有審計日誌均為防篡改，可匯出作合規用途。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">如果有人未經授權運行工作流會怎樣？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
+        <p>Loop 提供<strong>存取控制及警報</strong>：</p>
+        <ul>
+          <li><strong>存取控制：</strong>基於角色的存取防止未經授權的工作流執行</li>
+          <li><strong>警報：</strong>收到未經授權存取嘗試的通知</li>
+          <li><strong>審計追蹤：</strong>所有存取均會記錄（包括被封鎖的嘗試）</li>
+          <li><strong>調查：</strong>使用審計日誌調查事故</li>
+        </ul>
+        <p>對於關鍵事故，你可以為監管機構或法律顧問產生完整審計報告。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">Loop 的代碼可審核嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
+        <p>可以。Loop 的核心為<strong>開源</strong>：</p>
+        <ul>
+          <li><strong>透明：</strong>所有代碼在 GitHub 上公開</li>
+          <li><strong>可審核：</strong>你（或你的安全團隊）可以檢視代碼以查找漏洞、後門或數據外洩</li>
+          <li><strong>可驗證：</strong>你可以驗證 Loop 如其所言——無隱藏遙測、無數據傳送給第三方</li>
+        </ul>
+        <p>這對注重主權的組織至關重要。你應該能夠驗證工作流工具正在做什麼。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">Loop 符合 HIPAA 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
+        <p>Loop 對醫療工作流<strong>兼容 HIPAA</strong>：</p>
+        <ul>
+          <li><strong>現場處理：</strong>工作流數據留在你的基建上</li>
+          <li><strong>加密：</strong>本機儲存使用 AES-256 加密</li>
+          <li><strong>存取控制：</strong>密碼保護、基於角色的存取</li>
+          <li><strong>審計日誌：</strong>所有工作流執行的防篡改日誌</li>
+        </ul>
+        <p>Loop 協助你滿足 HIPAA 要求的<strong>技術保障措施</strong>。你仍需另行處理行政及物理保障措施。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 6: MODELS & AI -->
+  <div class="section" id="s6">
+    <div class="section-header"><span class="icon">06 · 合規</span><h2>模型與 AI</h2><span class="count">7 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">Loop 使用哪些 AI 模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
+        <p>Loop <strong>模型無關</strong>——支援多種模型：</p>
+        <ul>
+          <li><strong>本機模型：</strong>Llama 3、Mistral、Gemma、Qwen（透過 Ollama、vLLM、llama.cpp）</li>
+          <li><strong>API 模型：</strong>OpenAI（GPT-4o、GPT-4o-mini）、Anthropic（Claude 3.5 Sonnet）、Google（Gemini 1.5 Pro）、Mistral API</li>
+          <li><strong>自訂：</strong>任何提供 OpenAI 兼容 API 的模型</li>
+        </ul>
+        <p>你可以隨時切換模型——無需更改代碼。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">可以使用本機模型（完全離線）嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
+        <p>可以。Loop 透過以下方式支援<strong>本機模型</strong>：</p>
+        <ul>
+          <li><strong>Ollama：</strong>運行本機模型最簡單的方式。支援 Llama 3、Mistral、Gemma 等</li>
+          <li><strong>vLLM：</strong>面向生產工作負載的高效能推論伺服器</li>
+          <li><strong>llama.cpp：</strong>輕量、CPU 友好的推論（適合邊緣裝置）</li>
+        </ul>
+        <p>本機模型在你的自有硬件上運行——沒有數據離開你的基建。完全主權。</p>
+        <div class="callout warning"><strong>硬件要求</strong>本機模型需要 GPU 硬件（建議使用 NVIDIA GPU）。僅 CPU 推論可行但對大型模型較慢。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">可以使用 API 模型（OpenAI、Anthropic）嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
+        <p>可以。Loop 支援<strong>API 模型</strong>：</p>
+        <ul>
+          <li><strong>OpenAI：</strong>GPT-4o、GPT-4o-mini</li>
+          <li><strong>Anthropic：</strong>Claude 3.5 Sonnet、Claude 3 Opus</li>
+          <li><strong>Google：</strong>Gemini 1.5 Pro</li>
+          <li><strong>Mistral：</strong>Mistral Large、Mistral Medium</li>
+          <li><strong>自訂：</strong>任何提供 OpenAI 兼容 API 的模型</li>
+        </ul>
+        <p>API 模型在需要前沿能力（例如複雜推理、長上下文窗口）而本機模型尚未能匹配時非常有用。</p>
+        <div class="callout warning"><strong>數據主權</strong>如使用 API 模型，工作流數據會傳送至 API 供應商。這可能違反主權要求。本機模型可達致最大主權。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">如何選擇合適的模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
+        <p>選擇模型取決於你的優先事項：</p>
+        <table>
+          <thead><tr><th>模型</th><th>速度</th><th>質素</th><th>成本</th><th>主權</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Llama 3 8B（本機）</strong></td><td>✅ 快</td><td>⚠️ 良好</td><td>✅ 免費</td><td>✅ 完全</td></tr>
+            <tr><td><strong>Llama 3 70B（本機）</strong></td><td>⚠️ 慢</td><td>✅ 更佳</td><td>✅ 免費</td><td>✅ 完全</td></tr>
+            <tr><td><strong>GPT-4o-mini（API）</strong></td><td>✅ 快</td><td>✅ 良好</td><td>❌ 付費</td><td>❌ 無</td></tr>
+            <tr><td><strong>GPT-4o（API）</strong></td><td>⚠️ 中等</td><td>✅ 最佳</td><td>❌ 付費</td><td>❌ 無</td></tr>
+            <tr><td><strong>Claude 3.5 Sonnet（API）</strong></td><td>⚠️ 中等</td><td>✅ 最佳</td><td>❌ 付費</td><td>❌ 無</td></tr>
+          </tbody>
+        </table>
+        <p><strong>建議：</strong></p>
+        <ul>
+          <li><strong>最大主權：</strong>使用 Llama 3 8B 或 70B（本機、免費）</li>
+          <li><strong>最高質素：</strong>使用 GPT-4o 或 Claude 3.5 Sonnet（API、付費）</li>
+          <li><strong>平衡：</strong>例行任務用 Llama 3 8B，複雜推理用 GPT-4o-mini</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">如果有更好、更新的模型發布，可以切換嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
+        <p>可以。Loop <strong>模型無關</strong>——你可以隨時切換模型：</p>
+        <ul>
+          <li><strong>無需更改代碼：</strong>只需在管理主控台更新模型設定</li>
+          <li><strong>按任務：</strong>為不同任務使用不同模型（例如小型模型用於數據提取，大型模型用於複雜推理）</li>
+        </ul>
+        <p>這保障你的投資——當更好的模型發布時，你可以即時採用，無需重新架構系統。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">可以為工作流微調模型嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
+        <p><strong>Loop v1.0 不支援。</strong>Loop 使用現有模型——不支援微調。</p>
+        <p>然而，你可以：</p>
+        <ul>
+          <li><strong>使用提示工程：</strong>自訂提示以引導模型行為</li>
+          <li><strong>使用 Vault：</strong>以你的知識庫為 AI 提供依據</li>
+          <li><strong>外部微調：</strong>在 Loop 外部微調模型（使用 Hugging Face Transformers 等工具），然後透過自訂端點在 Loop 中使用微調後的模型</li>
+        </ul>
+        <p>微調支援計劃於 v2.0（2027 年第二季）推出。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">Loop 會自主決策嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
+        <p><strong>不會。</strong>Loop 是<strong>編排器</strong>，而非決策者。</p>
+        <p>Loop 按定義執行工作流——它不會自主決策。如需人類監督，你可以在工作流中加入審批節點（例如「發送電郵前等待人類審批」）。</p>
+        <p>這是<strong>設計選擇</strong>——Loop 讓你完全控制人類何時及如何參與工作流。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 7: DEPLOYMENT & SETUP -->
+  <div class="section" id="s7">
+    <div class="section-header"><span class="icon">07 · 模型</span><h2>部署與架設</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">如何部署 Loop？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
+        <p>Loop 提供三種部署選項：</p>
+        <ol>
+          <li><strong>Docker Compose：</strong>最簡單。一條指令（<code>docker-compose up</code>）即可運行。最適合開發及小型部署。</li>
+          <li><strong>Kubernetes（Helm）：</strong>生產就緒。提供 Helm chart。最適合大型部署、高可用性、自動擴展。</li>
+          <li><strong>裸機：</strong>進階用戶適用。直接安裝在 Linux 伺服器上。最大控制，但需要更多架設。</li>
+        </ol>
+        <p>對大部分客戶而言，<strong>Docker Compose 是最快捷徑</strong>。生產環境建議使用 Kubernetes。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">架設需要多長時間？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
+        <p>架設時間取決於你的部署：</p>
+        <ul>
+          <li><strong>Docker Compose：</strong>30 分鐘。拉取映像、設定環境變量、運行 <code>docker-compose up</code>。</li>
+          <li><strong>Kubernetes：</strong>2-4 小時。部署 Helm chart、設定 ingress、設定儲存、測試。</li>
+          <li><strong>裸機：</strong>1-2 日。安裝依賴項、設定服務、測試。</li>
+        </ul>
+        <p>部署後，你需要：</p>
+        <ul>
+          <li>設定首個工作流（30 分鐘）</li>
+          <li>設定整合（Vault、Desk、Recap）</li>
+          <li>測試工作流</li>
+        </ul>
+        <p>目標：<strong>從部署到首個工作流運行 ≤45 分鐘</strong>。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">運行 Loop 需要技術人員嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
+        <p><strong>部署方面：</strong>需要。Loop 為自託管，因此你需要有人能管理 Docker/Kubernetes、設定網絡及監察基建。</p>
+        <p><strong>工作流編寫方面：</strong>不需要。Loop 提供<strong>視覺化拖放建構器</strong>——非工程人員無需編碼即可組合工作流。</p>
+        <p><strong>開發人員方面：</strong>Loop 提供 REST API 及 SDK 作自訂整合。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">Loop 的系統要求是什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
+        <p>Loop 的要求取決於你的部署：</p>
+        <table>
+          <thead><tr><th>元件</th><th>最低</th><th>建議</th></tr></thead>
+          <tbody>
+            <tr><td><strong>CPU</strong></td><td>2 核心</td><td>4+ 核心</td></tr>
+            <tr><td><strong>RAM</strong></td><td>8 GB</td><td>16+ GB</td></tr>
+            <tr><td><strong>儲存</strong></td><td>50 GB SSD</td><td>200+ GB SSD</td></tr>
+            <tr><td><strong>GPU（本機模型）</strong></td><td>無（使用 API 模型）</td><td>NVIDIA A100 或同等</td></tr>
+            <tr><td><strong>作業系統</strong></td><td>Linux（Ubuntu 20.04+、RHEL 8+）</td><td>Ubuntu 22.04 LTS</td></tr>
+          </tbody>
+        </table>
+        <p>如使用 API 模型（OpenAI、Anthropic），無需 GPU。如使用本機模型，強烈建議使用 GPU。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">可以在 AWS/GCP/Azure 上部署 Loop 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
+        <p>可以。Loop 可部署在任何雲端供應商：</p>
+        <ul>
+          <li><strong>AWS：</strong>使用 EC2（Docker Compose）或 EKS（Kubernetes）</li>
+          <li><strong>GCP：</strong>使用 GCE（Docker Compose）或 GKE（Kubernetes）</li>
+          <li><strong>Azure：</strong>使用 VM（Docker Compose）或 AKS（Kubernetes）</li>
+        </ul>
+        <p>我們為每個雲端供應商提供部署指南。生產環境建議使用 Kubernetes 配合受管數據庫。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">可以從現有工作流工具遷移嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
+        <p>可以。Loop 支援<strong>工作流遷移</strong>：</p>
+        <ul>
+          <li><strong>匯入工作流：</strong>從 Zapier、n8n 等匯入工作流（透過 JSON/YAML）</li>
+          <li><strong>遷移指南：</strong>常見工作流工具的逐步指南</li>
+          <li><strong>手動重建：</strong>複雜工作流可能需要在 Loop 的視覺化建構器中重建</li>
+        </ul>
+        <p>遷移通常需要 1-2 日，視乎工作流複雜度。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">正式上線前可以預覽 Loop 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
+        <p>可以。Loop 包含<strong>沙盒模式</strong>：</p>
+        <ul>
+          <li><strong>測試環境：</strong>以範例數據在測試環境部署 Loop</li>
+          <li><strong>實驗：</strong>測試不同工作流、整合及設定</li>
+          <li><strong>評估：</strong>在正式上線前衡量效能、可靠性及合規性</li>
+        </ul>
+        <p>我們建議在沙盒模式測試 1-2 日再部署至生產。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">如何更新 Loop 至新版本？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
+        <p><strong>Docker Compose：</strong>拉取新映像、重新啟動容器。</p>
+        <p><strong>Kubernetes：</strong>更新 Helm chart、滾動更新。</p>
+        <p><strong>裸機：</strong>按照文件中的升級指南。</p>
+        <p>更新所需時間：<strong>&lt;10 分鐘</strong>（Docker/Kubernetes）。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 8: COST & PRICING -->
+  <div class="section" id="s8">
+    <div class="section-header"><span class="icon">08 · 語言</span><h2>費用與定價</h2><span class="count">7 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">Loop 收費多少？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
+        <p>Loop 定價基於<strong>功能與部署</strong>：</p>
+        <table>
+          <thead><tr><th>方案</th><th>價格</th><th>包含</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Core（免費）</strong></td><td>$0</td><td>單實例部署、無限本機工作流、所有 ODW 代理連接器、社群支援</td></tr>
+            <tr><td><strong>Scale</strong></td><td>按用量</td><td>多實例編排、統一控制平面、高可用部署、SLA 支援</td></tr>
+            <tr><td><strong>Enterprise</strong></td><td>自訂</td><td>高級連接器（SAP、Salesforce、自訂 ERP）、專屬入職引導、審計級日誌、白手套部署</td></tr>
+          </tbody>
+        </table>
+        <p><strong>額外成本：</strong></p>
+        <ul>
+          <li><strong>API 成本：</strong>如使用 API 模型（OpenAI、Anthropic），需直接向 API 供應商付費</li>
+          <li><strong>基建：</strong>你需為自有伺服器／雲端付費（如自託管）</li>
+        </ul>
+        <div class="callout info"><strong>備註</strong>定價僅供說明，可能會變更。請聯絡我們了解現行定價及自訂報價。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">Loop 比 Zapier 或 n8n 便宜嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
+        <p><strong>視情況而定。</strong></p>
+        <ul>
+          <li><strong>Zapier：</strong>每月 $20-$500+（視乎任務及功能）</li>
+          <li><strong>n8n：</strong>免費（自託管）或每月 $20-$200+（雲端）</li>
+          <li><strong>Loop Core：</strong>免費（自託管）</li>
+          <li><strong>Loop Scale：</strong>按用量（中小企通常每月 $50-$500）</li>
+        </ul>
+        <p>對於自託管部署，Loop Core <strong>免費</strong>——與 n8n 自託管相當，比 Zapier 便宜。</p>
+        <p>然而，Loop 需要自行管理基建。如計入基建成本，總擁有成本可能較高。</p>
+        <p>對大部分受監管的中小企而言，Loop 比雲端替代方案<strong>更便宜且更合規</strong>。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">有隱藏成本嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
+        <p>無隱藏成本。總擁有成本包括：</p>
+        <ul>
+          <li><strong>Loop 訂閱：</strong>按方案的月費（Core 免費）</li>
+          <li><strong>API 成本：</strong>如使用 API 模型（OpenAI、Anthropic），需直接向 API 供應商付費</li>
+          <li><strong>基建：</strong>你需為自有伺服器／雲端付費（如自託管）</li>
+        </ul>
+        <p>就這些。無設定費、無意外收費、無按工作流收費。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">接受哪些付款方式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
+        <p>我們接受：</p>
+        <ul>
+          <li><strong>信用／簽帳卡：</strong>Visa、Mastercard、American Express（透過 Stripe）</li>
+          <li><strong>銀行轉帳：</strong>適用於年度訂閱或企業客戶</li>
+          <li><strong>加密貨幣：</strong>Bitcoin、Ethereum、USDC（注重私隱的客戶）</li>
+        </ul>
+        <p>年度訂閱可開立發票。詳情請聯絡我們。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">不滿意可以退款嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
+        <p>可以。我們為付費方案提供 <strong>30 日退款保證</strong>。如在前 30 日內不滿意，請聯絡我們辦理全額退款——無須解釋原因。</p>
+        <p>30 日後，你可以隨時取消。你將繼續享有存取權直至帳單週期結束，但不會為不完整月份退款。</p>
+        <p>Core 方案免費，因此無需退款。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">Loop 包含在 ODW.ai 套件捆綁中嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
+        <p><strong>是的。</strong>Loop 是 ODW.ai 套件的一部分。你可以：</p>
+        <ul>
+          <li><strong>單獨購買 Loop：</strong>單獨使用 Loop</li>
+          <li><strong>購買完整套件：</strong>以優惠價取得 Desk、Voice、Vault、Loop、Shield 及其他模組</li>
+        </ul>
+        <p>套件捆綁以 20-30% 折扣包含 Loop。所有模組原生整合——Loop 編排 Vault、Desk、Recap 及其他代理。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">按工作流還是按執行次數收費？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
+        <p><strong>都不是（Core 方案）。</strong>Loop Core <strong>免費，工作流及執行次數均無上限</strong>。</p>
+        <p>Scale 方案為<strong>按用量定價</strong>——你按消耗的資源（CPU、記憶體、儲存）付費。</p>
+        <p>唯一的可變成本是 API 成本（如使用 API 模型）。你需直接向 API 供應商支付 token 用量費用。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 9: SCALING & OPERATIONS -->
+  <div class="section" id="s9">
+    <div class="section-header"><span class="icon">09 · 定價</span><h2>擴展與營運</h2><span class="count">7 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">Loop 可處理多少工作流？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
+        <p>Loop 可處理<strong>無限工作流</strong>：</p>
+        <ul>
+          <li><strong>無工作流上限：</strong>想建立多少就建立多少</li>
+          <li><strong>無執行上限：</strong>想運行多少次就運行多少次</li>
+          <li><strong>可擴展基建：</strong>基於 Kubernetes 的部署可水平擴展</li>
+        </ul>
+        <p>對於高流量場景（每日 10,000+ 工作流運行），我們建議：</p>
+        <ul>
+          <li><strong>Kubernetes：</strong>用於自動擴展及高可用性</li>
+          <li><strong>受管數據庫：</strong>RDS、Cloud SQL 或 Azure SQL</li>
+          <li><strong>負載均衡器：</strong>在副本之間分配流量</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">Loop 可支援多少用戶？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
+        <p>Loop 支援<strong>無限用戶</strong>：</p>
+        <ul>
+          <li><strong>Core 方案：</strong>無限用戶</li>
+          <li><strong>Scale 方案：</strong>無限用戶</li>
+          <li><strong>Enterprise 方案：</strong>無限用戶</li>
+        </ul>
+        <p>Loop 水平擴展——增加節點以處理更多並發用戶。典型部署每個節點支援 50-200 名並發用戶。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">Loop 停機時會怎樣？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
+        <p>Loop 停機時工作流執行不可用，但你的數據安全：</p>
+        <ul>
+          <li><strong>數據儲存：</strong>所有數據儲存於你的數據庫（SQLite 或 PostgreSQL）——不會丟失</li>
+          <li><strong>恢復：</strong>重新啟動 Loop，它會重新連接數據庫</li>
+          <li><strong>高可用性：</strong>生產環境建議以多副本部署 Loop（Kubernetes）</li>
+        </ul>
+        <p>對於高可用部署，我們建議：</p>
+        <ul>
+          <li><strong>Kubernetes：</strong>跨可用區 3+ 副本</li>
+          <li><strong>受管數據庫：</strong>RDS、Cloud SQL 或 Azure SQL（99.9% 正常時間 SLA）</li>
+          <li><strong>負載均衡器：</strong>在副本之間分配流量</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">如何監察 Loop 效能？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
+        <p>Loop 包含<strong>監察儀表板</strong>：</p>
+        <ul>
+          <li><strong>系統健康：</strong>CPU、記憶體、磁碟、網絡用量</li>
+          <li><strong>工作流指標：</strong>工作流數量、執行次數、成功率</li>
+          <li><strong>模型指標：</strong>API 成本、token 用量、模型延遲</li>
+          <li><strong>錯誤追蹤：</strong>按工作流及節點追蹤失敗</li>
+        </ul>
+        <p>你亦可透過標準協議將指標匯出至外部監察工具（Prometheus、Grafana、Datadog）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">如何備份 Loop 數據？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
+        <p>Loop 數據儲存於 SQLite（Core）或 PostgreSQL（Scale）。使用標準數據庫工具備份：</p>
+        <ul>
+          <li><strong>SQLite：</strong>複製數據庫檔案（簡單但需要停機）</li>
+          <li><strong>PostgreSQL：</strong>使用 pg_dump 或 WAL 封存進行自動備份</li>
+          <li><strong>離站儲存：</strong>將備份儲存在不同位置（例如 S3、GCS、離站伺服器）</li>
+          <li><strong>測試還原：</strong>定期測試從備份還原以確保有效</li>
+        </ul>
+        <p>Loop 為常見部署模式（Docker、Kubernetes、現場）提供備份指南及腳本。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">可以為多個團隊或部門使用 Loop 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
+        <p>可以。Loop 支援<strong>多租用戶</strong>：</p>
+        <ul>
+          <li><strong>多個工作區：</strong>為每個團隊或部門建立獨立工作區</li>
+          <li><strong>隔離：</strong>每個工作區擁有自己的工作流、數據及設定</li>
+          <li><strong>共享資源：</strong>跨工作區共享工作流（如需要）</li>
+        </ul>
+        <p>這適合擁有多個業務單位的企業，或管理多個客戶的代理公司。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">如何培訓團隊使用 Loop？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
+        <p>Loop 設計<strong>直觀易用</strong>，但我們提供培訓資源：</p>
+        <ul>
+          <li><strong>文件：</strong>為管理員及工作流編寫者提供全面用戶指南</li>
+          <li><strong>影片教學：</strong>主要功能的逐步演示</li>
+          <li><strong>入職引導：</strong>付費客戶可獲提供 2 小時遙距入職引導</li>
+          <li><strong>支援：</strong>Scale 及 Enterprise 客戶享有優先支援</li>
+        </ul>
+        <p>大部分團隊在 1-2 日培訓後即可投入生產。視覺化建構器特別直觀——工作流編寫無需技術技能。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 10: INTEGRATION & WORKFLOWS -->
+  <div class="section" id="s10">
+    <div class="section-header"><span class="icon">10 · 入職引導</span><h2>整合與工作流</h2><span class="count">7 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">Loop 如何與 ODW.ai 其他產品整合？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
+        <p>Loop 與所有 ODW.ai 產品<strong>原生整合</strong>：</p>
+        <ul>
+          <li><strong>Vault：</strong>知識庫（文件、RAG、標籤）</li>
+          <li><strong>Desk：</strong>工作區（任務、項目、日曆）</li>
+          <li><strong>Recap：</strong>會議情報（逐字稿、行動項目、摘要）</li>
+          <li><strong>Shield：</strong>管治（審計日誌、合規報告）</li>
+        </ul>
+        <p>如使用 ODW.ai 套件，Loop 整合自動完成——無需獨立設定。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">Loop 提供 API 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
+        <p>有。Loop 提供 <strong>REST API</strong> 作程式化存取：</p>
+        <ul>
+          <li><strong>工作流管理：</strong>透過 API 建立、更新、刪除工作流</li>
+          <li><strong>執行：</strong>透過 API 觸發工作流</li>
+          <li><strong>執行歷史：</strong>透過 API 檢索執行日誌</li>
+          <li><strong>Webhook：</strong>在工作流完成、失敗等時收到通知</li>
+        </ul>
+        <p>API 備有完整文件（OpenAPI/Swagger），支援 API 金鑰或 OAuth 2.0 驗證。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">可以將 Loop 與外部服務整合嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
+        <p>可以。Loop 支援<strong>外部整合</strong>：</p>
+        <ul>
+          <li><strong>HTTP 請求：</strong>呼叫任何 REST API</li>
+          <li><strong>數據庫查詢：</strong>連接 PostgreSQL、MySQL 等</li>
+          <li><strong>檔案操作：</strong>讀寫檔案、監視目錄</li>
+          <li><strong>Webhook：</strong>發送／接收 webhook</li>
+          <li><strong>高級連接器：</strong>SAP、Salesforce、ServiceNow、自訂 ERP（Enterprise 方案）</li>
+        </ul>
+        <p>外部整合讓 Loop 能連接你的現有系統及數據來源。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">可以將 Loop 與現有 AI 工具整合嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
+        <p>可以。Loop 可配合現有 AI 工具使用：</p>
+        <ul>
+          <li><strong>LangChain：</strong>在 LangChain 管線中使用 Loop 作為編排層</li>
+          <li><strong>LlamaIndex：</strong>在 LlamaIndex 管線中使用 Loop 作為編排層</li>
+          <li><strong>自訂 RAG：</strong>在自訂管線中使用 Loop 的 API</li>
+        </ul>
+        <p>Loop 設計為<strong>編排層</strong>——它協調 AI 代理，你可以為特定任務使用任何 AI 工具。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">可以匯入／匯出工作流嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
+        <p>可以。Loop 支援<strong>工作流匯入／匯出</strong>：</p>
+        <ul>
+          <li><strong>匯出：</strong>將工作流匯出為 JSON 或 YAML</li>
+          <li><strong>匯入：</strong>從 JSON 或 YAML 匯入工作流</li>
+          <li><strong>版本控制：</strong>工作流基於 git——自動版本管理</li>
+          <li><strong>共享：</strong>跨部署共享工作流</li>
+        </ul>
+        <p>匯入／匯出適合備份、遷移及協作。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">可以使用 Loop 連接現有數據庫嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
+        <p>可以。Loop 支援<strong>數據庫整合</strong>：</p>
+        <ul>
+          <li><strong>PostgreSQL：</strong>原生支援</li>
+          <li><strong>MySQL：</strong>原生支援</li>
+          <li><strong>SQLite：</strong>原生支援（Core 方案）</li>
+          <li><strong>自訂：</strong>使用代碼節點（Python/TypeScript）連接其他數據庫</li>
+        </ul>
+        <p>數據庫整合讓 Loop 能從現有數據庫讀寫數據。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">可以使用 Loop 連接現有檔案儲存嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
+        <p>可以。Loop 支援<strong>檔案儲存整合</strong>：</p>
+        <ul>
+          <li><strong>本機檔案系統：</strong>讀寫伺服器上的檔案</li>
+          <li><strong>S3 兼容：</strong>AWS S3、MinIO 等</li>
+          <li><strong>Google Cloud Storage：</strong>GCS</li>
+          <li><strong>Azure Blob Storage：</strong>Azure Blob</li>
+        </ul>
+        <p>檔案儲存整合讓 Loop 能從現有儲存系統讀寫檔案。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 11: LIMITATIONS & ROADMAP -->
+  <div class="section" id="s11">
+    <div class="section-header"><span class="icon">11 · 路線圖</span><h2>限制與路線圖</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">Loop（目前）不能做什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
+        <p>Loop 功能強大，但 v1.0 存在限制：</p>
+        <ul>
+          <li><strong>無代管 SaaS：</strong>ODW.ai 不會為客戶在雲端營運 Loop（僅自託管）</li>
+          <li><strong>無流動應用：</strong>僅流動監察（v1.0 後），無流動工作流編寫</li>
+          <li><strong>無即時協作：</strong>無多人協作工作流編輯畫布</li>
+          <li><strong>無自然語言工作流產生：</strong>不能說「為我建立一個……的工作流」（計劃於 v1.1）</li>
+          <li><strong>無工作流市集：</strong>v1.0 無社群範本共享（僅內部範本）</li>
+          <li><strong>無跨組織聯邦：</strong>不能跨組織共享工作流</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">Loop 會支援自然語言工作流產生嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
+        <p><strong>會。</strong>自然語言工作流產生計劃於 v1.1（2026 年第四季）推出：</p>
+        <ul>
+          <li><strong>描述工作流：</strong>「為我建立一個從會議逐字稿提取行動項目並建立任務的工作流」</li>
+          <li><strong>AI 產生：</strong>Loop 自動產生工作流</li>
+          <li><strong>人類審核：</strong>你審核並批准產生的工作流</li>
+        </ul>
+        <p>這是非技術用戶的重要功能——讓他們無需使用視覺化建構器即可建立工作流。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">Loop 會有工作流市集嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
+        <p><strong>會。</strong>社群範本市集計劃於 v1.1（2026 年第四季）推出：</p>
+        <ul>
+          <li><strong>分享範本：</strong>與社群分享你的工作流</li>
+          <li><strong>瀏覽範本：</strong>瀏覽及匯入社群工作流</li>
+          <li><strong>評分及評論：</strong>為社群工作流評分及評論</li>
+        </ul>
+        <p>這將讓社群建立可重用工作流範本庫。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">未來 12 個月的路線圖是什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
+        <p>關鍵里程碑：</p>
+        <ul>
+          <li><strong>v1.0（2026 年第三季）：</strong>MVP 發布。視覺化建構器、代理原生編排、自託管、模型無關。</li>
+          <li><strong>v1.1（2026 年第四季）：</strong>自然語言工作流產生、社群範本市集、進階監察。</li>
+          <li><strong>v1.2（2027 年第一季）：</strong>流動工作流編寫、即時協作、進階錯誤處理。</li>
+          <li><strong>v2.0（2027 年第二季）：</strong>模型微調、跨組織聯邦、白標/OEM 授權。</li>
+        </ul>
+        <p>路線圖可能根據客戶反饋調整。請聯絡我們了解最新路線圖或提出功能要求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">何時不應該使用 Loop？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
+        <p>在以下情況 Loop 不適合：</p>
+        <ul>
+          <li><strong>需要代管 SaaS：</strong>如不想管理基建，Loop 不適合你（僅自託管）</li>
+          <li><strong>需要通用自動化：</strong>如需自動化非 AI 工作流（例如「提交表單後發送電郵」），Zapier/n8n 可能更合適</li>
+          <li><strong>需要流動工作流編寫：</strong>Loop 在 v1.0 僅支援網頁響應式。如需原生流動應用，請等待 v1.2</li>
+          <li><strong>需要即時協作：</strong>Loop 在 v1.0 不支援多人畫布。如需協作式工作流編輯，請等待 v1.2</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">Loop 保證工作流可靠性嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
+        <p><strong>不保證。</strong>沒有任何系統能保證 100% 可靠——失敗總會發生（網絡問題、下游服務中斷等）。</p>
+        <p>Loop 協助你<strong>最大化可靠性</strong>：</p>
+        <ul>
+          <li><strong>重試邏輯：</strong>自動重試失敗的節點</li>
+          <li><strong>錯誤處理：</strong>定義自訂錯誤處理器</li>
+          <li><strong>監察：</strong>追蹤成功率、延遲、錯誤</li>
+          <li><strong>警報：</strong>收到失敗通知</li>
+        </ul>
+        <p>目標：<strong>≥98% 工作流執行成功率</strong>。但結果因用途及基建質素而異。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">Loop 可以取代開發團隊嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
+        <p><strong>不可以。</strong>Loop 設計為<strong>增強</strong>你的開發團隊，而非取代。</p>
+        <p>Loop 自動化工作流編排，讓你的開發人員專注於：</p>
+        <ul>
+          <li><strong>自訂邏輯：</strong>建構無法以視覺方式表達的複雜業務邏輯</li>
+          <li><strong>整合：</strong>建構與舊系統的自訂整合</li>
+          <li><strong>優化：</strong>優化效能、安全及合規</li>
+        </ul>
+        <p>Loop 讓你的開發團隊更高效——它不能取代優秀軟件不可或缺的人類元素。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">如何開始？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
+        <p>三個途徑：</p>
+        <ol>
+          <li><strong>免費 Core 方案：</strong>下載 Loop 並自行部署。無需信用卡。以你的工作流試用，看看是否適合你的場景。</li>
+          <li><strong>示範：</strong>與我們的團隊預約示範。我們會帶你了解 Loop、回答問題、協助你評估是否適合業務。</li>
+          <li><strong>聯絡銷售：</strong>Scale 或 Enterprise 方案，請聯絡銷售團隊獲取量身報價。</li>
+        </ol>
+        <div class="callout tip"><strong>準備開始？</strong>前往 <code>odw.ai/loop</code> 下載 Loop 或預約示範。</div>
+      </div></div></div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Loop — 商業用戶常見問題</strong></p>
+    <p>版本 2.0 · 審閱草稿</p>
+    <p>依據：PRD v1.0、SAD v1.0、TSD v1.0、TBK v1.0（2026-06-23）</p>
+    <p><a href="./suite.html">← 返回套件常見問題</a></p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
+  });
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
+  const searchInput = document.getElementById('searchInput');
+  const noResults = document.getElementById('noResults');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.section').forEach(section => {
+      let sectionHas = 0;
+      section.querySelectorAll('.faq-item').forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        const match = q === '' || txt.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) { sectionHas++; visibleCount++; if (q !== '') item.classList.add('open'); }
+        else { item.classList.remove('open'); }
+      });
+      section.style.display = sectionHas === 0 && q !== '' ? 'none' : '';
+    });
+    noResults.style.display = (visibleCount === 0 && q !== '') ? 'block' : 'none';
+  });
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
+</script>
+</body>
+</html>

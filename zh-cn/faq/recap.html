@@ -1,0 +1,1279 @@
+<!-- Translation status: DRAFT — needs native-speaker review before publish -->
+<!-- Last synced with English source: 2026-07-09 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recap — 商务用户常见问题</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../faq/styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
+  <div class="subtitle">Recap 常见问题</div>
+  <h1>Recap 常见问题</h1>
+  <p>设备端会议转录——本地音频采集、Whisper 驱动转录、结构化摘要、待办事项提取。面向业务负责人的解答，无需技术背景。</p>
+  <span class="last-updated">最后更新：2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">首页</a>
+    <span class="sep">→</span>
+    <a href="./index.html">常见问题</a>
+    <span class="sep">→</span>
+    <a href="./suite.html">套件</a>
+    <span class="sep">→</span>
+    <span>Recap</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" aria-label="搜索问题" placeholder="搜索问题…（例如：'转录'、'Whisper'、'设备端'、'待办事项'、'数据主权'、'HIPAA'）">
+  </div>
+  <div class="controls">
+    <button onclick="expandAll()">＋ 展开全部</button>
+    <button onclick="collapseAll()">− 收起全部</button>
+    <button onclick="window.print()">🖨️ 打印 / 保存 PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>跳转到章节</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> 基础介绍</a>
+      <a href="#s2"><span class="num">2</span> 转录与音频</a>
+      <a href="#s3"><span class="num">3</span> 方案优势</a>
+      <a href="#s4"><span class="num">4</span> 摘要与待办事项</a>
+      <a href="#s5"><span class="num">5</span> 安全与隐私</a>
+      <a href="#s6"><span class="num">6</span> 模型与 AI</a>
+      <a href="#s7"><span class="num">7</span> 部署与设置</a>
+      <a href="#s8"><span class="num">8</span> 费用与定价</a>
+      <a href="#s9"><span class="num">9</span> 扩展与运维</a>
+      <a href="#s10"><span class="num">10</span> 集成与工作流</a>
+      <a href="#s11"><span class="num">11</span> 局限与路线图</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">没有匹配的问题，请尝试更宽泛的关键词。</div>
+
+  <!-- SECTION 1: THE BASICS -->
+  <div class="section" id="s1">
+    <div class="section-header"><span class="icon">01 · 概览</span><h2>基础介绍——Recap 是什么？</h2><span class="count">9 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">用通俗的话来说，ODW.ai Recap 是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
+        <p>Recap 是一款<strong>会议转录与智能分析工具</strong>，完全运行在您的本地设备上。它能采集会议中的音频（支持 Zoom、Teams、Google Meet 及其他任何平台），在本地完成对话转录，并生成带有待办事项的结构化摘要。</p>
+        <p>工作流程如下：</p>
+        <ol>
+          <li><strong>音频采集：</strong>Recap 采集系统音频（即您通过扬声器或耳机听到的声音）——无需云端机器人加入会议</li>
+          <li><strong>语音转录：</strong>音频在本地使用 Whisper（开源语音识别模型）完成转录</li>
+          <li><strong>内容摘要：</strong>AI 生成会议摘要、提取待办事项、识别关键决策</li>
+          <li><strong>归档整理：</strong>转录文本和摘要存储在本地，支持搜索与导出</li>
+        </ol>
+        <p>与其他会议工具的核心区别在于：<strong>一切处理均在本地完成</strong>。音频和转录文本不会发送到云端，实现完全的数据自主权。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">Recap 解决什么问题？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
+        <p>组织面临两方面的需求张力：</p>
+        <ul>
+          <li><strong>工作流自动化：</strong>基于云端的会议工具（Otter.ai、Fireflies、Grain）使用方便，但需要将会议音频发送到其服务器</li>
+          <li><strong>数据主权：</strong>受监管行业、注重隐私的团队以及有数据驻留要求的组织，无法将敏感对话发送至第三方服务器</li>
+        </ul>
+        <p>Recap 通过<strong>设备端会议智能</strong>解决这一矛盾。您的音频和转录文本始终不离开本机。没有云端机器人静默加入通话，没有转录文本驻留在供应商服务器上。</p>
+        <div class="callout info"><strong>最终效果</strong>您获得会议智能的全部优势（摘要、待办事项、可搜索的转录文本），同时完全保持数据主权。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">Recap 适合哪些用户？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
+        <p>Recap 专为<strong>受监管及注重隐私的组织</strong>设计：</p>
+        <ul>
+          <li><strong>律师事务所：</strong>律师与客户之间的特权要求会议对话严格保密</li>
+          <li><strong>医疗机构：</strong>涉及 HIPAA 的工作流中，患者讨论不可发送至云服务</li>
+          <li><strong>金融服务：</strong>对数据管控要求严格的金融科技公司和金融机构</li>
+          <li><strong>政府承包商：</strong>处理敏感政府数据的国防相关中小企业</li>
+          <li><strong>欧盟境内组织：</strong>满足 GDPR 数据最小化要求</li>
+          <li><strong>任何组织：</strong>只要"不允许云端机器人加入我们的通话"是硬性要求</li>
+        </ul>
+        <p>如果因为数据主权顾虑而无法使用 Otter.ai 或 Fireflies，Recap 正是为您准备的。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">Recap 与 Otter.ai 或 Fireflies 有何不同？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
+        <p>核心区别在于<strong>部署模式</strong>：</p>
+        <table>
+          <thead><tr><th>方面</th><th>ODW.ai Recap</th><th>Otter.ai / Fireflies / Grain</th></tr></thead>
+          <tbody>
+            <tr><td>音频处理</td><td>✅ 设备端——音频永不离开本机</td><td>❌ 发送至供应商云服务器</td></tr>
+            <tr><td>会议机器人</td><td>✅ 无机器人——采集系统音频</td><td>❌ 云端机器人加入会议</td></tr>
+            <tr><td>数据主权</td><td>✅ 完全掌控</td><td>❌ 供应商可访问您的音频</td></tr>
+            <tr><td>平台支持</td><td>✅ 任意平台（Zoom、Teams、Meet 等）</td><td>⚠️ 特定平台机器人</td></tr>
+            <tr><td>转录模型</td><td>✅ 本地（Whisper）或自选模型</td><td>❌ 供应商专有模型</td></tr>
+            <tr><td>价格</td><td>免费核心版或 $49–$199/月</td><td>$10–$30/用户/月</td></tr>
+          </tbody>
+        </table>
+        <p>如果您需要会议智能但无法将音频发送至云端，Recap 是唯一选择。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">Recap 是否支持 Zoom、Teams 和 Google Meet？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
+        <p>支持。Recap 适用于<strong>任何会议平台</strong>：</p>
+        <ul>
+          <li><strong>Zoom</strong></li>
+          <li><strong>Microsoft Teams</strong></li>
+          <li><strong>Google Meet</strong></li>
+          <li><strong>Webex</strong></li>
+          <li><strong>其他任何平台：</strong>只要您能通过扬声器或耳机听到音频，Recap 即可采集</li>
+        </ul>
+        <p>Recap 采集的是<strong>系统音频</strong>——即您通过扬声器或耳机听到的任何声音。它无需与特定会议平台集成，也无需使用平台专属机器人。</p>
+        <div class="callout tip"><strong>平台无关</strong>Recap 适用于任何会议平台，因为它在系统层面而非应用层面采集音频。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">Recap 是否需要云端机器人加入我的会议？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
+        <p><strong>不需要。</strong>Recap <strong>不</strong>使用云端机器人。这是一项关键差异化优势。</p>
+        <p>基于云端的会议工具（Otter.ai、Fireflies、Grain）会发送一个机器人以参与者身份加入您的会议。该机器人录制音频并发送至云端处理。</p>
+        <p>Recap 的工作方式完全不同：</p>
+        <ul>
+          <li><strong>无机器人：</strong>Recap 不会以参与者身份加入您的会议</li>
+          <li><strong>系统音频采集：</strong>Recap 采集您通过扬声器或耳机听到的音频</li>
+          <li><strong>本地处理：</strong>音频在您的设备上完成转录和处理</li>
+        </ul>
+        <p>您的会议参与者不会看到机器人加入。您的音频永不离开设备。完全的数据主权。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">Recap 是独立产品还是套件的一部分？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
+        <p>Recap <strong>两者兼备</strong>：</p>
+        <ul>
+          <li><strong>独立使用：</strong>您可以单独使用 Recap 进行设备端会议转录和摘要生成</li>
+          <li><strong>套件集成：</strong>Recap 是 ODW.ai 套件的组成部分，可与其他模块协同工作：
+            <ul>
+              <li><strong>Vault：</strong>会议摘要和决策自动同步至您的知识库</li>
+              <li><strong>Loop：</strong>待办事项自动同步至您的工作流自动化系统</li>
+            </ul>
+          </li>
+        </ul>
+        <p>免费核心版可独立使用。套件集成（Vault/Loop 同步）属于付费功能。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">"设备端"是什么意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
+        <p>"设备端"意味着<strong>所有处理均在您的电脑上完成</strong>：</p>
+        <ul>
+          <li><strong>音频采集：</strong>在您的设备上完成</li>
+          <li><strong>语音转录：</strong>在您的设备上完成（使用本地 Whisper 模型）</li>
+          <li><strong>内容摘要：</strong>在您的设备上完成（使用本地大语言模型）</li>
+          <li><strong>数据存储：</strong>在您的设备上完成（加密本地存储）</li>
+        </ul>
+        <p>音频、转录文本和摘要均不会发送至云端。数据永不离开您的设备。</p>
+        <p>这对于注重数据主权的组织至关重要。如果您的会议工具将音频发送至云端供应商，就无从谈起数据主权。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">使用 Recap 需要技术背景吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
+        <p><strong>不需要。</strong>Recap 专为非技术用户设计：</p>
+        <ul>
+          <li><strong>安装：</strong>像普通应用一样下载安装（支持 macOS、Windows、Linux）</li>
+          <li><strong>配置：</strong>设置音频来源（系统音频）即可就绪</li>
+          <li><strong>使用：</strong>开始会议后，Recap 自动采集并转录</li>
+          <li><strong>回顾：</strong>在 Web 界面中查看转录文本、摘要和待办事项</li>
+        </ul>
+        <p>无需编程、无需命令行、无需技术专长。会用 Zoom，就会用 Recap。</p>
+        <div class="callout tip"><strong>首次转录时间</strong>目标：从安装到完成首次转录不超过 5 分钟。</div>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 2: TRANSCRIPTION & AUDIO -->
+  <div class="section" id="s2">
+    <div class="section-header"><span class="icon">02 · 主权</span><h2>转录与音频</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">Recap 的转录准确度如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
+        <p>Recap 使用 <strong>Whisper</strong>（OpenAI 的开源语音识别模型），处于业界领先水平：</p>
+        <ul>
+          <li><strong>词错误率（WER）：</strong>标准商务英语会议 ≤8%（以人工转录为基线衡量）</li>
+          <li><strong>说话人分离：</strong>识别不同发言者（谁说了什么）</li>
+          <li><strong>噪声处理：</strong>可处理背景噪声、多人发言、各类口音</li>
+        </ul>
+        <p>准确度取决于：</p>
+        <ul>
+          <li><strong>音频质量：</strong>音频越清晰，准确度越高</li>
+          <li><strong>模型大小：</strong>更大的模型（Whisper large-v3）更准确，但速度更慢</li>
+          <li><strong>语言：</strong>英语支持最完善（v1.0）；其他语言将在 v1.1 中推出</li>
+        </ul>
+        <div class="callout info"><strong>对比</strong>在英语会议场景中，Whisper 的准确度与 Otter.ai、Fireflies 等云端转录服务相当。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">Whisper 是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
+        <p><strong>Whisper</strong> 是 OpenAI 的开源语音识别模型，也是目前最准确的转录模型之一：</p>
+        <ul>
+          <li><strong>开源：</strong>免费使用，代码可审计</li>
+          <li><strong>多语言：</strong>支持 99 种语言（v1.0 中英语效果最佳）</li>
+          <li><strong>鲁棒性强：</strong>可处理口音、背景噪声、多人发言</li>
+          <li><strong>本地运行：</strong>在您的设备上运行——无需依赖云端</li>
+        </ul>
+        <p>Recap 使用经过本地推理优化的 Whisper 系列模型（whisper.cpp、faster-whisper）。您可以在小型（速度快、准确度较低）、中型（均衡）和大型（速度慢、准确度最高）模型之间选择。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">Recap 支持实时转录吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
+        <p>支持。Recap 支持<strong>实时流式转录</strong>：</p>
+        <ul>
+          <li><strong>流式模式：</strong>在发言者说话时实时显示转录文本（延迟 ≤2 秒）</li>
+          <li><strong>批处理模式：</strong>会议结束后统一转录（更快、更准确）</li>
+        </ul>
+        <p>实时转录适用于以下场景：</p>
+        <ul>
+          <li>会议中实时跟踪对话内容</li>
+          <li>捕捉遗漏的信息</li>
+          <li>无障碍实时字幕</li>
+        </ul>
+        <p>如需最高准确度，建议使用批处理模式（会议结束后统一转录）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">Recap 能识别不同发言者吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
+        <p>可以。Recap 内置<strong>说话人分离</strong>功能（识别谁说了什么）：</p>
+        <ul>
+          <li><strong>自动识别：</strong>Recap 自动检测不同发言者</li>
+          <li><strong>标签标记：</strong>发言者标记为"发言人 1"、"发言人 2"等</li>
+          <li><strong>手动标注：</strong>您可以重命名发言者（例如将"发言人 1"改为"张总"）</li>
+        </ul>
+        <p>说话人分离在本地使用开源模型完成——无需云端处理。</p>
+        <div class="callout tip"><strong>准确度</strong>在音频清晰、声音差异明显的情况下，说话人分离准确度约为 85%–90%。在声音重叠或声音相似的情况下，准确度可能降低。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">Recap 支持哪些音频格式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
+        <p>Recap 采集<strong>系统音频</strong>（即您通过扬声器或耳机听到的任何声音）。它不导入音频文件——只采集实时音频。</p>
+        <p>支持的音频来源：</p>
+        <ul>
+          <li><strong>系统音频：</strong>来自任何应用的音频（Zoom、Teams、Meet 等）</li>
+          <li><strong>麦克风：</strong>您的麦克风（用于采集您自己的声音）</li>
+          <li><strong>同时采集：</strong>同时采集系统音频和麦克风音频</li>
+        </ul>
+        <p>Recap 在 v1.0 中不支持导入预录音频文件（MP3、WAV 等）。该功能计划在 v1.1 中推出。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">Recap 能转录电话通话吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
+        <p><strong>不能。</strong>Recap 仅采集<strong>系统音频</strong>——即电脑上运行的应用程序发出的音频（Zoom、Teams、Meet 等）。</p>
+        <p>Recap <strong>不</strong>支持：</p>
+        <ul>
+          <li><strong>电话通话：</strong>传统电话通话（手机、座机）</li>
+          <li><strong>SIP/VoIP：</strong>基于 SIP 的电话系统</li>
+          <li><strong>移动应用：</strong>Recap 仅支持桌面端（macOS、Windows、Linux）</li>
+        </ul>
+        <p>如需转录电话通话，您需要专用的电话录音方案。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">可以导出转录文本吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
+        <p>可以。Recap 支持<strong>多种导出格式</strong>：</p>
+        <ul>
+          <li><strong>Markdown：</strong>.md 文件（可读、可编辑）</li>
+          <li><strong>PDF：</strong>排版精美的 PDF 文档</li>
+          <li><strong>纯文本：</strong>.txt 文件</li>
+          <li><strong>JSON：</strong>结构化数据（供程序化使用）</li>
+        </ul>
+        <p>您可以导出：</p>
+        <ul>
+          <li>完整转录文本（含时间戳和发言者标签）</li>
+          <li>仅摘要</li>
+          <li>仅待办事项</li>
+          <li>以上全部内容</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">可以搜索过往会议吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
+        <p>可以。Recap 内置跨所有历史会议的<strong>全文搜索</strong>功能：</p>
+        <ul>
+          <li><strong>搜索转录文本：</strong>查找特定短语或话题</li>
+          <li><strong>搜索摘要：</strong>根据摘要内容查找会议</li>
+          <li><strong>搜索待办事项：</strong>跨所有会议查找特定待办事项</li>
+          <li><strong>按日期筛选：</strong>按日期范围缩小搜索范围</li>
+          <li><strong>按标签筛选：</strong>按自定义标签或自动生成的主题筛选</li>
+        </ul>
+        <p>搜索在本地（您的设备上）完成——无需云端索引。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 3: OUR SOLUTION'S STRENGTHS -->
+  <div class="section" id="s3">
+    <div class="section-header"><span class="icon">03 · 集成</span><h2>方案优势与设计</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">Recap 相比其他会议工具的主要优势是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>功能</th><th>ODW.ai Recap</th><th>常见替代方案</th></tr></thead>
+          <tbody>
+            <tr><td>音频处理</td><td>✅ 设备端——完全自主</td><td>❌ 云端——数据发送至供应商</td></tr>
+            <tr><td>会议机器人</td><td>✅ 无机器人——系统音频采集</td><td>❌ 云端机器人加入会议</td></tr>
+            <tr><td>平台支持</td><td>✅ 任意平台（系统音频）</td><td>⚠️ 特定平台机器人</td></tr>
+            <tr><td>转录模型</td><td>✅ 本地（Whisper）或自选模型</td><td>❌ 供应商专有模型</td></tr>
+            <tr><td>开源</td><td>✅ 核心开源</td><td>❌ 闭源</td></tr>
+            <tr><td>套件集成</td><td>✅ ODW.ai 原生集成</td><td>❌ 需自行集成</td></tr>
+            <tr><td>价格</td><td>免费核心版或 $49–$199/月</td><td>$10–$30/用户/月</td></tr>
+          </tbody>
+        </table>
+        <p>Recap 的核心竞争力在于<strong>数据主权 + 平台无关设计</strong>。如果您需要设备端处理且无法使用云端机器人，Recap 是最佳选择。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">Recap 与基于 Whisper 的 DIY 工具相比如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
+        <p>市面上有基于 Whisper 的开源工具（WhisperLive、MeetingBaize），但它们的设计侧重点不同：</p>
+        <table>
+          <thead><tr><th>方面</th><th>ODW.ai Recap</th><th>基于 Whisper 的 DIY 工具</th></tr></thead>
+          <tbody>
+            <tr><td>结构化输出</td><td>✅ 摘要、待办事项、决策</td><td>❌ 仅转录</td></tr>
+            <tr><td>套件集成</td><td>✅ Vault/Loop 同步</td><td>❌ 无</td></tr>
+            <tr><td>用户体验</td><td>✅ 精致界面、安装简便</td><td>⚠️ 技术导向、需手动配置</td></tr>
+            <tr><td>说话人分离</td><td>✅ 内置</td><td>⚠️ 需额外配置</td></tr>
+            <tr><td>技术支持</td><td>✅ 提供付费支持</td><td>❌ 仅社区支持</td></tr>
+          </tbody>
+        </table>
+        <p>DIY 工具适合实验探索，但尚未达到企业生产环境的就绪状态。Recap 专为需要可靠性、结构化输出和技术支持的受监管企业设计。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">Recap 与 Zoom AI 或 Teams Copilot 相比如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
+        <p>Zoom AI 和 Teams Copilot 是平台原生会议功能，但存在局限性：</p>
+        <table>
+          <thead><tr><th>方面</th><th>ODW.ai Recap</th><th>Zoom AI / Teams Copilot</th></tr></thead>
+          <tbody>
+            <tr><td>平台支持</td><td>✅ 任意平台（系统音频）</td><td>❌ 绑定单一平台</td></tr>
+            <tr><td>音频处理</td><td>✅ 设备端</td><td>❌ 云端处理</td></tr>
+            <tr><td>数据主权</td><td>✅ 完全掌控</td><td>❌ 数据发送至供应商</td></tr>
+            <tr><td>套件集成</td><td>✅ ODW.ai 套件（Vault、Loop）</td><td>❌ 平台专属</td></tr>
+            <tr><td>模型选择</td><td>✅ 自选（本地或 API）</td><td>❌ 供应商模型</td></tr>
+          </tbody>
+        </table>
+        <p>如果您 100% 使用单一平台且没有数据主权要求，Zoom AI/Teams Copilot 是便捷的选择。但如果您跨多个平台使用或有数据主权需求，Recap 是更优之选。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">在此语境下，"自主可控"意味着什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
+        <p>"自主可控"意味着<strong>对会议数据的完全掌控</strong>：</p>
+        <ul>
+          <li><strong>音频位置：</strong>您的会议音频始终留在本地设备</li>
+          <li><strong>处理过程：</strong>所有转录和摘要工作均在本地完成</li>
+          <li><strong>无外部依赖：</strong>不会向 OpenAI、Otter.ai 或任何第三方发送音频</li>
+          <li><strong>可审计性：</strong>您可以检查代码、日志和数据流</li>
+        </ul>
+        <p>这对于受监管行业至关重要。如果您的会议工具将音频发送至云端供应商，就无从谈起数据主权。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">Recap 能否完全离线使用（无网络）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
+        <p>可以。Recap 支持<strong>完全离线运行</strong>：</p>
+        <ul>
+          <li><strong>本地模型：</strong>Whisper（转录）和大语言模型（摘要）均在您的设备上运行</li>
+          <li><strong>无需网络：</strong>Recap 的转录、摘要及所有核心功能均无需互联网连接</li>
+          <li><strong>物理隔离：</strong>可部署在物理隔离环境中（完全无互联网访问）</li>
+        </ul>
+        <p>这对于互联网访问受限或被禁止的政府、军事和高安全环境至关重要。</p>
+        <div class="callout warning"><strong>硬件要求</strong>运行本地模型需要一定性能的硬件。实时转录建议使用现代 CPU（macOS 的 M1/M2/M3，Windows/Linux 的 Intel i7+ 或 AMD Ryzen 7+）或 GPU（推荐 NVIDIA）。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">Recap 的代码可审计吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
+        <p>可以。Recap 的核心<strong>开源</strong>：</p>
+        <ul>
+          <li><strong>透明：</strong>所有代码在 GitHub 上公开</li>
+          <li><strong>可审计：</strong>您（或您的安全团队）可以检查代码是否存在漏洞、后门或数据外泄</li>
+          <li><strong>可验证：</strong>您可以验证 Recap 是否如所声称的那样运行——无隐蔽遥测，无数据发送至第三方</li>
+        </ul>
+        <p>这对于注重数据主权的组织至关重要。您应当能够验证会议工具的行为。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">Recap 能处理多语言吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
+        <p><strong>v1.0 仅支持英语。</strong>多语言支持计划在 v1.1（2026 年第四季度）推出。</p>
+        <p>底层转录模型 Whisper 支持 99 种语言，但 Recap v1.0 针对英语优化。多语言支持将包括：</p>
+        <ul>
+          <li><strong>西班牙语</strong></li>
+          <li><strong>法语</strong></li>
+          <li><strong>德语</strong></li>
+          <li><strong>中文（普通话）</strong></li>
+          <li><strong>日语</strong></li>
+          <li><strong>以及更多语言</strong></li>
+        </ul>
+        <p>如果您在 v1.1 发布前需要多语言支持，请联系我们——我们可能提供早期访问。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">Recap 能处理大型会议（超过 2 小时）吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
+        <p>可以。Recap 可处理<strong>任意时长</strong>的会议：</p>
+        <ul>
+          <li><strong>无时长限制：</strong>Recap 可转录任意时长的会议</li>
+          <li><strong>批处理：</strong>对于长时间会议，建议使用批处理模式（会议结束后统一转录）</li>
+          <li><strong>存储：</strong>转录文本和摘要存储在本地——无云端存储限制</li>
+        </ul>
+        <p>对于超长会议（超过 2 小时），建议：</p>
+        <ul>
+          <li><strong>批处理模式：</strong>会议结束后统一转录（更快、更准确）</li>
+          <li><strong>充足磁盘空间：</strong>确保有足够的磁盘空间存放音频和转录文本</li>
+        </ul>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 4: SUMMARIES & ACTION ITEMS -->
+  <div class="section" id="s4">
+    <div class="section-header"><span class="icon">04 · 安全</span><h2>摘要与待办事项</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">Recap 生成什么样的摘要？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
+        <p>Recap 生成<strong>结构化摘要</strong>：</p>
+        <ul>
+          <li><strong>执行摘要：</strong>2–3 句话概述会议要点</li>
+          <li><strong>关键议题：</strong>会议中讨论的主要议题列表</li>
+          <li><strong>决策事项：</strong>会议中做出的决策列表</li>
+          <li><strong>待办事项：</strong>含负责人和截止日期（如有提及）的待办事项列表</li>
+          <li><strong>关键引述：</strong>会议中的重要发言引述</li>
+        </ul>
+        <p>摘要由本地大语言模型（如 Llama 3、Mistral）生成——无需云端处理。</p>
+        <div class="callout tip"><strong>可定制</strong>您可以自定义摘要模板（例如侧重决策、待办事项或特定议题）。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">Recap 如何提取待办事项？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
+        <p>Recap 使用 <strong>AI 驱动的提取</strong>来识别待办事项：</p>
+        <ul>
+          <li><strong>关键词检测：</strong>识别"我来做 X"、"你能负责 Y 吗？"、"我们跟进一下 Z"等表述</li>
+          <li><strong>负责人识别：</strong>确定每项待办事项的负责人</li>
+          <li><strong>截止日期识别：</strong>识别明确提及的截止日期（如"周五前"、"下周"）</li>
+          <li><strong>上下文理解：</strong>理解语境，区分真正的待办事项与一般性讨论</li>
+        </ul>
+        <p>目标：<strong>精确率 ≥85%，召回率 ≥75%</strong>（经人工评估的样本）。</p>
+        <p>待办事项通过本地大语言模型提取——无需云端处理。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">可以编辑摘要和待办事项吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
+        <p>可以。所有摘要和待办事项均可<strong>自由编辑</strong>：</p>
+        <ul>
+          <li><strong>编辑摘要：</strong>修改生成的摘要，补充上下文或纠正错误</li>
+          <li><strong>编辑待办事项：</strong>添加、删除或修改待办事项</li>
+          <li><strong>重新分配：</strong>更改负责人或截止日期</li>
+          <li><strong>添加备注：</strong>在摘要中添加自己的批注</li>
+        </ul>
+        <p>编辑内容保存在本地，并与原始转录文本同步。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">可以自定义摘要模板吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
+        <p>可以。Recap 支持<strong>自定义输出模板</strong>：</p>
+        <ul>
+          <li><strong>预置模板：</strong>执行摘要、详细摘要、仅待办事项、仅决策事项</li>
+          <li><strong>自定义模板：</strong>创建您自己的模板（如侧重特定议题、包含或排除某些板块）</li>
+          <li><strong>按会议类型选用：</strong>为不同类型的会议使用不同模板（如站会 vs. 董事会）</li>
+        </ul>
+        <p>模板使用 YAML 或 Markdown 定义——无需编程。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">可以与团队共享摘要吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
+        <p>可以。Recap 支持<strong>团队共享</strong>（付费版）：</p>
+        <ul>
+          <li><strong>共享工作区：</strong>为您的团队创建共享工作区</li>
+          <li><strong>访问控制：</strong>控制谁可以查看或编辑会议摘要</li>
+          <li><strong>通知：</strong>有新摘要时通知团队成员</li>
+          <li><strong>评论：</strong>团队成员可以在摘要上添加评论</li>
+        </ul>
+        <p>免费版仅支持本地单用户使用。团队功能需要付费版。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">可以将待办事项导出到任务管理工具吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
+        <p>可以。Recap 支持<strong>待办事项导出</strong>：</p>
+        <ul>
+          <li><strong>手动导出：</strong>将待办事项导出为 CSV、JSON 或 Markdown 格式</li>
+          <li><strong>Loop 同步：</strong>将待办事项自动同步至 ODW.ai Loop（工作流自动化）——付费版</li>
+          <li><strong>自定义集成：</strong>通过 API 与您的任务管理工具（Jira、Asana、Trello 等）集成</li>
+        </ul>
+        <p>Loop 同步会自动创建任务、分配负责人并根据提取的待办事项设置截止日期。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">可以跨所有会议搜索特定决策吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
+        <p>可以。Recap 内置<strong>决策搜索</strong>功能：</p>
+        <ul>
+          <li><strong>搜索决策：</strong>跨所有历史会议查找特定决策</li>
+          <li><strong>按日期筛选：</strong>按日期范围缩小搜索范围</li>
+          <li><strong>按主题筛选：</strong>按会议主题或自定义标签筛选</li>
+          <li><strong>查看上下文：</strong>点击某项决策可查看完整会议转录和上下文</li>
+        </ul>
+        <p>这对于追踪谁在何时做出了什么决策非常有用——对问责和审计跟踪至关重要。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">摘要的准确度如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
+        <p>摘要质量取决于：</p>
+        <ul>
+          <li><strong>转录准确度：</strong>转录越准确，摘要越好</li>
+          <li><strong>大语言模型质量：</strong>更优的模型（如 Llama 3 70B）生成更好的摘要</li>
+          <li><strong>会议清晰度：</strong>会议讨论越清晰有条理，摘要越好</li>
+        </ul>
+        <p>目标：用户满意度调查 <strong>≥4.0/5.0</strong>。</p>
+        <p>摘要由 AI 生成，可能并非完美无缺。我们建议对重要会议的摘要进行人工审核和编辑。</p>
+        <div class="callout tip"><strong>人工审核</strong>对于关键会议（董事会、法律讨论），在共享前务必审核并编辑 AI 生成的摘要。</div>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 5: SECURITY & PRIVACY -->
+  <div class="section" id="s5">
+    <div class="section-header"><span class="icon">05 · 部署</span><h2>安全与隐私</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">Recap 安全吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
+        <p>安全。Recap 采用<strong>安全最佳实践</strong>构建：</p>
+        <ul>
+          <li><strong>设备端处理：</strong>所有音频、转录文本和摘要均留在您的设备上</li>
+          <li><strong>加密：</strong>本地存储采用 AES-256 加密</li>
+          <li><strong>访问控制：</strong>密码保护、基于角色的访问控制（付费版）</li>
+          <li><strong>审计日志：</strong>所有访问的防篡改日志（付费版）</li>
+          <li><strong>开源：</strong>代码可审计——您可以验证不存在后门或数据外泄</li>
+        </ul>
+        <p>Recap 专为受监管行业设计。Recap 有助于您顺利通过合规审计。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">ODW.ai 能访问我的会议数据吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
+        <p><strong>不能。</strong>Recap 完全在您的设备上运行。ODW.ai 对您的音频、转录文本或摘要没有任何访问权限。</p>
+        <p>与基于云端的会议工具（Otter.ai、Fireflies）不同，Recap 不会将您的音频发送至第三方。一切数据留在您的本机。</p>
+        <p>这对于注重数据主权的组织至关重要。如果您的会议工具将音频发送至云端供应商，就无从谈起数据主权。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">Recap 是否符合 HIPAA？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
+        <p>在技术层面兼容 HIPAA：</p>
+        <ul>
+          <li><strong>设备端处理：</strong>受保护健康信息（PHI）留在您的设备上——不向第三方发送任何数据</li>
+          <li><strong>加密：</strong>本地存储采用 AES-256 加密</li>
+          <li><strong>访问控制：</strong>密码保护、基于角色的访问控制</li>
+          <li><strong>审计日志：</strong>所有访问的防篡改日志</li>
+        </ul>
+        <p>Recap 帮助您满足 HIPAA 要求的<strong>技术保障措施</strong>。您仍需单独处理行政和物理保障措施。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">Recap 是否符合 GDPR？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
+        <p>符合。Recap <strong>兼容 GDPR</strong>：</p>
+        <ul>
+          <li><strong>数据驻留：</strong>所有数据留在您的设备上（团队部署则留在您的基础设施上）</li>
+          <li><strong>删除权：</strong>可按请求删除会议及相关数据</li>
+          <li><strong>访问权：</strong>可按请求导出会议数据</li>
+          <li><strong>数据最小化：</strong>不向第三方发送任何数据</li>
+        </ul>
+        <p>Recap 帮助您满足 GDPR（第 32 条）要求的<strong>技术和组织措施</strong>。您仍需单独处理法律和程序要求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">可以在物理隔离环境中部署 Recap 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
+        <p>可以。Recap 支持<strong>物理隔离部署</strong>（无互联网访问）：</p>
+        <ul>
+          <li><strong>离线安装：</strong>无需互联网即可安装 Recap</li>
+          <li><strong>本地模型：</strong>所有模型（Whisper、大语言模型）在您的设备上运行——无需调用外部服务 API</li>
+          <li><strong>无外部依赖：</strong>Recap 的转录、摘要及所有核心功能均无需互联网</li>
+        </ul>
+        <p>物理隔离部署常见于政府承包商、军事机构和高安全环境。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">如果有人未经授权访问我的会议数据怎么办？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
+        <p>Recap 提供<strong>访问控制</strong>（付费版）：</p>
+        <ul>
+          <li><strong>密码保护：</strong>访问 Recap 需要密码</li>
+          <li><strong>基于角色的访问：</strong>控制谁可以查看或编辑会议摘要</li>
+          <li><strong>审计日志：</strong>记录所有访问行为（谁在何时访问了什么）</li>
+          <li><strong>告警：</strong>未授权访问尝试时发送通知</li>
+        </ul>
+        <p>免费版为单用户本地模式。如果有人物理接触到您的设备并获知密码，即可访问您的数据——因此请使用强密码并启用加密。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">可以设置数据保留策略（自动删除旧会议）吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
+        <p>可以。Recap 支持<strong>数据保留策略</strong>（付费版）：</p>
+        <ul>
+          <li><strong>自动删除：</strong>在指定天数后自动删除会议（如 30 天、90 天、1 年）</li>
+          <li><strong>按工作区设置：</strong>为不同工作区设置不同的保留策略</li>
+          <li><strong>手动覆盖：</strong>可将特定会议标记为"不予删除"</li>
+        </ul>
+        <p>这对于合规（如 GDPR 数据最小化）和存储管理非常有用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">Recap 的代码可审计吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
+        <p>可以。Recap 的核心<strong>开源</strong>：</p>
+        <ul>
+          <li><strong>透明：</strong>所有代码在 GitHub 上公开</li>
+          <li><strong>可审计：</strong>您（或您的安全团队）可以检查代码是否存在漏洞、后门或数据外泄</li>
+          <li><strong>可验证：</strong>您可以验证 Recap 是否如所声称的那样运行——无隐蔽遥测，无数据发送至第三方</li>
+        </ul>
+        <p>这对于注重数据主权的组织至关重要。您应当能够验证会议工具的行为。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 6: MODELS & AI -->
+  <div class="section" id="s6">
+    <div class="section-header"><span class="icon">06 · 合规</span><h2>模型与 AI</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">Recap 使用哪些 AI 模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
+        <p>Recap 使用<strong>开源模型</strong>进行转录和摘要：</p>
+        <p><strong>转录：</strong></p>
+        <ul>
+          <li><strong>Whisper：</strong>OpenAI 的开源语音识别模型（whisper.cpp、faster-whisper）</li>
+          <li><strong>模型规格：</strong>小型（速度快、准确度较低）、中型（均衡）、大型（速度慢、准确度最高）</li>
+        </ul>
+        <p><strong>摘要：</strong></p>
+        <ul>
+          <li><strong>Llama 3：</strong>Meta 的开源大语言模型（8B、70B）</li>
+          <li><strong>Mistral：</strong>Mistral AI 的开源大语言模型</li>
+          <li><strong>其他：</strong>任何兼容 Ollama 或 llama.cpp 的模型</li>
+        </ul>
+        <p>您可以根据优先级（速度 vs. 准确度 vs. 资源消耗）选择使用的模型。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">可以使用基于 API 的模型（OpenAI、Anthropic）吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
+        <p><strong>v1.0 不支持。</strong>Recap 的设计定位是设备端处理——v1.0 不支持云端 API。</p>
+        <p>这是刻意的设计选择。Recap 的核心承诺是数据主权——数据永不离开您的设备。添加 API 支持将违背这一承诺。</p>
+        <p>如果您需要基于 API 的模型（以获得更高质量），可以：</p>
+        <ul>
+          <li><strong>使用本地模型：</strong>Llama 3 70B、Mistral Large 等——质量正在接近 API 模型</li>
+          <li><strong>等待 v2.0：</strong>API 支持计划在 v2.0（2027 年第二季度）推出，并提供严格的自主选择和数据控制</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">如何选择合适的 Whisper 模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
+        <p>选择 Whisper 模型取决于您的优先级：</p>
+        <table>
+          <thead><tr><th>模型</th><th>速度</th><th>准确度</th><th>资源消耗</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Whisper small</strong></td><td>✅ 快</td><td>⚠️ 良好</td><td>✅ 低</td></tr>
+            <tr><td><strong>Whisper medium</strong></td><td>⚠️ 中等</td><td>✅ 较好</td><td>⚠️ 中等</td></tr>
+            <tr><td><strong>Whisper large-v3</strong></td><td>❌ 慢</td><td>✅ 最佳</td><td>❌ 高</td></tr>
+          </tbody>
+        </table>
+        <p><strong>建议：</strong></p>
+        <ul>
+          <li><strong>实时转录：</strong>使用 Whisper small 或 medium（速度足以支撑流式转录）</li>
+          <li><strong>批处理转录：</strong>使用 Whisper large-v3（最准确，无时间压力）</li>
+          <li><strong>低配设备：</strong>使用 Whisper small（可在较旧硬件上运行）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">如何选择合适的摘要模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
+        <p>选择摘要模型取决于您的优先级：</p>
+        <table>
+          <thead><tr><th>模型</th><th>速度</th><th>质量</th><th>资源消耗</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Llama 3 8B</strong></td><td>✅ 快</td><td>⚠️ 良好</td><td>✅ 低</td></tr>
+            <tr><td><strong>Llama 3 70B</strong></td><td>❌ 慢</td><td>✅ 最佳</td><td>❌ 高</td></tr>
+            <tr><td><strong>Mistral 7B</strong></td><td>✅ 快</td><td>⚠️ 良好</td><td>✅ 低</td></tr>
+          </tbody>
+        </table>
+        <p><strong>建议：</strong></p>
+        <ul>
+          <li><strong>快速生成摘要：</strong>使用 Llama 3 8B 或 Mistral 7B（质量好、速度快）</li>
+          <li><strong>最佳质量：</strong>使用 Llama 3 70B（质量最佳，但速度慢且资源消耗高）</li>
+          <li><strong>低配设备：</strong>使用 Llama 3 8B 或 Mistral 7B（可在较旧硬件上运行）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">可以更换模型吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
+        <p>可以。Recap <strong>与模型无关</strong>——您可以随时更换模型：</p>
+        <ul>
+          <li><strong>无需改代码：</strong>在设置中更新模型配置即可</li>
+          <li><strong>按会议切换：</strong>为不同会议使用不同模型（如站会用小型模型、董事会用大型模型）</li>
+          <li><strong>下载模型：</strong>通过界面一键下载新模型</li>
+        </ul>
+        <p>这确保了您的投资面向未来——当更好的模型发布时，您可以立即采用，无需重新架构系统。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">如果有更好的新模型发布，我能用吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
+        <p>可以。Recap <strong>与模型无关</strong>——您可以使用任何兼容模型：</p>
+        <ul>
+          <li><strong>Whisper 系列：</strong>任何 Whisper 变体（whisper.cpp、faster-whisper、distil-whisper 等）</li>
+          <li><strong>大语言模型系列：</strong>任何兼容 Ollama 或 llama.cpp 的大语言模型（Llama 3、Mistral、Gemma、Qwen 等）</li>
+          <li><strong>自定义模型：</strong>如果您有自定义模型，可通过 API 集成</li>
+        </ul>
+        <p>当更好的模型发布时，您可以立即采用——无需修改代码，无供应商锁定。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">可以针对我的领域微调模型吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
+        <p><strong>Recap v1.0 不支持。</strong>Recap 使用现有模型——不支持微调。</p>
+        <p>但您可以：</p>
+        <ul>
+          <li><strong>使用自定义提示词：</strong>定制摘要提示词以引导模型行为（如"侧重法律决策"或"提取工程团队的待办事项"）</li>
+          <li><strong>外部微调：</strong>在 Recap 之外微调模型（使用 Hugging Face Transformers 等工具），然后通过 Ollama 或 llama.cpp 在 Recap 中使用微调后的模型</li>
+        </ul>
+        <p>微调支持计划在 v2.0（2027 年第二季度）推出。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 7: DEPLOYMENT & SETUP -->
+  <div class="section" id="s7">
+    <div class="section-header"><span class="icon">07 · 模型</span><h2>部署与设置</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">如何安装 Recap？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
+        <p>Recap 支持 <strong>macOS、Windows 和 Linux</strong>：</p>
+        <ul>
+          <li><strong>macOS：</strong>从 odw.ai/recap 下载 .dmg 文件，拖入"应用程序"文件夹</li>
+          <li><strong>Windows：</strong>从 odw.ai/recap 下载 .exe 安装程序，运行安装</li>
+          <li><strong>Linux：</strong>下载 .deb（Ubuntu/Debian）或 .rpm（Fedora/RHEL）包，通过包管理器安装</li>
+        </ul>
+        <p>安装过程<strong>不超过 2 分钟</strong>。无需技术技能。</p>
+        <div class="callout tip"><strong>首次转录时间</strong>安装完成后，5 分钟内即可完成首次会议转录。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">系统要求是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
+        <p>Recap 的系统要求取决于您的使用场景：</p>
+        <table>
+          <thead><tr><th>组件</th><th>最低要求</th><th>推荐配置</th></tr></thead>
+          <tbody>
+            <tr><td><strong>操作系统</strong></td><td>macOS 12+、Windows 10+、Ubuntu 22.04+</td><td>macOS 14+（Apple Silicon）、Windows 11、Ubuntu 24.04</td></tr>
+            <tr><td><strong>CPU</strong></td><td>Intel i5 / AMD Ryzen 5 / Apple M1</td><td>Intel i7+ / AMD Ryzen 7+ / Apple M2+</td></tr>
+            <tr><td><strong>内存</strong></td><td>8 GB</td><td>16+ GB</td></tr>
+            <tr><td><strong>存储空间</strong></td><td>2 GB（应用 + 模型）</td><td>10+ GB（用于存储会议数据）</td></tr>
+            <tr><td><strong>GPU（可选）</strong></td><td>无（CPU 推理）</td><td>NVIDIA GPU（加速推理）</td></tr>
+          </tbody>
+        </table>
+        <p>实时转录建议使用现代 CPU（macOS 的 M1/M2/M3，Windows/Linux 的 Intel i7+ 或 AMD Ryzen 7+）。GPU 为可选配置，但可显著加速推理。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">设置 Recap 需要技术技能吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
+        <p><strong>不需要。</strong>Recap 专为非技术用户设计：</p>
+        <ul>
+          <li><strong>安装：</strong>像普通应用一样下载安装</li>
+          <li><strong>配置：</strong>设置音频来源（系统音频）即可就绪</li>
+          <li><strong>使用：</strong>开始会议后，Recap 自动采集并转录</li>
+        </ul>
+        <p>无需编程、无需命令行、无需技术专长。会用 Zoom，就会用 Recap。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">可以为团队部署 Recap 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
+        <p>可以。Recap 支持<strong>团队部署</strong>（付费版）：</p>
+        <ul>
+          <li><strong>自托管服务器：</strong>将 Recap 部署在中央服务器（基于 Docker），供团队访问</li>
+          <li><strong>共享工作区：</strong>为团队创建共享工作区</li>
+          <li><strong>访问控制：</strong>控制谁可以查看或编辑会议摘要</li>
+          <li><strong>管理后台：</strong>监控使用情况、管理用户、配置设置</li>
+        </ul>
+        <p>团队部署需要一定的技术配置（Docker、网络）。我们提供部署指南和技术支持。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">如何配置音频采集？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
+        <p>Recap 采集<strong>系统音频</strong>——即您通过扬声器或耳机听到的任何声音：</p>
+        <ol>
+          <li><strong>打开 Recap 设置：</strong>点击 Recap 界面中的齿轮图标</li>
+          <li><strong>选择音频来源：</strong>选择"系统音频"（采集电脑输出的所有音频）</li>
+          <li><strong>可选——麦克风：</strong>如需同时采集您自己的声音，请启用"麦克风"</li>
+          <li><strong>测试：</strong>点击"测试音频"验证 Recap 是否正确采集音频</li>
+        </ol>
+        <p>就这么简单。Recap 将自动从任何会议平台（Zoom、Teams、Meet 等）采集音频。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">可以在正式使用前先试用 Recap 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
+        <p>可以。Recap 提供<strong>免费核心版</strong>：</p>
+        <ul>
+          <li><strong>无时间限制：</strong>永久免费使用</li>
+          <li><strong>完整功能：</strong>设备端转录、本地摘要、待办事项提取</li>
+          <li><strong>无需信用卡：</strong>无需提供任何支付信息</li>
+        </ul>
+        <p>免费版非常适合在您的实际会议中测试 Recap。如果满意，可升级至付费版获取团队功能和套件集成。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">如何更新 Recap？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
+        <p>Recap <strong>自动更新</strong>：</p>
+        <ul>
+          <li><strong>桌面应用：</strong>Recap 在启动时检查更新并提示安装</li>
+          <li><strong>手动更新：</strong>您也可以通过设置菜单手动检查更新</li>
+          <li><strong>模型：</strong>模型更新独立进行——可通过界面中的模型管理器更新</li>
+        </ul>
+        <p>更新包通常很小，安装快速（不超过 5 分钟）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">可以在多台设备上使用 Recap 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
+        <p>可以。您可以在<strong>多台设备</strong>上安装 Recap：</p>
+        <ul>
+          <li><strong>免费版：</strong>单用户、仅本地（每台设备的数据独立）</li>
+          <li><strong>付费版：</strong>跨设备同步数据（可选）</li>
+          <li><strong>团队版：</strong>中央服务器，多用户共享同一数据</li>
+        </ul>
+        <p>免费版中每台设备独立运行——设备间无同步。付费版可选择跨设备同步数据。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 8: COST & PRICING -->
+  <div class="section" id="s8">
+    <div class="section-header"><span class="icon">08 · 语言</span><h2>费用与定价</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">Recap 多少钱？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
+        <p>Recap 的定价基于<strong>功能和部署方式</strong>：</p>
+        <table>
+          <thead><tr><th>版本</th><th>价格</th><th>包含内容</th></tr></thead>
+          <tbody>
+            <tr><td><strong>免费核心版</strong></td><td>$0</td><td>设备端转录、本地摘要、待办事项、单用户</td></tr>
+            <tr><td><strong>Pro 版</strong></td><td>$49/月</td><td>免费核心版功能 + 团队工作区、共享会议、高级导出</td></tr>
+            <tr><td><strong>Enterprise 版</strong></td><td>$199/月</td><td>Pro 版功能 + Vault/Loop 同步、审计日志、数据保留策略、优先支持</td></tr>
+            <tr><td><strong>套件套餐</strong></td><td>定制报价</td><td>Recap + 全部 ODW.ai 模块（Desk、Voice、Vault、Shield 等）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>说明：</strong>Recap 不单独面向企业销售——它是 ODW.ai 套件的一部分。请联系我们获取套件报价。</p>
+        <div class="callout info"><strong>提示</strong>以上价格均为美元（USD），仅为示意价格，可能调整。请联系我们获取最新报价和定制方案。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">Recap 比 Otter.ai 或 Fireflies 便宜吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
+        <p><strong>视情况而定。</strong>Otter.ai 和 Fireflies 的价格为 $10–$30/用户/月。10 人团队每月需 $100–$300。</p>
+        <p>Recap 的价格为 $0–$199/月（免费版为固定费率，不按用户计费）。10 人团队的情况：</p>
+        <ul>
+          <li><strong>免费版：</strong>$0（但每台设备仅限单用户，无同步）</li>
+          <li><strong>Pro 版：</strong>$49/月（团队工作区、共享会议）</li>
+          <li><strong>Enterprise 版：</strong>$199/月（套件集成、审计日志）</li>
+        </ul>
+        <p>对于小型团队，Recap <strong>更便宜</strong>。对于大型团队，Otter.ai/Fireflies 按用户计算可能更便宜——但 Recap 提供它们所不具备的数据主权。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">有隐藏费用吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
+        <p>无隐藏费用。总拥有成本包括：</p>
+        <ul>
+          <li><strong>Recap 订阅：</strong>基于版本的月费（免费核心版为 $0）</li>
+          <li><strong>基础设施：</strong>您自行承担设备费用（如自托管）</li>
+        </ul>
+        <p>仅此而已。无安装费、无意外收费、无按用户计费（免费核心版）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">免费版真的免费吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
+        <p>是的。<strong>免费核心版 100% 免费</strong>：</p>
+        <ul>
+          <li><strong>无时间限制：</strong>永久使用</li>
+          <li><strong>功能无限制：</strong>设备端转录、本地摘要、待办事项</li>
+          <li><strong>用户无限制：</strong>可在任意数量的设备上安装（每台设备限单用户）</li>
+        </ul>
+        <p>唯一的限制：</p>
+        <ul>
+          <li><strong>团队功能：</strong>共享工作区、团队同步、审计日志属于付费功能</li>
+          <li><strong>套件集成：</strong>Vault/Loop 同步属于付费功能（Enterprise 版或套件套餐）</li>
+          <li><strong>技术支持：</strong>仅提供社区支持（GitHub Issues、Discord）。无邮件或优先支持。</li>
+        </ul>
+        <p>我们信奉开源。如果您不需要团队功能或套件集成，可以永久免费使用 Recap。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">支持哪些付款方式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
+        <p>我们支持：</p>
+        <ul>
+          <li><strong>信用卡/借记卡：</strong>Visa、Mastercard、American Express（通过 Stripe）</li>
+          <li><strong>银行转账：</strong>适用于年度订阅或企业客户</li>
+          <li><strong>加密货币：</strong>比特币、以太坊、USDC（面向注重隐私的客户）</li>
+        </ul>
+        <p>年度订阅支持开具发票。请联系我们了解详情。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">不满意可以退款吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
+        <p>可以。我们提供 <strong>30 天退款保证</strong>。如果您在前 30 天内不满意，请联系我们获取全额退款——无需任何理由。</p>
+        <p>30 天后，您可以随时取消。您将继续使用至当前计费周期结束，但不完整月份不予退款。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">Recap 包含在 ODW.ai 套件中吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
+        <p><strong>是的。</strong>Recap 是 ODW.ai 套件的组成部分。您可以：</p>
+        <ul>
+          <li><strong>单独购买 Recap：</strong>独立使用 Recap（免费核心版或付费版）</li>
+          <li><strong>购买完整套件：</strong>以优惠价格获得 Desk、Voice、Vault、Recap、Shield 及其他模块</li>
+        </ul>
+        <p>套件套餐中的 Recap 相比单独购买可享受 20%–30% 的折扣。所有模块原生集成——Recap 将会议智能输入 Vault（知识库）和 Loop（工作流自动化）。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 9: SCALING & OPERATIONS -->
+  <div class="section" id="s9">
+    <div class="section-header"><span class="icon">09 · 定价</span><h2>扩展与运维</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">Recap 能处理多少会议？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
+        <p>Recap 可处理<strong>无限量的会议</strong>：</p>
+        <ul>
+          <li><strong>无会议数量限制：</strong>想转录多少会议就转录多少</li>
+          <li><strong>无时长限制：</strong>可转录任意时长的会议</li>
+          <li><strong>存储：</strong>仅受磁盘空间限制（典型会议约 50–200 MB）</li>
+        </ul>
+        <p>对于大量会议（每周 100+ 场），建议：</p>
+        <ul>
+          <li><strong>充足磁盘空间：</strong>确保有足够的存储空间存放音频和转录文本</li>
+          <li><strong>批处理模式：</strong>会议结束后统一转录（更快、更准确）</li>
+          <li><strong>团队部署：</strong>使用中央服务器供团队访问（付费版）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">Recap 支持多少用户？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
+        <p>Recap 支持<strong>无限用户</strong>：</p>
+        <ul>
+          <li><strong>免费版：</strong>每台设备限单用户（每位用户拥有自己的本地数据）</li>
+          <li><strong>Pro 版：</strong>支持多用户的团队工作区</li>
+          <li><strong>Enterprise 版：</strong>中央服务器，无限用户</li>
+        </ul>
+        <p>团队部署中，Recap 支持水平扩展——增加更多服务器资源即可承载更多用户。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">如果 Recap 在会议中崩溃怎么办？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
+        <p>即使 Recap 崩溃，您的音频也<strong>不会丢失</strong>：</p>
+        <ul>
+          <li><strong>音频缓冲：</strong>Recap 在本地缓冲音频——崩溃时已缓冲的音频会保存</li>
+          <li><strong>自动重启：</strong>Recap 自动重启并恢复音频采集</li>
+          <li><strong>手动恢复：</strong>您可以手动恢复已缓冲的音频并稍后转录</li>
+        </ul>
+        <p>对于重要会议，建议：</p>
+        <ul>
+          <li><strong>提前测试：</strong>在重要会议前测试 Recap</li>
+          <li><strong>备份录音：</strong>为关键会议使用备用录音方式（如 Zoom 内置录音功能）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">如何监控 Recap 的性能？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
+        <p>Recap 内置<strong>性能仪表盘</strong>：</p>
+        <ul>
+          <li><strong>系统健康：</strong>CPU、内存、磁盘使用率</li>
+          <li><strong>转录指标：</strong>已转录会议数、平均转录时间、准确度估算</li>
+          <li><strong>模型指标：</strong>正在使用的模型、资源消耗</li>
+          <li><strong>存储指标：</strong>会议、转录文本和模型占用的磁盘空间</li>
+        </ul>
+        <p>团队部署中，管理后台提供额外指标（用户活动、工作区使用情况等）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">如何备份 Recap 数据？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
+        <p>Recap 数据存储在您的本地设备上。使用标准备份工具备份：</p>
+        <ul>
+          <li><strong>macOS：</strong>Time Machine，或手动复制 Recap 数据文件夹</li>
+          <li><strong>Windows：</strong>文件历史记录，或手动复制 Recap 数据文件夹</li>
+          <li><strong>Linux：</strong>rsync，或手动复制 Recap 数据文件夹</li>
+        </ul>
+        <p>Recap 数据位置：</p>
+        <ul>
+          <li><strong>macOS：</strong><code>~/Library/Application Support/Recap/</code></li>
+          <li><strong>Windows：</strong><code>%APPDATA%\Recap\</code></li>
+          <li><strong>Linux：</strong><code>~/.config/Recap/</code></li>
+        </ul>
+        <p>建议定期备份此文件夹（如每日通过 Time Machine 或云同步）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">可以为多个团队或部门使用 Recap 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
+        <p>可以。Recap 支持<strong>团队工作区</strong>（付费版）：</p>
+        <ul>
+          <li><strong>独立工作区：</strong>为不同团队或部门创建独立工作区</li>
+          <li><strong>访问控制：</strong>控制谁可以访问哪些工作区</li>
+          <li><strong>数据隔离：</strong>每个工作区拥有自己的会议、摘要和设置</li>
+        </ul>
+        <p>这对于有严格数据隔离要求的组织或多团队部署非常有用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">如何培训团队使用 Recap？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
+        <p>Recap 的设计<strong>直观易用</strong>，同时我们也提供培训资源：</p>
+        <ul>
+          <li><strong>文档：</strong>面向管理员和终端用户的全面使用指南</li>
+          <li><strong>视频教程：</strong>核心功能的逐步操作演示</li>
+          <li><strong>入门培训：</strong>付费客户可享受 1 小时远程入门培训</li>
+          <li><strong>技术支持：</strong>Pro 和 Enterprise 客户享有优先支持</li>
+        </ul>
+        <p>大多数团队经过 30 分钟培训即可高效使用。界面极其直观——终端用户无需任何技术技能。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 10: INTEGRATION & WORKFLOWS -->
+  <div class="section" id="s10">
+    <div class="section-header"><span class="icon">10 · 入门</span><h2>集成与工作流</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">Recap 如何与其他 ODW.ai 产品集成？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
+        <p>Recap 与其他 ODW.ai 产品<strong>原生集成</strong>（付费版）：</p>
+        <ul>
+          <li><strong>Vault：</strong>会议摘要和决策自动同步至您的知识库</li>
+          <li><strong>Loop：</strong>待办事项自动同步至您的工作流自动化系统（创建任务、分配负责人、设置截止日期）</li>
+          <li><strong>Shield：</strong>Recap 向 Shield 输出审计日志，用于治理与合规</li>
+        </ul>
+        <p>如果使用 ODW.ai 套件，Recap 集成自动完成——无需额外配置。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">可以将会议摘要同步到 Vault 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
+        <p>可以。Recap 可<strong>将会议摘要自动同步至 Vault</strong>（Enterprise 版或套件套餐）：</p>
+        <ul>
+          <li><strong>自动同步：</strong>会议摘要和决策自动在 Vault 中建立索引</li>
+          <li><strong>可搜索：</strong>会议内容在 Vault 中与其他文档一同可搜索</li>
+          <li><strong>双向关联：</strong>Vault 条目可关联源会议</li>
+          <li><strong>可配置：</strong>选择哪些会议同步、哪些标签触发同步等</li>
+        </ul>
+        <p>这将您的会议转化为可搜索的知识库——不再在会议笔记中丢失重要决策。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">可以将待办事项同步到 Loop 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
+        <p>可以。Recap 可<strong>将待办事项自动同步至 Loop</strong>（Enterprise 版或套件套餐）：</p>
+        <ul>
+          <li><strong>自动创建任务：</strong>待办事项自动在 Loop 中创建为任务</li>
+          <li><strong>负责人分配：</strong>任务自动分配给对应负责人（从会议中识别）</li>
+          <li><strong>截止日期：</strong>根据会议中提及的内容自动设置截止日期</li>
+          <li><strong>工作流触发：</strong>待办事项可触发工作流（如"创建待办事项 → 通知负责人 → 设置提醒"）</li>
+        </ul>
+        <p>这将您的会议转化为可执行的工作流——会后不再需要手动创建任务。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">可以将 Recap 与日历集成吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
+        <p><strong>v1.0 不支持。</strong>Recap 在 v1.0 中不支持日历集成。</p>
+        <p>Recap 通过采集系统音频工作，无需依赖日历——它不需要提前获知您的会议安排。您只需开始会议，Recap 即自动采集并转录。</p>
+        <p>日历集成（基于日历事件自动启动转录）计划在 v1.1（2026 年第四季度）推出。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">可以将 Recap 与 Slack 或 Teams 集成吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
+        <p><strong>不能直接集成。</strong>Recap 在 v1.0 中不支持向 Slack 或 Teams 频道推送内容。</p>
+        <p>但您可以：</p>
+        <ul>
+          <li><strong>导出并分享：</strong>将摘要导出为 Markdown 或 PDF，然后通过 Slack/Teams 分享</li>
+          <li><strong>Loop 集成：</strong>如果使用 ODW.ai Loop，可配置 Loop 将摘要推送至 Slack/Teams</li>
+          <li><strong>自定义集成：</strong>通过 API 构建与 Slack/Teams 的自定义集成</li>
+        </ul>
+        <p>Slack/Teams 原生集成计划在 v1.2（2027 年第一季度）推出。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">Recap 提供 API 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
+        <p><strong>v1.0 不提供。</strong>Recap 在 v1.0 中不提供公开 API。</p>
+        <p>API 访问计划在 v1.2（2027 年第一季度）推出。API 将支持：</p>
+        <ul>
+          <li><strong>查询会议：</strong>获取会议转录文本、摘要和待办事项</li>
+          <li><strong>触发转录：</strong>以编程方式转录音频文件</li>
+          <li><strong>集成自定义工具：</strong>构建与 Recap 的自定义集成</li>
+        </ul>
+        <p>在此之前，您可以使用导出功能（Markdown、JSON）与其他工具集成。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">可以将 Recap 与现有 AI 工具配合使用吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
+        <p>可以。Recap 可与现有 AI 工具配合使用：</p>
+        <ul>
+          <li><strong>导出转录文本：</strong>将转录文本导出为 JSON，然后在您的 AI 流水线中使用</li>
+          <li><strong>导出摘要：</strong>将摘要导出为 Markdown，然后在您的知识库中使用</li>
+          <li><strong>自定义集成：</strong>使用导出功能与 LangChain、LlamaIndex 等集成</li>
+        </ul>
+        <p>Recap 的定位是<strong>会议智能层</strong>——它提供转录和摘要，您可以在现有工作流中使用其输出。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 11: LIMITATIONS & ROADMAP -->
+  <div class="section" id="s11">
+    <div class="section-header"><span class="icon">11 · 路线图</span><h2>局限与路线图</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">Recap 目前还不能做什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
+        <p>Recap 功能强大，但在 v1.0 中存在以下局限：</p>
+        <ul>
+          <li><strong>仅支持英语：</strong>多语言支持计划在 v1.1（2026 年第四季度）推出</li>
+          <li><strong>不支持视频录制：</strong>仅音频（视频会显著增加复杂度）</li>
+          <li><strong>不支持实时翻译：</strong>仅转录；翻译为未来规划功能</li>
+          <li><strong>无移动端应用：</strong>v1.0 仅支持桌面端（会议主要在桌面进行）</li>
+          <li><strong>不支持电话录音：</strong>仅采集系统音频（不支持电话录音）</li>
+          <li><strong>无公开 API：</strong>API 计划在 v1.2（2027 年第一季度）推出</li>
+          <li><strong>不支持日历集成：</strong>计划在 v1.1（2026 年第四季度）推出</li>
+          <li><strong>不支持云端 API：</strong>v1.0 仅支持设备端处理（API 支持计划在 v2.0 推出）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">Recap 会支持更多语言吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
+        <p><strong>会。</strong>多语言支持计划在 v1.1（2026 年第四季度）推出：</p>
+        <ul>
+          <li><strong>西班牙语</strong></li>
+          <li><strong>法语</strong></li>
+          <li><strong>德语</strong></li>
+          <li><strong>中文（普通话）</strong></li>
+          <li><strong>日语</strong></li>
+          <li><strong>以及更多语言</strong></li>
+        </ul>
+        <p>底层转录模型 Whisper 已支持 99 种语言——v1.0 仅针对英语优化。v1.1 将扩展语言支持。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">Recap 会支持视频录制吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
+        <p><strong>当前路线图中没有。</strong>视频录制会显著增加复杂度（存储、处理、界面），且对转录价值并非必要。</p>
+        <p>Recap 专注于<strong>音频转录和会议智能</strong>。如需视频录制，建议使用会议平台的内置录制功能（Zoom、Teams、Meet）或专用视频录制工具。</p>
+        <p>如果您的使用场景必须有视频录制，请联系我们——我们可能根据客户需求重新评估。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">Recap 会支持实时翻译吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
+        <p><strong>计划在 v2.0（2027 年第二季度）推出。</strong>实时翻译将包括：</p>
+        <ul>
+          <li><strong>实时翻译：</strong>实时翻译语音（如有人说英语，您看到西班牙语字幕）</li>
+          <li><strong>会后翻译：</strong>会后翻译转录文本和摘要</li>
+          <li><strong>多语言支持：</strong>支持 50+ 种语言之间的翻译</li>
+        </ul>
+        <p>这是面向全球团队和多语言组织的高优先级功能。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">未来 12 个月的路线图是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
+        <p>关键里程碑：</p>
+        <ul>
+          <li><strong>v1.0（2026 年第三季度）：</strong>MVP 发布。设备端转录、本地摘要、待办事项、macOS/Windows/Linux 支持。</li>
+          <li><strong>v1.1（2026 年第四季度）：</strong>多语言支持、日历集成、改进的说话人分离。</li>
+          <li><strong>v1.2（2027 年第一季度）：</strong>公开 API、Slack/Teams 集成、高级分析。</li>
+          <li><strong>v2.0（2027 年第二季度）：</strong>实时翻译、云端 API 支持（自主选择）、模型微调。</li>
+        </ul>
+        <p>路线图可能根据客户反馈调整。请联系我们获取最新路线图或提出功能需求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">什么情况下不应该使用 Recap？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
+        <p>以下情况 Recap 可能不是最佳选择：</p>
+        <ul>
+          <li><strong>无数据主权要求：</strong>如果您不关心数据主权，基于云端的工具（Otter.ai、Fireflies）更便捷（无需本地处理）。</li>
+          <li><strong>需要视频录制：</strong>Recap 仅支持音频。如需视频，请使用会议平台的内置录制功能。</li>
+          <li><strong>需要电话录音：</strong>Recap 仅采集系统音频。如需电话录音，请使用专用电话录音方案。</li>
+          <li><strong>需要移动端应用：</strong>Recap 仅支持桌面端。如需移动转录，请使用移动端优先的工具。</li>
+          <li><strong>需要实时翻译：</strong>Recap 在 v1.0 中不支持翻译。如需翻译，请等待 v2.0 或使用专用翻译工具。</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">Recap 能保证 100% 的转录准确度吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
+        <p><strong>不能。</strong>没有任何 AI 转录系统能保证 100% 的准确度。Recap 的准确度取决于：</p>
+        <ul>
+          <li><strong>音频质量：</strong>音频越清晰，准确度越高</li>
+          <li><strong>模型大小：</strong>更大的模型（Whisper large-v3）更准确</li>
+          <li><strong>发言者清晰度：</strong>发言越清晰，准确度越高</li>
+          <li><strong>背景噪声：</strong>噪声越小，准确度越高</li>
+        </ul>
+        <p>目标：标准商务英语会议<strong>词错误率（WER）≤8%</strong>。这意味着 92% 以上的准确度。</p>
+        <p>对于关键会议（法律、医疗），我们建议对转录文本进行人工审核。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">如何开始使用？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
+        <p>三种途径：</p>
+        <ol>
+          <li><strong>免费下载：</strong>从 odw.ai/recap 下载 Recap。无需信用卡。用您的会议试用，看看是否适合您的使用场景。</li>
+          <li><strong>预约演示：</strong>与我们的团队预约演示。我们会为您展示 Recap、解答您的问题，并帮助您评估它是否适合您的业务。</li>
+          <li><strong>联系销售：</strong>企业客户或套件套餐，请联系我们的销售团队获取定制报价。</li>
+        </ol>
+        <div class="callout tip"><strong>准备开始？</strong>访问 <code>odw.ai/recap</code> 下载 Recap 或预约演示。</div>
+      </div></div></div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Recap — 商务用户常见问题</strong></p>
+    <p>版本 2.0 · 评审草稿</p>
+    <p>基于：PRD v1.0、SAD v1.0、TSD v1.0、TBK v1.0（2026-06-23）</p>
+    <p><a href="suite.html">← 返回套件常见问题</a></p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
+  });
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
+  const searchInput = document.getElementById('searchInput');
+  const noResults = document.getElementById('noResults');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.section').forEach(section => {
+      let sectionHas = 0;
+      section.querySelectorAll('.faq-item').forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        const match = q === '' || txt.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) { sectionHas++; visibleCount++; if (q !== '') item.classList.add('open'); }
+        else { item.classList.remove('open'); }
+      });
+      section.style.display = sectionHas === 0 && q !== '' ? 'none' : '';
+    });
+    noResults.style.display = (visibleCount === 0 && q !== '') ? 'block' : 'none';
+  });
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
+</script>
+</body>
+</html>

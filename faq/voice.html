@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Voice — FAQ for Business Users</title>
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
   <div class="subtitle">Voice FAQ</div>
   <h1>Voice FAQ</h1>
   <p>AI phone receptionist — answers every call, books appointments, never misses a lead. Answers for business leaders, no technical background required.</p>
@@ -28,7 +33,7 @@
     <span>Voice</span>
   </div>
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search questions… (e.g. 'appointment', 'latency', 'HIPAA', 'cost')">
+    <input type="text" id="searchInput" aria-label="Search questions" placeholder="Search questions… (e.g. 'appointment', 'latency', 'HIPAA', 'cost')">
   </div>
   <div class="controls">
     <button onclick="expandAll()">＋ Expand all</button>
@@ -59,15 +64,15 @@
   <div class="section" id="s1">
     <div class="section-header"><span class="icon">01 · OVERVIEW</span><h2>The Basics — What Is Voice?</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What is ODW.ai Voice in plain English?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">What is ODW.ai Voice in plain English?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
         <p>Voice is an <strong>AI phone receptionist</strong>. When someone calls your business phone number, Voice answers — just like a human receptionist would. It greets the caller, understands what they need, answers questions from your knowledge base, books appointments, and transfers to a human when needed.</p>
         <p>The caller hears a natural, human-sounding voice — not a robotic IVR ("Press 1 for sales, Press 2 for support"). It's a real conversation.</p>
         <p>And it works 24/7/365. No sick days, no lunch breaks, no missed calls.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What problem does Voice solve?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">What problem does Voice solve?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
         <p><strong>Missed calls cost businesses real money.</strong> Industry estimates suggest 20-40% of inbound calls to small and medium businesses go unanswered. Every missed call is a lost appointment, a lost sale, or a lost referral.</p>
         <p>Voice solves three problems:</p>
         <ol>
@@ -78,8 +83,8 @@
         <div class="callout info"><strong>Real-world impact</strong>An HVAC company with 6 technicians reported 40% more jobs booked from previously-missed calls after deploying Voice. In peak summer, every missed call is $500-$2,000 in lost revenue.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What can Voice actually do on a call?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">What can Voice actually do on a call?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
         <p>Here's what Voice handles on a typical call:</p>
         <ul>
           <li><strong>Answer & greet:</strong> Picks up within 3 rings with a natural greeting ("Hi, thanks for calling Westside Dermatology. This is Ava. How can I help?")</li>
@@ -92,8 +97,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does the caller know they're talking to AI?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">Does the caller know they're talking to AI?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
         <p>The voice sounds natural — most callers won't realize it's AI unless they ask. However, we recommend <strong>transparency</strong>:</p>
         <ul>
           <li>You can configure the greeting to say "I'm the AI assistant" if you prefer honesty upfront</li>
@@ -103,8 +108,8 @@
         <p>The goal isn't to trick callers — it's to give them a great experience. If they want a human, they get one. If they're happy with the AI, they get their issue resolved faster.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How is Voice different from a traditional IVR ("Press 1 for sales")?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">How is Voice different from a traditional IVR ("Press 1 for sales")?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
         <p>Completely different experience:</p>
         <table>
           <thead><tr><th></th><th>Traditional IVR</th><th>ODW.ai Voice</th></tr></thead>
@@ -119,8 +124,8 @@
         </table>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What phone number does Voice use?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">What phone number does Voice use?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
         <p>Voice works with <strong>your existing phone number</strong>. You have two options:</p>
         <ol>
           <li><strong>Port your existing number:</strong> Transfer your current business number to Voice. Callers dial the same number they always have.</li>
@@ -129,8 +134,8 @@
         <p>You can also use your own SIP trunk if you have one. Voice is telephony-agnostic — it works with any SIP-based phone system.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Voice handle multiple phone numbers or departments?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">Can Voice handle multiple phone numbers or departments?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
         <p>Yes. You can configure Voice to handle:</p>
         <ul>
           <li><strong>Multiple phone numbers:</strong> Different numbers for different locations or business lines</li>
@@ -140,8 +145,8 @@
         <p>All managed from a single admin console.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens when Voice can't handle a call?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">What happens when Voice can't handle a call?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
         <p>Three things can happen:</p>
         <ol>
           <li><strong>Transfer to human:</strong> Voice warm-transfers the call to a human agent (with full context — the human knows what the caller said). You configure which numbers/departments to transfer to.</li>
@@ -151,8 +156,8 @@
         <p>Voice never leaves a caller hanging. If it can't help, it makes sure a human follows up.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Voice replace my receptionist?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">Does Voice replace my receptionist?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
         <p>Voice handles the <strong>routine, repetitive calls</strong> — appointment booking, FAQs, after-hours coverage, call routing. This frees your human staff to focus on:</p>
         <ul>
           <li>In-person customers (front desk)</li>
@@ -168,8 +173,8 @@
   <div class="section" id="s2">
     <div class="section-header"><span class="icon">02 · SOVEREIGNTY</span><h2>How It Sounds & Feels</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How fast does Voice respond? Is there an awkward delay?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">How fast does Voice respond? Is there an awkward delay?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
         <p>Voice is designed for <strong>low-latency conversation</strong>:</p>
         <ul>
           <li><strong>Call answer time:</strong> Under 800ms (half a second) from when the phone starts ringing</li>
@@ -180,14 +185,14 @@
         <div class="callout tip"><strong>Why latency matters</strong>Long pauses make conversations feel robotic. Sub-second latency makes Voice feel like talking to a real person.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can the caller interrupt Voice mid-sentence?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">Can the caller interrupt Voice mid-sentence?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
         <p>Yes. Voice supports <strong>barge-in</strong> (interruption handling). If the caller starts speaking while Voice is talking, Voice stops immediately and listens to the caller.</p>
         <p>This is critical for natural conversation. Humans interrupt each other all the time — Voice handles it gracefully.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does the voice sound like? Can I choose the voice?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">What does the voice sound like? Can I choose the voice?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
         <p>Voice uses <strong>high-quality neural text-to-speech (TTS)</strong> — the same technology used by premium voice assistants. The voices sound natural, with proper intonation, pacing, and emotion.</p>
         <p>You can choose from a library of preset voices:</p>
         <ul>
@@ -198,8 +203,8 @@
         <div class="callout warning"><strong>Limitation</strong>Custom voice cloning (creating a voice that sounds like a specific person) is planned for v1.2, not available in v1.0.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What if the caller has a heavy accent or speaks unclearly?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">What if the caller has a heavy accent or speaks unclearly?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
         <p>Voice uses <strong>state-of-the-art speech recognition</strong> that handles a wide range of accents, dialects, and speech patterns. It's trained on diverse datasets covering:</p>
         <ul>
           <li>Regional accents (Southern US, British regional, Australian, etc.)</li>
@@ -216,8 +221,8 @@
         <p>Voice never pretends to understand when it doesn't.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if there's a long silence or the caller pauses?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">What happens if there's a long silence or the caller pauses?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
         <p>Voice handles <strong>silence and ambiguity</strong> gracefully:</p>
         <ul>
           <li><strong>Short pause (2-3 seconds):</strong> Voice waits — the caller may be thinking or looking something up</li>
@@ -227,8 +232,8 @@
         <p>This prevents awkward dead air and ensures the caller doesn't feel abandoned.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Voice handle background noise (e.g., caller is driving)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">Can Voice handle background noise (e.g., caller is driving)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
         <p>Yes. Voice includes <strong>noise suppression and echo cancellation</strong> to handle real-world call conditions:</p>
         <ul>
           <li>Background noise (traffic, crowds, machinery)</li>
@@ -238,8 +243,8 @@
         <p>The speech recognition model is trained on noisy data and can extract speech even in challenging conditions. If the audio quality is too poor, Voice will ask the caller to call back from a quieter location or offer to continue via text (SMS/chat).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I customize the greeting and conversation style?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">Can I customize the greeting and conversation style?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
         <p>Yes. You configure Voice through the <strong>admin console</strong>:</p>
         <ul>
           <li><strong>Greeting:</strong> Custom greeting text ("Thanks for calling [Business Name]. This is [Agent Name]. How can I help?")</li>
@@ -250,8 +255,8 @@
         <p>You can preview and test the agent before going live.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Voice sound robotic or natural?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">Does Voice sound robotic or natural?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
         <p>Voice uses <strong>neural TTS</strong> (text-to-speech) — the latest generation of voice synthesis. It sounds natural, with:</p>
         <ul>
           <li>Proper intonation and emotion</li>
@@ -268,8 +273,8 @@
   <div class="section" id="s3">
     <div class="section-header"><span class="icon">03 · INTEGRATION</span><h2>Our Solution's Strengths & Design</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What are the top advantages of Voice over other voice AI tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">What are the top advantages of Voice over other voice AI tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
         <table>
           <thead><tr><th>Feature</th><th>ODW.ai Voice</th><th>Typical Alternatives</th></tr></thead>
           <tbody>
@@ -285,8 +290,8 @@
         <p>Voice competes on <strong>privacy + integration</strong>, not just voice quality. Raw voice realism is table-stakes — every competitor has it. What sets Voice apart is sovereignty and suite integration.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Voice compare to Retell AI, Vapi, Bland AI, or Air AI?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">How does Voice compare to Retell AI, Vapi, Bland AI, or Air AI?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
         <p>These are all excellent voice AI platforms, but they have different design priorities:</p>
         <table>
           <thead><tr><th>Aspect</th><th>ODW.ai Voice</th><th>Retell / Vapi / Bland / Air</th></tr></thead>
@@ -302,8 +307,8 @@
         <p>Choose Retell/Vapi/Bland if you're a developer building a custom voice app. Choose Voice if you're a regulated business that needs sovereignty, compliance, and out-of-the-box integration with your calendar/CRM.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Voice integrate with my calendar for appointment booking?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">How does Voice integrate with my calendar for appointment booking?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
         <p>Voice integrates with your calendar via <strong>Loop workflows</strong> (ODW.ai's automation engine):</p>
         <ol>
           <li>Caller says "I'd like to book an appointment"</li>
@@ -316,8 +321,8 @@
         <div class="callout info"><strong>Supported calendars</strong>Google Calendar, Microsoft Outlook, Cal.com, and any calendar with a CalDAV or API integration. Custom integrations available via Loop workflows.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Voice use my knowledge base?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">How does Voice use my knowledge base?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
         <p>Voice integrates with <strong>Vault</strong> (ODW.ai's knowledge base). When a caller asks a question:</p>
         <ol>
           <li>Voice queries Vault for relevant documents (your service menu, pricing, policies, FAQs, etc.)</li>
@@ -328,8 +333,8 @@
         <div class="callout tip"><strong>No separate training</strong>If you already use Vault for Desk (chat) or other ODW.ai products, Voice uses the same knowledge base. No duplicate uploads, no separate training step.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What is "sovereign deployment" and why does it matter?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">What is "sovereign deployment" and why does it matter?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
         <p>"Sovereign deployment" means Voice runs on <strong>your own infrastructure</strong> — your servers, your cloud, your data center. Call recordings, transcripts, and all data stay on your infrastructure.</p>
         <p>This matters for:</p>
         <ul>
@@ -346,8 +351,8 @@
         </ol>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Voice model-agnostic like other ODW.ai products?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">Is Voice model-agnostic like other ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
         <p>Yes. Voice is <strong>model-agnostic</strong> — you choose which AI model powers the conversation:</p>
         <ul>
           <li><strong>Local models:</strong> Run on your own hardware (maximum privacy, no per-call cost)</li>
@@ -357,8 +362,8 @@
         <p>You can even configure <strong>hybrid routing</strong>: use local models for routine calls (FAQs, booking) and frontier models for complex calls (complaints, edge cases).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Voice handle business hours and holidays?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">How does Voice handle business hours and holidays?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
         <p>Voice is <strong>business-hours aware</strong>. You configure:</p>
         <ul>
           <li><strong>Business hours:</strong> Monday-Friday 9am-6pm, Saturday 10am-2pm, etc.</li>
@@ -368,8 +373,8 @@
         <p>Voice automatically adjusts its behavior based on the time of day and day of week. Callers during business hours get the full experience. Callers after hours get a tailored message and options.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Voice make outbound calls (callbacks, reminders)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">Can Voice make outbound calls (callbacks, reminders)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
         <p><strong>Not in v1.0.</strong> Voice v1.0 is inbound-only — it answers incoming calls but doesn't initiate outbound calls.</p>
         <p>Outbound calling is planned for <strong>v1.1</strong> and will include:</p>
         <ul>
@@ -385,8 +390,8 @@
   <div class="section" id="s4">
     <div class="section-header"><span class="icon">04 · SECURITY</span><h2>Accuracy & Trust</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How accurate is Voice at understanding callers?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">How accurate is Voice at understanding callers?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
         <p>Voice uses <strong>state-of-the-art speech recognition</strong> with typical accuracy of <strong>95%+</strong> for clear speech in English. Accuracy depends on:</p>
         <ul>
           <li><strong>Audio quality:</strong> Clear phone connections → higher accuracy. Noisy environments → lower accuracy.</li>
@@ -396,8 +401,8 @@
         <p>If Voice can't understand the caller, it asks for clarification or offers to transfer to a human. It never guesses when it's unsure.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Voice avoid giving wrong information?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">How does Voice avoid giving wrong information?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
         <p>Voice uses <strong>retrieval-augmented generation (RAG)</strong> — it answers from your documents, not from memory:</p>
         <ol>
           <li>Caller asks a question</li>
@@ -409,8 +414,8 @@
         <div class="callout info"><strong>Confidence threshold</strong>You can configure a confidence threshold. If Voice's confidence in its answer is below the threshold, it automatically transfers to a human — no guessing.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if Voice makes a mistake (e.g., books the wrong appointment)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">What happens if Voice makes a mistake (e.g., books the wrong appointment)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
         <p>Voice includes multiple safeguards:</p>
         <ol>
           <li><strong>Confirmation:</strong> Before booking, Voice reads back the details: "So that's Thursday at 2pm with Dr. Patel. Is that correct?" The caller confirms or corrects.</li>
@@ -421,8 +426,8 @@
         <p>Mistakes are rare, but when they happen, they're caught and corrected quickly.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I review call transcripts and recordings?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">Can I review call transcripts and recordings?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
         <p>Yes. Every call generates:</p>
         <ul>
           <li><strong>Transcript:</strong> Full text of the conversation (caller + Voice)</li>
@@ -438,8 +443,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Voice handle sensitive information (e.g., health info, credit cards)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">How does Voice handle sensitive information (e.g., health info, credit cards)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
         <p>Voice includes <strong>PII detection and redaction</strong> (via ODW.ai Shield):</p>
         <ul>
           <li><strong>PII detection:</strong> Voice scans the conversation for sensitive information (names, phone numbers, health info, credit card numbers)</li>
@@ -449,8 +454,8 @@
         <p>For healthcare (HIPAA), legal (privilege), and financial services, Voice ensures sensitive data never leaves your infrastructure unless you explicitly configure it to.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I test Voice before going live?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">Can I test Voice before going live?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
         <p>Yes. Voice includes a <strong>preview and testing mode</strong>:</p>
         <ul>
           <li><strong>Sandbox mode:</strong> Test Voice with simulated calls in a sandbox environment. No real calls are made.</li>
@@ -460,8 +465,8 @@
         <p>We recommend testing thoroughly before going live. Most customers spend 1-2 days testing before enabling Voice for production calls.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's the task completion rate?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">What's the task completion rate?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
         <p>Voice targets a <strong>task completion rate of 85%+</strong> — meaning 85% of calls achieve the caller's stated intent without human transfer.</p>
         <p>Typical outcomes:</p>
         <ul>
@@ -478,8 +483,8 @@
   <div class="section" id="s5">
     <div class="section-header"><span class="icon">05 · DEPLOYMENT</span><h2>Security & Privacy</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Is Voice HIPAA-compliant?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">Is Voice HIPAA-compliant?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
         <p>Voice is <strong>compatible with HIPAA</strong> when deployed correctly. HIPAA compliance depends on how you deploy Voice:</p>
         <ul>
           <li><strong>Private cloud or on-premises:</strong> ✅ Fully HIPAA-compliant. Call recordings and transcripts stay on your infrastructure. You control the BAA (Business Associate Agreement).</li>
@@ -495,8 +500,8 @@
         <div class="callout warning"><strong>Important</strong>Voice gives you the tools, but you're responsible for configuring them correctly and ensuring your deployment meets HIPAA requirements. Consult your compliance team.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Are call recordings stored securely?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">Are call recordings stored securely?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
         <p>Yes. Call recordings are stored with <strong>enterprise-grade security</strong>:</p>
         <ul>
           <li><strong>Encryption at rest:</strong> AES-256 encryption for all recordings</li>
@@ -507,8 +512,8 @@
         <p>For sovereign deployments (private cloud, on-premises), recordings stay on your infrastructure. ODW.ai has zero access.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Voice require consent to record calls?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">Does Voice require consent to record calls?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
         <p>Yes. Voice includes <strong>consent-aware recording</strong>:</p>
         <ul>
           <li><strong>Consent prompts:</strong> You can configure Voice to announce "This call may be recorded for quality and training purposes" at the start of the call</li>
@@ -518,8 +523,8 @@
         <p>Recording is optional — you can disable it entirely if you prefer.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I delete call recordings and transcripts?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">Can I delete call recordings and transcripts?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
         <p>Yes. Voice supports <strong>data deletion</strong>:</p>
         <ul>
           <li><strong>Individual deletion:</strong> Delete specific calls (e.g., if a caller requests deletion under GDPR)</li>
@@ -529,8 +534,8 @@
         <p>All deletions are logged in the audit trail for compliance.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens to call data if I stop using Voice?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">What happens to call data if I stop using Voice?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
         <p>Your data is <strong>yours</strong>. If you stop using Voice:</p>
         <ul>
           <li><strong>Export:</strong> You can export all call data (transcripts, recordings, structured summaries) in standard formats (JSON, CSV, WAV/MP3)</li>
@@ -540,8 +545,8 @@
         <p>No vendor lock-in. Your data is portable.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does ODW.ai have access to my call data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">Does ODW.ai have access to my call data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
         <p><strong>It depends on your deployment:</strong></p>
         <ul>
           <li><strong>SaaS (ODW.ai-hosted):</strong> Yes, ODW.ai has access to call data (but we don't look at it unless you ask us to for support). We're bound by our privacy policy and any BAA.</li>
@@ -550,8 +555,8 @@
         <p>For maximum privacy, choose private cloud or on-premises deployment.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Voice compliant with GDPR and other privacy laws?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">Is Voice compliant with GDPR and other privacy laws?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
         <p>Voice is <strong>compatible with GDPR</strong> and other privacy laws when deployed correctly:</p>
         <ul>
           <li><strong>Data sovereignty:</strong> You control where call data lives (your infrastructure, your jurisdiction)</li>
@@ -564,8 +569,8 @@
         <p>Voice gives you the tools for compliance, but you're responsible for configuring them correctly. Consult your legal team for specific compliance advice.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What security certifications does Voice have?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">What security certifications does Voice have?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
         <p>Voice follows <strong>industry best practices</strong> for security:</p>
         <ul>
           <li><strong>Encryption:</strong> AES-256 at rest, TLS 1.3 in transit</li>
@@ -581,8 +586,8 @@
   <div class="section" id="s6">
     <div class="section-header"><span class="icon">06 · COMPLIANCE</span><h2>Languages & Accessibility</h2><span class="count">6 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What languages does Voice support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">What languages does Voice support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
         <p>Voice v1.0 supports:</p>
         <ul>
           <li><strong>English:</strong> US, UK, Australian accents</li>
@@ -594,14 +599,14 @@
         <div class="callout info"><strong>Language detection</strong>Voice can auto-detect the caller's language and respond in the same language. Or you can configure a default language per phone number.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Voice handle bilingual callers (switching between languages mid-call)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">Can Voice handle bilingual callers (switching between languages mid-call)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
         <p><strong>Not in v1.0.</strong> In v1.0, Voice uses a single language per call. The language is set at the start of the call (either auto-detected or configured).</p>
         <p>Mid-call language switching is planned for <strong>v1.2</strong>. This will allow Voice to handle callers who switch between languages (e.g., Spanglish, Franglais).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Voice handle callers with speech disabilities?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">Can Voice handle callers with speech disabilities?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
         <p>Voice is designed to be <strong>inclusive</strong>, but has limitations:</p>
         <ul>
           <li><strong>Speech impairments:</strong> The speech recognition model is trained on diverse speech patterns, including some speech impairments. However, severe speech impairments may reduce accuracy.</li>
@@ -610,8 +615,8 @@
         <p>If Voice can't understand a caller after multiple attempts, it offers to transfer to a human or take a message via text (SMS).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can callers use voice commands (e.g., "Go back," "Start over")?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">Can callers use voice commands (e.g., "Go back," "Start over")?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
         <p>Yes. Voice understands <strong>natural language commands</strong>:</p>
         <ul>
           <li>"Go back" / "Start over" → Voice restarts the current flow</li>
@@ -622,14 +627,14 @@
         <p>These aren't rigid voice commands — Voice understands the intent, even if the caller phrases it differently.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Voice support TTY/TDD for deaf callers?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">Does Voice support TTY/TDD for deaf callers?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
         <p><strong>Not in v1.0.</strong> TTY/TDD (teletypewriter) support is not available in v1.0.</p>
         <p>This is a known limitation. We recommend offering a text-based alternative (SMS, chat, email) for deaf or hard-of-hearing callers. TTY/TDD support is being evaluated for a future release.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Voice read back information slowly for elderly callers?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">Can Voice read back information slowly for elderly callers?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
         <p>Yes. You can configure Voice to:</p>
         <ul>
           <li><strong>Speak more slowly:</strong> Adjust the TTS speaking rate</li>
@@ -644,8 +649,8 @@
   <div class="section" id="s7">
     <div class="section-header"><span class="icon">07 · MODELS</span><h2>Deployment & Setup</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How do I deploy Voice?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">How do I deploy Voice?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
         <p>Voice offers three deployment options:</p>
         <ol>
           <li><strong>SaaS (ODW.ai-hosted):</strong> We host everything. You just configure via the admin console. Fastest to get started (minutes).</li>
@@ -655,8 +660,8 @@
         <p>For most customers, <strong>SaaS is the fastest path</strong>. For regulated industries (healthcare, legal), we recommend private cloud or on-premises.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How long does setup take?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">How long does setup take?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
         <p>Setup time depends on your deployment:</p>
         <ul>
           <li><strong>SaaS:</strong> 30 minutes to 2 hours. Connect your phone number, configure your greeting, upload your knowledge base, test, and go live.</li>
@@ -666,22 +671,22 @@
         <p>Most customers are live within a week. Complex deployments (multiple phone numbers, custom integrations) may take 2-3 weeks.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical staff to run Voice?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">Do I need technical staff to run Voice?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
         <p><strong>For SaaS:</strong> No. The admin console is designed for non-technical users (office managers, practice managers). You can configure greetings, business hours, routing rules, and more without writing code.</p>
         <p><strong>For private cloud or on-premises:</strong> Yes. You need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure. This is typically a DevOps engineer or IT consultant.</p>
         <p>Day-to-day operation (reviewing calls, updating knowledge base, adjusting settings) is non-technical for all deployment modes.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use my existing phone number?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">Can I use my existing phone number?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
         <p>Yes. You can <strong>port your existing phone number</strong> to Voice. The process takes 1-2 weeks (carrier-dependent).</p>
         <p>Alternatively, you can get a new number through our carrier partners (Twilio, Telnyx, Vonage) and use it alongside your existing number.</p>
         <p>You can also use your own SIP trunk if you have one. Voice is telephony-agnostic.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What telephony providers does Voice work with?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">What telephony providers does Voice work with?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
         <p>Voice works with any <strong>SIP-based telephony provider</strong>:</p>
         <ul>
           <li><strong>Partner carriers:</strong> Twilio, Telnyx, Vonage (we have pre-built integrations)</li>
@@ -691,8 +696,8 @@
         <p>Voice doesn't require you to switch carriers. It works with your existing telephony infrastructure.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I configure Voice?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">How do I configure Voice?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
         <p>Voice is configured via the <strong>admin console</strong> (web-based UI):</p>
         <ul>
           <li><strong>Greeting:</strong> Custom greeting text, business hours, after-hours behavior</li>
@@ -705,8 +710,8 @@
         <p>No code required. All configuration is done through the UI.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I preview Voice before going live?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">Can I preview Voice before going live?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
         <p>Yes. Voice includes a <strong>preview mode</strong>:</p>
         <ul>
           <li><strong>Test calls:</strong> Call a test number to hear Voice in action. Try different scenarios (booking, Q&A, transfer).</li>
@@ -716,8 +721,8 @@
         <p>We recommend testing thoroughly before going live. Most customers spend 1-2 days testing.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I update Voice to a new version?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">How do I update Voice to a new version?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
         <p><strong>For SaaS:</strong> Updates are automatic. We deploy new versions without downtime (rolling updates).</p>
         <p><strong>For private cloud or on-premises:</strong> Updates are performed via Docker/Kubernetes:</p>
         <ol>
@@ -733,8 +738,8 @@
   <div class="section" id="s8">
     <div class="section-header"><span class="icon">08 · LANGUAGES</span><h2>Cost & Pricing</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How much does Voice cost?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">How much does Voice cost?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
         <p>Voice pricing is based on <strong>call volume</strong>:</p>
         <table>
           <thead><tr><th>Tier</th><th>Price</th><th>Includes</th></tr></thead>
@@ -753,22 +758,22 @@
         <div class="callout info"><strong>Note</strong>Pricing is illustrative and subject to change. Contact us for current pricing and custom quotes.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Voice cheaper than hiring a receptionist?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">Is Voice cheaper than hiring a receptionist?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
         <p><strong>Yes, significantly.</strong> A full-time receptionist costs $30K-$50K+/year (salary + benefits + overhead). Voice costs $1,200-$3,600/year (Professional tier) — <strong>10-40x cheaper</strong>.</p>
         <p>And Voice works 24/7/365 — no sick days, no lunch breaks, no holidays off.</p>
         <p>Of course, Voice doesn't replace a receptionist entirely. It handles routine calls (80-85%), freeing your human staff for complex, high-value interactions. But the cost savings are substantial.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Voice cheaper than a call center or answering service?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">Is Voice cheaper than a call center or answering service?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
         <p><strong>Yes.</strong> Traditional call centers and answering services charge $0.50-$2.00 per minute. For a business receiving 1,000 calls/month averaging 3 minutes each, that's $1,500-$6,000/month.</p>
         <p>Voice charges a flat monthly fee ($99-$299) plus carrier costs (~$0.01-$0.02 per minute). For the same 1,000 calls, Voice costs ~$300-$600/month — <strong>3-10x cheaper</strong>.</p>
         <p>And Voice provides a better caller experience (natural conversation vs. "Press 1 for sales") and deeper integration with your calendar/CRM.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Are there any hidden costs?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">Are there any hidden costs?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
         <p>No hidden costs. The total cost of ownership includes:</p>
         <ul>
           <li><strong>Voice subscription:</strong> Monthly fee based on call volume</li>
@@ -779,8 +784,8 @@
         <p>That's it. No setup fees, no per-user fees, no surprise charges.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is there a free trial?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">Is there a free trial?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
         <p>Yes. We offer a <strong>14-day free trial</strong> of the Professional tier. No credit card required.</p>
         <p>During the trial, you can:</p>
         <ul>
@@ -792,8 +797,8 @@
         <p>At the end of the trial, you can subscribe or downgrade to the free tier (limited features).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What payment methods do you accept?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">What payment methods do you accept?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
         <p>We accept:</p>
         <ul>
           <li><strong>Credit/debit cards:</strong> Visa, Mastercard, American Express (via Stripe)</li>
@@ -803,8 +808,8 @@
         <p>Invoicing is available for annual subscriptions. Contact us for details.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
         <p>Yes. We offer a <strong>30-day money-back guarantee</strong>. If you're not satisfied within the first 30 days, contact us for a full refund — no questions asked.</p>
         <p>After 30 days, you can cancel anytime. You'll continue to have access until the end of your billing period, but no refund is provided for partial months.</p>
       </div></div></div>
@@ -814,8 +819,8 @@
   <div class="section" id="s9">
     <div class="section-header"><span class="icon">09 · PRICING</span><h2>Scaling & Operations</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How many calls can Voice handle simultaneously?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">How many calls can Voice handle simultaneously?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
         <p>Voice scales horizontally:</p>
         <ul>
           <li><strong>SaaS:</strong> Unlimited concurrent calls (we handle scaling)</li>
@@ -825,8 +830,8 @@
         <p>For very high-volume deployments (500+ concurrent calls), we recommend Kubernetes with auto-scaling.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if Voice goes down?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">What happens if Voice goes down?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
         <p>If Voice goes down, calls are handled by your <strong>telephony provider's failover</strong>:</p>
         <ul>
           <li><strong>Voicemail:</strong> Calls go to voicemail (your existing voicemail system)</li>
@@ -841,8 +846,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I monitor Voice's performance?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">How do I monitor Voice's performance?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
         <p>Voice includes an <strong>analytics dashboard</strong>:</p>
         <ul>
           <li><strong>Call volume:</strong> Total calls, answered calls, missed calls, transferred calls</li>
@@ -854,8 +859,8 @@
         <p>You can also export data to external analytics tools (Grafana, Datadog) via Prometheus metrics or API.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I update the knowledge base?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">How do I update the knowledge base?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
         <p>Voice uses <strong>Vault</strong> for knowledge. To update the knowledge base:</p>
         <ol>
           <li>Upload new documents to Vault (or update existing ones)</li>
@@ -865,8 +870,8 @@
         <p>Updates are incremental — only changed documents are re-processed. This is fast and efficient.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use Voice for multiple locations or businesses?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">Can I use Voice for multiple locations or businesses?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
         <p>Yes. Voice supports <strong>multi-tenant deployment</strong>:</p>
         <ul>
           <li><strong>Multiple locations:</strong> Different phone numbers, greetings, and knowledge bases for each location</li>
@@ -875,8 +880,8 @@
         <p>Each tenant is isolated — separate data, separate configuration, separate billing.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I train my team to use Voice?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">How do I train my team to use Voice?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
         <p>Voice is designed to be <strong>intuitive</strong>, but we provide training resources:</p>
         <ul>
           <li><strong>Documentation:</strong> Comprehensive user guides for admins</li>
@@ -887,8 +892,8 @@
         <p>Most teams are productive within 1-2 hours of training. The admin console is particularly intuitive — no technical skills required.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I customize Voice's behavior?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">Can I customize Voice's behavior?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
         <p>Yes. Voice is highly configurable:</p>
         <ul>
           <li><strong>Greeting:</strong> Custom greeting text, business hours, after-hours behavior</li>
@@ -905,8 +910,8 @@
   <div class="section" id="s10">
     <div class="section-header"><span class="icon">10 · ONBOARDING</span><h2>Integration & Workflows</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How does Voice integrate with my calendar?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">How does Voice integrate with my calendar?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
         <p>Voice integrates with your calendar via <strong>Loop workflows</strong> (ODW.ai's automation engine):</p>
         <ul>
           <li><strong>Google Calendar:</strong> Native integration</li>
@@ -917,8 +922,8 @@
         <p>Voice checks availability, proposes slots, books appointments, and sends confirmations — all in real-time during the call.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Voice integrate with my CRM?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">How does Voice integrate with my CRM?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
         <p>Voice integrates with your CRM via <strong>Loop workflows</strong>:</p>
         <ul>
           <li><strong>Salesforce:</strong> Native integration (planned for v1.1)</li>
@@ -933,8 +938,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Voice send notifications (SMS, email, Slack)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">Can Voice send notifications (SMS, email, Slack)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
         <p>Yes. Voice can send notifications via <strong>Loop workflows</strong>:</p>
         <ul>
           <li><strong>SMS:</strong> Send appointment confirmations, reminders, or follow-ups</li>
@@ -945,8 +950,8 @@
         <p>All notifications are configurable via the admin console.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Voice integrate with my EHR (electronic health record) system?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">Can Voice integrate with my EHR (electronic health record) system?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
         <p>Yes, via <strong>custom Loop workflows</strong>. Voice can:</p>
         <ul>
           <li>Create patient records in your EHR</li>
@@ -956,8 +961,8 @@
         <p>EHR integrations require custom configuration (every EHR system is different). We provide integration guides and support for common EHR systems (Epic, Cerner, Athenahealth). Contact us for details.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Voice integrate with my practice management system (legal)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">Can Voice integrate with my practice management system (legal)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
         <p>Yes, via <strong>custom Loop workflows</strong>. Voice can:</p>
         <ul>
           <li>Create new matter/intake records</li>
@@ -968,8 +973,8 @@
         <p>Legal practice management integrations require custom configuration. We provide integration guides and support for common systems (Clio, MyCase, PracticePanther). Contact us for details.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Voice trigger custom workflows (e.g., create a ticket, update a database)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">Can Voice trigger custom workflows (e.g., create a ticket, update a database)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
         <p>Yes. Voice can trigger <strong>custom Loop workflows</strong> for any action:</p>
         <ul>
           <li>Create a ticket in your helpdesk (Zendesk, Freshdesk, etc.)</li>
@@ -980,8 +985,8 @@
         <p>Loop workflows are configured via the admin console (no code required for common actions). For complex workflows, you can write custom logic in Python or JavaScript.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Voice integrate with other ODW.ai products?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">Does Voice integrate with other ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
         <p>Yes. Voice is part of the <strong>ODW.ai suite</strong> and integrates natively with:</p>
         <ul>
           <li><strong>Vault:</strong> Knowledge base (answers questions from your documents)</li>
@@ -998,8 +1003,8 @@
   <div class="section" id="s11">
     <div class="section-header"><span class="icon">11 · ROADMAP</span><h2>Limitations & Roadmap</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What can't Voice do (yet)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">What can't Voice do (yet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
         <p>Voice is powerful, but it has limitations in v1.0:</p>
         <ul>
           <li><strong>No outbound calling:</strong> Voice answers incoming calls but doesn't initiate outbound calls (callbacks, reminders). Planned for v1.1.</li>
@@ -1012,8 +1017,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">When will Voice support outbound calls?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">When will Voice support outbound calls?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
         <p>Outbound calling is planned for <strong>v1.1 (Q4 2026)</strong>. It will include:</p>
         <ul>
           <li><strong>Callbacks:</strong> "We'll call you back at 3pm" → Voice calls the customer at 3pm</li>
@@ -1023,20 +1028,20 @@
         <p>Outbound calling requires careful compliance controls (TCPA in the US, GDPR in Europe) to avoid spam calls. We're building the guardrails first.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Voice ever support custom voice cloning?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">Will Voice ever support custom voice cloning?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
         <p><strong>Planned for v1.2 (Q1 2027).</strong> Custom voice cloning will allow you to create a voice that sounds like a specific person (e.g., your company's spokesperson, a celebrity endorser).</p>
         <p>This requires advanced AI models and careful ethical controls (to prevent misuse). We're working with leading TTS providers to offer this feature safely.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Voice support real-time translation mid-call?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">Will Voice support real-time translation mid-call?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
         <p><strong>Planned for v1.2.</strong> Real-time translation will allow Voice to handle callers who switch between languages mid-call (e.g., Spanglish, Franglais).</p>
         <p>This is technically challenging (requires real-time language detection and translation) but is a high-priority feature for multilingual markets.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Voice support payment processing over the phone?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">Will Voice support payment processing over the phone?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
         <p><strong>Planned for v2.0 (2027).</strong> Payment processing over the phone requires <strong>PCI DSS compliance</strong> (Payment Card Industry Data Security Standard), which is a significant undertaking.</p>
         <p>When implemented, Voice will be able to:</p>
         <ul>
@@ -1047,8 +1052,8 @@
         <p>For now, if a caller needs to make a payment, Voice can transfer to a human or send a secure payment link via SMS.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
         <p>Key milestones:</p>
         <ul>
           <li><strong>v1.0 (Q3 2026):</strong> MVP launch. Inbound calls, appointment booking, Q&A, call routing, Vault integration, sovereign deployment.</li>
@@ -1059,8 +1064,8 @@
         <p>Roadmap is subject to change based on customer feedback. Contact us for the latest roadmap or to request features.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">When should I NOT use Voice?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">When should I NOT use Voice?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
         <p>Voice is not the right fit if:</p>
         <ul>
           <li><strong>You need a full contact-center platform:</strong> Voice is a receptionist, not a CCaaS replacement. If you need ACD queues, agent desktop, workforce management for 100+ agents, use Genesys, Five9, or NICE.</li>
@@ -1071,8 +1076,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I get started?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">How do I get started?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
         <p>Three paths:</p>
         <ol>
           <li><strong>Free trial:</strong> Sign up for a 14-day free trial. No credit card required. Set up Voice with a test phone number and try it out.</li>
@@ -1093,10 +1098,24 @@
 
 <script>
   document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => { button.parentElement.classList.toggle('open'); });
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
   });
-  function expandAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.add('open')); }
-  function collapseAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); }
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
   const searchInput = document.getElementById('searchInput');
   const noResults = document.getElementById('noResults');
   searchInput.addEventListener('input', () => {
@@ -1119,6 +1138,34 @@
     const el = document.querySelector(window.location.hash);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
 </script>
 </body>
 </html>

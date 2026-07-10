@@ -13,9 +13,15 @@
 !.gitignore
 !.github/
 
-# Favicons
+# Favicons and site icons
 !favicon.svg
 !favicon.png
+!favicon-16x16.png
+!favicon-32x32.png
+!apple-touch-icon.png
+!android-chrome-192x192.png
+!android-chrome-512x512.png
+!site.webmanifest
 
 # Logo files
 !odwai-logo-*.png
@@ -29,8 +35,14 @@
 # Localization directories
 !zh-cn/
 !zh-cn/index.html
+!zh-cn/faq/
+!zh-cn/faq/*.html
+!zh-cn/faq/*.css
 !zh-hk/
 !zh-hk/index.html
+!zh-hk/faq/
+!zh-hk/faq/*.html
+!zh-hk/faq/*.css
 
 # Explicitly exclude internal docs (even if in allowed directories)
 *.md

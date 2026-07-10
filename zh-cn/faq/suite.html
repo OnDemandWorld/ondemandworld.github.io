@@ -1,0 +1,1413 @@
+<!-- Translation status: DRAFT — needs native-speaker review before publish -->
+<!-- Last synced with English source: 2026-07-09 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ODW.ai 套件 — 常见问题</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../faq/styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
+  <div class="subtitle">跨模块常见问题</div>
+  <h1>ODW.ai 套件常见问题</h1>
+  <p>主权 AI 套件 — 10 个模块、你的基础设施、你的数据、你的模型。关于数据主权、安全、部署、合规以及各模块协同运作的跨产品问题。</p>
+  <span class="last-updated">最后更新：2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">首页</a>
+    <span class="sep">→</span>
+    <a href="./index.html">常见问题</a>
+    <span class="sep">→</span>
+    <span>套件</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" aria-label="搜索问题" placeholder="搜索问题…（如 'GDPR'、'air-gapped'、'pricing'、'model'、'deploy'）">
+  </div>
+  <div class="controls">
+    <button onclick="expandAll()">＋ 展开全部</button>
+    <button onclick="collapseAll()">− 收起全部</button>
+    <button onclick="window.print()">🖨️ 打印 / 保存 PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>跳转到章节</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> 套件总览</a>
+      <a href="#s2"><span class="num">2</span> 主权 AI — 是什么与为什么</a>
+      <a href="#s3"><span class="num">3</span> 模块如何协同工作</a>
+      <a href="#s4"><span class="num">4</span> 安全与数据保护</a>
+      <a href="#s5"><span class="num">5</span> 部署与基础设施</a>
+      <a href="#s6"><span class="num">6</span> 合规与监管</a>
+      <a href="#s7"><span class="num">7</span> AI 模型与灵活性</a>
+      <a href="#s8"><span class="num">8</span> 语言与本地化</a>
+      <a href="#s9"><span class="num">9</span> 定价与授权</a>
+      <a href="#s10"><span class="num">10</span> 快速上手与接入</a>
+      <a href="#s11"><span class="num">11</span> 路线图与社区</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">没有匹配的问题，请尝试更宽泛的关键词。</div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 1: THE SUITE AT A GLANCE                    -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s1">
+    <div class="section-header"><span class="icon">01 · 概览</span><h2>套件总览</h2><span class="count">9 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">ODW.ai 是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
+        <p>ODW.ai 是一套<strong>面向企业的开源、数据主权 AI 套件</strong>。它由一组智能体模块组成，企业在自己的基础设施上运行，使用自己的数据，并自由选择任意模型。</p>
+        <p>套件包含 10 个模块，覆盖 AI 创造价值的核心业务职能：</p>
+        <ul>
+          <li><strong>Vault</strong> — 知识库与 RAG（基础层）</li>
+          <li><strong>Loop</strong> — 工作流编排</li>
+          <li><strong>Desk</strong> — AI 客服（WhatsApp 优先）</li>
+          <li><strong>Recap</strong> — 会议转写与待办提取</li>
+          <li><strong>Voice</strong> — AI 电话前台</li>
+          <li><strong>Pulse</strong> — 多语言内容生成</li>
+          <li><strong>Hunt</strong> — 外呼销售副驾驶</li>
+          <li><strong>People</strong> — 招聘与 HR 助理</li>
+          <li><strong>Books</strong> — AI 记账</li>
+          <li><strong>Shield</strong> — 治理与合规层</li>
+        </ul>
+        <p>每个模块都可独立使用。组合起来，则构成一套完整的主权 AI 技术栈。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">ODW.ai 适合哪些客户？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
+        <p><strong>主要客户：</strong>处于强监管或对数据驻留敏感行业中的中小企业（10–500 人）：</p>
+        <ul>
+          <li>医疗健康（HIPAA、患者数据）</li>
+          <li>金融服务（SOC 2、交易数据）</li>
+          <li>法律（律师与客户特权）</li>
+          <li>政府承包商（FedRAMP、ITAR）</li>
+          <li>欧盟 / 受隐私保护约束的企业（GDPR）</li>
+          <li>教育、制造、专业服务</li>
+        </ul>
+        <p>这些企业需要完整的 AI 能力，但无法或不愿将敏感数据交给云端 AI 厂商。</p>
+        <p><strong>次要客户：</strong>使用开源工具并将其引入公司的开发者与自托管用户，他们往往成为企业内部的推动者。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">ODW 与 ChatGPT、Copilot 或其他 AI 工具相比有何不同？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
+        <p>三大根本差异：</p>
+        <ol>
+          <li><strong>所有权。</strong>ChatGPT 与 Copilot 是云端 SaaS — 数据要送往它们的服务器。ODW 运行在<em>你的</em>基础设施上。除非你主动选择，数据不会外流。</li>
+          <li><strong>面向业务。</strong>通用 AI 工具只是泛用助手。ODW 模块为具体业务场景而设计 — 客户支持、招聘、记账、销售 — 内置领域工作流、合规控制与集成。</li>
+          <li><strong>套件集成。</strong>ODW 模块彼此协同。Vault 让其他模块都基于你的真实知识库进行回答。Loop 编排跨模块工作流。Shield 提供统一治理。这是拼装多个 SaaS 工具所无法实现的。</li>
+        </ol>
+        <div class="callout info"><strong>不是 ChatGPT 的替代品</strong>ODW 不与通用 AI 聊天机器人竞争。它要替代的是业务 SaaS 工具（Intercom、Zendesk、Apollo、Otter、QuickBooks）— 用主权化、AI 驱动的方案取而代之。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">我必须使用全部 10 个模块吗，还是只用一个也行？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
+        <p>你可以任意组合。每个模块独立即可完整使用，不存在"全选或全无"的约束。</p>
+        <p>常见起步路径：</p>
+        <ul>
+          <li><strong>知识优先：</strong>Vault + Desk — 将 AI 建立在你自己的文档之上，并上线客服</li>
+          <li><strong>销售优先：</strong>Hunt + Pulse — 个性化外呼 + 本地化营销</li>
+          <li><strong>运营优先：</strong>Recap + Loop — 自动化会议纪要与工作流</li>
+          <li><strong>合规优先：</strong>Shield + Vault — 在扩大 AI 使用前先建立治理</li>
+          <li><strong>沟通优先：</strong>Desk + Voice — 覆盖文字与电话客服</li>
+        </ul>
+        <p>随着需求演进，后续再按需添加模块。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">"开源"在这里是什么意思？真的可以免费使用吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
+        <p>是的。每个模块的核心都是开源的 — 你可以下载、部署并免费使用，无需支付许可费。代码透明且可审计。</p>
+        <p>商业模式为<strong>开放核心（open-core）</strong>：</p>
+        <ul>
+          <li><strong>免费：</strong>核心功能、单实例部署、社区支持</li>
+          <li><strong>付费版：</strong>跨模块大规模编排、企业级治理（Shield）、高可用部署、SLA 支持、高级连接器</li>
+        </ul>
+        <p>收入来自支持订阅、咨询服务与认证合作伙伴网络 — 而非许可销售或数据。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">ODW 能替代我现有的 SaaS 工具吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
+        <p>这是目标。每个 ODW 模块都瞄准一个特定的 SaaS 品类：</p>
+        <table>
+          <tr><th>ODW 模块</th><th>替代对象</th></tr>
+          <tr><td>Desk</td><td>Intercom、Zendesk、Ada</td></tr>
+          <tr><td>Vault</td><td>Glean、Onyx、Notion AI</td></tr>
+          <tr><td>Recap</td><td>Otter.ai、Fireflies、Fathom</td></tr>
+          <tr><td>Voice</td><td>Retell AI、Vapi、Bland AI</td></tr>
+          <tr><td>Hunt</td><td>Apollo、Outreach、Salesloft</td></tr>
+          <tr><td>Pulse</td><td>DeepL、Phrase、Jasper</td></tr>
+          <tr><td>People</td><td>Greenhouse、Lever、Ashby</td></tr>
+          <tr><td>Books</td><td>QuickBooks、Xero（AI 层）</td></tr>
+          <tr><td>Loop</td><td>n8n、Zapier（面向 AI 工作流）</td></tr>
+          <tr><td>Shield</td><td>Vanta、Drata、Secureframe</td></tr>
+        </table>
+        <p>ODW 在<strong>所有权、隐私、模型选择与套件集成</strong>上竞争 — 而非功能广度。它从不正面与既有厂商在其最强维度上较量。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">哪些模块已上线，哪些还在规划中？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
+        <p><strong>已完成（生产可用或 Beta）：</strong></p>
+        <ul>
+          <li>Vault — 主权 RAG 知识平台</li>
+          <li>Loop — 智能体编排与工作流</li>
+          <li>Desk — WhatsApp 优先的 AI 客服</li>
+          <li>Recap — 设备端会议转写</li>
+        </ul>
+        <p><strong>计划中（开发中）：</strong></p>
+        <ul>
+          <li>Voice — AI 前台</li>
+          <li>Pulse — 多语言内容</li>
+          <li>Hunt — 外呼销售</li>
+          <li>People — 招聘与 HR</li>
+          <li>Books — AI 记账</li>
+          <li>Shield — 治理与合规</li>
+        </ul>
+        <div class="callout info"><strong>时间线</strong>模块将逐步发布。请访问 ODW.ai 网站或 GitHub 获取最新的可用性与路线图信息。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">ODW 模块能否与我现有工具（Salesforce、HubSpot、Slack 等）配合使用？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
+        <p>可以。ODW 模块支持与常用业务工具集成：</p>
+        <ul>
+          <li><strong>CRM：</strong>Salesforce、HubSpot（通过 API 或 Loop 工作流）</li>
+          <li><strong>日历：</strong>Google Calendar、Outlook（用于 Voice 预约）</li>
+          <li><strong>即时通讯：</strong>Slack、Microsoft Teams、WhatsApp、Telegram</li>
+          <li><strong>财务：</strong>QuickBooks、Xero（用于 Books）</li>
+          <li><strong>HRIS：</strong>Workday、BambooHR（用于 People）</li>
+          <li><strong>内容平台：</strong>WordPress、HubSpot（用于 Pulse）</li>
+        </ul>
+        <p>对于未在列表中的工具，可通过 Loop 或 REST API 构建自定义集成。</p>
+        <div class="callout tip"><strong>迁移小贴士</strong>如果你从云端 SaaS（例如 Intercom → Desk）迁移，我们提供数据导入工具以最大程度降低中断。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">套件的战略愿景是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
+        <p>ODW 的愿景：成为企业级云端 AI SaaS 的<strong>主权替代方案</strong>。</p>
+        <p>策略是模块化且复利式的：</p>
+        <ol>
+          <li><strong>Vault 是基座。</strong>所有其他模块都从同一个知识库中获取内容。这形成一个飞轮 — ODW 用得越多，你的知识库就越有价值。</li>
+          <li><strong>Shield 是商业支柱。</strong>免费的开源工具拉动采用；治理与合规把采用转化为收入。</li>
+          <li><strong>模块形成复利。</strong>每新增一个模块，都会提升现有模块的价值。加入 Voice，Desk 更有价值（同一知识库、新增渠道）；加入 People，Shield 更有价值（更多审计轨迹）。</li>
+          <li><strong>永不在功能广度上竞争。</strong>ODW 在所有权、隐私、模型选择与集成上竞争。既有厂商赢在功能，ODW 赢在掌控。</li>
+        </ol>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 2: SOVEREIGN AI — WHAT & WHY                -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s2">
+    <div class="section-header"><span class="icon">02 · 数据主权</span><h2>主权 AI — 是什么与为什么</h2><span class="count">9 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">"主权 AI"到底是什么意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
+        <p>主权 AI 意味着<strong>你拥有并掌控整个 AI 技术栈</strong> — 模型、数据、基础设施。除非你明确允许，否则没有任何内容会离开你的环境。</p>
+        <p>对比云端 AI（OpenAI、Anthropic、Google）：你把数据发到它们的服务器，它们处理后返回结果。你无法控制数据去向、保存多久、谁能访问。</p>
+        <p>使用 ODW 的主权 AI 套件：</p>
+        <ul>
+          <li>所有数据留在你的基础设施上（你的服务器、你的云、你的笔记本）</li>
+          <li>所有处理都在本地进行 — 除非你主动配置，不会调用第三方 API</li>
+          <li>你掌控模型、数据与访问策略</li>
+          <li>如有需要，可完全离线（无网络）运行</li>
+        </ul>
+        <div class="callout info"><strong>要点</strong>主权并不意味着"不能用云"。你可以在 AWS、Azure、GCP 或自建机房运行 ODW。关键在于<em>你</em>掌控基础设施 — 而非 SaaS 厂商。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">为什么主权对我的业务很重要？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
+        <p>三点理由：</p>
+        <ol>
+          <li><strong>数据保护：</strong>你的敏感数据（客户个人身份信息、财务记录、HR 文档、法律合同）不会触碰任何第三方服务器。这对医疗（HIPAA）、金融（SOC 2）、法律（律师与客户特权）至关重要。</li>
+          <li><strong>监管合规：</strong>GDPR、中国《个人信息保护法》等数据保护法律要求数据驻留与可控。主权 AI 让合规显著简化，因为你完全掌控数据的存放位置。</li>
+          <li><strong>竞争优势：</strong>掌控 AI 技术栈 → 按需求定制 → 深度集成 → 避免厂商锁定。你不再受 SaaS 厂商的定价、可用性或功能路线图所牵制。</li>
+        </ol>
+        <div class="callout warning"><strong>现实考量</strong>主权意味着责任。你需要自行管理基础设施、处理安全更新并确保备份。ODW 提供工具以降低复杂度，但它不像云端 SaaS 那样"开箱即忘"。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">"开源"和"主权"有何区别？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
+        <p><strong>开源</strong>意味着代码公开可查 — 任何人都可以审查、修改、部署。<strong>主权</strong>意味着你掌控软件运行的基础设施。</p>
+        <p>ODW 两者兼备：</p>
+        <ul>
+          <li>开源：代码透明、可审计、社区驱动</li>
+          <li>主权：你在自己的基础设施上部署，掌控数据与环境</li>
+        </ul>
+        <p>并非所有开源软件都是主权的。如果你在托管平台（Heroku、Vercel、AWS Lambda）上部署开源软件，云厂商仍可访问你的数据。主权意味着你掌控从代码到硬件的整个技术栈。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">ODW 能使用云端 AI 模型（OpenAI、Anthropic）吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
+        <p>可以。ODW <strong>与模型无关</strong>。你可以混合使用本地模型与云端 API：</p>
+        <ul>
+          <li>用本地模型处理敏感数据（客户个人身份信息、财务记录）</li>
+          <li>用云端 API 处理较不敏感的任务（起草营销文案、通用问答）</li>
+          <li>可按模块配置：Vault 使用本地模型，Pulse 使用云端 API 生成内容</li>
+        </ul>
+        <p>使用云端 API 时，只会发送所需的最小上下文 — 而非整个知识库。你能精确控制哪些数据会被外发。</p>
+        <div class="callout tip"><strong>最佳实践</strong>追求最大主权：全部使用本地模型。追求性能与成本平衡：敏感数据用本地模型，通用任务用云端 API。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">ODW 会从我的部署中采集遥测或分析数据吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
+        <p><strong>不会。</strong>ODW 不会从你的部署中采集任何遥测、分析或使用数据。没有任何"回拨"行为。</p>
+        <p>当你部署 ODW 时，它完全运行在你的基础设施上，不会向 ODW 服务器发送任何出站连接 — 除非你主动配置与外部服务的集成。</p>
+        <p>这是主权 AI 的核心原则：你掌控一切，包括哪些数据可以离开你的环境。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">如果云端 AI 厂商修改条款、调整定价或停止服务会怎样？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
+        <p>使用云端 AI 时，你会暴露于：</p>
+        <ul>
+          <li>突然涨价（OpenAI 已多次调整定价）</li>
+          <li>服务条款变更影响你的使用场景</li>
+          <li>产品下线（Google 已关闭多款 AI 产品）</li>
+          <li>地缘政治风险（制裁、出口管制、数据本地化法律）</li>
+        </ul>
+        <p>使用 ODW 时，你的 AI 技术栈运行在你自己的基础设施上。没有任何厂商可以"拔你的插头"。如果使用本地模型，你完全独立；如果使用云端 API，也可以切换供应商而无需重构 — 与模型无关的设计意味着你不会被锁定。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">主权 AI 只适合大型企业吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
+        <p>不是。ODW 专门为<strong>中小企业（10–500 人）</strong>设计。核心目标正是让无力负担企业级 AI 团队的公司也能用上主权 AI。</p>
+        <p>ODW 如何让其对中小企业可行：</p>
+        <ul>
+          <li><strong>Docker 部署：</strong>一条命令即可启动</li>
+          <li><strong>免费核心层：</strong>无许可费，只需承担基础设施成本</li>
+          <li><strong>托管选项：</strong>不想自托管？认证合作伙伴可代为运行</li>
+          <li><strong>最低硬件要求：</strong>一台现代笔记本即可搭配云端 API 运行单个模块</li>
+        </ul>
+        <p>小规模部署（单模块 + 云端 API）的基础设施成本与 SaaS 订阅相当 — 但你拥有数据。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">ODW 能完全离线（物理隔离）运行吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
+        <p>可以。ODW 可在完全物理隔离、无网络连接的环境中运行。</p>
+        <p>这对以下场景至关重要：</p>
+        <ul>
+          <li>政府与国防承包商（ITAR、FedRAMP）</li>
+          <li>医疗（HIPAA 要求严格的数据隔离）</li>
+          <li>受监管约束的金融机构</li>
+          <li>任何不能承担数据外泄风险的组织</li>
+        </ul>
+        <p>在物理隔离模式下，你只能使用本地模型（无云端 API）。所有处理、存储与推理都发生在本地基础设施上。</p>
+        <div class="callout info"><strong>说明</strong>物理隔离模式意味着不可使用云端 API 或外部集成。你只能使用本地模型与自有基础设施。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">如何向董事会或合规团队解释"主权 AI"？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
+        <p>用他们关心的语言来表述：</p>
+        <ul>
+          <li><strong>风险降低：</strong>"我们的 AI 数据永不离开自有基础设施。没有第三方暴露，没有来自 AI 供应商的供应链风险。"</li>
+          <li><strong>合规简化：</strong>"我们掌控数据的存放与处理方式。GDPR 数据驻留、HIPAA 隔离、SOC 2 审计轨迹 — 都在架构层面得到保证，而非依赖政策。"</li>
+          <li><strong>厂商独立：</strong>"我们不被任何 AI 厂商的定价、条款或可用性所绑定。无需重构即可切换模型或供应商。"</li>
+          <li><strong>审计就绪：</strong>"每一次 AI 行为都被完整记录并可追溯。当审计员问'谁在何时做了什么'，我们几分钟内即可给出答案，而不是几周。"</li>
+        </ul>
+        <div class="callout tip"><strong>给高管的一句话</strong>"主权 AI 意味着我们掌控技术栈。我们的数据、我们的模型、我们的服务器。没有任何厂商能看见、修改或拿走。"</div>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 3: HOW MODULES WORK TOGETHER                -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s3">
+    <div class="section-header"><span class="icon">03 · 集成</span><h2>模块如何协同工作</h2><span class="count">9 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">各模块之间如何集成？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
+        <p>三层集成：</p>
+        <ol>
+          <li><strong>Vault 是知识基础。</strong>Desk、Hunt、Pulse、Voice、People 都从 Vault 拉取内容，使其回答基于你的真实文档 — 而不是通用的 AI 训练数据。</li>
+          <li><strong>Loop 是编排层。</strong>它将模块连接成自动化工作流。Recap 完成转写后，Loop 可提取待办并分派；Desk 收到提问后，Loop 可触发 Vault 检索并格式化回答。</li>
+          <li><strong>Shield 是治理层。</strong>它在所有模块之上提供统一的访问控制、审计日志与合规报告。</li>
+        </ol>
+        <p>示例流程：客户向 Desk 发消息 → Desk 检索 Vault → 若置信度足够，则带引用回复 → 否则转人工 → Loop 将对话记录至 Vault → Shield 审计整条流程。</p>
+        <div class="callout info"><strong>要点</strong>集成是可选的。你可以独立使用每个模块，也可通过 Loop 将它们连接为自动化工作流。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">推荐的模块部署顺序是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
+        <p>取决于你的业务，但一种常见路径是：</p>
+        <ol>
+          <li><strong>第 1 阶段 — 基础（第 1–2 周）：</strong>部署 Vault（知识库）与 Shield（治理），建立安全、可审计的基础。</li>
+          <li><strong>第 2 阶段 — 面向客户（第 3–4 周）：</strong>部署 Desk（客服）与 Voice（电话），直接带来客户价值。</li>
+          <li><strong>第 3 阶段 — 内部运营（第 5–6 周）：</strong>部署 Recap（会议）与 Loop（工作流），自动化内部流程。</li>
+          <li><strong>第 4 阶段 — 增长（第 7–8 周）：</strong>部署 Hunt（销售）与 Pulse（内容），扩大外呼与营销。</li>
+          <li><strong>第 5 阶段 — 专业化（第 9 周起）：</strong>按需部署 People（招聘）与 Books（记账）。</li>
+        </ol>
+        <p>这仅是建议，而非硬性要求。先解决最紧迫的问题。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">如果只使用一个模块，会错过什么吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
+        <p>每个模块独立即可完整使用。不需要 Vault 也能用 Desk，不需要 Shield 也能用 Recap。</p>
+        <p>集成后你能<em>额外获得</em>：</p>
+        <ul>
+          <li><strong>Vault 集成：</strong>模块基于你的真实文档作答，而非通用的 AI 知识</li>
+          <li><strong>Loop 工作流：</strong>跨模块自动化多步骤流程</li>
+          <li><strong>Shield 治理：</strong>所有模块统一的审计轨迹与访问控制</li>
+        </ul>
+        <p>先独立使用。当你看到集成价值时再连接。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">Vault 在套件中的角色是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
+        <p>Vault 是<strong>知识基座</strong>。它是中央知识库，其他模块通过查询它来让 AI 回答基于你的真实文档。</p>
+        <p>没有 Vault：AI 模块依赖通用训练数据，可能产生幻觉或给出过时的回答。</p>
+        <p>有了 Vault：AI 模块基于你上传的文档、制度、产品规格和内部维基进行回答。回答附带引用，幻觉大幅减少。</p>
+        <p>Vault 支持：</p>
+        <ul>
+          <li>文档摄入（PDF、DOCX、XLSX、HTML、Markdown）</li>
+          <li>双语检索（例如用英文检索，能找到中文文档）</li>
+          <li>访问控制（不同团队看到不同知识）</li>
+          <li>版本追踪（清楚知道某条回答使用的是哪个版本的文档）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">Loop 在套件中的角色是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
+        <p>Loop 是<strong>编排层</strong>。它将模块连接成自动化、多步骤的工作流。</p>
+        <p>示例：</p>
+        <ul>
+          <li>Recap 完成会议转写 → Loop 提取待办 → 添加到你的任务管理工具</li>
+          <li>Desk 收到支持问题 → Loop 检索 Vault → 格式化回答 → 记录到 CRM</li>
+          <li>Hunt 识别线索 → Loop 在 Vault 中查找相关案例 → 起草个性化邮件 → 通过你的邮件服务商发送</li>
+          <li>People 收到应聘申请 → Loop 按条件筛选 → 安排面试 → 通知招聘经理</li>
+        </ul>
+        <p>Loop 为非工程师提供可视化构建器，并为高级逻辑提供代码逃生舱（Python / TypeScript）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">Shield 在套件中的角色是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
+        <p>Shield 是<strong>治理与合规层</strong>。它是套件的商业支柱 — 付费收入主要集中于此，因为企业愿意为治理买单。</p>
+        <p>Shield 提供：</p>
+        <ul>
+          <li><strong>访问控制：</strong>SSO，跨所有模块基于角色与基于属性的策略</li>
+          <li><strong>审计日志：</strong>不可篡改、防抵赖的日志，记录套件内每一次 AI 行为</li>
+          <li><strong>合规报告：</strong>预置与 SOC 2、ISO 27001、HIPAA、GDPR 的映射</li>
+          <li><strong>数据驻留控制：</strong>确保数据不超出预设边界的策略</li>
+          <li><strong>配置加固：</strong>引导式安全基线执行</li>
+        </ul>
+        <p>每个其他模块都会产生合规信号（SSO 要求、审计轨迹需求、数据驻留约束）。Shield 将它们统一到一个治理平面。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">模块之间能否安全地共享数据？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
+        <p>可以。模块间的数据共享通过受控、可审计的通道进行：</p>
+        <ul>
+          <li><strong>Vault 查询：</strong>模块通过认证过的 API 调用向 Vault 请求知识。访问由 Shield 策略控制。</li>
+          <li><strong>Loop 工作流：</strong>数据经由 Loop 的编排引擎在模块间流转。每次数据传输都会被记录。</li>
+          <li><strong>共享认证：</strong>所有模块使用同一认证层（由 Shield 管理）。登录 Desk 的用户也自动通过 Vault 查询的认证。</li>
+        </ul>
+        <p>在这些传输过程中，数据始终不离开你的基础设施。所有模块间通信均加密并可审计。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">能给一个真实的多模块工作流例子吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
+        <p><strong>场景：受监管的医疗诊所</strong></p>
+        <ol>
+          <li><strong>Voice</strong> 接听患者来电，完成预约</li>
+          <li><strong>Desk</strong> 通过 WhatsApp 处理后续问题（"我就诊时需要带什么？"）</li>
+          <li>Voice 与 Desk 都会查询 <strong>Vault</strong>，获取诊所制度、医保信息与就诊须知</li>
+          <li><strong>Recap</strong> 转写医患问诊过程（设备端处理，不走云端）</li>
+          <li><strong>Loop</strong> 从转写中提取后续动作 → 安排下次预约 → 通过 Desk 发送患者须知</li>
+          <li><strong>Shield</strong> 确保所有患者数据（PHI）留在本地，并为 HIPAA 审计记录每次访问</li>
+          <li><strong>People</strong> 处理新护士的招聘 — 筛选、安排面试、合规记录</li>
+          <li><strong>Books</strong> 处理月末对账，分类交易</li>
+        </ol>
+        <p>所有模块都运行在诊所的基础设施上。患者数据不会触碰任何第三方服务器。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">我需要技术人员来管理多模块集成吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
+        <p>基础集成：不需要。Loop 的可视化构建器让非工程师也能编排工作流。模块连接（Vault → Desk、Recap → Loop）已预配置。</p>
+        <p>高级集成：一些技术能力会有帮助。自定义连接器、复杂的条件逻辑与 API 集成适合熟悉 Python / TypeScript 的人员。</p>
+        <p>如果没有内部技术人员，可选方案：</p>
+        <ul>
+          <li><strong>认证合作伙伴：</strong>ODW 的合作伙伴网络负责部署与配置</li>
+          <li><strong>专业服务：</strong>ODW 提供设置与定制的咨询服务</li>
+          <li><strong>托管部署：</strong>合作伙伴代你运行 ODW（仍在你的基础设施上，仍保持主权）</li>
+        </ul>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 4: SECURITY & DATA PROTECTION               -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s4">
+    <div class="section-header"><span class="icon">04 · 安全</span><h2>安全与数据保护</h2><span class="count">9 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">我的数据存储在哪里？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
+        <p>所有数据都存储在<strong>你自有基础设施</strong>上 — 你掌控的服务器、云账户或设备。ODW 没有任何存储你数据的中心服务器。</p>
+        <p>你可以部署在：</p>
+        <ul>
+          <li>自有数据中心（本地部署）</li>
+          <li>自有云账户（AWS、Azure、GCP、阿里云）</li>
+          <li>员工笔记本（适用于 Recap、Vault 等模块）</li>
+          <li>混合部署（部分模块本地，部分在云端）</li>
+        </ul>
+        <p>由你决定数据的存放位置。它不会触碰 ODW 的服务器 — 因为我们根本没有。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">我的数据是否加密？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
+        <p>是的：</p>
+        <ul>
+          <li><strong>静态加密：</strong>AES-256 加密存储数据（数据库、文件、备份）</li>
+          <li><strong>传输加密：</strong>所有网络通信采用 TLS 1.3</li>
+        </ul>
+        <p>你掌控加密密钥。在云基础设施上，可使用客户自管密钥（CMK）获得最大控制。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">ODW 如何处理个人身份信息（PII）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
+        <p>ODW 的设计确保 PII 不会离开你的基础设施，除非你明确允许：</p>
+        <ul>
+          <li><strong>本地模型：</strong>所有 PII 处理都发生在你的硬件上。零暴露。</li>
+          <li><strong>云端 API（可选）：</strong>如果路由至 OpenAI / Anthropic，你可控制发送的上下文。Shield 可强制进行 PII 检测并阻止敏感数据被发送至外部 API。</li>
+          <li><strong>数据最小化：</strong>模块只处理每个任务所需的数据。</li>
+          <li><strong>保留期控制：</strong>可配置数据保留时长，并支持自动删除策略。</li>
+        </ul>
+        <div class="callout tip"><strong>最佳实践</strong>对于 PII 密集型工作负载（医疗、金融、HR），使用本地模型。云端 API 仅用于非敏感任务。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">ODW 能在零网络环境下运行吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
+        <p>可以 — 支持完全物理隔离部署，无需网络。</p>
+        <p>物理隔离模式的要求：</p>
+        <ul>
+          <li>本地模型部署在你的基础设施上（Llama、Mistral、Whisper 等）</li>
+          <li>模型权重需提前下载并通过安全介质转移</li>
+          <li>所有依赖打包在 Docker 镜像或离线包中</li>
+        </ul>
+        <p>权衡：你只能使用本地模型的能力，无法获得前沿模型的质量（GPT-4、Claude）。但对于许多业务场景，本地模型已足够 — 而主权收益是值得的。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">如何处理数据泄露或安全事件？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
+        <p>由于 ODW 运行在你的基础设施上，事件响应由你负责。但 ODW 提供相应工具：</p>
+        <ul>
+          <li><strong>Shield：</strong>审计日志、访问控制、异常检测</li>
+          <li><strong>不可变日志：</strong>所有安全事件被记录且不可篡改</li>
+          <li><strong>访问控制：</strong>基于角色与基于属性的策略限制访问范围</li>
+        </ul>
+        <p>推荐的事件响应流程：</p>
+        <ol>
+          <li>在需要<em>之前</em>就制定事件响应计划</li>
+          <li>使用 Shield 监控异常（异常访问模式、登录失败）</li>
+          <li>若发生泄露，使用 Shield 的审计日志判断范围与影响</li>
+          <li>遵循监管要求的通知义务（GDPR：72 小时）</li>
+        </ol>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">谁可以访问我的数据？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
+        <p><strong>仅被你授权的人。</strong></p>
+        <p>ODW 无法访问你的数据 — 没有 ODW 服务器在存储它。访问由以下层面控制：</p>
+        <ul>
+          <li><strong>基础设施层：</strong>拥有服务器 / 云访问权限的人掌控系统层面的数据</li>
+          <li><strong>应用层：</strong>Shield 管理 ODW 内的用户认证、角色与权限</li>
+          <li><strong>模块层：</strong>每个模块可有独立的访问策略（如仅 HR 可查看 People 数据）</li>
+        </ul>
+        <p>Shield 提供统一的访问控制平面。你定义谁能看到什么，每一次访问行为都会被记录。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">ODW 在安全性上与云端 SaaS 相比如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
+        <table>
+          <tr><th>维度</th><th>云端 SaaS</th><th>ODW（主权）</th></tr>
+          <tr><td>数据位置</td><td>厂商服务器</td><td>你的基础设施</td></tr>
+          <tr><td>加密密钥</td><td>厂商管理</td><td>你掌控</td></tr>
+          <tr><td>审计日志</td><td>有限，由厂商控制</td><td>完整、不可变，由你掌控</td></tr>
+          <tr><td>模型数据暴露</td><td>数据被发送至厂商的 AI</td><td>本地模型 = 零暴露</td></tr>
+          <tr><td>合规证据</td><td>厂商认证（SOC 2 报告）</td><td>你自有证据，按需生成</td></tr>
+          <tr><td>厂商风险</td><td>依赖厂商的安全性</td><td>你就是自己的安全</td></tr>
+          <tr><td>物理隔离</td><td>不可行</td><td>完整支持</td></tr>
+        </table>
+        <div class="callout warning"><strong>权衡</strong>主权 AI 意味着你对安全负责。云端 SaaS 厂商在安全团队上投入巨大。使用 ODW，你需要自行管理安全 — 但你获得了绝对的控制权。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">ODW 是否支持数据驻留要求？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
+        <p>支持。由于你掌控 ODW 的部署位置，你就能掌控数据存放地：</p>
+        <ul>
+          <li>部署在欧盟数据中心，用于欧盟客户数据（GDPR）</li>
+          <li>部署在中国大陆，用于中国数据（《个人信息保护法》）</li>
+          <li>本地部署以获得最大控制</li>
+          <li>部署在特定区域以满足行业要求（HIPAA、FedRAMP）</li>
+        </ul>
+        <p>Shield 可强制执行数据驻留策略 — 拦截任何试图将数据路由出预设边界的请求。这是策略级保证，而不仅是配置建议。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">供应链安全如何保障？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
+        <p>ODW 在多个层面应对供应链风险：</p>
+        <ul>
+          <li><strong>开源代码：</strong>任何人可审计。应用层不存在隐藏后门。</li>
+          <li><strong>容器镜像：</strong>基于已知基础镜像构建，经过签名与校验。</li>
+          <li><strong>依赖管理：</strong>文档化的依赖关系，版本锁定。持续跟踪安全通告。</li>
+          <li><strong>模型供应链：</strong>你选择使用哪些模型。本地模型 = 无外部模型依赖。云端 API = 你清楚知道哪个供应商在处理你的数据。</li>
+        </ul>
+        <p>对于高安全环境，我们建议：</p>
+        <ol>
+          <li>部署前审计 ODW 源码</li>
+          <li>从源码构建容器镜像（不使用预构建镜像）</li>
+          <li>将所有依赖锁定到特定版本</li>
+          <li>对部署运行漏洞扫描</li>
+        </ol>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 5: DEPLOYMENT & INFRASTRUCTURE              -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s5">
+    <div class="section-header"><span class="icon">05 · 部署</span><h2>部署与基础设施</h2><span class="count">9 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">运行 ODW 需要什么基础设施？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
+        <p>需求取决于模块与模型选择：</p>
+        <p><strong>最低配置（单模块 + 云端 API）：</strong></p>
+        <ul>
+          <li>任意现代笔记本或服务器（8GB+ 内存）</li>
+          <li>网络连接（用于云端 API）</li>
+        </ul>
+        <p><strong>推荐配置（全套件 + 本地模型）：</strong></p>
+        <ul>
+          <li>32GB+ 内存的服务器（用于多个本地模型）</li>
+          <li>GPU（NVIDIA + CUDA）以加速推理 — 可选但推荐</li>
+          <li>100GB+ 存储空间（知识库、日志与模型文件）</li>
+        </ul>
+        <p><strong>企业级（高可用、多区域）：</strong></p>
+        <ul>
+          <li>Kubernetes 集群或托管容器平台</li>
+          <li>负载均衡与自动扩缩容</li>
+          <li>数据库集群（PostgreSQL），用于多模块数据</li>
+        </ul>
+        <div class="callout tip"><strong>从小开始</strong>先在笔记本或小型服务器上部署一个模块，再按需扩展。不需要从第一天就具备企业级基础设施。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">能否部署在我现有的云账户（AWS、Azure、GCP）上？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
+        <p>可以。ODW 提供部署指南与模板：</p>
+        <ul>
+          <li><strong>AWS：</strong>EC2、ECS、EKS</li>
+          <li><strong>Azure：</strong>虚拟机、容器实例、AKS</li>
+          <li><strong>GCP：</strong>Compute Engine、GKE、Cloud Run</li>
+          <li><strong>阿里云：</strong>ECS、ACK</li>
+        </ul>
+        <p>你在<em>你的</em>云账户中部署 ODW — 你掌控基础设施、数据与访问策略。ODW 不会代你运营任何云基础设施。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">能在搭载 Apple Silicon 的 Mac 上运行 ODW 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
+        <p>可以。ODW 模块可在搭载 Apple Silicon（M1 / M2 / M3 / M4）的 macOS 上运行。本地模型通过 MLX 或 llama.cpp 高效运行，它们已针对 Apple 神经引擎优化。</p>
+        <p>这对以下场景尤为适用：</p>
+        <ul>
+          <li><strong>Recap：</strong>在笔记本上进行设备端会议转写</li>
+          <li><strong>Vault：</strong>本地运行的个人 / 团队知识库</li>
+          <li><strong>开发：</strong>在部署到生产服务器前进行测试与原型验证</li>
+        </ul>
+        <p>对于服务多用户的生产部署，建议使用服务器或云实例。但对于个人使用或小团队，Mac 是一个可行的部署目标。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">如何更新 ODW 模块？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
+        <p>ODW 模块以容器（Docker）部署。更新非常直接：</p>
+        <ol>
+          <li>从 ODW 仓库拉取最新版本</li>
+          <li>将更新部署到你的基础设施</li>
+          <li>重启模块</li>
+        </ol>
+        <p>零停机更新：使用滚动部署（Kubernetes、Docker Swarm）。单实例部署：重启期间会有短暂停机（秒到分钟级）。</p>
+        <p>在生产部署前，务必先在预发布环境测试更新。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">如果我的服务器宕机怎么办？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
+        <p>单实例：模块在恢复前不可用。</p>
+        <p>高可用方案：</p>
+        <ul>
+          <li>在负载均衡器后部署多实例</li>
+          <li>若某实例故障，流量自动路由到其他实例</li>
+        </ul>
+        <p>数据持久性方案：</p>
+        <ul>
+          <li>使用数据库复制（PostgreSQL 流复制）</li>
+          <li>定期备份知识库（Vault）与日志</li>
+          <li>将备份存放在独立位置（不同区域或不同云）</li>
+        </ul>
+        <div class="callout warning"><strong>重要</strong>主权意味着你对备份与灾难恢复负责。ODW 提供工具，但你需要配置并测试备份策略。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">必须用 Kubernetes 吗，还是 Docker 就够了？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
+        <p>大多数部署下，Docker 就足够了。Kubernetes 仅在以下场景需要：</p>
+        <ul>
+          <li>跨多节点的高可用</li>
+          <li>按负载自动扩缩容</li>
+          <li>多区域部署</li>
+          <li>拥有复杂模块配置的大型团队</li>
+        </ul>
+        <p>对于单团队运行几个模块，单服务器上的 Docker Compose 完全够用。从简单起步，按需扩展。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">能否将不同模块部署在不同服务器上？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
+        <p>可以。模块是独立服务。你可以按需要在基础设施上灵活分布：</p>
+        <ul>
+          <li>Vault 部署在高存储服务器上（它承载你的知识库）</li>
+          <li>Recap 部署在各笔记本上（设备端转写）</li>
+          <li>Desk 与 Voice 部署在面向公网的服务器上（面向客户）</li>
+          <li>Shield 部署在安全的内部服务器上（治理数据）</li>
+        </ul>
+        <p>模块之间通过 REST API 通信。只要它们在你的网络中可互相访问，无论物理位置如何，都能协同工作。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">需要多少存储空间？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
+        <p>取决于你的使用：</p>
+        <ul>
+          <li><strong>ODW 模块（不含本地模型）：</strong>约 5GB，含应用代码、数据库与日志</li>
+          <li><strong>本地模型：</strong>每个模型 5–40GB，视规模而定（7B ≈ 5GB、70B ≈ 40GB）</li>
+          <li><strong>Vault 知识库：</strong>取决于文档量。1,000 份文档 ≈ 1–5GB（含向量嵌入）</li>
+          <li><strong>Recap 转写：</strong>约 10MB / 小时音频</li>
+          <li><strong>日志与审计轨迹：</strong>活跃部署约 1GB / 月</li>
+        </ul>
+        <p>合理起步：100GB，用于单模块 + 一个本地模型的部署。随知识库与使用量增长再扩展存储。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">是否提供 Docker 镜像与部署模板？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
+        <p>提供：</p>
+        <ul>
+          <li><strong>Docker 镜像：</strong>每个模块发布在 Docker Hub / GitHub Container Registry</li>
+          <li><strong>Docker Compose：</strong>即用型 compose 文件，用于单服务器部署</li>
+          <li><strong>Kubernetes 清单：</strong>用于生产级部署的 Helm Chart</li>
+          <li><strong>云模板：</strong>面向 AWS、Azure、GCP 的 Terraform / CloudFormation</li>
+        </ul>
+        <p>文档包含每个平台的分步部署指南。</p>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 6: COMPLIANCE & REGULATIONS                 -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s6">
+    <div class="section-header"><span class="icon">06 · 合规</span><h2>合规与监管</h2><span class="count">9 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">ODW 是否符合 GDPR、HIPAA、SOC 2？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
+        <p>ODW 的设计旨在帮助你合规 — 但合规最终由你负责，因为你掌控基础设施。</p>
+        <p>ODW 提供：</p>
+        <ul>
+          <li><strong>GDPR：</strong>数据最小化、目的限制、保留期控制、数据主体权利流程（访问、删除、可携带）</li>
+          <li><strong>HIPAA：</strong>所有处理在你的基础设施上进行，PHI 不会触碰第三方服务器。Shield 提供审计轨迹。</li>
+          <li><strong>SOC 2：</strong>Shield 提供与 SOC 2 信任服务标准对齐的访问控制、审计日志与合规报告</li>
+          <li><strong>欧盟 AI 法案：</strong>People 与 Shield 按欧盟 AI 法案要求设计 — 人工监督、透明度、审计轨迹</li>
+        </ul>
+        <p>对于正式认证（SOC 2 审计、HIPAA 评估），需聘请第三方审计机构。ODW 提供技术控制；审计机构验证你的实施。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">ODW 是否符合欧盟 AI 法案？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
+        <p>ODW 模块按其风险分类进行设计，以满足欧盟 AI 法案要求：</p>
+        <ul>
+          <li><strong>高风险（People — 招聘）：</strong>人工监督、透明度、审计轨迹、合规性评估</li>
+          <li><strong>有限风险（Desk、Voice — 面向客户）：</strong>透明度（披露 AI 使用）、人工升级选项</li>
+          <li><strong>最低风险（Vault、Recap、Pulse — 内部使用）：</strong>标准的数据保护与安全</li>
+        </ul>
+        <p>Shield 提供治理层，帮助你证明合规 — 审计日志、访问控制、合规报告。</p>
+        <div class="callout info"><strong>说明</strong>欧盟 AI 法案正分阶段实施（2024–2026）。ODW 持续跟进最终法规并相应更新。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">不同国家的数据驻留要求如何处理？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
+        <p>许多法规要求数据必须留在特定地理边界内：</p>
+        <ul>
+          <li><strong>GDPR：</strong>欧盟数据必须留在欧盟（或具有充分性认定的司法管辖区）</li>
+          <li><strong>中国《个人信息保护法》：</strong>中国境内个人信息必须留在大陆</li>
+          <li><strong>俄罗斯：</strong>俄罗斯公民的个人数据必须存储在俄罗斯境内</li>
+          <li><strong>印度（DPDP 法案）：</strong>特定类别数据的本地化要求</li>
+          <li><strong>巴西（LGPD）：</strong>数据传输限制</li>
+        </ul>
+        <p>由于你掌控 ODW 的部署位置，你可以通过在相应司法管辖区部署来确保数据驻留。Shield 可强制执行数据驻留策略 — 拦截任何试图将数据路由出预设边界的请求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">我需要向客户披露 AI 的使用吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
+        <p>越来越多情况下，是的。多个司法管辖区要求对 AI 聊天机器人进行披露：</p>
+        <ul>
+          <li><strong>欧盟 AI 法案：</strong>AI 与人类交互时必须保持透明</li>
+          <li><strong>加利福尼亚（CCPA / CPRA）：</strong>要求披露自动化决策</li>
+          <li><strong>其他司法管辖区：</strong>新兴法律要求 AI 披露</li>
+        </ul>
+        <p>对于 Desk 与 Voice，我们建议：</p>
+        <ul>
+          <li>在对客沟通中披露 AI 的使用</li>
+          <li>提供转人工的选项</li>
+          <li>说明收集了哪些数据以及如何使用</li>
+        </ul>
+        <p>Shield 可帮助根据你的配置生成合规的隐私声明。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">ODW 如何帮助实现审计就绪？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
+        <p>Shield 将数周的审计准备压缩到几分钟：</p>
+        <ul>
+          <li><strong>不可变审计日志：</strong>每一次 AI 行为都带时间戳、操作者、动作与所访问数据的记录</li>
+          <li><strong>合规映射：</strong>预置与 SOC 2、ISO 27001、HIPAA、GDPR 控制框架的映射</li>
+          <li><strong>证据包：</strong>按需生成可供审计方使用的证据包</li>
+          <li><strong>访问报告：</strong>谁在何时访问了什么、原因 — 可导出为标准格式</li>
+        </ul>
+        <p>目标：在 1 小时内产出审计就绪的证据（行业基准为数天至数周）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">AI 专项法规（欧盟 AI 法案之外）如何处理？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
+        <p>监管格局正在快速演变。ODW 的设计具有适应性：</p>
+        <ul>
+          <li><strong>美国 AI 行政令（2023）：</strong>聚焦安全、保障与可信。ODW 的模型无关设计与审计轨迹支持合规。</li>
+          <li><strong>中国生成式 AI 法规：</strong>要求内容标识与数据本地化。ODW 的主权架构对两者均提供支撑。</li>
+          <li><strong>纽约市第 144 号地方法：</strong>要求对自动化招聘决策工具进行偏见测试。People 专为此而设计。</li>
+          <li><strong>加拿大 AIDA：</strong>拟议中的《人工智能与数据法案》。ODW 的人机协同设计与拟议要求对齐。</li>
+        </ul>
+        <p>Shield 的合规框架会随新法规出台而更新。目标是：随着监管格局扩展，ODW 让合规变得<em>更容易</em>，而非更困难。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">ODW 能协助供应商风险评估吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
+        <p>可以。当你的采购团队需要将 ODW 作为供应商进行评估时：</p>
+        <ul>
+          <li><strong>安全文档：</strong>架构图、数据流说明、加密标准</li>
+          <li><strong>开源代码：</strong>可审计 — 你的安全团队可直接审查代码</li>
+          <li><strong>自托管：</strong>默认无第三方数据暴露。这显著简化供应商风险评估。</li>
+          <li><strong>合规映射：</strong>Shield 为供应商风险问卷生成证据</li>
+        </ul>
+        <p>ODW 自托管的事实意味着许多供应商风险问题不再适用 — 没有需要评估的第三方数据处理。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">ODW 如何处理数据主体权利（GDPR 第 15–22 条）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
+        <p>ODW 提供履行数据主体权利的工具：</p>
+        <ul>
+          <li><strong>访问权（第 15 条）：</strong>导出与特定个人相关的所有数据</li>
+          <li><strong>更正权（第 16 条）：</strong>修正不准确的数据</li>
+          <li><strong>删除权（第 17 条）：</strong>删除所有模块中与特定个人相关的数据</li>
+          <li><strong>数据可携带权（第 20 条）：</strong>以机器可读格式导出数据</li>
+          <li><strong>反对权（第 21 条）：</strong>停止处理个人的数据</li>
+        </ul>
+        <p>Shield 提供流程化工具来系统化地处理这些请求，并记录合规情况。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">ODW 持有哪些认证？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
+        <p>作为开源、自托管产品，ODW 本身并不持有传统 SaaS 意义上的认证（如 SOC 2 Type II、ISO 27001 认证）。这些认证适用于托管服务。</p>
+        <p>ODW 转而提供：</p>
+        <ul>
+          <li><strong>技术控制：</strong><em>你的</em>认证所需的构建模块（访问控制、加密、审计日志）</li>
+          <li><strong>合规映射：</strong>Shield 将你的配置映射到具体控制框架</li>
+          <li><strong>证据生成：</strong>产出审计员所需的文档</li>
+        </ul>
+        <p>如果你需要经认证的托管服务，ODW 的认证合作伙伴网络提供托管部署，由合作伙伴持有认证。</p>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 7: AI MODELS & FLEXIBILITY                  -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s7">
+    <div class="section-header"><span class="icon">07 · 模型</span><h2>AI 模型与灵活性</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">ODW 支持哪些 AI 模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
+        <p>ODW 与模型无关。同时支持本地与云端模型：</p>
+        <p><strong>本地模型（运行在你的基础设施上）：</strong></p>
+        <ul>
+          <li>Llama 3、Mistral、Qwen（通过 Ollama、vLLM 或 llama.cpp）</li>
+          <li>Whisper（用于 Recap 与 Voice 的转写）</li>
+          <li>Embedding 模型（用于 Vault 的 RAG）</li>
+        </ul>
+        <p><strong>云端 API（可选）：</strong></p>
+        <ul>
+          <li>OpenAI（GPT-4、GPT-4o）</li>
+          <li>Anthropic（Claude）</li>
+          <li>Google（Gemini）</li>
+          <li>阿里（DashScope 上的 Qwen）</li>
+          <li>AWS Bedrock</li>
+        </ul>
+        <p>自由组合 — 敏感数据用本地模型，通用任务用云端 API。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">能否使用自己微调的模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
+        <p>可以。ODW 支持任何遵循标准 API 的模型（OpenAI 兼容 API、Hugging Face transformers 等）。</p>
+        <p>如果你有针对特定领域（法律、医疗、金融）微调的模型，部署后即可让 ODW 模块对接。</p>
+        <p>这是主权 AI 的关键优势 — 你不会被绑定在某个厂商的模型上。哪种模型最适合你的场景，就用哪种。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">切换模型会影响现有工作流吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
+        <p>不会。ODW 与模型无关的架构意味着工作流引用的是<strong>能力</strong>（摘要、分类、抽取），而非具体模型。</p>
+        <p>你可以：</p>
+        <ul>
+          <li>无需重写自动化即可切换 LLM 供应商</li>
+          <li>按模块配置不同模型</li>
+          <li>按任务路由到不同模型（敏感 → 本地，复杂 → 前沿）</li>
+          <li>A/B 测试模型以找到最佳匹配</li>
+        </ul>
+        <p>切换模型是配置变更，而非代码变更。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">本地模型与云端模型的质量对比如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
+        <p>差距已显著缩小。对于许多业务任务，本地模型已足够：</p>
+        <table>
+          <tr><th>任务</th><th>本地（7B–13B）</th><th>本地（70B+）</th><th>云端（GPT-4 / Claude）</th></tr>
+          <tr><td>FAQ 问答</td><td>✅ 良好</td><td>✅ 优秀</td><td>✅ 优秀</td></tr>
+          <tr><td>文档摘要</td><td>✅ 良好</td><td>✅ 优秀</td><td>✅ 优秀</td></tr>
+          <tr><td>复杂推理</td><td>⚠️ 有限</td><td>✅ 良好</td><td>✅ 优秀</td></tr>
+          <tr><td>创意写作</td><td>⚠️ 基础</td><td>✅ 良好</td><td>✅ 优秀</td></tr>
+          <tr><td>代码生成</td><td>⚠️ 有限</td><td>✅ 良好</td><td>✅ 优秀</td></tr>
+        </table>
+        <div class="callout tip"><strong>务实做法</strong>高频、例行任务用本地模型。质量比主权更重要的复杂推理或创意任务用云端 API。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">首选的云端模型供应商宕机了怎么办？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
+        <p>ODW 与模型无关的设计允许你配置回退模型：</p>
+        <ul>
+          <li>主选：云端 API（如 OpenAI GPT-4）</li>
+          <li>回退：本地模型（如 Llama 3 70B）</li>
+          <li>二级回退：另一家云端 API（如 Anthropic Claude）</li>
+        </ul>
+        <p>若主选模型供应商宕机，ODW 自动路由至回退模型。用户不会感知到服务中断。</p>
+        <p>这也是在组合中纳入本地模型的另一优势 — 它们是你始终可用的回退。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">不同模块可以使用不同模型吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
+        <p>可以。每个模块可独立配置：</p>
+        <ul>
+          <li><strong>Vault：</strong>本地 Embedding 模型 + 本地 LLM 进行 RAG（知识查询的最大主权）</li>
+          <li><strong>Desk：</strong>常规 FAQ 用本地模型，复杂查询用云端 API</li>
+          <li><strong>Recap：</strong>本地 Whisper 进行转写（设备端，无云端）</li>
+          <li><strong>Pulse：</strong>云端 API 进行内容生成（营销文案的最佳质量）</li>
+          <li><strong>People：</strong>本地模型进行筛选（PII 密集，留在本地）</li>
+        </ul>
+        <p>这让你在每个场景中，对主权与质量的权衡拥有精细控制。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">ODW 如何处理模型幻觉？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
+        <p>ODW 使用多重策略降低幻觉：</p>
+        <ol>
+          <li><strong>Vault 锚定：</strong>模块基于你的真实文档作答，而非通用训练数据。回答附带对源文档的引用。</li>
+          <li><strong>置信度阈值：</strong>若模型置信度低于阈值，则转人工而非猜测。</li>
+          <li><strong>检索增强生成：</strong>Vault 中的 RAG 管线确保回答基于检索到的上下文。</li>
+          <li><strong>人机协同：</strong>对高风险任务（People 的招聘决策、Books 的财务入账），AI 辅助但人类决定。</li>
+        </ol>
+        <p>没有任何系统能完全消除幻觉。ODW 的方法：让幻觉可检测（引用）、可预防（置信度阈值）、可补救（人工升级）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">本地模型与云端 API 的成本对比如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
+        <p><strong>本地模型：</strong></p>
+        <ul>
+          <li>前期：硬件成本（GPU 服务器：$5K–$20K，或使用现有 Mac / 笔记本）</li>
+          <li>持续：电费、维护。无按 Token 计费。</li>
+          <li>规模化后：显著更便宜。1M Token 在本地硬件上 ≈ $0.50–$2 电费，而云端 API 需 $5–$60。</li>
+        </ul>
+        <p><strong>云端 API：</strong></p>
+        <ul>
+          <li>前期：$0</li>
+          <li>持续：按 Token 计费。GPT-4：约 $10–$30 / 1M Token。Claude：约 $3–$15 / 1M Token。</li>
+          <li>规模化后：成本随用量线性增长。</li>
+        </ul>
+        <div class="callout tip"><strong>盈亏平衡</strong>对多数企业，若处理量可观，本地模型在 3–6 个月内即可回本。低于该量级，云端 API 更具成本效益（无需硬件投入）。</div>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 8: LANGUAGES & LOCALIZATION                 -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s8">
+    <div class="section-header"><span class="icon">08 · 语言</span><h2>语言与本地化</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">ODW 支持哪些语言？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
+        <p>ODW 模块支持 100+ 种语言，其中尤为擅长：</p>
+        <ul>
+          <li><strong>英语</strong></li>
+          <li><strong>中文（简体与繁体）</strong> — 对大湾区与大中华区业务至关重要</li>
+          <li><strong>日语、韩语</strong></li>
+          <li><strong>西班牙语、法语、德语、葡萄牙语</strong></li>
+          <li><strong>阿拉伯语、印地语及其他主要语言</strong></li>
+        </ul>
+        <p>Pulse 提供跨 50+ 种语言的真正本地化 — 不仅是翻译，而是针对每个市场的文化适配。</p>
+        <p>Vault 支持双语检索（例如用英文检索，能找到中文文档）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">翻译与本地化有何区别？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
+        <p><strong>翻译</strong>是将一种语言的文字转换为另一种语言。<strong>本地化</strong>则是针对特定市场调整内容 — 包括语气、习语、语域、文化引用与语境的再构建。</p>
+        <p>例如：美国市场的一句营销语 "Hit a home run with our product"：</p>
+        <ul>
+          <li><strong>直译为日语：</strong>保留棒球比喻 — 在棒球比喻并不引起共鸣的市场中会让人困惑</li>
+          <li><strong>为日本做本地化：</strong>替换为文化中能传达同样"成功"信息的恰当比喻</li>
+        </ul>
+        <p>Pulse 做的是本地化，不仅是翻译。输出读起来像是以每种目标语言原生撰写的，而非翻译腔。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">Vault 能跨语言检索文档吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
+        <p>可以。Vault 支持<strong>双语与多语检索</strong>：</p>
+        <ul>
+          <li>用英文检索 → 找到中文文档</li>
+          <li>用中文检索 → 找到英文文档</li>
+          <li>用任意支持的语言检索 → 无论原文语种，都能找到相关文档</li>
+        </ul>
+        <p>这依托于多语言 Embedding 模型，将跨语言的概念映射到同一向量空间。匹配的是语义，而非关键词的字面翻译。</p>
+        <p>这对跨市场运营的企业至关重要 — 一个英文提问可以从知识库中以中文、日文或其他任何语言撰写的文档中提取出相关知识。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">Desk 与 Voice 能处理多语言客户吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
+        <p>可以。Desk 与 Voice 都支持多语言对话：</p>
+        <ul>
+          <li><strong>自动识别：</strong>AI 检测客户语言并以同一语言回复</li>
+          <li><strong>知识库：</strong>Vault 返回相关回答，无论文档原文是何种语言</li>
+          <li><strong>一致的品牌调性：</strong>你的品牌人设在跨语言中保持一致</li>
+        </ul>
+        <p>客户可以用粤语发消息，以粤语收到回复，而回答源自英文文档 — 全程自动完成。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">Pulse 能否跨语言保持品牌调性？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
+        <p>可以。这是关键差异化能力。Pulse 按你的品牌调性指南进行配置：</p>
+        <ul>
+          <li>语气（正式、轻松、权威、俏皮）</li>
+          <li>词汇（行业术语、品牌专属用语）</li>
+          <li>风格规范（句长、各市场的正式度惯例）</li>
+        </ul>
+        <p>在生成不同语言的内容时，Pulse 在保持一致性的同时，将品牌调性适配到各市场的惯例。英文语境下的俏皮品牌在日语中会变成恰如其分的俏皮 — 不是英文语气的直译，而是文化上对应的表达。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">从右至左书写的语言（阿拉伯语、希伯来语）如何处理？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
+        <p>ODW 在展示与内容生成中都支持从右至左（RTL）语言：</p>
+        <ul>
+          <li><strong>界面：</strong>UI 针对 RTL 语言正确渲染</li>
+          <li><strong>内容生成：</strong>Pulse 为阿拉伯语、希伯来语等 RTL 语言生成文化上恰当的内容</li>
+          <li><strong>Vault：</strong>正确索引与检索 RTL 文档</li>
+          <li><strong>Desk / Voice：</strong>处理 RTL 语言对话</li>
+        </ul>
+        <p>对中东与北非市场，ODW 提供与其他区域同等的主权、文化感知能力。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">能否同时为多个市场生成内容？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
+        <p>可以。Pulse 支持跨市场的批量内容生成：</p>
+        <ul>
+          <li>用英文撰写产品公告</li>
+          <li>Pulse 同时为日本、德国、巴西与中东生成本地化版本</li>
+          <li>每个版本都经过文化适配，而不仅是翻译</li>
+          <li>品牌调性在所有版本中保持一致</li>
+        </ul>
+        <p>这消除了传统本地化瓶颈 — 内容不再需要按顺序经历翻译 → 审校 → 为每个市场做文化适配。使用 Pulse，所有市场并行服务。</p>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 9: PRICING & LICENSING                      -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s9">
+    <div class="section-header"><span class="icon">09 · 定价</span><h2>定价与授权</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">ODW 费用如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
+        <p>ODW 采用开放核心模式：</p>
+        <ul>
+          <li><strong>免费核心：</strong>各模块具备完整的基础功能，无使用限制、无时间限制</li>
+          <li><strong>付费版：</strong>跨模块大规模集成、企业级治理（Shield）、高可用部署、SLA 支持、高级连接器</li>
+        </ul>
+        <p>具体定价取决于部署规模、用户数量与所选模块。请联系 ODW 获取报价。</p>
+        <div class="callout tip"><strong>投资回报</strong>如果 ODW 每年替代 $50K 的 SaaS 订阅（Intercom、Apollo、Otter 等）或每周节省 20 小时人工工作，工具成本可数倍回本。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">有免费试用吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
+        <p>免费核心层可<strong>无限期</strong>使用 — 无时间限制，无需信用卡。可永久免费部署并使用各模块。</p>
+        <p>付费版（跨模块集成、企业功能）提供 30 天试用。请联系 ODW 开始体验。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">免费版与付费版各包含什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
+        <table>
+          <tr><th>功能</th><th>免费版</th><th>付费版</th></tr>
+          <tr><td>各模块</td><td>✅ 完整</td><td>✅ 完整</td></tr>
+          <tr><td>单实例部署</td><td>✅</td><td>✅</td></tr>
+          <tr><td>本地模型支持</td><td>✅</td><td>✅</td></tr>
+          <tr><td>云端 API 集成</td><td>✅</td><td>✅</td></tr>
+          <tr><td>社区支持</td><td>✅</td><td>✅</td></tr>
+          <tr><td>跨模块编排（Loop）</td><td>基础</td><td>✅ 全规模</td></tr>
+          <tr><td>Shield 治理</td><td>基础</td><td>✅ 完整</td></tr>
+          <tr><td>高可用部署</td><td>—</td><td>✅</td></tr>
+          <tr><td>SLA 支持</td><td>—</td><td>✅</td></tr>
+          <tr><td>高级连接器（SAP、Salesforce）</td><td>—</td><td>✅</td></tr>
+          <tr><td>专属客户经理</td><td>—</td><td>✅</td></tr>
+        </table>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">ODW 真的是开源的吗？使用什么许可？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
+        <p>是的，核心是开源的。各模块的具体许可不同，但遵循开源标准（核心部分通常为 MIT 或 Apache 2.0）。</p>
+        <p>"开放核心"在实践中意味着：</p>
+        <ul>
+          <li><strong>核心（免费、开源）：</strong>模块的基本功能 — 可部署、使用、修改、再分发</li>
+          <li><strong>企业功能（付费）：</strong>大企业需要但中小企业未必需要的进阶能力 — 高可用、多租户编排、高级连接器、白手套式支持</li>
+        </ul>
+        <p>开源核心本身已具有实用价值。付费版为更大规模的部署增添运营能力。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">ODW 的定价相比被替代的 SaaS 工具如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
+        <p>50 人公司典型的 SaaS 支出：</p>
+        <ul>
+          <li>Intercom / Zendesk：$5,000–$20,000 / 年</li>
+          <li>Apollo / Outreach：$10,000–$30,000 / 年</li>
+          <li>Otter.ai / Fireflies：$3,000–$10,000 / 年</li>
+          <li>Greenhouse / Lever：$10,000–$25,000 / 年</li>
+          <li>QuickBooks + 记账员：$5,000–$15,000 / 年</li>
+        </ul>
+        <p><strong>合计：$33,000–$100,000 / 年</strong>的 SaaS 订阅 — 而且你不拥有数据。</p>
+        <p>ODW 用单一套件替代这些。定价基于部署规模，而非按席位。对多数中小企业，ODW 显著更便宜 — 且你拥有数据。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">是按席位还是按模块收费？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
+        <p>定价基于<strong>部署规模</strong>，而非按席位或按模块。</p>
+        <p>这是刻意的设计 — 按席位收费惩罚团队扩张，按模块收费惩罚使用更多套件。</p>
+        <p>ODW 的模式：按部署规模付费（实例数、高可用要求、支持级别）。用全部 10 个模块或只用 1 个 — 定价模型不会惩罚采用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">支持哪些付款方式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
+        <p>付费版支持：</p>
+        <ul>
+          <li>银行转账 / 电汇（适用于企业合同）</li>
+          <li>信用卡（适用于较小规模部署）</li>
+          <li>加密货币（USDC、USDT）— 与开源 / 主权理念一致</li>
+        </ul>
+        <p>提供年付与多年合同折扣。请联系 ODW 了解详情。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">有合作伙伴 / 经销商计划吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
+        <p>有。ODW 正在构建<strong>认证合作伙伴网络</strong>：</p>
+        <ul>
+          <li><strong>部署合作伙伴：</strong>为客户处理设置、配置与持续管理</li>
+          <li><strong>咨询合作伙伴：</strong>提供行业特定的定制与集成</li>
+          <li><strong>经销商合作伙伴：</strong>将 ODW 与自身服务打包销售</li>
+        </ul>
+        <p>合作伙伴可获得认证、技术支持与收入分成。如有意向成为合作伙伴，请联系 ODW。</p>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 10: GETTING STARTED & ONBOARDING            -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s10">
+    <div class="section-header"><span class="icon">10 · 接入</span><h2>快速上手与接入</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">上手需要多久？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
+        <p>取决于部署复杂度：</p>
+        <ul>
+          <li><strong>单模块、笔记本部署：</strong>1 小时内</li>
+          <li><strong>单模块、云端部署：</strong>1–2 天</li>
+          <li><strong>全套件、企业级部署：</strong>2–4 周（含配置、集成与团队培训）</li>
+        </ul>
+        <p>ODW 提供部署指南、Docker 镜像与专业接入服务，以加速上线。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">部署 ODW 需要技术人员吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
+        <p>基础部署：所需技术门槛极低。会运行 Docker 命令即可部署 ODW。</p>
+        <p>高级部署（高可用、多模块、自定义集成）：一些 DevOps 能力会有帮助。</p>
+        <p>如果没有内部技术人员，可选方案：</p>
+        <ul>
+          <li><strong>认证合作伙伴：</strong>代你完成部署</li>
+          <li><strong>专业服务：</strong>ODW 提供设置咨询</li>
+          <li><strong>托管部署：</strong>合作伙伴代你运行 ODW</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">接入流程是怎样的？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
+        <p>免费版：自助服务。文档、指南与社区支持。</p>
+        <p>付费版：</p>
+        <ol>
+          <li><strong>需求沟通：</strong>了解你的使用场景、合规要求与现有栈</li>
+          <li><strong>部署规划：</strong>架构设计、基础设施需求、集成梳理</li>
+          <li><strong>搭建与配置：</strong>部署模块、配置集成、设置 Shield 策略</li>
+          <li><strong>数据迁移：</strong>从现有工具导入数据</li>
+          <li><strong>团队培训：</strong>针对将使用的模块进行培训</li>
+          <li><strong>上线支持：</strong>过渡期内的实操支持</li>
+        </ol>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">能从现有 SaaS 工具迁移数据吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
+        <p>可以。ODW 为常见迁移场景提供数据导入工具：</p>
+        <ul>
+          <li><strong>Intercom / Zendesk → Desk：</strong>对话历史、客户画像、知识库文章</li>
+          <li><strong>Notion / Confluence → Vault：</strong>文档、维基、结构化内容</li>
+          <li><strong>Otter / Fireflies → Recap：</strong>现有转写与会议记录</li>
+          <li><strong>Greenhouse / Lever → People：</strong>候选人数据、职位发布、流程历史</li>
+          <li><strong>QuickBooks → Books：</strong>科目表、交易历史</li>
+        </ul>
+        <p>对于自定义迁移，可通过 REST API 或 Loop 工作流从任意数据源导入。</p>
+        <div class="callout tip"><strong>迁移支持</strong>付费版包含迁移协助。ODW 团队协助规划并执行数据迁移，以最大程度降低中断。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">是否提供培训？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
+        <p>提供，分层级：</p>
+        <ul>
+          <li><strong>文档：</strong>每个模块的全面指南，包括视频教程</li>
+          <li><strong>社区：</strong>GitHub Discussions、社区论坛、Discord / Telegram 频道</li>
+          <li><strong>团队培训：</strong>付费版包含 — 为你的团队提供使用模块的培训</li>
+          <li><strong>管理员培训：</strong>面向管理部署的 IT 人员（Shield 配置、基础设施监控）</li>
+          <li><strong>进阶工作坊：</strong>针对复杂集成、微调与优化的定制培训</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">有哪些支持选项？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
+        <table>
+          <tr><th>等级</th><th>支持</th><th>响应时间</th></tr>
+          <tr><td>免费版</td><td>社区（GitHub、论坛）</td><td>尽力而为</td></tr>
+          <tr><td>付费版 — 标准</td><td>邮件 + 在线支持</td><td>24 小时</td></tr>
+          <tr><td>付费版 — 高级</td><td>专属 Slack 频道 + 电话</td><td>4 小时</td></tr>
+          <tr><td>企业版</td><td>专属客户经理 + SLA</td><td>1 小时（紧急）</td></tr>
+        </table>
+        <p>企业版支持包含主动监控、季度业务回顾与优先功能请求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">可以先从一个模块开始，之后再添加更多吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
+        <p>完全可以。这正是推荐的方式：</p>
+        <ol>
+          <li>从解决最紧迫问题的模块开始</li>
+          <li>熟悉部署模式与主权架构</li>
+          <li>在识别出新场景时添加模块</li>
+          <li>准备好后进行多模块工作流时，通过 Loop 连接模块</li>
+        </ol>
+        <p>无需压力采用全套件。许多客户从一个模块起步，在 6–12 个月内自然扩展。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">不确定从哪个模块开始怎么办？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
+        <p>预约与 ODW 的需求沟通。我们将评估：</p>
+        <ul>
+          <li>你的行业与合规要求</li>
+          <li>现有工具栈与痛点</li>
+          <li>团队规模与技术能力</li>
+          <li>优先场景（目前最耗时间与成本的是什么？）</li>
+        </ul>
+        <p>基于此，我们推荐一个起步配置与分阶段采用计划。没有强制 — 目标是帮你找到最高价值的起点。</p>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 11: ROADMAP & COMMUNITY                     -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s11">
+    <div class="section-header"><span class="icon">11 · 路线图</span><h2>路线图与社区</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-86">ODW 的路线图中有什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-86"><div class="faq-answer-inner">
+        <p>重点开发方向：</p>
+        <ul>
+          <li><strong>模块发布：</strong>完成剩余 6 个模块（Voice、Pulse、Hunt、People、Books、Shield）</li>
+          <li><strong>更深集成：</strong>更紧密的跨模块工作流、共享上下文、统一检索</li>
+          <li><strong>模型支持：</strong>新发布的本地模型、面向边缘部署的更优量化</li>
+          <li><strong>行业模板：</strong>为医疗、法律、金融、制造预配置的方案</li>
+          <li><strong>合作伙伴生态：</strong>认证部署合作伙伴、社区连接器市场</li>
+        </ul>
+        <p>路线图受社区反馈与客户需求影响。请在 GitHub 上提交功能需求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-87">如何为 ODW 做贡献？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-87"><div class="faq-answer-inner">
+        <p>ODW 欢迎贡献：</p>
+        <ul>
+          <li><strong>代码：</strong>通过 GitHub Pull Request 提交 Bug 修复、功能与改进</li>
+          <li><strong>文档：</strong>指南、教程、翻译</li>
+          <li><strong>社区：</strong>回答问题、分享场景、帮助其他用户</li>
+          <li><strong>连接器：</strong>构建与尚未支持工具的集成</li>
+          <li><strong>模型：</strong>贡献针对特定领域或语言的微调模型</li>
+        </ul>
+        <p>目标：第 12 个月达到每月 50+ 外部 PR。社区是 ODW 开发的核心部分。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-88">有社区论坛或聊天群吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-88"><div class="faq-answer-inner">
+        <p>有：</p>
+        <ul>
+          <li><strong>GitHub Discussions：</strong>功能需求、Bug 报告、技术问题</li>
+          <li><strong>社区论坛：</strong>深度讨论、场景分享</li>
+          <li><strong>Discord / Telegram：</strong>与社区及 ODW 团队的实时聊天</li>
+        </ul>
+        <p>这些是获取帮助、分享反馈与连接其他 ODW 用户的最佳渠道。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-89">如何提交功能需求？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-89"><div class="faq-answer-inner">
+        <p>在对应模块的 GitHub 仓库提交功能需求。请包含：</p>
+        <ul>
+          <li>你希望解决的问题</li>
+          <li>你的解决方案建议（如有）</li>
+          <li>你的使用场景与行业背景</li>
+        </ul>
+        <p>功能需求会被定期评审。对多用户有高影响力的需求会被优先处理。付费版客户也可通过客户经理提交需求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-90">ODW 能针对我的行业做定制吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-90"><div class="faq-answer-inner">
+        <p>可以。ODW 设计上支持可配置：</p>
+        <ul>
+          <li><strong>医疗：</strong>HIPAA 合规处理、Vault 中的医学术语</li>
+          <li><strong>法律：</strong>律师与客户特权、文档审核工作流、信托记账</li>
+          <li><strong>金融：</strong>SOC 2 合规、审计轨迹、多币种</li>
+          <li><strong>制造：</strong>供应链文档、质量控制记录</li>
+          <li><strong>专业服务：</strong>项目管理、客户沟通</li>
+        </ul>
+        <p>如需深度定制，开源代码可供修改。按你的精确需求进行调整。或与 ODW 咨询团队或认证合作伙伴合作。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-91">ODW 如何处理反馈与 Bug 报告？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-91"><div class="faq-answer-inner">
+        <p><strong>Bug 报告：</strong>在 GitHub 上提交并附复现步骤。严重 Bug 会被优先修复。</p>
+        <p><strong>反馈：</strong>通过 GitHub Discussions、社区论坛或你的客户经理（付费版）分享。</p>
+        <p><strong>透明：</strong>ODW 发布开发进展、路线图变更与已知问题。社区可以看到正在做什么以及原因。</p>
+        <p>付费版客户可直接对接产品团队进行反馈与功能讨论。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-92">ODW 的长期愿景是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-92"><div class="faq-answer-inner">
+        <p>ODW 的长期愿景：成为企业级默认的主权 AI 平台。</p>
+        <p>核心论点：随着 AI 更强大、监管更严格，企业需要可信赖的 AI — 自己拥有、掌控、可审计的 AI。云端 AI 今天仍可用，但监管、地缘政治与竞争风险正在上升。</p>
+        <p>ODW 为这样的未来而建：</p>
+        <ul>
+          <li>覆盖所有主要业务场景的完整套件</li>
+          <li>让合规变得可操作的治理层（Shield）</li>
+          <li>随 AI 演进而自适应的模型无关架构</li>
+          <li>确保透明与长期生命力的开源社区</li>
+        </ul>
+        <p>目标不是在便利性上击败云端 AI，而是在主权重要时成为可信赖的替代方案。</p>
+      </div></div></div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p><strong>ODW.ai</strong> — 面向企业的主权 AI</p>
+    <p>面向企业用户的常见问题 · 覆盖全部 10 个模块</p>
+    <p style="margin-top:8px">各产品独立 FAQ：
+      <a href="vault.html">Vault</a> ·
+      <a href="loop.html">Loop</a> ·
+      <a href="desk.html">Desk</a> ·
+      <a href="recap.html">Recap</a> ·
+      <a href="voice.html">Voice</a> ·
+      <a href="pulse.html">Pulse</a> ·
+      <a href="hunt.html">Hunt</a> ·
+      <a href="people.html">People</a> ·
+      <a href="books.html">Books</a> ·
+      <a href="shield.html">Shield</a>
+    </p>
+  </div>
+</div>
+
+<script>
+// Toggle FAQ items
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    item.classList.toggle('open');
+      const isExpanded = item.classList.contains('open');
+      button.setAttribute('aria-expanded', isExpanded);
+    });
+});
+
+// Expand all
+function expandAll() {
+  document.querySelectorAll('.faq-item').forEach(item => item.classList.add('open'));
+}
+
+// Collapse all
+function collapseAll() {
+  document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
+}
+
+// Search
+const searchInput = document.getElementById('searchInput');
+const noResults = document.getElementById('noResults');
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase().trim();
+  let visibleCount = 0;
+  document.querySelectorAll('.section').forEach(section => {
+    let sectionVisible = false;
+    section.querySelectorAll('.faq-item').forEach(item => {
+      const text = item.textContent.toLowerCase();
+      const match = !query || text.includes(query);
+      item.style.display = match ? '' : 'none';
+      if (match) { sectionVisible = true; visibleCount++; }
+    });
+    section.style.display = sectionVisible ? '' : 'none';
+  });
+  noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  if (query && visibleCount > 0) expandAll();
+});
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
+</script>
+</body>
+</html>

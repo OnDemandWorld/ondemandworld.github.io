@@ -1,0 +1,1648 @@
+<!-- Translation status: DRAFT — needs native-speaker review before publish -->
+<!-- Last synced with English source: 2026-07-09 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desk — 企业用户常见问题</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../faq/styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
+  <div class="subtitle">Desk 常见问题</div>
+  <h1>Desk 常见问题</h1>
+  <p>自托管、WhatsApp 优先的 AI 智能客服——面向企业管理者，无需技术背景即可阅读。</p>
+  <span class="last-updated">最后更新：2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">首页</a>
+    <span class="sep">→</span>
+    <a href="./index.html">常见问题</a>
+    <span class="sep">→</span>
+    <a href="./suite.html">套件</a>
+    <span class="sep">→</span>
+    <span>Desk</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" aria-label="搜索问题" placeholder="搜索问题…（例如"WhatsApp""安全""费用""隐私"）">
+  </div>
+
+  <div class="controls">
+    <button onclick="expandAll()">＋ 展开全部</button>
+    <button onclick="collapseAll()">− 收起全部</button>
+    <button onclick="window.print()">🖨️ 打印 / 保存 PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>跳转到章节</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> 基础概念</a>
+      <a href="#s2"><span class="num">2</span> WhatsApp 与渠道</a>
+      <a href="#s3"><span class="num">3</span> 方案优势</a>
+      <a href="#s4"><span class="num">4</span> AI 准确性与可信度</a>
+      <a href="#s5"><span class="num">5</span> 安全与隐私</a>
+      <a href="#s6"><span class="num">6</span> 知识库与数据</a>
+      <a href="#s7"><span class="num">7</span> 部署与配置</a>
+      <a href="#s8"><span class="num">8</span> 费用与定价</a>
+      <a href="#s9"><span class="num">9</span> 扩展与运维</a>
+      <a href="#s10"><span class="num">10</span> 品牌语调与安全护栏</a>
+      <a href="#s11"><span class="num">11</span> 局限与路线图</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">没有匹配的问题，请尝试更宽泛的关键词。</div>
+
+  <!-- ================= SECTION 1: THE BASICS ================= -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <span class="icon">💬</span>
+      <h2>1. 基础概念 — Desk 是什么？</h2>
+      <span class="count">9 个问题</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-1">ODW.ai Desk 用通俗的话怎么理解？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
+        <p>Desk 是一款 AI 驱动的智能客服助手，运行在 <strong>WhatsApp</strong>（及其他消息渠道）之上。你可以把它想象成一位无所不知、永不打烊的前台接待员——它能读懂公司文档、掌握产品与政策，并 7×24 小时自动回答客户问题。</p>
+        <p>当遇到 AI 难以应对的复杂或敏感问题时，它会自动将对话移交给人工坐席——并附上完整上下文，让人工坐席无需从头了解情况。</p>
+        <p>关键在于，Desk 部署在 <strong>您自己的基础设施</strong> 上。除非您主动选择使用云端 AI 模型，否则客户对话数据绝不会流经任何第三方服务器。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-2">Desk 解决什么问题？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
+        <p>按重要性排序，解决三个核心问题：</p>
+        <ol>
+          <li><strong>数据主权。</strong>客服对话涉及姓名、电话、订单、健康信息、财务数据等敏感内容。云端客服工具（Intercom、Zendesk AI、Ada）会将这些数据全部发送到第三方服务器——往往位于与 GDPR、HIPAA 或 PDPA 等数据驻留法规冲突的司法管辖区。Desk 将所有数据保留在您自己的服务器上。</li>
+          <li><strong>WhatsApp 服务不足。</strong>WhatsApp 在美国以外的绝大多数地区是主流客服渠道（全球超过 20 亿用户）。然而大多数自托管客服工具只是把 WhatsApp 当作附加功能。Desk 从底层开始就围绕 WhatsApp 进行设计。</li>
+          <li><strong>重复性问题压垮团队。</strong>大多数客服团队 60%–80% 的时间花在回答相同的问题上。Desk 将这些工作自动化，释放人工坐席处理复杂、高价值的对话。</li>
+        </ol>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-3">Desk 与 ChatGPT 或其他通用 AI 聊天机器人有什么不同？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
+        <p>ChatGPT 了解互联网上的海量信息，但 <strong>对您的公司一无所知</strong>。问它"你们的退货政策是什么？"，它只能猜测或拒绝回答。</p>
+        <p>Desk 恰恰相反：它 <strong>对您的文档了如指掌</strong>。它从您自己的知识库（产品手册、政策文档、常见问题）中检索答案，并可以精确引用来源。它还使用 <strong>您的品牌语调</strong>，遵循 <strong>您的回复策略</strong>，并将数据保留在 <strong>您的服务器</strong> 上。</p>
+        <p>简单来说，ChatGPT 是一个才华横溢的陌生人，而 Desk 是一位熟读了整本员工手册的正式员工。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-4">"自托管"是什么意思？为什么重要？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
+        <p>"自托管"意味着 Desk 运行在 <strong>您自己的服务器</strong> 上——可以是办公室里的物理机器、您掌控的私有云（AWS、Azure、GCP），或者从托管服务商租用的服务器。其他人无权访问这些硬件。</p>
+        <p>这很重要，因为：</p>
+        <ul>
+          <li><strong>隐私保护：</strong>客户对话数据不会离开您的基础设施（除非您主动选择将部分查询路由到云端 AI 模型）。</li>
+          <li><strong>合规性：</strong>您可以满足数据驻留要求（GDPR、HIPAA、PDPA），因为您掌控数据的物理存储位置。</li>
+          <li><strong>无供应商锁定：</strong>部署归您所有。即使停止支付软件许可费，您的数据仍然在那里，可以导出，完全属于您。</li>
+        </ul>
+        <div class="callout info">
+          <strong>类比</strong>
+          云端 SaaS 就像住酒店——方便，但一切归酒店所有。自托管就像拥有自己的房子——责任更多，但完全自主。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-5">Desk 中的"对话"是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
+        <p>对话是客户与 Desk（或人工坐席）之间持续的消息交流线程。它从客户发出第一条消息时开始，到对话被标记为已解决时结束。</p>
+        <p>每段对话都有一个 <strong>状态</strong>：可以是 <em>active</em>（正在处理中）、<em>escalated</em>（已移交人工坐席）、<em>pending</em>（等待客户回复）或 <em>resolved</em>（已关闭）。状态机确保没有任何对话被遗漏。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-6">"模型无关"是什么意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
+        <p>"模型无关"意味着 Desk 不强制绑定某一款 AI 模型。您可以自由选择：</p>
+        <ul>
+          <li><strong>本地模型</strong>（如 Llama、Mistral）——完全在自有硬件上运行。隐私最大化，无按条计费成本。</li>
+          <li><strong>前沿模型</strong>（如 GPT-4、Claude）——基于云端，处理复杂问题质量更高，但数据会离开服务器。</li>
+          <li><strong>混合路由</strong>——Desk 根据每条查询自动选择合适的模型。涉及个人信息的查询留在本地；复杂推理交给前沿模型。</li>
+        </ul>
+        <p>您不会被锁定在任何一家 AI 供应商。随时可以切换模型，无需更改部署配置。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-7">ODW.ai 套件是什么？Desk 在其中的定位是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
+        <p>ODW.ai 是一套面向企业的 AI 产品套件。Desk 是该套件中的一个模块。最重要的兄弟产品是 <strong>Vault</strong>——套件的知识库与文档智能平台。</p>
+        <p>Desk 与 Vault 深度集成：当客户提问时，Desk 向 Vault 查询相关文档，然后基于这些文档生成有据可查的回答。如果您已经在使用 Vault，Desk 几分钟内即可就绪——您的知识库已经在那里。</p>
+        <p>Desk 还与套件的其他产品共享身份认证（单点登录）、用户管理和计费系统。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-8">Desk 面向哪些用户？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
+        <p>三类核心用户：</p>
+        <ol>
+          <li><strong>受监管行业企业</strong>（10–500 人）——医疗诊所、律师事务所、金融科技创业公司、政府承包商、教育机构。这些组织需要数据主权，不能将客户对话发送到云端 SaaS。</li>
+          <li><strong>所在地区有严格数据本地化法规的企业</strong>——欧盟（GDPR）、巴西（LGPD）、印度、东南亚（PDPA）。Desk 让您将数据保留在本司法管辖区之内。</li>
+          <li><strong>开发者主导的公司和代理机构</strong>——希望深度定制或白标客服系统、拒绝供应商锁定的团队。</li>
+        </ol>
+        <p>Desk <em>并非</em> 为需要 200 多个集成、可视化流程编辑器或完整 CRM 功能的企业设计。它专注于以 AI 为核心、以数据主权为底线的智能客服。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-9">Desk 能取代人工客服团队吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
+        <p>不能——它也并非为此而设计。Desk 是人工团队的 <strong>增强</strong>，而非替代。</p>
+        <p>典型效果：Desk 可端到端自动处理 60%–80% 的对话，无需人工干预（重复性问题、常见问题、状态查询）。剩余 20%–40%——复杂问题、情绪化客户、边缘场景——会连同完整上下文一并移交给人工坐席。</p>
+        <p>目标是把人工坐席从重复劳动中解放出来，让他们专注于真正需要同理心和判断力的高价值对话。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 2: WHATSAPP & CHANNELS ================= -->
+  <div class="section" id="s2">
+    <div class="section-header">
+      <span class="icon">📱</span>
+      <h2>2. WhatsApp 与渠道</h2>
+      <span class="count">9 个问题</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-10">Desk 为什么是"WhatsApp 优先"而非仅仅"兼容 WhatsApp"？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
+        <p>大多数开源客服工具（Chatwoot、Botpress）将 WhatsApp 视为附加功能——在网页聊天优先的架构上拼凑一个连接器。这导致体验不佳：消息模板无法正常工作、24 小时会话窗口未做追踪、坐席交接生硬。</p>
+        <p>Desk 从第一天起就围绕 WhatsApp 的特性和限制进行设计：</p>
+        <ul>
+          <li><strong>24 小时会话窗口</strong>——原生追踪。Desk 清楚知道窗口何时到期，并自动切换为模板消息。</li>
+          <li><strong>消息模板</strong>——内置管理已审核通过的模板（订单确认、预约提醒等）。</li>
+          <li><strong>富媒体</strong>——图片、文档、位置共享均作为一等消息类型处理。</li>
+          <li><strong>坐席交接</strong>——专为 WhatsApp 场景设计，而非从网页聊天模式生搬硬套。</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-11">WhatsApp 有哪两种接入方式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
+        <p>Desk 提供 <strong>两条路径</strong> 接入 WhatsApp——没有其他自托管方案同时提供这两种：</p>
+        <table>
+          <thead><tr><th></th><th>WhatsApp Business API</th><th>WhatsApp Baileys Bridge</th></tr></thead>
+          <tbody>
+            <tr><td><strong>适用场景</strong></td><td>企业级、受监管行业</td><td>中小企业、快速部署</td></tr>
+            <tr><td><strong>需要 Meta 认证？</strong></td><td>是（Meta Business Manager）</td><td>否</td></tr>
+            <tr><td><strong>部署时间</strong></td><td>数小时至数天（需审核）</td><td>&lt;30 分钟（扫码配对）</td></tr>
+            <tr><td><strong>Meta 官方支持</strong></td><td>是</td><td>否（非官方桥接）</td></tr>
+            <tr><td><strong>合规性</strong></td><td>完全的企业级合规</td><td>满足大多数使用场景</td></tr>
+            <tr><td><strong>版本</strong></td><td>付费</td><td>免费</td></tr>
+          </tbody>
+        </table>
+        <p>如果您需要 Meta 的官方背书（医疗、金融、政府），选 Business API。如果您想 30 分钟内快速测试 Desk、无需任何书面申请流程，选 Baileys Bridge。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-12">WhatsApp Baileys Bridge 是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
+        <p>Baileys Bridge 是一个 <strong>快速启动的 WhatsApp 连接器</strong>，原理类似于 WhatsApp Web/Desktop——扫描一个二维码，Desk 即可通过该 WhatsApp 号码收发信息。</p>
+        <p><strong>优势：</strong></p>
+        <ul>
+          <li>无需 Meta Business 认证</li>
+          <li>30 分钟内完成配置</li>
+          <li>适用于任何 WhatsApp 账号（个人或商业）</li>
+          <li>免费使用</li>
+        </ul>
+        <p><strong>局限：</strong></p>
+        <ul>
+          <li>非官方——未获 Meta 背书</li>
+          <li>会话可能过期（通常 30 天，可自动重连）</li>
+          <li>不适合超高并发部署</li>
+        </ul>
+        <div class="callout tip">
+          <strong>建议</strong>
+          Baileys Bridge 适合原型开发和中小型部署。当需要企业级合规或日对话量超过约 1,000 条时，请切换到官方 Business API。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-13">WhatsApp Business API 是什么？如何获取？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
+        <p>WhatsApp Business API 是 Meta 为企业提供的 <strong>官方渠道</strong>，用于大规模向客户发送消息。大型企业使用同一套 API 来发送订单通知、预约提醒和客服消息。</p>
+        <p><strong>获取步骤：</strong></p>
+        <ol>
+          <li>创建 <strong>Meta Business Manager</strong> 账号（如尚未拥有）</li>
+          <li>通过 Meta 的企业认证（需提供营业执照、水电账单等企业文件）</li>
+          <li>通过 Meta 或商业解决方案提供商（BSP）申请 WhatsApp Business API 接入</li>
+          <li>等待审核通过（通常 1–5 个工作日）</li>
+        </ol>
+        <p>审核通过后，Desk 可直接连接 API。您将获得官方绿标认证（可选）、消息模板以及 Meta 的完整支持。</p>
+        <div class="callout warning">
+          <strong>提示</strong>
+          Meta 按对话（非按消息）收费。定价因国家和对话类型（营销、通知、客服）而异。大多数市场的费用约为每轮对话 $0.03–$0.08。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-14">WhatsApp 的"24 小时窗口"是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
+        <p>WhatsApp Business API 有一条规则：客户向您发送消息后，您有 <strong>24 小时</strong> 可以发送自由格式消息。24 小时后，"会话窗口"关闭，您只能发送 <strong>经预先审批的模板消息</strong>（例如"您的订单已发货"），直到客户再次向您发送消息。</p>
+        <p>Desk 自动追踪此窗口。当对话接近 24 小时限制时，Desk 会：</p>
+        <ul>
+          <li>切换为模板消息进行主动触达</li>
+          <li>在坐席工作台中提醒会话即将到期</li>
+          <li>记录窗口状态以供合规审计</li>
+        </ul>
+        <p>您无需手动管理——Desk 全自动处理。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-15">除 WhatsApp 外，Desk 还支持哪些渠道？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
+        <p>Desk 通过 <strong>可插拔的适配器系统</strong> 支持多种渠道。当前及规划中的渠道如下：</p>
+        <table>
+          <thead><tr><th>渠道</th><th>状态</th><th>优先级</th></tr></thead>
+          <tbody>
+            <tr><td>WhatsApp Business API</td><td>✅ 已上线（MVP）</td><td>一等支持</td></tr>
+            <tr><td>WhatsApp Baileys Bridge</td><td>✅ 已上线（MVP）</td><td>一等支持</td></tr>
+            <tr><td>网页聊天组件</td><td>✅ 已上线（MVP）</td><td>二等支持</td></tr>
+            <tr><td>电子邮件（IMAP/SMTP）</td><td>✅ 已上线（MVP）</td><td>二等支持</td></tr>
+            <tr><td>Telegram</td><td>🔜 规划中（v1.1）</td><td>可选模块</td></tr>
+            <tr><td>Discord</td><td>🔜 规划中（v1.1）</td><td>可选模块</td></tr>
+            <tr><td>Slack</td><td>🔜 规划中（v1.1）</td><td>可选模块</td></tr>
+            <tr><td>Signal</td><td>🔜 规划中（v1.1）</td><td>可选模块</td></tr>
+            <tr><td>iMessage</td><td>🔜 规划中（v1.1）</td><td>可选模块</td></tr>
+          </tbody>
+        </table>
+        <p>WhatsApp 是核心重点。其他渠道均为可选模块，按需启用。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-16">Desk 支持同时使用多个 WhatsApp 号码吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
+        <p>支持。Desk 支持 <strong>多个渠道适配器实例</strong>。您可以接入多个 WhatsApp 号码（例如一个用于销售、一个用于客服、每个地区一个），并在同一个 Desk 部署中统一管理。</p>
+        <p>每个适配器实例拥有独立的配置、凭据和消息路由规则。不同号码的对话相互隔离，但在同一个坐席工作台中均可查看。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-17">Desk 支持 WhatsApp 消息模板吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
+        <p>支持。对于 WhatsApp Business API 接入方式，Desk 内置 <strong>模板管理功能</strong>：</p>
+        <ul>
+          <li>创建、编辑模板并提交 Meta 审核</li>
+          <li>追踪模板审核状态</li>
+          <li>在 24 小时窗口外使用模板消息进行主动触达</li>
+          <li>模板变量（如 <code>{{customer_name}}</code>、<code>{{order_id}}</code>）根据对话上下文自动填充</li>
+        </ul>
+        <p>对于 Baileys Bridge 接入方式，不支持模板消息（该桥接仅支持自由格式消息）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-18">客户可以发送图片、文档或语音消息吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
+        <p>可以。Desk 支持 <strong>富媒体消息</strong>：</p>
+        <ul>
+          <li><strong>图片：</strong>客户可发送照片（例如损坏产品的照片）。Desk 可对其进行分析或转交人工坐席。</li>
+          <li><strong>文档：</strong>PDF、Word 文件、电子表格——Desk 可提取文本并用于对话。</li>
+          <li><strong>语音消息：</strong>WhatsApp 语音消息将被转录（使用 Whisper 或类似技术）并作为文本处理。</li>
+          <li><strong>位置：</strong>如果客户分享位置，Desk 可利用它提供上下文信息（例如"查找最近门店"）。</li>
+        </ul>
+        <p>所有媒体文件均安全存储在您的基础设施中（S3 兼容存储或本地文件系统）。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 3: OUR SOLUTION'S STRENGTHS ================= -->
+  <div class="section" id="s3">
+    <div class="section-header">
+      <span class="icon">🏗️</span>
+      <h2>3. 方案优势</h2>
+      <span class="count">9 个问题</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-19">Desk 相比现成客服工具有哪些核心优势？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>特性</th><th>Desk（ODW.ai）</th><th>典型竞品</th></tr></thead>
+          <tbody>
+            <tr><td>数据主权</td><td>✅ 完全自托管，数据不离开您的服务器</td><td>❌ 云端 SaaS，数据存于供应商服务器</td></tr>
+            <tr><td>WhatsApp 支持</td><td>✅ 一等支持，双路径（Business API + Baileys）</td><td>⚠️ 拼凑式附加，功能有限</td></tr>
+            <tr><td>知识库</td><td>✅ 深度集成 Vault，带来源引用的 RAG</td><td>⚠️ 基础或专有</td></tr>
+            <tr><td>模型灵活性</td><td>✅ 模型无关（本地 + 前沿）</td><td>❌ 锁定供应商 AI</td></tr>
+            <tr><td>个人信息保护</td><td>✅ 内置 PII Shield，自动脱敏</td><td>❌ 手动或无</td></tr>
+            <tr><td>品牌语调</td><td>✅ 可配置人格与护栏</td><td>❌ 通用机器人回复</td></tr>
+            <tr><td>合规性</td><td>✅ 审计日志、数据导出/删除、留存策略</td><td>⚠️ 有限</td></tr>
+            <tr><td>供应商锁定</td><td>✅ 无——随时导出所有数据</td><td>❌ 专有格式</td></tr>
+          </tbody>
+        </table>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-20">Desk 与 Chatwoot 或 Botpress 相比如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
+        <p>Chatwoot 和 Botpress 都是优秀的开源工具，但设计重点不同：</p>
+        <table>
+          <thead><tr><th>维度</th><th>Desk</th><th>Chatwoot / Botpress</th></tr></thead>
+          <tbody>
+            <tr><td>主渠道</td><td>WhatsApp 优先</td><td>网页聊天优先，WhatsApp 后加</td></tr>
+            <tr><td>AI 架构</td><td>模型无关，结合 Vault 的 RAG</td><td>基础 AI 或基于规则</td></tr>
+            <tr><td>知识库</td><td>与 Vault 深度集成（文档智能）</td><td>基础常见问题匹配或外部集成</td></tr>
+            <tr><td>个人信息处理</td><td>内置 PII Shield，自动脱敏</td><td>手动或无</td></tr>
+            <tr><td>品牌语调</td><td>可配置人格 + 护栏</td><td>有限或无</td></tr>
+            <tr><td>套件集成</td><td>ODW.ai 套件的一部分（共享认证、计费、界面）</td><td>独立产品</td></tr>
+          </tbody>
+        </table>
+        <p>如果您需要一个通用、网页聊天优先、集成丰富的工具，选 Chatwoot/Botpress。如果 WhatsApp 是您的主渠道，且需要数据主权 + AI 智能，选 Desk。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-21">AI 处理流程是如何运作的？（逐步说明）<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
+        <p>当客户发送消息时，后台会经过以下步骤：</p>
+        <ol>
+          <li><strong>渠道网关</strong>——从 WhatsApp（或其他渠道）接收消息，并统一为标准格式。</li>
+          <li><strong>消息路由</strong>——识别客户身份，加载对话历史，并判断：应由 AI 处理还是人工处理？</li>
+          <li><strong>对话管理</strong>——保存消息，更新对话状态，启动 SLA 计时器（客户已等待多久？）。</li>
+          <li><strong>PII Shield</strong>——扫描消息中的个人信息（姓名、电话、信用卡号等）。如检测到个人信息，在发送至云端 AI 模型前进行脱敏，或将查询路由至仅限本地模型处理。</li>
+          <li><strong>策略引擎</strong>——检查消息是否触发任何回复策略（如竞品提及、法律声明）。如果匹配硬规则，立即发送模板回复。</li>
+          <li><strong>模型路由</strong>——根据个人信息检测、复杂度和路由策略，决定使用哪个 AI 模型（本地或前沿）。</li>
+          <li><strong>人格服务</strong>——用您的品牌语调（语气、用词、注意事项）构建系统提示。</li>
+          <li><strong>Vault 客户端</strong>——向您的知识库（Vault）查询相关文档，检索最相关的 5–10 个文本块。</li>
+          <li><strong>AI 引擎</strong>——将客户问题 + 检索到的文档 + 品牌人格发送给 AI 模型，获取回复。</li>
+          <li><strong>置信度评分</strong>——计算 AI 对回复的置信度。如果置信度低于设定阈值，对话将移交人工坐席。</li>
+          <li><strong>策略引擎（后置校验）</strong>——根据策略验证 AI 回复。如违反规则（如提及竞品），则改写或拦截。</li>
+          <li><strong>出站分发</strong>——将回复格式化为 WhatsApp 格式并发送给客户。</li>
+        </ol>
+        <p>总延迟：本地模型 <strong>&lt;5 秒</strong>，前沿模型 <strong>&lt;8 秒</strong>。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-22">PII Shield 是什么？为什么重要？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
+        <p><strong>PII</strong> 即 <em>Personally Identifiable Information</em>（个人信息）——姓名、电话、邮箱、信用卡号、健康记录等。</p>
+        <p>PII Shield 是一个 <strong>扫描每条消息</strong>（入站和出站）的组件。当检测到个人信息时：</p>
+        <ul>
+          <li><strong>脱敏：</strong>个人信息在发送至云端 AI 模型前被替换为占位符（如"张三" → <code>[NAME]</code>）。</li>
+          <li><strong>路由：</strong>如检测到个人信息，查询将自动路由至 <strong>仅限本地模型</strong>——绝不经过任何云端 API。确保敏感数据留在您的服务器上。</li>
+          <li><strong>自定义：</strong>管理员可配置个人信息模式（如添加行业特定标识符），并可按需覆盖路由规则。</li>
+        </ul>
+        <div class="callout tip">
+          <strong>为什么重要</strong>
+          云端 AI 供应商（OpenAI、Anthropic）严格禁止处理个人信息。如果您不慎将客户健康数据发送给 GPT-4，可能同时违反其服务条款 <em>和</em> HIPAA。PII Shield 可自动防止此类情况。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-23">基于置信度的路由是如何运作的？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
+        <p>AI 生成回复后，Desk 会计算一个 <strong>置信度评分</strong>（0–100%），表示 AI 对其回复正确性和相关性的把握程度。</p>
+        <p>您设定一个 <strong>置信度阈值</strong>（例如 70%）。如果 AI 的置信度：</p>
+        <ul>
+          <li><strong>高于阈值：</strong>回复自动发送给客户。</li>
+          <li><strong>低于阈值：</strong>对话移交人工坐席。AI 的草稿回复作为建议展示给坐席，由人工审核并发送。</li>
+        </ul>
+        <p>这确保 AI 只处理它有把握的问题。复杂、模糊或边缘场景的问题移交给人类——不猜测，不编造。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-24">AI 不知道答案时会怎样？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
+        <p>根据您的配置，可能发生以下三种情况：</p>
+        <ol>
+          <li><strong>移交人工：</strong>如果置信度低于设定阈值，对话被移交。人工坐席可看到问题 + AI 的草稿回复（如有），并接手处理。</li>
+          <li><strong>优雅降级：</strong>AI 可配置为回复"这个问题我不太确定，让我为您转接一位可以提供帮助的人工坐席"——然后自动移交。</li>
+          <li><strong>限制主题模式：</strong>您可以将 Desk 配置为 <em>绝不</em> 回答知识库之外的问题。如果文档中找不到答案，立即移交——不做任何猜测。</li>
+        </ol>
+        <p>Desk 从不编造答案。不知道就说不知道，然后移交。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-25">人工坐席接管是如何运作的？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
+        <p>当对话被移交（置信度低、检测到个人信息、或客户主动要求人工）时：</p>
+        <ol>
+          <li><strong>坐席工作台通知：</strong>对话出现在坐席工作台中，并标注："AI 移交——置信度低"或"检测到个人信息——已路由至本地模型"。</li>
+          <li><strong>上下文传递：</strong>人工坐席可查看完整对话历史、客户资料以及 AI 的草稿回复（如有）。</li>
+          <li><strong>接管：</strong>坐席点击"接管"。从此刻起，AI 停止自动回复，由人工接手处理。</li>
+          <li><strong>解决：</strong>坐席处理完毕后标记为"已解决"。该客户后续的消息将重新回到 AI 处理（除非您另有配置）。</li>
+        </ol>
+        <p>坐席也可以 <strong>主动接管</strong> 任何对话——无需等待系统移交。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-26">坐席工作台是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
+        <p>坐席工作台是一个 <strong>基于 Web 的界面</strong>，人工坐席可以：</p>
+        <ul>
+          <li>查看所有对话（AI 处理的、已移交的、待处理的、已解决的）</li>
+          <li>从 AI 手中接管对话</li>
+          <li>直接回复客户</li>
+          <li>通过 WebSocket 实时查看更新（无需刷新页面）</li>
+          <li>按状态、渠道、客户或标签筛选对话</li>
+          <li>查看 SLA 计时器（客户已等待多久？）</li>
+        </ul>
+        <p>工作台为效率而生——坐席可并行处理多个对话，即时切换，并看到 AI 以草稿形式建议的回复。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-27">Desk 提供哪些 SLA 追踪？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
+        <p>Desk 追踪两个关键 SLA 指标：</p>
+        <ul>
+          <li><strong>首次响应时间：</strong>客户发出首条消息后，多久收到回复？（目标：AI &lt;5 秒，人工移交 &lt;5 分钟。）</li>
+          <li><strong>解决时间：</strong>完整解决对话需要多长时间？（目标因业务而异。）</li>
+        </ul>
+        <p>SLA 计时器自动执行。如果对话超过 SLA 阈值，Desk 可以：</p>
+        <ul>
+          <li>在坐席工作台中发出提醒</li>
+          <li>升级至主管</li>
+          <li>记录 SLA 违规以供报告分析</li>
+        </ul>
+        <p>您可以在管理后台配置 SLA 阈值。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 4: AI ACCURACY & TRUST ================= -->
+  <div class="section" id="s4">
+    <div class="section-header">
+      <span class="icon">🎯</span>
+      <h2>4. AI 准确性与可信度</h2>
+      <span class="count">8 个问题</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-28">Desk 如何避免 AI 幻觉（编造答案）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
+        <p>Desk 使用多层机制防止幻觉：</p>
+        <ol>
+          <li><strong>检索增强生成（RAG）：</strong>AI 不依赖记忆回答，而是从您的知识库（Vault）中检索相关文档，<em>基于这些文档</em> 生成回答。如果文档中没有答案，AI 会如实告知。</li>
+          <li><strong>置信度评分：</strong>每条回复都有置信度评分。低置信度回复移交人工——绝不自动发送给客户。</li>
+          <li><strong>策略护栏：</strong>您可以将 Desk 配置为 <em>绝不</em> 回答知识库之外的问题（限制主题模式），禁止猜测。</li>
+          <li><strong>来源引用：</strong>每条 AI 回复都附带来源文档引用。坐席（以及客户，如启用）可阅读原始文档进行核实。</li>
+          <li><strong>生成后校验：</strong>策略引擎根据规则检查每条回复。如违反策略（如提及竞品），则改写或拦截。</li>
+        </ol>
+        <div class="callout info">
+          <strong>核心原则</strong>
+          Desk 的设计以诚实为本。不知道就说不知道，绝不猜测。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-29">如果 AI 给出了错误答案怎么办？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
+        <p>三重保障：</p>
+        <ol>
+          <li><strong>预防：</strong>置信度评分 + 策略护栏在回复发出前捕获大部分错误。</li>
+          <li><strong>检测：</strong>如果客户说"这不对"或"我不同意"，对话将被标记供人工审查。</li>
+          <li><strong>纠正：</strong>人工坐席可接管、纠正答案并标记对话为已解决。纠正记录会留存供后续分析。</li>
+        </ol>
+        <p>您还可以在坐席工作台中回顾 AI 处理的对话，发现模式并改进知识库。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-30">我能看到 AI 生成答案时引用了哪些文档吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
+        <p>可以。每条 AI 回复都包含 <strong>来源引用</strong>——指向 AI 所依据的文档及页码的链接。这些引用：</p>
+        <ul>
+          <li>在坐席工作台中对人工坐席可见</li>
+          <li>可选对客户可见（您可在设置中启用/禁用）</li>
+          <li>记录在审计追踪中，供合规使用</li>
+        </ul>
+        <p>这种透明性让您能够核实 AI 的回答，并建立客户信任。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-31">AI 的准确率如何？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
+        <p>准确率取决于三个因素：</p>
+        <ol>
+          <li><strong>知识库质量：</strong>文档越清晰、完整、最新，AI 越准确。垃圾进，垃圾出。</li>
+          <li><strong>模型选择：</strong>前沿模型（GPT-4、Claude）比本地模型（Llama、Mistral）更准确，但隐私性更低。</li>
+          <li><strong>配置：</strong>置信度阈值、策略护栏和限制主题模式都影响准确率。</li>
+        </ol>
+        <p>典型效果：<strong>60%–80% 的对话</strong> 由 AI 端到端自动解决，无需人工干预。剩余 20%–40% 移交人工（因 AI 置信度不足或客户要求人工）。</p>
+        <div class="callout tip">
+          <strong>建议</strong>
+          初始阶段设置较高的置信度阈值（如 80%），确保 AI 只处理简单问题。随着您审核 AI 处理的对话并改进知识库，可逐步降低阈值。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-32">上线前可以测试 AI 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
+        <p>可以。Desk 内置 <strong>人格预览/测试工具</strong>，您可以：</p>
+        <ul>
+          <li>在沙盒环境中模拟客户对话</li>
+          <li>测试 AI 对特定问题的回复</li>
+          <li>预览 AI 的语气和品牌语调</li>
+          <li>验证策略护栏是否正常工作</li>
+        </ul>
+        <p>您还可以将 Desk 设置为 <strong>"影子模式"</strong>——AI 处理真实客户消息并生成草稿回复，但不发送。草稿被记录下来供人工审核。这样可以在启用自动回复之前评估 AI 的表现。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-33">Desk 如何处理多轮对话？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
+        <p>Desk 在多条消息间维护 <strong>对话上下文</strong>。当客户提出追问时，AI 可以访问：</p>
+        <ul>
+          <li>完整的对话历史（之前的消息）</li>
+          <li>客户资料（姓名、历史对话、偏好）</li>
+          <li>前几轮检索到的文档</li>
+        </ul>
+        <p>这使得 AI 能够自然地处理复杂的多步骤对话。例如：</p>
+        <ul>
+          <li>客户："你们的退货政策是什么？"</li>
+          <li>AI："我们的退货期限是 30 天……"</li>
+          <li>客户："电子产品呢？"</li>
+          <li>AI："电子产品的退货期限是 14 天……"（理解"电子产品"是指退货政策语境下的电子产品）</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-34">Desk 支持哪些语言？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
+        <p>Desk 开箱即支持 <strong>英语和中文</strong>（简体和繁体）。AI 可自动检测客户语言并以相同语言回复。</p>
+        <p>添加其他语言的方式：</p>
+        <ul>
+          <li>配置 AI 模型支持（大多数前沿模型支持 50+ 种语言）</li>
+          <li>添加对应语言的知识库文档</li>
+          <li>为品牌人格配置特定语言的语气和用词</li>
+        </ul>
+        <div class="callout warning">
+          <strong>局限</strong>
+          英语 + 中文之外的多语言支持是 v1.1 的远期目标。对于 AI 模型训练数据中覆盖较少的语言，质量可能不稳定。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-35">AI 能执行操作吗（如创建退款、预约）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
+        <p><strong>v1.0 不支持。</strong>Desk 的设计目标是 <em>回答问题</em>，而非执行交易。这是刻意的设计选择——执行操作（创建退款、预约、修改订单）会引入极大的复杂性和风险。</p>
+        <p>在 v1.0 中，如果客户需要执行操作，AI 会移交人工坐席，由人工在您的后台系统中完成。</p>
+        <p>生成式操作计划在后续版本（v1.2+）中推出，但需要显式配置和审批流程以确保安全。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 5: SECURITY & PRIVACY ================= -->
+  <div class="section" id="s5">
+    <div class="section-header">
+      <span class="icon">🔒</span>
+      <h2>5. 安全与隐私</h2>
+      <span class="count">9 个问题</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-36">我的数据存储在哪里？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
+        <p>所有数据均存储在 <strong>您自己的基础设施</strong> 上：</p>
+        <ul>
+          <li><strong>对话数据：</strong>PostgreSQL 数据库（在您的服务器上）</li>
+          <li><strong>媒体文件：</strong>S3 兼容存储（您的存储桶）或本地文件系统</li>
+          <li><strong>知识库：</strong>Vault（您的部署）</li>
+          <li><strong>配置信息：</strong>PostgreSQL 数据库</li>
+          <li><strong>审计日志：</strong>PostgreSQL 数据库</li>
+        </ul>
+        <p>没有任何数据被发送至 ODW.ai 服务器。除非您显式配置前沿模型路由（即便如此，个人信息也会被脱敏），否则不会向云端 AI 供应商发送任何数据。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-37">Desk 是否符合 GDPR、HIPAA、PDPA？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
+        <p>Desk <strong>兼容</strong> GDPR、HIPAA、PDPA 及其他数据保护法规——但合规性取决于 <strong>您的部署方式</strong>。</p>
+        <p>Desk 提供合规所需的工具：</p>
+        <ul>
+          <li><strong>数据主权：</strong>所有数据留在您的服务器上。您掌控数据的物理位置（对数据驻留要求至关重要）。</li>
+          <li><strong>数据导出：</strong>以标准格式（JSON、CSV）导出所有客户数据，用于响应主体访问请求。</li>
+          <li><strong>数据删除：</strong>根据客户要求删除客户数据（GDPR"被遗忘权"）。删除操作记录在审计追踪中。</li>
+          <li><strong>留存策略：</strong>配置数据保留时长（如"对话保留 2 年后删除"）。</li>
+          <li><strong>审计日志：</strong>每一次 AI 决策、数据访问和配置变更均有记录。</li>
+          <li><strong>PII Shield：</strong>在发送至云端 AI 模型前自动脱敏个人信息。</li>
+        </ul>
+        <div class="callout info">
+          <strong>重要提示</strong>
+          Desk 提供工具，但 <em>您</em> 有责任正确配置它们并确保部署符合监管要求。具体合规建议请咨询法务团队。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-38">Desk 使用什么加密技术？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
+        <p>Desk 采用业界标准加密：</p>
+        <ul>
+          <li><strong>传输中：</strong>所有网络通信使用 TLS 1.3（HTTPS、WebSocket、数据库连接）。</li>
+          <li><strong>静态存储：</strong>数据库中的敏感数据（如客户个人信息、API 密钥）使用 AES-256 加密。整个数据库可使用 PostgreSQL 透明数据加密（TDE）或文件系统加密。</li>
+          <li><strong>WhatsApp Baileys 会话：</strong>加密的认证凭据存储在数据库中。</li>
+        </ul>
+        <p>您还可以为特定场景（如医疗）启用 <strong>端到端加密</strong>，通过配置额外的加密层实现。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-39">Desk 可以完全离线运行（无网络）吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
+        <p><strong>部分可以。</strong>Desk 可以 <strong>仅使用本地模型</strong> 运行（AI 推理不需要网络），但仍需要网络用于：</p>
+        <ul>
+          <li><strong>WhatsApp Business API：</strong>需要连接 Meta 服务器。</li>
+          <li><strong>WhatsApp Baileys Bridge：</strong>需要连接 WhatsApp Web。</li>
+          <li><strong>许可验证：</strong>定期检查许可证（可配置为使用许可证文件进行离线验证）。</li>
+        </ul>
+        <p>如果您需要 <strong>完全离线运行</strong>（如物理隔离网络），可以：</p>
+        <ul>
+          <li>仅使用本地模型（Ollama、vLLM）</li>
+          <li>使用私有 WhatsApp 桥接（如本地部署的 WhatsApp Business API 网关）</li>
+          <li>使用离线许可验证</li>
+        </ul>
+        <p>完全离线运行可行，但需要自定义配置。请联系我们了解详情。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-40">Desk 如何处理对话中的个人信息？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
+        <p><strong>PII Shield</strong> 扫描每条消息中的个人信息：</p>
+        <ul>
+          <li><strong>检测：</strong>使用 NER（命名实体识别）模型和正则表达式检测姓名、电话、邮箱、信用卡号、健康记录等。</li>
+          <li><strong>脱敏：</strong>个人信息在发送至云端 AI 模型前被替换为占位符（如"张三" → <code>[NAME]</code>）。</li>
+          <li><strong>路由：</strong>如检测到个人信息，查询自动路由至仅限本地模型——绝不经过云端 API。</li>
+          <li><strong>配置：</strong>管理员可添加自定义个人信息模式（如行业特定标识符：患者 ID、保单号等）。</li>
+        </ul>
+        <p>个人信息检测对 <strong>每条消息</strong>（入站和出站）均运行。您可以在管理后台配置灵敏度级别（严格、适中、宽松）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-41">Desk 提供哪些审计追踪？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
+        <p>Desk 维护 <strong>防篡改审计日志</strong>，记录每个重要事件：</p>
+        <ul>
+          <li>每一次 AI 决策（使用的模型、置信度评分、检索到的文档、生成的回复）</li>
+          <li>每一次策略决策（触发的护栏、被改写/拦截的回复）</li>
+          <li>每一次数据访问（谁访问了哪个对话、何时访问）</li>
+          <li>每一次配置变更（谁改了什么、何时更改）</li>
+          <li>每一次数据导出/删除请求</li>
+        </ul>
+        <p>审计日志存储在 PostgreSQL 数据库中，可导出至 SIEM 系统（Splunk、ELK）进行分析。日志不可变——一旦写入，不可修改或删除（仅可归档）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-42">我可以导出或删除客户数据吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
+        <p>可以。Desk 提供 <strong>合规工具</strong> 用于数据导出和删除：</p>
+        <ul>
+          <li><strong>数据导出：</strong>以 JSON 或 CSV 格式导出特定客户的所有数据（对话、资料、媒体）。适用于 GDPR"主体访问请求"。</li>
+          <li><strong>数据删除：</strong>删除特定客户的所有数据。删除不可逆，并记录在审计追踪中。适用于 GDPR"被遗忘权"。</li>
+          <li><strong>批量操作：</strong>一次性导出或删除多个客户的数据。</li>
+          <li><strong>留存策略：</strong>配置到期自动删除数据（如"对话保留 2 年后删除"）。</li>
+        </ul>
+        <p>所有导出/删除操作由管理员通过管理后台或 API 执行。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-43">ODW.ai 能访问我的数据吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
+        <p><strong>不能。</strong>Desk 是自托管的。ODW.ai <strong>完全无法访问</strong> 您的数据——对话、知识库、配置、审计日志，一切均留在您的服务器上。</p>
+        <p>您的 Desk 部署与 ODW.ai 之间仅有的通信：</p>
+        <ul>
+          <li><strong>许可验证：</strong>定期检查许可证有效性（可针对离线部署禁用）。</li>
+          <li><strong>技术支持：</strong>如果您联系技术支持，可能需共享日志或配置——但这完全出于自愿并由您掌控。</li>
+        </ul>
+        <p>ODW.ai 无法远程访问您的数据。不存在任何"后门"或远程管理能力。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-44">如果服务器被入侵怎么办？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
+        <p>如果服务器被入侵，攻击者可能访问：</p>
+        <ul>
+          <li>对话数据（客户消息、AI 回复）</li>
+          <li>知识库文档</li>
+          <li>配置信息（包括 WhatsApp、AI 模型等的 API 密钥）</li>
+          <li>审计日志</li>
+        </ul>
+        <p><strong>缓解措施：</strong></p>
+        <ul>
+          <li><strong>静态加密：</strong>即使数据库文件被盗，也已加密。</li>
+          <li><strong>网络安全：</strong>使用防火墙、VPN 和访问控制限制服务器访问权限。</li>
+          <li><strong>定期备份：</strong>将数据备份到安全的独立位置。</li>
+          <li><strong>监控：</strong>利用审计日志检测可疑活动。</li>
+          <li><strong>应急响应：</strong>如被入侵，立即轮换所有 API 密钥、更改密码，并审查审计日志评估泄露范围。</li>
+        </ul>
+        <p>Desk 提供安全工具，但 <strong>您有责任</strong> 保护基础设施安全。如果不擅长管理服务器安全，建议考虑使用托管服务提供商。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 6: KNOWLEDGE BASE & DATA ================= -->
+  <div class="section" id="s6">
+    <div class="section-header">
+      <span class="icon">📚</span>
+      <h2>6. 知识库与数据</h2>
+      <span class="count">8 个问题</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-45">Desk 如何访问公司的知识库？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
+        <p>Desk 集成 <strong>Vault</strong>——ODW.ai 套件的知识库与文档智能平台。当客户提问时：</p>
+        <ol>
+          <li>Desk 将问题发送至 Vault 的检索 API。</li>
+          <li>Vault 在文档库中搜索，返回最相关的 5–10 个文本块（段落）。</li>
+          <li>Desk 将这些文本块纳入 AI 的提示，使 AI 基于您的文档生成有据可查的回答。</li>
+        </ol>
+        <p>如果您已经在使用 Vault，Desk 几分钟内即可就绪——知识库已在那里。如果尚未使用 Vault，需先行部署（独立产品）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-46">Vault 支持哪些文件格式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
+        <p>Vault 支持 <strong>15 种以上文件格式</strong>：</p>
+        <ul>
+          <li><strong>文档：</strong>PDF、Word（DOCX）、PowerPoint（PPTX）、Excel（XLSX）、纯文本（TXT、MD）</li>
+          <li><strong>网页内容：</strong>HTML、Markdown</li>
+          <li><strong>压缩包：</strong>ZIP（自动解压并处理内容）</li>
+          <li><strong>媒体：</strong>图片（OCR）、音频/视频（转录）</li>
+          <li><strong>代码：</strong>源代码文件（用于技术文档）</li>
+          <li><strong>其他：</strong>CSV、JSON、XML</li>
+        </ul>
+        <p>Vault 使用业界标准的 <strong>PRONOM 格式签名</strong> 识别文件类型（不仅仅依赖文件扩展名），因此可以正确处理重命名错误的文件。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-47">如何更新知识库？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
+        <p>Vault 支持 <strong>增量更新</strong>：</p>
+        <ul>
+          <li>添加新文档——仅处理新文件。</li>
+          <li>更新现有文档——仅重新处理已变更的文件（通过 SHA-256 哈希检测）。</li>
+          <li>删除文档——立即从知识库中移除。</li>
+        </ul>
+        <p>每次更改无需重新处理整个知识库。更新快速高效。</p>
+        <p>您还可以配置 <strong>自动同步</strong> 文件夹（如 SharePoint、Google Drive、本地文件系统），使知识库自动保持最新。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-48">可以从知识库中排除某些文档吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
+        <p>可以。Vault 提供多种方式排除文档：</p>
+        <ul>
+          <li><strong>文件夹级排除：</strong>排除整个文件夹（如"HR/Confidential"）。</li>
+          <li><strong>文件级排除：</strong>排除特定文件（如"salary_data.xlsx"）。</li>
+          <li><strong>模式匹配排除：</strong>排除匹配特定模式的文件（如"*.private"）。</li>
+          <li><strong>预处理审查：</strong>处理前，Vault 生成所有已发现文件的报告。您可以在索引前审查并排除敏感文件。</li>
+        </ul>
+        <p>被排除的文件永远不会被处理或索引。它们保留在您的文件系统中，但对 AI 完全不可见。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-49">Vault 如何处理重复文件？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
+        <p>Vault 使用 <strong>SHA-256 哈希去重</strong>：</p>
+        <ul>
+          <li>每个文件通过 SHA-256 哈希生成唯一数字指纹。</li>
+          <li>如果两个文件的哈希相同，说明内容完全一致——Vault 仅处理其中一份。</li>
+          <li>即使文件名不同或位于不同文件夹，此机制同样有效。</li>
+        </ul>
+        <p>去重节省处理时间和存储空间，也避免 AI 以不同名称重复检索同一文档。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-50">什么是"上下文检索"？为什么重要？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
+        <p>Vault 处理文档时会将其切分为小块（chunk）——通常是一两个段落。但当文本块脱离上下文时，会失去语义。例如一个写着"最大值为 8 度"的文本块，无法判断它描述的是坡度、温度还是旋转角度。</p>
+        <p><strong>上下文检索</strong> 解决了这一问题：在存储每个文本块之前，Vault 让一个小型 AI 模型撰写一句上下文标签，如"此文本块描述的是部署手册第 4 节中配送机器人的坡度容差"。该标签随文本块一起存入向量数据库。</p>
+        <p>Anthropic 报告称，使用此技术后 <strong>检索失败率降低了 20%–30%</strong>。Vault 默认实现此功能。这是 Desk 在面对混乱的真实世界文档集合时仍能保持回答准确性的关键原因之一。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-51">可以使用多个知识库吗（如每个部门一个）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
+        <p>可以。Vault 支持 <strong>多个集合</strong>。您可以为以下内容创建独立集合：</p>
+        <ul>
+          <li>部门（销售、客服、人力资源、法务）</li>
+          <li>产品（产品 A、产品 B、产品 C）</li>
+          <li>地区（北美、欧洲、亚太）</li>
+          <li>语言（英语、中文、西班牙语）</li>
+        </ul>
+        <p>Desk 可根据对话上下文配置为查询特定集合。例如，客户询问产品 A 时，Desk 查询产品 A 集合；询问物流问题时，Desk 查询客服集合。</p>
+        <p>这确保 AI 检索最相关的文档，不会混淆不同上下文的信息。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-52">知识库可以有多大？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
+        <p>Vault 可处理 <strong>超大规模知识库</strong>：</p>
+        <ul>
+          <li><strong>文档：</strong>数千至数万份文档。</li>
+          <li><strong>文本块：</strong>数十万至数百万个。</li>
+          <li><strong>存储：</strong>仅受服务器磁盘空间和 PostgreSQL/ChromaDB 容量限制。</li>
+        </ul>
+        <p>性能取决于您的基础设施。对于超大型知识库（10 万+ 文档），您可能需要：</p>
+        <ul>
+          <li>使用高性能服务器（16+ GB 内存，SSD 存储）</li>
+          <li>优化 PostgreSQL 和 ChromaDB 性能</li>
+          <li>使用 Redis 缓存加速检索</li>
+        </ul>
+        <p>对于大多数企业（1,000–10,000 份文档），标准服务器即可满足需求。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 7: DEPLOYMENT & SETUP ================= -->
+  <div class="section" id="s7">
+    <div class="section-header">
+      <span class="icon">🚀</span>
+      <h2>7. 部署与配置</h2>
+      <span class="count">9 个问题</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-53">如何部署 Desk？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
+        <p>Desk 通过 <strong>Docker Compose</strong>（单节点）或 <strong>Kubernetes Helm Chart</strong>（集群）部署。最简路径：</p>
+        <ol>
+          <li>在服务器上安装 Docker 和 Docker Compose。</li>
+          <li>下载 Desk 的 Docker Compose 文件（<code>docker-compose.yml</code>）。</li>
+          <li>配置环境变量（数据库凭据、WhatsApp API 密钥等）。</li>
+          <li>运行 <code>docker-compose up</code>。</li>
+          <li>访问管理后台 <code>http://your-server:8000</code>。</li>
+          <li>完成设置向导（连接 WhatsApp、Vault，配置 AI 模型）。</li>
+        </ol>
+        <p>总部署时间：Baileys Bridge <strong>&lt;30 分钟</strong>，Business API <strong>&lt;2 小时</strong>（含 Meta 审核）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-54">需要什么硬件配置？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
+        <p>硬件需求取决于部署方式：</p>
+        <table>
+          <thead><tr><th>组件</th><th>最低要求</th><th>推荐配置</th></tr></thead>
+          <tbody>
+            <tr><td><strong>CPU</strong></td><td>4 核</td><td>8+ 核</td></tr>
+            <tr><td><strong>内存</strong></td><td>8 GB</td><td>16+ GB（本地 AI 模型需 32 GB）</td></tr>
+            <tr><td><strong>存储</strong></td><td>50 GB SSD</td><td>200+ GB SSD</td></tr>
+            <tr><td><strong>网络</strong></td><td>100 Mbps</td><td>1 Gbps</td></tr>
+          </tbody>
+        </table>
+        <p><strong>说明：</strong></p>
+        <ul>
+          <li>如果使用 <strong>本地 AI 模型</strong>（Ollama、vLLM），需要 GPU（NVIDIA RTX 3060 或更高）或非常强大的 CPU。</li>
+          <li>如果 <strong>仅使用前沿模型</strong>（OpenAI、Anthropic），可在较低配置的服务器上运行 Desk（4 核、8 GB 内存）。</li>
+          <li>对于 <strong>高并发部署</strong>（日对话量 1,000+），建议使用 Kubernetes 进行水平扩展。</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-55">可以在云服务器（AWS、Azure、GCP）上运行 Desk 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
+        <p>可以。Desk 可在任何云供应商上运行：</p>
+        <ul>
+          <li><strong>AWS：</strong>EC2、ECS、EKS（Kubernetes）</li>
+          <li><strong>Azure：</strong>虚拟机、容器实例、AKS（Kubernetes）</li>
+          <li><strong>GCP：</strong>Compute Engine、Cloud Run、GKE（Kubernetes）</li>
+          <li><strong>其他：</strong>DigitalOcean、Linode、Hetzner 等</li>
+        </ul>
+        <p>在云服务器上运行可获得：</p>
+        <ul>
+          <li>弹性扩展（按需增加资源）</li>
+          <li>高可用（多区域部署）</li>
+          <li>托管备份和快照</li>
+        </ul>
+        <p>但请记住：即使在云服务器上，<strong>数据仍由您掌控</strong>。仍然是自托管——ODW.ai 无权访问。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-56">可以在本地（办公室内）运行 Desk 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
+        <p>可以。Desk 可运行在办公室的本地服务器上。适合以下场景：</p>
+        <ul>
+          <li>有严格数据驻留要求的企业（数据必须留在本地）</li>
+          <li>已有服务器基础设施的企业</li>
+          <li>希望完全掌控硬件和网络的企业</li>
+        </ul>
+        <p><strong>要求：</strong></p>
+        <ul>
+          <li>一台安装 Docker 的专用服务器（或虚拟机）</li>
+          <li>静态 IP 地址或域名（用于 WhatsApp Webhook）</li>
+          <li>网络连接（用于 WhatsApp API、许可验证）</li>
+          <li>IT 人员管理服务器（更新、备份、安全）</li>
+        </ul>
+        <p>本地部署提供最大控制权，但比云部署需要更多 IT 投入。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-57">运行 Desk 需要技术人员吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
+        <p><strong>初期需要。</strong>Desk 面向具备 DevOps 能力的技术运维人员设计。您需要有人能够：</p>
+        <ul>
+          <li>部署和配置 Docker 容器</li>
+          <li>管理 PostgreSQL 数据库</li>
+          <li>配置 WhatsApp API 凭据</li>
+          <li>监控服务器健康状况和性能</li>
+          <li>执行更新和备份</li>
+        </ul>
+        <p><strong>日常使用</strong> 无需技术背景：管理员通过 Web 后台配置系统，坐席使用坐席工作台，AI 自动处理对话。</p>
+        <p>如果没有技术人员，可以：</p>
+        <ul>
+          <li>聘请 DevOps 顾问完成初始部署（1–2 天）</li>
+          <li>使用托管服务提供商（我们可推荐合作伙伴）</li>
+          <li>等待托管 SaaS 版本（计划在 v2 推出，目前尚未可用）</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-58">如何更新 Desk 到新版本？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
+        <p>通过 Docker 执行更新：</p>
+        <ol>
+          <li>拉取新 Docker 镜像：<code>docker pull odwai/desk:latest</code></li>
+          <li>重启容器：<code>docker-compose down && docker-compose up -d</code></li>
+          <li>数据库迁移在启动时自动执行。</li>
+        </ol>
+        <p>总更新时间：<strong>&lt;5 分钟</strong>（加上重启期间的停机时间）。</p>
+        <p>零停机更新可使用 Kubernetes 滚动部署。</p>
+        <div class="callout warning">
+          <strong>重要提示</strong>
+          更新前务必备份数据库。虽然迁移经过充分测试，但 bug 仍可能发生。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-59">可以对 Desk 进行白标（品牌重塑）吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
+        <p>可以。Desk 支持 <strong>白标</strong>：</p>
+        <ul>
+          <li><strong>自定义品牌：</strong>将 ODW.ai 标志替换为您的标志，自定义颜色、字体和界面元素。</li>
+          <li><strong>自定义域名：</strong>在您自己的域名上运行 Desk（如 <code>support.yourcompany.com</code>）。</li>
+          <li><strong>自定义邮箱：</strong>使用您自己的邮箱地址接收通知和提醒。</li>
+        </ul>
+        <p>白标适合：</p>
+        <ul>
+          <li>希望向客户转售 Desk 的代理机构</li>
+          <li>希望统一品牌体验的大型企业</li>
+          <li>希望在产品中嵌入 AI 客服的 SaaS 公司</li>
+        </ul>
+        <p>白标功能在付费版中提供。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-60">Desk 能与现有工具（CRM、工单系统等）集成吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
+        <p><strong>v1.0 不支持。</strong>Desk 设计为独立客服工具，深度集成 Vault。CRM 集成（Salesforce、HubSpot）、工单系统集成（Zendesk、Freshdesk）及其他第三方连接器均 <strong>不在 v1.0 范围内</strong>。</p>
+        <p>但 Desk 提供 <strong>REST API</strong>，可用于构建自定义集成：</p>
+        <ul>
+          <li>将对话数据导出至 CRM</li>
+          <li>从数据库导入客户资料</li>
+          <li>在其他系统中触发工作流（如对话移交时创建工单）</li>
+        </ul>
+        <p>预置集成计划于 v1.2+ 根据客户需求推出。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-61">设置向导是什么？如何运作？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
+        <p><strong>设置向导</strong> 是引导您完成初始配置的分步指南：</p>
+        <ol>
+          <li><strong>欢迎页：</strong>Desk 简介和设置流程概览。</li>
+          <li><strong>WhatsApp 连接：</strong>连接 WhatsApp Business API 或 Baileys Bridge，测试收发消息。</li>
+          <li><strong>Vault 连接：</strong>连接到您的 Vault 部署，测试知识检索。</li>
+          <li><strong>AI 模型配置：</strong>选择本地模型、前沿模型或混合路由，测试 AI 推理。</li>
+          <li><strong>品牌人格：</strong>配置品牌语调（语气、用词、注意事项），预览 AI 的表达效果。</li>
+          <li><strong>回复策略：</strong>配置护栏（竞品提及、法律声明等）。</li>
+          <li><strong>上线：</strong>启用自动回复，开始处理对话。</li>
+        </ol>
+        <p>向导在每一步之前进行验证，确保上线前一切运行正常。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 8: COST & PRICING ================= -->
+  <div class="section" id="s8">
+    <div class="section-header">
+      <span class="icon">💰</span>
+      <h2>8. 费用与定价</h2>
+      <span class="count">8 个问题</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-62">Desk 的费用是多少？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
+        <p>Desk 采用 <strong>免费增值模式</strong>：</p>
+        <table>
+          <thead><tr><th>版本</th><th>价格</th><th>包含</th></tr></thead>
+          <tbody>
+            <tr><td><strong>免费版</strong></td><td>$0</td><td>自托管聊天机器人、网页聊天 + 邮件渠道、单坐席、基础 Vault 集成</td></tr>
+            <tr><td><strong>付费版</strong></td><td>约 $250/月（示例价格，非正式报价）</td><td>WhatsApp Business 连接器、多坐席路由、高级合规功能、SLA 支持</td></tr>
+          </tbody>
+        </table>
+        <p><strong>额外费用：</strong></p>
+        <ul>
+          <li><strong>服务器托管：</strong>$20–$200/月，视基础设施（云或本地）而定。</li>
+          <li><strong>WhatsApp Business API：</strong>Meta 按对话收费（约 $0.03–$0.08/对话，因国家而异）。</li>
+          <li><strong>前沿 AI 模型：</strong>如使用 OpenAI/Anthropic，按 token 收费（约 $0.01–$0.03/对话）。</li>
+          <li><strong>本地 AI 模型：</strong>免费（但需 GPU 硬件）。</li>
+        </ul>
+        <div class="callout info">
+          <strong>说明</strong>
+          以上为示例价格，非正式报价，可能调整。请联系我们获取当前价格和定制报价。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-63">免费版包含哪些功能？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
+        <p>免费版包含：</p>
+        <ul>
+          <li><strong>渠道：</strong>网页聊天组件 + 邮件（IMAP/SMTP）。WhatsApp Baileys Bridge 也免费。</li>
+          <li><strong>AI：</strong>单 AI 人格、基础 Vault 集成、本地模型支持。</li>
+          <li><strong>坐席：</strong>单坐席模式（一个 AI 人格，无多坐席路由）。</li>
+          <li><strong>功能：</strong>基础对话管理、坐席工作台、管理后台。</li>
+        </ul>
+        <p>免费版 <strong>功能完整</strong>——不是试用版或精简演示版。您可以在免费版上运行正式的客服运营。</p>
+        <p>免费版 <strong>不包含</strong>：WhatsApp Business API（付费）、多坐席路由（付费）、高级合规功能（付费）、SLA 支持（付费）。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-64">付费版包含哪些功能？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
+        <p>付费版增加：</p>
+        <ul>
+          <li><strong>WhatsApp Business API：</strong>Meta 官方集成（需 Meta 认证）。</li>
+          <li><strong>多坐席路由：</strong>不同话题使用不同 AI 人格（如销售机器人、客服机器人）。</li>
+          <li><strong>高级合规：</strong>审计导出、数据留存策略、GDPR/HIPAA 工具。</li>
+          <li><strong>SLA 支持：</strong>优先 Bug 修复、保证响应时间、专属支持渠道。</li>
+          <li><strong>白标：</strong>自定义品牌、自定义域名。</li>
+        </ul>
+        <p>付费版适合需要企业级功能、官方 WhatsApp 集成或专业支持的企业。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-65">本地模型与前沿模型的费用对比？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>模型类型</th><th>每轮对话费用</th><th>隐私</th><th>质量</th></tr></thead>
+          <tbody>
+            <tr><td><strong>本地（Ollama、vLLM）</strong></td><td>$0（免费）</td><td>✅ 最高（数据不离开服务器）</td><td>良好（取决于模型）</td></tr>
+            <tr><td><strong>前沿（OpenAI、Anthropic）</strong></td><td>约 $0.01–$0.03</td><td>❌ 数据发送至云端供应商</td><td>✅ 优秀</td></tr>
+            <tr><td><strong>混合（自动路由）</strong></td><td>约 $0.005–$0.015（平均）</td><td>⚠️ 混合（个人信息留在本地）</td><td>✅ 很好</td></tr>
+          </tbody>
+        </table>
+        <p><strong>建议：</strong>从混合路由开始。简单问题（常见问题、状态查询）使用本地模型，复杂问题（故障排查、边缘场景）使用前沿模型。在费用、隐私和质量之间取得平衡。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-66">有隐藏费用吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
+        <p>没有隐藏费用。总拥有成本包括：</p>
+        <ul>
+          <li><strong>Desk 许可：</strong>免费版或付费版（见上文）。</li>
+          <li><strong>服务器托管：</strong>基础设施费用（云或本地）。</li>
+          <li><strong>WhatsApp API：</strong>Meta 按对话收费（如使用 Business API）。</li>
+          <li><strong>前沿 AI 模型：</strong>OpenAI/Anthropic 按 token 收费（如使用前沿模型）。</li>
+        </ul>
+        <p>仅此而已。无安装费、无按用户费、无意外收费。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-67">有免费试用吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
+        <p><strong>免费版</strong> 实质上就是永久免费试用——无时间限制，无需信用卡。您可以无限期使用免费版。</p>
+        <p>如果想测试付费版功能（WhatsApp Business API、多坐席路由等），我们提供 <strong>14 天免费试用</strong> 付费版。无需信用卡。试用期满后，可降级至免费版或订阅。</p>
+        <p>请联系我们开始免费试用。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-68">支持哪些支付方式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
+        <p>我们接受：</p>
+        <ul>
+          <li><strong>信用卡/借记卡：</strong>Visa、Mastercard、American Express（通过 Stripe）。</li>
+          <li><strong>银行转账：</strong>适用于年度订阅或大型部署。</li>
+          <li><strong>加密货币：</strong>比特币、以太坊、USDC（面向注重隐私的客户）。</li>
+        </ul>
+        <p>年度订阅可开具发票。请联系我们了解详情。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-69">不满意可以退款吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
+        <p>可以。我们为付费订阅提供 <strong>30 天退款保证</strong>。如果在首次购买 30 天内不满意，请联系我们获得全额退款——无需任何理由。</p>
+        <p>30 天后，可随时取消。您将继续使用至当前计费周期结束，但不提供部分月份的退款。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 9: SCALING & OPERATIONS ================= -->
+  <div class="section" id="s9">
+    <div class="section-header">
+      <span class="icon">📈</span>
+      <h2>9. 扩展与运维</h2>
+      <span class="count">8 个问题</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-70">Desk 能处理多少对话？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
+        <p>Desk 设计为可扩展架构：</p>
+        <ul>
+          <li><strong>单节点（Docker Compose）：</strong>约 1,000 条并发对话，约 10,000 条消息/小时。</li>
+          <li><strong>集群（Kubernetes）：</strong>10,000+ 条并发对话，约 100,000 条消息/小时（水平扩展）。</li>
+        </ul>
+        <p>性能取决于您的基础设施（CPU、内存、数据库调优）和 AI 模型延迟。对于超高并发部署（日对话量 10 万+），建议使用 Kubernetes 自动扩缩。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-71">Desk 能同时处理多种语言吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
+        <p>可以。Desk 可 <strong>同时处理多种语言的对话</strong>。AI 自动检测客户语言并以相同语言回复。</p>
+        <p>最佳实践：</p>
+        <ul>
+          <li>为所有支持的语言添加知识库文档。</li>
+          <li>为每种语言配置品牌人格（语气和用词可能不同）。</li>
+          <li>使用前沿模型（GPT-4、Claude）获得最佳的多语言质量。</li>
+        </ul>
+        <p>开箱即用支持英语和中文（简体 + 繁体）。其他语言可通过配置 AI 模型和知识库添加。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-72">可以运行多个 AI 人格吗（如一个用于销售、一个用于客服）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
+        <p><strong>可以，付费版支持。</strong>多坐席路由允许为不同话题或渠道配置不同的 AI 人格：</p>
+        <ul>
+          <li><strong>销售机器人：</strong>积极乐观、有说服力，聚焦产品优势。</li>
+          <li><strong>客服机器人：</strong>富有同理心、技术导向，聚焦问题解决。</li>
+          <li><strong>计费机器人：</strong>正式严谨、精确，聚焦准确性。</li>
+        </ul>
+        <p>每个人格拥有独立的品牌语调、知识库集合和回复策略。对话根据意图检测或渠道路由至对应人格。</p>
+        <p>免费版仅支持单一 AI 人格。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-73">如何监控 Desk 的性能？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
+        <p>Desk 提供 <strong>内置监控</strong>：</p>
+        <ul>
+          <li><strong>管理后台：</strong>实时指标（处理的对话数、AI 解决率、平均响应时间、移交率）。</li>
+          <li><strong>健康检查：</strong>API 端点（<code>/health</code>）供监控工具（Prometheus、Datadog 等）使用。</li>
+          <li><strong>日志：</strong>每个重要事件的结构化日志（JSON 格式）。可导出至 SIEM 系统。</li>
+          <li><strong>指标：</strong>Prometheus 兼容指标端点（<code>/metrics</code>）供 Grafana 仪表盘使用。</li>
+        </ul>
+        <p>对于 Kubernetes 部署，我们提供开箱即用的 <strong>Grafana 仪表盘</strong>——预配置的所有关键指标可视化。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-74">如何备份数据？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
+        <p>Desk 将所有数据存储在 PostgreSQL 和 S3 兼容存储中。两者均需备份：</p>
+        <ul>
+          <li><strong>PostgreSQL：</strong>使用 <code>pg_dump</code> 进行逻辑备份，或使用文件系统快照进行物理备份。将每日备份调度到独立位置（如 S3、另一台服务器）。</li>
+          <li><strong>S3 存储：</strong>启用版本控制和跨区域复制。或使用 S3 兼容备份工具（rclone、restic）。</li>
+        </ul>
+        <p>Desk 还提供 <strong>备份与恢复工具</strong>：</p>
+        <ul>
+          <li><code>desk backup</code>——创建完整备份（数据库 + 媒体文件）为单个归档包。</li>
+          <li><code>desk restore</code>——从备份归档包恢复。</li>
+        </ul>
+        <div class="callout tip">
+          <strong>建议</strong>
+          定期测试备份。一个从未恢复过的备份，不值得信任。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-75">Desk 宕机了怎么办？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
+        <p>如果 Desk 宕机：</p>
+        <ul>
+          <li><strong>WhatsApp 消息：</strong>由 WhatsApp 排队，Desk 恢复后送达（在 24 小时窗口内）。</li>
+          <li><strong>网页聊天消息：</strong>丢失（网页聊天不排队消息）。建议在网站上显示"离线"提示。</li>
+          <li><strong>邮件消息：</strong>由发件人邮件服务器排队，Desk 恢复后送达。</li>
+        </ul>
+        <p><strong>高可用：</strong>对于关键业务部署，使用 Kubernetes 多副本。如果一个副本故障，流量自动路由到健康副本。</p>
+        <p><strong>监控：</strong>设置告警（邮件、Slack、PagerDuty），在 Desk 宕机时立即通知。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-76">如何培训团队使用 Desk？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
+        <p>Desk 设计为易于使用，但我们仍提供培训资源：</p>
+        <ul>
+          <li><strong>文档：</strong>为管理员和坐席提供完整的用户指南。</li>
+          <li><strong>视频教程：</strong>核心功能的逐步演示。</li>
+          <li><strong>入职培训：</strong>付费客户可获得 1 小时远程入职培训，由我们带领团队熟悉系统。</li>
+          <li><strong>支持：</strong>付费客户享有邮件/聊天优先支持。</li>
+        </ul>
+        <p>大多数团队经过 1–2 小时培训即可上手。坐席工作台尤其直观——坐席可立即开始处理对话。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-77">可以自定义 Desk 的行为吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
+        <p>可以。Desk 高度可配置：</p>
+        <ul>
+          <li><strong>品牌人格：</strong>配置语气、用词、正式程度、注意事项。让 Desk 体现您的品牌。</li>
+          <li><strong>回复策略：</strong>配置护栏（竞品提及、法律声明、限制主题）。</li>
+          <li><strong>路由规则：</strong>配置哪些对话由 AI 处理、哪些由人工处理。设置置信度阈值。</li>
+          <li><strong>SLA 计时器：</strong>配置首次响应和解决时间目标。</li>
+          <li><strong>个人信息检测：</strong>添加自定义个人信息模式（如行业特定标识符）。</li>
+          <li><strong>知识库：</strong>管理 AI 可访问的文档，排除敏感文件。</li>
+        </ul>
+        <p>所有配置通过管理后台完成——无需代码更改。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 10: BRAND VOICE & GUARDRAILS ================= -->
+  <div class="section" id="s10">
+    <div class="section-header">
+      <span class="icon">🎨</span>
+      <h2>10. 品牌语调与安全护栏</h2>
+      <span class="count">7 个问题</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-78">能让 Desk 体现我的品牌风格吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
+        <p>可以。Desk 内置 <strong>品牌人格</strong> 系统，可配置：</p>
+        <ul>
+          <li><strong>语气：</strong>友好、专业、正式、随意、富有同理心等。</li>
+          <li><strong>用词：</strong>行业术语、行话、团队常用缩写。</li>
+          <li><strong>正式程度：</strong>AI 应多正式或多随意。</li>
+          <li><strong>注意事项：</strong>特定短语的使用或回避。（如"始终用'我们'而非'我'"，"绝不说'便宜'——改说'实惠'"。）</li>
+          <li><strong>少样本示例：</strong>提供展示品牌语调的示例对话。</li>
+        </ul>
+        <p>品牌人格注入到每一条 AI 回复中，使 Desk 始终如一地代表您的品牌——无论是一家接单的餐厅，还是提供法律信息的律师事务所。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-79">回复策略（安全护栏）是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
+        <p>回复策略是 <strong>控制 AI 能说什么、不能说什么的规则</strong>。例如：</p>
+        <ul>
+          <li><strong>竞品提及：</strong>客户问到竞品时，AI 转向："比较竞品不是我最擅长的，但我可以告诉您我们的优势……"</li>
+          <li><strong>价格咨询：</strong>客户问到价格时，AI 转接人工："价格取决于您的具体需求，让我为您转接销售团队。"</li>
+          <li><strong>法律/医疗免责声明：</strong>客户寻求法律或医疗建议时，AI 添加声明："我是 AI 助手，并非律师/医生。此信息仅供参考，不构成针对您具体情况的建议。请咨询专业人士。"</li>
+          <li><strong>限制主题：</strong>某些话题不可触及（如政治、宗教）。客户提及限制主题时，AI 引导话题或移交人工。</li>
+        </ul>
+        <p>策略由 <strong>策略引擎</strong> 执行，在 AI 生成前后均运行。每一次策略决策都记录在审计追踪中。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-80">上线前可以测试品牌人格吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
+        <p>可以。Desk 内置 <strong>人格预览/测试工具</strong>，您可以：</p>
+        <ul>
+          <li>在沙盒环境中模拟客户对话。</li>
+          <li>测试 AI 对特定问题的回复。</li>
+          <li>预览 AI 的语气和品牌语调。</li>
+          <li>验证回复策略是否正常运作。</li>
+        </ul>
+        <p>您可以反复调整品牌人格直到满意，再部署到生产环境。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-81">可以使用针对品牌语调微调的 AI 模型吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
+        <p><strong>可以，v1.1 付费版支持。</strong>Desk 支持加载 <strong>LoRA/QLoRA 适配器</strong>——在模型层面（而非仅提示层面）编码品牌语调的微调扩展。</p>
+        <p>运作方式：</p>
+        <ol>
+          <li>您在外部训练 LoRA 适配器（使用自有的对话数据、品牌准则等）。</li>
+          <li>将适配器上传至 Desk。</li>
+          <li>Desk 加载适配器并用于推理。</li>
+        </ol>
+        <p>微调模型提供比基于提示的人格 <strong>更一致的品牌语调</strong>，尤其适合复杂或细腻的品牌。</p>
+        <div class="callout warning">
+          <strong>局限</strong>
+          Desk 消费（不产出）微调产物。您负责在外部训练 LoRA 适配器。我们提供文档和支持，但训练不包含在标准服务中。
+        </div>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-82">如果 AI 违反了回复策略会怎样？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
+        <p><strong>策略引擎</strong> 执行两次检查：</p>
+        <ol>
+          <li><strong>生成前钩子：</strong>AI 生成回复前，策略引擎检查客户消息是否触发任何策略（如竞品提及）。如匹配硬规则，立即发送模板回复——跳过 AI。</li>
+          <li><strong>生成后钩子：</strong>AI 生成回复后，策略引擎根据当前策略验证。如违反规则（如提及竞品），回复将被：
+            <ul>
+              <li><strong>改写：</strong>要求 AI 去除违规内容后重新生成。</li>
+              <li><strong>拦截：</strong>改为发送模板回复。</li>
+              <li><strong>移交：</strong>对话移交人工坐席。</li>
+            </ul>
+          </li>
+        </ol>
+        <p>每一次策略决策都记录在审计追踪中，您可以回顾发生了什么以及原因。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-83">不同渠道可以配置不同品牌人格吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
+        <p><strong>v1.0 不支持。</strong>v1.0 中，每个 Desk 部署只能配置一个品牌人格。所有渠道（WhatsApp、网页聊天、邮件）使用同一个人格。</p>
+        <p>多人格支持（不同渠道或话题使用不同人格）计划于 v1.1（付费版）推出。届时您可以：</p>
+        <ul>
+          <li>在 WhatsApp 上使用随意人格，在邮件上使用正式人格。</li>
+          <li>产品咨询使用销售导向人格，故障排查使用客服导向人格。</li>
+          <li>不同地区或语言使用不同人格。</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-84">可以对品牌人格进行版本管理和回滚吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
+        <p><strong>可以，v1.1 支持。</strong>品牌人格版本管理可让您：</p>
+        <ul>
+          <li>保存品牌人格的多个版本。</li>
+          <li>并排比较各版本。</li>
+          <li>如果更改效果不理想，回滚到之前的版本。</li>
+        </ul>
+        <p>适用于：</p>
+        <ul>
+          <li>在不影响生产环境的情况下测试新人格。</li>
+          <li>如果更改引发问题，恢复到之前的人格。</li>
+          <li>审计谁在何时更改了什么。</li>
+        </ul>
+        <p>在 v1.0 中，您可以手动导出/导入人格配置，但没有内置版本管理。</p>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 11: LIMITATIONS & ROADMAP ================= -->
+  <div class="section" id="s11">
+    <div class="section-header">
+      <span class="icon">🚧</span>
+      <h2>11. 局限与路线图</h2>
+      <span class="count">8 个问题</span>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-85">Desk 目前还不能做什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
+        <p>Desk 功能强大，但 v1.0 存在以下局限：</p>
+        <ul>
+          <li><strong>无生成式操作：</strong>Desk 回答问题但不执行交易（创建退款、预约、修改订单）。计划 v1.2+。</li>
+          <li><strong>无可视化流程编辑器：</strong>不支持拖拽设计对话流程。Desk 以 AI 为核心，而非以规则为核心。</li>
+          <li><strong>集成有限：</strong>v1.0 无预置 CRM、工单系统或数据分析集成。提供 REST API 用于自定义集成。</li>
+          <li><strong>单一人格（免费版）：</strong>免费版仅支持一个 AI 人格。多人格为付费版功能。</li>
+          <li><strong>渠道有限：</strong>仅支持 WhatsApp、网页聊天和邮件。Telegram、Discord、Slack、Signal、iMessage 计划于 v1.1。</li>
+          <li><strong>无移动端管理应用：</strong>管理后台仅支持 Web 端，无原生移动应用。</li>
+          <li><strong>无多租户 SaaS：</strong>Desk 仅支持自托管。我们（目前）不提供托管云版本。</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-86">什么时候支持 Telegram、Discord、Slack？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-86"><div class="faq-answer-inner">
+        <p>Telegram、Discord、Slack、Signal 和 iMessage 适配器计划于 <strong>v1.1（2026 年第四季度）</strong>推出。它们将是按需启用的可选模块。</p>
+        <p>渠道适配器插件系统已就位——添加新渠道只需实现适配器接口，不涉及架构变更。</p>
+        <p>如果您急需某个特定渠道，请联系我们。我们可能根据客户需求优先开发。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-87">Desk 将来会支持生成式操作吗（如创建退款）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-87"><div class="faq-answer-inner">
+        <p><strong>计划于 v1.2+。</strong>生成式操作（执行交易，如创建退款、预约、修改订单）是重大功能，但需要完善的安全和审批流程。</p>
+        <p>实现后，生成式操作将：</p>
+        <ul>
+          <li>需要显式配置和审批流程。</li>
+          <li>每一项操作记录在审计追踪中。</li>
+          <li>支持关键操作的回滚（撤销）。</li>
+          <li>可选——如果只需要问答，可完全禁用生成式操作。</li>
+        </ul>
+        <p>暂无具体发布日期。我们优先确保 v1.0/v1.1 的稳定性和安全性。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-88">会提供由 ODW.ai 托管的 SaaS 版本吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-88"><div class="faq-answer-inner">
+        <p><strong>v1.0 和 v1.1 不会。</strong>Desk 仅支持自托管。我们认为自托管是目标市场（受监管企业、数据驻留敏感场景）的正确选择。</p>
+        <p>托管 SaaS 版本正在 <strong>v2+</strong> 考虑范围内，但尚未确定。如果需求足够，可能提供混合模式：敏感数据自托管，非敏感工作负载托管。</p>
+        <p>如果您现在就需要托管方案，我们可推荐能为您管理 Desk 的合作伙伴托管商。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-89">会有供应商锁定风险吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-89"><div class="faq-answer-inner">
+        <p><strong>不会。</strong>Desk 专为避免供应商锁定而设计：</p>
+        <ul>
+          <li><strong>数据可移植：</strong>以标准格式（JSON、CSV）导出所有数据（对话、知识库、配置）。无专有格式。</li>
+          <li><strong>模型灵活：</strong>随时切换 AI 模型（本地 ↔ 前沿，OpenAI ↔ Anthropic ↔ 本地）。不锁定任何 AI 供应商。</li>
+          <li><strong>自托管：</strong>部署归您所有。即使停止支付许可费，数据仍在那里，可以导出，完全属于您。</li>
+          <li><strong>开放标准：</strong>Desk 尽可能使用开放标准（PostgreSQL、Redis、Docker、Kubernetes）。无专有基础设施。</li>
+        </ul>
+        <p>您随时可以离开 Desk。我们宁愿用实力赢得您的信任，而非将您困住。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-90">未来 12 个月的路线图是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-90"><div class="faq-answer-inner">
+        <p>关键里程碑：</p>
+        <ul>
+          <li><strong>v1.0（2026 年第三季度）：</strong>MVP 发布。WhatsApp 优先、Vault 集成、模型无关 AI、品牌人格、回复策略。</li>
+          <li><strong>v1.1（2026 年第四季度）：</strong>多渠道扩展（Telegram、Discord、Slack、Signal、iMessage）、多人格支持、LoRA 适配器支持、人格版本管理。</li>
+          <li><strong>v1.2（2027 年第一季度）：</strong>生成式操作（执行交易）、预置集成（CRM、工单系统）、高级数据分析。</li>
+          <li><strong>v2.0（2027 年第二季度）：</strong>托管 SaaS 版本（待定）、可视化流程编辑器（待定）、移动端管理应用（待定）。</li>
+        </ul>
+        <p>路线图可能根据客户反馈和市场需求调整。请联系我们获取最新路线图或提出功能需求。</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-91">什么情况下不应该使用 Desk？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-91"><div class="faq-answer-inner">
+        <p>以下场景 Desk 不太适合：</p>
+        <ul>
+          <li><strong>需要 200 多个集成：</strong>Desk 专注于以 AI 为核心、以数据主权为底线的客服，而非广泛的集成平台。如果需要开箱即连接 Salesforce、HubSpot、Zendesk、Slack 等 50 多个工具，Desk 暂时不适合您。</li>
+          <li><strong>需要可视化流程编辑器：</strong>Desk 以 AI 为核心，而非以规则为核心。如果需要拖拽设计对话流程，请使用 Landbot 或 Botpress 等工具。</li>
+          <li><strong>需要通用聊天机器人框架：</strong>Desk 专为客户服务设计，而非营销机器人、获客漏斗或内部工具。</li>
+          <li><strong>没有技术人员：</strong>Desk 需要具备 DevOps 能力的运维人员进行部署和维护。如果没有技术人员，请等待托管 SaaS 版本或使用合作伙伴托管商。</li>
+          <li><strong>需要 SMS、Instagram、LINE、微信：</strong>这些渠道不在 v1.0 和 v1.1 范围内。可能根据市场需求在 v2 中考虑。</li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="answer-92">如何开始？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-92"><div class="faq-answer-inner">
+        <p>三条路径：</p>
+        <ol>
+          <li><strong>自助（免费版）：</strong>下载 Desk，部署在您的服务器上，开始使用。无需信用卡。完整文档见 <code>docs.odw.ai/desk</code>。</li>
+          <li><strong>引导式（付费版）：</strong>联系我们安排 1 小时入职培训。我们将引导您完成部署、配置和最佳实践。</li>
+          <li><strong>托管服务（合作伙伴）：</strong>如果没有技术人员，我们可推荐能为您部署和管理 Desk 的合作伙伴托管商。</li>
+        </ol>
+        <p>无论哪条路径，我们建议先使用 <strong>WhatsApp Baileys Bridge</strong>（免费，&lt;30 分钟配置）测试 Desk，再决定是否接入官方 Business API。</p>
+        <div class="callout tip">
+          <strong>准备开始？</strong>
+          访问 <code>odw.ai/desk</code> 下载 Desk，或联系我们预约演示。
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Desk — 企业用户常见问题</strong></p>
+    <p>版本 2.0 · 审阅稿</p>
+    <p>基于：TBK v1.2、TSD v1.2、SAD v1.2、PRD v1.2（2026-06-24）</p>
+    <p><a href="suite.html">← 返回套件常见问题</a></p>
+  </div>
+
+</div>
+
+<script>
+  // Accordion toggle
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      const isExpanded = item.classList.contains('open');
+      button.setAttribute('aria-expanded', isExpanded);
+    });
+  });
+
+  // Expand / collapse all
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  // Search
+  const searchInput = document.getElementById('searchInput');
+  const noResults = document.getElementById('noResults');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.section').forEach(section => {
+      let sectionHas = 0;
+      section.querySelectorAll('.faq-item').forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        const match = q === '' || txt.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) { sectionHas++; visibleCount++; if (q !== '') item.classList.add('open'); }
+        else { item.classList.remove('open'); }
+      });
+      section.style.display = sectionHas === 0 && q !== '' ? 'none' : '';
+    });
+    noResults.style.display = (visibleCount === 0 && q !== '') ? 'block' : 'none';
+  });
+
+  // Deep-link support
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
+</script>
+</body>
+</html>

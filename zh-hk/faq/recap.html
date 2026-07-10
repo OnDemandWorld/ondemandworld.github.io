@@ -1,0 +1,1279 @@
+<!-- Translation status: DRAFT — needs native-speaker review before publish -->
+<!-- Last synced with English source: 2026-07-09 -->
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recap — 企業用戶常見問題</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
+  <div class="subtitle">Recap 常見問題</div>
+  <h1>Recap 常見問題</h1>
+  <p>裝置端會議轉錄 — 本機音訊擷取、Whisper 驅動嘅轉錄、結構化摘要、待辦事項。為企業領導者提供問題解答，無需技術背景。</p>
+  <span class="last-updated">最後更新：2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">主頁</a>
+    <span class="sep">→</span>
+    <a href="./index.html">常見問題</a>
+    <span class="sep">→</span>
+    <a href="./suite.html">套件</a>
+    <span class="sep">→</span>
+    <span>Recap</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" aria-label="搜尋問題" placeholder="搜尋問題…（例如：'transcription'、'Whisper'、'on-device'、'action items'、'sovereignty'、'HIPAA'）">
+  </div>
+  <div class="controls">
+    <button onclick="expandAll()">＋ 展開全部</button>
+    <button onclick="collapseAll()">− 收合全部</button>
+    <button onclick="window.print()">🖨️ 列印 / 儲存 PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>前往章節</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> 基本介紹</a>
+      <a href="#s2"><span class="num">2</span> 轉錄與音訊</a>
+      <a href="#s3"><span class="num">3</span> 方案優勢</a>
+      <a href="#s4"><span class="num">4</span> 摘要與待辦事項</a>
+      <a href="#s5"><span class="num">5</span> 安全與私隱</a>
+      <a href="#s6"><span class="num">6</span> 模型與 AI</a>
+      <a href="#s7"><span class="num">7</span> 部署與架設</a>
+      <a href="#s8"><span class="num">8</span> 費用與定價</a>
+      <a href="#s9"><span class="num">9</span> 擴展與營運</a>
+      <a href="#s10"><span class="num">10</span> 整合與工作流程</a>
+      <a href="#s11"><span class="num">11</span> 限制與路線圖</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">沒有問題符合你的搜尋。請嘗試更廣泛的關鍵字。</div>
+
+  <!-- SECTION 1: THE BASICS -->
+  <div class="section" id="s1">
+    <div class="section-header"><span class="icon">01 · 概覽</span><h2>基本介紹 — Recap 是什麼？</h2><span class="count">9 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">簡單嚟講，ODW.ai Recap 是什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
+        <p>Recap 是一個<strong>會議轉錄同智能分析工具</strong>，完全喺你嘅裝置上運行。佢會擷取你會議（Zoom、Teams、Google Meet 或任何其他平台）嘅音訊，喺本機轉錄對話，並產生結構化摘要同待辦事項。</p>
+        <p>運作方式如下：</p>
+        <ol>
+          <li><strong>音訊擷取：</strong>Recap 擷取系統音訊（你從喇叭/耳機聽到嘅聲音）— 無需雲端機器人加入你嘅會議</li>
+          <li><strong>轉錄：</strong>音訊使用 Whisper（開源語音識別）喺本機轉錄</li>
+          <li><strong>摘要：</strong>AI 產生摘要、擷取待辦事項並識別決策</li>
+          <li><strong>整理：</strong>轉錄同摘要儲存喺本機，可搜尋同匯出</li>
+        </ol>
+        <p>同其他會議工具嘅關鍵區別：<strong>所有處理都喺你嘅裝置上完成</strong>。音訊或轉錄內容不會傳送到雲端。完全自主。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">Recap 解決什麼問題？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
+        <p>機構面對兩個需求之間嘅矛盾：</p>
+        <ul>
+          <li><strong>工作流程自動化：</strong>雲端會議工具（Otter.ai、Fireflies、Grain）使用方便，但需要將會議音訊傳送到佢哋嘅伺服器</li>
+          <li><strong>數據主權：</strong>受規管行業、注重私隱嘅團隊，同處喺數據駐留環境嘅機構，唔可以將敏感對話傳送到第三方伺服器</li>
+        </ul>
+        <p>Recap 透過提供<strong>裝置端會議智能</strong>解決呢個問題。你嘅音訊同轉錄內容永遠唔會離開你嘅電腦。唔會有雲端機器人悄悄加入通話。唔會有轉錄內容存放喺供應商嘅伺服器上。</p>
+        <div class="callout info"><strong>結果</strong>你可以享受會議智能嘅好處（摘要、待辦事項、可搜尋嘅轉錄），同時唔犧牲數據主權。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">Recap 適合邊啲人使用？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
+        <p>Recap 專為<strong>受規管同注重私隱嘅機構</strong>而設：</p>
+        <ul>
+          <li><strong>律師事務所：</strong>律師與客戶之間嘅特權要求保持會議對話保密</li>
+          <li><strong>醫療：</strong>涉及 HIPAA 嘅工作流程，患者討論唔可以傳送到雲端服務</li>
+          <li><strong>金融服務：</strong>有嚴格數據管控嘅金融科技同金融機構</li>
+          <li><strong>政府承辦商：</strong>處理敏感政府數據嘅國防相關中小企</li>
+          <li><strong>歐盟機構：</strong>GDPR 數據最小化要求</li>
+          <li><strong>任何機構：</strong>「唔允許雲端機器人加入我哋嘅通話」係硬性要求</li>
+        </ul>
+        <p>如果你因為數據主權顧慮而唔可以使用 Otter.ai 或 Fireflies，Recap 就係為你而設。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">Recap 同 Otter.ai 或 Fireflies 有咩分別？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
+        <p>關鍵區別在於<strong>部署模式</strong>：</p>
+        <table>
+          <thead><tr><th>方面</th><th>ODW.ai Recap</th><th>Otter.ai / Fireflies / Grain</th></tr></thead>
+          <tbody>
+            <tr><td>音訊處理</td><td>✅ 裝置端 — 永遠唔會離開你嘅電腦</td><td>❌ 傳送到供應商嘅雲端伺服器</td></tr>
+            <tr><td>會議機器人</td><td>✅ 無機器人 — 擷取系統音訊</td><td>❌ 雲端機器人加入你嘅會議</td></tr>
+            <tr><td>數據主權</td><td>✅ 完全控制</td><td>❌ 供應商可以存取你嘅音訊</td></tr>
+            <tr><td>平台支援</td><td>✅ 任何平台（Zoom、Teams、Meet 等）</td><td>⚠️ 平台特定機器人</td></tr>
+            <tr><td>轉錄模型</td><td>✅ 本機（Whisper）或你嘅選擇</td><td>❌ 供應商嘅專有模型</td></tr>
+            <tr><td>價格</td><td>免費核心或 $49-$199/月</td><td>$10-$30/用戶/月</td></tr>
+          </tbody>
+        </table>
+        <p>如果你需要會議智能但唔可以將音訊傳送到雲端，Recap 係唯一嘅選擇。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">Recap 適用於 Zoom、Teams 同 Google Meet 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
+        <p>適用。Recap 適用於<strong>任何會議平台</strong>：</p>
+        <ul>
+          <li><strong>Zoom</strong></li>
+          <li><strong>Microsoft Teams</strong></li>
+          <li><strong>Google Meet</strong></li>
+          <li><strong>Webex</strong></li>
+          <li><strong>任何其他平台：</strong>只要你可以從喇叭/耳機聽到音訊，Recap 就可以擷取</li>
+        </ul>
+        <p>Recap 擷取<strong>系統音訊</strong> — 即你從喇叭或耳機聽到嘅任何聲音。佢唔需要整合特定會議平台或使用平台專用機器人。</p>
+        <div class="callout tip"><strong>平台無關</strong>Recap 適用於任何會議平台，因為佢喺系統層面而非應用程式層面擷取音訊。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">Recap 需要雲端機器人加入我嘅會議嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
+        <p><strong>唔需要。</strong>Recap <strong>唔</strong>使用雲端機器人。呢個係一個關鍵區別。</p>
+        <p>雲端會議工具（Otter.ai、Fireflies、Grain）會發送機器人以參與者身份加入你嘅會議。機器人錄製音訊並傳送到雲端處理。</p>
+        <p>Recap 嘅運作方式唔同：</p>
+        <ul>
+          <li><strong>無機器人：</strong>Recap 唔會以參與者身份加入你嘅會議</li>
+          <li><strong>系統音訊擷取：</strong>Recap 擷取你從喇叭/耳機聽到嘅音訊</li>
+          <li><strong>本機處理：</strong>音訊喺你嘅裝置上轉錄同處理</li>
+        </ul>
+        <p>你嘅會議參與者唔會見到有機器人加入。你嘅音訊永遠唔會離開你嘅裝置。完全自主。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">Recap 係獨立產品定係套件嘅一部分？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
+        <p>Recap <strong>兩者皆係</strong>：</p>
+        <ul>
+          <li><strong>獨立使用：</strong>你可以單獨使用 Recap 進行裝置端會議轉錄同摘要</li>
+          <li><strong>套件整合：</strong>Recap 係 ODW.ai 套件嘅一部分，並與其他模組整合：
+            <ul>
+              <li><strong>Vault：</strong>會議摘要同決策自動同步到你嘅知識庫</li>
+              <li><strong>Loop：</strong>待辦事項自動同步到你嘅工作流程自動化</li>
+            </ul>
+          </li>
+        </ul>
+        <p>免費核心可以獨立運作。套件整合（Vault/Loop 同步）屬於付費級別。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">「裝置端」係咩意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
+        <p>「裝置端」代表<strong>所有處理都喺你嘅電腦上進行</strong>：</p>
+        <ul>
+          <li><strong>音訊擷取：</strong>喺你嘅裝置上進行</li>
+          <li><strong>轉錄：</strong>喺你嘅裝置上進行（使用本機 Whisper 模型）</li>
+          <li><strong>摘要：</strong>喺你嘅裝置上進行（使用本機 LLM）</li>
+          <li><strong>儲存：</strong>喺你嘅裝置上進行（加密本機儲存）</li>
+        </ul>
+        <p>音訊、轉錄或摘要唔會傳送到雲端。冇數據離開你嘅電腦。</p>
+        <p>呢個對注重主權嘅機構至關重要。如果你嘅會議工具將音訊傳送到雲端供應商，你就唔能夠聲稱擁有數據主權。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">我需要有技術技能先可以使用 Recap 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
+        <p><strong>唔需要。</strong>Recap 專為非技術用戶而設：</p>
+        <ul>
+          <li><strong>安裝：</strong>好似任何其他應用程式噉下載同安裝（macOS、Windows、Linux）</li>
+          <li><strong>架設：</strong>設定音訊來源（系統音訊）就即用</li>
+          <li><strong>使用：</strong>開始會議，Recap 自動擷取同轉錄</li>
+          <li><strong>檢視：</strong>喺網頁 UI 入面檢視轉錄、摘要同待辦事項</li>
+        </ul>
+        <p>唔使寫程式、唔使使用命令列、唔需要技術專長。如果你識用 Zoom，你就識用 Recap。</p>
+        <div class="callout tip"><strong>首次轉錄時間</strong>目標：從安裝到首次轉錄少於 5 分鐘。</div>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 2: TRANSCRIPTION & AUDIO -->
+  <div class="section" id="s2">
+    <div class="section-header"><span class="icon">02 · 主權</span><h2>轉錄與音訊</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">Recap 嘅轉錄準確度有幾高？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
+        <p>Recap 使用 <strong>Whisper</strong>（OpenAI 嘅開源語音識別模型），屬於業界頂尖：</p>
+        <ul>
+          <li><strong>詞錯誤率（WER）：</strong>標準商業英語會議 ≤8%（以人類轉錄基準衡量）</li>
+          <li><strong>說話者分離：</strong>識別唔同說話者（邊個講咗啲咩）</li>
+          <li><strong>噪聲處理：</strong>處理背景噪音、多位說話者、口音</li>
+        </ul>
+        <p>準確度取決於：</p>
+        <ul>
+          <li><strong>音訊質素：</strong>清晰嘅音訊 = 更高準確度</li>
+          <li><strong>模型大小：</strong>較大嘅模型（Whisper large-v3）更準確但較慢</li>
+          <li><strong>語言：</strong>英語支援最好（v1.0）；其他語言喺 v1.1 推出</li>
+        </ul>
+        <div class="callout info"><strong>比較</strong>Whisper 喺英語會議嘅準確度可媲美雲端轉錄服務（Otter.ai、Fireflies）。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">Whisper 是什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
+        <p><strong>Whisper</strong> 係 OpenAI 嘅開源語音識別模型。佢係最準確嘅轉錄模型之一：</p>
+        <ul>
+          <li><strong>開源：</strong>免費使用，代碼可審查</li>
+          <li><strong>多語言：</strong>支援 99 種語言（v1.0 以英語最佳）</li>
+          <li><strong>穩健：</strong>處理口音、背景噪音、多位說話者</li>
+          <li><strong>本機：</strong>喺你嘅裝置上運行 — 唔依賴雲端</li>
+        </ul>
+        <p>Recap 使用針對本機推理優化嘅 Whisper 系列模型（whisper.cpp、faster-whisper）。你可以選擇小型（快速、準確度較低）、中型（平衡）或大型（慢、最準確）模型。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">Recap 可以實時轉錄嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
+        <p>可以。Recap 支援<strong>實時串流轉錄</strong>：</p>
+        <ul>
+          <li><strong>串流模式：</strong>隨住人們說話實時顯示轉錄（延遲 ≤2 秒）</li>
+          <li><strong>批次模式：</strong>會議結束後轉錄成場會議（更快、更準確）</li>
+        </ul>
+        <p>實時轉錄適用於：</p>
+        <ul>
+          <li>會議期間跟進內容</li>
+          <li>捕捉你錯過嘅內容</li>
+          <li>無障礙用途嘅即時字幕</li>
+        </ul>
+        <p>為獲得最高準確度，我哋建議使用批次模式（會議結束後轉錄）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">Recap 可以識別唔同嘅說話者嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
+        <p>可以。Recap 包含<strong>說話者分離</strong>（識別邊個講咗啲咩）：</p>
+        <ul>
+          <li><strong>自動：</strong>Recap 自動偵測唔同嘅說話者</li>
+          <li><strong>標籤：</strong>說話者標記為「說話者 1」、「說話者 2」等</li>
+          <li><strong>手動標記：</strong>你可以重新命名說話者（例如「說話者 1」→「John」）</li>
+        </ul>
+        <p>說話者分離使用開源模型喺本機完成 — 無需雲端處理。</p>
+        <div class="callout tip"><strong>準確度</strong>說話者分離喺音質清晰、聲音分明嘅情況下約有 85-90% 準確度。對於重疊語音或相似聲音，準確度可能較低。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">Recap 支援哪些音訊格式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
+        <p>Recap 擷取<strong>系統音訊</strong>（你從喇叭/耳機聽到嘅任何聲音）。佢唔匯入音訊檔案 — 佢擷取即時音訊。</p>
+        <p>支援嘅音訊來源：</p>
+        <ul>
+          <li><strong>系統音訊：</strong>來自任何應用程式嘅音訊（Zoom、Teams、Meet 等）</li>
+          <li><strong>咪高峰：</strong>你嘅咪高峰（用於擷取你自己嘅聲音）</li>
+          <li><strong>兩者：</strong>同時擷取系統音訊 + 咪高峰</li>
+        </ul>
+        <p>Recap 喺 v1.0 唔支援匯入預錄音訊檔案（MP3、WAV 等）。呢個功能計劃喺 v1.1 推出。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">Recap 可以轉錄電話通話嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
+        <p><strong>唔可以。</strong>Recap 只擷取<strong>系統音訊</strong> — 來自你電腦上運行嘅應用程式嘅音訊（Zoom、Teams、Meet 等）。</p>
+        <p>Recap <strong>唔</strong>支援：</p>
+        <ul>
+          <li><strong>電話通話：</strong>傳統電話通話（流動、固網）</li>
+          <li><strong>SIP/VoIP：</strong>基於 SIP 嘅電話系統</li>
+          <li><strong>流動應用程式：</strong>Recap 僅支援桌面版（macOS、Windows、Linux）</li>
+        </ul>
+        <p>如果你需要轉錄電話通話，你需要專用嘅電話錄製方案。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">我可以匯出轉錄嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
+        <p>可以。Recap 支援<strong>多種匯出格式</strong>：</p>
+        <ul>
+          <li><strong>Markdown：</strong>.md 檔案（可讀、可編輯）</li>
+          <li><strong>PDF：</strong>格式化嘅 PDF 文件</li>
+          <li><strong>純文字：</strong>.txt 檔案</li>
+          <li><strong>JSON：</strong>結構化數據（供程式使用）</li>
+        </ul>
+        <p>你可以匯出：</p>
+        <ul>
+          <li>完整轉錄（附時間戳同說話者標籤）</li>
+          <li>僅摘要</li>
+          <li>僅待辦事項</li>
+          <li>以上全部</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">我可以搜尋過去嘅會議嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
+        <p>可以。Recap 包含跨所有過往會議嘅<strong>全文搜尋</strong>：</p>
+        <ul>
+          <li><strong>搜尋轉錄：</strong>搵特定短語或主題</li>
+          <li><strong>搜尋摘要：</strong>按摘要內容搵會議</li>
+          <li><strong>搜尋待辦事項：</strong>跨所有會議搵特定待辦事項</li>
+          <li><strong>按日期篩選：</strong>按日期範圍縮窄搜尋</li>
+          <li><strong>按標籤篩選：</strong>按自訂標籤或自動產生嘅主題篩選</li>
+        </ul>
+        <p>搜尋係本機進行（喺你嘅裝置上）— 無需雲端索引。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 3: OUR SOLUTION'S STRENGTHS -->
+  <div class="section" id="s3">
+    <div class="section-header"><span class="icon">03 · 整合</span><h2>方案優勢與設計</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">Recap 相比其他會議工具有咩主要優勢？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>功能</th><th>ODW.ai Recap</th><th>典型替代方案</th></tr></thead>
+          <tbody>
+            <tr><td>音訊處理</td><td>✅ 裝置端 — 完全自主</td><td>❌ 雲端 — 數據傳送到供應商</td></tr>
+            <tr><td>會議機器人</td><td>✅ 無機器人 — 系統音訊擷取</td><td>❌ 雲端機器人加入會議</td></tr>
+            <tr><td>平台支援</td><td>✅ 任何平台（系統音訊）</td><td>⚠️ 平台特定機器人</td></tr>
+            <tr><td>轉錄模型</td><td>✅ 本機（Whisper）或你嘅選擇</td><td>❌ 供應商嘅專有模型</td></tr>
+            <tr><td>開源</td><td>✅ 核心開源</td><td>❌ 專有</td></tr>
+            <tr><td>套件整合</td><td>✅ 原生 ODW.ai 整合</td><td>❌ 需要自訂整合</td></tr>
+            <tr><td>價格</td><td>免費核心或 $49-$199/月</td><td>$10-$30/用戶/月</td></tr>
+          </tbody>
+        </table>
+        <p>Recap 以<strong>主權 + 平台無關設計</strong>取勝。如果你需要裝置端處理同唔可以使用雲端機器人，Recap 係最佳選擇。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">Recap 同基於 Whisper 嘅 DIY 工具相比點？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
+        <p>有開源嘅 Whisper 工具（WhisperLive、MeetingBaize），但佢哋嘅設計優先事項唔同：</p>
+        <table>
+          <thead><tr><th>方面</th><th>ODW.ai Recap</th><th>基於 Whisper 嘅 DIY 工具</th></tr></thead>
+          <tbody>
+            <tr><td>結構化輸出</td><td>✅ 摘要、待辦事項、決策</td><td>❌ 僅轉錄</td></tr>
+            <tr><td>套件整合</td><td>✅ Vault/Loop 同步</td><td>❌ 無</td></tr>
+            <tr><td>用戶體驗</td><td>✅ 精美 UI，簡易架設</td><td>⚠️ 技術性，需要架設</td></tr>
+            <tr><td>說話者分離</td><td>✅ 內建</td><td>⚠️ 需要額外架設</td></tr>
+            <tr><td>支援</td><td>✅ 提供付費支援</td><td>❌ 僅社區</td></tr>
+          </tbody>
+        </table>
+        <p>DIY 工具適合實驗，但唔適合企業用途嘅生產環境。Recap 專為需要可靠性、結構化同支援嘅受規管企業而設。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">Recap 同 Zoom AI 或 Teams Copilot 相比點？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
+        <p>Zoom AI 同 Teams Copilot 係平台原生嘅會議功能，但佢哋有限制：</p>
+        <table>
+          <thead><tr><th>方面</th><th>ODW.ai Recap</th><th>Zoom AI / Teams Copilot</th></tr></thead>
+          <tbody>
+            <tr><td>平台支援</td><td>✅ 任何平台（系統音訊）</td><td>❌ 鎖定單一平台</td></tr>
+            <tr><td>音訊處理</td><td>✅ 裝置端</td><td>❌ 雲端處理</td></tr>
+            <tr><td>數據主權</td><td>✅ 完全控制</td><td>❌ 數據傳送到供應商</td></tr>
+            <tr><td>套件整合</td><td>✅ ODW.ai 套件（Vault、Loop）</td><td>❌ 平台特定</td></tr>
+            <tr><td>模型選擇</td><td>✅ 你嘅選擇（本機或 API）</td><td>❌ 供應商嘅模型</td></tr>
+          </tbody>
+        </table>
+        <p>如果你 100% 使用單一平台且冇主權要求，Zoom AI/Teams Copilot 好方便。如果你使用多個平台或需要主權，Recap 係更好嘅選擇。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">呢個語境下「自主」係咩意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
+        <p>「自主」代表<strong>完全控制你嘅會議數據</strong>：</p>
+        <ul>
+          <li><strong>音訊位置：</strong>你嘅會議音訊留喺你嘅裝置上</li>
+          <li><strong>處理：</strong>所有轉錄同摘要都喺你嘅裝置上進行</li>
+          <li><strong>無外部依賴：</strong>冇音訊傳送到 OpenAI、Otter.ai 或任何第三方</li>
+          <li><strong>可審查：</strong>你可以檢視代碼、日誌同數據流程</li>
+        </ul>
+        <p>呢個對受規管行業至關重要。如果你嘅會議工具將音訊傳送到雲端供應商，你就唔能夠聲稱擁有數據主權。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">我可以完全離線使用 Recap 嗎（無互聯網）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
+        <p>可以。Recap 支援<strong>完全離線運作</strong>：</p>
+        <ul>
+          <li><strong>本機模型：</strong>Whisper（轉錄）同 LLM（摘要）喺你嘅裝置上運行</li>
+          <li><strong>無需互聯網：</strong>Recap 嘅轉錄、摘要或任何核心功能都唔需要互聯網存取</li>
+          <li><strong>隔離網絡：</strong>部署喺隔離網絡環境（完全無互聯網存取）</li>
+        </ul>
+        <p>呢個對互聯網存取受限或禁止嘅政府、軍事同高安全環境至關重要。</p>
+        <div class="callout warning"><strong>硬件要求</strong>運行本機模型需要唔錯嘅硬件。對於實時轉錄，我哋建議使用現代 CPU（macOS 用 M1/M2/M3，Windows/Linux 用 Intel i7+ 或 AMD Ryzen 7+）或 GPU（建議 NVIDIA）。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">Recap 嘅代碼可審查嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
+        <p>可以。Recap 嘅核心<strong>開源</strong>：</p>
+        <ul>
+          <li><strong>透明：</strong>所有代碼公開喺 GitHub 上</li>
+          <li><strong>可審查：</strong>你（或你嘅安全團隊）可以審查代碼有冇漏洞、後門或數據外洩</li>
+          <li><strong>可驗證：</strong>你可以驗證 Recap 做緊佢聲稱嘅嘢 — 冇隱藏嘅遙測，冇數據傳送到第三方</li>
+        </ul>
+        <p>呢個對注重主權嘅機構至關重要。你應該能夠驗證你嘅會議工具做緊啲咩。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">Recap 可以處理多種語言嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
+        <p><strong>v1.0 僅支援英語。</strong>多語言支援計劃喺 v1.1（2026 年第四季）推出。</p>
+        <p>Whisper（底層轉錄模型）支援 99 種語言，但 Recap v1.0 針對英語優化。多語言支援將包括：</p>
+        <ul>
+          <li><strong>西班牙文</strong></li>
+          <li><strong>法文</strong></li>
+          <li><strong>德文</strong></li>
+          <li><strong>中文（普通話）</strong></li>
+          <li><strong>日文</strong></li>
+          <li><strong>及更多</strong></li>
+        </ul>
+        <p>如果你喺 v1.1 之前需要多語言支援，請聯繫我哋 — 我哋可能可以提供早期存取。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">Recap 可以處理大型會議（2 小時以上）嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
+        <p>可以。Recap 可以處理<strong>任何長度嘅會議</strong>：</p>
+        <ul>
+          <li><strong>無時間限制：</strong>Recap 可以轉錄任何時長嘅會議</li>
+          <li><strong>批次處理：</strong>對於長會議，建議使用批次模式（會議結束後轉錄）</li>
+          <li><strong>儲存：</strong>轉錄同摘要儲存喺本機 — 冇雲端儲存限制</li>
+        </ul>
+        <p>對於非常長嘅會議（2 小時以上），我哋建議：</p>
+        <ul>
+          <li><strong>批次模式：</strong>會議結束後轉錄（更快、更準確）</li>
+          <li><strong>足夠嘅磁碟空間：</strong>確保你有足夠嘅磁碟空間儲存音訊同轉錄</li>
+        </ul>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 4: SUMMARIES & ACTION ITEMS -->
+  <div class="section" id="s4">
+    <div class="section-header"><span class="icon">04 · 安全</span><h2>摘要與待辦事項</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">Recap 產生什麼類型嘅摘要？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
+        <p>Recap 產生<strong>結構化摘要</strong>：</p>
+        <ul>
+          <li><strong>行政摘要：</strong>2-3 句會議概覽</li>
+          <li><strong>主要主題：</strong>討論嘅主要主題列表</li>
+          <li><strong>決策：</strong>會議期間做出嘅決策列表</li>
+          <li><strong>待辦事項：</strong>附負責人同截止日期（如有講明）嘅待辦事項列表</li>
+          <li><strong>重要引言：</strong>會議中嘅重要引言</li>
+        </ul>
+        <p>摘要使用本機 LLM（例如 Llama 3、Mistral）產生 — 無需雲端處理。</p>
+        <div class="callout tip"><strong>可自訂</strong>你可以自訂摘要範本（例如專注於決策、待辦事項或特定主題）。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">Recap 點樣擷取待辦事項？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
+        <p>Recap 使用 <strong>AI 驅動嘅擷取</strong>識別待辦事項：</p>
+        <ul>
+          <li><strong>關鍵字偵測：</strong>識別「我會做 X」、「你可以處理 Y 嗎？」、「我哋跟進 Z 啦」等短語</li>
+          <li><strong>負責人偵測：</strong>識別每個待辦事項嘅負責人</li>
+          <li><strong>截止日期偵測：</strong>識別講明嘅截止日期（例如「週五前」、「下週」）</li>
+          <li><strong>語境理解：</strong>理解語境以區分真正嘅待辦事項同一般討論</li>
+        </ul>
+        <p>目標：<strong>≥85% 精確度，≥75% 召回率</strong>（人類評估樣本）。</p>
+        <p>待辦事項使用 LLM 喺本機擷取 — 無需雲端處理。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">我可以編輯摘要同待辦事項嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
+        <p>可以。所有摘要同待辦事項都<strong>可以完全編輯</strong>：</p>
+        <ul>
+          <li><strong>編輯摘要：</strong>修改產生嘅摘要以加入語境或修正錯誤</li>
+          <li><strong>編輯待辦事項：</strong>加入、刪除或修改待辦事項</li>
+          <li><strong>重新指派：</strong>更改負責人或截止日期</li>
+          <li><strong>加入筆記：</strong>喺摘要加入你自己嘅筆記</li>
+        </ul>
+        <p>編輯儲存喺本機並與原始轉錄同步。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">我可以自訂摘要範本嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
+        <p>可以。Recap 支援<strong>自訂輸出範本</strong>：</p>
+        <ul>
+          <li><strong>預建範本：</strong>行政摘要、詳細摘要、僅待辦事項、僅決策</li>
+          <li><strong>自訂範本：</strong>建立你自己嘅範本（例如專注於特定主題、包含/排除章節）</li>
+          <li><strong>每會議範本：</strong>為唔同類型嘅會議使用唔同範本（例如站會 vs. 董事會會議）</li>
+        </ul>
+        <p>範本以 YAML 或 Markdown 定義 — 無需寫程式。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">我可以同團隊分享摘要嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
+        <p>可以。Recap 支援<strong>團隊分享</strong>（付費級別）：</p>
+        <ul>
+          <li><strong>共享工作區：</strong>為你嘅團隊建立共享工作區</li>
+          <li><strong>存取控制：</strong>控制邊個可以檢視/編輯會議摘要</li>
+          <li><strong>通知：</strong>有新摘要時通知團隊成員</li>
+          <li><strong>留言：</strong>團隊成員可以喺摘要加入留言</li>
+        </ul>
+        <p>免費級別嘅摘要僅限本機（單用戶）。團隊功能需要付費級別。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">我可以將待辦事項匯出到我嘅任務管理工具嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
+        <p>可以。Recap 支援<strong>待辦事項匯出</strong>：</p>
+        <ul>
+          <li><strong>手動匯出：</strong>將待辦事項匯出為 CSV、JSON 或 Markdown</li>
+          <li><strong>Loop 同步：</strong>自動將待辦事項同步到 ODW.ai Loop（工作流程自動化）— 付費級別</li>
+          <li><strong>自訂整合：</strong>使用 API 與你嘅任務管理工具（Jira、Asana、Trello 等）整合</li>
+        </ul>
+        <p>Loop 同步會自動建立任務、指派負責人並根據擷取嘅待辦事項設定截止日期。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">我可以跨所有會議搜尋特定決策嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
+        <p>可以。Recap 包含<strong>決策搜尋</strong>：</p>
+        <ul>
+          <li><strong>搜尋決策：</strong>搵跨所有過往會議嘅特定決策</li>
+          <li><strong>按日期篩選：</strong>按日期範圍縮窄搜尋</li>
+          <li><strong>按主題篩選：</strong>按會議主題或自訂標籤篩選</li>
+          <li><strong>檢視語境：</strong>點擊決策檢視完整會議轉錄同語境</li>
+        </ul>
+        <p>呢個對追蹤決策內容、時間同決策者好有用 — 對問責同審計追蹤至關重要。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">摘要嘅準確度有幾高？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
+        <p>摘要質素取決於：</p>
+        <ul>
+          <li><strong>轉錄準確度：</strong>越好嘅轉錄 = 越好嘅摘要</li>
+          <li><strong>LLM 質素：</strong>越好嘅 LLM（例如 Llama 3 70B）產生越好嘅摘要</li>
+          <li><strong>會議清晰度：</strong>清晰、有條理嘅會議 = 越好嘅摘要</li>
+        </ul>
+        <p>目標：用戶滿意度調查 <strong>≥4.0/5.0</strong>。</p>
+        <p>摘要由 AI 產生，所以可能唔係完美。我哋建議對重要會議嘅摘要進行檢視同編輯。</p>
+        <div class="callout tip"><strong>人工檢視</strong>對於重要會議（董事會會議、法律討論），請務必喺分享前檢視同編輯 AI 產生嘅摘要。</div>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 5: SECURITY & PRIVACY -->
+  <div class="section" id="s5">
+    <div class="section-header"><span class="icon">05 · 部署</span><h2>安全與私隱</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">Recap 安全嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
+        <p>安全。Recap 以<strong>安全最佳實踐</strong>建立：</p>
+        <ul>
+          <li><strong>裝置端處理：</strong>所有音訊、轉錄同摘要都留喺你嘅裝置上</li>
+          <li><strong>加密：</strong>AES-256 加密本機儲存</li>
+          <li><strong>存取控制：</strong>密碼保護、基於角色嘅存取（付費級別）</li>
+          <li><strong>審計日誌：</strong>所有存取嘅防篡改日誌（付費級別）</li>
+          <li><strong>開源：</strong>代碼可審查 — 你可以驗證冇後門或數據外洩</li>
+        </ul>
+        <p>Recap 專為受規管行業而設。如果你可以使用 Recap，你就可以通過合規審計。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">ODW.ai 可以存取我嘅會議數據嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
+        <p><strong>唔可以。</strong>Recap 完全喺你嘅裝置上運行。ODW.ai 完全無法存取你嘅音訊、轉錄或摘要。</p>
+        <p>唔同於雲端會議工具（Otter.ai、Fireflies），Recap 唔會將你嘅音訊傳送到第三方。所有嘢都留喺你嘅電腦上。</p>
+        <p>呢個對注重主權嘅機構至關重要。如果你嘅會議工具將音訊傳送到雲端供應商，你就唔能夠聲稱擁有數據主權。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">Recap 符合 HIPAA 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
+        <p>符合。Recap <strong>兼容 HIPAA</strong>：</p>
+        <ul>
+          <li><strong>裝置端處理：</strong>PHI 留喺你嘅裝置上 — 冇數據傳送到第三方</li>
+          <li><strong>加密：</strong>AES-256 加密本機儲存</li>
+          <li><strong>存取控制：</strong>密碼保護、基於角色嘅存取</li>
+          <li><strong>審計日誌：</strong>所有存取嘅防篡改日誌</li>
+        </ul>
+        <p>Recap 幫助你達到 HIPAA 要求嘅<strong>技術保障措施</strong>。你仍然需要單獨解決行政同物理保障措施。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">Recap 符合 GDPR 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
+        <p>符合。Recap <strong>兼容 GDPR</strong>：</p>
+        <ul>
+          <li><strong>數據駐留：</strong>所有數據留喺你嘅裝置上（或團隊部署嘅你嘅基礎設施上）</li>
+          <li><strong>刪除權：</strong>按要求刪除會議同相關數據</li>
+          <li><strong>存取權：</strong>按要求匯出會議數據</li>
+          <li><strong>數據最小化：</strong>冇數據傳送到第三方</li>
+        </ul>
+        <p>Recap 幫助你達到 GDPR 要求嘅<strong>技術同組織措施</strong>（第 32 條）。你仍然需要單獨解決法律同程序要求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">我可以喺隔離網絡環境部署 Recap 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
+        <p>可以。Recap 支援<strong>隔離網絡部署</strong>（無互聯網存取）：</p>
+        <ul>
+          <li><strong>離線安裝：</strong>喺無互聯網存取嘅情況下安裝 Recap</li>
+          <li><strong>本機模型：</strong>所有模型（Whisper、LLM）喺你嘅裝置上運行 — 唔需要對外部服務嘅 API 呼叫</li>
+          <li><strong>無外部依賴：</strong>Recap 嘅轉錄、摘要或任何核心功能都唔需要互聯網存取</li>
+        </ul>
+        <p>隔離網絡部署常見於政府承辦商、軍事同高安全環境。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">如果有人未經許可存取我嘅會議數據會點？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
+        <p>Recap 提供<strong>存取控制</strong>（付費級別）：</p>
+        <ul>
+          <li><strong>密碼保護：</strong>需要密碼先可以存取 Recap</li>
+          <li><strong>基於角色嘅存取：</strong>控制邊個可以檢視/編輯會議摘要</li>
+          <li><strong>審計日誌：</strong>所有存取都會記錄（邊個存取咗啲咩、幾時）</li>
+          <li><strong>警報：</strong>收到未經授權存取嘗試嘅通知</li>
+        </ul>
+        <p>免費級別嘅 Recap 係單用戶（僅本機）。如果有人有實體存取你嘅裝置同密碼嘅權限，佢就可以存取你嘅數據 — 所以請使用強密碼同加密。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">我可以設定保留策略（自動刪除舊會議）嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
+        <p>可以。Recap 支援<strong>保留策略</strong>（付費級別）：</p>
+        <ul>
+          <li><strong>自動刪除：</strong>N 日後自動刪除會議（例如 30 日、90 日、1 年）</li>
+          <li><strong>每工作區策略：</strong>唔同工作區嘅唔同保留策略</li>
+          <li><strong>手動覆蓋：</strong>將特定會議標記為「唔好刪除」</li>
+        </ul>
+        <p>呢個對合規（例如 GDPR 數據最小化）同儲存管理好有用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">Recap 嘅代碼可審查嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
+        <p>可以。Recap 嘅核心<strong>開源</strong>：</p>
+        <ul>
+          <li><strong>透明：</strong>所有代碼公開喺 GitHub 上</li>
+          <li><strong>可審查：</strong>你（或你嘅安全團隊）可以審查代碼有冇漏洞、後門或數據外洩</li>
+          <li><strong>可驗證：</strong>你可以驗證 Recap 做緊佢聲稱嘅嘢 — 冇隱藏嘅遙測，冇數據傳送到第三方</li>
+        </ul>
+        <p>呢個對注重主權嘅機構至關重要。你應該能夠驗證你嘅會議工具做緊啲咩。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 6: MODELS & AI -->
+  <div class="section" id="s6">
+    <div class="section-header"><span class="icon">06 · 合規</span><h2>模型與 AI</h2><span class="count">7 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">Recap 使用邊啲 AI 模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
+        <p>Recap 使用<strong>開源模型</strong>進行轉錄同摘要：</p>
+        <p><strong>轉錄：</strong></p>
+        <ul>
+          <li><strong>Whisper：</strong>OpenAI 嘅開源語音識別模型（whisper.cpp、faster-whisper）</li>
+          <li><strong>模型大小：</strong>小型（快速、準確度較低）、中型（平衡）、大型（慢、最準確）</li>
+        </ul>
+        <p><strong>摘要：</strong></p>
+        <ul>
+          <li><strong>Llama 3：</strong>Meta 嘅開源 LLM（8B、70B）</li>
+          <li><strong>Mistral：</strong>Mistral AI 嘅開源 LLM</li>
+          <li><strong>其他：</strong>任何兼容 Ollama 或 llama.cpp 嘅模型</li>
+        </ul>
+        <p>你可以根據你嘅優先事項（速度 vs. 準確度 vs. 資源使用）選擇使用邊個模型。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">我可以使用基於 API 嘅模型（OpenAI、Anthropic）嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
+        <p><strong>v1.0 唔可以。</strong>Recap 專為裝置端處理而設 — v1.0 冇雲端 API 支援。</p>
+        <p>呢個係刻意設計。Recap 嘅核心承諾係主權 — 冇數據離開你嘅裝置。加入 API 支援會破壞呢個承諾。</p>
+        <p>如果你需要基於 API 嘅模型（以獲得更高質素），你可以：</p>
+        <ul>
+          <li><strong>使用本機模型：</strong>Llama 3 70B、Mistral Large 等 — 質素接近 API 模型</li>
+          <li><strong>等待 v2.0：</strong>API 支援計劃喺 v2.0（2027 年第二季）推出，附嚴格嘅選擇加入同數據控制</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">我點樣選擇合適嘅 Whisper 模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
+        <p>選擇 Whisper 模型取決於你嘅優先事項：</p>
+        <table>
+          <thead><tr><th>模型</th><th>速度</th><th>準確度</th><th>資源使用</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Whisper small</strong></td><td>✅ 快</td><td>⚠️ 良好</td><td>✅ 低</td></tr>
+            <tr><td><strong>Whisper medium</strong></td><td>⚠️ 中等</td><td>✅ 更好</td><td>⚠️ 中等</td></tr>
+            <tr><td><strong>Whisper large-v3</strong></td><td>❌ 慢</td><td>✅ 最佳</td><td>❌ 高</td></tr>
+          </tbody>
+        </table>
+        <p><strong>建議：</strong></p>
+        <ul>
+          <li><strong>實時轉錄：</strong>使用 Whisper small 或 medium（夠快應付串流）</li>
+          <li><strong>批次轉錄：</strong>使用 Whisper large-v3（最準確，無時間壓力）</li>
+          <li><strong>低資源裝置：</strong>使用 Whisper small（喺舊硬件上運行）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">我點樣選擇合適嘅摘要模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
+        <p>選擇摘要模型取決於你嘅優先事項：</p>
+        <table>
+          <thead><tr><th>模型</th><th>速度</th><th>質素</th><th>資源使用</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Llama 3 8B</strong></td><td>✅ 快</td><td>⚠️ 良好</td><td>✅ 低</td></tr>
+            <tr><td><strong>Llama 3 70B</strong></td><td>❌ 慢</td><td>✅ 最佳</td><td>❌ 高</td></tr>
+            <tr><td><strong>Mistral 7B</strong></td><td>✅ 快</td><td>⚠️ 良好</td><td>✅ 低</td></tr>
+          </tbody>
+        </table>
+        <p><strong>建議：</strong></p>
+        <ul>
+          <li><strong>快速摘要：</strong>使用 Llama 3 8B 或 Mistral 7B（質素良好、快速）</li>
+          <li><strong>最佳質素：</strong>使用 Llama 3 70B（最佳質素，但慢同資源密集）</li>
+          <li><strong>低資源裝置：</strong>使用 Llama 3 8B 或 Mistral 7B（喺舊硬件上運行）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">我可以更換模型嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
+        <p>可以。Recap <strong>模型無關</strong> — 你可以隨時更換模型：</p>
+        <ul>
+          <li><strong>無需更改代碼：</strong>只需喺設定入面更新模型設定</li>
+          <li><strong>每會議：</strong>為唔同會議使用唔同模型（例如站會用小型模型，董事會會議用大型模型）</li>
+          <li><strong>下載模型：</strong>透過 UI 下載新模型（一鍵）</li>
+        </ul>
+        <p>呢個保障你嘅投資面向未來 — 當更好嘅模型推出時，你可以立即採用而唔使重新設計你嘅系統。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">如果有更好嘅新模型推出，我可以用嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
+        <p>可以。Recap <strong>模型無關</strong> — 你可以使用任何兼容嘅模型：</p>
+        <ul>
+          <li><strong>Whisper 系列：</strong>任何 Whisper 變體（whisper.cpp、faster-whisper、distil-whisper 等）</li>
+          <li><strong>LLM 系列：</strong>任何兼容 Ollama 或 llama.cpp 嘅 LLM（Llama 3、Mistral、Gemma、Qwen 等）</li>
+          <li><strong>自訂模型：</strong>如果你有自訂模型，你可以透過 API 整合</li>
+        </ul>
+        <p>當更好嘅模型推出時，你可以立即採用 — 無需更改代碼，冇供應商鎖定。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">我可以為我嘅領域微調模型嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
+        <p><strong>Recap v1.0 唔可以。</strong>Recap 使用現有模型 — 唔支援微調。</p>
+        <p>不過，你可以：</p>
+        <ul>
+          <li><strong>使用自訂提示：</strong>自訂摘要提示以引導模型行為（例如「專注於法律決策」或「擷取待辦事項畀工程團隊」）</li>
+          <li><strong>外部微調：</strong>喺 Recap 外面微調模型（使用 Hugging Face Transformers 等工具），然後透過 Ollama 或 llama.cpp 喺 Recap 使用微調後嘅模型</li>
+        </ul>
+        <p>微調支援計劃喺 v2.0（2027 年第二季）推出。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 7: DEPLOYMENT & SETUP -->
+  <div class="section" id="s7">
+    <div class="section-header"><span class="icon">07 · 模型</span><h2>部署與架設</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">我點樣安裝 Recap？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
+        <p>Recap 適用於 <strong>macOS、Windows 同 Linux</strong>：</p>
+        <ul>
+          <li><strong>macOS：</strong>從 odw.ai/recap 下載 .dmg 檔案，拖到「應用程式」</li>
+          <li><strong>Windows：</strong>從 odw.ai/recap 下載 .exe 安裝程式，執行安裝程式</li>
+          <li><strong>Linux：</strong>下載 .deb（Ubuntu/Debian）或 .rpm（Fedora/RHEL）套件，透過套件管理員安裝</li>
+        </ul>
+        <p>安裝只需 <strong>&lt;2 分鐘</strong>。無需技術技能。</p>
+        <div class="callout tip"><strong>首次轉錄時間</strong>安裝後，你可以喺 5 分鐘內轉錄你嘅第一個會議。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">系統要求是什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
+        <p>Recap 嘅要求取決於你嘅使用方式：</p>
+        <table>
+          <thead><tr><th>元件</th><th>最低</th><th>建議</th></tr></thead>
+          <tbody>
+            <tr><td><strong>作業系統</strong></td><td>macOS 12+、Windows 10+、Ubuntu 22.04+</td><td>macOS 14+（Apple Silicon）、Windows 11、Ubuntu 24.04</td></tr>
+            <tr><td><strong>CPU</strong></td><td>Intel i5 / AMD Ryzen 5 / Apple M1</td><td>Intel i7+ / AMD Ryzen 7+ / Apple M2+</td></tr>
+            <tr><td><strong>記憶體</strong></td><td>8 GB</td><td>16+ GB</td></tr>
+            <tr><td><strong>儲存空間</strong></td><td>2 GB（應用程式 + 模型）</td><td>10+ GB（用於會議儲存）</td></tr>
+            <tr><td><strong>GPU（選用）</strong></td><td>無（CPU 推理）</td><td>NVIDIA GPU（用於更快推理）</td></tr>
+          </tbody>
+        </table>
+        <p>對於實時轉錄，我哋建議使用現代 CPU（macOS 用 M1/M2/M3，Windows/Linux 用 Intel i7+ 或 AMD Ryzen 7+）。GPU 係選用但可加速推理。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">架設 Recap 需要技術技能嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
+        <p><strong>唔需要。</strong>Recap 專為非技術用戶而設：</p>
+        <ul>
+          <li><strong>安裝：</strong>好似任何其他應用程式噉下載同安裝</li>
+          <li><strong>架設：</strong>設定音訊來源（系統音訊）就即用</li>
+          <li><strong>使用：</strong>開始會議，Recap 自動擷取同轉錄</li>
+        </ul>
+        <p>唔使寫程式、唔使使用命令列、唔需要技術專長。如果你識用 Zoom，你就識用 Recap。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">我可以為我嘅團隊部署 Recap 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
+        <p>可以。Recap 支援<strong>團隊部署</strong>（付費級別）：</p>
+        <ul>
+          <li><strong>自託管伺服器：</strong>喺中央伺服器（基於 Docker）部署 Recap 供團隊存取</li>
+          <li><strong>共享工作區：</strong>為你嘅團隊建立共享工作區</li>
+          <li><strong>存取控制：</strong>控制邊個可以檢視/編輯會議摘要</li>
+          <li><strong>管理員控制台：</strong>監控使用情況、管理用戶、設定配置</li>
+        </ul>
+        <p>團隊部署需要一啲技術架設（Docker、網絡）。我哋提供部署指南同支援。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">我點樣設定音訊擷取？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
+        <p>Recap 擷取<strong>系統音訊</strong> — 即你從喇叭/耳機聽到嘅任何聲音：</p>
+        <ol>
+          <li><strong>開啟 Recap 設定：</strong>點擊 Recap UI 入面嘅齒輪圖示</li>
+          <li><strong>選擇音訊來源：</strong>選擇「系統音訊」（擷取電腦嘅所有音訊）</li>
+          <li><strong>選用 — 咪高峰：</strong>如果你想擷取自己嘅聲音，同時啟用「咪高峰」</li>
+          <li><strong>測試：</strong>點擊「測試音訊」以驗證 Recap 正確擷取音訊</li>
+        </ol>
+        <p>就係噉。Recap 會自動從任何會議平台（Zoom、Teams、Meet 等）擷取音訊。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">我可以喺正式使用前預覽 Recap 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
+        <p>可以。Recap 提供<strong>免費核心級別</strong>：</p>
+        <ul>
+          <li><strong>無時間限制：</strong>永久使用免費級別</li>
+          <li><strong>完整功能：</strong>裝置端轉錄、本機摘要、待辦事項擷取</li>
+          <li><strong>唔使信用卡：</strong>唔需要付款資料</li>
+        </ul>
+        <p>免費級別最適合用你嘅會議測試 Recap。如果你鍾意，你可以升級到付費級別以獲得團隊功能同套件整合。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">我點樣更新 Recap？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
+        <p>Recap <strong>自動更新</strong>：</p>
+        <ul>
+          <li><strong>桌面應用程式：</strong>Recap 喺啟動時檢查更新並提示你安裝</li>
+          <li><strong>手動更新：</strong>你亦可透過設定選單手動檢查更新</li>
+          <li><strong>模型：</strong>模型更新獨立進行 — 你可以透過 UI 入面嘅模型管理員更新模型</li>
+        </ul>
+        <p>更新通常細小同快速（&lt;5 分鐘安裝）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">我可以喺多個裝置上使用 Recap 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
+        <p>可以。你可以喺<strong>多個裝置</strong>安裝 Recap：</p>
+        <ul>
+          <li><strong>免費級別：</strong>單用戶、僅本機（每個裝置有自己嘅數據）</li>
+          <li><strong>付費級別：</strong>跨裝置同步數據（選用）</li>
+          <li><strong>團隊級別：</strong>中央伺服器、多個用戶存取相同數據</li>
+        </ul>
+        <p>免費級別嘅每個裝置獨立運作 — 裝置之間冇同步。付費級別你可以選用跨裝置同步數據。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 8: COST & PRICING -->
+  <div class="section" id="s8">
+    <div class="section-header"><span class="icon">08 · 語言</span><h2>費用與定價</h2><span class="count">7 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">Recap 幾錢？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
+        <p>Recap 定價基於<strong>功能同部署方式</strong>：</p>
+        <table>
+          <thead><tr><th>級別</th><th>價格</th><th>包括</th></tr></thead>
+          <tbody>
+            <tr><td><strong>免費核心</strong></td><td>$0</td><td>裝置端轉錄、本機摘要、待辦事項、單用戶</td></tr>
+            <tr><td><strong>Pro</strong></td><td>$49/月</td><td>免費核心 + 團隊工作區、共享會議、進階匯出</td></tr>
+            <tr><td><strong>Enterprise</strong></td><td>$199/月</td><td>Pro + Vault/Loop 同步、審計日誌、保留策略、優先支援</td></tr>
+            <tr><td><strong>套件束</strong></td><td>自訂定價</td><td>Recap + 所有 ODW.ai 模組（Desk、Voice、Vault、Shield 等）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>備註：</strong>Recap 唔會單獨出售畀企業 — 佢係 ODW.ai 套件束嘅一部分。請聯繫我哋了解套件定價。</p>
+        <div class="callout info"><strong>備註</strong>定價僅供說明，可能會更改。請聯繫我哋了解當前定價同自訂報價。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">Recap 平過 Otter.ai 或 Fireflies 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
+        <p><strong>視乎情況。</strong>Otter.ai 同 Fireflies 每個用戶每月 $10-$30。10 人團隊就係 $100-$300/月。</p>
+        <p>Recap 每月 $0-$199（固定費用，免費核心唔係按用戶計）。10 人團隊：</p>
+        <ul>
+          <li><strong>免費級別：</strong>$0（但每個裝置單用戶、冇同步）</li>
+          <li><strong>Pro 級別：</strong>$49/月（團隊工作區、共享會議）</li>
+          <li><strong>Enterprise 級別：</strong>$199/月（套件整合、審計日誌）</li>
+        </ul>
+        <p>對細團隊嚟講，Recap <strong>更平</strong>。對大團隊嚟講，Otter.ai/Fireflies 每個用戶可能更平 — 但 Recap 提供主權，佢哋冇。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">有冇隱藏費用？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
+        <p>冇隱藏費用。總擁有成本包括：</p>
+        <ul>
+          <li><strong>Recap 訂閱：</strong>基於級別嘅月費（免費核心則 $0）</li>
+          <li><strong>基礎設施：</strong>你支付自己嘅裝置費用（如果自託管）</li>
+        </ul>
+        <p>就係噉。冇架設費用、冇意外收費、冇每用戶費用（免費核心）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">免費級別真係免費嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
+        <p>係。<strong>免費核心級別 100% 免費</strong>：</p>
+        <ul>
+          <li><strong>無時間限制：</strong>永久使用</li>
+          <li><strong>無功能限制：</strong>裝置端轉錄、本機摘要、待辦事項</li>
+          <li><strong>無用戶限制：</strong>安裝喺你想要嘅任意數量裝置（每個裝置單用戶）</li>
+        </ul>
+        <p>唯一限制：</p>
+        <ul>
+          <li><strong>團隊功能：</strong>共享工作區、團隊同步、審計日誌係付費</li>
+          <li><strong>套件整合：</strong>Vault/Loop 同步係付費（Enterprise 級別或套件束）</li>
+          <li><strong>支援：</strong>僅社區支援（GitHub issues、Discord）。冇電郵或優先支援。</li>
+        </ul>
+        <p>我哋相信開源。如果你唔需要團隊功能或套件整合，你可以永久免費使用 Recap。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">你哋接受哪些付款方式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
+        <p>我哋接受：</p>
+        <ul>
+          <li><strong>信用卡/扣帳卡：</strong>Visa、Mastercard、American Express（透過 Stripe）</li>
+          <li><strong>銀行轉帳：</strong>適用於年度訂閱或企業客戶</li>
+          <li><strong>加密貨幣：</strong>Bitcoin、Ethereum、USDC（適合注重私隱嘅客戶）</li>
+        </ul>
+        <p>年度訂閱可開立發票。請聯繫我哋了解詳情。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">如果唔滿意可以退款嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
+        <p>可以。我哋提供 <strong>30 日退款保證</strong>。如果你喺首 30 日內唔滿意，請聯繫我哋獲得全額退款 — 唔使解釋原因。</p>
+        <p>30 日後，你可以隨時取消。你可以繼續存取直到帳單週期結束，但唔會為部分月份提供退款。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">Recap 包括喺 ODW.ai 套件束入面嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
+        <p><strong>係。</strong>Recap 係 ODW.ai 套件嘅一部分。你可以：</p>
+        <ul>
+          <li><strong>單獨購買 Recap：</strong>單獨使用 Recap（免費核心或付費級別）</li>
+          <li><strong>購買完整套件：</strong>以折扣價獲得 Desk、Voice、Vault、Recap、Shield 及其他模組</li>
+        </ul>
+        <p>套件束以 20-30% 折扣包括 Recap（相比單獨購買）。而且所有模組原生整合 — Recap 將會議智能輸入到 Vault（知識庫）同 Loop（工作流程自動化）。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 9: SCALING & OPERATIONS -->
+  <div class="section" id="s9">
+    <div class="section-header"><span class="icon">09 · 定價</span><h2>擴展與營運</h2><span class="count">7 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">Recap 可以處理幾多會議？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
+        <p>Recap 可以處理<strong>無限會議</strong>：</p>
+        <ul>
+          <li><strong>無會議限制：</strong>想轉錄幾多會議就得幾多</li>
+          <li><strong>無時間限制：</strong>轉錄任何時長嘅會議</li>
+          <li><strong>儲存：</strong>僅受限於你嘅磁碟空間（典型會議 = 50-200 MB）</li>
+        </ul>
+        <p>對於大量（每週 100+ 會議），我哋建議：</p>
+        <ul>
+          <li><strong>足夠嘅磁碟空間：</strong>確保你有足夠儲存空間存放音訊同轉錄</li>
+          <li><strong>批次模式：</strong>會議結束後轉錄（更快、更準確）</li>
+          <li><strong>團隊部署：</strong>使用中央伺服器供團隊存取（付費級別）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">Recap 可以支援幾多用戶？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
+        <p>Recap 支援<strong>無限用戶</strong>：</p>
+        <ul>
+          <li><strong>免費級別：</strong>每個裝置單用戶（每個用戶有自己嘅本機數據）</li>
+          <li><strong>Pro 級別：</strong>多用戶團隊工作區</li>
+          <li><strong>Enterprise 級別：</strong>中央伺服器、無限用戶</li>
+        </ul>
+        <p>團隊部署方面，Recap 水平擴展 — 加入更多伺服器資源以處理更多用戶。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">如果 Recap 喺會議期間崩潰會點？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
+        <p>如果 Recap 崩潰，你嘅音訊<strong>唔會丟失</strong>：</p>
+        <ul>
+          <li><strong>音訊緩衝：</strong>Recap 喺本機緩衝音訊 — 如果佢崩潰，緩衝嘅音訊會儲存</li>
+          <li><strong>自動重啟：</strong>Recap 自動重啟並恢復擷取音訊</li>
+          <li><strong>手動恢復：</strong>你可以手動恢復緩衝嘅音訊並稍後轉錄</li>
+        </ul>
+        <p>對於重要會議，我哋建議：</p>
+        <ul>
+          <li><strong>事前測試：</strong>喺重要會議之前測試 Recap</li>
+          <li><strong>備份錄製：</strong>對重要會議使用備份錄製方式（例如 Zoom 嘅內建錄製功能）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">我點樣監控 Recap 嘅表現？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
+        <p>Recap 包含<strong>表現控制台</strong>：</p>
+        <ul>
+          <li><strong>系統健康：</strong>CPU、記憶體、磁碟使用量</li>
+          <li><strong>轉錄指標：</strong>已轉錄會議數量、平均轉錄時間、準確度估計</li>
+          <li><strong>模型指標：</strong>使用緊邊個模型、資源使用量</li>
+          <li><strong>儲存指標：</strong>會議、轉錄同模型使用嘅磁碟空間</li>
+        </ul>
+        <p>團隊部署方面，管理員控制台提供額外指標（用戶活動、工作區使用情況等）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">我點樣備份 Recap 數據？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
+        <p>Recap 數據儲存喺你嘅裝置本機。使用標準備份工具備份：</p>
+        <ul>
+          <li><strong>macOS：</strong>Time Machine，或手動複製 Recap 數據資料夾</li>
+          <li><strong>Windows：</strong>檔案歷史記錄，或手動複製 Recap 數據資料夾</li>
+          <li><strong>Linux：</strong>rsync，或手動複製 Recap 數據資料夾</li>
+        </ul>
+        <p>Recap 數據位置：</p>
+        <ul>
+          <li><strong>macOS：</strong><code>~/Library/Application Support/Recap/</code></li>
+          <li><strong>Windows：</strong><code>%APPDATA%\Recap\</code></li>
+          <li><strong>Linux：</strong><code>~/.config/Recap/</code></li>
+        </ul>
+        <p>我哋建議定期備份呢個資料夾（例如每日透過 Time Machine 或雲端同步）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">我可以將 Recap 用於多個團隊或部門嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
+        <p>可以。Recap 支援<strong>團隊工作區</strong>（付費級別）：</p>
+        <ul>
+          <li><strong>獨立工作區：</strong>為唔同團隊或部門建立獨立工作區</li>
+          <li><strong>存取控制：</strong>控制邊個可以存取邊個工作區</li>
+          <li><strong>隔離：</strong>每個工作區有自己嘅會議、摘要同設定</li>
+        </ul>
+        <p>呢個對有嚴格數據分隔要求或多團隊部署嘅機構好有用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">我點樣培訓我嘅團隊使用 Recap？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
+        <p>Recap 設計到<strong>直觀易用</strong>，但我哋提供培訓資源：</p>
+        <ul>
+          <li><strong>文件：</strong>為管理員同最終用戶提供全面嘅用戶指南</li>
+          <li><strong>視頻教程：</strong>逐步讲解主要功能</li>
+          <li><strong>入職培訓：</strong>付費客戶可享有 1 小時入職培訓（遙距）</li>
+          <li><strong>支援：</strong>Pro 同 Enterprise 客戶享優先支援</li>
+        </ul>
+        <p>大部分團隊喺 30 分鐘培訓內即可投入生產。UI 特別直觀 — 最終用戶唔需要技術技能。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 10: INTEGRATION & WORKFLOWS -->
+  <div class="section" id="s10">
+    <div class="section-header"><span class="icon">10 · 入職</span><h2>整合與工作流程</h2><span class="count">7 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">Recap 點樣同其他 ODW.ai 產品整合？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
+        <p>Recap 與其他 ODW.ai 產品<strong>原生整合</strong>（付費級別）：</p>
+        <ul>
+          <li><strong>Vault：</strong>會議摘要同決策自動同步到你嘅知識庫</li>
+          <li><strong>Loop：</strong>待辦事項自動同步到你嘅工作流程自動化（建立任務、指派、設定截止日期）</li>
+          <li><strong>Shield：</strong>Recap 向 Shield 發出審計日誌用於管治同合規</li>
+        </ul>
+        <p>如果你使用 ODW.ai 套件，Recap 整合係自動嘅 — 無需單獨設定。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">我可以將會議摘要同步到 Vault 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
+        <p>可以。Recap 可以<strong>自動將會議摘要同步到 Vault</strong>（Enterprise 級別或套件束）：</p>
+        <ul>
+          <li><strong>自動同步：</strong>會議摘要同決策自動喺 Vault 建立索引</li>
+          <li><strong>可搜尋：</strong>會議內容喺 Vault 入面連同其他文件一齊可搜尋</li>
+          <li><strong>雙向：</strong>Vault 條目可以引用來源會議</li>
+          <li><strong>可設定：</strong>選擇邊啲會議同步、邊啲標籤觸發同步等</li>
+        </ul>
+        <p>呢個將你嘅會議變成可搜尋嘅知識庫 — 唔會再喺會議筆記入面丟失重要決策。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">我可以將待辦事項同步到 Loop 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
+        <p>可以。Recap 可以<strong>自動將待辦事項同步到 Loop</strong>（Enterprise 級別或套件束）：</p>
+        <ul>
+          <li><strong>自動建立任務：</strong>待辦事項自動喺 Loop 建立為任務</li>
+          <li><strong>負責人：</strong>任務指派畀正確嘅人（從會議偵測）</li>
+          <li><strong>截止日期：</strong>根據會議中講明嘅內容設定截止日期</li>
+          <li><strong>工作流程：</strong>待辦事項可以觸發工作流程（例如「當待辦事項建立時 → 通知負責人 → 設定提醒」）</li>
+        </ul>
+        <p>呢個將你嘅會議變成可行動嘅工作流程 — 唔會再喺會議後手動建立任務。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">我可以將 Recap 同我嘅日曆整合嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
+        <p><strong>v1.0 唔可以。</strong>Recap 喺 v1.0 冇日曆整合。</p>
+        <p>Recap 無論日曆點樣都會擷取系統音訊 — 佢唔需要預先知道你嘅會議。你只需要開始會議，Recap 就會自動擷取同轉錄。</p>
+        <p>日曆整合（根據日曆事件自動開始轉錄）計劃喺 v1.1（2026 年第四季）推出。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">我可以將 Recap 同 Slack 或 Teams 整合嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
+        <p><strong>唔直接支援。</strong>Recap 喺 v1.0 唔會發佈到 Slack 或 Teams 頻道。</p>
+        <p>不過，你可以：</p>
+        <ul>
+          <li><strong>匯出同分享：</strong>將摘要匯出為 Markdown 或 PDF，然後透過 Slack/Teams 分享</li>
+          <li><strong>Loop 整合：</strong>如果你使用 ODW.ai Loop，你可以設定 Loop 將摘要發佈到 Slack/Teams</li>
+          <li><strong>自訂整合：</strong>使用 API 與 Slack/Teams 建立自訂整合</li>
+        </ul>
+        <p>原生 Slack/Teams 整合計劃喺 v1.2（2027 年第一季）推出。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">Recap 提供 API 嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
+        <p><strong>v1.0 唔提供。</strong>Recap 喺 v1.0 冇公開 API。</p>
+        <p>API 存取計劃喺 v1.2（2027 年第一季）推出。API 將允許：</p>
+        <ul>
+          <li><strong>查詢會議：</strong>檢索會議轉錄、摘要同待辦事項</li>
+          <li><strong>觸發轉錄：</strong>以程式方式轉錄音訊檔案</li>
+          <li><strong>與自訂工具整合：</strong>與 Recap 建立自訂整合</li>
+        </ul>
+        <p>喺此之前，你可以使用匯出功能（Markdown、JSON）與其他工具整合。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">我可以將 Recap 同我現有嘅 AI 工具一齊使用嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
+        <p>可以。Recap 可以同現有 AI 工具一齊使用：</p>
+        <ul>
+          <li><strong>匯出轉錄：</strong>將轉錄匯出為 JSON，然後用喺你嘅 AI 管道</li>
+          <li><strong>匯出摘要：</strong>將摘要匯出為 Markdown，然後用喺你嘅知識庫</li>
+          <li><strong>自訂整合：</strong>使用匯出功能與 LangChain、LlamaIndex 等整合</li>
+        </ul>
+        <p>Recap 設計為<strong>會議智能層</strong> — 佢提供轉錄同摘要，你可以喺現有工作流程中使用輸出。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 11: LIMITATIONS & ROADMAP -->
+  <div class="section" id="s11">
+    <div class="section-header"><span class="icon">11 · 路線圖</span><h2>限制與路線圖</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">Recap（暫時）做唔到啲咩？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
+        <p>Recap 好強大，但 v1.0 有限制：</p>
+        <ul>
+          <li><strong>僅英語：</strong>多語言支援計劃喺 v1.1（2026 年第四季）推出</li>
+          <li><strong>冇影片錄製：</strong>僅音訊（視頻會大幅增加複雜度）</li>
+          <li><strong>冇實時翻譯：</strong>僅轉錄；翻譯係未來考慮</li>
+          <li><strong>冇流動應用程式：</strong>v1.0 僅桌面版（會議喺桌面進行）</li>
+          <li><strong>冇電話通話錄製：</strong>僅系統音訊（冇電話通話錄製）</li>
+          <li><strong>冇公開 API：</strong>API 計劃喺 v1.2（2027 年第一季）推出</li>
+          <li><strong>冇日曆整合：</strong>計劃喺 v1.1（2026 年第四季）推出</li>
+          <li><strong>冇雲端 API 支援：</strong>v1.0 僅裝置端（API 支援計劃喺 v2.0 推出）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">Recap 會支援更多語言嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
+        <p><strong>會。</strong>多語言支援計劃喺 v1.1（2026 年第四季）推出：</p>
+        <ul>
+          <li><strong>西班牙文</strong></li>
+          <li><strong>法文</strong></li>
+          <li><strong>德文</strong></li>
+          <li><strong>中文（普通話）</strong></li>
+          <li><strong>日文</strong></li>
+          <li><strong>及更多</strong></li>
+        </ul>
+        <p>Whisper（底層轉錄模型）已經支援 99 種語言 — 只係 Recap v1.0 針對英語優化。v1.1 會擴展語言支援。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">Recap 會支援影片錄製嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
+        <p><strong>目前路線圖冇。</strong>影片錄製會大幅增加複雜度（儲存、處理、UI），而且對轉錄價值並非必要。</p>
+        <p>Recap 專注於<strong>音訊轉錄同會議智能</strong>。如果你需要影片錄製，我哋建議使用你會議平台嘅內建錄製功能（Zoom、Teams、Meet）或專用影片錄製工具。</p>
+        <p>如果影片錄製對你嘅用例係必需，請聯繫我哋 — 我哋可能會根據客戶需求重新考慮。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">Recap 會支援實時翻譯嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
+        <p><strong>計劃喺 v2.0（2027 年第二季）。</strong>實時翻譯將包括：</p>
+        <ul>
+          <li><strong>即時翻譯：</strong>實時翻譯語音（例如有人講英語，你見到西班牙文字幕）</li>
+          <li><strong>會議後翻譯：</strong>會議後翻譯轉錄同摘要</li>
+          <li><strong>多語言支援：</strong>50+ 種語言之間翻譯</li>
+        </ul>
+        <p>呢個係全球團隊同多語言機構嘅高優先功能。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">未來 12 個月嘅路線圖係什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
+        <p>主要里程碑：</p>
+        <ul>
+          <li><strong>v1.0（2026 年第三季）：</strong>MVP 推出。裝置端轉錄、本機摘要、待辦事項、macOS/Windows/Linux 支援。</li>
+          <li><strong>v1.1（2026 年第四季）：</strong>多語言支援、日曆整合、改進嘅說話者分離。</li>
+          <li><strong>v1.2（2027 年第一季）：</strong>公開 API、Slack/Teams 整合、進階分析。</li>
+          <li><strong>v2.0（2027 年第二季）：</strong>實時翻譯、雲端 API 支援（選擇加入）、模型微調。</li>
+        </ul>
+        <p>路線圖可能根據客戶反饋更改。請聯繫我哋了解最新路線圖或請求功能。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">幾時唔應該使用 Recap？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
+        <p>如果以下情況，Recap 唔係最適合：</p>
+        <ul>
+          <li><strong>你冇主權要求：</strong>如果你唔關心數據主權，雲端工具（Otter.ai、Fireflies）更簡單（無需本機處理）。</li>
+          <li><strong>你需要影片錄製：</strong>Recap 僅音訊。如果你需要視頻，使用你會議平台嘅內建錄製功能。</li>
+          <li><strong>你需要電話通話錄製：</strong>Recap 只擷取系統音訊。如果你需要電話通話錄製，使用專用電話錄製方案。</li>
+          <li><strong>你需要流動應用程式：</strong>Recap 僅桌面版。如果你需要流動轉錄，使用流動優先嘅工具。</li>
+          <li><strong>你需要實時翻譯：</strong>Recap 喺 v1.0 唔支援翻譯。如果你需要翻譯，請等待 v2.0 或使用專用翻譯工具。</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">Recap 保證 100% 準確轉錄嗎？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
+        <p><strong>唔保證。</strong>冇 AI 轉錄系統可以保證 100% 準確度。Recap 嘅準確度取決於：</p>
+        <ul>
+          <li><strong>音訊質素：</strong>清晰嘅音訊 = 更高準確度</li>
+          <li><strong>模型大小：</strong>較大嘅模型（Whisper large-v3）更準確</li>
+          <li><strong>說話者清晰度：</strong>清晰嘅說話者 = 更高準確度</li>
+          <li><strong>背景噪音：</strong>越少噪音 = 更高準確度</li>
+        </ul>
+        <p>目標：標準商業英語會議 <strong>≤8% 詞錯誤率（WER）</strong>。呢個代表 92%+ 準確度。</p>
+        <p>對於重要會議（法律、醫療），我哋建議由人工檢視轉錄。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">我點樣開始？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
+        <p>三條途徑：</p>
+        <ol>
+          <li><strong>免費下載：</strong>從 odw.ai/recap 下載 Recap。唔使信用卡。用你嘅會議試下，睇下啱唔啱你嘅用例。</li>
+          <li><strong>示範：</strong>同我哋嘅團隊預約示範。我哋會帶你了解 Recap、回答你嘅問題並幫你評估啱唔啱你嘅業務。</li>
+          <li><strong>聯繫銷售：</strong>企業客戶或套件束，請聯繫我哋嘅銷售團隊獲取度身訂造嘅報價。</li>
+        </ol>
+        <div class="callout tip"><strong>準備好開始？</strong>前往 <code>odw.ai/recap</code> 下載 Recap 或預約示範。</div>
+      </div></div></div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Recap — 企業用戶常見問題</strong></p>
+    <p>版本 2.0 · 待審閱草稿</p>
+    <p>基於：PRD v1.0、SAD v1.0、TSD v1.0、TBK v1.0（2026-06-23）</p>
+    <p><a href="suite.html">← 返回套件常見問題</a></p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
+  });
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
+  const searchInput = document.getElementById('searchInput');
+  const noResults = document.getElementById('noResults');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.section').forEach(section => {
+      let sectionHas = 0;
+      section.querySelectorAll('.faq-item').forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        const match = q === '' || txt.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) { sectionHas++; visibleCount++; if (q !== '') item.classList.add('open'); }
+        else { item.classList.remove('open'); }
+      });
+      section.style.display = sectionHas === 0 && q !== '' ? 'none' : '';
+    });
+    noResults.style.display = (visibleCount === 0 && q !== '') ? 'block' : 'none';
+  });
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1223 @@
+<!-- Translation status: DRAFT — needs native-speaker review before publish -->
+<!-- Last synced with English source: 2026-07-09 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>People — 企业用户常见问题</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../faq/styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
+  <div class="subtitle">People 常见问题</div>
+  <h1>People 常见问题</h1>
+  <p>AI 招聘与 HR 助手——天生可审计、自托管、人在回路。面向企业管理者，无需技术背景。</p>
+  <span class="last-updated">最后更新：2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">首页</a>
+    <span class="sep">→</span>
+    <a href="./index.html">常见问题</a>
+    <span class="sep">→</span>
+    <a href="./suite.html">套件</a>
+    <span class="sep">→</span>
+    <span>People</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" aria-label="搜索问题" placeholder="搜索问题……（例如"审计""合规""GDPR""招聘""候选人""偏见""主权"）">
+  </div>
+  <div class="controls">
+    <button onclick="expandAll()">＋ 展开全部</button>
+    <button onclick="collapseAll()">− 收起全部</button>
+    <button onclick="window.print()">🖨️ 打印 / 保存 PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>跳转到章节</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> 基础介绍</a>
+      <a href="#s2"><span class="num">2</span> 招聘与人才获取</a>
+      <a href="#s3"><span class="num">3</span> 方案优势</a>
+      <a href="#s4"><span class="num">4</span> 合规与审计</a>
+      <a href="#s5"><span class="num">5</span> 安全与隐私</a>
+      <a href="#s6"><span class="num">6</span> 模型与 AI</a>
+      <a href="#s7"><span class="num">7</span> 部署与配置</a>
+      <a href="#s8"><span class="num">8</span> 费用与定价</a>
+      <a href="#s9"><span class="num">9</span> 扩展与运维</a>
+      <a href="#s10"><span class="num">10</span> 集成与工作流</a>
+      <a href="#s11"><span class="num">11</span> 局限性与路线图</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">没有匹配的问题，请尝试更宽泛的关键词。</div>
+
+  <!-- SECTION 1: THE BASICS -->
+  <div class="section" id="s1">
+    <div class="section-header"><span class="icon">01 · 概览</span><h2>基础介绍 —— People 是什么？</h2><span class="count">9 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">用大白话讲，ODW.ai People 是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
+        <p>People 是一款 <strong>AI 驱动的招聘与 HR 助手</strong>。它将招聘中的繁琐事务自动化——候选人寻访、简历筛选、面试安排、候选人沟通——同时把所有招聘决策权保留在人的手中。</p>
+        <p>它的工作方式如下：</p>
+        <ol>
+          <li><strong>发布职位：</strong>创建职位信息，并分发到多个招聘渠道</li>
+          <li><strong>筛选候选人：</strong>AI 解析简历，匹配岗位要求，对候选人进行排序</li>
+          <li><strong>安排面试：</strong>集成日历的自动化排期</li>
+          <li><strong>候选人沟通：</strong>AI 起草候选人邮件（确认收到、拒绝、下一步安排）——发送前由人工审核</li>
+          <li><strong>管理流程：</strong>可视化流程面板，支持协作、反馈与审计追踪</li>
+        </ol>
+        <p>与其他 ATS 工具的关键区别：<strong>天生可审计、自托管、人在回路</strong>。所有操作均有日志，全部候选人数据保留在您的基础设施内，任何 AI 输出未经人工审核都不会成为招聘决策。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">People 解决什么问题？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
+        <p>招聘既关键又在运营上极其痛苦：</p>
+        <ul>
+          <li><strong>事务性负担：</strong>招聘人员大部分时间花在排期、状态同步、整理候选人信息上——而不是做人为判断</li>
+          <li><strong>监管趋严：</strong>欧盟《人工智能法案》将招聘 AI 列为高风险。GDPR、EEOC、纽约市 144 号地方法、伊利诺伊州 BIPA 提出了新的审计与偏见测试义务</li>
+          <li><strong>云端风险：</strong>大多数招聘工具将应聘者数据经由供应商基础设施处理——带来合规风险</li>
+          <li><strong>AI 不透明：</strong>很多工具提供的是黑箱评分，没有审计追踪</li>
+        </ul>
+        <p>People 通过<strong>自托管、天生可审计、人在回路的招聘自动化</strong>来解决这些问题。您可以享受 AI 带来的效率提升，而不必承担合规风险。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">People 适合谁？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
+        <p>People 专为<strong>受监管行业中的成长型企业（50–500 人）</strong>设计：</p>
+        <ul>
+          <li><strong>金融服务：</strong>银行、金融科技、保险——招聘合规要求严格</li>
+          <li><strong>医疗健康：</strong>医院、诊所、健康科技——涉及 HIPAA 相关流程</li>
+          <li><strong>政府承包商：</strong>国防、联邦项目——数据主权要求严格</li>
+          <li><strong>法律行业：</strong>律师事务所、合规部门——律师—委托人特权</li>
+          <li><strong>教育行业：</strong>高校、教育科技——FERPA 合规</li>
+          <li><strong>其他受监管企业：</strong>合规失败可能带来致命风险的领域</li>
+        </ul>
+        <p>如果您无法承受招聘过程中的合规失败，People 就是为您而生的。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">People 与 Greenhouse 或 Lever 有什么不同？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
+        <p>Greenhouse 和 Lever 是<strong>基于云的 ATS 工具</strong>。People 是<strong>自托管、天生可审计的 ATS</strong>。</p>
+        <table>
+          <thead><tr><th>维度</th><th>ODW.ai People</th><th>Greenhouse / Lever</th></tr></thead>
+          <tbody>
+            <tr><td>部署方式</td><td>✅ 自托管——完全掌控数据</td><td>❌ 仅云端——由供应商控制</td></tr>
+            <tr><td>数据主权</td><td>✅ 客户完全控制</td><td>❌ 由供应商控制</td></tr>
+            <tr><td>审计追踪</td><td>✅ 全面、不可篡改、可导出</td><td>⚠️ 通常不完整或事后补充</td></tr>
+            <tr><td>AI 透明度</td><td>✅ 每一次 AI 操作均记录决策依据</td><td>❌ 通常不透明、黑箱</td></tr>
+            <tr><td>人工监督</td><td>✅ 架构级强制要求</td><td>⚠️ 可选或不存在</td></tr>
+            <tr><td>模型控制</td><td>✅ 客户自选、模型无关</td><td>❌ 由供应商指定</td></tr>
+            <tr><td>合规姿态</td><td>✅ 从第一天起即审计就绪</td><td>⚠️ 合规是事后补救</td></tr>
+          </tbody>
+        </table>
+        <p>如果您需要完全的数据控制和审计就绪能力，People 是更好的选择。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">"天生可审计"是什么意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
+        <p>"天生可审计"意味着<strong>合规是架构设计的一部分，而非事后补丁</strong>：</p>
+        <ul>
+          <li><strong>全操作记录：</strong>系统操作、人工决策、AI 建议——全部以不可篡改的方式记录，包含时间戳、操作者身份与决策依据</li>
+          <li><strong>可导出：</strong>生成 PDF、JSON、CSV 格式的审计报告，用于监管提交</li>
+          <li><strong>防篡改：</strong>日志采用哈希链——任何篡改都可被检测</li>
+          <li><strong>无遗漏：</strong>100% 的系统操作均被记录——没有空白</li>
+        </ul>
+        <p>当审计人员要求"展示候选人 X 的决策轨迹"时，您可以在 <strong>&lt;5 分钟</strong>内生成完整报告。</p>
+        <div class="callout tip"><strong>核心区别</strong>大多数 ATS 工具将合规视为日后添加的功能。People 将其视为地基。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">"人在回路"是什么意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
+        <p>"人在回路"意味着<strong>任何 AI 输出未经人工审核都不会成为招聘决策</strong>：</p>
+        <ul>
+          <li><strong>AI 辅助：</strong>AI 对候选人进行排序、起草邮件、建议下一步行动</li>
+          <li><strong>人类决策：</strong>任何操作执行前必须由人工审核并批准</li>
+          <li><strong>人工覆盖留痕：</strong>当人工覆盖 AI 建议时，该操作会被记录（用于改进系统）</li>
+        </ul>
+        <p>这是一种<strong>架构约束</strong>，而非功能选项。People 在架构上无法在没有人工批准的情况下做出招聘决策。</p>
+        <div class="callout info"><strong>重要原因</strong>欧盟《人工智能法案》及新兴法规要求高风险 AI 系统具备人工监督。People 的架构确保天生合规。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">People 是独立产品还是套件的一部分？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
+        <p>People <strong>两者兼具</strong>：</p>
+        <ul>
+          <li><strong>可独立使用：</strong>您可以单独将 People 作为 ATS 使用</li>
+          <li><strong>套件集成：</strong>People 是 ODW.ai 套件的一部分，并与其他模块集成：
+            <ul>
+              <li><strong>Vault：</strong>岗位要求、策略、合规规则</li>
+              <li><strong>Recap：</strong>面试笔记、结构化反馈、评分卡</li>
+              <li><strong>Loop：</strong>工作流自动化、阶段流转、通知</li>
+              <li><strong>Shield：</strong>治理、审计日志、合规报告</li>
+            </ul>
+          </li>
+        </ul>
+        <p>套件集成正是 People 强大的原因——它在模块间共享上下文，而不向外部共享数据。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">在这个场景下，"主权"（sovereign）是什么意思？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
+        <p>"主权"意味着<strong>对候选人数据的完全掌控</strong>：</p>
+        <ul>
+          <li><strong>数据位置：</strong>所有候选人数据（简历、沟通记录、决策记录）保留在您的基础设施内</li>
+          <li><strong>数据处理：</strong>所有 AI 处理均在您的基础设施（或您选择的云）上完成</li>
+          <li><strong>无外部依赖：</strong>不向第三方发送候选人数据（除非您选择使用其 API）</li>
+          <li><strong>可审计性：</strong>您可以检查代码、日志和数据流</li>
+        </ul>
+        <p>这对于受监管行业至关重要。如果您的 ATS 在向云供应商发送候选人个人身份信息（PII），您就无法声称拥有数据主权。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">使用 People 需要技术技能吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
+        <p><strong>部署方面：</strong>需要。People 是自托管的，因此您需要有人能够管理 Docker/Kubernetes、配置网络并监控基础设施。</p>
+        <p><strong>日常使用：</strong>不需要。Web UI 专为非技术用户（招聘人员、用人经理）设计。您可以在不编写任何代码的情况下管理招聘需求、筛选候选人、安排面试并与候选人沟通。</p>
+        <p><strong>开发者方面：</strong>People 提供 REST API 和 SDK，支持自定义集成。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 2: HIRING & RECRUITMENT -->
+  <div class="section" id="s2">
+    <div class="section-header"><span class="icon">02 · 招聘</span><h2>招聘与人才获取功能</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">People 支持哪些招聘阶段？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
+        <p>People 支持<strong>可定制的招聘流程</strong>：</p>
+        <ul>
+          <li><strong>候选人寻访：</strong>生成寻访名单、管理招聘活动</li>
+          <li><strong>简历筛选：</strong>简历解析、AI 辅助排序、淘汰性问题</li>
+          <li><strong>面试：</strong>日程安排、面试官协调、结构化评分卡</li>
+          <li><strong>Offer：</strong>Offer 管理、审批流程</li>
+          <li><strong>录用：</strong>交接至 HRIS（Workday、BambooHR、Rippling）</li>
+          <li><strong>拒绝：</strong>候选人沟通、数据留存/删除</li>
+        </ul>
+        <p>您可以为每个招聘需求自定义阶段（例如添加"技术测试"或"文化匹配"阶段）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">AI 辅助候选人排序是如何工作的？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
+        <p>People 利用 AI <strong>辅助</strong>（而非取代）人工判断：</p>
+        <ol>
+          <li><strong>简历解析：</strong>AI 从简历中提取结构化数据（技能、经验、教育背景）</li>
+          <li><strong>匹配：</strong>AI 将候选人与岗位要求进行匹配（数据来源于 Vault）</li>
+          <li><strong>排序：</strong>AI 按匹配度对候选人进行排序（附带置信度分数）</li>
+          <li><strong>人工审核：</strong>排序结果在使用前必须由人工审核并批准</li>
+        </ol>
+        <p>AI 排序是<strong>建议</strong>，而非决策。人工可以覆盖、调整或忽略排序结果。</p>
+        <div class="callout warning"><strong>人工监督</strong>所有 AI 建议均被记录。当人工覆盖 AI 建议时，该操作会被追踪（用于持续改进系统）。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">People 能自动化面试安排吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
+        <p>可以。People 提供<strong>自动化面试安排</strong>：</p>
+        <ul>
+          <li><strong>日历集成：</strong>连接 Google Workspace、Microsoft 365、CalDAV</li>
+          <li><strong>可用时间匹配：</strong>自动找到候选人与所有面试官都方便的时间</li>
+          <li><strong>自动邮件：</strong>向候选人发送排期请求（AI 起草、人工审批）</li>
+          <li><strong>时区处理：</strong>自动处理时区差异</li>
+          <li><strong>面试官组协调：</strong>管理多位面试官的群面安排</li>
+        </ul>
+        <p>目标：<strong>从排期请求到确认面试 ≤24 小时</strong>。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">People 能起草候选人邮件吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
+        <p>可以。People 提供<strong>AI 起草的候选人沟通</strong>：</p>
+        <ul>
+          <li><strong>确认邮件：</strong>"我们已收到您的申请"</li>
+          <li><strong>状态更新：</strong>"您已进入下一阶段"</li>
+          <li><strong>拒绝邮件：</strong>"我们决定与其他候选人继续推进"</li>
+          <li><strong>下一步安排：</strong>"以下是面试流程的预期安排"</li>
+        </ul>
+        <p>所有邮件在发送前均<strong>由 AI 起草、人工审批</strong>（可按邮件类型配置）。您也可以使用自定义模板。</p>
+        <div class="callout tip"><strong>回复率</strong>目标：AI 起草的沟通中候选人回复率 ≥60%。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">我可以将职位发布到多个招聘平台吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>招聘平台集成</strong>：</p>
+        <ul>
+          <li><strong>LinkedIn：</strong>发布到 LinkedIn Jobs</li>
+          <li><strong>Indeed：</strong>发布到 Indeed</li>
+          <li><strong>Glassdoor：</strong>发布到 Glassdoor</li>
+          <li><strong>垂直招聘平台：</strong>发布到行业特定的招聘网站</li>
+          <li><strong>您的招聘页面：</strong>与您公司的招聘网站集成</li>
+        </ul>
+        <p>您可以一次创建职位，同时分发到多个招聘平台。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">我可以为面试创建结构化评分卡吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
+        <p>可以。People 提供<strong>结构化评分卡</strong>：</p>
+        <ul>
+          <li><strong>自定义标准：</strong>为每个岗位定义评估标准（例如技术能力、沟通能力、文化匹配）</li>
+          <li><strong>评分量表：</strong>使用数字量表（1-5 分）或定性评分（强/弱/中性）</li>
+          <li><strong>面试官反馈：</strong>每位面试官填写自己的评分卡</li>
+          <li><strong>汇总：</strong>People 汇总多位面试官的评分卡</li>
+          <li><strong>Recap 集成：</strong>来自 Recap 的面试笔记自动填充评分卡</li>
+        </ul>
+        <p>结构化评分卡可减少偏见并提升招聘质量——所有人按相同标准进行评估。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">我可以同时管理多个招聘需求吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>多招聘需求管理</strong>：</p>
+        <ul>
+          <li><strong>仪表盘：</strong>在一个仪表盘中查看所有活跃的招聘需求</li>
+          <li><strong>独立流程：</strong>每个招聘需求拥有独立的流程、候选人和阶段</li>
+          <li><strong>团队分配：</strong>将招聘人员和用人经理分配到具体招聘需求</li>
+          <li><strong>优先级：</strong>将招聘需求标记为高/中/低优先级</li>
+        </ul>
+        <p>目标：<strong>每个组织 ≥5 个活跃招聘需求</strong>。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">候选人可以看到自己的状态吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
+        <p>可以。People 提供<strong>候选人门户</strong>：</p>
+        <ul>
+          <li><strong>状态可见：</strong>候选人可以看到自己在流程中的位置</li>
+          <li><strong>文件提交：</strong>候选人可以上传文件（推荐信、作品集）</li>
+          <li><strong>沟通：</strong>候选人可以通过门户向招聘人员发送消息</li>
+          <li><strong>透明性：</strong>候选人被告知 AI 的参与情况（按法规要求）</li>
+        </ul>
+        <p>候选人门户提升了透明度，减少了"黑洞焦虑"（候选人不知道自己的申请怎么样了）。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 3: OUR SOLUTION'S STRENGTHS -->
+  <div class="section" id="s3">
+    <div class="section-header"><span class="icon">03 · 优势</span><h2>方案优势与设计</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">People 相比其他 ATS 工具有哪些核心优势？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
+        <table>
+          <thead><tr><th>维度</th><th>ODW.ai People</th><th>典型 ATS 工具</th></tr></thead>
+          <tbody>
+            <tr><td>部署方式</td><td>✅ 自托管——完全掌控数据</td><td>❌ 仅云端</td></tr>
+            <tr><td>审计追踪</td><td>✅ 全面、不可篡改、可导出</td><td>⚠️ 部分或事后补充</td></tr>
+            <tr><td>AI 透明度</td><td>✅ 每一次 AI 操作均被记录</td><td>❌ 不透明、黑箱</td></tr>
+            <tr><td>人工监督</td><td>✅ 架构级强制要求</td><td>⚠️ 可选或不存在</td></tr>
+            <tr><td>模型控制</td><td>✅ 客户自选、模型无关</td><td>❌ 由供应商指定</td></tr>
+            <tr><td>合规姿态</td><td>✅ 从第一天起即审计就绪</td><td>⚠️ 合规是事后补救</td></tr>
+            <tr><td>套件集成</td><td>✅ Vault、Recap、Loop、Shield</td><td>❌ 独立或有限集成</td></tr>
+          </tbody>
+        </table>
+        <p>People 的核心竞争力在于<strong>审计就绪 + 数据主权 + 人工监督</strong>。如果您需要合规能力与数据控制，People 是最佳选择。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">People 如何缩短招聘周期？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
+        <p>People 通过<strong>自动化事务性任务</strong>来缩短招聘周期：</p>
+        <ul>
+          <li><strong>简历筛选：</strong>AI 在几分钟内解析并对候选人进行排序（而人工审阅需要数小时）</li>
+          <li><strong>面试安排：</strong>自动化排期（≤24 小时，而非数日往返沟通）</li>
+          <li><strong>候选人沟通：</strong>AI 起草邮件（而非人工撰写）</li>
+          <li><strong>流程管理：</strong>自动阶段流转（而非人工更新）</li>
+        </ul>
+        <p>目标：<strong>招聘周期缩短 ≥30%</strong>（相比基线——自报 + 系统追踪的事务性时间）。</p>
+        <div class="callout tip"><strong>核心洞察</strong>People 不取代人工判断——它通过自动化事务性工作，让招聘人员专注于判断。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">People 如何防止招聘中的偏见？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
+        <p>People 提供<strong>偏见监控与透明度</strong>：</p>
+        <ul>
+          <li><strong>结构化评分卡：</strong>所有人按相同标准进行评估</li>
+          <li><strong>AI 透明度：</strong>所有 AI 建议均被记录且可解释</li>
+          <li><strong>人工监督：</strong>人工审阅并可覆盖 AI 建议</li>
+          <li><strong>人口统计分析：</strong>偏见监控仪表盘（配有隐私控制）</li>
+          <li><strong>审计追踪：</strong>追踪谁在何时、为何做出了什么决策</li>
+        </ul>
+        <p>People 无法消除偏见（没有系统可以做到），但它让偏见<strong>可见且可审计</strong>。</p>
+        <div class="callout warning"><strong>重要提示</strong>People 是工具，不是解决方案。您仍需要多元化的面试小组、包容的职位描述，以及持续的偏见培训。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">People 能应对大批量招聘吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>大批量招聘</strong>：</p>
+        <ul>
+          <li><strong>批量处理：</strong>一次筛选数百名候选人</li>
+          <li><strong>自动化工作流：</strong>自动阶段流转、候选人沟通</li>
+          <li><strong>可扩展基础设施：</strong>基于 Kubernetes 的部署可水平扩展</li>
+          <li><strong>团队协作：</strong>多名招聘人员可共同处理同一招聘需求</li>
+        </ul>
+        <p>目标：<strong>每个组织每月处理 ≥100 名候选人</strong>。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">我可以自定义招聘工作流吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
+        <p>可以。People 提供<strong>高度可定制的工作流</strong>：</p>
+        <ul>
+          <li><strong>自定义阶段：</strong>添加、移除或重命名流程阶段</li>
+          <li><strong>阶段规则：</strong>定义阶段流转规则（例如"必须通过技术测试才能安排面试"）</li>
+          <li><strong>自动化动作：</strong>阶段流转时触发操作（通过 Loop 集成）</li>
+          <li><strong>按需求定制：</strong>不同招聘需求采用不同工作流</li>
+        </ul>
+        <p>这对于拥有复杂招聘流程的组织（例如具有多个审批阶段的政府承包商）尤为实用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">People 能与我现有的 HRIS 集成吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>HRIS 集成</strong>：</p>
+        <ul>
+          <li><strong>Workday：</strong>将已录用候选人交接至 Workday</li>
+          <li><strong>BambooHR：</strong>交接至 BambooHR</li>
+          <li><strong>Rippling：</strong>交接至 Rippling</li>
+          <li><strong>自定义：</strong>基于 API 与其他 HRIS 系统集成</li>
+        </ul>
+        <p>People 管理<strong>入职前</strong>流程。候选人被录用后，People 将其交接至您的 HRIS 进行入职、薪资等后续处理。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">People 能处理内部调动吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
+        <p><strong>v1.0 不支持。</strong>内部调动（晋升、调职）计划于 v1.1（2026 年第四季度）推出。</p>
+        <p>在 v1.0 中，People 专注于<strong>外部招聘</strong>——从组织外部招聘候选人。</p>
+        <p>如果您在 v1.1 之前需要内部调动功能，请联系我们——我们或许可以提供早期访问。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">People 能处理非正式员工（合同工、自由职业者）吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
+        <p><strong>v1.0 不支持。</strong>合同工管理计划于 v1.2（2027 年第一季度）推出。</p>
+        <p>在 v1.0 中，People 专注于<strong>全职员工招聘</strong>。</p>
+        <p>如果您在 v1.2 之前需要合同工功能，请联系我们——我们或许可以提供早期访问或替代方案。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 4: COMPLIANCE & AUDIT -->
+  <div class="section" id="s4">
+    <div class="section-header"><span class="icon">04 · 合规</span><h2>合规与审计</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">People 是否符合 GDPR？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
+        <p>是的。People <strong>兼容 GDPR</strong>：</p>
+        <ul>
+          <li><strong>数据驻留：</strong>所有候选人数据保留在您的基础设施内</li>
+          <li><strong>删除权：</strong>按请求删除候选人数据（附带审计追踪）</li>
+          <li><strong>访问权：</strong>按请求导出候选人数据</li>
+          <li><strong>数据最小化：</strong>仅收集必要数据</li>
+          <li><strong>同意追踪：</strong>追踪候选人对数据处理的同意</li>
+        </ul>
+        <p>People 帮助您满足 GDPR（第 32 条）要求的<strong>技术与组织措施</strong>。您仍需要单独处理法律与程序性要求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">People 是否符合欧盟《人工智能法案》？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
+        <p>是的。People 专为<strong>欧盟《人工智能法案》合规</strong>设计：</p>
+        <ul>
+          <li><strong>高风险分类：</strong>欧盟《人工智能法案》将招聘 AI 列为高风险。People 满足相关要求：</li>
+          <li><strong>人工监督：</strong>架构级强制要求——没有人工审核就没有 AI 决策</li>
+          <li><strong>透明度：</strong>所有 AI 操作均被记录且可解释</li>
+          <li><strong>合格评定：</strong>People 提供合格评定所需的文档</li>
+        </ul>
+        <p>People 是少数几款从底层开始就为欧盟《人工智能法案》合规设计的 ATS 工具之一。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">People 是否符合纽约市 144 号地方法？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
+        <p>是的。People 专为<strong>纽约市 144 号地方法合规</strong>设计：</p>
+        <ul>
+          <li><strong>偏见测试：</strong>People 提供偏见监控仪表盘</li>
+          <li><strong>透明度：</strong>候选人被告知 AI 的参与</li>
+          <li><strong>审计追踪：</strong>所有 AI 操作均被记录且可导出</li>
+        </ul>
+        <p>纽约市 144 号地方法要求对自动化雇佣决策工具进行年度偏见审计。People 的审计追踪使这些审计变得简单直接。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">我可以导出审计报告给监管机构吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
+        <p>可以。People 提供<strong>审计报告导出</strong>：</p>
+        <ul>
+          <li><strong>格式：</strong>PDF、JSON、CSV</li>
+          <li><strong>范围：</strong>按招聘需求、候选人、日期范围或自定义筛选条件导出</li>
+          <li><strong>内容：</strong>所有系统操作、人工决策、AI 建议、数据访问记录</li>
+          <li><strong>速度：</strong>在 <strong>&lt;5 分钟</strong>内生成完整的招聘需求导出</li>
+        </ul>
+        <p>当审计人员要求提供文档时，您可以在几分钟内生成完整报告——而不是几天。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">People 如何处理候选人数据删除请求？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
+        <p>People 提供<strong>候选人权利管理</strong>：</p>
+        <ul>
+          <li><strong>删除请求：</strong>候选人可以请求删除数据（通过门户或邮件）</li>
+          <li><strong>自动化删除：</strong>People 在所有系统中删除候选人数据（附带审计追踪）</li>
+          <li><strong>留存策略：</strong>配置 N 天后自动删除（例如被拒绝的候选人 1 年后删除）</li>
+          <li><strong>例外处理：</strong>标记不可删除的数据（例如法律保留）</li>
+        </ul>
+        <p>所有删除操作均被记录——您可以向监管机构证明您已遵从删除请求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">我可以追踪候选人何时被告知 AI 参与吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
+        <p>可以。People 提供<strong>AI 披露追踪</strong>：</p>
+        <ul>
+          <li><strong>自动披露：</strong>当使用 AI 时，People 自动告知候选人（按法规要求）</li>
+          <li><strong>追踪：</strong>所有披露事件均被记录（时间、方式、披露内容）</li>
+          <li><strong>自定义：</strong>为您的组织自定义披露措辞</li>
+          <li><strong>报告：</strong>生成披露合规报告</li>
+        </ul>
+        <p>目标：<strong>≥90% 的候选人被告知 AI 参与</strong>。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">我可以监控招聘决策中的偏见吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
+        <p>可以。People 提供<strong>偏见监控仪表盘</strong>：</p>
+        <ul>
+          <li><strong>人口统计分析：</strong>按人口统计维度追踪招聘结果（配有隐私控制）</li>
+          <li><strong>差异性影响：</strong>检测招聘决策中潜在的差异性影响</li>
+          <li><strong>AI 建议分析：</strong>分析 AI 建议中是否存在潜在偏见</li>
+          <li><strong>人工覆盖追踪：</strong>追踪人工何时覆盖 AI（以及覆盖是否纠正了潜在偏见）</li>
+        </ul>
+        <p>偏见监控是<strong>诊断工具</strong>，不是解决方案。它帮助您发现潜在问题——您仍需要调查并解决这些问题。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">我可以设置数据留存策略吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
+        <p>可以。People 提供<strong>数据留存策略</strong>：</p>
+        <ul>
+          <li><strong>自动删除：</strong>N 天后自动删除候选人数据（例如被拒绝的候选人 1 年后删除）</li>
+          <li><strong>分阶段策略：</strong>不同阶段采用不同留存规则（例如录用候选人永久保留，被拒绝的候选人 1 年后删除）</li>
+          <li><strong>法律保留：</strong>标记不可删除的数据（例如诉讼期间）</li>
+          <li><strong>审计追踪：</strong>所有留存/删除操作均被记录</li>
+        </ul>
+        <p>这对于 GDPR 合规（数据最小化）和存储管理非常有用。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 5: SECURITY & PRIVACY -->
+  <div class="section" id="s5">
+    <div class="section-header"><span class="icon">05 · 安全</span><h2>安全与隐私</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">People 安全吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
+        <p>是的。People 采用<strong>安全最佳实践</strong>构建：</p>
+        <ul>
+          <li><strong>自托管：</strong>所有候选人数据保留在您的基础设施内</li>
+          <li><strong>加密：</strong>静态数据 AES-256，传输中数据 TLS 1.3</li>
+          <li><strong>访问控制：</strong>RBAC、SSO（通过 Shield 集成）</li>
+          <li><strong>审计日志：</strong>所有访问的防篡改日志（通过 Shield）</li>
+          <li><strong>开源：</strong>代码可审计——您可以验证没有后门或数据外泄</li>
+        </ul>
+        <p>People 为受监管行业设计。如果您能使用 People，您就能通过合规审计。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">ODW.ai 能访问我的候选人数据吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
+        <p><strong>不能。</strong>People 在您的基础设施上自托管。ODW.ai 完全无法访问您的候选人数据。</p>
+        <p>与基于云的 ATS 工具（Greenhouse、Lever）不同，People 不会将候选人数据发送给第三方。一切都留在您的服务器上。</p>
+        <p>这对于受监管行业至关重要。如果您的 ATS 在向云供应商发送候选人 PII，您就无法声称拥有数据主权。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">People 是否符合 HIPAA？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
+        <p>People 在医疗招聘场景中<strong>兼容 HIPAA</strong>：</p>
+        <ul>
+          <li><strong>本地处理：</strong>候选人数据保留在您的基础设施内</li>
+          <li><strong>加密：</strong>本地存储采用 AES-256 加密</li>
+          <li><strong>访问控制：</strong>密码保护、基于角色的访问控制</li>
+          <li><strong>审计日志：</strong>所有访问的防篡改日志</li>
+        </ul>
+        <p>People 帮助您满足 HIPAA 要求的<strong>技术保障措施</strong>。您仍需要单独处理行政与物理保障措施。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">我可以在气隙隔离（air-gapped）环境中部署 People 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>气隙隔离部署</strong>（无互联网访问）：</p>
+        <ul>
+          <li><strong>离线安装：</strong>无需互联网即可安装 People</li>
+          <li><strong>本地模型：</strong>所有 AI 模型在您的设备上运行——无需调用外部 API</li>
+          <li><strong>无外部依赖：</strong>People 的核心功能不需要互联网访问</li>
+        </ul>
+        <p>气隙隔离部署在政府承包商、军事和高安全环境中很常见。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">我可以控制谁可以访问候选人数据吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
+        <p>可以。People 提供<strong>基于角色的访问控制</strong>（通过 Shield 集成）：</p>
+        <ul>
+          <li><strong>管理员：</strong>完全访问——配置设置、管理用户、查看所有数据</li>
+          <li><strong>招聘人员：</strong>访问分配的招聘需求和候选人</li>
+          <li><strong>用人经理：</strong>访问其招聘需求对应的候选人</li>
+          <li><strong>面试官：</strong>访问其正在面试的候选人</li>
+          <li><strong>查看者：</strong>只读访问</li>
+        </ul>
+        <p>您还可以设置按招聘需求的权限（例如只有招聘团队可以看到某个特定岗位的候选人）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">我可以追踪谁访问了候选人数据吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
+        <p>可以。People 提供<strong>审计日志</strong>（通过 Shield 集成）：</p>
+        <ul>
+          <li><strong>谁：</strong>哪个用户访问了数据</li>
+          <li><strong>什么：</strong>访问了哪些候选人数据</li>
+          <li><strong>何时：</strong>时间戳</li>
+          <li><strong>为何：</strong>访问原因（如有要求）</li>
+        </ul>
+        <p>所有审计日志均防篡改，并可导出用于合规目的。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">如果有人未经权限访问了候选人数据怎么办？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
+        <p>People 提供<strong>访问控制与告警</strong>：</p>
+        <ul>
+          <li><strong>访问控制：</strong>基于角色的访问防止未授权访问</li>
+          <li><strong>告警：</strong>收到未授权访问尝试的通知</li>
+          <li><strong>审计追踪：</strong>所有访问均被记录（包括被阻止的尝试）</li>
+          <li><strong>调查：</strong>使用审计日志调查事件</li>
+        </ul>
+        <p>对于重大事件，您可以生成完整的审计报告提交给监管机构或法律顾问。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">People 的代码可审计吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
+        <p>是的。People 的核心是<strong>开源的</strong>：</p>
+        <ul>
+          <li><strong>透明：</strong>所有代码在 GitHub 上公开</li>
+          <li><strong>可审计：</strong>您（或您的安全团队）可以检查代码是否存在漏洞、后门或数据外泄</li>
+          <li><strong>可验证：</strong>您可以验证 People 的行为是否与宣称一致——没有隐藏的遥测，没有数据发送给第三方</li>
+        </ul>
+        <p>这对于重视数据主权的组织至关重要。您应该能够验证您的招聘工具在做什么。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 6: MODELS & AI -->
+  <div class="section" id="s6">
+    <div class="section-header"><span class="icon">06 · 模型</span><h2>模型与 AI</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">People 使用哪些 AI 模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
+        <p>People 是<strong>模型无关的</strong>——它支持广泛的模型：</p>
+        <ul>
+          <li><strong>本地模型：</strong>Llama 3、Mistral、Gemma、Qwen（通过 Ollama、vLLM、llama.cpp）</li>
+          <li><strong>API 模型：</strong>OpenAI（GPT-4o、GPT-4o-mini）、Anthropic（Claude 3.5 Sonnet）、Google（Gemini 1.5 Pro）、Mistral API</li>
+          <li><strong>自定义：</strong>任何提供 OpenAI 兼容 API 的模型</li>
+        </ul>
+        <p>您可以随时切换模型——无需更改代码。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">我可以使用本地模型（完全离线）吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
+        <p>可以。People 通过以下方式支持<strong>本地模型</strong>：</p>
+        <ul>
+          <li><strong>Ollama：</strong>运行本地模型的最简便方式。支持 Llama 3、Mistral、Gemma 等</li>
+          <li><strong>vLLM：</strong>面向生产负载的高性能推理服务器</li>
+          <li><strong>llama.cpp：</strong>轻量级、CPU 友好的推理（适合边缘设备）</li>
+        </ul>
+        <p>本地模型在您的自有硬件上运行——没有数据离开您的基础设施。完全的主权。</p>
+        <div class="callout warning"><strong>硬件要求</strong>本地模型需要 GPU 硬件（推荐 NVIDIA GPU）。仅 CPU 推理可行，但对大模型来说速度较慢。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">我可以使用基于 API 的模型（OpenAI、Anthropic）吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>基于 API 的模型</strong>：</p>
+        <ul>
+          <li><strong>OpenAI：</strong>GPT-4o、GPT-4o-mini</li>
+          <li><strong>Anthropic：</strong>Claude 3.5 Sonnet、Claude 3 Opus</li>
+          <li><strong>Google：</strong>Gemini 1.5 Pro</li>
+          <li><strong>Mistral：</strong>Mistral Large、Mistral Medium</li>
+          <li><strong>自定义：</strong>任何提供 OpenAI 兼容 API 的模型</li>
+        </ul>
+        <p>基于 API 的模型在您需要前沿能力（例如复杂推理、长上下文窗口）而本地模型尚无法满足时很有用。</p>
+        <div class="callout warning"><strong>数据主权</strong>如果您使用基于 API 的模型，候选人数据将被发送至 API 提供商。这可能违反主权要求。使用本地模型以获得最大主权。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">如何选择合适的模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
+        <p>选择模型取决于您的优先事项：</p>
+        <table>
+          <thead><tr><th>模型</th><th>速度</th><th>质量</th><th>成本</th><th>主权</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Llama 3 8B（本地）</strong></td><td>✅ 快</td><td>⚠️ 良好</td><td>✅ 免费</td><td>✅ 完全</td></tr>
+            <tr><td><strong>Llama 3 70B（本地）</strong></td><td>⚠️ 较慢</td><td>✅ 更好</td><td>✅ 免费</td><td>✅ 完全</td></tr>
+            <tr><td><strong>GPT-4o-mini（API）</strong></td><td>✅ 快</td><td>✅ 良好</td><td>❌ 付费</td><td>❌ 无</td></tr>
+            <tr><td><strong>GPT-4o（API）</strong></td><td>⚠️ 中等</td><td>✅ 最佳</td><td>❌ 付费</td><td>❌ 无</td></tr>
+            <tr><td><strong>Claude 3.5 Sonnet（API）</strong></td><td>⚠️ 中等</td><td>✅ 最佳</td><td>❌ 付费</td><td>❌ 无</td></tr>
+          </tbody>
+        </table>
+        <p><strong>建议：</strong></p>
+        <ul>
+          <li><strong>最大主权：</strong>使用 Llama 3 8B 或 70B（本地、免费）</li>
+          <li><strong>最高质量：</strong>使用 GPT-4o 或 Claude 3.5 Sonnet（API、付费）</li>
+          <li><strong>平衡方案：</strong>日常任务使用 Llama 3 8B，复杂推理使用 GPT-4o-mini</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">如果有新的、更好的模型发布，我能切换吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
+        <p>可以。People 是<strong>模型无关的</strong>——您可以随时切换模型：</p>
+        <ul>
+          <li><strong>无需改代码：</strong>只需在管理控制台中更新模型配置</li>
+          <li><strong>按任务：</strong>为不同任务使用不同模型（例如小模型用于简历解析，大模型用于候选人排序）</li>
+        </ul>
+        <p>这保护了您的投资——当更好的模型发布时，您可以立即采用，无需重新架构系统。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">我可以为我的招聘流程微调模型吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
+        <p><strong>People v1.0 不支持。</strong>People 使用现有模型——不支持微调。</p>
+        <p>但是，您可以：</p>
+        <ul>
+          <li><strong>使用提示工程：</strong>自定义提示以引导模型行为（例如"工程岗位重点关注技术技能"）</li>
+          <li><strong>使用 Vault：</strong>以您的岗位要求、策略、合规规则来约束 AI</li>
+          <li><strong>外部微调：</strong>在 People 外部微调模型（使用 Hugging Face Transformers 等工具），然后通过自定义端点在 People 中使用微调后的模型</li>
+        </ul>
+        <p>微调支持计划于 v2.0（2027 年第二季度）推出。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">People 会自主做出招聘决策吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
+        <p><strong>不会。</strong>People 的设计确保<strong>任何 AI 输出未经人工审核都不会成为招聘决策</strong>。</p>
+        <p>这是<strong>架构约束</strong>，而非功能缺失。People 在架构上无法：</p>
+        <ul>
+          <li>自动拒绝候选人</li>
+          <li>自动将候选人推进到下一阶段</li>
+          <li>自动发送 Offer 信</li>
+        </ul>
+        <p>所有决策都需要人工批准。AI 辅助；人类决策。</p>
+        <div class="callout info"><strong>重要原因</strong>欧盟《人工智能法案》及新兴法规要求高风险 AI 系统具备人工监督。People 的架构确保天生合规。</div>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 7: DEPLOYMENT & SETUP -->
+  <div class="section" id="s7">
+    <div class="section-header"><span class="icon">07 · 部署</span><h2>部署与配置</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">如何部署 People？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
+        <p>People 提供三种部署方式：</p>
+        <ol>
+          <li><strong>Docker Compose：</strong>最简单。一条命令（<code>docker-compose up</code>）即可运行。最适合开发和小规模部署。</li>
+          <li><strong>Kubernetes（Helm）：</strong>生产就绪。提供 Helm chart。最适合大规模部署、高可用、自动扩缩容。</li>
+          <li><strong>裸机：</strong>面向高级用户。直接安装在 Linux 服务器上。最大控制力，但需要更多配置。</li>
+        </ol>
+        <p>对大多数客户而言，<strong>Docker Compose 是最快的方式</strong>。生产环境建议使用 Kubernetes。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">配置需要多长时间？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
+        <p>配置时间取决于您的部署方式：</p>
+        <ul>
+          <li><strong>Docker Compose：</strong>1-2 小时。拉取镜像、配置环境变量、运行 <code>docker-compose up</code>。</li>
+          <li><strong>Kubernetes：</strong>4-8 小时。部署 Helm chart、配置 Ingress、设置存储、测试。</li>
+          <li><strong>裸机：</strong>2-3 天。安装依赖、配置服务、测试。</li>
+        </ul>
+        <p>部署完成后，您还需要：</p>
+        <ul>
+          <li>配置第一个招聘需求（30 分钟）</li>
+          <li>导入现有候选人（如果是从其他 ATS 迁移）</li>
+          <li>设置集成（日历、邮件、招聘平台）</li>
+        </ul>
+        <p>目标：<strong>从入职到首个招聘需求全面管理 ≤14 天</strong>。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">运行 People 需要技术人员吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
+        <p><strong>部署方面：</strong>需要。People 是自托管的，因此您需要有人能够管理 Docker/Kubernetes、配置网络并监控基础设施。</p>
+        <p><strong>日常使用：</strong>不需要。Web UI 专为非技术用户（招聘人员、用人经理）设计。您可以在不编写任何代码的情况下管理招聘需求、筛选候选人、安排面试并与候选人沟通。</p>
+        <p><strong>开发者方面：</strong>People 提供 REST API 和 SDK，支持自定义集成。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">People 的系统要求是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
+        <p>People 的要求取决于您的部署方式：</p>
+        <table>
+          <thead><tr><th>组件</th><th>最低要求</th><th>推荐配置</th></tr></thead>
+          <tbody>
+            <tr><td><strong>CPU</strong></td><td>2 核</td><td>4+ 核</td></tr>
+            <tr><td><strong>内存</strong></td><td>8 GB</td><td>16+ GB</td></tr>
+            <tr><td><strong>存储</strong></td><td>50 GB SSD</td><td>200+ GB SSD</td></tr>
+            <tr><td><strong>GPU（本地模型用）</strong></td><td>无（使用 API 模型）</td><td>NVIDIA A100 或同等</td></tr>
+            <tr><td><strong>操作系统</strong></td><td>Linux（Ubuntu 20.04+、RHEL 8+）</td><td>Ubuntu 22.04 LTS</td></tr>
+          </tbody>
+        </table>
+        <p>如果您使用基于 API 的模型（OpenAI、Anthropic），则不需要 GPU。如果您使用本地模型，强烈建议使用 GPU。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">我可以在 AWS/GCP/Azure 上部署 People 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
+        <p>可以。People 可以部署在任何云服务商上：</p>
+        <ul>
+          <li><strong>AWS：</strong>使用 EC2（Docker Compose）或 EKS（Kubernetes）</li>
+          <li><strong>GCP：</strong>使用 GCE（Docker Compose）或 GKE（Kubernetes）</li>
+          <li><strong>Azure：</strong>使用 VM（Docker Compose）或 AKS（Kubernetes）</li>
+        </ul>
+        <p>我们为每个云服务商提供部署指南。生产环境建议使用 Kubernetes 配合托管数据库。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">我可以从现有 ATS 迁移吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>ATS 迁移</strong>：</p>
+        <ul>
+          <li><strong>导入候选人：</strong>从 Greenhouse、Lever、Workday 等导入候选人数据</li>
+          <li><strong>导入招聘需求：</strong>导入活跃的招聘需求</li>
+          <li><strong>导入沟通记录：</strong>导入邮件历史（如可用）</li>
+          <li><strong>迁移指南：</strong>常见 ATS 系统的分步指南</li>
+        </ul>
+        <p>迁移通常需要 1-2 周，具体取决于数据量和复杂度。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">我可以在正式上线前预览 People 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
+        <p>可以。People 包含<strong>沙盒模式</strong>：</p>
+        <ul>
+          <li><strong>测试环境：</strong>在测试环境中使用示例数据部署 People</li>
+          <li><strong>实验：</strong>测试不同的工作流、集成和配置</li>
+          <li><strong>评估：</strong>在正式上线前评估质量、延迟和合规性</li>
+        </ul>
+        <p>我们建议在沙盒模式下测试 1-2 周后再部署到生产环境。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">如何将 People 更新到新版本？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
+        <p><strong>Docker Compose：</strong>拉取新镜像、重启容器。</p>
+        <p><strong>Kubernetes：</strong>更新 Helm chart，滚动更新。</p>
+        <p><strong>裸机：</strong>按照文档中的升级指南操作。</p>
+        <p>总更新时间：<strong>&lt;10 分钟</strong>（Docker/Kubernetes）。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 8: COST & PRICING -->
+  <div class="section" id="s8">
+    <div class="section-header"><span class="icon">08 · 费用</span><h2>费用与定价</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">People 的费用是多少？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
+        <p>People 的定价基于<strong>功能与部署方式</strong>：</p>
+        <table>
+          <thead><tr><th>版本</th><th>价格</th><th>包含内容</th></tr></thead>
+          <tbody>
+            <tr><td><strong>企业版</strong></td><td>$199-$499/月</td><td>自托管、全部功能、无限用户、优先支持</td></tr>
+            <tr><td><strong>套件包</strong></td><td>自定义定价</td><td>People + 全部 ODW.ai 模块（Desk、Voice、Vault、Shield 等）</td></tr>
+          </tbody>
+        </table>
+        <p><strong>额外成本：</strong></p>
+        <ul>
+          <li><strong>API 费用：</strong>如果您使用基于 API 的模型（OpenAI、Anthropic），需直接向 API 提供商付费</li>
+          <li><strong>基础设施：</strong>您需为自己的服务器/云付费（如自托管）</li>
+        </ul>
+        <div class="callout info"><strong>说明</strong>上述定价仅供参考，可能会有变动。请联系我们获取当前定价和自定义报价。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">People 比 Greenhouse 或 Lever 便宜吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
+        <p><strong>视情况而定。</strong>Greenhouse 和 Lever 的年费为 $10,000-$50,000+（取决于公司规模和功能）。</p>
+        <p>People 的费用为 $199-$499/月（$2,400-$6,000/年）。对大多数中小企业而言，People <strong>显著更便宜</strong>。</p>
+        <p>不过，People 需要您自行管理基础设施（服务器、数据库等）。如果将基础设施成本计入，总拥有成本可能更高。</p>
+        <p>对大多数受监管的中小企业而言，People 比基于云的替代方案<strong>更便宜也更合规</strong>。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">有隐藏费用吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
+        <p>没有隐藏费用。总拥有成本包括：</p>
+        <ul>
+          <li><strong>People 订阅费：</strong>基于版本的月费</li>
+          <li><strong>API 费用：</strong>如果您使用基于 API 的模型（OpenAI、Anthropic），需直接向 API 提供商付费</li>
+          <li><strong>基础设施：</strong>您需为自己的服务器/云付费（如自托管）</li>
+        </ul>
+        <p>仅此而已。没有设置费，没有意外收费，没有按用户收费。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">你们接受哪些付款方式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
+        <p>我们接受：</p>
+        <ul>
+          <li><strong>信用卡/借记卡：</strong>Visa、Mastercard、American Express（通过 Stripe）</li>
+          <li><strong>银行转账：</strong>适用于年度订阅或企业客户</li>
+          <li><strong>加密货币：</strong>比特币、以太坊、USDC（面向注重隐私的客户）</li>
+        </ul>
+        <p>年度订阅支持发票。详情请联系我们。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">如果不满意可以退款吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
+        <p>可以。我们提供 <strong>30 天退款保证</strong>。如果您在前 30 天内不满意，请联系我们获取全额退款——无需任何理由。</p>
+        <p>30 天后，您可以随时取消。您将继续使用至当前计费周期结束，但不足一个计费月的部分不予退款。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">People 包含在 ODW.ai 套件包中吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
+        <p><strong>是的。</strong>People 是 ODW.ai 套件的一部分。您可以：</p>
+        <ul>
+          <li><strong>单独购买 People：</strong>独立使用 People</li>
+          <li><strong>购买完整套件：</strong>以折扣价获取 Desk、Voice、Vault、People、Shield 及其他模块</li>
+        </ul>
+        <p>套件包以 20-30% 的折扣包含 People（与单独购买相比）。而且所有模块原生集成——People 使用 Vault 管理岗位要求、Recap 管理面试笔记、Loop 管理工作流自动化、Shield 管理治理。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">按用户收费还是按招聘需求收费？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
+        <p><strong>都不是。</strong>People 的定价是<strong>无限的</strong>——不按用户或招聘需求收费。</p>
+        <p>您根据版本（企业版）支付固定月费。可以管理任意数量的招聘需求和用户。</p>
+        <p>唯一的可变成本是 API 费用（如果您使用基于 API 的模型）。您直接向 API 提供商支付 Token 使用费。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 9: SCALING & OPERATIONS -->
+  <div class="section" id="s9">
+    <div class="section-header"><span class="icon">09 · 扩展</span><h2>扩展与运维</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">People 能处理多少招聘需求？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
+        <p>People 可以处理<strong>无限招聘需求</strong>：</p>
+        <ul>
+          <li><strong>无招聘需求上限：</strong>想管理多少就管理多少</li>
+          <li><strong>无候选人上限：</strong>想处理多少候选人就处理多少</li>
+          <li><strong>可扩展基础设施：</strong>基于 Kubernetes 的部署可水平扩展</li>
+        </ul>
+        <p>对于大批量招聘（每月 100+ 个招聘需求），我们建议：</p>
+        <ul>
+          <li><strong>Kubernetes：</strong>用于自动扩缩容和高可用</li>
+          <li><strong>托管数据库：</strong>RDS、Cloud SQL 或 Azure SQL</li>
+          <li><strong>负载均衡器：</strong>在副本之间分配流量</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">People 能支持多少用户？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
+        <p>People 支持<strong>无限用户</strong>：</p>
+        <ul>
+          <li><strong>企业版：</strong>无限用户</li>
+        </ul>
+        <p>People 可水平扩展——添加更多节点以处理更多并发用户。典型部署中每个节点支持 50-200 个并发用户。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">如果 People 宕机了怎么办？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
+        <p>如果 People 宕机，招聘操作将不可用，但您的数据是安全的：</p>
+        <ul>
+          <li><strong>数据存储：</strong>所有数据存储在您的数据库中（PostgreSQL）——不会丢失</li>
+          <li><strong>恢复：</strong>重启 People，它会重新连接到您的数据库</li>
+          <li><strong>高可用：</strong>生产环境中，使用多个副本部署 People（Kubernetes）</li>
+        </ul>
+        <p>对于高可用部署，我们建议：</p>
+        <ul>
+          <li><strong>Kubernetes：</strong>跨可用区部署 3+ 个副本</li>
+          <li><strong>托管数据库：</strong>RDS、Cloud SQL 或 Azure SQL（99.9% 可用性 SLA）</li>
+          <li><strong>负载均衡器：</strong>在副本之间分配流量</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">如何监控 People 的性能？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
+        <p>People 包含<strong>监控仪表盘</strong>：</p>
+        <ul>
+          <li><strong>系统健康：</strong>CPU、内存、磁盘、网络使用情况</li>
+          <li><strong>招聘指标：</strong>招聘需求数量、处理的候选人数量、招聘周期</li>
+          <li><strong>模型指标：</strong>API 费用、Token 使用量、模型延迟</li>
+          <li><strong>合规指标：</strong>审计追踪完整性、披露合规性</li>
+        </ul>
+        <p>您还可以通过标准协议将指标导出到外部监控工具（Prometheus、Grafana、Datadog）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">如何备份 People 数据？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
+        <p>People 数据存储在 PostgreSQL 中。使用标准 PostgreSQL 工具进行备份：</p>
+        <ul>
+          <li><strong>自动备份：</strong>通过 pg_dump 或 WAL 归档配置每日备份</li>
+          <li><strong>异地存储：</strong>将备份存储在不同位置（例如 S3、GCS、异地服务器）</li>
+          <li><strong>测试恢复：</strong>定期测试从备份恢复以确保其有效</li>
+        </ul>
+        <p>People 为常见部署模式（Docker、Kubernetes、本地部署）提供备份指南和脚本。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">我可以将 People 用于多个品牌或客户吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>多租户</strong>：</p>
+        <ul>
+          <li><strong>多品牌：</strong>为每个品牌创建独立的工作区</li>
+          <li><strong>多客户：</strong>对于代理机构，为每个客户创建独立的工作区</li>
+          <li><strong>隔离：</strong>每个工作区拥有独立的招聘需求、候选人和设置</li>
+        </ul>
+        <p>这对于管理多个客户招聘的代理机构，或拥有多个业务部门的企业集团非常有用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">如何培训团队使用 People？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
+        <p>People 设计得<strong>直观易用</strong>，但我们提供培训资源：</p>
+        <ul>
+          <li><strong>文档：</strong>面向管理员、招聘人员和用人经理的全面用户指南</li>
+          <li><strong>视频教程：</strong>核心功能的分步演示</li>
+          <li><strong>入职培训：</strong>付费客户可享受 2 小时远程入职培训</li>
+          <li><strong>支持：</strong>企业客户享受优先支持</li>
+        </ul>
+        <p>大多数团队在 1-2 天的培训后即可高效使用。Web UI 尤其直观——招聘人员和用人经理无需任何技术技能。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 10: INTEGRATION & WORKFLOWS -->
+  <div class="section" id="s10">
+    <div class="section-header"><span class="icon">10 · 集成</span><h2>集成与工作流</h2><span class="count">7 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">People 如何与其他 ODW.ai 产品集成？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
+        <p>People 与所有 ODW.ai 产品<strong>原生集成</strong>：</p>
+        <ul>
+          <li><strong>Vault：</strong>岗位要求、策略、合规规则</li>
+          <li><strong>Recap：</strong>面试笔记、结构化反馈、评分卡</li>
+          <li><strong>Loop：</strong>工作流自动化、阶段流转、通知</li>
+          <li><strong>Shield：</strong>治理、审计日志、合规报告</li>
+        </ul>
+        <p>如果您使用 ODW.ai 套件，People 集成是自动的——无需单独配置。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">People 提供 API 吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
+        <p>是的。People 提供 <strong>REST API</strong> 用于程序化访问：</p>
+        <ul>
+          <li><strong>候选人管理：</strong>通过 API 创建、更新、查询候选人</li>
+          <li><strong>招聘需求管理：</strong>通过 API 创建、更新招聘需求</li>
+          <li><strong>审计日志：</strong>通过 API 查询审计日志</li>
+          <li><strong>Webhooks：</strong>候选人晋级、面试安排等事件通知</li>
+        </ul>
+        <p>API 有完整文档（OpenAPI/Swagger），支持 API 密钥或 OAuth 2.0 认证。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">我可以将 People 与日历集成吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>日历集成</strong>：</p>
+        <ul>
+          <li><strong>Google Workspace：</strong>Google Calendar</li>
+          <li><strong>Microsoft 365：</strong>Outlook Calendar</li>
+          <li><strong>CalDAV：</strong>任何兼容 CalDAV 的日历</li>
+        </ul>
+        <p>日历集成实现自动化面试安排——People 自动找到候选人与面试官都方便的时间，发送邀请并处理改期。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">我可以将 People 与邮件集成吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>邮件集成</strong>：</p>
+        <ul>
+          <li><strong>SMTP：</strong>通过任何 SMTP 服务器发送邮件</li>
+          <li><strong>IMAP：</strong>通过 IMAP 接收回复</li>
+          <li><strong>特定服务商：</strong>Gmail、Outlook 等</li>
+        </ul>
+        <p>邮件集成实现 AI 起草的候选人沟通——确认收到、状态更新、拒绝、下一步安排。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">我可以将 People 与招聘平台集成吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>招聘平台集成</strong>：</p>
+        <ul>
+          <li><strong>LinkedIn：</strong>发布到 LinkedIn Jobs</li>
+          <li><strong>Indeed：</strong>发布到 Indeed</li>
+          <li><strong>Glassdoor：</strong>发布到 Glassdoor</li>
+          <li><strong>垂直招聘平台：</strong>发布到行业特定的招聘网站</li>
+        </ul>
+        <p>您可以一次创建职位，同时分发到多个招聘平台。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">我可以将 People 与 HRIS 集成吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
+        <p>可以。People 支持<strong>HRIS 集成</strong>：</p>
+        <ul>
+          <li><strong>Workday：</strong>将录用候选人交接至 Workday</li>
+          <li><strong>BambooHR：</strong>交接至 BambooHR</li>
+          <li><strong>Rippling：</strong>交接至 Rippling</li>
+          <li><strong>自定义：</strong>通过 API 与其他 HRIS 系统集成</li>
+        </ul>
+        <p>People 管理<strong>入职前</strong>流程。候选人被录用后，People 将其交接至您的 HRIS 进行入职、薪资等后续处理。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">我可以将 People 与现有 AI 工具一起使用吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
+        <p>可以。People 可以与现有 AI 工具配合使用：</p>
+        <ul>
+          <li><strong>LangChain：</strong>在 LangChain 管道中将 People 作为招聘工具使用</li>
+          <li><strong>LlamaIndex：</strong>在 LlamaIndex 管道中将 People 作为招聘工具使用</li>
+          <li><strong>自定义 RAG：</strong>在您的自定义管道中使用 People 的 API</li>
+        </ul>
+        <p>People 被设计为<strong>招聘层</strong>——它提供招聘自动化，您可以将任何 AI 工具用于其他任务。</p>
+      </div></div></div>
+  </div>
+
+  <!-- SECTION 11: LIMITATIONS & ROADMAP -->
+  <div class="section" id="s11">
+    <div class="section-header"><span class="icon">11 · 路线图</span><h2>局限性与路线图</h2><span class="count">8 个问题</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">People 目前不能做什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
+        <p>People 功能强大，但在 v1.0 中存在一些限制：</p>
+        <ul>
+          <li><strong>无自主决策：</strong>People 不会在无人工批准的情况下做出 Offer/拒绝决策（架构约束）</li>
+          <li><strong>无视频面试分析：</strong>不支持面部识别、语音分析或自动化视频评分（监管风险过高）</li>
+          <li><strong>无薪资/薪酬：</strong>候选人在接受 Offer 后交接至 HRIS</li>
+          <li><strong>无员工生命周期管理：</strong>入职、绩效评估、离职不在范围内</li>
+          <li><strong>无背景调查：</strong>People 与背景调查服务商集成但不执行调查</li>
+          <li><strong>无签证/移民：</strong>不在范围内；仅支持与专业服务商的集成</li>
+          <li><strong>无原生移动应用：</strong>v1.0 仅提供 Web 响应式设计</li>
+          <li><strong>仅支持英文：</strong>多语言候选人沟通计划于 v1.1 推出</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">People 会支持多语言候选人沟通吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
+        <p><strong>会。</strong>多语言支持计划于 v1.1（2026 年第四季度）推出：</p>
+        <ul>
+          <li><strong>西班牙语</strong></li>
+          <li><strong>法语</strong></li>
+          <li><strong>德语</strong></li>
+          <li><strong>中文（普通话）</strong></li>
+          <li><strong>日语</strong></li>
+          <li><strong>以及更多语言</strong></li>
+        </ul>
+        <p>这是面向全球化团队和多语言招聘的高优先级功能。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">People 会支持视频面试分析吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
+        <p><strong>在当前路线图中不会。</strong>视频面试分析（面部识别、语音分析、自动化评分）存在重大监管风险。</p>
+        <p>我们正在关注监管动态和有效性研究。如果/当我们添加视频分析时，将需要充分的验证和人工监督。</p>
+        <p>如果视频分析对您的使用场景是必须的，请联系我们——我们可能会根据客户需求和监管明朗程度重新考虑。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">未来 12 个月的路线图是什么？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
+        <p>关键里程碑：</p>
+        <ul>
+          <li><strong>v1.0（2026 年第三季度）：</strong>MVP 发布。自托管、审计就绪、人在回路、套件集成。</li>
+          <li><strong>v1.1（2026 年第四季度）：</strong>多语言候选人沟通、内部调动、高级偏见检测。</li>
+          <li><strong>v1.2（2027 年第一季度）：</strong>非正式员工管理、预测性分析（招聘周期预测）。</li>
+          <li><strong>v2.0（2027 年第二季度）：</strong>模型微调、高级公平性测试、移动应用。</li>
+        </ul>
+        <p>路线图可能根据客户反馈调整。请联系我们获取最新路线图或提出功能需求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">什么情况下不应该使用 People？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
+        <p>在以下情况下，People 不适合您：</p>
+        <ul>
+          <li><strong>您没有合规要求：</strong>如果您不关心审计追踪或数据主权，基于云的工具（Greenhouse、Lever）更简单（无需管理基础设施）。</li>
+          <li><strong>您需要自主招聘：</strong>如果您希望 AI 在无人工审核的情况下做出招聘决策，People 不适合您（这是设计如此）。</li>
+          <li><strong>您需要视频面试分析：</strong>People 不支持面部识别或自动化视频评分。</li>
+          <li><strong>您需要薪资/薪酬管理：</strong>People 在候选人接受 Offer 后交接至 HRIS。如果您需要完整的员工生命周期管理，请使用专门的 HRIS。</li>
+          <li><strong>您需要移动应用：</strong>People 在 v1.0 中仅提供 Web 响应式设计。如果您需要原生移动应用，请等待 v2.0。</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">People 能保证无偏见招聘吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
+        <p><strong>不能。</strong>没有任何系统能保证无偏见招聘。People 的偏见监控是<strong>诊断工具</strong>，不是解决方案。</p>
+        <p>People 帮助您：</p>
+        <ul>
+          <li><strong>识别潜在偏见：</strong>通过人口统计分析和差异性影响检测</li>
+          <li><strong>让偏见可见：</strong>通过审计追踪和透明度</li>
+          <li><strong>减少偏见：</strong>通过结构化评分卡和人工监督</li>
+        </ul>
+        <p>但消除偏见需要持续努力：多元化的面试 panel、包容性的职位描述、偏见培训和持续监控。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">People 能取代我的招聘团队吗？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
+        <p><strong>不能。</strong>People 旨在<strong>增强</strong>您的招聘团队，而非取代。</p>
+        <p>People 自动化事务性工作（排期、沟通、流程管理），让招聘人员专注于：</p>
+        <ul>
+          <li><strong>人工判断：</strong>评估候选人、做出招聘决策</li>
+          <li><strong>关系建立：</strong>与候选人、用人经理建立信任</li>
+          <li><strong>策略规划：</strong>寻访策略、雇主品牌、多元化计划</li>
+        </ul>
+        <p>People 让您的招聘团队更高效——它不会取代优秀招聘中不可或缺的人性要素。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">如何开始使用？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
+        <p>三种路径：</p>
+        <ol>
+          <li><strong>免费试用：</strong>下载 People 并自行部署。无需信用卡。用您自己的招聘流程试用，看看是否适合您的场景。</li>
+          <li><strong>预约演示：</strong>与我们的团队预约演示。我们将为您展示 People、回答您的问题，并帮助您评估它是否适合您的业务。</li>
+          <li><strong>联系销售：</strong>企业客户或套件包，请联系我们的销售团队获取定制报价。</li>
+        </ol>
+        <div class="callout tip"><strong>准备开始？</strong>访问 <code>odw.ai/people</code> 下载 People 或预约演示。</div>
+      </div></div></div>
+  </div>
+
+  <div class="footer">
+    <p><strong>People — 企业用户常见问题</strong></p>
+    <p>版本 2.0 · 审阅草稿</p>
+    <p>基于：PRD v1.0、SAD v1.0、TSD v1.0、TBK v1.0（2026-06-23）</p>
+    <p><a href="suite.html">← 返回套件常见问题</a></p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
+  });
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
+  const searchInput = document.getElementById('searchInput');
+  const noResults = document.getElementById('noResults');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.section').forEach(section => {
+      let sectionHas = 0;
+      section.querySelectorAll('.faq-item').forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        const match = q === '' || txt.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) { sectionHas++; visibleCount++; if (q !== '') item.classList.add('open'); }
+        else { item.classList.remove('open'); }
+      });
+      section.style.display = sectionHas === 0 && q !== '' ? 'none' : '';
+    });
+    noResults.style.display = (visibleCount === 0 && q !== '') ? 'block' : 'none';
+  });
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
+</script>
+</body>
+</html>

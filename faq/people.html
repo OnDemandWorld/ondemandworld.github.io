@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>People — FAQ for Business Users</title>
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
   <div class="subtitle">People FAQ</div>
   <h1>People FAQ</h1>
   <p>AI hiring & HR assistant — audit-ready by design, self-hosted, human-in-the-loop. Answers for business leaders, no technical background required.</p>
@@ -28,7 +33,7 @@
     <span>People</span>
   </div>
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search questions… (e.g. 'audit', 'compliance', 'GDPR', 'hiring', 'candidate', 'bias', 'sovereignty')">
+    <input type="text" id="searchInput" aria-label="Search questions" placeholder="Search questions… (e.g. 'audit', 'compliance', 'GDPR', 'hiring', 'candidate', 'bias', 'sovereignty')">
   </div>
   <div class="controls">
     <button onclick="expandAll()">＋ Expand all</button>
@@ -59,8 +64,8 @@
   <div class="section" id="s1">
     <div class="section-header"><span class="icon">01 · OVERVIEW</span><h2>The Basics — What Is People?</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What is ODW.ai People in plain English?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">What is ODW.ai People in plain English?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
         <p>People is an <strong>AI-powered hiring and HR assistant</strong>. It automates the administrative burden of recruiting — sourcing, screening, scheduling, candidate communication — while keeping all hiring decisions in human hands.</p>
         <p>Here's how it works:</p>
         <ol>
@@ -73,8 +78,8 @@
         <p>The key difference from other ATS tools: <strong>audit-ready by design, self-hosted, human-in-the-loop</strong>. Every action is logged, all candidate data stays on your infrastructure, and no AI output becomes a hiring decision without human review.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What problem does People solve?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">What problem does People solve?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
         <p>Hiring is simultaneously critical and operationally painful:</p>
         <ul>
           <li><strong>Admin burden:</strong> Recruiters spend most of their time on scheduling, status updates, organizing candidate info — not on human judgment</li>
@@ -85,8 +90,8 @@
         <p>People solves this by providing <strong>self-hosted, audit-ready, human-in-the-loop hiring automation</strong>. You get the efficiency gains of AI without the compliance risk.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Who is People for?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">Who is People for?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
         <p>People is designed for <strong>growing businesses (50–500 employees) in regulated industries</strong>:</p>
         <ul>
           <li><strong>Financial services:</strong> Banks, fintech, insurance — strict hiring compliance</li>
@@ -99,8 +104,8 @@
         <p>If you can't afford a compliance failure during hiring, People is for you.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How is People different from Greenhouse or Lever?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">How is People different from Greenhouse or Lever?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
         <p>Greenhouse and Lever are <strong>cloud-based ATS tools</strong>. People is a <strong>self-hosted, audit-ready ATS</strong>.</p>
         <table>
           <thead><tr><th>Aspect</th><th>ODW.ai People</th><th>Greenhouse / Lever</th></tr></thead>
@@ -117,8 +122,8 @@
         <p>If you need full data control and audit readiness, People is the better choice.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does "audit-ready by design" mean?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">What does "audit-ready by design" mean?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
         <p>"Audit-ready by design" means <strong>compliance is architectural, not an afterthought</strong>:</p>
         <ul>
           <li><strong>Every action logged:</strong> System actions, human decisions, AI recommendations — all immutably logged with timestamps, actor identification, and rationale</li>
@@ -130,8 +135,8 @@
         <div class="callout tip"><strong>Key difference</strong>Most ATS tools treat compliance as a feature to add later. People treats it as the foundation.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does "human-in-the-loop" mean?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">What does "human-in-the-loop" mean?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
         <p>"Human-in-the-loop" means <strong>no AI output becomes a hiring decision without human review</strong>:</p>
         <ul>
           <li><strong>AI assists:</strong> AI ranks candidates, drafts emails, suggests next steps</li>
@@ -142,8 +147,8 @@
         <div class="callout info"><strong>Why this matters</strong>The EU AI Act and emerging regulations require human oversight for high-risk AI systems. People's architecture ensures compliance by design.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is People a standalone product or part of a suite?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">Is People a standalone product or part of a suite?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
         <p>People is <strong>both</strong>:</p>
         <ul>
           <li><strong>Standalone:</strong> You can use People by itself as your ATS</li>
@@ -159,8 +164,8 @@
         <p>The suite integration is what makes People powerful — it shares context across modules without sharing data externally.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does "sovereign" mean in this context?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">What does "sovereign" mean in this context?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
         <p>"Sovereign" means <strong>full control over candidate data</strong>:</p>
         <ul>
           <li><strong>Data location:</strong> All candidate data (resumes, communications, decisions) stays on your infrastructure</li>
@@ -171,8 +176,8 @@
         <p>This is critical for regulated industries. You can't claim data sovereignty if your ATS is sending candidate PII to a cloud vendor.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical skills to use People?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">Do I need technical skills to use People?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
         <p><strong>For deployment:</strong> Yes. People is self-hosted, so you need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure.</p>
         <p><strong>For day-to-day use:</strong> No. The web UI is designed for non-technical users (recruiters, hiring managers). You can manage requisitions, screen candidates, schedule interviews, and communicate with candidates without writing code.</p>
         <p><strong>For developers:</strong> People provides a REST API and SDKs for custom integrations.</p>
@@ -181,10 +186,10 @@
 
   <!-- SECTION 2: HIRING & RECRUITMENT -->
   <div class="section" id="s2">
-    <div class="section-header"><span class="icon">02 · SOVEREIGNTY</span><h2>Hiring & Recruitment Features</h2><span class="count">8 questions</span></div>
+    <div class="section-header"><span class="icon">02 · HIRING</span><h2>Hiring & Recruitment Features</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What hiring stages does People support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">What hiring stages does People support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
         <p>People supports a <strong>customizable hiring pipeline</strong>:</p>
         <ul>
           <li><strong>Sourcing:</strong> Generate sourcing lists, manage campaigns</li>
@@ -197,8 +202,8 @@
         <p>You can customize stages for each requisition (e.g., add "Technical Test" or "Culture Fit" stages).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does AI-assisted candidate ranking work?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">How does AI-assisted candidate ranking work?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
         <p>People uses AI to <strong>assist</strong> (not replace) human judgment:</p>
         <ol>
           <li><strong>Resume parsing:</strong> AI extracts structured data from resumes (skills, experience, education)</li>
@@ -210,8 +215,8 @@
         <div class="callout warning"><strong>Human oversight</strong>All AI recommendations are logged. When humans override AI, it's tracked (used to improve the system over time).</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can People automate interview scheduling?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">Can People automate interview scheduling?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
         <p>Yes. People provides <strong>automated interview scheduling</strong>:</p>
         <ul>
           <li><strong>Calendar integration:</strong> Connects to Google Workspace, Microsoft 365, CalDAV</li>
@@ -223,8 +228,8 @@
         <p>Target: <strong>≤24 hours from scheduling request to confirmed interview</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can People draft candidate emails?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">Can People draft candidate emails?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
         <p>Yes. People provides <strong>AI-drafted candidate communication</strong>:</p>
         <ul>
           <li><strong>Acknowledgment emails:</strong> "We received your application"</li>
@@ -236,8 +241,8 @@
         <div class="callout tip"><strong>Response rate</strong>Target: ≥60% candidate response rate to AI-drafted communications.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I post jobs to multiple job boards?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">Can I post jobs to multiple job boards?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>job board integrations</strong>:</p>
         <ul>
           <li><strong>LinkedIn:</strong> Post to LinkedIn Jobs</li>
@@ -249,8 +254,8 @@
         <p>You can create a job once and distribute it to multiple boards simultaneously.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I create structured scorecards for interviews?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">Can I create structured scorecards for interviews?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
         <p>Yes. People provides <strong>structured scorecards</strong>:</p>
         <ul>
           <li><strong>Custom criteria:</strong> Define evaluation criteria for each role (e.g., technical skills, communication, culture fit)</li>
@@ -262,8 +267,8 @@
         <p>Structured scorecards reduce bias and improve hiring quality — everyone is evaluated against the same criteria.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I manage multiple requisitions at once?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">Can I manage multiple requisitions at once?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>multi-requisition management</strong>:</p>
         <ul>
           <li><strong>Dashboard:</strong> View all active requisitions in one dashboard</li>
@@ -274,8 +279,8 @@
         <p>Target: <strong>≥5 active requisitions per organization</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can candidates see their own status?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">Can candidates see their own status?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
         <p>Yes. People provides a <strong>candidate portal</strong>:</p>
         <ul>
           <li><strong>Status visibility:</strong> Candidates can see where they are in the pipeline</li>
@@ -289,10 +294,10 @@
 
   <!-- SECTION 3: OUR SOLUTION'S STRENGTHS -->
   <div class="section" id="s3">
-    <div class="section-header"><span class="icon">03 · INTEGRATION</span><h2>Our Solution's Strengths & Design</h2><span class="count">8 questions</span></div>
+    <div class="section-header"><span class="icon">03 · STRENGTHS</span><h2>Our Solution's Strengths & Design</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What are the top advantages of People over other ATS tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">What are the top advantages of People over other ATS tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
         <table>
           <thead><tr><th>Feature</th><th>ODW.ai People</th><th>Typical ATS Tools</th></tr></thead>
           <tbody>
@@ -308,8 +313,8 @@
         <p>People competes on <strong>audit readiness + sovereignty + human oversight</strong>. If you need compliance and data control, People is the best option.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does People reduce time-to-hire?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">How does People reduce time-to-hire?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
         <p>People reduces time-to-hire by <strong>automating administrative tasks</strong>:</p>
         <ul>
           <li><strong>Resume screening:</strong> AI parses and ranks candidates in minutes (vs. hours of manual review)</li>
@@ -321,8 +326,8 @@
         <div class="callout tip"><strong>Key insight</strong>People doesn't replace human judgment — it frees recruiters to focus on judgment by automating the admin.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does People prevent bias in hiring?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">How does People prevent bias in hiring?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
         <p>People provides <strong>bias monitoring and transparency</strong>:</p>
         <ul>
           <li><strong>Structured scorecards:</strong> Everyone evaluated against the same criteria</li>
@@ -335,8 +340,8 @@
         <div class="callout warning"><strong>Important</strong>People is a tool, not a solution. You still need diverse hiring panels, inclusive job descriptions, and ongoing bias training.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can People handle high-volume hiring?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">Can People handle high-volume hiring?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>high-volume hiring</strong>:</p>
         <ul>
           <li><strong>Batch processing:</strong> Screen hundreds of candidates at once</li>
@@ -347,8 +352,8 @@
         <p>Target: <strong>≥100 candidates processed per organization per month</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I customize the hiring workflow?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">Can I customize the hiring workflow?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
         <p>Yes. People provides <strong>highly customizable workflows</strong>:</p>
         <ul>
           <li><strong>Custom stages:</strong> Add, remove, or rename pipeline stages</li>
@@ -359,8 +364,8 @@
         <p>This is useful for organizations with complex hiring processes (e.g., government contractors with multiple approval stages).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can People integrate with my existing HRIS?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">Can People integrate with my existing HRIS?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>HRIS integrations</strong>:</p>
         <ul>
           <li><strong>Workday:</strong> Handoff hired candidates to Workday</li>
@@ -371,15 +376,15 @@
         <p>People manages the <strong>pre-hire</strong> process. Once a candidate is hired, People hands off to your HRIS for onboarding, payroll, etc.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can People handle internal mobility?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">Can People handle internal mobility?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
         <p><strong>Not in v1.0.</strong> Internal mobility (promotions, transfers) is planned for v1.1 (Q4 2026).</p>
         <p>In v1.0, People focuses on <strong>external hiring</strong> — recruiting candidates from outside the organization.</p>
         <p>If you need internal mobility features before v1.1, contact us — we may be able to provide early access.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can People handle contingent workers (contractors, freelancers)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">Can People handle contingent workers (contractors, freelancers)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
         <p><strong>Not in v1.0.</strong> Contingent worker management is planned for v1.2 (Q1 2027).</p>
         <p>In v1.0, People focuses on <strong>full-time employee hiring</strong>.</p>
         <p>If you need contingent worker features before v1.2, contact us — we may be able to provide early access or a workaround.</p>
@@ -388,10 +393,10 @@
 
   <!-- SECTION 4: COMPLIANCE & AUDIT -->
   <div class="section" id="s4">
-    <div class="section-header"><span class="icon">04 · SECURITY</span><h2>Compliance & Audit</h2><span class="count">8 questions</span></div>
+    <div class="section-header"><span class="icon">04 · COMPLIANCE</span><h2>Compliance & Audit</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Does People comply with GDPR?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">Does People comply with GDPR?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
         <p>Yes. People is <strong>GDPR-compatible</strong>:</p>
         <ul>
           <li><strong>Data residency:</strong> All candidate data stays on your infrastructure</li>
@@ -403,8 +408,8 @@
         <p>People helps you meet the <strong>technical and organizational measures</strong> required by GDPR (Article 32). You still need to address legal and procedural requirements separately.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does People comply with the EU AI Act?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">Does People comply with the EU AI Act?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
         <p>Yes. People is designed for <strong>EU AI Act compliance</strong>:</p>
         <ul>
           <li><strong>High-risk classification:</strong> The EU AI Act classifies hiring AI as high-risk. People meets the requirements:</li>
@@ -415,8 +420,8 @@
         <p>People is one of the few ATS tools designed from the ground up for EU AI Act compliance.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does People comply with NYC Local Law 144?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">Does People comply with NYC Local Law 144?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
         <p>Yes. People is designed for <strong>NYC Local Law 144 compliance</strong>:</p>
         <ul>
           <li><strong>Bias testing:</strong> People provides bias monitoring dashboards</li>
@@ -426,8 +431,8 @@
         <p>NYC Local Law 144 requires annual bias audits for automated employment decision tools. People's audit trails make these audits straightforward.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I export audit reports for regulators?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">Can I export audit reports for regulators?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
         <p>Yes. People provides <strong>audit report exports</strong>:</p>
         <ul>
           <li><strong>Formats:</strong> PDF, JSON, CSV</li>
@@ -438,8 +443,8 @@
         <p>When an auditor asks for documentation, you can generate a complete report in minutes — not days.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does People handle candidate data deletion requests?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">How does People handle candidate data deletion requests?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
         <p>People provides <strong>candidate rights management</strong>:</p>
         <ul>
           <li><strong>Deletion requests:</strong> Candidates can request data deletion (via portal or email)</li>
@@ -450,8 +455,8 @@
         <p>All deletion actions are logged — you can prove to regulators that you complied with deletion requests.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I track when candidates are informed of AI involvement?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">Can I track when candidates are informed of AI involvement?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
         <p>Yes. People provides <strong>AI disclosure tracking</strong>:</p>
         <ul>
           <li><strong>Automatic disclosure:</strong> People automatically informs candidates when AI is used (as required by regulations)</li>
@@ -462,8 +467,8 @@
         <p>Target: <strong>≥90% of candidates informed of AI involvement</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I monitor for bias in hiring decisions?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">Can I monitor for bias in hiring decisions?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
         <p>Yes. People provides <strong>bias monitoring dashboards</strong>:</p>
         <ul>
           <li><strong>Demographic analytics:</strong> Track hiring outcomes by demographic (with privacy controls)</li>
@@ -474,8 +479,8 @@
         <p>Bias monitoring is a <strong>diagnostic tool</strong>, not a solution. It helps you identify potential issues — you still need to investigate and address them.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I set data retention policies?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">Can I set data retention policies?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
         <p>Yes. People provides <strong>data retention policies</strong>:</p>
         <ul>
           <li><strong>Auto-deletion:</strong> Automatically delete candidate data after N days (e.g., 1 year for rejected candidates)</li>
@@ -489,10 +494,10 @@
 
   <!-- SECTION 5: SECURITY & PRIVACY -->
   <div class="section" id="s5">
-    <div class="section-header"><span class="icon">05 · DEPLOYMENT</span><h2>Security & Privacy</h2><span class="count">8 questions</span></div>
+    <div class="section-header"><span class="icon">05 · SECURITY</span><h2>Security & Privacy</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Is People secure?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">Is People secure?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
         <p>Yes. People is built with <strong>security best practices</strong>:</p>
         <ul>
           <li><strong>Self-hosted:</strong> All candidate data stays on your infrastructure</li>
@@ -504,15 +509,15 @@
         <p>People is designed for regulated industries. If you can use People, you can pass a compliance audit.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does ODW.ai have access to my candidate data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">Does ODW.ai have access to my candidate data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
         <p><strong>No.</strong> People is self-hosted on your infrastructure. ODW.ai has zero access to your candidate data.</p>
         <p>Unlike cloud-based ATS tools (Greenhouse, Lever), People doesn't send candidate data to a third party. Everything stays on your servers.</p>
         <p>This is critical for regulated industries. You can't claim data sovereignty if your ATS is sending candidate PII to a cloud vendor.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does People comply with HIPAA?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">Does People comply with HIPAA?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
         <p>People is <strong>HIPAA-compatible</strong> for healthcare hiring:</p>
         <ul>
           <li><strong>On-premise processing:</strong> Candidate data stays on your infrastructure</li>
@@ -523,8 +528,8 @@
         <p>People helps you meet the <strong>technical safeguards</strong> required by HIPAA. You still need to address administrative and physical safeguards separately.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I deploy People in an air-gapped environment?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">Can I deploy People in an air-gapped environment?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>air-gapped deployment</strong> (no internet access):</p>
         <ul>
           <li><strong>Offline installation:</strong> Install People without internet access</li>
@@ -534,8 +539,8 @@
         <p>Air-gapped deployment is common for government contractors, military, and high-security environments.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I control who can access candidate data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">Can I control who can access candidate data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
         <p>Yes. People provides <strong>role-based access control</strong> (via Shield integration):</p>
         <ul>
           <li><strong>Admin:</strong> Full access — configure settings, manage users, view all data</li>
@@ -547,8 +552,8 @@
         <p>You can also set per-requisition permissions (e.g., only the hiring team can see candidates for a specific role).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I track who accessed candidate data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">Can I track who accessed candidate data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
         <p>Yes. People provides <strong>audit logging</strong> (via Shield integration):</p>
         <ul>
           <li><strong>Who:</strong> Which user accessed the data</li>
@@ -559,8 +564,8 @@
         <p>All audit logs are tamper-evident and can be exported for compliance purposes.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if someone accesses candidate data without permission?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">What happens if someone accesses candidate data without permission?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
         <p>People provides <strong>access control and alerting</strong>:</p>
         <ul>
           <li><strong>Access control:</strong> Role-based access prevents unauthorized access</li>
@@ -571,8 +576,8 @@
         <p>For critical incidents, you can generate a full audit report for regulators or legal counsel.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is People's code auditable?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">Is People's code auditable?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
         <p>Yes. People's core is <strong>open source</strong>:</p>
         <ul>
           <li><strong>Transparent:</strong> All code is publicly available on GitHub</li>
@@ -585,10 +590,10 @@
 
   <!-- SECTION 6: MODELS & AI -->
   <div class="section" id="s6">
-    <div class="section-header"><span class="icon">06 · COMPLIANCE</span><h2>Models & AI</h2><span class="count">7 questions</span></div>
+    <div class="section-header"><span class="icon">06 · MODELS</span><h2>Models & AI</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Which AI models does People use?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">Which AI models does People use?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
         <p>People is <strong>model-agnostic</strong> — it supports a wide range of models:</p>
         <ul>
           <li><strong>Local models:</strong> Llama 3, Mistral, Gemma, Qwen (via Ollama, vLLM, llama.cpp)</li>
@@ -598,8 +603,8 @@
         <p>You can switch models at any time — no code changes required.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use local models (fully offline)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">Can I use local models (fully offline)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>local models</strong> via:</p>
         <ul>
           <li><strong>Ollama:</strong> Easiest way to run local models. Supports Llama 3, Mistral, Gemma, etc.</li>
@@ -610,8 +615,8 @@
         <div class="callout warning"><strong>Hardware requirements</strong>Local models require GPU hardware (NVIDIA GPUs recommended). CPU-only inference is possible but slow for large models.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use API-based models (OpenAI, Anthropic)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">Can I use API-based models (OpenAI, Anthropic)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>API-based models</strong>:</p>
         <ul>
           <li><strong>OpenAI:</strong> GPT-4o, GPT-4o-mini</li>
@@ -624,8 +629,8 @@
         <div class="callout warning"><strong>Data sovereignty</strong>If you use API-based models, candidate data is sent to the API provider. This may violate sovereignty requirements. Use local models for maximum sovereignty.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I choose the right model?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">How do I choose the right model?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
         <p>Choosing a model depends on your priorities:</p>
         <table>
           <thead><tr><th>Model</th><th>Speed</th><th>Quality</th><th>Cost</th><th>Sovereignty</th></tr></thead>
@@ -645,8 +650,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What if a new, better model is released? Can I switch?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">What if a new, better model is released? Can I switch?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
         <p>Yes. People is <strong>model-agnostic</strong> — you can switch models at any time:</p>
         <ul>
           <li><strong>No code changes:</strong> Just update the model configuration in the admin console</li>
@@ -655,8 +660,8 @@
         <p>This future-proofs your investment — when better models are released, you can adopt them immediately without re-architecting your system.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I fine-tune models for my hiring process?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">Can I fine-tune models for my hiring process?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
         <p><strong>Not in People v1.0.</strong> People uses existing models — it doesn't support fine-tuning.</p>
         <p>However, you can:</p>
         <ul>
@@ -667,8 +672,8 @@
         <p>Fine-tuning support is planned for v2.0 (Q2 2027).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does People make autonomous hiring decisions?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">Does People make autonomous hiring decisions?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
         <p><strong>No.</strong> People is designed so that <strong>no AI output becomes a hiring decision without human review</strong>.</p>
         <p>This is an <strong>architectural constraint</strong>, not a feature gap. People literally cannot:</p>
         <ul>
@@ -683,10 +688,10 @@
 
   <!-- SECTION 7: DEPLOYMENT & SETUP -->
   <div class="section" id="s7">
-    <div class="section-header"><span class="icon">07 · MODELS</span><h2>Deployment & Setup</h2><span class="count">8 questions</span></div>
+    <div class="section-header"><span class="icon">07 · DEPLOYMENT</span><h2>Deployment & Setup</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How do I deploy People?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">How do I deploy People?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
         <p>People offers three deployment options:</p>
         <ol>
           <li><strong>Docker Compose:</strong> Easiest. One command (<code>docker-compose up</code>) and you're running. Best for development and small deployments.</li>
@@ -696,8 +701,8 @@
         <p>For most customers, <strong>Docker Compose is the fastest path</strong>. For production, we recommend Kubernetes.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How long does setup take?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">How long does setup take?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
         <p>Setup time depends on your deployment:</p>
         <ul>
           <li><strong>Docker Compose:</strong> 1-2 hours. Pull images, configure environment variables, run <code>docker-compose up</code>.</li>
@@ -713,15 +718,15 @@
         <p>Target: <strong>≤14 days from onboarding to first requisition fully managed</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical staff to run People?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">Do I need technical staff to run People?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
         <p><strong>For deployment:</strong> Yes. People is self-hosted, so you need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure.</p>
         <p><strong>For day-to-day use:</strong> No. The web UI is designed for non-technical users (recruiters, hiring managers). You can manage requisitions, screen candidates, schedule interviews, and communicate with candidates without writing code.</p>
         <p><strong>For developers:</strong> People provides a REST API and SDKs for custom integrations.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What are the system requirements for People?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">What are the system requirements for People?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
         <p>People's requirements depend on your deployment:</p>
         <table>
           <thead><tr><th>Component</th><th>Minimum</th><th>Recommended</th></tr></thead>
@@ -736,8 +741,8 @@
         <p>If you use API-based models (OpenAI, Anthropic), you don't need a GPU. If you use local models, GPU is strongly recommended.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I deploy People on AWS/GCP/Azure?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">Can I deploy People on AWS/GCP/Azure?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
         <p>Yes. People can be deployed on any cloud provider:</p>
         <ul>
           <li><strong>AWS:</strong> Use EC2 (for Docker Compose) or EKS (for Kubernetes)</li>
@@ -747,8 +752,8 @@
         <p>We provide deployment guides for each cloud provider. For production, we recommend Kubernetes with managed databases.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I migrate from my existing ATS?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">Can I migrate from my existing ATS?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>ATS migration</strong>:</p>
         <ul>
           <li><strong>Import candidates:</strong> Import candidate data from Greenhouse, Lever, Workday, etc.</li>
@@ -759,8 +764,8 @@
         <p>Migration typically takes 1-2 weeks depending on data volume and complexity.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I preview People before going live?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">Can I preview People before going live?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
         <p>Yes. People includes a <strong>sandbox mode</strong>:</p>
         <ul>
           <li><strong>Test environment:</strong> Deploy People in a test environment with sample data</li>
@@ -770,8 +775,8 @@
         <p>We recommend spending 1-2 weeks testing in sandbox mode before deploying to production.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I update People to a new version?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">How do I update People to a new version?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
         <p><strong>For Docker Compose:</strong> Pull the new image, restart containers.</p>
         <p><strong>For Kubernetes:</strong> Update the Helm chart, rolling update.</p>
         <p><strong>For bare metal:</strong> Follow the upgrade guide in the documentation.</p>
@@ -781,10 +786,10 @@
 
   <!-- SECTION 8: COST & PRICING -->
   <div class="section" id="s8">
-    <div class="section-header"><span class="icon">08 · LANGUAGES</span><h2>Cost & Pricing</h2><span class="count">7 questions</span></div>
+    <div class="section-header"><span class="icon">08 · COST</span><h2>Cost & Pricing</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How much does People cost?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">How much does People cost?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
         <p>People pricing is based on <strong>features and deployment</strong>:</p>
         <table>
           <thead><tr><th>Tier</th><th>Price</th><th>Includes</th></tr></thead>
@@ -801,16 +806,16 @@
         <div class="callout info"><strong>Note</strong>Pricing is illustrative and subject to change. Contact us for current pricing and custom quotes.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is People cheaper than Greenhouse or Lever?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">Is People cheaper than Greenhouse or Lever?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
         <p><strong>It depends.</strong> Greenhouse and Lever cost $10,000-$50,000+/year (depending on company size and features).</p>
         <p>People costs $199-$499/month ($2,400-$6,000/year). For most SMBs, People is <strong>significantly cheaper</strong>.</p>
         <p>However, People requires you to manage your own infrastructure (servers, databases, etc.). If you factor in infrastructure costs, the total cost of ownership may be higher.</p>
         <p>For most regulated SMBs, People is <strong>cheaper and more compliant</strong> than cloud-based alternatives.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Are there any hidden costs?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">Are there any hidden costs?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
         <p>No hidden costs. The total cost of ownership includes:</p>
         <ul>
           <li><strong>People subscription:</strong> Monthly fee based on tier</li>
@@ -820,8 +825,8 @@
         <p>That's it. No setup fees, no surprise charges, no per-user fees.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What payment methods do you accept?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">What payment methods do you accept?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
         <p>We accept:</p>
         <ul>
           <li><strong>Credit/debit cards:</strong> Visa, Mastercard, American Express (via Stripe)</li>
@@ -831,14 +836,14 @@
         <p>Invoicing is available for annual subscriptions. Contact us for details.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
         <p>Yes. We offer a <strong>30-day money-back guarantee</strong>. If you're not satisfied within the first 30 days, contact us for a full refund — no questions asked.</p>
         <p>After 30 days, you can cancel anytime. You'll continue to have access until the end of your billing period, but no refund is provided for partial months.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is People included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">Is People included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
         <p><strong>Yes.</strong> People is part of the ODW.ai suite. You can:</p>
         <ul>
           <li><strong>Purchase People standalone:</strong> Use People by itself</li>
@@ -847,8 +852,8 @@
         <p>The suite bundle includes People at a 20-30% discount compared to purchasing separately. And all modules integrate natively — People uses Vault for role requirements, Recap for interview notes, Loop for workflow automation, Shield for governance.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I pay per user or per requisition?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">Do I pay per user or per requisition?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
         <p><strong>Neither.</strong> People pricing is <strong>unlimited</strong> — no per-user or per-requisition fees.</p>
         <p>You pay a flat monthly fee based on your tier (Enterprise). Manage as many requisitions and users as you want.</p>
         <p>The only variable cost is API costs (if you use API-based models). You pay the API provider directly for token usage.</p>
@@ -857,10 +862,10 @@
 
   <!-- SECTION 9: SCALING & OPERATIONS -->
   <div class="section" id="s9">
-    <div class="section-header"><span class="icon">09 · PRICING</span><h2>Scaling & Operations</h2><span class="count">7 questions</span></div>
+    <div class="section-header"><span class="icon">09 · SCALING</span><h2>Scaling & Operations</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How many requisitions can People handle?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">How many requisitions can People handle?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
         <p>People can handle <strong>unlimited requisitions</strong>:</p>
         <ul>
           <li><strong>No requisition limit:</strong> Manage as many as you want</li>
@@ -875,8 +880,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How many users can People support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">How many users can People support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
         <p>People supports <strong>unlimited users</strong>:</p>
         <ul>
           <li><strong>Enterprise tier:</strong> Unlimited users</li>
@@ -884,8 +889,8 @@
         <p>People scales horizontally — add more nodes to handle more concurrent users. Typical deployments support 50-200 concurrent users per node.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if People goes down?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">What happens if People goes down?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
         <p>If People goes down, hiring operations are unavailable, but your data is safe:</p>
         <ul>
           <li><strong>Data storage:</strong> All data is stored in your database (PostgreSQL) — not lost</li>
@@ -900,8 +905,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I monitor People's performance?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">How do I monitor People's performance?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
         <p>People includes a <strong>monitoring dashboard</strong>:</p>
         <ul>
           <li><strong>System health:</strong> CPU, memory, disk, network usage</li>
@@ -912,8 +917,8 @@
         <p>You can also export metrics to external monitoring tools (Prometheus, Grafana, Datadog) via standard protocols.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I back up People data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">How do I back up People data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
         <p>People data is stored in PostgreSQL. Back up using standard PostgreSQL tools:</p>
         <ul>
           <li><strong>Automated backups:</strong> Configure daily backups via pg_dump or WAL archiving</li>
@@ -923,8 +928,8 @@
         <p>People provides backup guides and scripts for common deployment modes (Docker, Kubernetes, on-premises).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use People for multiple brands or clients?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">Can I use People for multiple brands or clients?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>multi-tenancy</strong>:</p>
         <ul>
           <li><strong>Multiple brands:</strong> Create separate workspaces for each brand</li>
@@ -934,8 +939,8 @@
         <p>This is useful for agencies managing multiple client hiring, or enterprises with multiple business units.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I train my team to use People?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">How do I train my team to use People?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
         <p>People is designed to be <strong>intuitive</strong>, but we provide training resources:</p>
         <ul>
           <li><strong>Documentation:</strong> Comprehensive user guides for admins, recruiters, and hiring managers</li>
@@ -949,10 +954,10 @@
 
   <!-- SECTION 10: INTEGRATION & WORKFLOWS -->
   <div class="section" id="s10">
-    <div class="section-header"><span class="icon">10 · ONBOARDING</span><h2>Integration & Workflows</h2><span class="count">7 questions</span></div>
+    <div class="section-header"><span class="icon">10 · INTEGRATION</span><h2>Integration & Workflows</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How does People integrate with other ODW.ai products?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">How does People integrate with other ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
         <p>People integrates <strong>natively</strong> with all ODW.ai products:</p>
         <ul>
           <li><strong>Vault:</strong> Role requirements, policies, compliance rules</li>
@@ -963,8 +968,8 @@
         <p>If you're using the ODW.ai suite, People integration is automatic — no separate configuration required.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does People provide an API?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">Does People provide an API?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
         <p>Yes. People provides a <strong>REST API</strong> for programmatic access:</p>
         <ul>
           <li><strong>Candidate management:</strong> Create, update, retrieve candidates via API</li>
@@ -975,8 +980,8 @@
         <p>The API is fully documented (OpenAPI/Swagger) and supports authentication via API keys or OAuth 2.0.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate People with my calendar?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">Can I integrate People with my calendar?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>calendar integrations</strong>:</p>
         <ul>
           <li><strong>Google Workspace:</strong> Google Calendar</li>
@@ -986,8 +991,8 @@
         <p>Calendar integration enables automated interview scheduling — People finds times that work for candidate and interviewers, sends invites, and handles rescheduling.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate People with my email?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">Can I integrate People with my email?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>email integrations</strong>:</p>
         <ul>
           <li><strong>SMTP:</strong> Send emails via any SMTP server</li>
@@ -997,8 +1002,8 @@
         <p>Email integration enables AI-drafted candidate communication — acknowledgments, status updates, rejections, next steps.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate People with job boards?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">Can I integrate People with job boards?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>job board integrations</strong>:</p>
         <ul>
           <li><strong>LinkedIn:</strong> Post to LinkedIn Jobs</li>
@@ -1009,8 +1014,8 @@
         <p>You can create a job once and distribute it to multiple boards simultaneously.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate People with my HRIS?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">Can I integrate People with my HRIS?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
         <p>Yes. People supports <strong>HRIS integrations</strong>:</p>
         <ul>
           <li><strong>Workday:</strong> Handoff hired candidates to Workday</li>
@@ -1021,8 +1026,8 @@
         <p>People manages the <strong>pre-hire</strong> process. Once a candidate is hired, People hands off to your HRIS for onboarding, payroll, etc.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use People with my existing AI tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">Can I use People with my existing AI tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
         <p>Yes. People can be used with existing AI tools:</p>
         <ul>
           <li><strong>LangChain:</strong> Use People as a hiring tool in LangChain pipelines</li>
@@ -1037,8 +1042,8 @@
   <div class="section" id="s11">
     <div class="section-header"><span class="icon">11 · ROADMAP</span><h2>Limitations & Roadmap</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What can't People do (yet)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">What can't People do (yet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
         <p>People is powerful, but it has limitations in v1.0:</p>
         <ul>
           <li><strong>No autonomous decisions:</strong> People will not make offer/reject decisions without human approval (architectural constraint)</li>
@@ -1052,8 +1057,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will People support multi-language candidate communication?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">Will People support multi-language candidate communication?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
         <p><strong>Yes.</strong> Multi-language support is planned for v1.1 (Q4 2026):</p>
         <ul>
           <li><strong>Spanish</strong></li>
@@ -1066,15 +1071,15 @@
         <p>This is a high-priority feature for global teams and multilingual hiring.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will People support video interview analysis?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">Will People support video interview analysis?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
         <p><strong>Not in the current roadmap.</strong> Video interview analysis (facial recognition, voice analysis, automated scoring) carries significant regulatory risk.</p>
         <p>We're monitoring the regulatory landscape and research on validity. If/when we add video analysis, it will require extensive validation and human oversight.</p>
         <p>If video analysis is a must-have for your use case, contact us — we may reconsider based on customer demand and regulatory clarity.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
         <p>Key milestones:</p>
         <ul>
           <li><strong>v1.0 (Q3 2026):</strong> MVP launch. Self-hosted, audit-ready, human-in-the-loop, suite integration.</li>
@@ -1085,8 +1090,8 @@
         <p>Roadmap is subject to change based on customer feedback. Contact us for the latest roadmap or to request features.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">When should I NOT use People?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">When should I NOT use People?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
         <p>People is not the right fit if:</p>
         <ul>
           <li><strong>You don't have compliance requirements:</strong> If you don't care about audit trails or data sovereignty, cloud-based tools (Greenhouse, Lever) are easier (no infrastructure to manage).</li>
@@ -1097,8 +1102,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does People guarantee bias-free hiring?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">Does People guarantee bias-free hiring?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
         <p><strong>No.</strong> No system can guarantee bias-free hiring. People's bias monitoring is a <strong>diagnostic tool</strong>, not a solution.</p>
         <p>People helps you:</p>
         <ul>
@@ -1109,8 +1114,8 @@
         <p>But eliminating bias requires ongoing effort: diverse hiring panels, inclusive job descriptions, bias training, and continuous monitoring.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can People replace my recruiting team?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">Can People replace my recruiting team?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
         <p><strong>No.</strong> People is designed to <strong>augment</strong> your recruiting team, not replace it.</p>
         <p>People automates administrative tasks (scheduling, communication, pipeline management), freeing recruiters to focus on:</p>
         <ul>
@@ -1121,8 +1126,8 @@
         <p>People makes your recruiting team more efficient — it doesn't replace the human element that's critical to good hiring.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I get started?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">How do I get started?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
         <p>Three paths:</p>
         <ol>
           <li><strong>Free trial:</strong> Download People and deploy it yourself. No credit card required. Try it with your hiring process and see if it works for your use case.</li>
@@ -1143,10 +1148,24 @@
 
 <script>
   document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => { button.parentElement.classList.toggle('open'); });
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
   });
-  function expandAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.add('open')); }
-  function collapseAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); }
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
   const searchInput = document.getElementById('searchInput');
   const noResults = document.getElementById('noResults');
   searchInput.addEventListener('input', () => {
@@ -1169,6 +1188,34 @@
     const el = document.querySelector(window.location.hash);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
 </script>
 </body>
 </html>

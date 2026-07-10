@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shield — FAQ for Business Users</title>
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
   <div class="subtitle">Shield FAQ</div>
   <h1>Shield FAQ</h1>
   <p>Governance & compliance layer — access control, audit logging, compliance reporting, data residency. Answers for business leaders, no technical background required.</p>
@@ -28,7 +33,7 @@
     <span>Shield</span>
   </div>
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search questions… (e.g. 'SOC 2', 'HIPAA', 'audit', 'SSO', 'data residency')">
+    <input type="text" id="searchInput" aria-label="Search questions" placeholder="Search questions… (e.g. 'SOC 2', 'HIPAA', 'audit', 'SSO', 'data residency')">
   </div>
   <div class="controls">
     <button onclick="expandAll()">＋ Expand all</button>
@@ -59,8 +64,8 @@
   <div class="section" id="s1">
     <div class="section-header"><span class="icon">01 · OVERVIEW</span><h2>The Basics — What Is Shield?</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What is ODW.ai Shield in plain English?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">What is ODW.ai Shield in plain English?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
         <p>Shield is a <strong>governance and compliance layer</strong> for your AI infrastructure. It sits on top of your self-hosted AI stack (ODW.ai or other tools) and provides:</p>
         <ul>
           <li><strong>Access control:</strong> Who can access what (SSO, roles, permissions)</li>
@@ -72,8 +77,8 @@
         <p>Think of Shield as the "compliance officer" for your AI stack — it makes sure everything is governed, auditable, and defensible to regulators and enterprise customers.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What problem does Shield solve?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">What problem does Shield solve?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
         <p>Regulated businesses face a fundamental tension:</p>
         <ul>
           <li><strong>Compliance pressure is enterprise-scale.</strong> Your customers, partners, and regulators demand SOC 2, HIPAA, or GDPR compliance — regardless of your company size.</li>
@@ -84,8 +89,8 @@
         <div class="callout info"><strong>The result</strong>Regulated SMBs can deploy self-hosted AI with defensible governance — without hiring a security team or sending data to a third-party compliance SaaS.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Who is Shield for?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">Who is Shield for?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
         <p>Shield is designed for <strong>regulated SMBs</strong> (50–500 employees) in industries with compliance obligations:</p>
         <ul>
           <li><strong>Healthcare:</strong> HIPAA compliance for AI systems handling patient data</li>
@@ -97,8 +102,8 @@
         <p>The typical buyer is a <strong>technical founder, CTO, or IT lead</strong> who needs to demonstrate compliance to win enterprise customers but can't afford a full security team.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Shield a security product?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">Is Shield a security product?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
         <p>Not exactly. Shield is a <strong>governance and compliance layer</strong> — it's more specific than a general security product.</p>
         <p>What Shield does:</p>
         <ul>
@@ -119,8 +124,8 @@
         <p>Shield governs <strong>what it can observe</strong> — access events, model invocations, data flows across your AI stack. It doesn't replace your firewall or antivirus.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How is Shield different from Vanta, Drata, or Secureframe?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">How is Shield different from Vanta, Drata, or Secureframe?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
         <p>The key difference is <strong>deployment model</strong>:</p>
         <table>
           <thead><tr><th>Aspect</th><th>ODW.ai Shield</th><th>Vanta / Drata / Secureframe</th></tr></thead>
@@ -135,8 +140,8 @@
         <p>If you're self-hosting AI for sovereignty reasons, you can't send your infrastructure telemetry to a cloud compliance SaaS. That's the problem Shield solves.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Shield only work with ODW.ai products?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">Does Shield only work with ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
         <p><strong>No.</strong> Shield is <strong>model-agnostic and platform-agnostic</strong>. It works with:</p>
         <ul>
           <li><strong>ODW.ai suite:</strong> Native integration with Desk, Voice, Vault, etc.</li>
@@ -148,8 +153,8 @@
         <p>Shield governs <strong>what it can observe</strong>. If your system emits access events, model invocations, or data flows, Shield can ingest and govern them.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does "governance" mean in this context?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">What does "governance" mean in this context?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
         <p>"Governance" means <strong>control, visibility, and accountability</strong> over your AI stack:</p>
         <ul>
           <li><strong>Control:</strong> Who can access what? Who can invoke which models? Who can read which data?</li>
@@ -159,8 +164,8 @@
         <p>Without governance, self-hosted AI is a black box. You don't know who's using it, what data they're accessing, or whether you're compliant. Shield gives you the governance layer to make self-hosted AI defensible.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need Shield if I'm already compliant?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">Do I need Shield if I'm already compliant?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
         <p>Maybe. If you're already compliant and have manual processes for:</p>
         <ul>
           <li>Access control (SSO, RBAC)</li>
@@ -173,8 +178,8 @@
         <p>Even if you're already compliant, Shield can <strong>reduce the time and cost</strong> of maintaining compliance.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Shield required to use other ODW.ai products?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">Is Shield required to use other ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
         <p><strong>No.</strong> Shield is optional. You can use Desk, Voice, Vault, and other ODW.ai products without Shield.</p>
         <p>However, Shield adds governance capabilities that are critical for regulated businesses:</p>
         <ul>
@@ -189,8 +194,8 @@
   <div class="section" id="s2">
     <div class="section-header"><span class="icon">02 · SOVEREIGNTY</span><h2>Access Control & Identity</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What access control features does Shield provide?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">What access control features does Shield provide?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
         <p>Shield provides <strong>enterprise-grade access control</strong>:</p>
         <ul>
           <li><strong>SSO (Single Sign-On):</strong> Integrate with your identity provider (Okta, Azure AD/Entra ID, Google Workspace, OneLogin) via SAML 2.0 or OIDC</li>
@@ -203,8 +208,8 @@
         <p>All access control is centralized in Shield — no need to configure permissions separately for each ODW.ai product.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Which identity providers does Shield support for SSO?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">Which identity providers does Shield support for SSO?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
         <p>Shield supports SSO via <strong>SAML 2.0</strong> and <strong>OIDC (OpenID Connect)</strong>:</p>
         <ul>
           <li><strong>Okta:</strong> Native integration</li>
@@ -216,8 +221,8 @@
         <p>Setup typically takes 15-30 minutes. Shield provides step-by-step guides for each provider.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's the difference between RBAC and ABAC?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">What's the difference between RBAC and ABAC?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
         <p><strong>RBAC (Role-Based Access Control):</strong> Permissions are assigned to roles, and users are assigned to roles.</p>
         <ul>
           <li>Example: "Admins can delete data. Editors can edit data. Viewers can only read data."</li>
@@ -231,8 +236,8 @@
         <p>Shield supports both. Most customers start with RBAC and add ABAC as their policies become more complex.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I enforce MFA for all users?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">Can I enforce MFA for all users?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
         <p>Yes. Shield can <strong>enforce MFA</strong> (multi-factor authentication) at the organization level or per role:</p>
         <ul>
           <li><strong>Organization-wide:</strong> All users must use MFA to log in</li>
@@ -246,8 +251,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I manage API keys and service accounts?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">How do I manage API keys and service accounts?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
         <p>Shield provides <strong>centralized API key management</strong>:</p>
         <ul>
           <li><strong>Create API keys:</strong> Generate keys for service accounts (e.g., automated scripts, integrations)</li>
@@ -259,8 +264,8 @@
         <p>API keys are scoped to specific actions and resources — no over-privileged keys.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I restrict access based on location or network?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">Can I restrict access based on location or network?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
         <p>Yes. Shield supports <strong>attribute-based policies</strong> that can restrict access based on:</p>
         <ul>
           <li><strong>IP address:</strong> Only allow access from specific IP ranges (e.g., office network, VPN)</li>
@@ -270,8 +275,8 @@
         <p>These policies are enforced at the gateway level — if a request doesn't match the policy, it's rejected before it reaches the application.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens when an employee leaves? How do I revoke access?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">What happens when an employee leaves? How do I revoke access?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
         <p>Shield provides <strong>instant access revocation</strong>:</p>
         <ol>
           <li>Disable the user account in Shield (or in your identity provider if using SSO)</li>
@@ -283,8 +288,8 @@
         <div class="callout tip"><strong>Best practice</strong>Set up automated offboarding via SCIM (System for Cross-domain Identity Management). When a user is deactivated in your HR system, they're automatically deactivated in Shield.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I see who accessed what and when?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">Can I see who accessed what and when?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
         <p>Yes. Shield provides <strong>real-time visibility</strong> into all access events:</p>
         <ul>
           <li><strong>Dashboard:</strong> Live view of who accessed what, when, and how</li>
@@ -306,8 +311,8 @@
   <div class="section" id="s3">
     <div class="section-header"><span class="icon">03 · INTEGRATION</span><h2>Our Solution's Strengths & Design</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What are the top advantages of Shield over other compliance tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">What are the top advantages of Shield over other compliance tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
         <table>
           <thead><tr><th>Feature</th><th>ODW.ai Shield</th><th>Typical Alternatives</th></tr></thead>
           <tbody>
@@ -323,8 +328,8 @@
         <p>Shield competes on <strong>sovereignty + AI-specific governance</strong>, not just general compliance. If you're self-hosting AI for data residency, you need a self-hosted governance layer — that's Shield.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Shield compare to Vanta or Drata?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">How does Shield compare to Vanta or Drata?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
         <p>Vanta and Drata are excellent compliance automation platforms, but they have different design priorities:</p>
         <table>
           <thead><tr><th>Aspect</th><th>ODW.ai Shield</th><th>Vanta / Drata</th></tr></thead>
@@ -340,8 +345,8 @@
         <p>Choose Vanta/Drata if you need broad compliance automation (HR, IT, security, etc.) and don't have sovereignty requirements. Choose Shield if you're self-hosting AI and need sovereignty + AI-specific governance.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What is "configuration hardening" and why does it matter?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">What is "configuration hardening" and why does it matter?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
         <p><strong>Configuration hardening</strong> means ensuring your AI stack meets security best practices:</p>
         <ul>
           <li><strong>Security baselines:</strong> Pre-defined configurations for ODW.ai components (inference servers, vector databases, orchestration layers)</li>
@@ -353,8 +358,8 @@
         <div class="callout info"><strong>Example</strong>Shield detects that your vector database is accessible from the public internet (misconfiguration). It alerts you and provides a one-click fix to restrict access to your internal network.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Shield handle data residency?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">How does Shield handle data residency?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
         <p>Shield enforces <strong>data residency policies</strong> to ensure data doesn't leave your defined boundaries:</p>
         <ul>
           <li><strong>Data classification:</strong> Tag data as PII, PHI, financial, confidential, etc.</li>
@@ -365,8 +370,8 @@
         <p>Example: A healthcare customer configures Shield to ensure PHI never leaves their on-premises infrastructure. If a user tries to send PHI to a cloud AI model, Shield blocks the request and alerts the admin.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What is "immutable audit logging" and why is it important?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">What is "immutable audit logging" and why is it important?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
         <p><strong>Immutable audit logging</strong> means logs cannot be altered or deleted — they're tamper-proof:</p>
         <ul>
           <li><strong>Hash chaining:</strong> Each log entry includes a cryptographic hash of the previous entry. If someone tampers with a log, the hash chain breaks.</li>
@@ -377,8 +382,8 @@
         <div class="callout tip"><strong>Regulatory requirement</strong>HIPAA, SOC 2, and ISO 27001 all require tamper-evident audit logs. Shield meets these requirements out-of-the-box.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Shield integrate with my existing SIEM or log aggregation tool?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">Can Shield integrate with my existing SIEM or log aggregation tool?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
         <p>Yes. Shield integrates with common SIEM and log aggregation tools via standard protocols:</p>
         <ul>
           <li><strong>Splunk:</strong> Via HTTP Event Collector (HEC)</li>
@@ -389,8 +394,8 @@
         <p>Shield emits logs in standard formats (JSON, syslog) — no proprietary protocols. If your SIEM can ingest JSON or syslog, it can ingest Shield logs.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Shield support multi-tenancy for MSPs?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">Does Shield support multi-tenancy for MSPs?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
         <p>Yes. Shield supports <strong>multi-tenancy</strong> for Managed Service Providers (MSPs):</p>
         <ul>
           <li><strong>Tenant isolation:</strong> Each customer (tenant) has isolated data, policies, and audit logs</li>
@@ -401,8 +406,8 @@
         <p>This allows MSPs to manage compliance for multiple SMB clients from a single Shield deployment.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Shield model-agnostic like other ODW.ai products?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">Is Shield model-agnostic like other ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
         <p>Yes. Shield is <strong>model-agnostic and platform-agnostic</strong>. It governs:</p>
         <ul>
           <li><strong>Any AI model:</strong> llama.cpp, Ollama, vLLM, OpenAI, Anthropic, Google, etc.</li>
@@ -418,8 +423,8 @@
   <div class="section" id="s4">
     <div class="section-header"><span class="icon">04 · SECURITY</span><h2>Audit Logging & Evidence</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What does Shield log?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">What does Shield log?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
         <p>Shield logs <strong>all governance-relevant events</strong>:</p>
         <ul>
           <li><strong>Access events:</strong> Who accessed what, when, and how (user, action, resource, timestamp, IP address)</li>
@@ -432,8 +437,8 @@
         <p>All logs are immutable, tamper-proof, and retained according to your configured retention policy.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How long are audit logs retained?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">How long are audit logs retained?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
         <p>Retention is <strong>configurable</strong> and can be aligned to regulatory requirements:</p>
         <ul>
           <li><strong>HIPAA:</strong> 6 years (default for healthcare customers)</li>
@@ -445,8 +450,8 @@
         <div class="callout warning"><strong>Important</strong>Retention policies should be set in consultation with your legal/compliance team. Shield provides the tools, but you're responsible for configuring them correctly.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I export audit logs for external analysis?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">Can I export audit logs for external analysis?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
         <p>Yes. Shield supports <strong>log export</strong> in standard formats:</p>
         <ul>
           <li><strong>JSON:</strong> Machine-readable, easy to import into external tools</li>
@@ -461,8 +466,8 @@
         <p>Exports are generated on-demand and can be downloaded via the admin console or API.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I produce audit evidence for a SOC 2 audit?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">How do I produce audit evidence for a SOC 2 audit?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
         <p>Shield provides <strong>one-click evidence generation</strong> for SOC 2 audits:</p>
         <ol>
           <li>Navigate to the "Compliance" section in the admin console</li>
@@ -482,8 +487,8 @@
         <div class="callout tip"><strong>Time saved</strong>Customers report reducing audit preparation time from 2-4 weeks to &lt;1 hour.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can auditors access Shield directly?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">Can auditors access Shield directly?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
         <p>Yes. Shield provides a <strong>read-only auditor view</strong>:</p>
         <ul>
           <li><strong>Auditor role:</strong> Create a user account with the "Auditor" role</li>
@@ -494,8 +499,8 @@
         <p>This allows auditors to verify compliance directly in Shield — no need to export data and send it externally.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What if an auditor questions the integrity of the logs?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">What if an auditor questions the integrity of the logs?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
         <p>Shield logs are <strong>cryptographically tamper-evident</strong>:</p>
         <ul>
           <li><strong>Hash chaining:</strong> Each log entry includes a hash of the previous entry. If someone tampers with a log, the hash chain breaks.</li>
@@ -505,8 +510,8 @@
         <p>If an auditor questions log integrity, show them the hash chain verification report. This is cryptographically provable — not just a claim.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I set up alerts for suspicious activity?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">Can I set up alerts for suspicious activity?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
         <p>Yes. Shield provides <strong>real-time alerting</strong> for suspicious activity:</p>
         <ul>
           <li><strong>Policy violations:</strong> Alert when a user violates a policy (e.g., tries to access restricted data)</li>
@@ -523,8 +528,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I know if my audit logs are compliant with HIPAA?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">How do I know if my audit logs are compliant with HIPAA?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
         <p>Shield includes <strong>HIPAA-specific audit logging requirements</strong>:</p>
         <ul>
           <li><strong>6-year retention:</strong> Default retention policy for HIPAA customers</li>
@@ -541,8 +546,8 @@
   <div class="section" id="s5">
     <div class="section-header"><span class="icon">05 · DEPLOYMENT</span><h2>Security & Privacy</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Is Shield itself secure?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">Is Shield itself secure?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
         <p>Yes. Shield is built with <strong>security best practices</strong>:</p>
         <ul>
           <li><strong>Self-hosted:</strong> Runs on your infrastructure — no data leaves your servers</li>
@@ -555,15 +560,15 @@
         <p>Shield is designed to be the most secure component in your AI stack — because it governs everything else.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does ODW.ai have access to my Shield data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">Does ODW.ai have access to my Shield data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
         <p><strong>No.</strong> Shield is self-hosted on your infrastructure. ODW.ai has zero access to your data, logs, or configurations.</p>
         <p>Unlike cloud compliance SaaS (Vanta, Drata), Shield doesn't send telemetry to a third party. Everything stays on your servers.</p>
         <p>This is critical for sovereignty-focused organizations. You can't claim data sovereignty if your compliance tool is sending your data to a cloud vendor.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if Shield goes down? Does it affect my AI stack?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">What happens if Shield goes down? Does it affect my AI stack?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
         <p>Shield is designed to be <strong>resilient</strong>:</p>
         <ul>
           <li><strong>Fail-open mode:</strong> If Shield is unreachable, your AI stack continues to operate (but without governance). You can configure fail-open or fail-closed.</li>
@@ -574,8 +579,8 @@
         <div class="callout warning"><strong>Fail-closed mode</strong>For high-security environments, you can configure Shield to fail-closed — if Shield is unreachable, all access is denied. This is more secure but reduces availability.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Shield encrypt data at rest and in transit?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">Does Shield encrypt data at rest and in transit?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
         <p>Yes. Shield enforces <strong>encryption policies</strong>:</p>
         <ul>
           <li><strong>At rest:</strong> AES-256 encryption for all data (audit logs, configurations, user data)</li>
@@ -585,8 +590,8 @@
         <p>Shield also enforces encryption policies across your AI stack — e.g., it can detect if your vector database is not encrypted at rest and alert you.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Shield detect and prevent data leaks?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">Can Shield detect and prevent data leaks?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
         <p>Shield provides <strong>data leak prevention (DLP) capabilities</strong>:</p>
         <ul>
           <li><strong>Data classification:</strong> Tag data as PII, PHI, financial, confidential, etc.</li>
@@ -598,8 +603,8 @@
         <div class="callout info"><strong>Limitation</strong>Shield's DLP is focused on AI-specific data flows (prompts, embeddings, model outputs). For general DLP (email, file transfers, etc.), use a dedicated DLP solution.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Shield comply with GDPR?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">Does Shield comply with GDPR?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
         <p>Shield is <strong>compatible with GDPR</strong> and provides tools to help you meet GDPR requirements:</p>
         <ul>
           <li><strong>Data residency:</strong> Ensure data processing stays within the EU (or other defined regions)</li>
@@ -611,8 +616,8 @@
         <p>Shield's GDPR control mapping shows you exactly which GDPR articles are addressed by Shield. You can generate a "GDPR compliance report" for your DPO or regulator.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What security certifications does Shield have?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">What security certifications does Shield have?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
         <p>Shield follows <strong>industry best practices</strong> for security:</p>
         <ul>
           <li><strong>Encryption:</strong> AES-256 at rest, TLS 1.3 in transit</li>
@@ -623,8 +628,8 @@
         <p>We're pursuing <strong>SOC 2 Type II</strong> certification for Shield itself (expected late 2026). For now, we provide a security whitepaper and can answer specific security questions from your IT team.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I deploy Shield in an air-gapped environment?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">Can I deploy Shield in an air-gapped environment?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
         <p>Yes. Shield supports <strong>air-gapped deployment</strong> (no internet access):</p>
         <ul>
           <li><strong>Offline installation:</strong> Install Shield without internet access (Docker images, offline packages)</li>
@@ -639,8 +644,8 @@
   <div class="section" id="s6">
     <div class="section-header"><span class="icon">06 · COMPLIANCE</span><h2>Compliance Frameworks</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Which compliance frameworks does Shield support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">Which compliance frameworks does Shield support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
         <p>Shield includes <strong>pre-built control mappings</strong> for:</p>
         <ul>
           <li><strong>SOC 2:</strong> Type I and Type II (Trust Services Criteria)</li>
@@ -651,8 +656,8 @@
         <p>Additional frameworks (FedRAMP, PCI DSS, NIST) are planned for future releases. You can also create custom frameworks if needed.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Shield map to SOC 2 controls?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">How does Shield map to SOC 2 controls?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
         <p>Shield provides a <strong>control mapping</strong> that shows which SOC 2 Trust Services Criteria are addressed by Shield:</p>
         <ul>
           <li><strong>Security (CC series):</strong> Access control, audit logging, configuration hardening</li>
@@ -669,8 +674,8 @@
         <p>Target: 80% of SOC 2 controls addressed by Shield at MVP, 95% by month 18.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Shield help me pass a SOC 2 audit?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">Can Shield help me pass a SOC 2 audit?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
         <p>Shield helps you <strong>meet the controls</strong> required for SOC 2, but it doesn't guarantee audit passage (no tool can honestly claim this).</p>
         <p>What Shield does:</p>
         <ul>
@@ -689,8 +694,8 @@
         <div class="callout tip"><strong>Realistic expectation</strong>Shield reduces the time and cost of SOC 2 compliance by 50-80%, but it's not a magic button. You still need to do the work.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Shield support HIPAA compliance?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">Does Shield support HIPAA compliance?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
         <p>Yes. Shield provides <strong>HIPAA-specific features</strong>:</p>
         <ul>
           <li><strong>PHI redaction:</strong> Automatically redact protected health information from logs</li>
@@ -702,8 +707,8 @@
         <p>Shield helps you meet the <strong>technical safeguards</strong> required by HIPAA (access control, audit controls, integrity, transmission security). You still need to address administrative and physical safeguards separately.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Shield support GDPR compliance?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">Does Shield support GDPR compliance?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
         <p>Yes. Shield provides <strong>GDPR-specific features</strong>:</p>
         <ul>
           <li><strong>Data residency:</strong> Ensure data processing stays within the EU</li>
@@ -716,8 +721,8 @@
         <p>Shield helps you meet the <strong>technical and organizational measures</strong> required by GDPR (Article 32). You still need to address legal and procedural requirements separately.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I create custom compliance frameworks?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">Can I create custom compliance frameworks?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
         <p>Yes. Shield supports <strong>custom frameworks</strong>:</p>
         <ul>
           <li><strong>Define controls:</strong> Create your own control definitions (e.g., "All API keys must be rotated every 90 days")</li>
@@ -733,8 +738,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I identify compliance gaps?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">How do I identify compliance gaps?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
         <p>Shield provides a <strong>gap analysis</strong> feature:</p>
         <ol>
           <li>Navigate to the "Compliance" section in the admin console</li>
@@ -752,8 +757,8 @@
         <p>This gives you a clear roadmap for achieving compliance — no more guessing what you're missing.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Shield generate compliance reports for my board or investors?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">Can Shield generate compliance reports for my board or investors?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
         <p>Yes. Shield can generate <strong>executive-level compliance reports</strong>:</p>
         <ul>
           <li><strong>Compliance posture dashboard:</strong> Single view of readiness across frameworks (SOC 2: 85% met, HIPAA: 92% met, etc.)</li>
@@ -769,8 +774,8 @@
   <div class="section" id="s7">
     <div class="section-header"><span class="icon">07 · MODELS</span><h2>Deployment & Setup</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How do I deploy Shield?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">How do I deploy Shield?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
         <p>Shield offers three deployment options:</p>
         <ol>
           <li><strong>SaaS (ODW.ai-hosted):</strong> We host everything. You just configure via the admin console. Fastest to get started (hours).</li>
@@ -780,8 +785,8 @@
         <p>For most customers, <strong>SaaS is the fastest path</strong>. For regulated industries (healthcare, legal, government), we recommend private cloud or on-premises.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How long does setup take?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">How long does setup take?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
         <p>Setup time depends on your deployment:</p>
         <ul>
           <li><strong>SaaS:</strong> 2-4 hours. Create an account, configure SSO, set up policies, and you're done.</li>
@@ -792,15 +797,15 @@
         <div class="callout tip"><strong>Time to first value</strong>Target: &lt;2 hours from installation to first policy enforced.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical staff to run Shield?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">Do I need technical staff to run Shield?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
         <p><strong>For SaaS:</strong> Minimal. The admin console is designed for non-technical users (compliance officers, IT managers). You can configure policies, view audit logs, and generate reports without writing code.</p>
         <p><strong>For private cloud or on-premises:</strong> Yes. You need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure. This is typically a DevOps engineer or IT consultant.</p>
         <p>Day-to-day operation (reviewing logs, generating reports, adjusting policies) is non-technical for all deployment modes.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What are the system requirements for Shield?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">What are the system requirements for Shield?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
         <p>Shield is lightweight:</p>
         <table>
           <thead><tr><th>Component</th><th>Minimum</th><th>Recommended</th></tr></thead>
@@ -815,8 +820,8 @@
         <p>Shield runs as a set of Docker containers — no special hardware required. For high-availability deployments, we recommend Kubernetes with 3+ replicas.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I migrate from another compliance tool to Shield?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">Can I migrate from another compliance tool to Shield?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
         <p>Yes. Shield provides <strong>migration tools</strong>:</p>
         <ul>
           <li><strong>Import policies:</strong> Import existing policies from CSV/JSON (e.g., from Vanta, Drata)</li>
@@ -826,8 +831,8 @@
         <p>Migration typically takes 1-2 weeks. We provide migration guides and support for common tools (Vanta, Drata, Secureframe).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I configure Shield?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">How do I configure Shield?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
         <p>Shield is configured via the <strong>admin console</strong> (web-based UI):</p>
         <ul>
           <li><strong>Identity:</strong> Configure SSO, RBAC/ABAC, MFA</li>
@@ -839,8 +844,8 @@
         <p>No code required. All configuration is done through the UI. For advanced users, Shield also provides a CLI and API for automation.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I preview Shield before going live?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">Can I preview Shield before going live?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
         <p>Yes. Shield includes a <strong>preview mode</strong>:</p>
         <ul>
           <li><strong>Sandbox:</strong> Test policies in a sandbox environment. No real enforcement — just see what would happen.</li>
@@ -850,8 +855,8 @@
         <p>We recommend testing thoroughly before going live. Most customers spend 1-2 days testing in dry-run mode.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I update Shield to a new version?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">How do I update Shield to a new version?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
         <p><strong>For SaaS:</strong> Updates are automatic. We deploy new versions without downtime (rolling updates).</p>
         <p><strong>For private cloud or on-premises:</strong> Updates are performed via Docker/Kubernetes:</p>
         <ol>
@@ -867,8 +872,8 @@
   <div class="section" id="s8">
     <div class="section-header"><span class="icon">08 · LANGUAGES</span><h2>Cost & Pricing</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How much does Shield cost?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">How much does Shield cost?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
         <p>Shield pricing is based on <strong>deployment mode and features</strong>:</p>
         <table>
           <thead><tr><th>Tier</th><th>Price</th><th>Includes</th></tr></thead>
@@ -886,15 +891,15 @@
         <div class="callout info"><strong>Note</strong>Pricing is illustrative and subject to change. Contact us for current pricing and custom quotes.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Shield cheaper than Vanta or Drata?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">Is Shield cheaper than Vanta or Drata?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
         <p><strong>Yes, significantly.</strong> Vanta and Drata typically cost $10K-$50K+/year. Shield costs $3,600-$12,000/year — <strong>3-10x cheaper</strong>.</p>
         <p>And Shield is self-hosted — you get full sovereignty. Vanta/Drata are cloud SaaS — you send them telemetry.</p>
         <p>Of course, Shield is more focused (AI governance) while Vanta/Drata are broader (full compliance automation). But if you're self-hosting AI and need sovereignty, Shield is the only option.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Are there any hidden costs?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">Are there any hidden costs?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
         <p>No hidden costs. The total cost of ownership includes:</p>
         <ul>
           <li><strong>Shield subscription:</strong> Monthly fee based on tier</li>
@@ -904,8 +909,8 @@
         <p>That's it. No setup fees, no surprise charges. Infrastructure costs (if self-hosting) are separate — you pay for your own servers/cloud.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is there a free trial?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">Is there a free trial?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
         <p>Yes. We offer a <strong>14-day free trial</strong> of the Professional tier. No credit card required.</p>
         <p>During the trial, you can:</p>
         <ul>
@@ -917,8 +922,8 @@
         <p>At the end of the trial, you can subscribe or downgrade to the free tier (limited features).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What payment methods do you accept?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">What payment methods do you accept?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
         <p>We accept:</p>
         <ul>
           <li><strong>Credit/debit cards:</strong> Visa, Mastercard, American Express (via Stripe)</li>
@@ -928,14 +933,14 @@
         <p>Invoicing is available for annual subscriptions. Contact us for details.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
         <p>Yes. We offer a <strong>30-day money-back guarantee</strong>. If you're not satisfied within the first 30 days, contact us for a full refund — no questions asked.</p>
         <p>After 30 days, you can cancel anytime. You'll continue to have access until the end of your billing period, but no refund is provided for partial months.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Shield included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">Is Shield included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
         <p><strong>Yes and no.</strong> Shield is available as a standalone product or as part of the ODW.ai suite bundle:</p>
         <ul>
           <li><strong>Standalone:</strong> Purchase Shield by itself (for non-ODW.ai AI stacks)</li>
@@ -949,8 +954,8 @@
   <div class="section" id="s9">
     <div class="section-header"><span class="icon">09 · PRICING</span><h2>Scaling & Operations</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How many users can Shield support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">How many users can Shield support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
         <p>Shield scales horizontally:</p>
         <ul>
           <li><strong>SaaS:</strong> Unlimited users (we handle scaling)</li>
@@ -960,8 +965,8 @@
         <p>For very large deployments (10,000+ users), we recommend Kubernetes with auto-scaling and a managed PostgreSQL database.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if Shield goes down?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">What happens if Shield goes down?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
         <p>If Shield goes down, your AI stack continues to operate (in fail-open mode):</p>
         <ul>
           <li><strong>Access control:</strong> Temporarily disabled (all access allowed) — or fail-closed if configured</li>
@@ -976,8 +981,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I monitor Shield's performance?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">How do I monitor Shield's performance?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
         <p>Shield includes a <strong>monitoring dashboard</strong>:</p>
         <ul>
           <li><strong>System health:</strong> CPU, memory, disk, network usage</li>
@@ -988,8 +993,8 @@
         <p>You can also export metrics to external monitoring tools (Prometheus, Grafana, Datadog) via standard protocols.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I back up Shield data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">How do I back up Shield data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
         <p>Shield data is stored in PostgreSQL. Back up the database using standard PostgreSQL tools:</p>
         <ul>
           <li><strong>Automated backups:</strong> Configure daily backups via pg_dump or WAL archiving</li>
@@ -999,8 +1004,8 @@
         <p>Shield provides backup guides and scripts for common deployment modes (Docker, Kubernetes, on-premises).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use Shield for multiple AI stacks?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">Can I use Shield for multiple AI stacks?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
         <p>Yes. Shield can govern <strong>multiple AI stacks</strong> from a single deployment:</p>
         <ul>
           <li><strong>Multiple ODW.ai deployments:</strong> Govern multiple Desk/Voice/Vault instances</li>
@@ -1010,8 +1015,8 @@
         <p>Each AI stack is configured as a "source" in Shield. Shield ingests logs from all sources and applies unified policies.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I train my team to use Shield?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">How do I train my team to use Shield?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
         <p>Shield is designed to be <strong>intuitive</strong>, but we provide training resources:</p>
         <ul>
           <li><strong>Documentation:</strong> Comprehensive user guides for admins, compliance officers, and auditors</li>
@@ -1022,8 +1027,8 @@
         <p>Most teams are productive within 2-4 hours of training. The admin console is particularly intuitive — no technical skills required for day-to-day operation.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I customize Shield's behavior?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">Can I customize Shield's behavior?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
         <p>Yes. Shield is highly configurable:</p>
         <ul>
           <li><strong>Policies:</strong> Define custom access policies, data residency rules, compliance requirements</li>
@@ -1039,8 +1044,8 @@
   <div class="section" id="s10">
     <div class="section-header"><span class="icon">10 · ONBOARDING</span><h2>Integration & Workflows</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How does Shield integrate with ODW.ai products?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">How does Shield integrate with ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
         <p>Shield integrates <strong>natively</strong> with all ODW.ai products:</p>
         <ul>
           <li><strong>Desk, Voice, Vault, etc.:</strong> Automatically emit access events, model invocations, and data flows to Shield</li>
@@ -1051,8 +1056,8 @@
         <p>If you're using the ODW.ai suite, Shield integration is automatic — no separate configuration required.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Shield integrate with non-ODW.ai AI tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">How does Shield integrate with non-ODW.ai AI tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
         <p>Shield integrates with non-ODW.ai tools via <strong>standard protocols</strong>:</p>
         <ul>
           <li><strong>OTLP (OpenTelemetry Protocol):</strong> For tools that support OpenTelemetry</li>
@@ -1063,8 +1068,8 @@
         <p>If your AI tool can emit logs via one of these protocols, Shield can ingest and govern them.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Shield integrate with my SIEM?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">Can Shield integrate with my SIEM?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
         <p>Yes. Shield integrates with common SIEM tools:</p>
         <ul>
           <li><strong>Splunk:</strong> Via HTTP Event Collector (HEC)</li>
@@ -1075,8 +1080,8 @@
         <p>Shield emits logs in standard formats (JSON, syslog) — no proprietary protocols. If your SIEM can ingest JSON or syslog, it can ingest Shield logs.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Shield integrate with my identity provider?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">Can Shield integrate with my identity provider?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
         <p>Yes. Shield supports SSO via <strong>SAML 2.0</strong> and <strong>OIDC</strong>:</p>
         <ul>
           <li><strong>Okta:</strong> Native integration</li>
@@ -1088,8 +1093,8 @@
         <p>Setup typically takes 15-30 minutes. Shield provides step-by-step guides for each provider.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Shield integrate with my ticketing system (Jira, ServiceNow)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">Can Shield integrate with my ticketing system (Jira, ServiceNow)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
         <p>Yes. Shield can <strong>create tickets</strong> in your ticketing system via webhooks:</p>
         <ul>
           <li><strong>Jira:</strong> Create tickets for policy violations, configuration drift, or compliance gaps</li>
@@ -1099,8 +1104,8 @@
         <p>This allows your team to track and resolve compliance issues in the same system they use for other work.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Shield integrate with my notification system (Slack, email, PagerDuty)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">Can Shield integrate with my notification system (Slack, email, PagerDuty)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
         <p>Yes. Shield supports <strong>multi-channel notifications</strong>:</p>
         <ul>
           <li><strong>Email:</strong> Send alerts via SMTP</li>
@@ -1111,8 +1116,8 @@
         <p>You can configure different notification channels for different alert severities (e.g., email for low-severity, PagerDuty for critical).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Shield provide an API?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">Does Shield provide an API?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
         <p>Yes. Shield provides a <strong>REST API</strong> for programmatic access:</p>
         <ul>
           <li><strong>Policy management:</strong> Create, read, update, delete policies via API</li>
@@ -1128,8 +1133,8 @@
   <div class="section" id="s11">
     <div class="section-header"><span class="icon">11 · ROADMAP</span><h2>Limitations & Roadmap</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What can't Shield do (yet)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">What can't Shield do (yet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
         <p>Shield is powerful, but it has limitations in v1.0:</p>
         <ul>
           <li><strong>No network security:</strong> Shield doesn't replace firewalls, WAFs, or network segmentation tools.</li>
@@ -1142,8 +1147,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Shield support FedRAMP or PCI DSS?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">Will Shield support FedRAMP or PCI DSS?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
         <p><strong>Planned for v1.1 (Q4 2026).</strong> We're adding pre-built control mappings for:</p>
         <ul>
           <li><strong>FedRAMP:</strong> For government contractors</li>
@@ -1153,8 +1158,8 @@
         <p>In the meantime, you can create custom frameworks for these requirements using Shield's custom framework builder.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Shield support incident response automation?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">Will Shield support incident response automation?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
         <p><strong>Planned for v1.2 (Q1 2027).</strong> Incident response automation will include:</p>
         <ul>
           <li><strong>Automated playbooks:</strong> Define playbooks for common incidents (e.g., "If policy violation detected → create ticket → notify security team → block user")</li>
@@ -1164,14 +1169,14 @@
         <p>This is a high-priority feature for enterprise customers.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Shield support cloud workload protection?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">Will Shield support cloud workload protection?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
         <p><strong>Not in the current roadmap.</strong> Shield is focused on self-hosted AI governance. Cloud workload protection (CWPP/CSPM) is a different category with different requirements.</p>
         <p>If you need cloud workload protection, we recommend using a dedicated tool (e.g., Wiz, Orca, Prisma Cloud). Shield can integrate with these tools via APIs and webhooks.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
         <p>Key milestones:</p>
         <ul>
           <li><strong>v1.0 (Q3 2026):</strong> MVP launch. Access control, audit logging, compliance frameworks (SOC 2, ISO 27001, HIPAA, GDPR), configuration hardening, data residency.</li>
@@ -1182,8 +1187,8 @@
         <p>Roadmap is subject to change based on customer feedback. Contact us for the latest roadmap or to request features.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">When should I NOT use Shield?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">When should I NOT use Shield?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
         <p>Shield is not the right fit if:</p>
         <ul>
           <li><strong>You don't have compliance requirements:</strong> If you're not regulated and don't need to demonstrate compliance, Shield may be overkill. Use basic access control and logging instead.</li>
@@ -1193,8 +1198,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Shield guarantee I'll pass my audit?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">Does Shield guarantee I'll pass my audit?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
         <p><strong>No.</strong> No tool can honestly guarantee audit passage. Shield helps you <strong>meet the controls</strong> required for compliance, but audit passage depends on many factors:</p>
         <ul>
           <li>Your policies and procedures (Shield provides templates, but you need to customize them)</li>
@@ -1205,8 +1210,8 @@
         <p>Shield reduces the time and cost of compliance by 50-80%, but it's not a magic button. You still need to do the work.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I get started?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-86">How do I get started?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-86"><div class="faq-answer-inner">
         <p>Three paths:</p>
         <ol>
           <li><strong>Free trial:</strong> Sign up for a 14-day free trial. No credit card required. Set up Shield with your AI stack and try it out.</li>
@@ -1227,10 +1232,24 @@
 
 <script>
   document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => { button.parentElement.classList.toggle('open'); });
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
   });
-  function expandAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.add('open')); }
-  function collapseAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); }
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
   const searchInput = document.getElementById('searchInput');
   const noResults = document.getElementById('noResults');
   searchInput.addEventListener('input', () => {
@@ -1253,6 +1272,34 @@
     const el = document.querySelector(window.location.hash);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
 </script>
 </body>
 </html>

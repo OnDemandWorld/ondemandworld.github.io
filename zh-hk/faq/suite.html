@@ -1,0 +1,1413 @@
+<!-- Translation status: DRAFT — needs native-speaker review before publish -->
+<!-- Last synced with English source: 2026-07-09 -->
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ODW.ai 套裝 — 常見問題（商務用家）</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
+  <div class="subtitle">跨套裝常見問題</div>
+  <h1>ODW.ai 套裝常見問題</h1>
+  <p>主權 AI 套裝 — 10 個模組、你嘅基建、你嘅數據、你嘅模型。有關主權、安全、架設、合規，以及各模組如何協作嘅跨產品問題。</p>
+  <span class="last-updated">最後更新：2026-07-09</span>
+</div>
+
+<div class="container">
+  <div class="breadcrumbs">
+    <a href="../index.html">首頁</a>
+    <span class="sep">→</span>
+    <a href="./index.html">常見問題</a>
+    <span class="sep">→</span>
+    <span>套裝</span>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" aria-label="搜尋問題" placeholder="搜尋問題…（例如 'GDPR'、'air-gapped'、'pricing'、'model'、'deploy'）">
+  </div>
+  <div class="controls">
+    <button onclick="expandAll()">＋ 全部展開</button>
+    <button onclick="collapseAll()">− 全部收合</button>
+    <button onclick="window.print()">🖨️ 列印 / 儲存 PDF</button>
+  </div>
+
+  <div class="toc">
+    <h2>跳轉至章節</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span> 套裝概覽</a>
+      <a href="#s2"><span class="num">2</span> 主權 AI — 是什麼與為何重要</a>
+      <a href="#s3"><span class="num">3</span> 模組如何協作</a>
+      <a href="#s4"><span class="num">4</span> 安全與數據保障</a>
+      <a href="#s5"><span class="num">5</span> 架設與基建</a>
+      <a href="#s6"><span class="num">6</span> 合規與法規</a>
+      <a href="#s7"><span class="num">7</span> AI 模型與靈活性</a>
+      <a href="#s8"><span class="num">8</span> 語言與本地化</a>
+      <a href="#s9"><span class="num">9</span> 定價與授權</a>
+      <a href="#s10"><span class="num">10</span> 開始使用與入門</a>
+      <a href="#s11"><span class="num">11</span> 路線圖與社群</a>
+    </div>
+  </div>
+
+  <div id="noResults" class="no-results">沒有問題符合你嘅搜尋。請試用更廣泛嘅關鍵字。</div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 1: THE SUITE AT A GLANCE                    -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s1">
+    <div class="section-header"><span class="icon">01 · 概覽</span><h2>套裝概覽</h2><span class="count">9 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">ODW.ai 是什麼？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
+        <p>ODW.ai 係一個<strong>開源、數據主權嘅商務 AI 套裝</strong>。佢係一個由代理模組組成嘅平台，企業喺自己嘅基建上運行，使用自己嘅數據，並可選擇任何模型。</p>
+        <p>套裝共有 10 個模組，涵蓋 AI 創造價值嘅核心商務職能：</p>
+        <ul>
+          <li><strong>Vault</strong> — 知識庫與 RAG（基礎）</li>
+          <li><strong>Loop</strong> — 工作流程協作</li>
+          <li><strong>Desk</strong> — AI 客服（WhatsApp 優先）</li>
+          <li><strong>Recap</strong> — 會議逐字稿與跟進行動</li>
+          <li><strong>Voice</strong> — AI 電話接待員</li>
+          <li><strong>Pulse</strong> — 多語言內容生成</li>
+          <li><strong>Hunt</strong> — 外向銷售協同駕駛</li>
+          <li><strong>People</strong> — 招聘與人力資源助理</li>
+          <li><strong>Books</strong> — AI 簿記</li>
+          <li><strong>Shield</strong> — 管治與合規層</li>
+        </ul>
+        <p>每個模組可獨立運作。結合使用時，佢哋組成一個完整嘅主權 AI 堆疊。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">ODW.ai 適合邊類企業？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
+        <p><strong>主要對象：</strong>處於受監管或數據居留敏感環境嘅中小型企業（10–500 名員工）：</p>
+        <ul>
+          <li>醫療（HIPAA、病人數據）</li>
+          <li>金融服務（SOC 2、交易數據）</li>
+          <li>法律（律師—客戶特權）</li>
+          <li>政府承辦商（FedRAMP、ITAR）</li>
+          <li>歐盟／注重私隱嘅企業（GDPR）</li>
+          <li>教育、製造業、專業服務</li>
+        </ul>
+        <p>呢啲企業需要完整嘅 AI 能力，但唔能夠或唔願意將敏感數據交託俾雲端 AI 供應商。</p>
+        <p><strong>次要對象：</strong>開發者同自建主機者，佢哋採用開源工具後成為公司內部嘅推動者。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">ODW 與 ChatGPT、Copilot 或其他 AI 工具有何分別？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
+        <p>三個根本分別：</p>
+        <ol>
+          <li><strong>擁有權。</strong>ChatGPT 同 Copilot 係雲端 SaaS — 你嘅數據會送去佢哋嘅伺服器。ODW 運行喺<em>你</em>嘅基建上。除非你選擇，否則你嘅數據唔會外洩。</li>
+          <li><strong>專為商務而設。</strong>通用 AI 工具係泛用助理。ODW 模組專為特定商務職能而設 — 客服、招聘、簿記、銷售 — 附有領域特定嘅工作流程、合規控制同整合。</li>
+          <li><strong>套裝整合。</strong>ODW 模組互相協作。Vault 將其他所有模組建基於你嘅實際知識庫。Loop 協作跨模組工作流程。Shield 提供統一管治。呢種整合係拼湊唔到嘅。</li>
+        </ol>
+        <div class="callout info"><strong>唔係 ChatGPT 嘅替代品</strong>ODW 唔係同通用 AI 聊天機械人競爭。佢係同商務 SaaS 工具（Intercom、Zendesk、Apollo、Otter、QuickBooks）競爭 — 以主權 AI 驅動嘅替代方案取代佢哋。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">我需要使用全部 10 個模組，定係可以只用一個？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
+        <p>你可以使用任何組合。每個模組本身都係功能完整。冇「全選或全唔選」嘅承諾。</p>
+        <p>常見嘅起步方案：</p>
+        <ul>
+          <li><strong>知識先行：</strong>Vault + Desk — 以你嘅文件為基礎部署 AI 客服</li>
+          <li><strong>銷售先行：</strong>Hunt + Pulse — 個人化外展 + 本地化營銷</li>
+          <li><strong>營運先行：</strong>Recap + Loop — 自動化會議記錄同工作流程</li>
+          <li><strong>合規先行：</strong>Shield + Vault — 擴展 AI 前先建立管治</li>
+          <li><strong>溝通先行：</strong>Desk + Voice — 涵蓋聊天同電話客服</li>
+        </ul>
+        <p>隨住需要變化，逐步加入模組。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">「開源」喺呢度係咩意思？真係可以免費使用？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
+        <p>係。每個模組嘅核心都係開源 — 你可以下載、架設同使用而毋須付費。代碼透明兼可審查。</p>
+        <p>商業模式係<strong>開源核心</strong>：</p>
+        <ul>
+          <li><strong>免費：</strong>核心功能、單實例架設、社群支援</li>
+          <li><strong>付費級別：</strong>大規模跨模組協作、企業級管治（Shield）、高可用架設、SLA 支援、進階連接器</li>
+        </ul>
+        <p>收入來自支援訂閱、顧問服務同認證合作夥伴網絡 — 唔係靠授權費或數據。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">ODW 可以取代我現有嘅 SaaS 工具？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
+        <p>呢個係目標。每個 ODW 模組都針對特定 SaaS 類別：</p>
+        <table>
+          <tr><th>ODW 模組</th><th>取代</th></tr>
+          <tr><td>Desk</td><td>Intercom、Zendesk、Ada</td></tr>
+          <tr><td>Vault</td><td>Glean、Onyx、Notion AI</td></tr>
+          <tr><td>Recap</td><td>Otter.ai、Fireflies、Fathom</td></tr>
+          <tr><td>Voice</td><td>Retell AI、Vapi、Bland AI</td></tr>
+          <tr><td>Hunt</td><td>Apollo、Outreach、Salesloft</td></tr>
+          <tr><td>Pulse</td><td>DeepL、Phrase、Jasper</td></tr>
+          <tr><td>People</td><td>Greenhouse、Lever、Ashby</td></tr>
+          <tr><td>Books</td><td>QuickBooks、Xero（AI 層）</td></tr>
+          <tr><td>Loop</td><td>n8n、Zapier（用於 AI 工作流程）</td></tr>
+          <tr><td>Shield</td><td>Vanta、Drata、Secureframe</td></tr>
+        </table>
+        <p>ODW 以<strong>擁有權、私隱、模型選擇同套裝整合</strong>取勝 — 唔係靠功能廣度。ODW 唔會喺對手最強嘅範疇正面對撼。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">邊啲模組已經推出，邊啲仲係計劃中？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
+        <p><strong>已完成（生產就緒或測試版）：</strong></p>
+        <ul>
+          <li>Vault — 主權 RAG 知識平台</li>
+          <li>Loop — 代理協作與工作流程</li>
+          <li>Desk — WhatsApp 優先嘅 AI 客服</li>
+          <li>Recap — 裝置內會議逐字稿</li>
+        </ul>
+        <p><strong>計劃中（開發中）：</strong></p>
+        <ul>
+          <li>Voice — AI 接待員</li>
+          <li>Pulse — 多語言內容</li>
+          <li>Hunt — 外向銷售</li>
+          <li>People — 招聘與人力資源</li>
+          <li>Books — AI 簿記</li>
+          <li>Shield — 管治與合規</li>
+        </ul>
+        <div class="callout info"><strong>時間表</strong>模組正逐步推出。請查閱 ODW.ai 網站或 GitHub 了解最新可用性同路線圖更新。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">我可以將 ODW 模組同現有工具（Salesforce、HubSpot、Slack 等）配合使用？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
+        <p>可以。ODW 模組可整合常見商務工具：</p>
+        <ul>
+          <li><strong>CRM：</strong>Salesforce、HubSpot（透過 API 或 Loop 工作流程）</li>
+          <li><strong>日曆：</strong>Google Calendar、Outlook（用於 Voice 預約）</li>
+          <li><strong>通訊：</strong>Slack、Microsoft Teams、WhatsApp、Telegram</li>
+          <li><strong>會計：</strong>QuickBooks、Xero（用於 Books）</li>
+          <li><strong>HRIS：</strong>Workday、BambooHR（用於 People）</li>
+          <li><strong>內容平台：</strong>WordPress、HubSpot（用於 Pulse）</li>
+        </ul>
+        <p>對於唔喺列表上嘅工具，可透過 Loop 或 REST API 建構自訂整合。</p>
+        <div class="callout tip"><strong>遷移貼士</strong>如果你正從雲端 SaaS 遷移（例如 Intercom → Desk），我哋提供數據匯入工具以減低影響。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">套裝嘅戰略願景係咩？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
+        <p>ODW 嘅願景：成為企業<strong>主權替代方案</strong>，取代雲端 AI SaaS。</p>
+        <p>策略係模組化同複合式：</p>
+        <ol>
+          <li><strong>Vault 係基礎。</strong>每個其他模組都從同一知識庫提取。呢個創造咗一個飛輪 — 你越常使用 ODW，你嘅知識庫就越有價值。</li>
+          <li><strong>Shield 係商業骨幹。</strong>免費開源工具建立採用率；管治與合規將採用率轉化為收入。</li>
+          <li><strong>模組有複合效應。</strong>每個新模組都增加現有模組嘅價值。加入 Voice 令 Desk 更有價值（同一知識庫、新渠道）。加入 People 令 Shield 更有價值（更多審計追蹤）。</li>
+          <li><strong>永唔喺功能廣度上競爭。</strong>ODW 以擁有權、私隱、模型選擇同整合取勝。對手以功能取勝；ODW 以控制權取勝。</li>
+        </ol>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 2: SOVEREIGN AI — WHAT & WHY                -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s2">
+    <div class="section-header"><span class="icon">02 · 主權</span><h2>主權 AI — 是什麼與為何重要</h2><span class="count">9 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">「主權 AI」到底係咩？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
+        <p>主權 AI 指<strong>你擁有同控制成個 AI 堆疊</strong> — 模型、數據、基建。除非你明確允許，否則冇嘢會離開你嘅環境。</p>
+        <p>對比雲端 AI（OpenAI、Anthropic、Google）：你將數據送去佢哋嘅伺服器，佢哋處理，你再收到回覆。你控制唔到數據去邊、儲存幾耐、邊個有權限。</p>
+        <p>使用 ODW 嘅主權 AI 套裝：</p>
+        <ul>
+          <li>所有數據留喺你嘅基建（你嘅伺服器、你嘅雲端、你部筆電）</li>
+          <li>所有處理都喺本機進行 — 除非你設定，否則唔會呼叫第三方 API</li>
+          <li>你控制模型、數據同存取政策</li>
+          <li>如有需要，你可以完全斷網（air-gapped）運行</li>
+        </ul>
+        <div class="callout info"><strong>重點</strong>主權唔代表「唔用雲端」。你可以喺 AWS、Azure、GCP 或自己嘅數據中心運行 ODW。重點係<em>你</em>控制基建 — 唔係 SaaS 供應商。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">點解主權對我嘅業務咁重要？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
+        <p>三個原因：</p>
+        <ol>
+          <li><strong>數據保障：</strong>你嘅敏感數據（客戶 PII、財務記錄、人力資源文件、法律合約）唔會接觸第三方伺服器。對醫療（HIPAA）、金融（SOC 2）、法律（律師—客戶特權）至關重要。</li>
+          <li><strong>法規合規：</strong>GDPR、中國嘅 PIPL 及其他數據保障法例要求數據居留同控制權。主權 AI 大幅簡化合規，因為你完全控制數據存放位置。</li>
+          <li><strong>競爭優勢：</strong>控制你嘅 AI 堆疊 → 按你需要度身訂造 → 深度整合 → 避免供應商綁架。你唔會受制於 SaaS 供應商嘅定價、運行時間或功能路線圖。</li>
+        </ol>
+        <div class="callout warning"><strong>現實檢查</strong>主權伴隨責任。你需要管理基建、處理安全更新並確保備份。ODW 提供工具令呢啲工作可管理，但佢唔似雲端 SaaS 嗰種「設定後就唔使理」。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">「開源」同「主權」有咩分別？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
+        <p><strong>開源</strong>指代碼公開 — 任何人可以審查、修改同架設。<strong>主權</strong>指你控制軟件運行嘅基建。</p>
+        <p>ODW 兩者兼備：</p>
+        <ul>
+          <li>開源：代碼透明、可審查、由社群驅動</li>
+          <li>主權：你喺自己嘅基建上架設，控制數據同環境</li>
+        </ul>
+        <p>唔係所有開源軟件都係主權嘅。如果你喺託管平台（Heroku、Vercel、AWS Lambda）上架設開源軟件，雲端供應商仍然可以存取你嘅數據。主權意味著你控制成個堆疊 — 從代碼到硬件。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">我可以喺 ODW 使用雲端 AI 模型（OpenAI、Anthropic）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
+        <p>可以。ODW 係<strong>模型無關</strong>。你可以混合使用本機模型同雲端 API：</p>
+        <ul>
+          <li>敏感數據用本機模型（客戶 PII、財務記錄）</li>
+          <li>唔太敏感嘅任務用雲端 API（草擬營銷文案、通用問答）</li>
+          <li>按模組設定：Vault 用本機模型，Pulse 用雲端 API 生成內容</li>
+        </ul>
+        <p>當你使用雲端 API 時，只會傳送所需嘅最少上下文 — 唔係成個知識庫。你準確控制邊啲數據會外傳。</p>
+        <div class="callout tip"><strong>最佳做法</strong>要達致最大主權，全部用本機模型。要最佳性能／成本平衡，敏感數據用本機模型，一般任務用雲端 API。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">ODW 會唔會收集我架設嘅遙測或分析數據？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
+        <p><strong>唔會。</strong>ODW 唔會收集你架設嘅任何遙測、分析或使用數據。冇任何「回報」行為。</p>
+        <p>當你架設 ODW 時，佢完全運行喺你嘅基建上，與 ODW 伺服器冇任何外連 — 除非你明確設定同外部服務嘅整合。</p>
+        <p>呢個係主權 AI 嘅核心原則：你控制一切，包括邊啲數據會離開你嘅環境。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">如果雲端 AI 供應商更改條款、定價或結業會點？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
+        <p>使用雲端 AI，你會面臨：</p>
+        <ul>
+          <li>突然加價（OpenAI 已多次更改定價）</li>
+          <li>服務條款變更影響你嘅使用場景</li>
+          <li>服務終止（Google 已終止多個 AI 產品）</li>
+          <li>地緣政治風險（制裁、出口管制、數據本地化法律）</li>
+        </ul>
+        <p>使用 ODW，你嘅 AI 堆疊運行喺你嘅基建上。冇供應商可以拔走插頭。如果你用本機模型，你就完全獨立。如果你用雲端 API，你可以轉換供應商而毋須重新架構 — 模型無關設計令你唔會被綁架。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">主權 AI 係咪只適合大型企業？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
+        <p>唔係。ODW 專為<strong>中小企（10–500 名員工）</strong>而設。重點就係令冇能力負擔企業級 AI 團隊嘅公司都能使用主權 AI。</p>
+        <p>ODW 點樣令中小企實際做到：</p>
+        <ul>
+          <li><strong>Docker 架設：</strong>一條指令即可開始</li>
+          <li><strong>免費核心級別：</strong>冇授權費，只需支付基建成本</li>
+          <li><strong>託管選項：</strong>如果你唔想自建主機，認證合作夥伴可以幫你運行</li>
+          <li><strong>最低硬件：</strong>一部現代筆電就可以配合雲端 API 運行個別模組</li>
+        </ul>
+        <p>小型架設（一個模組、雲端 API）嘅基建成本同 SaaS 訂閱差唔多 — 但你擁有數據。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">我可以完全離線（air-gapped）運行 ODW？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
+        <p>可以。ODW 可以在完全斷網嘅環境下運行。</p>
+        <p>呢個對以下情況至關重要：</p>
+        <ul>
+          <li>政府同國防承辦商（ITAR、FedRAMP）</li>
+          <li>醫療（嚴格數據隔離嘅 HIPAA）</li>
+          <li>有監管要求嘅金融機構</li>
+          <li>任何唔能夠承受數據外洩風險嘅機構</li>
+        </ul>
+        <p>喺 air-gapped 模式下，你只可以使用本機模型（冇雲端 API）。所有處理、儲存同推論都喺你嘅本機基建上進行。</p>
+        <div class="callout info"><strong>注意</strong>Air-gapped 模式代表冇雲端 API 或外部整合。你只限於使用本機模型同自己嘅基建。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">我點樣向董事會或合規團隊解釋「主權 AI」？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
+        <p>用佢哋關心嘅角度嚟講：</p>
+        <ul>
+          <li><strong>降低風險：</strong>「我哋嘅 AI 數據永不離開我哋嘅基建。冇第三方風險。冇嚟自 AI 供應商嘅供應鏈風險。」</li>
+          <li><strong>簡化合規：</strong>「我哋控制數據存放位置同處理方式。GDPR 數據居留、HIPAA 隔離、SOC 2 審計追蹤 — 全部由架構保證，唔係靠政策。」</li>
+          <li><strong>供應商獨立：</strong>「我哋唔會被任何 AI 供應商嘅定價、條款或可用性綁架。我哋可以更換模型或供應商而毋須重新架構。」</li>
+          <li><strong>就緒審計：</strong>「每個 AI 動作都有完整追蹤記錄。當審計員問『邊個做咗咩、幾時做』，我哋幾分鐘內就有答案，唔係幾星期。」</li>
+        </ul>
+        <div class="callout tip"><strong>俾高管嘅一句話</strong>「主權 AI 代表我哋擁有成個堆疊。我哋嘅數據、我哋嘅模型、我哋嘅伺服器。冇供應商可以睇到、改到或拎走。」</div>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 3: HOW MODULES WORK TOGETHER                -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s3">
+    <div class="section-header"><span class="icon">03 · 整合</span><h2>模組如何協作</h2><span class="count">9 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">模組之間點樣整合？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
+        <p>三個整合層：</p>
+        <ol>
+          <li><strong>Vault 係知識基礎。</strong>Desk、Hunt、Pulse、Voice 同 People 都從 Vault 提取，以你嘅實際文件為基礎回應 — 唔係通用 AI 訓練數據。</li>
+          <li><strong>Loop 係協作層。</strong>佢將模組連接成自動化工作流程。當 Recap 完成逐字稿，Loop 可以提取跟進行動並分配。當 Desk 收到問題，Loop 可以觸發 Vault 搜尋並格式化回覆。</li>
+          <li><strong>Shield 係管治層。</strong>佢提供跨所有模組嘅統一存取控制、審計日誌同合規報告。</li>
+        </ol>
+        <p>流程範例：客戶喺 Desk 傳訊息 → Desk 搜尋 Vault → 如果有信心，連同引用來源回覆 → 如果唔係，轉交俾人工 → Loop 將對話記錄喺 Vault → Shield 審計成個流程。</p>
+        <div class="callout info"><strong>重點</strong>整合係可選嘅。你可以獨立使用每個模組，或者透過 Loop 連接佢哋實現自動化工作流程。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">建議嘅模組架設順序係咩？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
+        <p>視乎你嘅業務，但呢個係常見模式：</p>
+        <ol>
+          <li><strong>第 1 階段 — 基礎（第 1–2 週）：</strong>架設 Vault（知識庫）同 Shield（管治）。建立安全、可審計嘅基礎。</li>
+          <li><strong>第 2 階段 — 面向客戶（第 3–4 週）：</strong>架設 Desk（客服）同 Voice（電話）。直接影響客戶。</li>
+          <li><strong>第 3 階段 — 內部營運（第 5–6 週）：</strong>架設 Recap（會議）同 Loop（工作流程）。自動化內部流程。</li>
+          <li><strong>第 4 階段 — 增長（第 7–8 週）：</strong>架設 Hunt（銷售）同 Pulse（內容）。擴展外展同營銷。</li>
+          <li><strong>第 5 階段 — 專門（第 9 週+）：</strong>按需要架設 People（招聘）同 Books（會計）。</li>
+        </ol>
+        <p>呢個係建議，唔係要求。由解決你最急切嘅問題開始。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">如果我只用一個模組，會唔會失去啲咩？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
+        <p>每個模組獨立運作時都功能完整。你唔需要 Vault 先至可以用 Desk，亦唔需要 Shield 先至可以用 Recap。</p>
+        <p>整合帶嚟嘅額外價值：</p>
+        <ul>
+          <li><strong>Vault 整合：</strong>模組根據你嘅實際文件回答，而唔係通用 AI 知識</li>
+          <li><strong>Loop 工作流程：</strong>跨模組自動化多步驟流程</li>
+          <li><strong>Shield 管治：</strong>跨所有模組嘅統一審計追蹤同存取控制</li>
+        </ul>
+        <p>先獨立使用。當你睇到價值時再整合。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">Vault 喺套裝中扮演咩角色？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
+        <p>Vault 係<strong>知識基礎</strong>。佢係中央知識庫，其他模組查詢佢以將 AI 回應建基於你嘅實際文件。</p>
+        <p>冇 Vault：AI 模組使用通用訓練數據。佢哋可能會幻覺或俾過時答案。</p>
+        <p>有 Vault：AI 模組根據你上傳嘅文件、政策、產品規格同內部 wiki 回答。回應包含引用。幻覺大幅減少。</p>
+        <p>Vault 支援：</p>
+        <ul>
+          <li>文件匯入（PDF、DOCX、XLSX、HTML、Markdown）</li>
+          <li>雙語搜尋（例如用英文搜尋，搵到中文文件）</li>
+          <li>存取控制（唔同團隊睇到唔同知識）</li>
+          <li>版本追蹤（知道答案用咗邊個版本嘅文件）</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">Loop 喺套裝中扮演咩角色？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
+        <p>Loop 係<strong>協作層</strong>。佢將模組連接成自動化多步驟工作流程。</p>
+        <p>例子：</p>
+        <ul>
+          <li>Recap 完成會議逐字稿 → Loop 提取跟進行動 → 加入你嘅任務管理器</li>
+          <li>Desk 收到客服問題 → Loop 搜尋 Vault → 格式化回覆 → 記錄喺 CRM</li>
+          <li>Hunt 識別潛在客戶 → Loop 喺 Vault 搵相關案例 → 草擬個人化電郵 → 經你嘅電郵供應商發送</li>
+          <li>People 收到求職申請 → Loop 按條件篩選 → 安排面試 → 通知招聘經理</li>
+        </ul>
+        <p>Loop 有視覺化建構器俾非工程人員，亦有代碼出口（Python/TypeScript）俾進階邏輯。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">Shield 喺套裝中扮演咩角色？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
+        <p>Shield 係<strong>管治與合規層</strong>。佢係套裝嘅商業骨幹 — 付費收入集中嘅模組，因為管治係企業願意付費嘅範疇。</p>
+        <p>Shield 提供：</p>
+        <ul>
+          <li><strong>存取控制：</strong>SSO、基於角色同屬性嘅政策，跨所有模組</li>
+          <li><strong>審計日誌：</strong>跨套裝每個 AI 動作嘅不可篡改日誌</li>
+          <li><strong>合規報告：</strong>預建對應 SOC 2、ISO 27001、HIPAA、GDPR</li>
+          <li><strong>數據居留控制：</strong>確保數據唔會離開設定邊界嘅政策</li>
+          <li><strong>設定加固：</strong>引導式安全基準執行</li>
+        </ul>
+        <p>每個其他模組都產生合規信號（SSO 要求、審計追蹤需求、數據居留限制）。Shield 將佢哋統一成一個管治平面。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">模組之間可以安全咁共享數據？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
+        <p>可以。模組之間嘅數據共享透過受控、可審計嘅渠道進行：</p>
+        <ul>
+          <li><strong>Vault 查詢：</strong>模組透過經認證嘅 API 呼叫向 Vault 請求知識。存取由 Shield 政策控制。</li>
+          <li><strong>Loop 工作流程：</strong>數據透過 Loop 嘅協作引擎喺模組之間流動。每次數據傳輸都有記錄。</li>
+          <li><strong>共享認證：</strong>所有模組使用同一認證層（由 Shield 管理）。登入咗 Desk 嘅用戶就自動通過 Vault 查詢認證。</li>
+        </ul>
+        <p>呢啲傳輸期間數據永不離開你嘅基建。所有模組間通訊都係加密同可審計。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">可唔可以俾個真實嘅多模組工作流程例子？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
+        <p><strong>場景：受監管嘅醫療診所</strong></p>
+        <ol>
+          <li><strong>Voice</strong> 接聽患者來電，預約</li>
+          <li><strong>Desk</strong> 經 WhatsApp 處理跟進問題（「我覆診要帶啲咩？」）</li>
+          <li>Voice 同 Desk 都查詢 <strong>Vault</strong> 攞診所政策、保險資料同預備指示</li>
+          <li><strong>Recap</strong> 將醫生—患者諮商逐字記錄（裝置內，冇雲端）</li>
+          <li><strong>Loop</strong> 從逐字稿提取跟進行動 → 預約下次覆診 → 經 Desk 發送患者指示</li>
+          <li><strong>Shield</strong> 確保所有患者數據（PHI）留喺場內，記錄每次存取以備 HIPAA 審計</li>
+          <li><strong>People</strong> 處理招聘新護士 — 篩選、安排面試、合規記錄</li>
+          <li><strong>Books</strong> 處理月末結算、分類交易</li>
+        </ol>
+        <p>每個模組都運行喺診所嘅基建上。冇患者數據接觸第三方伺服器。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">我需要技術人員管理多模組整合？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
+        <p>基本整合：唔需要。Loop 嘅視覺化建構器令非工程人員都可以組合工作流程。模組連接（Vault → Desk、Recap → Loop）已預先設定。</p>
+        <p>進階整合：某程度嘅技術能力有幫助。自訂連接器、複雜條件邏輯同 API 整合需要熟悉 Python/TypeScript 嘅人。</p>
+        <p>如果你冇內部技術人員，有以下選擇：</p>
+        <ul>
+          <li><strong>認證合作夥伴：</strong>ODW 嘅合作夥伴網絡處理架設同設定</li>
+          <li><strong>專業服務：</strong>ODW 提供設定同度身訂造嘅顧問服務</li>
+          <li><strong>託管架設：</strong>合作夥伴代你運行 ODW（仍然喺你嘅基建上，仍然主權）</li>
+        </ul>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 4: SECURITY & DATA PROTECTION               -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s4">
+    <div class="section-header"><span class="icon">04 · 安全</span><h2>安全與數據保障</h2><span class="count">9 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">我嘅數據儲存喺邊？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
+        <p>所有數據都儲存喺<strong>你自己嘅基建</strong> — 你控制嘅伺服器、雲端帳戶或裝置。ODW 冇任何儲存你數據嘅中央伺服器。</p>
+        <p>你可以架設喺：</p>
+        <ul>
+          <li>你自己嘅數據中心（場內）</li>
+          <li>你嘅雲端帳戶（AWS、Azure、GCP、阿里雲）</li>
+          <li>員工筆電（用於 Recap 同 Vault 等模組）</li>
+          <li>混合設定（部分模組場內、部分喺雲端）</li>
+        </ul>
+        <p>你選擇數據存放位置。佢永不接觸 ODW 嘅伺服器 — 因為根本冇。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">我嘅數據有加密？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
+        <p>有：</p>
+        <ul>
+          <li><strong>靜態加密：</strong>AES-256 加密儲存數據（數據庫、檔案、備份）</li>
+          <li><strong>傳輸加密：</strong>所有網絡通訊使用 TLS 1.3</li>
+        </ul>
+        <p>你控制加密密鑰。喺雲端基建上，使用客戶自管密鑰（CMK）以獲得最大控制權。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">ODW 點樣處理 PII（個人身份資訊）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
+        <p>ODW 嘅設計確保 PII 唔會離開你嘅基建，除非你明確允許：</p>
+        <ul>
+          <li><strong>本機模型：</strong>所有 PII 處理都喺你嘅硬件上進行。零暴露。</li>
+          <li><strong>雲端 API（可選）：</strong>如果你路由到 OpenAI/Anthropic，你控制傳送咩上下文。Shield 可以強制 PII 偵測並阻止敏感數據傳送到外部 API。</li>
+          <li><strong>數據最小化：</strong>模組設計為只處理每項任務所需嘅數據。</li>
+          <li><strong>保留控制：</strong>設定數據保留時間，附帶自動刪除政策。</li>
+        </ul>
+        <div class="callout tip"><strong>最佳做法</strong>對於 PII 密集嘅工作負載（醫療、金融、人力資源），使用本機模型。雲端 API 留俾非敏感任務。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">我可以完全斷網運行 ODW？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
+        <p>可以 — 支援完全 air-gapped 架設。唔需要互聯網。</p>
+        <p>Air-gapped 模式嘅要求：</p>
+        <ul>
+          <li>本機模型架設喺你嘅基建（Llama、Mistral、Whisper 等）</li>
+          <li>模型權重預先下載並經安全媒體傳輸</li>
+          <li>所有依賴項打包喺 Docker 映像或離線包中</li>
+        </ul>
+        <p>取捨：你限於本機模型嘅能力。無法使用尖端模型質素（GPT-4、Claude）。但對好多商務用例嚟講，本機模型已經足夠 — 而主權收益係值得嘅。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">我點樣處理數據洩漏或安全事件？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
+        <p>因為 ODW 運行喺你嘅基建上，你負責事件應對。但 ODW 提供工具：</p>
+        <ul>
+          <li><strong>Shield：</strong>審計日誌、存取控制、異常偵測</li>
+          <li><strong>不可篡改日誌：</strong>所有安全事件都有記錄且唔可篡改</li>
+          <li><strong>存取控制：</strong>基於角色同屬性嘅政策限制存取權限</li>
+        </ul>
+        <p>建議嘅事件應對流程：</p>
+        <ol>
+          <li>需要你用到之前<em>先</em>定義你嘅事件應對計劃</li>
+          <li>使用 Shield 監控異常（唔尋常嘅存取模式、登入失敗）</li>
+          <li>如果發生洩漏，使用 Shield 嘅審計日誌確定範圍同影響</li>
+          <li>遵循法規嘅洩漏通報要求（GDPR：72 小時內）</li>
+        </ol>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">邊個可以存取我嘅數據？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
+        <p><strong>只有你授權嘅人。</strong></p>
+        <p>ODW 無權存取你嘅數據 — 冇 ODW 伺服器儲存。存取由以下控制：</p>
+        <ul>
+          <li><strong>基建層：</strong>有伺服器/雲端存取權嘅人喺系統層控制數據</li>
+          <li><strong>應用層：</strong>Shield 管理 ODW 內嘅用戶認證、角色同權限</li>
+          <li><strong>模組層：</strong>每個模組可以有自己嘅存取政策（例如只有 HR 可以睇 People 數據）</li>
+        </ul>
+        <p>Shield 提供統一存取控制平面。你定義邊個可以睇咩，每次存取事件都有記錄。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">ODW 喺安全方面同雲端 SaaS 點比較？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
+        <table>
+          <tr><th>層面</th><th>雲端 SaaS</th><th>ODW（主權）</th></tr>
+          <tr><td>數據位置</td><td>供應商伺服器</td><td>你嘅基建</td></tr>
+          <tr><td>加密密鑰</td><td>供應商管理</td><td>你控制</td></tr>
+          <tr><td>審計日誌</td><td>有限、供應商控制</td><td>完整、不可篡改、你控制</td></tr>
+          <tr><td>模型數據暴露</td><td>數據傳送到供應商 AI</td><td>本機模型 = 零暴露</td></tr>
+          <tr><td>合規證據</td><td>供應商認證（SOC 2 報告）</td><td>你自己嘅證據、按需生成</td></tr>
+          <tr><td>供應商風險</td><td>依賴供應商嘅安全</td><td>你自己就係自己嘅安全</td></tr>
+          <tr><td>Air-gapped</td><td>唔可能</td><td>完全支援</td></tr>
+        </table>
+        <div class="callout warning"><strong>取捨</strong>主權 AI 下，你負責安全。雲端 SaaS 供應商大量投資安全團隊。使用 ODW，你需要管理自己嘅安全 — 但你獲得絕對控制權。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">ODW 支援數據居留要求？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
+        <p>支援。因為你控制 ODW 嘅架設位置，你控制數據存放位置：</p>
+        <ul>
+          <li>喺歐盟數據中心架設以處理歐盟客戶數據（GDPR）</li>
+          <li>喺中國內地架設以處理中國數據（PIPL）</li>
+          <li>場內架設以獲得最大控制</li>
+          <li>喺特定地區架設以滿足行業要求（HIPAA、FedRAMP）</li>
+        </ul>
+        <p>Shield 可以執行數據居留政策 — 阻止任何將數據路由到設定邊界外嘅企圖。呢個係政策層面嘅保證，唔係設定建議。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">供應鏈安全點算？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
+        <p>ODW 喺多個層面處理供應鏈風險：</p>
+        <ul>
+          <li><strong>開源代碼：</strong>任何人可審查。應用層冇隱藏後門。</li>
+          <li><strong>容器映像：</strong>從已知基礎映像建構，已簽署同驗證。</li>
+          <li><strong>依賴管理：</strong>有記錄嘅依賴項同版本鎖定。安全通告有追蹤。</li>
+          <li><strong>模型供應鏈：</strong>你選擇使用邊啲模型。本機模型 = 冇外部模型依賴。雲端 API = 你清楚知道邊個供應商處理你嘅數據。</li>
+        </ul>
+        <p>對於高安全環境，我哋建議：</p>
+        <ol>
+          <li>架設前審查 ODW 源代碼</li>
+          <li>從源代碼建構容器映像（唔好使用預建映像）</li>
+          <li>鎖定所有依賴項到特定版本</li>
+          <li>對你嘅架設進行漏洞掃描</li>
+        </ol>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 5: DEPLOYMENT & INFRASTRUCTURE              -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s5">
+    <div class="section-header"><span class="icon">05 · 架設</span><h2>架設與基建</h2><span class="count">9 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">運行 ODW 需要咩基建？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
+        <p>要求視乎模組同模型選擇：</p>
+        <p><strong>最低（單模組、雲端 API）：</strong></p>
+        <ul>
+          <li>任何現代筆電或伺服器（8GB+ 記憶體）</li>
+          <li>互聯網連接（用於雲端 API）</li>
+        </ul>
+        <p><strong>建議（全套裝、本機模型）：</strong></p>
+        <ul>
+          <li>伺服器配備 32GB+ 記憶體（用於多個本機模型）</li>
+          <li>GPU（NVIDIA 配備 CUDA）加速推論 — 可選但建議</li>
+          <li>100GB+ 儲存空間用於知識庫、日誌同模型檔案</li>
+        </ul>
+        <p><strong>企業級（高可用、多區域）：</strong></p>
+        <ul>
+          <li>Kubernetes 集群或託管容器平台</li>
+          <li>負載均衡器同自動擴展</li>
+          <li>數據庫集群（PostgreSQL）用於多模組數據</li>
+        </ul>
+        <div class="callout tip"><strong>從小開始</strong>喺筆電或小型伺服器上架設一個模組，然後按需擴展。你唔需要第一日就有企業級基建。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">我可以喺現有嘅雲端帳戶（AWS、Azure、GCP）架設？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
+        <p>可以。ODW 提供架設指南同範本：</p>
+        <ul>
+          <li><strong>AWS：</strong>EC2、ECS、EKS</li>
+          <li><strong>Azure：</strong>VM、Container Instances、AKS</li>
+          <li><strong>GCP：</strong>Compute Engine、GKE、Cloud Run</li>
+          <li><strong>阿里雲：</strong>ECS、ACK</li>
+        </ul>
+        <p>你喺<em>你自己嘅</em>雲端帳戶架設 ODW — 你控制基建、數據同存取政策。ODW 唔會代你運營任何雲端基建。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">我可以喺配備 Apple Silicon 嘅 Mac 上運行 ODW？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
+        <p>可以。ODW 模組可喺配備 Apple Silicon（M1/M2/M3/M4）嘅 macOS 上運行。本機模型透過 MLX 或 llama.cpp 高效運行，呢啲已針對 Apple Neural Engine 優化。</p>
+        <p>呢個特別適用於：</p>
+        <ul>
+          <li><strong>Recap：</strong>喺你嘅筆電上進行裝置內會議逐字稿</li>
+          <li><strong>Vault：</strong>本機運行嘅個人/團隊知識庫</li>
+          <li><strong>開發：</strong>架設到生產伺服器前進行測試同原型設計</li>
+        </ul>
+        <p>對於服務多個用戶嘅生產架設，建議使用伺服器或雲端實例。但對於個人使用或小型團隊，Mac 係可行嘅架設目標。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">我點樣更新 ODW 模組？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
+        <p>ODW 模組以容器（Docker）架設。更新好直接：</p>
+        <ol>
+          <li>從 ODW 儲存庫拉取最新版本</li>
+          <li>將更新架設到你嘅基建</li>
+          <li>重啟模組</li>
+        </ol>
+        <p>零停機更新：使用滾動部署（Kubernetes、Docker Swarm）。單實例架設：重啟時預計有短暫停機（幾秒到幾分鐘）。</p>
+        <p>永遠喺部署到生產環境之前喺測試環境測試更新。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">如果我嘅伺服器宕機會點？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
+        <p>單實例：模組會不可用直到你恢復。</p>
+        <p>高可用方案：</p>
+        <ul>
+          <li>喺負載均衡器後架設多個實例</li>
+          <li>如果一個實例故障，流量路由到其他實例</li>
+        </ul>
+        <p>數據持久性方案：</p>
+        <ul>
+          <li>使用數據庫複製（PostgreSQL 串流複製）</li>
+          <li>定期備份你嘅知識庫（Vault）同日誌</li>
+          <li>將備份儲存喺獨立位置（唔同區域或雲端）</li>
+        </ul>
+        <div class="callout warning"><strong>重要</strong>主權代表你負責備份同災難恢復。ODW 提供工具，但你需要設定同測試你嘅備份策略。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">我需要 Kubernetes 定係 Docker 就夠？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
+        <p>對大部分架設嚟講 Docker 就夠。Kubernetes 只係以下情況需要：</p>
+        <ul>
+          <li>跨多節點高可用</li>
+          <li>按負載自動擴展</li>
+          <li>多區域架設</li>
+          <li>大型團隊配備複雜模組設定</li>
+        </ul>
+        <p>對於單一團隊運行幾個模組，單伺服器上嘅 Docker Compose 完全足夠。簡單開始，按需擴展。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">我可以將唔同模組架設喺唔同伺服器？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
+        <p>可以。模組係獨立服務。你可以按需要喺基建上分發佢哋：</p>
+        <ul>
+          <li>Vault 喺高儲存伺服器（佢儲存你嘅知識庫）</li>
+          <li>Recap 喺各筆電（裝置內逐字稿）</li>
+          <li>Desk 同 Voice 喺對外伺服器（面向客戶）</li>
+          <li>Shield 喺安全內部伺服器（管治數據）</li>
+        </ul>
+        <p>模組透過 REST API 通訊。只要佢哋喺你嘅網絡上可以互相連通，無論物理位置如何都可以協作。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">我需要幾多儲存空間？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
+        <p>視乎你嘅用量：</p>
+        <ul>
+          <li><strong>ODW 模組（冇本機模型）：</strong>約 5GB 用於應用代碼、數據庫同日誌</li>
+          <li><strong>本機模型：</strong>每個模型 5–40GB，視乎大小（7B ≈ 5GB，70B ≈ 40GB）</li>
+          <li><strong>Vault 知識庫：</strong>視乎你嘅文件。1,000 份文件 ≈ 1–5GB（包括嵌入）</li>
+          <li><strong>Recap 逐字稿：</strong>每小時音頻約 10MB</li>
+          <li><strong>日誌同審計追蹤：</strong>活躍架設每月約 1GB</li>
+        </ul>
+        <p>合理嘅起步點：單模組架設配一個本機模型用 100GB。隨住知識庫同用量增長擴展儲存。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">你哋有冇提供 Docker 映像同架設範本？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
+        <p>有：</p>
+        <ul>
+          <li><strong>Docker 映像：</strong>每個模組都喺 Docker Hub / GitHub Container Registry 上發佈</li>
+          <li><strong>Docker Compose：</strong>即用嘅 compose 檔案用於單伺服器架設</li>
+          <li><strong>Kubernetes 清單：</strong>Helm charts 用於生產級架設</li>
+          <li><strong>雲端範本：</strong>AWS、Azure、GCP 嘅 Terraform/CloudFormation</li>
+        </ul>
+        <p>文件包括每個平台嘅逐步架設指南。</p>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 6: COMPLIANCE & REGULATIONS                 -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s6">
+    <div class="section-header"><span class="icon">06 · 合規</span><h2>合規與法規</h2><span class="count">9 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">ODW 符合 GDPR、HIPAA、SOC 2？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
+        <p>ODW 嘅設計幫你合規 — 但合規最終係你嘅責任，因為你控制基建。</p>
+        <p>ODW 提供：</p>
+        <ul>
+          <li><strong>GDPR：</strong>數據最小化、目的限制、保留控制、數據主體權利工作流程（存取、刪除、可攜性）</li>
+          <li><strong>HIPAA：</strong>所有處理喺你嘅基建上進行，PHI 永不接觸第三方伺服器。Shield 提供審計追蹤。</li>
+          <li><strong>SOC 2：</strong>Shield 提供對應 SOC 2 信任服務準則嘅存取控制、審計日誌同合規報告</li>
+          <li><strong>歐盟 AI 法案：</strong>People 同 Shield 按歐盟 AI 法案要求設計 — 人工監督、透明度、審計追蹤</li>
+        </ul>
+        <p>對於正式認證（SOC 2 審計、HIPAA 評估），需要聘請第三方審計師。ODW 提供技術控制；審計師驗證你嘅實施。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">ODW 符合歐盟 AI 法案？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
+        <p>ODW 模組嘅設計符合其風險分類嘅歐盟 AI 法案要求：</p>
+        <ul>
+          <li><strong>高風險（People — 招聘）：</strong>人工監督、透明度、審計追蹤、合規評估</li>
+          <li><strong>有限風險（Desk、Voice — 面向客戶）：</strong>透明度（披露 AI 使用）、人工轉接選項</li>
+          <li><strong>最低風險（Vault、Recap、Pulse — 內部）：</strong>標準數據保障同安全</li>
+        </ul>
+        <p>Shield 提供管治層幫你證明合規 — 審計日誌、存取控制、合規報告。</p>
+        <div class="callout info"><strong>注意</strong>歐盟 AI 法案正分階段實施（2024–2026）。ODW 追蹤最終法規並相應更新。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">唔同國家嘅數據居留要求點算？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
+        <p>好多法規要求數據留存喺特定地理邊界內：</p>
+        <ul>
+          <li><strong>GDPR：</strong>歐盟數據必須留喺歐盟（或獲充分認定嘅司法管轄區）</li>
+          <li><strong>中國 PIPL：</strong>中國個人數據必須留喺中國內地</li>
+          <li><strong>俄羅斯：</strong>俄羅斯公民嘅個人數據必須儲存喺俄羅斯</li>
+          <li><strong>印度（DPDP 法案）：</strong>特定類別嘅數據本地化要求</li>
+          <li><strong>巴西（LGPD）：</strong>數據傳輸限制</li>
+        </ul>
+        <p>因為你控制 ODW 嘅架設位置，你可以透過喺合適嘅司法管轄區架設來確保數據居留。Shield 執行數據居留政策 — 阻止任何將數據路由到設定邊界外嘅企圖。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">我需要向客戶披露 AI 使用？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
+        <p>越嚟越多地方要求係。多個司法管轄區要求 AI 聊天機械人披露：</p>
+        <ul>
+          <li><strong>歐盟 AI 法案：</strong>AI 與人類互動時要求透明</li>
+          <li><strong>加州（CCPA/CPRA）：</strong>要求披露自動化決策</li>
+          <li><strong>其他司法管轄區：</strong>新興法律要求 AI 披露</li>
+        </ul>
+        <p>對於 Desk 同 Voice，我哋建議：</p>
+        <ul>
+          <li>披露客戶通訊中使用咗 AI</li>
+          <li>提供同人工對話嘅選項</li>
+          <li>解釋收集咗咩數據以及點樣使用</li>
+        </ul>
+        <p>Shield 可以根據你嘅設定協助產生合規嘅私隱通知。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">ODW 點樣協助審計就緒？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
+        <p>Shield 將數週嘅審計準備縮短到幾分鐘：</p>
+        <ul>
+          <li><strong>不可篡改審計日誌：</strong>每個 AI 動作都有時間戳、行為者、動作同存取數據嘅記錄</li>
+          <li><strong>合規對應：</strong>預建對應 SOC 2、ISO 27001、HIPAA、GDPR 控制框架</li>
+          <li><strong>證據包：</strong>按需產生審計員就緒嘅證據包</li>
+          <li><strong>存取報告：</strong>邊個喺幾時出於咩原因存取咗咩 — 可以標準格式匯出</li>
+        </ul>
+        <p>目標：喺 1 小時內產出審計員就緒嘅證據（行業基準係數日到數週）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">AI 特定法規呢（歐盟 AI 法案以外）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
+        <p>監管環境快速演變。ODW 嘅設計具適應性：</p>
+        <ul>
+          <li><strong>美國 AI 行政命令（2023）：</strong>聚焦安全、保障同可信賴性。ODW 嘅模型無關設計同審計追蹤支援合規。</li>
+          <li><strong>中國生成式 AI 法規：</strong>要求內容標記同數據本地化。ODW 嘅主權架構支援兩者。</li>
+          <li><strong>紐約市地方法律 144：</strong>要求自動化僱傭決策工具嘅偏見測試。People 專為此設計。</li>
+          <li><strong>加拿大 AIDA：</strong>擬議中嘅 AI 與數據法案。ODW 嘅人工參與設計符合擬議要求。</li>
+        </ul>
+        <p>Shield 嘅合規框架會隨新法規出現而更新。目標：ODW 應該令合規變<em>更簡單</em>，而唔係更困難，隨住監管環境擴展。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">ODW 可以協助供應商風險評估？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
+        <p>可以。當你嘅採購團隊需要評估 ODW 作為供應商時：</p>
+        <ul>
+          <li><strong>安全文件：</strong>架構圖、數據流描述、加密標準</li>
+          <li><strong>開源代碼：</strong>可審查 — 你嘅安全團隊可以直接審查代碼</li>
+          <li><strong>自行架設：</strong>預設冇第三方數據暴露。呢個大幅簡化供應商風險評估。</li>
+          <li><strong>合規對應：</strong>Shield 為你嘅供應商風險問卷產生證據</li>
+        </ul>
+        <p>ODW 係自行架設嘅事實代表好多供應商風險問題變得唔相關 — 冇第三方數據處理需要評估。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">ODW 點樣處理數據主體權利（GDPR 第 15–22 條）？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
+        <p>ODW 提供工具履行數據主體權利：</p>
+        <ul>
+          <li><strong>查閱權（第 15 條）：</strong>匯出與特定個人相關嘅所有數據</li>
+          <li><strong>更正權（第 16 條）：</strong>修正不準確嘅數據</li>
+          <li><strong>刪除權（第 17 條）：</strong>刪除跨所有模組與個人相關嘅所有數據</li>
+          <li><strong>數據可攜權（第 20 條）：</strong>以機器可讀格式匯出數據</li>
+          <li><strong>反對權（第 21 條）：</strong>停止處理個人嘅數據</li>
+        </ul>
+        <p>Shield 提供工作流程工具系統化處理呢啲請求並記錄合規。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">ODW 持有咩認證？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
+        <p>作為開源、自行架設嘅產品，ODW 本身唔持有傳統 SaaS 意義上嘅認證（SOC 2 Type II、ISO 27001 認證）。呢啲認證適用於託管服務。</p>
+        <p>ODW 提供嘅替代：</p>
+        <ul>
+          <li><strong>技術控制：</strong>你<em>自己</em>認證嘅構建塊（存取控制、加密、審計日誌）</li>
+          <li><strong>合規對應：</strong>Shield 將你嘅設定對應到特定控制框架</li>
+          <li><strong>證據產生：</strong>產生你嘅審計員需要嘅文件</li>
+        </ul>
+        <p>如果你需要認證嘅託管服務，ODW 嘅認證合作夥伴網絡提供由合作夥伴持有認證嘅託管架設。</p>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 7: AI MODELS & FLEXIBILITY                  -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s7">
+    <div class="section-header"><span class="icon">07 · 模型</span><h2>AI 模型與靈活性</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">ODW 支援邊啲 AI 模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
+        <p>ODW 係模型無關。支援本機同雲端模型：</p>
+        <p><strong>本機模型（運行喺你嘅基建）：</strong></p>
+        <ul>
+          <li>Llama 3、Mistral、Qwen（透過 Ollama、vLLM 或 llama.cpp）</li>
+          <li>Whisper（用於 Recap 同 Voice 嘅逐字稿）</li>
+          <li>嵌入模型（用於 Vault 嘅 RAG）</li>
+        </ul>
+        <p><strong>雲端 API（可選）：</strong></p>
+        <ul>
+          <li>OpenAI（GPT-4、GPT-4o）</li>
+          <li>Anthropic（Claude）</li>
+          <li>Google（Gemini）</li>
+          <li>阿里（Qwen 經 DashScope）</li>
+          <li>AWS Bedrock</li>
+        </ul>
+        <p>混合配搭 — 敏感數據用本機模型，一般任務用雲端 API。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">我可以用自己微調嘅模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
+        <p>可以。ODW 支援任何遵循標準 API 嘅模型（OpenAI 兼容、Hugging Face transformers 等）。</p>
+        <p>如果你有針對特定領域（法律、醫療、金融）微調嘅模型，架設佢然後將 ODW 模組指向佢。</p>
+        <p>呢個係主權 AI 嘅關鍵優勢 — 你唔會被綁架喺供應商嘅模型。用任何最適合你用例嘅模型。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">我可以在唔干擾工作流程嘅情況下切換模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
+        <p>可以。ODW 嘅模型無關架構意味著工作流程引用嘅係<strong>能力</strong>（摘要、分類、提取），而唔係特定模型。</p>
+        <p>你可以：</p>
+        <ul>
+          <li>更換 LLM 供應商而唔使重寫自動化</li>
+          <li>按模組設定唔同模型</li>
+          <li>按任務路由到唔同模型（敏感 → 本機、複雜 → 尖端）</li>
+          <li>A/B 測試模型以搵到最適合嘅</li>
+        </ul>
+        <p>切換模型係設定變更，唔係代碼變更。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">本機模型同雲端模型嘅質素比較？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
+        <p>差距已大幅收窄。對好多商務任務嚟講，本機模型已經足夠：</p>
+        <table>
+          <tr><th>任務</th><th>本機（7B–13B）</th><th>本機（70B+）</th><th>雲端（GPT-4/Claude）</th></tr>
+          <tr><td>FAQ 回答</td><td>✅ 良好</td><td>✅ 優秀</td><td>✅ 優秀</td></tr>
+          <tr><td>文件摘要</td><td>✅ 良好</td><td>✅ 優秀</td><td>✅ 優秀</td></tr>
+          <tr><td>複雜推理</td><td>⚠️ 有限</td><td>✅ 良好</td><td>✅ 優秀</td></tr>
+          <tr><td>創意寫作</td><td>⚠️ 基本</td><td>✅ 良好</td><td>✅ 優秀</td></tr>
+          <tr><td>代碼生成</td><td>⚠️ 有限</td><td>✅ 良好</td><td>✅ 優秀</td></tr>
+        </table>
+        <div class="callout tip"><strong>實際做法</strong>高量、常規任務用本機模型。複雜推理或創意任務用雲端 API，嗰啲場景質素比主權更重要。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">如果我首選嘅雲端模型供應商宕機會點？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
+        <p>ODW 嘅模型無關設計讓你可以設定備援模型：</p>
+        <ul>
+          <li>主要：雲端 API（例如 OpenAI GPT-4）</li>
+          <li>備援：本機模型（例如 Llama 3 70B）</li>
+          <li>第二備援：唔同雲端 API（例如 Anthropic Claude）</li>
+        </ul>
+        <p>如果你嘅主要模型供應商宕機，ODW 會自動路由到備援。你嘅用戶唔會受到服務中斷影響。</p>
+        <p>呢個係擁有本機模型嘅另一個優勢 — 佢哋係你嘅常備後援。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">我可以為唔同模組使用唔同模型？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
+        <p>可以。每個模組可以獨立設定：</p>
+        <ul>
+          <li><strong>Vault：</strong>本機嵌入模型 + 本機 LLM 用於 RAG（知識查詢嘅最大主權）</li>
+          <li><strong>Desk：</strong>常規 FAQ 用本機模型，複雜查詢用雲端 API</li>
+          <li><strong>Recap：</strong>本機 Whisper 用於逐字稿（裝置內、冇雲端）</li>
+          <li><strong>Pulse：</strong>雲端 API 用於內容生成（營銷文案嘅最佳質素）</li>
+          <li><strong>People：</strong>本機模型用於篩選（PII 密集，留喺本機）</li>
+        </ul>
+        <p>呢個俾你按用例對主權/質素取捨進行精細控制。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">ODW 點樣處理模型幻覺？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
+        <p>ODW 使用多種策略減少幻覺：</p>
+        <ol>
+          <li><strong>Vault 錨定：</strong>模組根據你嘅實際文件回答，唔係通用訓練數據。回應包含對源文件嘅引用。</li>
+          <li><strong>信心閾值：</strong>如果模型嘅信心低於閾值，佢會轉交俾人工而唔係估答案。</li>
+          <li><strong>檢索增強生成：</strong>Vault 嘅 RAG 管道確保答案建基於檢索到嘅上下文。</li>
+          <li><strong>人工參與：</strong>對於高風險任務（People 招聘決策、Books 財務分錄），AI 輔助但人類決定。</li>
+        </ol>
+        <p>冇系統可以完全消除幻覺。ODW 嘅做法：令幻覺可偵測（引用）、可預防（信心閾值）、可恢復（人工轉接）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">運行本機模型對比雲端 API 嘅成本？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
+        <p><strong>本機模型：</strong></p>
+        <ul>
+          <li>前期：硬件成本（GPU 伺服器：$5K–$20K，或用現有 Mac/筆電）</li>
+          <li>持續：電費、維護。冇每 token 成本。</li>
+          <li>大規模：大幅便宜。100 萬 token 喺本機硬件 ≈ $0.50–$2 電費 vs. 雲端 API $5–$60。</li>
+        </ul>
+        <p><strong>雲端 API：</strong></p>
+        <ul>
+          <li>前期：$0</li>
+          <li>持續：按 token 計費。GPT-4：約 $10–$30 / 100 萬 token。Claude：約 $3–$15 / 100 萬 token。</li>
+          <li>大規模：成本隨用量線性增長。</li>
+        </ul>
+        <div class="callout tip"><strong>收支平衡</strong>對大部分企業嚟講，如果你處理大量數據，本機模型喺 3–6 個月內收支平衡。少於嗰個量，雲端 API 更具成本效益（冇硬件投資）。</div>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 8: LANGUAGES & LOCALIZATION                 -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s8">
+    <div class="section-header"><span class="icon">08 · 語言</span><h2>語言與本地化</h2><span class="count">7 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">ODW 支援邊啲語言？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
+        <p>ODW 模組支援 100+ 種語言，特別擅長：</p>
+        <ul>
+          <li><strong>英文</strong></li>
+          <li><strong>中文（簡體同繁體）</strong> — 對大灣區同大中華區營運至關重要</li>
+          <li><strong>日文、韓文</strong></li>
+          <li><strong>西班牙文、法文、德文、葡萄牙文</strong></li>
+          <li><strong>阿拉伯文、印地文及其他主要語言</strong></li>
+        </ul>
+        <p>Pulse 提供真正嘅本地化，涵蓋 50+ 種語言 — 唔只係翻譯，而係對每個市場嘅文化適應。</p>
+        <p>Vault 支援雙語搜尋（例如用英文搜尋，搵到中文文件）。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">翻譯同本地化有咩分別？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
+        <p><strong>翻譯</strong>將一種語言嘅文字轉換為另一種。<strong>本地化</strong>為特定市場調整內容 — 調整語氣、慣用語、語域、文化引用同語境框架。</p>
+        <p>例子：美國營銷活動話「Hit a home run with our product」會：</p>
+        <ul>
+          <li><strong>翻譯成日文：</strong>字面棒球引用 — 喺棒球比喻唔以同樣方式引起共鳴嘅市場令人困惑</li>
+          <li><strong>為日本本地化：</strong>改編為使用文化相關嘅比喻傳達同樣嘅成功訊息</li>
+        </ul>
+        <p>Pulse 做嘅係本地化，唔只係翻譯。輸出讀落好似用每種目標語言原生撰寫，唔係翻譯腔。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">Vault 可以跨唔同語言嘅文件搜尋？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
+        <p>可以。Vault 支援<strong>雙語同多語搜尋</strong>：</p>
+        <ul>
+          <li>用英文搜尋 → 搵到中文文件</li>
+          <li>用中文搜尋 → 搵到英文文件</li>
+          <li>用任何支援語言搜尋 → 搵到相關文件，唔理佢哋嘅原始語言</li>
+        </ul>
+        <p>呢個透過多語嵌入模型實現，將跨語言嘅概念映射到同一向量空間。匹配嘅係語義，唔只係關鍵字翻譯。</p>
+        <p>呢個對跨市場營運嘅企業至關重要 — 英文問題可以搵到用中文、日文或知識庫中任何其他語言撰寫嘅相關知識。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">Desk 同 Voice 可以處理多語言客戶？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
+        <p>可以。Desk 同 Voice 都支援多語言對話：</p>
+        <ul>
+          <li><strong>自動偵測：</strong>AI 偵測客戶語言並以同一語言回覆</li>
+          <li><strong>知識庫：</strong>Vault 無論文件用咩語言撰寫都返回相關答案</li>
+          <li><strong>一致嘅品牌聲音：</strong>你嘅品牌人格跨語言維持</li>
+        </ul>
+        <p>客戶可以用廣東話傳訊息，收到廣東話回覆，而答案提取自英文文件 — 全部自動完成。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">Pulse 可以跨語言保持品牌聲音？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
+        <p>可以。呢個係關鍵差異化。Pulse 按你嘅品牌聲音指引設定：</p>
+        <ul>
+          <li>語氣（正式、隨意、權威、活潑）</li>
+          <li>詞彙（行業術語、品牌專屬語言）</li>
+          <li>風格指引（句長、每個市場嘅正式程度慣例）</li>
+        </ul>
+        <p>用唔同語言生成內容時，Pulse 按每個市場嘅慣例調整品牌聲音，同時保持一致性。英文嘅活潑品牌會變成適當嘅日文活潑 — 唔係英文語氣嘅字面翻譯，而係文化上恰當嘅對應。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">由右至左嘅語言（阿拉伯文、希伯來文）呢？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
+        <p>ODW 喺顯示同內容生成兩方面都支援 RTL 語言：</p>
+        <ul>
+          <li><strong>介面：</strong>介面為 RTL 語言正確渲染</li>
+          <li><strong>內容生成：</strong>Pulse 以阿拉伯文、希伯來文及其他 RTL 語言生成文化恰當嘅內容</li>
+          <li><strong>Vault：</strong>正確索引同檢索 RTL 文件</li>
+          <li><strong>Desk/Voice：</strong>處理 RTL 對話</li>
+        </ul>
+        <p>對於中東同北非市場，ODW 提供同任何其他地區一樣嘅主權、文化感知能力。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">我可以同時為多個市場創建內容？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
+        <p>可以。Pulse 支援跨市場批量內容生成：</p>
+        <ul>
+          <li>用英文撰寫產品公告</li>
+          <li>Pulse 同時為日本、德國、巴西同中東生成本地化版本</li>
+          <li>每個版本都係文化適應，唔只係翻譯</li>
+          <li>品牌聲音跨所有版本保持一致</li>
+        </ul>
+        <p>呢個消除咗傳統本地化瓶頸 — 內容要經過順序翻譯 → 審查 → 每個市場適應。用 Pulse，所有市場並行處理。</p>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 9: PRICING & LICENSING                      -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s9">
+    <div class="section-header"><span class="icon">09 · 定價</span><h2>定價與授權</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">ODW 幾錢？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
+        <p>ODW 採用開源核心模式：</p>
+        <ul>
+          <li><strong>免費核心：</strong>個別模組具備完整基本功能，冇使用限制，冇時間限制</li>
+          <li><strong>付費級別：</strong>大規模跨模組整合、企業級管治（Shield）、高可用架設、SLA 支援、進階連接器</li>
+        </ul>
+        <p>具體定價取決於架設規模、用戶數同模組。聯絡 ODW 獲取報價。</p>
+        <div class="callout tip"><strong>投資回報計算</strong>如果 ODW 取代每年 $50K 嘅 SaaS 訂閱（Intercom、Apollo、Otter 等）或釋放每週 20 小時嘅人工工作，呢個工具嘅回報係數倍。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">有冇免費試用？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
+        <p>免費核心<strong>永久可用</strong> — 冇時間限制，唔需要信用卡。永久免費架設同使用個別模組。</p>
+        <p>對於付費級別（跨模組整合、企業功能），提供 30 日試用。聯絡 ODW 開始。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">免費級別同付費包含咩？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
+        <table>
+          <tr><th>功能</th><th>免費</th><th>付費</th></tr>
+          <tr><td>個別模組</td><td>✅ 完整</td><td>✅ 完整</td></tr>
+          <tr><td>單實例架設</td><td>✅</td><td>✅</td></tr>
+          <tr><td>本機模型支援</td><td>✅</td><td>✅</td></tr>
+          <tr><td>雲端 API 整合</td><td>✅</td><td>✅</td></tr>
+          <tr><td>社群支援</td><td>✅</td><td>✅</td></tr>
+          <tr><td>跨模組協作（Loop）</td><td>基本</td><td>✅ 完整規模</td></tr>
+          <tr><td>Shield 管治</td><td>基本</td><td>✅ 完整</td></tr>
+          <tr><td>高可用架設</td><td>—</td><td>✅</td></tr>
+          <tr><td>SLA 支援</td><td>—</td><td>✅</td></tr>
+          <tr><td>進階連接器（SAP、Salesforce）</td><td>—</td><td>✅</td></tr>
+          <tr><td>專屬客戶經理</td><td>—</td><td>✅</td></tr>
+        </table>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">ODW 真係開源？用咩授權？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
+        <p>係，核心係開源。具體授權因模組而異，但遵循開源標準（核心通常係 MIT 或 Apache 2.0）。</p>
+        <p>「開源核心」實際上係：</p>
+        <ul>
+          <li><strong>核心（免費、開源）：</strong>模組嘅基本功能 — 架設、使用、修改、再分發</li>
+          <li><strong>企業功能（付費）：</strong>企業需要但中小企唔需要嘅進階功能 — 高可用、多租戶協作、進階連接器、貴賓式支援</li>
+        </ul>
+        <p>開源核心本身已經非常實用。付費級別為較大規模架設增加營運功能。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">ODW 嘅定價同佢取代嘅 SaaS 工具點比較？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
+        <p>50 人公司嘅典型 SaaS 成本：</p>
+        <ul>
+          <li>Intercom/Zendesk：$5,000–$20,000/年</li>
+          <li>Apollo/Outreach：$10,000–$30,000/年</li>
+          <li>Otter.ai/Fireflies：$3,000–$10,000/年</li>
+          <li>Greenhouse/Lever：$10,000–$25,000/年</li>
+          <li>QuickBooks + 簿記員：$5,000–$15,000/年</li>
+        </ul>
+        <p><strong>總計：$33,000–$100,000/年</strong>嘅 SaaS 訂閱 — 而且你唔擁有數據。</p>
+        <p>ODW 以單一套裝取代呢啲。定價基於架設規模，唔係按座位。對大部分中小企嚟講，ODW 明顯更便宜 — 而且你擁有自己嘅數據。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">你哋按座位定係按模組收費？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
+        <p>定價基於<strong>架設規模</strong>，唔係按座位或按模組。</p>
+        <p>呢個係有意為之 — 按座位定價懲罰公司擴展團隊。按模組定價懲罰公司使用更多套裝功能。</p>
+        <p>ODW 嘅模式：你按架設規模付費（實例數量、高可用要求、支援級別）。用全部 10 個模組或只用 1 個 — 定價模式唔會懲罰採用。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">你哋接受咩付款方式？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
+        <p>付費級別：</p>
+        <ul>
+          <li>銀行轉帳（用於企業合約）</li>
+          <li>信用卡（用於較小規模架設）</li>
+          <li>加密貨幣（USDC、USDT） — 符合開源/主權精神</li>
+        </ul>
+        <p>提供年度同多年合約折扣。聯絡 ODW 了解詳情。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">有冇合作夥伴／經銷計劃？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
+        <p>有。ODW 正在建立<strong>認證合作夥伴網絡</strong>：</p>
+        <ul>
+          <li><strong>架設合作夥伴：</strong>為客戶處理設定、配置同持續管理</li>
+          <li><strong>顧問合作夥伴：</strong>提供行業特定嘅度身訂造同整合</li>
+          <li><strong>經銷合作夥伴：</strong>將 ODW 捆綁喺佢哋自己嘅服務中</li>
+        </ul>
+        <p>合作夥伴獲得認證、技術支援同收入分成。如果你有興趣成為合作夥伴，聯絡 ODW。</p>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 10: GETTING STARTED & ONBOARDING            -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s10">
+    <div class="section-header"><span class="icon">10 · 入門</span><h2>開始使用與入門</h2><span class="count">8 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">開始使用需要幾耐？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
+        <p>視乎架設複雜度：</p>
+        <ul>
+          <li><strong>單模組、筆電架設：</strong>1 小時內</li>
+          <li><strong>單模組、雲端架設：</strong>1–2 日</li>
+          <li><strong>全套裝、企業架設：</strong>2–4 週（包括設定、整合、團隊培訓）</li>
+        </ul>
+        <p>ODW 提供架設指南、Docker 映像同專業入門服務加速設定。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">架設 ODW 需要技術人員？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
+        <p>基本架設：需要最少技術能力。如果你識運行 Docker 指令，你就識架設 ODW。</p>
+        <p>進階架設（高可用、多模組、自訂整合）：某程度嘅 DevOps 能力有幫助。</p>
+        <p>如果你冇內部技術人員，有以下選擇：</p>
+        <ul>
+          <li><strong>認證合作夥伴：</strong>代你處理架設</li>
+          <li><strong>專業服務：</strong>ODW 顧問服務協助設定</li>
+          <li><strong>託管架設：</strong>合作夥伴代你運行 ODW</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">入門流程係點？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
+        <p>免費級別：自助。文件、指南同社群支援。</p>
+        <p>付費級別：</p>
+        <ol>
+          <li><strong>探索通話：</strong>了解你嘅用例、合規要求同現有堆疊</li>
+          <li><strong>架設規劃：</strong>架構設計、基建要求、整合對應</li>
+          <li><strong>設定與配置：</strong>架設模組、設定整合、設定 Shield 政策</li>
+          <li><strong>數據遷移：</strong>從你現有工具匯入數據</li>
+          <li><strong>團隊培訓：</strong>培訓你嘅團隊使用佢哋會用嘅模組</li>
+          <li><strong>上線支援：</strong>過渡期間嘅實時支援</li>
+        </ol>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">我可以從現有 SaaS 工具遷移數據？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
+        <p>可以。ODW 提供常見遷移場景嘅數據匯入工具：</p>
+        <ul>
+          <li><strong>Intercom/Zendesk → Desk：</strong>對話歷史、客戶資料、知識庫文章</li>
+          <li><strong>Notion/Confluence → Vault：</strong>文件、wiki、結構化內容</li>
+          <li><strong>Otter/Fireflies → Recap：</strong>現有逐字稿同會議記錄</li>
+          <li><strong>Greenhouse/Lever → People：</strong>候選人數據、職位發佈、管道歷史</li>
+          <li><strong>QuickBooks → Books：</strong>科目表、交易歷史</li>
+        </ul>
+        <p>對於自訂遷移，使用 REST API 或 Loop 工作流程從任何來源匯入數據。</p>
+        <div class="callout tip"><strong>遷移支援</strong>付費級別包括遷移協助。ODW 團隊協助規劃同執行數據傳輸以減低影響。</div>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">你哋有冇提供培訓？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
+        <p>有，多個層面：</p>
+        <ul>
+          <li><strong>文件：</strong>每個模組嘅全面指南，包括視頻教程</li>
+          <li><strong>社群：</strong>GitHub 討論、社群論壇、Discord/Telegram 頻道</li>
+          <li><strong>團隊培訓：</strong>付費級別包括 — 我哋培訓你嘅團隊使用佢哋會用嘅模組</li>
+          <li><strong>管理員培訓：</strong>俾管理架設嘅 IT 人員（Shield 配置、基建監控）</li>
+          <li><strong>進階工作坊：</strong>為複雜整合、微調同優化嘅度身訂造培訓</li>
+        </ul>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-83">有咩支援選項？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-83"><div class="faq-answer-inner">
+        <table>
+          <tr><th>級別</th><th>支援</th><th>回應時間</th></tr>
+          <tr><td>免費</td><td>社群（GitHub、論壇）</td><td>盡力而為</td></tr>
+          <tr><td>付費 — 標準</td><td>電郵 + 聊天支援</td><td>24 小時</td></tr>
+          <tr><td>付費 — 進階</td><td>專屬 Slack 頻道 + 電話</td><td>4 小時</td></tr>
+          <tr><td>企業</td><td>專屬客戶經理 + SLA</td><td>1 小時（緊急）</td></tr>
+        </table>
+        <p>企業支援包括主動監控、季度業務回顧同優先功能請求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-84">我可以先從一個模組開始，之後再加？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-84"><div class="faq-answer-inner">
+        <p>當然。呢個係建議嘅做法：</p>
+        <ol>
+          <li>由解決你最急切問題嘅模組開始</li>
+          <li>熟悉架設模式同主權架構</li>
+          <li>當你識別新用例時加入模組</li>
+          <li>當你準備好多模組工作流程時透過 Loop 連接模組</li>
+        </ol>
+        <p>冇壓力要你採用全套裝。好多客戶由一個模組開始，6–12 個月內自然擴展。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-85">如果我需要幫助選擇從邊個模組開始？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-85"><div class="faq-answer-inner">
+        <p>同 ODW 預約探索通話。我哋會評估：</p>
+        <ul>
+          <li>你嘅行業同合規要求</li>
+          <li>現有工具堆疊同痛點</li>
+          <li>團隊規模同技術能力</li>
+          <li>優先用例（咩而家最令你花費時間/金錢？）</li>
+        </ul>
+        <p>基於呢啲，我哋會建議起步配置同分階段採用計劃。冇約束 — 目標係幫你搵到最高價值嘅起步點。</p>
+      </div></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 11: ROADMAP & COMMUNITY                     -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s11">
+    <div class="section-header"><span class="icon">11 · 路線圖</span><h2>路線圖與社群</h2><span class="count">7 個問題</span></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-86">ODW 路線圖有啲咩？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-86"><div class="faq-answer-inner">
+        <p>重點發展領域：</p>
+        <ul>
+          <li><strong>模組發佈：</strong>完成剩餘 6 個模組（Voice、Pulse、Hunt、People、Books、Shield）</li>
+          <li><strong>更深整合：</strong>更緊密嘅跨模組工作流程、共享上下文、統一搜尋</li>
+          <li><strong>模型支援：</strong>新本機模型發佈時跟進、邊緣架設嘅更好量化</li>
+          <li><strong>行業範本：</strong>醫療、法律、金融、製造業嘅預配置設定</li>
+          <li><strong>合作夥伴生態：</strong>認證架設合作夥伴、社群連接器市場</li>
+        </ul>
+        <p>路線圖受社群反饋同客戶需求影響。喺 GitHub 提交功能請求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-87">我點樣貢獻 ODW？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-87"><div class="faq-answer-inner">
+        <p>ODW 歡迎貢獻：</p>
+        <ul>
+          <li><strong>代碼：</strong>透過 GitHub pull request 修復漏洞、開發功能、改進</li>
+          <li><strong>文件：</strong>指南、教程、翻譯</li>
+          <li><strong>社群：</strong>回答問題、分享用例、幫助其他用戶</li>
+          <li><strong>連接器：</strong>建構尚未支援嘅工具整合</li>
+          <li><strong>模型：</strong>為特定領域或語言貢獻微調模型</li>
+        </ul>
+        <p>目標：第 12 個月前達到每月 50+ 個外部 PR。社群係 ODW 開發嘅核心部分。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-88">有冇社群論壇或聊天？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-88"><div class="faq-answer-inner">
+        <p>有：</p>
+        <ul>
+          <li><strong>GitHub 討論：</strong>功能請求、漏洞報告、技術問題</li>
+          <li><strong>社群論壇：</strong>較長篇幅嘅討論、用例分享</li>
+          <li><strong>Discord/Telegram：</strong>同社群同 ODW 團隊實時聊天</li>
+        </ul>
+        <p>呢啲係獲得幫助、分享反饋同聯繫其他 ODW 用戶嘅最佳渠道。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-89">我點樣請求功能？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-89"><div class="faq-answer-inner">
+        <p>喺相關模組嘅 GitHub 儲存庫提交功能請求。包括：</p>
+        <ul>
+          <li>你試圖解決嘅問題</li>
+          <li>你嘅建議方案（如果有）</li>
+          <li>你嘅用例同行業背景</li>
+        </ul>
+        <p>功能請求會定期審查。影響多個用戶嘅高影響力請求會被優先處理。付費級別客戶亦可以透過客戶經理提交請求。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-90">我可以為特定行業度身訂造 ODW？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-90"><div class="faq-answer-inner">
+        <p>可以。ODW 設計為可配置：</p>
+        <ul>
+          <li><strong>醫療：</strong>HIPAA 合規處理、Vault 中嘅醫學術語</li>
+          <li><strong>法律：</strong>律師—客戶特權、文件審查工作流程、信託會計</li>
+          <li><strong>金融：</strong>SOC 2 合規、審計追蹤、多幣種</li>
+          <li><strong>製造業：</strong>供應鏈文件、質量控制記錄</li>
+          <li><strong>專業服務：</strong>項目管理、客戶通訊</li>
+        </ul>
+        <p>對於深度訂造，開源代碼可用。修改佢以符合你嘅確切需要。或者同 ODW 嘅顧問團隊或認證合作夥伴合作。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-91">ODW 點樣處理反饋同漏洞報告？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-91"><div class="faq-answer-inner">
+        <p><strong>漏洞報告：</strong>喺 GitHub 提交並附帶重現步驟。關鍵漏洞會優先處理並快速修復。</p>
+        <p><strong>反饋：</strong>透過 GitHub 討論、社群論壇或你嘅客戶經理（付費級別）分享。</p>
+        <p><strong>透明：</strong>ODW 發佈開發更新、路線圖變更同已知問題。社群可以睇到正在做緊咩同點解。</p>
+        <p>付費級別客戶可以直接接觸產品團隊進行反饋同功能討論。</p>
+      </div></div></div>
+
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-92">ODW 嘅長遠願景係咩？<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-92"><div class="faq-answer-inner">
+        <p>ODW 嘅長遠願景：成為企業預設嘅主權 AI 平台。</p>
+        <p>前提：隨住 AI 變得更強大同更多監管，企業會需要佢哋可以信賴嘅 AI — 佢哋擁有、控制同可審計嘅 AI。雲端 AI 今日可行，但監管、地緣政治同競爭風險正在增長。</p>
+        <p>ODW 正在為呢個未來建構：</p>
+        <ul>
+          <li>涵蓋所有主要商務職能嘅完整套裝</li>
+          <li>管治層（Shield）令合規變得可行</li>
+          <li>模型無關架構隨 AI 演變而適應</li>
+          <li>開源社群確保透明同長久</li>
+        </ul>
+        <p>目標唔係喺便利性上打贏雲端 AI。而係成為主權重要時值得信賴嘅替代方案。</p>
+      </div></div></div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p><strong>ODW.ai</strong> — 企業主權 AI</p>
+    <p>商務用家常見問題 · 涵蓋全部 10 個模組</p>
+    <p style="margin-top:8px">個別產品常見問題：
+      <a href="vault.html">Vault</a> ·
+      <a href="loop.html">Loop</a> ·
+      <a href="desk.html">Desk</a> ·
+      <a href="recap.html">Recap</a> ·
+      <a href="voice.html">Voice</a> ·
+      <a href="pulse.html">Pulse</a> ·
+      <a href="hunt.html">Hunt</a> ·
+      <a href="people.html">People</a> ·
+      <a href="books.html">Books</a> ·
+      <a href="shield.html">Shield</a>
+    </p>
+  </div>
+</div>
+
+<script>
+// Toggle FAQ items
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    item.classList.toggle('open');
+      const isExpanded = item.classList.contains('open');
+      button.setAttribute('aria-expanded', isExpanded);
+    });
+});
+
+// Expand all
+function expandAll() {
+  document.querySelectorAll('.faq-item').forEach(item => item.classList.add('open'));
+}
+
+// Collapse all
+function collapseAll() {
+  document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
+}
+
+// Search
+const searchInput = document.getElementById('searchInput');
+const noResults = document.getElementById('noResults');
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase().trim();
+  let visibleCount = 0;
+  document.querySelectorAll('.section').forEach(section => {
+    let sectionVisible = false;
+    section.querySelectorAll('.faq-item').forEach(item => {
+      const text = item.textContent.toLowerCase();
+      const match = !query || text.includes(query);
+      item.style.display = match ? '' : 'none';
+      if (match) { sectionVisible = true; visibleCount++; }
+    });
+    section.style.display = sectionVisible ? '' : 'none';
+  });
+  noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  if (query && visibleCount > 0) expandAll();
+});
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
+</script>
+</body>
+</html>

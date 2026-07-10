@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pulse — FAQ for Business Users</title>
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <div class="header">
+  <div class="lang-switcher" id="lang-switcher"></div>
   <div class="subtitle">Pulse FAQ</div>
   <h1>Pulse FAQ</h1>
   <p>Multilingual content generation — culturally-aware localization across 50+ languages, brand voice consistency, suite-integrated with Vault. Answers for business leaders, no technical background required.</p>
@@ -28,7 +33,7 @@
     <span>Pulse</span>
   </div>
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search questions… (e.g. 'localization', 'brand voice', 'cultural adaptation', 'languages', 'SEO', 'sovereignty')">
+    <input type="text" id="searchInput" aria-label="Search questions" placeholder="Search questions… (e.g. 'localization', 'brand voice', 'cultural adaptation', 'languages', 'SEO', 'sovereignty')">
   </div>
   <div class="controls">
     <button onclick="expandAll()">＋ Expand all</button>
@@ -59,8 +64,8 @@
   <div class="section" id="s1">
     <div class="section-header"><span class="icon">01 · OVERVIEW</span><h2>The Basics — What Is Pulse?</h2><span class="count">9 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What is ODW.ai Pulse in plain English?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-1">What is ODW.ai Pulse in plain English?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-1"><div class="faq-answer-inner">
         <p>Pulse is a <strong>multilingual content generation and localization tool</strong>. It helps you create marketing and business content in 50+ languages with genuine cultural adaptation — not just literal translation.</p>
         <p>Here's how it works:</p>
         <ol>
@@ -71,8 +76,8 @@
         <p>The key difference from translation tools: Pulse doesn't just translate words — it adapts <strong>culture</strong>. Idioms, humor, formality conventions, seasonal references — all adjusted for each market.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What problem does Pulse solve?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-2">What problem does Pulse solve?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-2"><div class="faq-answer-inner">
         <p>Businesses expanding across markets face a localization bottleneck:</p>
         <ul>
           <li><strong>Literal translation fails culturally:</strong> Machine translation produces grammatically correct but culturally tone-deaf output. A campaign that resonates in the US may fall flat or offend in Japan.</li>
@@ -83,8 +88,8 @@
         <p>Pulse solves this by providing <strong>culturally-aware, self-hosted content localization</strong>. Your brand material stays on your infrastructure. Output is fast, consistent, and culturally adapted.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Who is Pulse for?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-3">Who is Pulse for?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-3"><div class="faq-answer-inner">
         <p>Pulse is designed for <strong>SMBs (10–500 employees) expanding across international markets</strong>:</p>
         <ul>
           <li><strong>E-commerce:</strong> Product descriptions, marketing campaigns in multiple languages</li>
@@ -96,8 +101,8 @@
         <p>If you're producing content and need it in 5+ languages, but can't afford dedicated localization teams in each market, Pulse is for you.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How is Pulse different from DeepL or Google Translate?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-4">How is Pulse different from DeepL or Google Translate?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-4"><div class="faq-answer-inner">
         <p>DeepL and Google Translate are <strong>translation tools</strong>. Pulse is a <strong>localization tool</strong>.</p>
         <table>
           <thead><tr><th>Aspect</th><th>ODW.ai Pulse</th><th>DeepL / Google Translate</th></tr></thead>
@@ -114,8 +119,8 @@
         <p>Use DeepL/Google Translate for quick, literal translations. Use Pulse for culturally-adapted, brand-consistent content that reads as natively authored.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How is Pulse different from Jasper or Copy.ai?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-5">How is Pulse different from Jasper or Copy.ai?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-5"><div class="faq-answer-inner">
         <p>Jasper and Copy.ai are <strong>content generation tools</strong>. Pulse is a <strong>multilingual localization tool</strong>.</p>
         <table>
           <thead><tr><th>Aspect</th><th>ODW.ai Pulse</th><th>Jasper / Copy.ai</th></tr></thead>
@@ -130,8 +135,8 @@
         <p>Use Jasper/Copy.ai for single-language content generation. Use Pulse for multilingual content with cultural adaptation and sovereignty.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does "cultural adaptation" mean?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-6">What does "cultural adaptation" mean?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-6"><div class="faq-answer-inner">
         <p>"Cultural adaptation" means adjusting content for each market's <strong>cultural norms</strong>:</p>
         <ul>
           <li><strong>Tone:</strong> Formal vs. casual, authoritative vs. playful</li>
@@ -145,8 +150,8 @@
         <div class="callout tip"><strong>Key difference</strong>Translation converts words. Localization converts <em>meaning</em> and <em>culture</em>.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Pulse a standalone product or part of a suite?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-7">Is Pulse a standalone product or part of a suite?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-7"><div class="faq-answer-inner">
         <p>Pulse is <strong>both</strong>:</p>
         <ul>
           <li><strong>Standalone:</strong> You can use Pulse by itself for multilingual content generation</li>
@@ -160,8 +165,8 @@
         <p>The suite integration is what makes Pulse powerful — content isn't generic, it's grounded in your business's own knowledge.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What does "sovereign" mean in this context?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-8">What does "sovereign" mean in this context?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-8"><div class="faq-answer-inner">
         <p>"Sovereign" means <strong>full control over your brand material</strong>:</p>
         <ul>
           <li><strong>Data location:</strong> Your brand guidelines, product specs, and campaign material stay on your infrastructure</li>
@@ -172,8 +177,8 @@
         <p>This is critical for businesses with IP concerns or regulatory requirements. You can't claim data sovereignty if your content tool is sending your brand material to a cloud vendor.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical skills to use Pulse?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-9">Do I need technical skills to use Pulse?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-9"><div class="faq-answer-inner">
         <p><strong>For deployment:</strong> Yes. Pulse is self-hosted, so you need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure.</p>
         <p><strong>For day-to-day use:</strong> No. The web UI is designed for non-technical users (marketing teams, content creators). You can generate content, configure brand voice, and manage localization without writing code.</p>
         <p><strong>For developers:</strong> Pulse provides a REST API and SDKs for custom integrations. Developers can build custom workflows, integrate Pulse into CMS systems, etc.</p>
@@ -184,8 +189,8 @@
   <div class="section" id="s2">
     <div class="section-header"><span class="icon">02 · SOVEREIGNTY</span><h2>Content Generation & Localization</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What types of content can Pulse generate?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-10">What types of content can Pulse generate?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-10"><div class="faq-answer-inner">
         <p>Pulse supports a wide range of content types:</p>
         <ul>
           <li><strong>Blog posts:</strong> Long-form articles, thought leadership</li>
@@ -201,8 +206,8 @@
         <p>Additional content types (whitepapers, case studies) are planned for future releases.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How many languages does Pulse support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-11">How many languages does Pulse support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-11"><div class="faq-answer-inner">
         <p>Pulse supports <strong>50+ languages</strong>, including:</p>
         <ul>
           <li><strong>European:</strong> English, Spanish, French, German, Italian, Portuguese, Dutch, Russian, Polish, Swedish, Norwegian, Danish, Finnish, Greek, Czech, Hungarian, Romanian, Bulgarian, Croatian, Slovak, Slovenian, Lithuanian, Latvian, Estonian</li>
@@ -214,8 +219,8 @@
         <p>New languages are added regularly based on customer demand.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I generate content from scratch or only translate existing content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-12">Can I generate content from scratch or only translate existing content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-12"><div class="faq-answer-inner">
         <p>Both. Pulse supports:</p>
         <ul>
           <li><strong>Generate from scratch:</strong> Provide a topic, outline, or brief — Pulse generates content in any language</li>
@@ -230,8 +235,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I control the tone and style of generated content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-13">Can I control the tone and style of generated content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-13"><div class="faq-answer-inner">
         <p>Yes. Pulse provides <strong>tone and style controls</strong>:</p>
         <ul>
           <li><strong>Tone:</strong> Formal, casual, authoritative, playful, technical, empathetic, urgent</li>
@@ -243,8 +248,8 @@
         <div class="callout tip"><strong>Brand consistency</strong>Vault integration ensures your brand voice is consistent across all languages and content types.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I create market-specific adaptation profiles?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-14">Can I create market-specific adaptation profiles?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-14"><div class="faq-answer-inner">
         <p>Yes. Pulse supports <strong>market-specific adaptation profiles</strong>:</p>
         <ul>
           <li><strong>Pre-built profiles:</strong> Japanese market (keigo, indirect communication), German market (formal, precise), US market (casual, direct), etc.</li>
@@ -260,8 +265,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Pulse support SEO-optimized content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-15">Does Pulse support SEO-optimized content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-15"><div class="faq-answer-inner">
         <p>Yes. Pulse supports <strong>SEO-aware content generation</strong>:</p>
         <ul>
           <li><strong>Locale-specific keywords:</strong> Integrate keywords for each target market (not just translated keywords)</li>
@@ -272,8 +277,8 @@
         <p>Example: A blog post optimized for "best CRM software" in English becomes "ベスト CRM ソフトウェア" in Japanese, with Japanese-specific SEO considerations.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I maintain terminology consistency across content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-16">Can I maintain terminology consistency across content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-16"><div class="faq-answer-inner">
         <p>Yes. Pulse provides <strong>terminology management</strong> via Vault integration:</p>
         <ul>
           <li><strong>Glossaries:</strong> Define approved terminology in Vault (e.g., "product" = "製品" in Japanese, not "商品")</li>
@@ -284,8 +289,8 @@
         <p>This is critical for brand consistency — you don't want "software" translated as "ソフトウェア" in one piece and "ソフト" in another.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I review and edit generated content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-17">Can I review and edit generated content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-17"><div class="faq-answer-inner">
         <p>Yes. All generated content is <strong>fully editable</strong>:</p>
         <ul>
           <li><strong>Side-by-side view:</strong> Compare source language vs. localized output</li>
@@ -301,8 +306,8 @@
   <div class="section" id="s3">
     <div class="section-header"><span class="icon">03 · INTEGRATION</span><h2>Our Solution's Strengths & Design</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What are the top advantages of Pulse over other content tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-18">What are the top advantages of Pulse over other content tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-18"><div class="faq-answer-inner">
         <table>
           <thead><tr><th>Feature</th><th>ODW.ai Pulse</th><th>Typical Alternatives</th></tr></thead>
           <tbody>
@@ -318,8 +323,8 @@
         <p>Pulse competes on <strong>cultural adaptation + sovereignty + suite integration</strong>. If you need brand-consistent, culturally-adapted content across 50+ languages with full data control, Pulse is the best option.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Pulse compare to Phrase or Lokalise?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-19">How does Pulse compare to Phrase or Lokalise?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-19"><div class="faq-answer-inner">
         <p>Phrase and Lokalise are <strong>localization management platforms</strong>. Pulse is a <strong>localization engine</strong>.</p>
         <table>
           <thead><tr><th>Aspect</th><th>ODW.ai Pulse</th><th>Phrase / Lokalise</th></tr></thead>
@@ -335,8 +340,8 @@
         <p>Phrase/Lokalise are great for managing human translation workflows. Pulse is for autonomous, AI-powered content generation and localization. Use both if you need human review for high-stakes content.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Pulse maintain brand voice across languages?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-20">How does Pulse maintain brand voice across languages?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-20"><div class="faq-answer-inner">
         <p>Pulse maintains brand voice via <strong>Vault integration</strong>:</p>
         <ul>
           <li><strong>Brand profile:</strong> Define your brand's personality, tone, values in Vault</li>
@@ -348,8 +353,8 @@
         <div class="callout tip"><strong>Target</strong>≥80% brand voice consistency score across languages (automated scoring against brand voice profile).</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Pulse handle sensitive or confidential content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-21">Can Pulse handle sensitive or confidential content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-21"><div class="faq-answer-inner">
         <p>Yes. Pulse is designed for <strong>sovereign content generation</strong>:</p>
         <ul>
           <li><strong>Self-hosted:</strong> Your brand material stays on your infrastructure</li>
@@ -360,8 +365,8 @@
         <p>This is critical for businesses with IP concerns — unreleased campaign material, product specs, strategic messaging never leaves your infrastructure.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Pulse's code auditable?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-22">Is Pulse's code auditable?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-22"><div class="faq-answer-inner">
         <p>Yes. Pulse's core is <strong>open source</strong>:</p>
         <ul>
           <li><strong>Transparent:</strong> All code is publicly available on GitHub</li>
@@ -371,8 +376,8 @@
         <p>This is critical for sovereignty-focused organizations. You should be able to verify what your content tools are doing.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use Pulse fully offline (no internet)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-23">Can I use Pulse fully offline (no internet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-23"><div class="faq-answer-inner">
         <p>Yes. Pulse supports <strong>fully offline deployment</strong>:</p>
         <ul>
           <li><strong>Local models:</strong> Run LLMs on your own hardware (via Ollama, vLLM, llama.cpp)</li>
@@ -383,8 +388,8 @@
         <div class="callout warning"><strong>Hardware requirements</strong>Running local models requires GPU hardware (NVIDIA GPUs recommended). CPU-only inference is possible but slow for large models.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How accurate is Pulse's cultural adaptation?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-24">How accurate is Pulse's cultural adaptation?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-24"><div class="faq-answer-inner">
         <p>Pulse's cultural adaptation accuracy depends on:</p>
         <ul>
           <li><strong>Model quality:</strong> Better LLMs = better cultural understanding</li>
@@ -395,8 +400,8 @@
         <div class="callout info"><strong>Human review</strong>For high-stakes content (legal, medical, regulatory), we always recommend human review — even with 90% accuracy.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Pulse replace human translators?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-25">Can Pulse replace human translators?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-25"><div class="faq-answer-inner">
         <p><strong>For most marketing content:</strong> Yes. Pulse can handle volume and speed that human translators can't match.</p>
         <p><strong>For high-stakes content:</strong> No. We don't claim to replace human localization experts for:</p>
         <ul>
@@ -413,8 +418,8 @@
   <div class="section" id="s4">
     <div class="section-header"><span class="icon">04 · SECURITY</span><h2>Brand Voice & Quality</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How do I set up my brand voice in Pulse?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-26">How do I set up my brand voice in Pulse?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-26"><div class="faq-answer-inner">
         <p>Brand voice is configured via <strong>Vault</strong>:</p>
         <ol>
           <li><strong>Create a brand profile in Vault:</strong> Define your brand's personality, tone, values</li>
@@ -425,8 +430,8 @@
         <p>Setup takes <strong>&lt;30 minutes</strong>. Once configured, Pulse applies your brand voice to all generated content across all 50+ languages.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I have different brand voices for different products?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-27">Can I have different brand voices for different products?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-27"><div class="faq-answer-inner">
         <p>Yes. Pulse supports <strong>multiple brand profiles</strong>:</p>
         <ul>
           <li><strong>Per-product:</strong> Different brand voice for each product line</li>
@@ -436,8 +441,8 @@
         <p>You can switch between brand profiles when generating content, or set defaults per product/market/content type.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How does Pulse ensure quality?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-28">How does Pulse ensure quality?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-28"><div class="faq-answer-inner">
         <p>Pulse provides multiple quality assurance features:</p>
         <ul>
           <li><strong>Confidence scoring:</strong> Each output includes a confidence score (localization quality estimate)</li>
@@ -449,8 +454,8 @@
         <div class="callout tip"><strong>Best practice</strong>For high-stakes content, always use the "flag for review" feature and have a native speaker review before publishing.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I see which Vault sources informed the generated content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-29">Can I see which Vault sources informed the generated content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-29"><div class="faq-answer-inner">
         <p>Yes. Pulse provides <strong>content lineage tracking</strong>:</p>
         <ul>
           <li><strong>Source tracking:</strong> See which Vault documents (brand guidelines, product catalogs, glossaries) informed each output</li>
@@ -465,8 +470,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I provide feedback to improve Pulse's output?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-30">Can I provide feedback to improve Pulse's output?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-30"><div class="faq-answer-inner">
         <p>Yes. Pulse includes a <strong>feedback loop</strong>:</p>
         <ul>
           <li><strong>Rate output:</strong> Thumbs up/down for each generated piece</li>
@@ -477,8 +482,8 @@
         <p>Over time, Pulse learns your preferences and produces better output. The more feedback you provide, the better it gets.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I A/B test different versions of content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-31">Can I A/B test different versions of content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-31"><div class="faq-answer-inner">
         <p>Yes. Pulse supports <strong>version management</strong>:</p>
         <ul>
           <li><strong>Multiple versions:</strong> Generate multiple versions of the same content (different tones, styles, approaches)</li>
@@ -489,8 +494,8 @@
         <p>This is useful for testing different approaches in different markets — what works in the US may not work in Japan.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I handle content that needs human review?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-32">How do I handle content that needs human review?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-32"><div class="faq-answer-inner">
         <p>Pulse provides a <strong>review workflow</strong>:</p>
         <ol>
           <li><strong>Auto-flagging:</strong> Pulse flags content that may need review (sensitive topics, low confidence, regulatory content)</li>
@@ -506,8 +511,8 @@
   <div class="section" id="s5">
     <div class="section-header"><span class="icon">05 · DEPLOYMENT</span><h2>Security & Privacy</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Is Pulse secure?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-33">Is Pulse secure?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-33"><div class="faq-answer-inner">
         <p>Yes. Pulse is built with <strong>security best practices</strong>:</p>
         <ul>
           <li><strong>Self-hosted:</strong> Your brand material stays on your infrastructure</li>
@@ -519,15 +524,15 @@
         <p>Pulse is designed for businesses with IP concerns. If you can use Pulse, you can pass a compliance audit.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does ODW.ai have access to my brand material?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-34">Does ODW.ai have access to my brand material?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-34"><div class="faq-answer-inner">
         <p><strong>No.</strong> Pulse is self-hosted on your infrastructure. ODW.ai has zero access to your brand guidelines, product specs, or campaign material.</p>
         <p>Unlike cloud-based content tools (Jasper, Copy.ai), Pulse doesn't send your brand material to a third party. Everything stays on your servers.</p>
         <p>This is critical for businesses with IP concerns. You can't claim data sovereignty if your content tool is sending your brand material to a cloud vendor.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Pulse comply with GDPR?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-35">Does Pulse comply with GDPR?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-35"><div class="faq-answer-inner">
         <p>Yes. Pulse is <strong>GDPR-compatible</strong>:</p>
         <ul>
           <li><strong>Data residency:</strong> All data stays on your infrastructure (or your chosen region if using private cloud)</li>
@@ -538,8 +543,8 @@
         <p>Pulse helps you meet the <strong>technical and organizational measures</strong> required by GDPR (Article 32). You still need to address legal and procedural requirements separately.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I deploy Pulse in an air-gapped environment?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-36">Can I deploy Pulse in an air-gapped environment?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-36"><div class="faq-answer-inner">
         <p>Yes. Pulse supports <strong>air-gapped deployment</strong> (no internet access):</p>
         <ul>
           <li><strong>Offline installation:</strong> Install Pulse without internet access (Docker images, offline packages)</li>
@@ -549,8 +554,8 @@
         <p>Air-gapped deployment is common for government contractors, military, and high-security environments.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I control who can generate content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-37">Can I control who can generate content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-37"><div class="faq-answer-inner">
         <p>Yes. Pulse provides <strong>role-based access control</strong> (via Shield integration):</p>
         <ul>
           <li><strong>Admin:</strong> Full access — configure brand voice, manage users, view all content</li>
@@ -561,8 +566,8 @@
         <p>You can also set per-product or per-market permissions (e.g., only the Japan team can generate Japanese content).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I track who generated what content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-38">Can I track who generated what content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-38"><div class="faq-answer-inner">
         <p>Yes. Pulse provides <strong>audit logging</strong> (via Shield integration):</p>
         <ul>
           <li><strong>Who:</strong> Which user generated the content</li>
@@ -573,8 +578,8 @@
         <p>All audit logs are tamper-evident and can be exported for compliance purposes.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if someone generates inappropriate content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-39">What happens if someone generates inappropriate content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-39"><div class="faq-answer-inner">
         <p>Pulse includes <strong>safety filters</strong>:</p>
         <ul>
           <li><strong>Content filtering:</strong> Block generation of inappropriate, offensive, or harmful content</li>
@@ -590,8 +595,8 @@
   <div class="section" id="s6">
     <div class="section-header"><span class="icon">06 · COMPLIANCE</span><h2>Models & AI</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">Which AI models does Pulse support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-40">Which AI models does Pulse support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-40"><div class="faq-answer-inner">
         <p>Pulse is <strong>model-agnostic</strong> — it supports a wide range of models:</p>
         <ul>
           <li><strong>Local models:</strong> Llama 3, Mistral, Gemma, Qwen (via Ollama, vLLM, llama.cpp)</li>
@@ -601,8 +606,8 @@
         <p>You can switch models at any time — no code changes required.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use different models for different languages?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-41">Can I use different models for different languages?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-41"><div class="faq-answer-inner">
         <p>Yes. Pulse supports <strong>per-language model routing</strong>:</p>
         <ul>
           <li><strong>Language-specific models:</strong> Use different models for different languages (e.g., a model optimized for Japanese, another for Spanish)</li>
@@ -612,8 +617,8 @@
         <p>This gives you flexibility to optimize for quality, speed, or cost depending on the use case.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use local models (fully offline)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-42">Can I use local models (fully offline)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-42"><div class="faq-answer-inner">
         <p>Yes. Pulse supports <strong>local models</strong> via:</p>
         <ul>
           <li><strong>Ollama:</strong> Easiest way to run local models. Supports Llama 3, Mistral, Gemma, etc.</li>
@@ -624,8 +629,8 @@
         <div class="callout warning"><strong>Hardware requirements</strong>Local models require GPU hardware (NVIDIA GPUs recommended). CPU-only inference is possible but slow for large models.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use API-based models (OpenAI, Anthropic)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-43">Can I use API-based models (OpenAI, Anthropic)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-43"><div class="faq-answer-inner">
         <p>Yes. Pulse supports <strong>API-based models</strong>:</p>
         <ul>
           <li><strong>OpenAI:</strong> GPT-4o, GPT-4o-mini</li>
@@ -638,8 +643,8 @@
         <div class="callout warning"><strong>Data sovereignty</strong>If you use API-based models, your brand material is sent to the API provider. This may violate sovereignty requirements. Use local models for maximum sovereignty.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I choose the right model?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-44">How do I choose the right model?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-44"><div class="faq-answer-inner">
         <p>Choosing a model depends on your priorities:</p>
         <table>
           <thead><tr><th>Model</th><th>Speed</th><th>Quality</th><th>Cost</th><th>Sovereignty</th></tr></thead>
@@ -659,8 +664,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What if a new, better model is released? Can I switch?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-45">What if a new, better model is released? Can I switch?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-45"><div class="faq-answer-inner">
         <p>Yes. Pulse is <strong>model-agnostic</strong> — you can switch models at any time:</p>
         <ul>
           <li><strong>No code changes:</strong> Just update the model configuration in the admin console</li>
@@ -670,8 +675,8 @@
         <p>This future-proofs your investment — when better models are released, you can adopt them immediately without re-architecting your system.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I fine-tune models for my brand?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-46">Can I fine-tune models for my brand?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-46"><div class="faq-answer-inner">
         <p><strong>Not in Pulse v1.0.</strong> Pulse uses existing models — it doesn't support fine-tuning.</p>
         <p>However, you can:</p>
         <ul>
@@ -687,8 +692,8 @@
   <div class="section" id="s7">
     <div class="section-header"><span class="icon">07 · MODELS</span><h2>Deployment & Setup</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How do I deploy Pulse?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-47">How do I deploy Pulse?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-47"><div class="faq-answer-inner">
         <p>Pulse offers three deployment options:</p>
         <ol>
           <li><strong>Docker Compose:</strong> Easiest. One command (<code>docker-compose up</code>) and you're running. Best for development and small deployments.</li>
@@ -698,8 +703,8 @@
         <p>For most customers, <strong>Docker Compose is the fastest path</strong>. For production, we recommend Kubernetes.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How long does setup take?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-48">How long does setup take?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-48"><div class="faq-answer-inner">
         <p>Setup time depends on your deployment:</p>
         <ul>
           <li><strong>Docker Compose:</strong> 30 minutes. Pull images, configure environment variables, run <code>docker-compose up</code>.</li>
@@ -714,15 +719,15 @@
         <p>Target: <strong>&lt;30 minutes from setup to first localized content piece</strong>.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I need technical staff to run Pulse?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-49">Do I need technical staff to run Pulse?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-49"><div class="faq-answer-inner">
         <p><strong>For deployment:</strong> Yes. Pulse is self-hosted, so you need someone who can manage Docker/Kubernetes, configure networking, and monitor infrastructure.</p>
         <p><strong>For day-to-day use:</strong> No. The web UI is designed for non-technical users (marketing teams, content creators). You can generate content, configure brand voice, and manage localization without writing code.</p>
         <p><strong>For developers:</strong> Pulse provides a REST API and SDKs for custom integrations.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What are the system requirements for Pulse?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-50">What are the system requirements for Pulse?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-50"><div class="faq-answer-inner">
         <p>Pulse's requirements depend on your deployment:</p>
         <table>
           <thead><tr><th>Component</th><th>Minimum</th><th>Recommended</th></tr></thead>
@@ -737,8 +742,8 @@
         <p>If you use API-based models (OpenAI, Anthropic), you don't need a GPU. If you use local models, GPU is strongly recommended.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I deploy Pulse on AWS/GCP/Azure?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-51">Can I deploy Pulse on AWS/GCP/Azure?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-51"><div class="faq-answer-inner">
         <p>Yes. Pulse can be deployed on any cloud provider:</p>
         <ul>
           <li><strong>AWS:</strong> Use EC2 (for Docker Compose) or EKS (for Kubernetes)</li>
@@ -748,8 +753,8 @@
         <p>We provide deployment guides for each cloud provider. For production, we recommend Kubernetes with managed databases.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I preview Pulse before going live?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-52">Can I preview Pulse before going live?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-52"><div class="faq-answer-inner">
         <p>Yes. Pulse includes a <strong>sandbox mode</strong>:</p>
         <ul>
           <li><strong>Test environment:</strong> Deploy Pulse in a test environment with sample content</li>
@@ -759,8 +764,8 @@
         <p>We recommend spending 1-2 days testing in sandbox mode before deploying to production.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I update Pulse to a new version?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-53">How do I update Pulse to a new version?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-53"><div class="faq-answer-inner">
         <p><strong>For Docker Compose:</strong> Pull the new image, restart containers.</p>
         <p><strong>For Kubernetes:</strong> Update the Helm chart, rolling update.</p>
         <p><strong>For bare metal:</strong> Follow the upgrade guide in the documentation.</p>
@@ -772,8 +777,8 @@
   <div class="section" id="s8">
     <div class="section-header"><span class="icon">08 · LANGUAGES</span><h2>Cost & Pricing</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How much does Pulse cost?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-54">How much does Pulse cost?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-54"><div class="faq-answer-inner">
         <p>Pulse pricing is based on <strong>features and deployment</strong>:</p>
         <table>
           <thead><tr><th>Tier</th><th>Price</th><th>Includes</th></tr></thead>
@@ -791,16 +796,16 @@
         <div class="callout info"><strong>Note</strong>Pricing is illustrative and subject to change. Contact us for current pricing and custom quotes.</div>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Pulse cheaper than hiring translators?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-55">Is Pulse cheaper than hiring translators?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-55"><div class="faq-answer-inner">
         <p><strong>Yes, significantly.</strong> Professional localization agencies charge $0.10-$0.30/word. For a 1,000-word blog post in 5 languages, that's $500-$1,500.</p>
         <p>Pulse costs $99-$399/month (unlimited content). For a 1,000-word blog post in 5 languages, Pulse costs <strong>&lt;$1</strong> (API costs only).</p>
         <p>For high-volume content (10+ pieces per month in 5+ languages), Pulse is <strong>100-1000x cheaper</strong> than human translators.</p>
         <p>Of course, human translators may be higher quality for high-stakes content. But for marketing content, Pulse is faster, cheaper, and good enough.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Are there any hidden costs?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-56">Are there any hidden costs?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-56"><div class="faq-answer-inner">
         <p>No hidden costs. The total cost of ownership includes:</p>
         <ul>
           <li><strong>Pulse subscription:</strong> Monthly fee based on tier</li>
@@ -810,8 +815,8 @@
         <p>That's it. No setup fees, no surprise charges, no per-word fees.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What payment methods do you accept?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-57">What payment methods do you accept?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-57"><div class="faq-answer-inner">
         <p>We accept:</p>
         <ul>
           <li><strong>Credit/debit cards:</strong> Visa, Mastercard, American Express (via Stripe)</li>
@@ -821,14 +826,14 @@
         <p>Invoicing is available for annual subscriptions. Contact us for details.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-58">Can I get a refund if I'm not satisfied?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-58"><div class="faq-answer-inner">
         <p>Yes. We offer a <strong>30-day money-back guarantee</strong>. If you're not satisfied within the first 30 days, contact us for a full refund — no questions asked.</p>
         <p>After 30 days, you can cancel anytime. You'll continue to have access until the end of your billing period, but no refund is provided for partial months.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Is Pulse included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-59">Is Pulse included in the ODW.ai suite bundle?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-59"><div class="faq-answer-inner">
         <p><strong>Yes.</strong> Pulse is part of the ODW.ai suite. You can:</p>
         <ul>
           <li><strong>Purchase Pulse standalone:</strong> Use Pulse by itself</li>
@@ -837,8 +842,8 @@
         <p>The suite bundle includes Pulse at a 20-30% discount compared to purchasing separately. And all modules integrate natively — Pulse uses Vault for knowledge grounding, Shield for governance, etc.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Do I pay per word or per content piece?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-60">Do I pay per word or per content piece?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-60"><div class="faq-answer-inner">
         <p><strong>No.</strong> Pulse pricing is <strong>unlimited</strong> — no per-word or per-content fees.</p>
         <p>You pay a flat monthly fee based on your tier (Pro or Enterprise). Generate as much content as you want, in as many languages as you want.</p>
         <p>The only variable cost is API costs (if you use API-based models). You pay the API provider directly for token usage.</p>
@@ -849,8 +854,8 @@
   <div class="section" id="s9">
     <div class="section-header"><span class="icon">09 · PRICING</span><h2>Scaling & Operations</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How much content can Pulse generate?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-61">How much content can Pulse generate?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-61"><div class="faq-answer-inner">
         <p>Pulse can generate <strong>unlimited content</strong>:</p>
         <ul>
           <li><strong>No content limit:</strong> Generate as much as you want</li>
@@ -865,8 +870,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How many users can Pulse support?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-62">How many users can Pulse support?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-62"><div class="faq-answer-inner">
         <p>Pulse supports <strong>unlimited users</strong>:</p>
         <ul>
           <li><strong>Pro tier:</strong> Unlimited users</li>
@@ -875,8 +880,8 @@
         <p>Pulse scales horizontally — add more nodes to handle more concurrent users. Typical deployments support 50-200 concurrent users per node.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What happens if Pulse goes down?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-63">What happens if Pulse goes down?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-63"><div class="faq-answer-inner">
         <p>If Pulse goes down, content generation is unavailable, but your existing content is safe:</p>
         <ul>
           <li><strong>Content storage:</strong> All generated content is stored in your database (PostgreSQL) — not lost</li>
@@ -891,8 +896,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I monitor Pulse's performance?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-64">How do I monitor Pulse's performance?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-64"><div class="faq-answer-inner">
         <p>Pulse includes a <strong>monitoring dashboard</strong>:</p>
         <ul>
           <li><strong>System health:</strong> CPU, memory, disk, network usage</li>
@@ -903,8 +908,8 @@
         <p>You can also export metrics to external monitoring tools (Prometheus, Grafana, Datadog) via standard protocols.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I back up Pulse data?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-65">How do I back up Pulse data?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-65"><div class="faq-answer-inner">
         <p>Pulse data is stored in PostgreSQL. Back up using standard PostgreSQL tools:</p>
         <ul>
           <li><strong>Automated backups:</strong> Configure daily backups via pg_dump or WAL archiving</li>
@@ -914,8 +919,8 @@
         <p>Pulse provides backup guides and scripts for common deployment modes (Docker, Kubernetes, on-premises).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use Pulse for multiple brands or clients?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-66">Can I use Pulse for multiple brands or clients?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-66"><div class="faq-answer-inner">
         <p>Yes. Pulse supports <strong>multi-tenancy</strong>:</p>
         <ul>
           <li><strong>Multiple brands:</strong> Create separate brand profiles for each brand</li>
@@ -925,8 +930,8 @@
         <p>This is useful for agencies managing multiple client brands, or enterprises with multiple product lines.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I train my team to use Pulse?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-67">How do I train my team to use Pulse?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-67"><div class="faq-answer-inner">
         <p>Pulse is designed to be <strong>intuitive</strong>, but we provide training resources:</p>
         <ul>
           <li><strong>Documentation:</strong> Comprehensive user guides for admins and content creators</li>
@@ -942,8 +947,8 @@
   <div class="section" id="s10">
     <div class="section-header"><span class="icon">10 · ONBOARDING</span><h2>Integration & Workflows</h2><span class="count">7 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">How does Pulse integrate with other ODW.ai products?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-68">How does Pulse integrate with other ODW.ai products?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-68"><div class="faq-answer-inner">
         <p>Pulse integrates <strong>natively</strong> with all ODW.ai products:</p>
         <ul>
           <li><strong>Vault:</strong> Content is grounded in your knowledge base, brand voice, product catalog</li>
@@ -954,8 +959,8 @@
         <p>If you're using the ODW.ai suite, Pulse integration is automatic — no separate configuration required.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Pulse provide an API?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-69">Does Pulse provide an API?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-69"><div class="faq-answer-inner">
         <p>Yes. Pulse provides a <strong>REST API</strong> for programmatic access:</p>
         <ul>
           <li><strong>Content generation:</strong> Generate content via API</li>
@@ -966,8 +971,8 @@
         <p>The API is fully documented (OpenAPI/Swagger) and supports authentication via API keys or OAuth 2.0.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate Pulse with my CMS?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-70">Can I integrate Pulse with my CMS?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-70"><div class="faq-answer-inner">
         <p>Yes. Pulse can be integrated with CMS systems via:</p>
         <ul>
           <li><strong>REST API:</strong> Call Pulse's API from your CMS</li>
@@ -983,8 +988,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate Pulse with my marketing automation tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-71">Can I integrate Pulse with my marketing automation tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-71"><div class="faq-answer-inner">
         <p>Yes. Pulse can be integrated with marketing automation tools:</p>
         <ul>
           <li><strong>HubSpot:</strong> Generate email campaigns, landing pages</li>
@@ -995,16 +1000,16 @@
         <p>This allows you to automate content generation as part of your marketing workflows.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I integrate Pulse with my translation memory (TM) system?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-72">Can I integrate Pulse with my translation memory (TM) system?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-72"><div class="faq-answer-inner">
         <p><strong>Not in v1.0.</strong> Pulse doesn't integrate with translation memory systems in v1.0.</p>
         <p>Pulse is a <strong>generation-first</strong> tool, not a translation management system. It doesn't use translation memory — it generates content from scratch using AI.</p>
         <p>If you need TM integration, we recommend using Pulse alongside a TM system (Phrase, Lokalise). Pulse generates content, TM system manages human review and translation memory.</p>
         <p>TM integration is planned for v2.0 (Q2 2027).</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I use Pulse with my existing AI tools?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-73">Can I use Pulse with my existing AI tools?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-73"><div class="faq-answer-inner">
         <p>Yes. Pulse can be used with existing AI tools:</p>
         <ul>
           <li><strong>LangChain:</strong> Use Pulse as a content generation tool in LangChain pipelines</li>
@@ -1014,8 +1019,8 @@
         <p>Pulse is designed to be a <strong>content generation layer</strong> — it provides multilingual content generation, and you can use any AI tool for other tasks.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can I export content in different formats?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-74">Can I export content in different formats?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-74"><div class="faq-answer-inner">
         <p>Yes. Pulse supports <strong>multiple export formats</strong>:</p>
         <ul>
           <li><strong>Markdown:</strong> .md files</li>
@@ -1032,8 +1037,8 @@
   <div class="section" id="s11">
     <div class="section-header"><span class="icon">11 · ROADMAP</span><h2>Limitations & Roadmap</h2><span class="count">8 questions</span></div>
 
-    <div class="faq-item"><button class="faq-question">What can't Pulse do (yet)?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-75">What can't Pulse do (yet)?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-75"><div class="faq-answer-inner">
         <p>Pulse is powerful, but it has limitations in v1.0:</p>
         <ul>
           <li><strong>No legal/medical content:</strong> Pulse flags legal, medical, or regulatory content for human review — not auto-generated</li>
@@ -1047,8 +1052,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Pulse support audio/video localization?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-76">Will Pulse support audio/video localization?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-76"><div class="faq-answer-inner">
         <p><strong>Planned for v2.0 (Q2 2027).</strong> Audio/video localization will include:</p>
         <ul>
           <li><strong>Subtitling:</strong> Generate subtitles in multiple languages</li>
@@ -1058,15 +1063,15 @@
         <p>This is a high-priority feature for customers who produce video content for international audiences.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Will Pulse support content distribution?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-77">Will Pulse support content distribution?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-77"><div class="faq-answer-inner">
         <p><strong>Not in the current roadmap.</strong> Pulse is focused on content <strong>generation</strong>, not distribution.</p>
         <p>If you need content distribution, we recommend using dedicated tools (Buffer, Hootsuite, Sprout Social) or integrating Pulse with your CMS/marketing automation via API.</p>
         <p>Pulse generates the content; other tools distribute it.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-78">What's on the roadmap for the next 12 months?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-78"><div class="faq-answer-inner">
         <p>Key milestones:</p>
         <ul>
           <li><strong>v1.0 (Q3 2026):</strong> MVP launch. 50+ languages, cultural adaptation, brand voice, Vault integration, self-hosted deployment.</li>
@@ -1077,8 +1082,8 @@
         <p>Roadmap is subject to change based on customer feedback. Contact us for the latest roadmap or to request features.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">When should I NOT use Pulse?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-79">When should I NOT use Pulse?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-79"><div class="faq-answer-inner">
         <p>Pulse is not the right fit if:</p>
         <ul>
           <li><strong>You only need one language:</strong> If you only produce content in English, Pulse's multilingual features are overkill. Use Jasper or Copy.ai instead.</li>
@@ -1089,8 +1094,8 @@
         </ul>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Does Pulse guarantee 100% culturally accurate content?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-80">Does Pulse guarantee 100% culturally accurate content?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-80"><div class="faq-answer-inner">
         <p><strong>No.</strong> No AI system can guarantee 100% cultural accuracy. Pulse's accuracy depends on:</p>
         <ul>
           <li><strong>Model quality:</strong> Better LLMs = better cultural understanding</li>
@@ -1101,8 +1106,8 @@
         <p>For high-stakes content (legal, medical, regulatory), we always recommend human review — even with 90% accuracy.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">Can Pulse handle idioms and humor?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-81">Can Pulse handle idioms and humor?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-81"><div class="faq-answer-inner">
         <p>Yes. Pulse is designed to handle <strong>idioms and humor</strong> — this is a key differentiator from literal translation tools:</p>
         <ul>
           <li><strong>Idioms:</strong> "Break a leg" in English becomes "頑張って" (ganbatte) in Japanese, not "腿を折って" (literally "break your leg")</li>
@@ -1112,8 +1117,8 @@
         <p>Pulse uses cultural adaptation profiles to adjust idioms, humor, and references for each market. The goal is for content to read as <strong>natively authored</strong>, not translated.</p>
       </div></div></div>
 
-    <div class="faq-item"><button class="faq-question">How do I get started?<span class="toggle">＋</span></button>
-      <div class="faq-answer"><div class="faq-answer-inner">
+    <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="answer-82">How do I get started?<span class="toggle">＋</span></button>
+      <div class="faq-answer" id="answer-82"><div class="faq-answer-inner">
         <p>Three paths:</p>
         <ol>
           <li><strong>Free trial:</strong> Download Pulse and deploy it yourself. No credit card required. Try it with your content and see if it works for your use case.</li>
@@ -1134,10 +1139,24 @@
 
 <script>
   document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => { button.parentElement.classList.toggle('open'); });
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      item.classList.toggle('open');
+      button.setAttribute('aria-expanded', item.classList.contains('open'));
+    });
   });
-  function expandAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.add('open')); }
-  function collapseAll() { document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); }
+  function expandAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.add('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    });
+  }
+  function collapseAll() {
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+  }
   const searchInput = document.getElementById('searchInput');
   const noResults = document.getElementById('noResults');
   searchInput.addEventListener('input', () => {
@@ -1160,6 +1179,34 @@
     const el = document.querySelector(window.location.hash);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
+</script>
+<script>
+(function() {
+  var lang = document.documentElement.lang || 'en';
+  var path = window.location.pathname;
+  var page = path.split('/').pop() || 'index.html';
+  var map = {
+    'en':    { 'zh-CN': '../zh-cn/faq/',   'zh-HK': '../zh-hk/faq/' },
+    'zh-CN': { 'en': '../../faq/',          'zh-HK': '../../zh-hk/faq/' },
+    'zh-HK': { 'en': '../../faq/',          'zh-CN': '../../zh-cn/faq/' }
+  };
+  var labels = { 'en': 'EN', 'zh-CN': '\u7b80', 'zh-HK': '\u7e41' };
+  var el = document.getElementById('lang-switcher');
+  if (!el || !map[lang]) return;
+  var cur = document.createElement('span');
+  cur.className = 'active';
+  cur.textContent = labels[lang];
+  el.appendChild(cur);
+  var targets = map[lang];
+  for (var code in targets) {
+    if (targets.hasOwnProperty(code)) {
+      var a = document.createElement('a');
+      a.href = targets[code] + page;
+      a.textContent = labels[code];
+      el.appendChild(a);
+    }
+  }
+})();
 </script>
 </body>
 </html>

@@ -1,511 +1,675 @@
 <!-- Translation status: DRAFT — needs native-speaker review before publish -->
-<!-- Last synced with English source: 2026-07-02 -->
+<!-- Last synced with English source: 2026-07-09 -->
 <!DOCTYPE html>
 <html lang="zh-HK">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#14110F" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F6F2EC" media="(prefers-color-scheme: light)">
   <title>ODW.ai — 開源營運AI｜專供全球中小企使用</title>
-  <meta name="description" content="ODW.ai 是一套開源營運AI模組，專供全球中小企使用——涵蓋客戶服務、知識庫、流程自動化、會計記帳、銷售等範疇。免費自行架設伺服器運行。">
+  <meta name="description" content="十大專屬開源AI模組——涵蓋客戶服務、知識庫、工作流程、會議、營銷等範疇——共用統一帳戶、同一數據邊界、同一審計紀錄。免費自行架設伺服器運行。">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ODW.ai — 開源營運AI｜專供中小企使用">
+  <meta property="og:description" content="十項專注AI模組，建基於同一開源架構。免費自行架設伺服器，或交由我們團隊協助設定及支援。數據自主，設計為本。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://odw.ai/">
+  <meta property="og:image" content="https://odw.ai/odwai-logo-2048x651.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ODW.ai — 開源營運AI｜專供中小企使用">
+  <meta name="twitter:description" content="十項專注AI模組，建基於同一開源架構。免費自行架設伺服器，或交由我們團隊協助設定及支援。數據自主，設計為本。">
+
   <link rel="alternate" hreflang="en"    href="https://ondemandworld.github.io/">
   <link rel="alternate" hreflang="zh-CN" href="https://ondemandworld.github.io/zh-cn/">
   <link rel="alternate" hreflang="zh-HK" href="https://ondemandworld.github.io/zh-hk/">
   <link rel="alternate" hreflang="x-default" href="https://ondemandworld.github.io/">
-  <link rel="stylesheet" href="../styles-v1.css">
+
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
-<!-- ── Navigation ── -->
-<button class="nav-toggle" aria-label="Toggle navigation">
-  <span></span><span></span><span></span>
-</button>
+<!-- Skip link (a11y) -->
+<a href="#main" class="skip-link">跳至內容</a>
 
-<nav class="nav">
-  <div class="nav-brand">ODW<span class="dot">.</span>AI</div>
-  <ul class="nav-links">
-    <li><a href="#cover">主頁</a></li>
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 導航列 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<!-- 手機／平板：頂部固定列 -->
+<header class="topbar" role="banner">
+  <a href="#cover" class="topbar-logo" aria-label="ODW.AI 主頁">
+    <img src="../odwai-logo-600x191.png" alt="ODW.AI" width="99" height="32" class="logo-light">
+    <img src="../odwai-logo-dark-600x191.png" alt="ODW.AI" width="99" height="32" class="logo-dark">
+  </a>
+  <div class="topbar-actions">
+    <a href="https://github.com/OnDemandWorld" class="gh-pill" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 加星">
+      <span class="star" aria-hidden="true">★</span>
+      <span>加星</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="切換導航列">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- 手機導航面板 -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="主要導航">
+  <ul>
     <li><a href="#why-now">為何選用 ODW</a></li>
     <li><a href="#platform">平台架構</a></li>
     <li><a href="#modules">功能模組</a></li>
+    <li><a href="./faq/index.html">常見問題</a></li>
     <li><a href="#open-source">開源理念</a></li>
-    <li><a href="#sovereign">數據自主掌控</a></li>
+    <li><a href="#sovereign">數據自主</a></li>
     <li><a href="#solutions">行業方案</a></li>
     <li><a href="#services">專業服務</a></li>
     <li><a href="#contact">聯絡我們</a></li>
   </ul>
-  <div class="nav-lang">
-    <div class="nav-lang-label">語言</div>
-    <a href="/" data-lang="en">English</a>
-    <a href="/zh-cn/" data-lang="zh-CN">簡體中文</a>
-    <a href="/zh-hk/" data-lang="zh-HK">繁體中文（香港）</a>
+  <div class="mobile-nav-lang">
+    <div class="mobile-nav-lang-label">語言</div>
+    <a href="../index.html" data-lang="en">English</a>
+    <a href="../zh-cn/index.html" data-lang="zh-CN">简体中文</a>
+    <a href="../zh-hk/index.html" data-lang="zh-HK">繁體中文</a>
+  </div>
+  <div class="mobile-nav-cta">
+    <a href="https://github.com/OnDemandWorld" class="btn btn-primary btn-full" target="_blank" rel="noopener noreferrer">★ 在 GitHub 加星</a>
+    <a href="mailto:hello@odw.ai" class="btn btn-ghost btn-full">聯絡我們</a>
   </div>
 </nav>
+<div class="nav-backdrop" aria-hidden="true"></div>
 
-<!-- Backdrop for mobile nav -->
-<div class="nav-backdrop"></div>
-
-<!-- ── Main Content ── -->
-<main class="main">
-
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 01 · COVER / HERO -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="cover">
-  <div class="slide-container">
-    <!-- Eyebrow -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">開源營運AI｜專供全球中小企使用</div>
-    <!-- Main headline -->
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:240px; width:1700px; font-size:128px; line-height:0.96; letter-spacing:-0.025em; color:var(--ink); z-index:10;">
-      全球中小企專用<br>
-      <span style="color:var(--accent); font-style:italic;">營運AI底層平台</span>
-    </div>
-    <!-- Subhead -->
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:720px; width:1100px; font-size:28px; line-height:1.4; color:var(--ink-2); font-weight:400;">
-      十大專屬AI模組，涵蓋客戶服務、知識庫、流程自動化、會計、銷售等範疇<br>
-      統一帳戶驗證、單一收費機制、共用私隱規範<br>
-      完全免費自行架設伺服器運行，全程公開開發
-    </div>
-    <!-- Right column stats -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1380px; top:720px; width:444px; height:260px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1412px; top:748px; width:380px; font-size:12px; color:var(--accent); letter-spacing:0.18em; z-index:10;">數據一覽</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1412px; top:784px; width:380px; font-size:20px; color:var(--paper); line-height:1.6; z-index:10;">
-      <strong style="color:var(--accent);">10</strong> 套功能模組<br>
-      <strong style="color:var(--accent);">4</strong> 套已上線並開源<br>
-      <strong style="color:var(--accent);">100%</strong> 支援自行架設伺服器<br>
-      <strong style="color:var(--accent);">∞</strong> 不設席位收費上限、無綁定
-    </div>
-    <!-- Decorative coral accent block -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
+<!-- 桌面版側邊欄（≥1200px） -->
+<aside class="sidebar" aria-label="章節導航">
+  <div class="sidebar-brand">
+    <a href="#cover" aria-label="ODW.AI 主頁">
+      <img src="../odwai-logo-dark-600x191.png" alt="ODW.AI" class="logo-dark">
+      <img src="../odwai-logo-600x191.png" alt="ODW.AI" class="logo-light">
+    </a>
   </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 02 · WHY NOW -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="why-now">
-  <div class="slide-container">
-    <!-- Eyebrow + title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">中小企已願意投放AI預算</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:64px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      中小企已不再停留在AI嘗試階段。<br>
-      他們實際投放預算採購，同時尋找一套可信統一系統<br>
-      整合所有AI工具
-    </div>
-    <!-- Three pillars -->
-    <!-- Pillar 1 -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:460px; width:552px; height:500px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:492px; width:200px; font-size:13px; color:var(--accent); letter-spacing:0.18em;">01 · 普及率</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:128px; top:532px; width:488px; font-size:128px; color:var(--ink); z-index:10;">+132%</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:128px; top:692px; width:488px; font-size:22px; line-height:1.4; color:var(--ink-2); font-weight:500; z-index:10;">
-      過去兩年，OECD成員國企業AI普及率由8.7%上升至20.2%。
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:128px; top:792px; width:488px; font-size:18px; line-height:1.5; color:var(--ink-3); z-index:10;">
-      一般中小企現時平均使用 <strong style="color:var(--ink);">5套AI工具</strong>，當中62%計劃加大投放。
-    </div>
-    <div data-object="true" data-object-type="textbox" class="source" style="position:absolute; left:128px; top:912px; width:488px; z-index:10;">數據來源：OECD、美國商會、中小企業協會</div>
-    <!-- Pillar 2 -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:684px; top:460px; width:552px; height:500px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:716px; top:492px; width:200px; font-size:13px; color:var(--accent); letter-spacing:0.18em;">02 · 技術架構</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:716px; top:532px; width:488px; font-size:64px; color:var(--ink); z-index:10;">AI智能體導向</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:716px; top:692px; width:488px; font-size:22px; line-height:1.4; color:var(--ink-2); font-weight:500; z-index:10;">
-      業界主流已定：AI智能體可跨多套工具執行工作，並非單純聊天機械人。
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:716px; top:792px; width:488px; font-size:18px; line-height:1.5; color:var(--ink-3); z-index:10;">
-      真正價值不在大型語言模型本身，而是流程編排、數據管理與可信架構。
-    </div>
-    <div data-object="true" data-object-type="textbox" class="source" style="position:absolute; left:716px; top:912px; width:488px; z-index:10;">數據來源：CB Insights、Y Combinator</div>
-    <!-- Pillar 3 (dark) -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1272px; top:460px; width:552px; height:500px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1304px; top:492px; width:200px; font-size:13px; color:var(--accent-2); letter-spacing:0.18em; z-index:10;">03 · 信任基礎</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:1304px; top:532px; width:488px; font-size:128px; color:var(--paper); z-index:10;">開源</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1304px; top:692px; width:488px; font-size:22px; line-height:1.4; color:var(--paper); font-weight:500; z-index:10;">
-      中小企普遍對第三方雲端、「AI使用稅」及供應商數據綁定存有顧慮。
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1304px; top:792px; width:488px; font-size:18px; line-height:1.5; color:var(--accent-2); z-index:10;">
-      我們的解決方案：完整公開源碼。自行架設運行、逐行審核，完全掌握自身數據。
-    </div>
-    <div data-object="true" data-object-type="textbox" class="source" style="position:absolute; left:1304px; top:912px; width:488px; color:var(--ink-4); z-index:10;">開源核心模式｜優先支援自行架設伺服器</div>
+  <ul class="sidebar-nav">
+    <li><a href="#cover">主頁</a></li>
+    <li><a href="#why-now">為何選用 ODW</a></li>
+    <li><a href="#platform">平台架構</a></li>
+    <li><a href="#modules">功能模組</a></li>
+    <li><a href="./faq/index.html">常見問題</a></li>
+    <li><a href="#open-source">開源理念</a></li>
+    <li><a href="#sovereign">數據自主</a></li>
+    <li><a href="#solutions">行業方案</a></li>
+    <li><a href="#services">專業服務</a></li>
+    <li><a href="#contact">聯絡我們</a></li>
+  </ul>
+  <div class="sidebar-footer">
+    <div class="sidebar-footer-label">語言</div>
+    <a href="../index.html" data-lang="en">English</a>
+    <a href="../zh-cn/index.html" data-lang="zh-CN">简体中文</a>
+    <a href="../zh-hk/index.html" data-lang="zh-HK">繁體中文</a>
   </div>
-</section>
+</aside>
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 03 · PLATFORM / STACK -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="platform">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">單一整合平台</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:64px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      單一底層引擎、<span style="color:var(--accent);">十大功能模組</span>、統一帳戶系統。
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:320px; width:1200px; font-size:22px; line-height:1.5; color:var(--ink-2);">
-      所有模組共用同一套帳戶驗證、收費機制與私隱規範，統一流程編排層<br>
-      可將多個模組串聯成多步驟AI智能體，不用各自獨立、難以互通。
-    </div>
-    <!-- Stack layers -->
-    <!-- Layer 1: Surface -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:440px; width:1728px; height:88px; background:var(--accent-soft); border:1px solid var(--accent-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:464px; width:200px; font-size:12px; color:var(--accent-ink); letter-spacing:0.16em; z-index:10;">客戶接入渠道</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:456px; width:400px; font-size:36px; color:var(--ink); z-index:10;">你的客戶接觸點</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:464px; width:1032px; font-size:16px; color:var(--ink-2); line-height:1.4; z-index:10;">WhatsApp、網站、電話語音、電郵、社交平台，覆蓋香港客戶常用所有渠道。</div>
-    <!-- Layer 2: Modules -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:540px; width:1728px; height:88px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:564px; width:200px; font-size:12px; color:var(--ink-3); letter-spacing:0.16em; z-index:10;">功能模組層</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:556px; width:400px; font-size:36px; color:var(--ink); z-index:10;">十大專屬模組</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:564px; width:1032px; font-size:16px; color:var(--ink-2); line-height:1.4; z-index:10;">Desk、Voice、Vault、Loop、Pulse、Recap、Hunt、Books、People、Shield，各模組對應獨立營運場景智能體。</div>
-    <!-- Layer 3: Orchestration -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:640px; width:1728px; height:88px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:664px; width:200px; font-size:12px; color:var(--ink-3); letter-spacing:0.16em; z-index:10;">流程編排層</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:656px; width:400px; font-size:36px; color:var(--ink); z-index:10;">Loop流程引擎</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:664px; width:1032px; font-size:16px; color:var(--ink-2); line-height:1.4; z-index:10;">可串聯多個模組，建立具備邏輯判斷的多步驟工作流程，不只是簡單觸發指令。</div>
-    <!-- Layer 4: Knowledge -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:740px; width:1728px; height:88px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:764px; width:200px; font-size:12px; color:var(--ink-3); letter-spacing:0.16em; z-index:10;">企業知識庫</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:756px; width:400px; font-size:32px; color:var(--ink); z-index:10;">Vault 本地檢索RAG</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:764px; width:1032px; font-size:16px; color:var(--ink-2); line-height:1.4; z-index:10;">所有企業數據由你界定邊界，只以公司內部文件、系統數據作AI檢索依據。</div>
-    <!-- Layer 5: Models -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:840px; width:1728px; height:88px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:864px; width:200px; font-size:12px; color:var(--ink-3); letter-spacing:0.16em; z-index:10;">AI模型層</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:856px; width:400px; font-size:36px; color:var(--ink); z-index:10;">自攜AI模型（BYOM）</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:864px; width:1032px; font-size:16px; color:var(--ink-2); line-height:1.4; z-index:10;">支援本地運行Llama、Mistral、Qwen等開放模型，亦可彈性選用雲端大型模型。</div>
-    <!-- Layer 6: Foundation -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:940px; width:1728px; height:88px; background:var(--accent); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:964px; width:200px; font-size:12px; color:var(--ink); letter-spacing:0.16em; font-weight:600; z-index:10;">系統底層</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:340px; top:956px; width:400px; font-size:36px; color:var(--ink); z-index:10;">完全開源架構</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:760px; top:964px; width:1032px; font-size:16px; color:var(--ink); line-height:1.4; font-weight:500; z-index:10;">於貴公司自有伺服器基建運行，完整審查源碼、自由擴充功能，系統所有權完全歸屬企業。</div>
-  </div>
-</section>
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 主要內容 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 04 · MODULES - CORE SUITE -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="modules">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">功能模組組合</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:56px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      十大功能模組，橫跨<span style="color:var(--accent);">三大營運範疇</span>。
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:310px; width:1200px; font-size:20px; line-height:1.5; color:var(--ink-2);">
-      四套現已推出並完全開源；其餘將隨正式發佈一併推出。
-    </div>
-    <!-- Tier label -->
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:380px; width:600px; font-size:13px; color:var(--ink-3); letter-spacing:0.18em;">核心套件 · 營運基石</div>
-    <!-- Card: Desk -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:420px; width:412px; height:280px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:124px; top:444px; width:240px; font-size:10px; color:var(--good); letter-spacing:0.14em; font-weight:600; z-index:10;">● 現已推出｜完全開源</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:124px; top:466px; width:360px; font-size:40px; line-height:1; color:var(--ink); z-index:10;">ODW <span style="color:var(--accent);">Desk</span></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:124px; top:518px; width:360px; font-size:15px; color:var(--ink); font-weight:500; line-height:1.4; z-index:10;">全渠道客戶服務智能體</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:124px; top:546px; width:360px; font-size:13px; color:var(--ink-3); line-height:1.5; z-index:10;">支援WhatsApp、官網、電郵、社交平台、LINE、Telegram、SMS，原生多語言支援。</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:124px; top:640px; width:360px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:124px; top:652px; width:60px; font-size:10px; color:var(--accent); letter-spacing:0.14em; z-index:10;">選擇ODW原因</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:124px; top:670px; width:360px; font-size:12px; color:var(--ink-2); line-height:1.4; z-index:10;">WhatsApp優先設計，不只回覆訊息，可完整處理客戶需求</div>
-    <!-- Card: Vault -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:528px; top:420px; width:412px; height:280px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:556px; top:444px; width:240px; font-size:10px; color:var(--good); letter-spacing:0.14em; font-weight:600; z-index:10;">● 現已推出｜完全開源</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:556px; top:466px; width:360px; font-size:40px; line-height:1; color:var(--ink); z-index:10;">ODW <span style="color:var(--accent);">Vault</span></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:556px; top:518px; width:360px; font-size:15px; color:var(--ink); font-weight:500; line-height:1.4; z-index:10;">企業私存知識庫助手</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:556px; top:546px; width:360px; font-size:13px; color:var(--ink-3); line-height:1.5; z-index:10;">以公司內部文件為本的RAG回答——配以於貴公司基建運行的開放模型。</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:556px; top:640px; width:360px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:556px; top:652px; width:60px; font-size:10px; color:var(--accent); letter-spacing:0.14em; z-index:10;">選擇ODW原因</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:556px; top:670px; width:360px; font-size:12px; color:var(--ink-2); line-height:1.4; z-index:10;">你的數據無須離開機構</div>
-    <!-- Card: Loop -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:960px; top:420px; width:412px; height:280px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:988px; top:444px; width:240px; font-size:10px; color:var(--good); letter-spacing:0.14em; font-weight:600; z-index:10;">● 現已推出｜完全開源</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:988px; top:466px; width:360px; font-size:32px; line-height:1; color:var(--ink); z-index:10;">ODW <span style="color:var(--accent);">Loop</span></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:988px; top:518px; width:360px; font-size:15px; color:var(--ink); font-weight:500; line-height:1.4; z-index:10;">智能體驅動工作流程編排</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:988px; top:546px; width:360px; font-size:13px; color:var(--ink-3); line-height:1.5; z-index:10;">可視化建構器，將模組組合成能推理的多步驟智能體。</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:988px; top:640px; width:360px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:988px; top:652px; width:60px; font-size:10px; color:var(--accent); letter-spacing:0.14em; z-index:10;">選擇ODW原因</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:988px; top:670px; width:360px; font-size:12px; color:var(--ink-2); line-height:1.4; z-index:10;">取代封閉收費自動化系統</div>
-    <!-- Card: Recap -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1392px; top:420px; width:432px; height:280px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1420px; top:444px; width:240px; font-size:10px; color:var(--good); letter-spacing:0.14em; font-weight:600; z-index:10;">● 現已推出｜完全開源</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1420px; top:466px; width:380px; font-size:40px; line-height:1; color:var(--ink); z-index:10;">ODW <span style="color:var(--accent);">Recap</span></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1420px; top:518px; width:380px; font-size:15px; color:var(--ink); font-weight:500; line-height:1.4; z-index:10;">會議與任務情報</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1420px; top:546px; width:380px; font-size:13px; color:var(--ink-3); line-height:1.5; z-index:10;">會議轉錄 → 追蹤任務，並回寫至 CRM、PM、Books。</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1420px; top:640px; width:380px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1420px; top:652px; width:60px; font-size:10px; color:var(--accent); letter-spacing:0.14em; z-index:10;">選擇ODW原因</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1420px; top:670px; width:380px; font-size:12px; color:var(--ink-2); line-height:1.4; z-index:10;">輸出驅動你的系統，而非僅產文件</div>
-    <!-- coming soon modules -->
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:720px; width:600px; font-size:13px; color:var(--ink-3); letter-spacing:0.18em;">正式發佈時推出</div>
-    <!-- Voice -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:760px; width:280px; height:220px; background:var(--paper-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:116px; top:784px; width:240px; font-size:32px; color:var(--ink); z-index:10;">Voice</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:116px; top:824px; width:240px; font-size:13px; color:var(--ink-3); line-height:1.4; z-index:10;">AI 接待員 · 不漏接每通來電</div>
-    <!-- Pulse -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:396px; top:760px; width:280px; height:220px; background:var(--paper-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:416px; top:784px; width:240px; font-size:32px; color:var(--ink); z-index:10;">Pulse</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:416px; top:824px; width:240px; font-size:13px; color:var(--ink-3); line-height:1.4; z-index:10;">本地化營銷 · 微信、LINE 原生</div>
-    <!-- Hunt -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:696px; top:760px; width:280px; height:220px; background:var(--paper-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:716px; top:784px; width:240px; font-size:32px; color:var(--ink); z-index:10;">Hunt</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:716px; top:824px; width:240px; font-size:13px; color:var(--ink-3); line-height:1.4; z-index:10;">AI業務開發專員 · 人在回路中</div>
-    <!-- Books -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:996px; top:760px; width:280px; height:220px; background:var(--paper-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1016px; top:784px; width:240px; font-size:32px; color:var(--ink); z-index:10;">Books</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1016px; top:824px; width:240px; font-size:13px; color:var(--ink-3); line-height:1.4; z-index:10;">AI會計記帳 · 全球 GAAP</div>
-    <!-- People -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1296px; top:760px; width:260px; height:220px; background:var(--paper-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1316px; top:784px; width:220px; font-size:32px; color:var(--ink); z-index:10;">People</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1316px; top:824px; width:220px; font-size:13px; color:var(--ink-3); line-height:1.4; z-index:10;">AI招聘 · 以監管合規為核心</div>
-    <!-- Shield -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1576px; top:760px; width:248px; height:220px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1596px; top:784px; width:208px; font-size:32px; color:var(--paper); z-index:10;">Shield</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1596px; top:824px; width:208px; font-size:13px; color:var(--accent-2); line-height:1.4; z-index:10;">中小企網絡安全</div>
-  </div>
-</section>
+<main class="main" id="main">
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 05 · OPEN SOURCE -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="open-source">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">系統預設開源</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:72px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      我們主動公開完整源碼，<span style="color:var(--accent);">並非權宜之計</span>。
-    </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:340px; width:1400px; font-size:24px; line-height:1.5; color:var(--ink-2);">
-      ODW.ai 屬開源系統，整套平台可永久免費自行架設伺服器運行<br>
-      不設使用者席位上限、無使用量收費、不會綁定企業數據。<br>
-      我們只在企業需要專業支援時收費，不靠綁定數據牟利。
-    </div>
-    <!-- Three principles -->
-    <!-- 01 -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:480px; width:552px; height:440px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:128px; top:512px; width:120px; font-size:96px; color:var(--accent); z-index:10;">01</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:128px; top:620px; width:488px; font-size:40px; color:var(--ink); line-height:1.1; z-index:10;">永久免費自行架設</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:128px; top:690px; width:488px; font-size:18px; color:var(--ink-2); line-height:1.5; z-index:10;">
-      直接下載源碼於貴公司伺服器運行，所有數據留存企業邊界內，不收取授權費、不按席位收費。
-    </div>
-    <!-- 02 -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:684px; top:480px; width:552px; height:440px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:716px; top:512px; width:120px; font-size:96px; color:var(--accent); z-index:10;">02</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:716px; top:620px; width:488px; font-size:40px; color:var(--ink); line-height:1.1; z-index:10;">完整源碼可審核</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:716px; top:690px; width:488px; font-size:18px; color:var(--ink-2); line-height:1.5; z-index:10;">
-      完全不存在黑盒系統，可審核AI處理客戶數據邏輯、查看執行模型，自由擴充任何功能。
-    </div>
-    <!-- 03 (highlighted) -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1272px; top:480px; width:552px; height:440px; background:var(--accent-soft); border:1px solid var(--accent-2); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:1304px; top:512px; width:120px; font-size:96px; color:var(--accent); z-index:10;">03</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1304px; top:620px; width:488px; font-size:36px; color:var(--ink); line-height:1.1; z-index:10;">以專業服務收費</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1304px; top:690px; width:488px; font-size:18px; color:var(--ink-2); line-height:1.5; z-index:10;">
-      系統源碼完全免費，收費項目只包括諮詢、定制開發、伺服器部署及長期技術支援。
-    </div>
-    <!-- CTA -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:960px; width:400px; height:64px; background:var(--ink); z-index:5;"></div>
-    <a href="https://github.com/OnDemandWorld" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:978px; width:400px; font-size:16px; color:var(--paper); text-align:center; font-weight:600; z-index:10; text-decoration:none; cursor:pointer;" target="_blank" rel="noopener noreferrer">瀏覽完整源碼 ↗</a>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:520px; top:960px; width:300px; height:64px; background:#FFFFFF; border:1px solid var(--rule); z-index:5;"></div>
-    <a href="mailto:hello@odw.ai" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:520px; top:978px; width:300px; font-size:16px; color:var(--ink); text-align:center; font-weight:500; z-index:10; text-decoration:none; cursor:pointer;">預約專業顧問</a>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 06 · SOVEREIGN -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="sovereign">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">原生設計：企業數據自主掌控</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:64px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      企業數據所有權，永遠歸屬<span style="color:var(--accent);">貴公司</span>。
-    </div>
-    <!-- Left: Features -->
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:360px; width:800px; font-size:20px; color:var(--ink); line-height:1.6;">
-      <div style="margin-bottom:32px;">
-        <strong style="color:var(--accent);">→</strong>&nbsp;&nbsp;<strong>自由選擇運行基建</strong><br>
-        <span style="color:var(--ink-3); font-size:17px; margin-left:28px;">可於自有實體伺服器、企業私有雲、甚至物理氣隔環境運行，數據無須流出公司場所。</span>
-      </div>
-      <div style="margin-bottom:32px;">
-        <strong style="color:var(--accent);">→</strong>&nbsp;&nbsp;<strong>內置本地開放AI模型</strong><br>
-        <span style="color:var(--ink-3); font-size:17px; margin-left:28px;">支援Llama、Mistral、Qwen本地執行，有需要可彈性選用雲端模型擴充運算。</span>
-      </div>
-      <div style="margin-bottom:32px;">
-        <strong style="color:var(--accent);">→</strong>&nbsp;&nbsp;<strong>原生支援各地監管合規</strong><br>
-        <span style="color:var(--ink-3); font-size:17px; margin-left:28px;">預設對應香港PDPO《個人資料（私隱）條例》、歐盟GDPR及歐盟《AI法案》，受監管中小企開箱即用。</span>
-      </div>
-      <div>
-        <strong style="color:var(--accent);">→</strong>&nbsp;&nbsp;<strong>全模組統一私隱規範</strong><br>
-        <span style="color:var(--ink-3); font-size:17px; margin-left:28px;">全部功能模組共用同一數據邊界與審計紀錄，不用分開處理十套獨立私隱政策。</span>
+<!-- ─── 01 · 首頁 ─── -->
+<section class="hero" id="cover" aria-labelledby="hero-h1">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="eyebrow">開源營運AI · 專為中小企而設</span>
+      <h1 class="hero-headline" id="hero-h1">
+        全球中小企專用<em>營運AI</em>底層平台。
+      </h1>
+      <p class="hero-sub">
+        十大專屬AI模組——涵蓋客戶服務、知識庫、工作流程、會議、營銷等範疇——統一帳戶驗證、單一數據邊界、共用審計紀錄。免費自行架設伺服器運行，全程公開開發。
+      </p>
+      <div class="cta-row">
+        <a href="https://github.com/OnDemandWorld" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">★</span> 在 GitHub 加星
+        </a>
+        <a href="#modules" class="btn btn-ghost btn-lg">瀏覽全部模組</a>
       </div>
     </div>
-    <!-- Right: Panel -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1000px; top:360px; width:824px; height:620px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1040px; top:400px; width:744px; font-size:13px; color:var(--accent); letter-spacing:0.18em; z-index:10;">核心設計理念</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1040px; top:450px; width:744px; font-size:48px; line-height:1.1; color:var(--paper); z-index:10;">
-      系統競爭優勢不在AI模型，<br>
-      而是<span style="color:var(--accent);">數據存放位置</span><br>
-      ——以及控制數據的一方。
+
+    <aside class="hero-side" aria-label="專案數據">
+      <div class="hero-stats">
+        <div class="hero-stats-label">數據一覽</div>
+        <dl class="hero-stats-list">
+          <dt class="num">10</dt><dd>套模組覆蓋全流程</dd>
+          <dt class="num">5</dt><dd>套已上線並開源</dd>
+          <dt class="num">100%</dt><dd>支援自行架設伺服器</dd>
+          <dt class="num">∞</dt><dd>不設席位收費、無綁定</dd>
+        </dl>
+      </div>
+    </aside>
+
+    <!-- TODO: 快速啟動終端機暫停使用——修復後恢復
+    <figure class="terminal" aria-label="安裝指令">
+      <figcaption class="terminal-head">
+        <span class="terminal-head-label">快速啟動</span>
+        <button class="copy-btn" data-copy="git clone https://github.com/OnDemandWorld/odw-loop && cd odw-loop && docker compose up" aria-label="複製安裝指令">
+          <span class="copy-icon" aria-hidden="true">⧉</span>
+          <span class="copy-label">複製</span>
+        </button>
+      </figcaption>
+      <pre><code><span class="prompt">$</span> git clone https://github.com/OnDemandWorld/odw-loop
+<span class="prompt">$</span> cd odw-loop && docker compose up
+<span class="comment"># open http://localhost:3000 — build your first workflow</span></code></pre>
+    </figure>
+    -->
+  </div>
+</section>
+
+<!-- ─── 02 · 為何現在 ─── -->
+<section class="section" id="why-now" aria-labelledby="why-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">中小企已願意投放AI預算</span>
+      <h2 id="why-h2">
+        中小企已不再停留在AI嘗試階段。他們正在<em class="accent italic">採購</em>——同時尋找一套可信統一系統，整合所有工具。
+      </h2>
     </div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1040px; top:660px; width:744px; height:1px; background:var(--ink-3); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1040px; top:690px; width:744px; font-size:18px; line-height:1.5; color:var(--accent-2); z-index:10;">
-      絕大部分AI供應商會將企業營運數據傳送至無法審查的第三方雲端；ODW.ai採取相反設計：全程透明、數據完全歸企業持有、完整自主管理。
+
+    <div class="grid grid-3">
+      <article class="pillar">
+        <div class="pillar-label">01 · 普及率</div>
+        <div class="big-num">+132%</div>
+        <p class="pillar-body">過去兩年，OECD成員國企業AI普及率由8.7%倍升至20.2%。</p>
+        <p class="pillar-detail">一般中小企現時<strong>AI 工具數量中位數為 5 套</strong>，當中 62% 計劃於未來一年加大投放。</p>
+        <p class="source pillar-source">數據來源：OECD · 美國商會 · 中小企業協會</p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-label">02 · 技術架構</div>
+        <div class="big-num" style="font-size:clamp(2.5rem,4vw+1rem,5rem);">智能體導向</div>
+        <p class="pillar-body">業界主流經已定型：AI智能體可跨越多套工具執行工作，並非單純回覆訊息的聊天機械人。</p>
+        <p class="pillar-detail">真正的護城河不在模型本身，而是<strong>流程編排、數據管理與信任架構</strong>。這正是我們構建的層級。</p>
+        <p class="source pillar-source">數據來源：CB Insights · Y Combinator W25批次</p>
+      </article>
+
+      <article class="pillar dark">
+        <div class="pillar-label">03 · 信任基礎</div>
+        <div class="big-num">開源</div>
+        <p class="pillar-body">中小企普遍對雲端、「AI使用稅」及供應商數據綁定存有顧慮。</p>
+        <p class="pillar-detail">我們的方案：<strong>完整公開源碼</strong>。自行架設運行、逐行審核，完全掌握每一字節。</p>
+        <p class="source pillar-source">開源核心模式 · 優先支援自行架設伺服器 · 不設席位收費</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 07 · SOLUTIONS / VERTICAL PACKS -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="solutions">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">預設行業套裝方案</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:60px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      按各行營運模式，預先調校專屬<span style="color:var(--accent);">行業套裝</span>。
+<!-- ─── 03 · 平台架構 ─── -->
+<section class="section" id="platform" aria-labelledby="platform-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">單一整合平台</span>
+      <h2 id="platform-h2">
+        單一底層引擎。<em class="accent italic">十大功能模組。</em>統一數據邊界。
+      </h2>
+      <p class="lead">
+        所有模組共用同一套帳戶驗證、流程編排、私隱規範與審計紀錄——可將多個模組串聯成多步驟AI智能體，真正跨業務推理，而非堆砌成十組互不相通的SaaS登入帳戶。
+      </p>
     </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:320px; width:1400px; font-size:22px; line-height:1.5; color:var(--ink-2);">
-      共用十大核心模組，並預先按行業完成監管合規設定，數日內完成上線，毋須耗費數月定制。
-    </div>
-    <!-- Clinics -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:420px; width:560px; height:520px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:420px; width:560px; height:6px; background:var(--accent); z-index:6;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:452px; width:240px; font-size:12px; color:var(--accent); letter-spacing:0.2em; font-weight:600; z-index:10;">適用：私家診所、醫務所</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:128px; top:480px; width:496px; font-size:42px; line-height:1.05; color:var(--paper); z-index:10;">ODW.ai 醫務所專用套裝</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:128px; top:580px; width:496px; font-size:17px; color:var(--accent-2); line-height:1.5; z-index:10;">支援預約系統、覆診提示、到診資料摘要、醫療索償表格自動填寫，原生兼容HIPAA及香港PDPO私隱條例。</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:128px; top:700px; width:496px; height:1px; background:var(--ink-3); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:128px; top:720px; width:240px; font-size:11px; color:var(--accent); letter-spacing:0.16em; z-index:10;">套裝內模組</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:128px; top:750px; width:496px; font-size:28px; color:var(--paper); z-index:10;">Desk · Voice · Recap · People</div>
-    <!-- Pro Services -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:680px; top:420px; width:560px; height:520px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:680px; top:420px; width:560px; height:6px; background:var(--accent); z-index:6;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:712px; top:452px; width:300px; font-size:12px; color:var(--accent); letter-spacing:0.2em; font-weight:600; z-index:10;">適用：專業服務行業</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:712px; top:480px; width:496px; font-size:42px; line-height:1.05; color:var(--ink); z-index:10;">ODW.ai 專業服務套裝</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:712px; top:580px; width:496px; font-size:17px; color:var(--ink-3); line-height:1.5; z-index:10;">適合會計師樓、商業顧問、小型諮詢公司；自動化知識文件、客戶開發、會計記帳等高價值工作。</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:712px; top:700px; width:496px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:712px; top:720px; width:240px; font-size:11px; color:var(--accent); letter-spacing:0.16em; z-index:10;">套裝內模組</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:712px; top:750px; width:496px; font-size:28px; color:var(--ink); z-index:10;">Vault · Hunt · Books · Recap</div>
-    <!-- Retail & F&B -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1264px; top:420px; width:560px; height:520px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1264px; top:420px; width:560px; height:6px; background:var(--accent); z-index:6;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1296px; top:452px; width:300px; font-size:12px; color:var(--accent); letter-spacing:0.2em; font-weight:600; z-index:10;">適用：零售、餐飲行業</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1296px; top:480px; width:496px; font-size:42px; line-height:1.05; color:var(--ink); z-index:10;">ODW.ai 零售餐飲套裝</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1296px; top:580px; width:496px; font-size:17px; color:var(--ink-3); line-height:1.5; z-index:10;">餐廳、咖啡店、小型連鎖店專用，以WhatsApp、Instagram作核心客戶渠道，支援電話落單、本地市場推廣。</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1296px; top:700px; width:496px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1296px; top:720px; width:240px; font-size:11px; color:var(--accent); letter-spacing:0.16em; z-index:10;">套裝內模組</div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:1296px; top:750px; width:496px; font-size:28px; color:var(--ink); z-index:10;">Desk · Voice · Pulse · Books</div>
-    <!-- Footer note -->
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:970px; width:1500px; font-size:15px; color:var(--ink-3); font-style:italic;">
-      陸續推出：地產代理、家居維修、教育補習、法律師樓。暫未對應你的行業？歡迎與我們聯合定制專屬套裝。
+
+    <div class="stack">
+      <div class="stack-layer surface">
+        <div class="stack-label">客戶接入渠道</div>
+        <div class="stack-title">你的客戶接觸點</div>
+        <div class="stack-desc">WhatsApp、網站、語音、電郵、社交平台——覆蓋客戶日常使用的所有渠道。</div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-label">功能模組</div>
+        <div class="stack-title">十大模組</div>
+        <div class="stack-desc">Desk · Voice · Vault · Loop · Pulse · Recap · Hunt · Books · People · Shield——各自對應獨立營運場景的專注智能體。</div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-label">流程編排</div>
+        <div class="stack-title">Loop 流程引擎</div>
+        <div class="stack-desc">模組可串聯成多步驟工作流程，具備跨工具推理能力——不只是單向觸發指令。</div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-label">企業知識庫</div>
+        <div class="stack-title">Vault（RAG 檢索）</div>
+        <div class="stack-desc">以貴公司自有文件與系統作檢索依據。你的數據無須離開自有基建。</div>
+      </div>
+      <div class="stack-layer">
+        <div class="stack-label">AI模型層</div>
+        <div class="stack-title">自攜模型（BYOM）</div>
+        <div class="stack-desc">開放模型（Llama、Mistral、Qwen）預設本地運行。需要時可彈性選用雲端模型擴充運算。</div>
+      </div>
+      <div class="stack-layer foundation">
+        <div class="stack-label">系統底層</div>
+        <div class="stack-title">完全開源</div>
+        <div class="stack-desc">於貴公司自有基建運行。逐行審核源碼。自由擴充功能。系統所有權完全歸屬企業。Apache 2.0 及 MIT 授權條款。</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 08 · SERVICES / PRICING -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section" id="services">
-  <div class="slide-container">
-    <!-- Title -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:160px; width:1200px;">我們如何協助你</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:160px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:208px; width:1700px; font-size:56px; line-height:1.05; letter-spacing:-0.02em; color:var(--ink);">
-      系統源碼永久免費，<span style="color:var(--accent);">價值來自我方專業團隊服務</span>。
+<!-- ─── 04 · 功能模組 ─── -->
+<section class="section" id="modules" aria-labelledby="modules-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">功能模組組合</span>
+      <h2 id="modules-h2">
+        十大功能模組，橫跨<em class="accent italic">三大營運範疇</em>。
+      </h2>
+      <p class="lead">
+        五套現已推出並完全開源。其餘將隨公開開發進度陸續推出——絕無虛構功能、不設等候名單。密切留意 repo 動態。
+      </p>
     </div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:330px; width:1400px; font-size:22px; line-height:1.5; color:var(--ink-2);">
-      全部免費自行架設，或交由我們團隊為你上線、按工作流程定制模組，並持續維護。
+
+    <div class="tier-label">核心套件 · 現已推出並開源</div>
+
+    <div class="module-track live">
+      <!-- Desk -->
+      <article class="module-card">
+        <div class="module-status live"><span class="dot" aria-hidden="true"></span> 現已推出 · 開源 · PYTHON</div>
+        <h3 class="module-name">ODW <span class="brand">Desk</span></h3>
+        <p class="module-tagline">全渠道前台客戶服務智能體</p>
+        <p class="module-desc">支援WhatsApp、網站、電郵、LINE、Telegram、SMS。設有個人敏感資料自動遮罩、RAG知識庫導向回答、順暢的人工交接流程。</p>
+        <div class="module-why">
+          <div class="module-why-label">選擇 ODW 原因</div>
+          <div class="module-why-text">WhatsApp 優先設計 · 不只回覆訊息，可完整處理客戶需求</div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <a class="module-link" href="https://github.com/OnDemandWorld/odw-desk" target="_blank" rel="noopener noreferrer">前往 GitHub 查看 ↗</a>
+            <a class="module-link" href="./faq/desk.html">常見問題 →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Vault -->
+      <article class="module-card">
+        <div class="module-status live"><span class="dot" aria-hidden="true"></span> 現已推出 · 開源 · PYTHON</div>
+        <h3 class="module-name">ODW <span class="brand">Vault</span></h3>
+        <p class="module-tagline">數據自主知識庫助手</p>
+        <p class="module-desc">預設RAG管道，支援混合檢索、離線運行、開放模型。所有索引儲存於貴公司數據邊界以內。</p>
+        <div class="module-why">
+          <div class="module-why-label">選擇 ODW 原因</div>
+          <div class="module-why-text">你的數據無須離開機構</div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <a class="module-link" href="https://github.com/OnDemandWorld/odw-vault" target="_blank" rel="noopener noreferrer">前往 GitHub 查看 ↗</a>
+            <a class="module-link" href="./faq/vault.html">常見問題 →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Loop -->
+      <article class="module-card">
+        <div class="module-status live"><span class="dot" aria-hidden="true"></span> 現已推出 · 開源 · TYPESCRIPT</div>
+        <h3 class="module-name">ODW <span class="brand">Loop</span></h3>
+        <p class="module-tagline">智能體驅動工作流程編排</p>
+        <p class="module-desc">React Flow 可視化畫布、Fastify 後端、DAG 執行引擎。模組以節點形式接入，工作流程可組合成多步驟推理。</p>
+        <div class="module-why">
+          <div class="module-why-label">選擇 ODW 原因</div>
+          <div class="module-why-text">封閉自動化平台的開源替代方案</div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <a class="module-link" href="https://github.com/OnDemandWorld/odw-loop" target="_blank" rel="noopener noreferrer">前往 GitHub 查看 ↗</a>
+            <a class="module-link" href="./faq/loop.html">常見問題 →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Recap -->
+      <article class="module-card">
+        <div class="module-status live"><span class="dot" aria-hidden="true"></span> 現已推出 · 開源 · RUST</div>
+        <h3 class="module-name">ODW <span class="brand">Recap</span></h3>
+        <p class="module-tagline">裝置端會議情報分析</p>
+        <p class="module-desc">本地語音轉文字、AI摘要、結構化任務自動回寫至 CRM、項目管理工具及會計系統。於你現有的筆記型電腦上已可流暢運行。</p>
+        <div class="module-why">
+          <div class="module-why-label">選擇 ODW 原因</div>
+          <div class="module-why-text">所有數據不離開裝置 · 無須依賴雲端</div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <a class="module-link" href="https://github.com/OnDemandWorld/odw-recap" target="_blank" rel="noopener noreferrer">前往 GitHub 查看 ↗</a>
+            <a class="module-link" href="./faq/recap.html">常見問題 →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Pulse -->
+      <article class="module-card">
+        <div class="module-status live"><span class="dot" aria-hidden="true"></span> 現已推出 · 開源 · PYTHON</div>
+        <h3 class="module-name">ODW <span class="brand">Pulse</span></h3>
+        <p class="module-tagline">多語言營銷內容生成</p>
+        <p class="module-desc">內容與廣告活動具備真正的文化適配能力，內建A/B測試實驗功能，基建數據自主。一個簡報，覆蓋多個市場。</p>
+        <div class="module-why">
+          <div class="module-why-label">選擇 ODW 原因</div>
+          <div class="module-why-text">為跨市場團隊而設，不限於跨語言翻譯</div>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <a class="module-link" href="https://github.com/OnDemandWorld/odw-pulse" target="_blank" rel="noopener noreferrer">前往 GitHub 查看 ↗</a>
+            <a class="module-link" href="./faq/pulse.html">常見問題 →</a>
+          </div>
+        </div>
+      </article>
     </div>
-    <!-- Pricing cards -->
-    <!-- Self-Host -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:440px; width:400px; height:540px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:124px; top:468px; width:344px; font-size:12px; color:var(--ink-3); letter-spacing:0.18em; z-index:10;">自行架設方案</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:124px; top:500px; width:344px; font-size:64px; color:var(--ink); z-index:10;">免費</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:124px; top:580px; width:344px; font-size:16px; color:var(--ink-2); line-height:1.5; z-index:10;">適合想自行運行的團隊。</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:124px; top:650px; width:344px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:124px; top:680px; width:344px; font-size:15px; color:var(--ink-3); line-height:1.8; z-index:10;">
-      ✓ 所有開源功能模組<br>
-      ✓ 完整源碼及文件<br>
-      ✓ 社群支援<br>
-      ✓ 不設使用席位或使用量上限
+
+    <p class="scroll-hint"><span aria-hidden="true">←</span> 左右滑動瀏覽更多模組 <span aria-hidden="true">→</span></p>
+
+    <div class="tier-label">發展路線圖 · 公開開發中</div>
+
+    <div class="module-track roadmap">
+      <article class="module-card roadmap-tile">
+        <div class="module-status roadmap"><span class="dot" aria-hidden="true"></span> 發展路線圖</div>
+        <h3 class="module-name">Voice</h3>
+        <p class="module-tagline">AI 接待員</p>
+        <p class="module-desc">來電接聽、預約編排、結構化交接。你的聲線、你的腳本、你的數據。</p>
+        <div class="module-why">
+          <a class="module-link" href="./faq/voice.html">閱覽設計方案 →</a>
+        </div>
+      </article>
+      <article class="module-card roadmap-tile">
+        <div class="module-status roadmap"><span class="dot" aria-hidden="true"></span> 發展路線圖</div>
+        <h3 class="module-name">Hunt</h3>
+        <p class="module-tagline">AI 業務開發專員，人在迴路中</p>
+        <p class="module-desc">調研與排序須經人工審批方可發出。絕無廣發濫發、絕無垃圾訊息。</p>
+        <div class="module-why">
+          <a class="module-link" href="./faq/hunt.html">閱覽設計方案 →</a>
+        </div>
+      </article>
+      <article class="module-card roadmap-tile">
+        <div class="module-status roadmap"><span class="dot" aria-hidden="true"></span> 發展路線圖</div>
+        <h3 class="module-name">Books</h3>
+        <p class="module-tagline">AI 會計記帳</p>
+        <p class="module-desc">收據擷取、分類、對帳、月結。可接入你現有的會計系統。</p>
+        <div class="module-why">
+          <a class="module-link" href="./faq/books.html">閱覽設計方案 →</a>
+        </div>
+      </article>
+      <article class="module-card roadmap-tile">
+        <div class="module-status roadmap"><span class="dot" aria-hidden="true"></span> 發展路線圖</div>
+        <h3 class="module-name">People</h3>
+        <p class="module-tagline">AI 招聘</p>
+        <p class="module-desc">履歷篩選、結構化面試、排程管理。內建偏見審查機制——按歐盟《AI法案》標準設計。</p>
+        <div class="module-why">
+          <a class="module-link" href="./faq/people.html">閱覽設計方案 →</a>
+        </div>
+      </article>
+      <article class="module-card roadmap-tile dark">
+        <div class="module-status roadmap"><span class="dot" aria-hidden="true"></span> 發展路線圖</div>
+        <h3 class="module-name">Shield</h3>
+        <p class="module-tagline">中小企網絡安全</p>
+        <p class="module-desc">釣魚郵件偵測、密碼安全管理、威脅監控——專為沒有安全工程師的團隊而設。</p>
+        <div class="module-why">
+          <a class="module-link" href="./faq/shield.html">閱覽設計方案 →</a>
+        </div>
+      </article>
     </div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:124px; top:900px; width:344px; height:48px; background:var(--paper-2); z-index:5;"></div>
-    <a href="https://github.com/OnDemandWorld" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:124px; top:914px; width:344px; font-size:14px; color:var(--ink); text-align:center; z-index:10; text-decoration:none; cursor:pointer;" target="_blank" rel="noopener noreferrer">下載完整源碼</a>
-    <!-- Deploy -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:520px; top:440px; width:400px; height:540px; background:#FFFFFF; border:1px solid var(--rule); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:548px; top:468px; width:344px; font-size:12px; color:var(--ink-3); letter-spacing:0.18em; z-index:10;">部 署</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:548px; top:500px; width:344px; font-size:40px; color:var(--ink); z-index:10;">團隊協助部署上線</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:548px; top:580px; width:344px; font-size:16px; color:var(--ink-2); line-height:1.5; z-index:10;">我們在你的基建上快速協助你上線。</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:548px; top:650px; width:344px; height:1px; background:var(--rule); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:548px; top:680px; width:344px; font-size:15px; color:var(--ink-3); line-height:1.8; z-index:10;">
-      ✓ 引導式安裝<br>
-      ✓ 數據與渠道整合<br>
-      ✓ 模型配置<br>
-      ✓ 團隊入職
-    </div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:548px; top:900px; width:344px; height:48px; background:var(--paper-2); z-index:5;"></div>
-    <a href="mailto:hello@odw.ai" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:548px; top:914px; width:344px; font-size:14px; color:var(--ink); text-align:center; z-index:10; text-decoration:none; cursor:pointer;">聯絡顧問</a>
-    <!-- Customise (featured) -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:944px; top:440px; width:400px; height:540px; background:var(--accent-soft); border:2px solid var(--accent); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:972px; top:468px; width:344px; font-size:12px; color:var(--accent-ink); letter-spacing:0.18em; font-weight:600; z-index:10;">定 制</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:972px; top:500px; width:344px; font-size:48px; color:var(--ink); z-index:10;">定制開發諮詢</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:972px; top:580px; width:344px; font-size:16px; color:var(--ink-2); line-height:1.5; z-index:10;">按你業務的實際運作定制模組。</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:972px; top:650px; width:344px; height:1px; background:var(--accent-2); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:972px; top:680px; width:344px; font-size:15px; color:var(--ink-2); line-height:1.8; z-index:10;">
-      ✓ 自訂模組與工作流程<br>
-      ✓ 行業配置<br>
-      ✓ 合規加固<br>
-      ✓ 優先支援
-    </div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:972px; top:900px; width:344px; height:48px; background:var(--accent); z-index:5;"></div>
-    <a href="mailto:hello@odw.ai" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:972px; top:914px; width:344px; font-size:14px; color:var(--ink); text-align:center; font-weight:600; z-index:10; text-decoration:none; cursor:pointer;">預約定制會議</a>
-    <!-- Scale -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1368px; top:440px; width:456px; height:540px; background:var(--ink); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1396px; top:468px; width:400px; font-size:12px; color:var(--accent-2); letter-spacing:0.18em; z-index:10;">擴 展</div>
-    <div data-object="true" data-object-type="textbox" class="big-num" style="position:absolute; left:1396px; top:500px; width:400px; font-size:40px; color:var(--paper); z-index:10;">大型企業自主部署方案</div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1396px; top:580px; width:400px; font-size:16px; color:var(--accent-2); line-height:1.5; z-index:10;">自主可控部署，設服務水平協議（SLA）與持續合作。</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1396px; top:650px; width:400px; height:1px; background:var(--ink-3); z-index:10;"></div>
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:1396px; top:680px; width:400px; font-size:15px; color:var(--paper); line-height:1.8; z-index:10;">
-      ✓ 物理氣隔 / 私有雲專案<br>
-      ✓ 專屬支援與服務水平協議（SLA）<br>
-      ✓ 路線圖協作<br>
-      ✓ 白牌系統選項
-    </div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:1396px; top:900px; width:400px; height:48px; background:var(--paper); z-index:5;"></div>
-    <a href="mailto:hello@odw.ai" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:1396px; top:914px; width:400px; font-size:14px; color:var(--ink); text-align:center; z-index:10; text-decoration:none; cursor:pointer;">聯絡企業方案團隊</a>
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!-- 09 · CONTACT / CTA -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-<section class="slide-section slide-dark" id="contact">
-  <div class="slide-container" style="background:var(--ink);">
-    <!-- Full-bleed dark bg -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:0; top:0; width:1920px; height:1080px; background:var(--ink); z-index:1;"></div>
-    <!-- Eyebrow -->
-    <div data-object="true" data-object-type="textbox" class="eyebrow" style="position:absolute; left:96px; top:200px; width:1200px; color:var(--accent);">立即啟用</div>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:72px; top:200px; width:6px; height:24px; background:var(--accent); z-index:5;"></div>
-    <!-- Big hero text -->
-    <div data-object="true" data-object-type="textbox" class="serif" style="position:absolute; left:96px; top:260px; width:1700px; font-size:108px; line-height:1.0; letter-spacing:-0.025em; color:var(--paper); z-index:10;">
-      完全掌握自家AI系統。<br>
-      <span style="color:var(--accent);">由開源源碼起步。</span>
+<!-- ─── 05 · 開源理念 ─── -->
+<section class="section" id="open-source" aria-labelledby="os-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">我們為何主動公開源碼</span>
+      <h2 id="os-h2">
+        護城河不在模型本身，而是<em class="accent italic">數據存放位置</em>——以及控制數據的一方。
+      </h2>
+      <p class="lead">
+        整套平台可永久免費自行架設伺服器運行——不設席位上限、無使用量收費、不會綁定企業數據。我們只在企業需要協助時收費，不靠綁定數據牟利。
+      </p>
     </div>
-    <!-- Subtext -->
-    <div data-object="true" data-object-type="textbox" style="position:absolute; left:96px; top:580px; width:1200px; font-size:28px; line-height:1.5; color:var(--accent-2); z-index:10;">
-      即刻前往GitHub瀏覽完整源碼，或電郵聯絡團隊<br>
-      安排示範，部署ODW.ai至貴公司基建。
+
+    <div class="grid grid-3">
+      <article class="principle">
+        <div class="principle-num">01</div>
+        <h3 class="principle-title">永久免費自行架設</h3>
+        <p class="principle-body">下載源碼、於貴公司伺服器運行、所有數據留存企業邊界以內。不收取授權費、不按席位收費、無使用量上限。</p>
+      </article>
+      <article class="principle">
+        <div class="principle-num">02</div>
+        <h3 class="principle-title">完整源碼可逐行審核</h3>
+        <p class="principle-body">絕無黑盒系統。可審核AI處理客戶數據的每個環節、查看模型運行位置，自由擴充任何所需功能。</p>
+      </article>
+      <article class="principle featured">
+        <div class="principle-num">03</div>
+        <h3 class="principle-title">以專業服務賺取收入</h3>
+        <p class="principle-body">架設部署、定制開發、行業配置、持續技術支援。源碼完全免費——我們靠確保系統為你完美運行而獲得報酬。</p>
+      </article>
     </div>
-    <!-- CTA buttons -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:96px; top:720px; width:400px; height:80px; background:var(--accent); z-index:5;"></div>
-    <a href="https://github.com/OnDemandWorld" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:746px; width:400px; font-size:18px; color:var(--ink); text-align:center; font-weight:700; z-index:10; text-decoration:none; cursor:pointer;" target="_blank" rel="noopener noreferrer">前往GitHub查看源碼 ↗</a>
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:520px; top:720px; width:400px; height:80px; background:var(--paper); z-index:5;"></div>
-    <a href="mailto:hello@odw.ai" data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:520px; top:746px; width:400px; font-size:18px; color:var(--ink); text-align:center; font-weight:600; z-index:10; text-decoration:none; cursor:pointer;">電郵 hello@odw.ai 查詢</a>
-    <!-- Footer info -->
-    <div data-object="true" data-object-type="shape" style="position:absolute; left:0; top:920px; width:1920px; height:160px; background:rgba(255,255,255,0.03); z-index:1;"></div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:960px; width:600px; font-size:14px; color:var(--ink-4); letter-spacing:0.04em; z-index:10;">© 2026 ODW.AI · ONDEMANDWORLD</div>
-    <div data-object="true" data-object-type="textbox" class="mono" style="position:absolute; left:96px; top:990px; width:600px; font-size:14px; color:var(--ink-4); letter-spacing:0.04em; z-index:10;">完全開源｜支援自行架設伺服器｜面向全球中小企</div>
+
+    <div class="cta-row">
+      <a href="https://github.com/OnDemandWorld" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">★ 在 GitHub 加星 ↗</a>
+      <a href="mailto:hello@odw.ai" class="btn btn-ghost">諮詢專業團隊</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 06 · 數據自主 ─── -->
+<section class="section" id="sovereign" aria-labelledby="sov-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">數據自主，設計為本</span>
+      <h2 id="sov-h2">
+        你的數據，永遠<em class="accent italic">由你掌控</em>。
+      </h2>
+    </div>
+
+    <div class="sovereign-grid">
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="arrow" aria-hidden="true">→</span>
+          <div>
+            <div class="feature-title">自由選擇運行基建</div>
+            <p class="feature-desc">可於自有伺服器、企業私有雲、甚至完全實體隔離網絡運行。除非你主動輸出，否則數據無須離開公司場所。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="arrow" aria-hidden="true">→</span>
+          <div>
+            <div class="feature-title">內置開放模型</div>
+            <p class="feature-desc">Llama、Mistral、Qwen 預設配置妥當，可即時本地運行。雲端模型仍屬選項——但絕非必須。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="arrow" aria-hidden="true">→</span>
+          <div>
+            <div class="feature-title">原生支援監管合規</div>
+            <p class="feature-desc">GDPR、PDPO、PDPA 及歐盟《AI法案》均作為預設規範處理——絕非事後包裝的合規飾辭。從第一天起為受監管中小企而設計。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="arrow" aria-hidden="true">→</span>
+          <div>
+            <div class="feature-title">統一數據邊界，統一審計紀錄</div>
+            <p class="feature-desc">所有模組共用同一數據邊界、帳戶驗證及審計日誌——毋須在下次審查時對接十套不同政策。</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="quote-panel">
+        <div class="quote-panel-label">核心設計理念</div>
+        <blockquote class="quote-panel-text">
+          護城河不在模型本身，而是<em>數據存放位置</em>——以及控制數據的一方。
+        </blockquote>
+        <p class="quote-panel-detail">
+          絕大部分AI供應商會悄悄將你的業務數據傳送至無法查察的雲端，由你無法審查的系統索引，運行於你不擁有的模型之上。ODW.ai 採取相反設計：全程透明、數據完全歸屬企業、完整自主管理。
+        </p>
+      </aside>
+    </div>
+
+    <p style="margin-top:var(--sp-6); font-size:0.9375rem; color:var(--ink-3); text-align:center;">
+      <em>對合規規範有更深入疑問？</em>
+      <a href="./faq/suite.html#s2" style="color:var(--accent); font-weight:600; margin-left:4px;">閱覽數據自主常見問題 →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ─── 07 · 行業方案 ─── -->
+<section class="section" id="solutions" aria-labelledby="sol-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">預設行業套裝方案</span>
+      <h2 id="sol-h2">
+        按你的行業，預先配置妥當的<em class="accent italic">專屬套裝</em>。
+      </h2>
+      <p class="lead">
+        共用十大開源模組，並按各行業實際營運模式預先完成合規設定——數日內即可上線，毋須耗費數月定制。每個套裝仍可獨立架設、保持開源、完全歸你所有。
+      </p>
+    </div>
+
+    <div class="grid grid-3">
+      <article class="vertical-card dark">
+        <div class="vertical-label">適用：診所</div>
+        <h3 class="vertical-title">ODW.ai 醫務所專用套裝</h3>
+        <p class="vertical-desc">預約系統、覆診提示、到診資料摘要、索償表格預填——預設兼容 HIPAA、香港 PDPO《個人資料（私隱）條例》及相關醫療私隱規範。任何可辨識病人身份的數據無須離開診所。</p>
+        <div class="vertical-bundle">
+          <div class="vertical-bundle-label">套裝內模組</div>
+          <div class="vertical-bundle-list">Desk · Voice · Recap · People</div>
+        </div>
+      </article>
+
+      <article class="vertical-card">
+        <div class="vertical-label">適用：專業服務</div>
+        <h3 class="vertical-title">ODW.ai 專業服務套裝</h3>
+        <p class="vertical-desc">會計師樓、顧問公司、代理行、精品事務所。自動化知識工作、客戶開發調研、會計記帳——屬AI採用中高價值、高付費意願的一環。</p>
+        <div class="vertical-bundle">
+          <div class="vertical-bundle-label">套裝內模組</div>
+          <div class="vertical-bundle-list">Vault · Hunt · Books · Recap</div>
+        </div>
+      </article>
+
+      <article class="vertical-card">
+        <div class="vertical-label">適用：零售及餐飲</div>
+        <h3 class="vertical-title">ODW.ai 零售餐飲套裝</h3>
+        <p class="vertical-desc">餐廳、咖啡店、小型連鎖店。以WhatsApp及Instagram為核心的客戶互動、語音點餐、本地化營銷——尊重每間店鋪的社區特色。</p>
+        <div class="vertical-bundle">
+          <div class="vertical-bundle-label">套裝內模組</div>
+          <div class="vertical-bundle-list">Desk · Voice · Pulse · Books</div>
+        </div>
+      </article>
+    </div>
+
+    <p class="source" style="margin-top:var(--sp-6); font-style:italic; font-family:'Inter',sans-serif; font-size:0.9375rem; color:var(--ink-3);">
+      陸續推出：地產代理 · 家居維修 · 教育補習 · 法律師樓。我們與合作夥伴共同開發行業套裝——若你的行業暫未覆蓋，歡迎與我們商討。
+    </p>
+  </div>
+</section>
+
+<!-- ─── 08 · 專業服務 ─── -->
+<section class="section" id="services" aria-labelledby="svc-h2">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">我們如何協助你</span>
+      <h2 id="svc-h2">
+        系統源碼永久免費。<em class="accent italic">專業服務</em>是我們的價值所在。
+      </h2>
+      <p class="lead">
+        整套平台可永久免費自行架設。或交由我們團隊協助你上線、按貴公司實際營運流程定制模組，並持續維護。你可以選擇我們參與的範圍——隨時可以帶走全部源碼。
+      </p>
+    </div>
+
+    <div class="grid grid-4">
+      <article class="service-card">
+        <div class="service-label">自行架設</div>
+        <div class="service-price">免費</div>
+        <p class="service-tag">適合想獨立運行整套系統的團隊。</p>
+        <ul class="service-features">
+          <li>所有開源功能模組</li>
+          <li>完整源碼及技術文件</li>
+          <li>社群支援（GitHub、Discord）</li>
+          <li>不設席位或使用量上限</li>
+        </ul>
+        <a href="https://github.com/OnDemandWorld" class="btn btn-ghost btn-full" target="_blank" rel="noopener noreferrer">下載完整源碼 ↗</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-label">架設部署</div>
+        <div class="service-price">託管設定</div>
+        <p class="service-tag">我們在你的基建上協助你快速上線。</p>
+        <ul class="service-features">
+          <li>引導式安裝於貴公司基建</li>
+          <li>數據與渠道整合</li>
+          <li>模型選擇及配置</li>
+          <li>團隊入職培訓及交接</li>
+        </ul>
+        <a href="mailto:hello@odw.ai" class="btn btn-ghost btn-full">聯絡我們</a>
+      </article>
+
+      <article class="service-card featured">
+        <div class="service-label">定制開發</div>
+        <div class="service-price">專業顧問</div>
+        <p class="service-tag">按你業務的實際運作定制模組。</p>
+        <ul class="service-features">
+          <li>自訂模組與工作流程設計</li>
+          <li>行業及地區配置</li>
+          <li>針對你的監管機構加固合規</li>
+          <li>優先技術支援，設專屬聯絡人</li>
+        </ul>
+        <a href="mailto:hello@odw.ai" class="btn btn-primary btn-full">預約顧問會議</a>
+      </article>
+
+      <article class="service-card dark">
+        <div class="service-label">企業擴展</div>
+        <div class="service-price">企業方案</div>
+        <p class="service-tag">數據自主部署，設服務水平協議（SLA）及路線圖協作。</p>
+        <ul class="service-features">
+          <li>實體隔離／私有雲架設部署</li>
+          <li>專屬技術支援，設合約SLA</li>
+          <li>路線圖協作及優先體驗</li>
+          <li>白牌系統及經銷選項</li>
+        </ul>
+        <a href="mailto:hello@odw.ai" class="btn btn-primary btn-full">聯絡企業方案團隊</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 09 · 聯絡我們 ─── -->
+<section class="section dark" id="contact" aria-labelledby="contact-h2">
+  <div class="section-inner">
+    <span class="eyebrow">立即起步</span>
+    <h2 class="hero-headline" id="contact-h2" style="max-width:22ch; margin-top:var(--sp-4);">
+      完全掌握自家AI。<br><em>由開源源碼起步。</em>
+    </h2>
+    <p class="hero-sub" style="color:var(--accent-2); max-width:56ch;">
+      即日下載源碼，或與團隊聯絡，安排ODW.ai在貴公司基建上運行。由「初步了解」到「正式投產」的距離，比你想像中更短。
+    </p>
+
+    <div class="cta-row">
+      <a href="https://github.com/OnDemandWorld" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">★ 在 GitHub 加星 ↗</a>
+      <a href="mailto:hello@odw.ai" class="btn btn-ghost btn-lg" style="color:var(--paper); border-color:var(--ink-3);">電郵 hello@odw.ai</a>
+    </div>
+
+    <div class="footer-links">
+      <a href="./faq/index.html">常見問題 →</a>
+      <a href="https://github.com/OnDemandWorld" target="_blank" rel="noopener noreferrer">社群 →</a>
+      <a href="https://github.com/OnDemandWorld" target="_blank" rel="noopener noreferrer">發展路線圖 →</a>
+      <a href="./faq/suite.html#s2">安全與合規 →</a>
+    </div>
+
+    <div class="footer-meta">
+      <div class="mono">© 2026 ODW.AI · ONDEMANDWORLD</div>
+      <div>全程公開開發 · Apache 2.0 及 MIT 授權 · 專為全球中小企而設</div>
+      <div class="mono">條款 · 私隱政策 · 授權摘要 · 責任披露</div>
+    </div>
   </div>
 </section>
 
 </main>
 
-<script src="../app-v1.js"></script>
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- 手機底部固定CTA列 -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<div class="sticky-cta" aria-label="立即起步">
+  <div class="sticky-cta-msg">完全掌握自家AI。<br>免費自行架設。</div>
+  <a href="https://github.com/OnDemandWorld" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 加星">
+    <span aria-hidden="true">★</span> 加星
+  </a>
+  <a href="mailto:hello@odw.ai" class="btn btn-secondary">聯絡我們</a>
+</div>
+
+<script src="../app.js"></script>
 </body>
 </html>
