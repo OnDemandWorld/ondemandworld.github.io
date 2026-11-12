@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width = 320px, initial-scale = 1, minimum-scale = 0.5, maximum-scale = 1"
+    />
+    <title>OnDemandWorld: About Us</title>
+    <style type="text/css">
+      body {
+        background-image: url(Fill_About-Us_bg_iPhone2.gif);
+        background-size: 20px 20px;
+      }
+      .ProductName {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .ODWCopyright {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000;
+        font-size: 12px;
+      }
+      .ProductVersion {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: 16px;
+      }
+      .ProductionTeamHeading {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: 16px;
+        font-weight: normal;
+      }
+      .ProductionTeamLink {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #06f8f9;
+        font-size: 16px;
+        text-decoration: underline;
+      }
+      .ProductionTeamMember {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: 15px;
+        font-weight: normal;
+      }
+      .AboutODWTitle {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: bold;
+      }
+      .AboutODWText {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+      .AboutODWLink {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #06f8f9;
+        font-size: 12px;
+        text-decoration: underline;
+      }
+
+      .topBanner {
+        margin-left: -10px;
+        margin-right: -7px;
+      }
+
+      body {
+        margin-top: 0px;
+      }
+    </style>
+  </head>
+
+  <body class="AboutODW">
+    <div class="topBanner">
+      <img src="Fill_About-Us_Banner2.png" width="100%" />
+    </div>
+    <div>
+      <span class="ProductName">Echo - AI Voice Transcription</span><br />
+    </div>
+    <span class="ODWCopyright">Copyright © OnDemandWorld Limited.</span>
+    <hr />
+
+    <section
+      style="
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      "
+    >
+      <h2 style="text-align: center; color: #333">
+        Try Our Transcription App for Free!
+      </h2>
+      <p style="text-align: center; color: #666">
+        Enjoy our app for free with an ad-supported model, or elevate your
+        experience by subscribing to our Pro version. Thanks for supporting our
+        development!
+      </p>
+
+      <h3 style="color: #2c3e50">Pro Features:</h3>
+      <ul style="list-style-type: disc; margin-left: 20px; color: #555">
+        <li>
+          <strong>Optional at $5.99 per month</strong> Automatically renew at
+          the end of monthly duration until you choose to cancel.
+        </li>
+        <li>
+          <strong>Full Language Support:</strong> Seamlessly transcribe in
+          multiple languages with auto language detection.
+        </li>
+        <li>
+          <strong>Unlimited Usage:</strong> Access both Default and High
+          Accuracy transcription models without limits.
+        </li>
+        <li>
+          <strong>Ongoing Updates:</strong> Receive the latest High Accuracy
+          model updates, available for direct download from our servers.
+        </li>
+        <li>
+          <strong>Ad-Free Experience:</strong> Enjoy all current and upcoming
+          features without any interruptions from ads.
+        </li>
+      </ul>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          margin-top: 20px;
+          text-align: center;
+        "
+      >
+        <a
+          id="buyProduct"
+          href="#subscribe"
+          style="
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            white-space: pre-line;
+          "
+          onclick="sendSubscribe()"
+          >Subscribe to Pro
+        </a>
+        &nbsp;&nbsp;
+        <a
+          href="#subscribe"
+          style="
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+          "
+          onclick="sendRestorePurchases()"
+        >
+          Restore Purchases
+        </a>
+      </div>
+    </section>
+    <hr />
+
+    <script type="text/javascript">
+      function sendSubscribe() {
+        window.webkit.messageHandlers.jsHandler.postMessage("Subscribe");
+      }
+
+      function sendRestorePurchases() {
+        window.webkit.messageHandlers.jsHandler.postMessage("Restore");
+      }
+
+      function javascriptFunction(message) {
+        document.getElementById("buyProduct").innerHTML =
+          "Subscribe to Pro\n" + "(" + message + ")";
+        return "Updated successfully";
+      }
+    </script>
+
+    <div>
+      <dl>
+        <dt class="ProductionTeamHeading">• Product Support</dt>
+        <dd>
+          <a href="mailto:support@ondemandworld.com" class="ProductionTeamLink"
+            >support@ondemandworld.com</a
+          >
+        </dd>
+        <dt class="ProductionTeamHeading">• Content Feedback</dt>
+        <dd>
+          <a href="mailto:feedback@ondemandworld.com" class="ProductionTeamLink"
+            >feedback@ondemandworld.com</a
+          >
+        </dd>
+        <dt class="ProductionTeamHeading">• Tech Development</dt>
+        <dd class="ProductionTeamMember">Jack Wang</dd>
+        <dt class="ProductionTeamHeading">• Graphic Design</dt>
+        <dd class="ProductionTeamMember">Linda Lin</dd>
+        <dt class="ProductionTeamHeading">• Product Lead</dt>
+        <dd class="ProductionTeamMember">Connie Cong</dd>
+        <dt class="ProductionTeamHeading">• Legal and IP</dt>
+        <dd class="ProductionTeamMember">Alicia Wang</dd>
+        <dt class="ProductionTeamHeading">• Producer</dt>
+        <dd class="ProductionTeamMember">Edward Tsang</dd>
+      </dl>
+    </div>
+    <hr />
+    <div>
+      <div id="odw_logo"></div>
+      <div>
+        <p><img src="aboutus_logo_01.png" width="100%" /></p>
+        <span class="AboutODWTitle">About OnDemandWorld</span><br />
+        <br />
+        <span class="AboutODWText"
+          >At OnDemandWorld, we envision a future where technology enhances
+          lives and empowers communities globally. Since our founding in 2009,
+          we have focused on harnessing innovative technologies, positioning
+          ourselves at the forefront of industry transformation through
+          artificial intelligence and blockchain solutions.<br />
+          <br />
+          We imagine a world where AI-driven insights improve decision-making
+          and blockchain ensures transparency and security in transactions.
+          These advancements are not only reshaping existing processes but also
+          unlocking new opportunities for growth and collaboration. <br />
+          <br />
+          Starting with mobile app development, we have evolved to meet the
+          demands of a dynamic tech landscape. With a team of 20 professionals,
+          we specialize in software development, data analytics, and
+          decentralized systems, delivering tailored solutions to our clients.
+          <br />
+          <br />
+          Looking ahead, we are dedicated to leveraging AI and blockchain to
+          create accessible, user-friendly applications, particularly for
+          historically underserved communities.<br />
+          <br />
+          Privately owned and profitable, we invite you to join us in advancing
+          AI and blockchain technologies. Together, we can unlock the potential
+          of the next billion internet users and build a more connected world.
+          <hr />
+          Need a white-labelled app for your business? Or want to talk with us
+          about licensing and advertising opportunities? You should visit us at
+          <a
+            href="http://www.linkedin.com/company/ondemandworld"
+            class="AboutODWLink"
+            >LinkedIn.com</a
+          >
+          <br />
+          <hr />
+          Please click here for:
+          <nav
+            class="nanospace-footer-menu-1 nanospace-footer-menu"
+            itemtype="https://schema.org/SiteNavigationElement"
+            itemscope=""
+            role="navigation"
+          >
+            <ul id="menu-footer-menu" class="menu">
+              <li
+                id="menu-item-111"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-111"
+              >
+                <a
+                  rel="privacy-policy"
+                  href="https://odw.ai/about/apps/echo/privacy.html"
+                  class="nanospace-menu-item-link"
+                >
+                  <span class="nanospace-menu-item-title">Privacy Policy</span>
+                </a>
+              </li>
+              <li
+                id="menu-item-112"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"
+              >
+                <a
+                  rel="privacy-policy"
+                  href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                  class="nanospace-menu-item-link"
+                >
+                  <span class="nanospace-menu-item-title"
+                    >Terms of Use (EULA)</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </span>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+  </body>
+</html>

@@ -70,6 +70,11 @@
 !assets/products/
 !assets/products/*.jpg
 
+# Legacy app "about" pages — checked in as-is (whole subtree).
+# Placed before the exclusions below so .DS_Store inside stays ignored.
+!about/
+!about/**
+
 # Explicitly exclude internal docs (even if in allowed directories)
 *.md
 *.txt
