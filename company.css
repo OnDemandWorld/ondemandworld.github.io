@@ -1,0 +1,690 @@
+/* ─────────────────────────────────────────────────────────────
+   ODW.AI · Company pages (ported from ondemandworld.com)
+   Shared chrome for /about-us/, /contact-us/, /our-products/,
+   /privacy-policy/, /terms-and-conditions/, /house-rules/,
+   the /2024/01/ product posts, and 404.html.
+   Design language matches faq/styles.css; tokens come from
+   ../styles.css (loaded first). URLs preserved from WordPress.
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Page header (dark band, like FAQ .header) ──
+   Fixed colors: this chrome stays dark in BOTH color schemes.
+   (Token --ink/--paper flip in dark mode, which would invert the
+   band to cream and strand light-on-dark text at low contrast.) */
+.page-header {
+  background: #14110F;
+  color: #F6F2EC;
+  padding: 72px 20px 88px;
+  text-align: center;
+  position: relative;
+}
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--accent);
+}
+.page-header-home {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  color: #F6F2EC;
+  opacity: 0.6;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: opacity 0.15s, color 0.15s, background 0.15s;
+  z-index: 10;
+}
+.page-header-home:hover {
+  opacity: 1;
+  color: var(--accent);
+  background: rgba(255,255,255,0.06);
+}
+.page-header .kicker {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+  padding: 4px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+}
+.page-header h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.25rem, 4vw + 1rem, 3.75rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+  margin-bottom: 16px;
+  max-width: 24ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-header h1 em { color: var(--accent); font-style: italic; }
+.page-header .lead {
+  font-size: 1.0625rem;
+  color: #FFB199;
+  max-width: 64ch;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+.page-header .doc-meta {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #8A847C;
+  margin-top: 18px;
+  letter-spacing: 0.02em;
+}
+.page-header .doc-meta a { color: #FFB199; }
+.page-header .doc-meta a:hover { color: var(--accent); }
+
+/* ── Container (overlaps header, like FAQ .container) ── */
+.page-container {
+  max-width: 960px;
+  margin: -50px auto 0;
+  padding: 0 20px 60px;
+  position: relative;
+}
+.page-container.wide { max-width: 1100px; }
+
+/* ── Breadcrumbs ── */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+.breadcrumbs a { color: var(--accent); transition: color 0.15s; }
+.breadcrumbs a:hover { color: var(--accent-ink); }
+.breadcrumbs .sep { color: var(--ink-4); }
+
+/* ── Document sections (cards, like FAQ .section) ── */
+.doc-section {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 24px;
+  scroll-margin-top: 24px;
+}
+.doc-section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--rule);
+}
+.doc-section-head .num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.doc-section-head h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.625rem;
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+/* ── Prose (legal / article body) ── */
+.prose { font-size: 0.9375rem; color: var(--ink-2); line-height: 1.7; }
+.prose > * + * { margin-top: 14px; }
+.prose h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-top: 26px;
+  line-height: 1.25;
+}
+.prose h3:first-child { margin-top: 0; }
+.prose strong { color: var(--ink); font-weight: 600; }
+.prose a { color: var(--accent-ink); font-weight: 500; text-decoration: underline; text-decoration-color: var(--accent-2); text-underline-offset: 2px; }
+.prose a:hover { color: var(--accent); }
+.prose ul, .prose ol { margin-left: 22px; }
+.prose li { margin-bottom: 8px; }
+.prose li::marker { color: var(--accent); font-weight: 600; }
+.prose .small { font-size: 0.8125rem; color: var(--ink-3); }
+
+/* ── Table of contents ── */
+.doc-toc {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 26px 30px;
+  margin-bottom: 24px;
+}
+.doc-toc h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+.doc-toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 6px;
+}
+.doc-toc a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  color: var(--ink);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+.doc-toc a:hover { background: var(--hover); color: var(--accent); transform: translateX(4px); }
+.doc-toc a .n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px; height: 24px;
+  background: var(--accent);
+  color: #14110F;
+  border-radius: 50%;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', monospace;
+}
+.doc-toc a[aria-current="true"] {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+
+/* ── Callouts (same language as FAQ) ── */
+.note {
+  padding: 14px 16px;
+  border-radius: 6px;
+  margin: 16px 0;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  font-size: 0.875rem;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+.note strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: var(--accent-ink);
+}
+.note a { color: var(--accent-ink); font-weight: 600; }
+.note a:hover { color: var(--accent); }
+
+/* ── Cross-link strip under documents ── */
+.doc-related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+.doc-related a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent-ink);
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 8px 16px;
+  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+}
+.doc-related a:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+/* ── About: timeline ── */
+.timeline { display: flex; flex-direction: column; gap: 0; margin-top: 6px; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.timeline-item:last-child { border-bottom: none; }
+.timeline-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  padding-top: 3px;
+}
+.timeline-body h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.timeline-body p { font-size: 0.9375rem; color: var(--ink-3); line-height: 1.6; }
+.timeline-body a { color: var(--accent-ink); font-weight: 500; }
+.timeline-body a:hover { color: var(--accent); }
+
+/* ── Contact cards ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+@media (min-width: 720px) { .contact-grid { grid-template-columns: repeat(3, 1fr); } }
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.contact-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 12px 32px -12px var(--shadow); }
+.contact-card .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+.contact-card h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.contact-card p { font-size: 0.875rem; color: var(--ink-3); line-height: 1.55; }
+.contact-card .action {
+  margin-top: auto;
+  padding-top: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-ink);
+  word-break: break-all;
+}
+.contact-card .action:hover { color: var(--accent); }
+
+/* Hours panel (always-dark chrome, like quote-panel) */
+.hours-panel {
+  background: #14110F;
+  color: #F6F2EC;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 24px;
+}
+.hours-panel .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.hours-panel h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.625rem;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  margin-bottom: 18px;
+}
+.hours-table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+.hours-table td {
+  padding: 12px 0;
+  border-bottom: 1px solid #5A544E;
+  color: #FFB199;
+}
+.hours-table tr:last-child td { border-bottom: none; }
+.hours-table td:last-child {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125rem;
+  color: #F6F2EC;
+}
+.hours-panel .places {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #5A544E;
+  font-size: 0.875rem;
+  color: #FFB199;
+  line-height: 1.6;
+}
+.hours-panel .places strong { color: #F6F2EC; }
+.hours-panel .places a { color: #FFB199; text-decoration: underline; text-underline-offset: 2px; }
+.hours-panel .places a:hover { color: var(--accent); }
+
+/* ── Product cards ── */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+@media (min-width: 860px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+.product-card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.product-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 12px 32px -12px var(--shadow); }
+.product-card img { width: 100%; aspect-ratio: 1024 / 585; object-fit: cover; display: block; }
+.product-card-body { padding: 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.product-card .status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--good);
+  text-transform: uppercase;
+}
+.product-card .status .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.product-card .status.legacy { color: var(--ink-4); }
+.product-card .status.legacy .dot { background: transparent; border: 1.5px solid currentColor; }
+.product-card h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+}
+.product-card h3 span { color: var(--accent); }
+.product-card .tagline { font-size: 0.875rem; font-weight: 500; color: var(--ink); line-height: 1.4; }
+.product-card p.desc { font-size: 0.8125rem; color: var(--ink-3); line-height: 1.6; }
+.product-card .links {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.product-card .links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+.product-card .links a:hover { color: var(--accent); }
+
+/* Domain portfolio table */
+.domain-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin-top: 10px; }
+.domain-table th, .domain-table td { padding: 10px 12px; text-align: left; border: 1px solid var(--rule); }
+.domain-table th {
+  background: var(--paper);
+  font-weight: 600;
+  color: var(--ink);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.domain-table td { color: var(--ink-2); }
+.domain-table a { color: var(--accent-ink); font-weight: 500; }
+.domain-table a:hover { color: var(--accent); }
+
+/* ── Blog posts ── */
+.post-hero {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  margin-bottom: 24px;
+}
+.post-hero img { width: 100%; aspect-ratio: 1024 / 585; object-fit: cover; display: block; }
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+.post-meta .cat { color: var(--accent); font-weight: 600; }
+.post-meta a { color: var(--ink-3); }
+.post-meta a:hover { color: var(--accent); }
+
+/* Repo link cards (AssetTech post) */
+.repo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 14px 0;
+}
+@media (min-width: 640px) { .repo-grid { grid-template-columns: repeat(2, 1fr); } }
+.repo-card {
+  display: block;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 16px 18px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.repo-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.repo-card .repo-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent-ink);
+  margin-bottom: 4px;
+}
+.repo-card:hover .repo-name { color: var(--accent); }
+.repo-card .repo-desc { font-size: 0.8125rem; color: var(--ink-3); line-height: 1.5; }
+
+/* ── Page footer (always-dark chrome, cross-links every ported page) ── */
+.page-footer {
+  background: #14110F;
+  color: #F6F2EC;
+  padding: 56px 20px 32px;
+  margin-top: 20px;
+}
+.page-footer-inner { max-width: 1100px; margin: 0 auto; }
+.page-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 24px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #5A544E;
+}
+@media (min-width: 860px) { .page-footer-grid { grid-template-columns: repeat(4, 1fr); } }
+.page-footer-col .col-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+.page-footer-col a {
+  display: block;
+  padding: 5px 0;
+  font-size: 0.875rem;
+  color: #FFB199;
+  transition: color 0.15s, transform 0.15s;
+}
+.page-footer-col a:hover { color: #F6F2EC; transform: translateX(3px); }
+.page-footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-top: 24px;
+  font-size: 0.75rem;
+  color: #8A847C;
+}
+.page-footer-meta .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.06em; }
+.page-footer-meta a { color: #8A847C; }
+.page-footer-meta a:hover { color: #FFB199; }
+
+/* ── 404 ── */
+.notfound-code {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(5rem, 12vw + 1rem, 10rem);
+  line-height: 0.9;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+.notfound-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.notfound-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--ink);
+  transition: border-color 0.15s, transform 0.15s, color 0.15s;
+}
+.notfound-grid a:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.notfound-grid a .arrow { color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .page-header { padding: 56px 16px 76px; }
+  .page-header h1 { font-size: 1.9rem; }
+  .page-header .lead { font-size: 0.9375rem; }
+  .page-container { padding: 0 12px 40px; }
+  .doc-section { padding: 20px; }
+  .doc-toc { padding: 20px; }
+  .doc-section-head h2 { font-size: 1.375rem; }
+  .timeline-item { grid-template-columns: 64px 1fr; gap: 12px; }
+  .page-header-home { top: 12px; right: 12px; }
+}
+
+/* ── Reading progress (long legal docs; injected by company.js) ── */
+.reading-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--accent);
+  z-index: 200;
+  pointer-events: none;
+}
+
+/* ── Scroll reveals (progressive enhancement — no-JS shows everything) ── */
+html.js-reveal .reveal-target {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+}
+html.js-reveal .reveal-target.revealed {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.js-reveal .reveal-target { opacity: 1; transform: none; transition: none; }
+  .reading-progress { display: none; }
+}
+
+/* ── Dark-mode contrast fixes ──
+   --accent-ink (#B23A0E) is a light-background color and does not
+   flip; on dark surfaces it is unreadable. Swap to bright salmon. */
+@media (prefers-color-scheme: dark) {
+  .prose a, .note a, .doc-related a, .contact-card .action,
+  .product-card .links a, .repo-card .repo-name, .domain-table a,
+  .timeline-body a {
+    color: var(--accent-2);
+    text-decoration-color: rgba(255,177,153,0.45);
+  }
+  .prose a:hover, .note a:hover, .doc-related a:hover,
+  .contact-card .action:hover, .product-card .links a:hover,
+  .repo-card:hover .repo-name, .domain-table a:hover,
+  .timeline-body a:hover { color: var(--accent); }
+  .note strong { color: var(--accent-2); }
+  .breadcrumbs a:hover { color: var(--accent-2); }
+  .doc-toc a[aria-current="true"] { color: var(--accent-2); }
+  .product-card .status { color: #6FCF97; }
+  /* lift the always-dark panels off the equally-dark page background */
+  .hours-panel { background: #1F1B18; }
+  .page-footer { border-top: 1px solid #3A342E; }
+}
+
+/* ── Themed scrollbar (these document pages only) ── */
+html { scrollbar-width: thin; scrollbar-color: var(--accent) var(--paper-2); }
+html::-webkit-scrollbar { width: 10px; height: 10px; }
+html::-webkit-scrollbar-track { background: var(--paper-2); }
+html::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 5px;
+  border: 2px solid var(--paper-2);
+}
+html::-webkit-scrollbar-thumb:hover { background: var(--accent-ink); }
+@media (prefers-color-scheme: dark) {
+  html::-webkit-scrollbar-thumb:hover { background: var(--accent-2); }
+}
+
+/* ── Print (legal documents) ── */
+@media print {
+  .reading-progress { display: none; }
+  .page-header { background: var(--paper); color: var(--ink); padding: 20px 0 30px; }
+  .page-header::after { display: none; }
+  .page-header .lead { color: var(--ink-2); }
+  .page-header-home, .page-footer, .doc-related, .breadcrumbs { display: none; }
+  .page-container { margin: 0 auto; padding: 0; max-width: 100%; }
+  .doc-section { border: none; padding: 0; margin-bottom: 24px; break-inside: avoid; }
+  .doc-toc { display: none; }
+  .prose { color: #000; }
+}

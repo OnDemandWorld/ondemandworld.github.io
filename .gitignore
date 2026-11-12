@@ -44,9 +44,43 @@
 !zh-hk/faq/*.html
 !zh-hk/faq/*.css
 
+# Company pages ported from ondemandworld.com (URLs preserved)
+!company.css
+!company.js
+!404.html
+!sitemap.xml
+!robots.txt
+!privacy-policy/
+!privacy-policy/index.html
+!terms-and-conditions/
+!terms-and-conditions/index.html
+!house-rules/
+!house-rules/index.html
+!about-us/
+!about-us/index.html
+!contact-us/
+!contact-us/index.html
+!our-products/
+!our-products/index.html
+!2024/
+!2024/01/
+!2024/01/*/
+!2024/01/*/index.html
+!assets/
+!assets/products/
+!assets/products/*.jpg
+
 # Explicitly exclude internal docs (even if in allowed directories)
 *.md
 *.txt
 *.log
 .DS_Store
 v2-wip/
+
+# ...but robots.txt is a site file, not a doc (must come after *.txt)
+!robots.txt
+
+# Tracked documentation (must come after *.md)
+!README.md
+!CHANGELOG.md
+!CLAUDE.md

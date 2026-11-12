@@ -1209,6 +1209,19 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-4);
 }
 .footer-meta .mono { font-size: 0.75rem; letter-spacing: 0.06em; }
+.footer-meta a { color: var(--accent-2); transition: color var(--dur-fast) var(--ease); }
+.footer-meta a:hover { color: var(--paper); }
+
+/* In dark mode the .section.dark contact band flips to a light (cream)
+   surface, so the salmon link/meta colors above lose contrast. Swap to
+   the dark-on-light accent there; --paper hover still contrasts the band. */
+@media (prefers-color-scheme: dark) {
+  .footer-links a { color: var(--accent-ink); }
+  .footer-links a:hover { color: var(--paper); }
+  .footer-meta { color: #5A544E; }
+  .footer-meta a { color: var(--accent-ink); }
+  .footer-meta a:hover { color: var(--paper); }
+}
 
 /* ═══════════════════════════════════════════════════════════
    MOBILE STICKY CTA BAR

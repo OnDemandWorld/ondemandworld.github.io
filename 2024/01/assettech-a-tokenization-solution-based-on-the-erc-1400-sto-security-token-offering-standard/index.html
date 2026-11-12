@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ODW ASSETTECH Is Now Open Source — ERC-1400 Security Tokens &amp; RWA Reference Implementation · OnDemandWorld</title>
+<meta name="description" content="Sharing our 2024 STO architecture as a reference for developers building compliant, regulated tokenization systems — plus guidance on migrating to modern standards like ERC-3643.">
+<link rel="canonical" href="https://odw.ai/2024/01/assettech-a-tokenization-solution-based-on-the-erc-1400-sto-security-token-offering-standard/">
+<meta property="og:title" content="ODW ASSETTECH Is Now Open Source">
+<meta property="og:description" content="A reference implementation for ERC-1400–based security tokens & RWA platforms — 4 open-source repositories.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://odw.ai/2024/01/assettech-a-tokenization-solution-based-on-the-erc-1400-sto-security-token-offering-standard/">
+<meta property="og:image" content="https://odw.ai/assets/products/assettech.jpg">
+<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../favicon-16x16.png">
+<link rel="icon" type="image/png" href="../../../favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../apple-touch-icon.png">
+<link rel="manifest" href="../../../site.webmanifest">
+<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../../../company.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="page-header">
+  <a class="page-header-home" href="../../../index.html">← ODW.AI</a>
+  <span class="kicker">AssetTech · Open Source</span>
+  <h1>ODW ASSETTECH is now <em>open source</em></h1>
+  <p class="lead">A reference implementation for ERC-1400–based security tokens &amp; RWA platforms. Sharing our 2024 STO architecture as a reference for developers building compliant, regulated tokenization systems — plus guidance on migrating to modern standards like ERC-3643.</p>
+  <span class="doc-meta">Posted 2024-01-16 · Last updated 2025-12-30 · By eplt</span>
+</header>
+
+<main class="page-container" id="main">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="../../../index.html">Home</a>
+    <span class="sep">→</span>
+    <a href="../../../our-products/">Our Products</a>
+    <span class="sep">→</span>
+    <span>AssetTech</span>
+  </nav>
+
+  <figure class="post-hero">
+    <img src="../../../assets/products/assettech.jpg" alt="Illustration of a digital city with a glowing teal crystal building at its centre, representing tokenized real-world assets" width="1024" height="585">
+  </figure>
+
+  <div class="post-meta">
+    <span class="cat">AssetTech</span>
+    <span>Posted 2024-01-16</span>
+    <span>Updated 2025-12-30</span>
+    <span>By eplt</span>
+  </div>
+
+  <div class="doc-toc">
+    <h2>On this page</h2>
+    <div class="doc-toc-grid">
+      <a href="#s1"><span class="n">1</span> From Vision to Open Source</a>
+      <a href="#s2"><span class="n">2</span> The Tech Stack You're Getting</a>
+      <a href="#s3"><span class="n">3</span> Why It's Valuable as a Reference</a>
+      <a href="#s4"><span class="n">4</span> Important Context: A Legacy Implementation</a>
+      <a href="#s5"><span class="n">5</span> Key Features You'll Find</a>
+      <a href="#s6"><span class="n">6</span> Three Ways to Use This Repository</a>
+      <a href="#s7"><span class="n">7</span> What We'd Do Differently Today</a>
+      <a href="#s8"><span class="n">8</span> How to Get Started</a>
+      <a href="#s9"><span class="n">9</span> The Community &amp; Support</a>
+      <a href="#s10"><span class="n">10</span> Commercial Services</a>
+      <a href="#s11"><span class="n">11</span> Why Open Source This?</a>
+      <a href="#s12"><span class="n">12</span> Key Takeaways</a>
+    </div>
+  </div>
+
+  <section class="doc-section" id="s1">
+    <div class="doc-section-head"><span class="num">01</span><h2>The Journey: From Vision to Open Source</h2></div>
+    <div class="prose">
+      <p>In 2024, the ODW Team built <strong>ODW ASSETTECH</strong>, a complete Security Token Offering (STO) platform designed to tokenize real-world assets using the ERC-1400 standard on a private Ethereum-compatible blockchain running ConsenSys Quorum. The system provided everything needed for institutional asset tokenization: smart contracts, backend infrastructure, user-facing applications, and operational dashboards.</p>
+      <p>Today, we're excited to announce that we've open-sourced the entire stack — not as production-ready software, but as a <strong>comprehensive reference implementation</strong> for developers, architects, and organizations exploring tokenization and Real-World Asset (RWA) platforms.</p>
+      <p>Why? Because the blockchain landscape has evolved significantly in the past year, and we believe sharing our learnings — including what we'd do differently today — benefits the entire community.</p>
+    </div>
+  </section>
+
+  <section class="doc-section" id="s2">
+    <div class="doc-section-head"><span class="num">02</span><h2>The Tech Stack You're Getting</h2></div>
+    <div class="prose">
+      <p>We're releasing 4 integrated repositories under the OnDemandWorld organization:</p>
+      <div class="repo-grid">
+        <a class="repo-card" href="https://github.com/OnDemandWorld/erc1400-dashboard" target="_blank" rel="noopener noreferrer">
+          <div class="repo-name">erc1400-dashboard ↗</div>
+          <div class="repo-desc">A Next.js dashboard for token operations, compliance workflows, and admin controls.</div>
+        </a>
+        <a class="repo-card" href="https://github.com/OnDemandWorld/sto-backend-api" target="_blank" rel="noopener noreferrer">
+          <div class="repo-name">sto-backend-api ↗</div>
+          <div class="repo-desc">A TypeScript/Express REST API handling authentication, user management, wallet integration, and database orchestration (MongoDB + SQL).</div>
+        </a>
+        <a class="repo-card" href="https://github.com/OnDemandWorld/sto-web-client" target="_blank" rel="noopener noreferrer">
+          <div class="repo-name">sto-web-client ↗</div>
+          <div class="repo-desc">A Next.js web application for end-users: wallet connection, token issuance/redemption, document management, and role-based workflows.</div>
+        </a>
+        <a class="repo-card" href="https://github.com/OnDemandWorld/erc1400-contracts" target="_blank" rel="noopener noreferrer">
+          <div class="repo-name">erc1400-contracts ↗</div>
+          <div class="repo-desc">Solidity implementation of ERC-1400 with partitioned tokens, transfer validators, certificate-based compliance, token holds, and delivery-vs-payment.</div>
+        </a>
+      </div>
+      <p>Together, these repos form a complete, production-quality architecture for an STO/RWA platform — minus the parts we'd change for production use today.</p>
+    </div>
+  </section>
+
+  <section class="doc-section" id="s3">
+    <div class="doc-section-head"><span class="num">03</span><h2>What Makes This Valuable as a Reference</h2></div>
+    <div class="prose">
+      <ul>
+        <li><strong>Production-Scale Architecture:</strong> Not a toy example — this is a real system designed for institutional use, with proper separation of concerns, error handling, and compliance considerations.</li>
+        <li><strong>Multi-Component Integration:</strong> Unlike many token examples that show contracts in isolation, this demonstrates how smart contracts, APIs, user interfaces, and databases interact in a real workflow.</li>
+        <li><strong>Compliance &amp; Regulation:</strong> The codebase shows how to implement role-based access, KYC integration points, document management, transfer restrictions, and operator controls — critical for regulated environments.</li>
+        <li><strong>Practical Patterns:</strong> Wallet integration (Web3Modal), JWT authentication, partition management, hold mechanics, and delivery-vs-payment swaps — all problems you'll encounter if you build an RWA platform.</li>
+        <li><strong>Complete Workflow Examples:</strong> From user signup through token issuance, transfer, redemption, and document binding — real-world STO flows, not abstract tutorials.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="doc-section" id="s4">
+    <div class="doc-section-head"><span class="num">04</span><h2>Important Context: A Legacy Implementation</h2></div>
+    <div class="prose">
+      <p>Here's where we're transparent: this code represents the state of ERC-1400 and Quorum in early 2024. The ecosystem has evolved:</p>
+      <h3>On the blockchain side</h3>
+      <ul>
+        <li>Quorum is no longer actively maintained by ConsenSys. For production, <strong>Hyperledger Besu</strong> is the recommended evolution.</li>
+      </ul>
+      <h3>On the token standard side</h3>
+      <ul>
+        <li><strong>ERC-3643 (T-REX)</strong> has emerged as the dominant standard for regulated STO/RWA projects, with advanced on-chain compliance features (DID verification, continuous KYC/AML, transfer restrictions).</li>
+        <li><strong>ERC-1155</strong> is gaining traction for efficient, multi-token platforms that bundle fungible and non-fungible assets.</li>
+      </ul>
+      <p><strong>What this means:</strong> The architecture, design patterns, and system integration approaches are valuable. But a production RWA platform built today should:</p>
+      <ul>
+        <li>Migrate from Quorum → Hyperledger Besu</li>
+        <li>Refactor token logic from ERC-1400 → ERC-3643 (or ERC-1155, depending on use case)</li>
+        <li>Incorporate modern compliance tooling (decentralized identity, on-chain KYC/AML providers)</li>
+      </ul>
+      <div class="note">
+        <strong>Reference, not production</strong>
+        We're releasing this code as a reference, not as a production drop-in. Use it to understand how parts fit together, steal architectural ideas, and learn from our implementation choices. Then, modernize it for your own system.
+      </div>
+    </div>
+  </section>
+
+  <section class="doc-section" id="s5">
+    <div class="doc-section-head"><span class="num">05</span><h2>Key Features You'll Find</h2></div>
+    <div class="prose">
+      <h3>Frontend &amp; UX</h3>
+      <ul>
+        <li>Role-based dashboards (admin vs. investor views)</li>
+        <li>Wallet connection and signature verification</li>
+        <li>Token issuance, redemption, and transfer flows</li>
+        <li>On-chain document management</li>
+        <li>Dark mode, responsive design, real-time charts</li>
+      </ul>
+      <h3>Backend &amp; Integration</h3>
+      <ul>
+        <li>Multi-database architecture (MongoDB for documents, SQL for relational data)</li>
+        <li>JWT-based authentication</li>
+        <li>Wallet-based login (sign-to-login pattern)</li>
+        <li>Email workflows (password reset, activation)</li>
+        <li>CORS and environment-based configuration</li>
+      </ul>
+      <h3>Smart Contracts</h3>
+      <ul>
+        <li>ERC-1400 core with partition support (asset classes, lock-up periods)</li>
+        <li>Transfer validators for certificate-based compliance</li>
+        <li>Token holds (alternative to escrow, preserves investor registry)</li>
+        <li>Delivery-vs-payment atomic swaps</li>
+        <li>Document management (IERC1643)</li>
+        <li>Operator and controller management for compliance</li>
+      </ul>
+      <h3>DevOps &amp; Testing</h3>
+      <ul>
+        <li>Docker support for containerized deployment</li>
+        <li>Comprehensive test suites (unit, integration, E2E)</li>
+        <li>ESLint and Prettier for code quality</li>
+        <li>Swagger/OpenAPI documentation (auto-generated)</li>
+        <li>Migration and seeding scripts</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="doc-section" id="s6">
+    <div class="doc-section-head"><span class="num">06</span><h2>Three Ways to Use This Repository</h2></div>
+    <div class="prose">
+      <h3>1. Learn the Architecture</h3>
+      <p>Study how a production STO platform is structured. Fork the repos, run them locally, and trace a token through the entire system. Great for teams evaluating tokenization or RWA approaches.</p>
+      <h3>2. Extract Patterns</h3>
+      <p>Grab specific components you like — the validator pattern, the partition model, the wallet-login flow — and integrate them into your own stack. These are battle-tested patterns.</p>
+      <h3>3. Use as a Starting Point for Migration</h3>
+      <p>If you have a legacy ERC-1400 system (whether or not it's based on our code), use this as a reference for how to architect a migration to ERC-3643 or Besu.</p>
+    </div>
+  </section>
+
+  <section class="doc-section" id="s7">
+    <div class="doc-section-head"><span class="num">07</span><h2>What We'd Do Differently Today</h2></div>
+    <div class="prose">
+      <p>Being honest about lessons learned:</p>
+      <ul>
+        <li><strong>Token Standard:</strong> ERC-3643 (T-REX) is now the clear choice for regulated STOs. It embeds compliance on-chain more elegantly than certificate validators.</li>
+        <li><strong>Blockchain:</strong> Quorum was a solid choice in 2023, but Hyperledger Besu is now the production recommendation for permissioned EVM chains.</li>
+        <li><strong>Identity:</strong> We'd integrate decentralized identity (DID) and continuous KYC/AML providers from the start, rather than as an afterthought.</li>
+        <li><strong>Monitoring:</strong> A production system needs comprehensive observability — logs, metrics, alerts — more than our current setup provides.</li>
+        <li><strong>Security:</strong> The contracts should be audited by a professional firm before production use. Treat the code here as a learning resource, not security-hardened production code.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="doc-section" id="s8">
+    <div class="doc-section-head"><span class="num">08</span><h2>How to Get Started</h2></div>
+    <div class="prose">
+      <ol>
+        <li>Visit the repositories on GitHub under the OnDemandWorld organization:
+          <ul>
+            <li><a href="https://github.com/OnDemandWorld/erc1400-dashboard" target="_blank" rel="noopener noreferrer">erc1400-dashboard</a></li>
+            <li><a href="https://github.com/OnDemandWorld/sto-backend-api" target="_blank" rel="noopener noreferrer">sto-backend-api</a></li>
+            <li><a href="https://github.com/OnDemandWorld/sto-web-client" target="_blank" rel="noopener noreferrer">sto-web-client</a></li>
+            <li><a href="https://github.com/OnDemandWorld/erc1400-contracts" target="_blank" rel="noopener noreferrer">erc1400-contracts</a></li>
+          </ul>
+        </li>
+        <li>Read the README in each repo. They include full architecture diagrams, installation and setup instructions, environment variable configuration, deployment guides (Vercel, Docker, traditional servers), and troubleshooting sections.</li>
+        <li>Start with the contracts if you're interested in token mechanics, or with the web client if you want to see the user experience.</li>
+        <li>Clone and run locally using Docker and the provided setup scripts.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="doc-section" id="s9">
+    <div class="doc-section-head"><span class="num">09</span><h2>The Community &amp; Support</h2></div>
+    <div class="prose">
+      <p>Each repository has:</p>
+      <ul>
+        <li>GitHub Issues for bug reports and feature requests</li>
+        <li>GitHub Discussions for architecture questions and design discussions</li>
+        <li>Email (<a href="mailto:office@odw.ai">office@odw.ai</a>) for consulting inquiries</li>
+      </ul>
+      <p>We're committed to:</p>
+      <ul>
+        <li>Supporting developers building on this code</li>
+        <li>Answering architecture questions</li>
+        <li>Reviewing pull requests from the community</li>
+        <li>Offering consulting services for teams building production RWA/STO platforms</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="doc-section" id="s10">
+    <div class="doc-section-head"><span class="num">10</span><h2>Are We Offering Commercial Services?</h2></div>
+    <div class="prose">
+      <p>Yes. While the code is free and open source, the ODW Team also offers:</p>
+      <ul>
+        <li><strong>RWA/STO Architecture &amp; Design:</strong> Full-stack system design for tokenization platforms</li>
+        <li><strong>Smart Contract Development:</strong> ERC-3643, ERC-1155, and custom compliance contracts</li>
+        <li><strong>Migration Services:</strong> Upgrading legacy ERC-1400/Quorum stacks to Besu + modern standards</li>
+        <li><strong>Backend &amp; Frontend Development:</strong> REST APIs, databases, user interfaces</li>
+        <li><strong>Compliance Integration:</strong> KYC/AML, DID, regulatory reporting</li>
+      </ul>
+      <p>If you're building an RWA platform or modernizing an existing one, <a href="../../../contact-us/">contact us</a> to discuss how we can help.</p>
+    </div>
+  </section>
+
+  <section class="doc-section" id="s11">
+    <div class="doc-section-head"><span class="num">11</span><h2>Why Open Source This?</h2></div>
+    <div class="prose">
+      <p>The RWA and STO space is maturing. There are no truly open-source, production-quality reference implementations that show how to build a complete, end-to-end tokenization platform. By releasing this code, we hope to:</p>
+      <ul>
+        <li>Accelerate development in the industry by providing proven patterns</li>
+        <li>Lower barriers for teams exploring tokenization</li>
+        <li>Foster community around RWA best practices</li>
+        <li>Give back to the blockchain ecosystem that enabled our work</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="doc-section" id="s12">
+    <div class="doc-section-head"><span class="num">12</span><h2>Key Takeaways</h2></div>
+    <div class="prose">
+      <ul>
+        <li>4 open-source repositories providing a complete STO/RWA reference stack</li>
+        <li>Production-quality architecture suitable for learning and adaptation</li>
+        <li>Transparent about limitations and what's changed since we built it</li>
+        <li>Clear migration path to modern standards (ERC-3643, Besu, DID)</li>
+        <li>Community &amp; consulting support from the ODW Team</li>
+      </ul>
+      <h3>Ready to Explore?</h3>
+      <p>Whether you're exploring RWA tokenization, building an STO platform, modernizing legacy code, or simply curious about how institutional-grade blockchain systems work, the ODW ASSETTECH stack provides a complete blueprint. Clone it, learn from it, adapt it, and build something amazing.</p>
+      <p><strong>Get started:</strong></p>
+      <ul>
+        <li><a href="https://github.com/OnDemandWorld" target="_blank" rel="noopener noreferrer">View all repositories</a></li>
+        <li><a href="https://github.com/OnDemandWorld/erc1400-contracts" target="_blank" rel="noopener noreferrer">Explore the smart contracts</a></li>
+        <li><a href="../../../contact-us/">Contact us for consulting</a></li>
+      </ul>
+      <div class="note">
+        <strong>About the ODW Team</strong>
+        We're blockchain architects and full-stack developers specializing in real-world asset tokenization, security token offerings, and compliance-focused blockchain systems. ODW ASSETTECH represents our learnings from building institutional-grade STO platforms. We continue to offer consulting and development services for teams modernizing their tokenization stacks. For questions, reach out at <a href="mailto:office@odw.ai">office@odw.ai</a> or visit our <a href="../../../contact-us/">contact page</a>.
+      </div>
+    </div>
+  </section>
+
+  <div class="doc-related">
+    <a href="../../../our-products/">All Products →</a>
+    <a href="../niftnack-nft-platform-for-collecting-digital-assets-memberships-and-loyalty-points/">Niftnack →</a>
+    <a href="../techhub-jobs-recruitment-platform-with-tokenomics/">TechHub Jobs →</a>
+  </div>
+</main>
+
+<footer class="page-footer">
+  <div class="page-footer-inner">
+    <div class="page-footer-grid">
+      <div class="page-footer-col">
+        <div class="col-label">Company</div>
+        <a href="../../../about-us/">About Us</a>
+        <a href="../../../contact-us/">Contact Us</a>
+        <a href="../../../our-products/">Our Products</a>
+      </div>
+      <div class="page-footer-col">
+        <div class="col-label">Legal</div>
+        <a href="../../../privacy-policy/">Privacy Policy</a>
+        <a href="../../../terms-and-conditions/">Terms &amp; Conditions</a>
+        <a href="../../../house-rules/">House Rules</a>
+      </div>
+      <div class="page-footer-col">
+        <div class="col-label">ODW.ai</div>
+        <a href="../../../index.html">Home</a>
+        <a href="../../../faq/index.html">FAQ</a>
+        <a href="https://github.com/OnDemandWorld" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+      <div class="page-footer-col">
+        <div class="col-label">Legacy · 2024</div>
+        <a href="./">AssetTech</a>
+        <a href="../niftnack-nft-platform-for-collecting-digital-assets-memberships-and-loyalty-points/">Niftnack</a>
+        <a href="../techhub-jobs-recruitment-platform-with-tokenomics/">TechHub Jobs</a>
+      </div>
+    </div>
+    <div class="page-footer-meta">
+      <span class="mono">© 2026 ODW.AI · ONDEMANDWORLD LIMITED</span>
+      <span>Built in the open · Apache 2.0 and MIT · Made for the world's SMBs</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../company.js"></script>
+</body>
+</html>

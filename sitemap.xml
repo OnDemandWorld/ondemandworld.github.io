@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://odw.ai/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://odw.ai/zh-cn/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odw.ai/zh-hk/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odw.ai/faq/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://odw.ai/about-us/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://odw.ai/contact-us/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://odw.ai/our-products/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://odw.ai/privacy-policy/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://odw.ai/terms-and-conditions/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://odw.ai/house-rules/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://odw.ai/2024/01/assettech-a-tokenization-solution-based-on-the-erc-1400-sto-security-token-offering-standard/</loc><lastmod>2025-12-30</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://odw.ai/2024/01/niftnack-nft-platform-for-collecting-digital-assets-memberships-and-loyalty-points/</loc><lastmod>2024-01-16</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://odw.ai/2024/01/techhub-jobs-recruitment-platform-with-tokenomics/</loc><lastmod>2024-01-16</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+</urlset>
