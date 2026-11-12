@@ -21,11 +21,19 @@ it and is classified client-side from the requested path:
   works without JS (static links + noscript note).
 
 ### Fixed
+- **Broken styles/images on deep 404s.** GitHub Pages serves `404.html` at any depth,
+  so relative `./` asset/link refs resolved against the missing path
+  (e.g. `/about/app/echo/styles.css`) and 404'd. All asset, nav, footer, search and
+  redirect references are now root-absolute (`/styles.css`, `/index.html`, …).
 - Cancel on the auto-redirect countdown did nothing: `var countdownTimer = null`
   was declared *after* `startCountdown()` ran, clobbering the interval id. Moved the
-  declaration before first use. Verified with a real-browser (puppeteer-core) suite:
-  classification, search/keyboard, copy, cancel, auto-redirect, mobile overflow,
-  reduced-motion, and zero runtime/asset errors.
+  declaration before first use.
+- Fuzzy "did you mean" matched on `index.html` for every directory route; now matches
+  on the directory name. Added `/about/app/*` → `/about/apps/*` legacy alias.
+- Verified with a real-browser (puppeteer-core) suite incl. a deep-path regression
+  (`/about/app/echo/index.html`, `/x/y/z/missing`): styles applied, logo loads, links
+  absolute, moved-state redirect correct, cancel works, mobile overflow, reduced-motion,
+  and zero runtime/asset errors.
 
 ### Added
 - `ads.txt` (owner-supplied AdSense line) allowlisted in `.gitignore` and checked in
