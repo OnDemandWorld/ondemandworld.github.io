@@ -2,6 +2,35 @@
 
 All notable changes to this site are documented here. Dates are YYYY-MM-DD.
 
+## 2026-11-13 — Smarter error surface; ads.txt
+
+### Changed — `404.html` rebuilt as a "route resolver"
+GitHub Pages auto-serves only `404.html`, so every error *message* now lives inside
+it and is classified client-side from the requested path:
+- **404 not-found** (default), **301-style "moved"** for known legacy WordPress
+  permalinks and `?p=`/`?page_id=` IDs (with a visible, cancellable 6s auto-redirect),
+  **410-style "retired"** for legacy catalogue paths, and a **WordPress-endpoint**
+  notice for `wp-admin`/feeds/xmlrpc now that the site is static.
+- Shows the exact missing path; a typed terminal diagnostic (`odw resolve …`).
+- Live search across all 27 real routes with keyboard navigation (↑/↓/enter/esc),
+  fuzzy "did you mean" suggestions, and idle "popular routes".
+- Copy-path (with clipboard fallback + feedback), report-broken-link (prefilled
+  mailto incl. referrer), back, and an online/offline status pill.
+- Always-dark terminal aesthetic: layered grid/glow/scanline/grain background,
+  fixed top bar, staged entrances, themed scrollbars; respects reduced motion and
+  works without JS (static links + noscript note).
+
+### Fixed
+- Cancel on the auto-redirect countdown did nothing: `var countdownTimer = null`
+  was declared *after* `startCountdown()` ran, clobbering the interval id. Moved the
+  declaration before first use. Verified with a real-browser (puppeteer-core) suite:
+  classification, search/keyboard, copy, cancel, auto-redirect, mobile overflow,
+  reduced-motion, and zero runtime/asset errors.
+
+### Added
+- `ads.txt` (owner-supplied AdSense line) allowlisted in `.gitignore` and checked in
+  so it serves at `https://odw.ai/ads.txt`.
+
 ## 2026-11-13 — Legacy-site port, documentation, and release
 
 Ported the content pages of the old `ondemandworld.com` WordPress site into the

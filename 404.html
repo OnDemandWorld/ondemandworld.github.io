@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Page not found — ODW.ai</title>
-<meta name="description" content="This page has moved or no longer exists. Find your way around ODW.ai — home, FAQ, company pages and legal documents.">
+<meta name="description" content="That address doesn't resolve on ODW.ai. Search every page, follow a suggested route, or jump straight to the main sections.">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#14110F">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -13,45 +14,738 @@
 <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
 <link rel="stylesheet" href="./styles.css">
 <link rel="stylesheet" href="./company.css">
+<style>
+/* ─────────────────────────────────────────────────────────────
+   ODW.AI · error surface. GitHub Pages auto-serves only 404.html,
+   so every error *message* (not-found / moved / gone / WordPress
+   endpoint / offline) is classified and rendered here client-side.
+   Always-dark "route resolver" terminal aesthetic; fixed hexes so
+   contrast holds in both color schemes. Self-contained.
+   ───────────────────────────────────────────────────────────── */
+:root{
+  --e-bg:#14110F; --e-surface:#1F1B18; --e-surface-2:#2A2622;
+  --e-line:#3A342E; --e-text:#F6F2EC; --e-dim:#B8B1A5; --e-faint:#8A847C;
+  --e-accent:#FF5A1F; --e-accent-2:#FFB199; --e-accent-ink:#B23A0E;
+  --e-good:#6FCF97; --e-warn:#E5B567; --e-info:#8AB8FF;
+  --e-nav-h:60px;
+}
+html{ scrollbar-color:var(--e-accent) var(--e-surface); }
+body{
+  background:var(--e-bg); color:var(--e-text);
+  padding-top:var(--e-nav-h); overflow-x:hidden;
+}
+::selection{ background:var(--e-accent); color:var(--e-bg); }
+
+/* ── layered ambient background ── */
+.err-bg{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+.err-bg .grid{
+  position:absolute; inset:-2px;
+  background-image:
+    linear-gradient(rgba(246,242,236,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(246,242,236,.045) 1px, transparent 1px);
+  background-size:56px 56px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 20%, transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 20%, transparent 78%);
+}
+.err-bg .glow{ position:absolute; border-radius:50%; filter:blur(90px); opacity:.5; }
+.err-bg .g1{ width:52vw; height:52vw; left:-14vw; top:-18vw;
+  background:radial-gradient(circle, rgba(255,90,31,.34), transparent 65%);
+  animation:drift1 26s ease-in-out infinite alternate; }
+.err-bg .g2{ width:44vw; height:44vw; right:-12vw; top:22vh;
+  background:radial-gradient(circle, rgba(138,184,255,.16), transparent 65%);
+  animation:drift2 32s ease-in-out infinite alternate; }
+.err-bg .g3{ width:36vw; height:36vw; left:28vw; bottom:-20vh;
+  background:radial-gradient(circle, rgba(255,177,153,.14), transparent 65%);
+  animation:drift1 38s ease-in-out infinite alternate-reverse; }
+@keyframes drift1{ from{ transform:translate3d(0,0,0) scale(1);} to{ transform:translate3d(6vw,4vh,0) scale(1.12);} }
+@keyframes drift2{ from{ transform:translate3d(0,0,0) scale(1.08);} to{ transform:translate3d(-5vw,-3vh,0) scale(.94);} }
+.err-bg .scan{
+  position:absolute; left:0; right:0; height:140px; top:-160px;
+  background:linear-gradient(180deg, transparent, rgba(255,90,31,.07) 45%, rgba(255,90,31,.12) 50%, rgba(255,90,31,.07) 55%, transparent);
+  animation:scan 9s linear infinite;
+}
+@keyframes scan{ from{ transform:translateY(0);} to{ transform:translateY(calc(100vh + 320px));} }
+.err-bg .grain{
+  position:absolute; inset:0; opacity:.05; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion: reduce){
+  .err-bg .glow,.err-bg .scan{ animation:none; }
+  .err-bg .scan{ display:none; }
+}
+
+/* ── fixed top bar ── */
+.err-topbar{
+  position:fixed; top:0; left:0; right:0; height:var(--e-nav-h); z-index:100;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:0 clamp(16px,4vw,40px);
+  background:rgba(20,17,15,.82); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--e-line);
+}
+.err-topbar .brand{ display:flex; align-items:center; gap:10px; }
+.err-topbar .brand img{ height:26px; width:auto; display:block; }
+.err-topbar nav{ display:flex; align-items:center; gap:4px; }
+.err-topbar nav a{
+  font-family:'JetBrains Mono',monospace; font-size:.6875rem; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--e-dim); padding:8px 10px; border-radius:6px;
+  transition:color .15s, background .15s;
+}
+.err-topbar nav a:hover{ color:var(--e-accent-2); background:rgba(255,255,255,.05); }
+.err-net{
+  display:inline-flex; align-items:center; gap:7px;
+  font-family:'JetBrains Mono',monospace; font-size:.625rem; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--e-good);
+  border:1px solid var(--e-line); border-radius:999px; padding:5px 12px;
+  background:var(--e-surface);
+}
+.err-net .dot{ width:6px; height:6px; border-radius:50%; background:currentColor; box-shadow:0 0 8px currentColor; }
+.err-net.offline{ color:var(--e-warn); }
+@media (max-width:640px){ .err-topbar nav a.hide-sm{ display:none; } }
+
+/* ── layout ── */
+.err-wrap{ position:relative; z-index:1; max-width:1060px; margin:0 auto; padding:clamp(32px,6vh,72px) clamp(16px,4vw,32px) 64px; }
+.err-hero{ margin-bottom:28px; }
+.err-eyebrow{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:'JetBrains Mono',monospace; font-size:.6875rem; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--e-accent);
+}
+.err-eyebrow::before{ content:''; width:4px; height:14px; background:var(--e-accent); border-radius:1px; }
+.err-hero h1{
+  font-family:'Instrument Serif',serif; font-weight:400; letter-spacing:-.02em;
+  font-size:clamp(2.6rem,6vw + 1rem,5.25rem); line-height:1.02; margin:18px 0 16px; max-width:18ch;
+}
+.err-hero h1 em{ color:var(--e-accent); font-style:italic; }
+.err-hero .lead{ font-size:clamp(1rem,.6vw + .85rem,1.1875rem); color:var(--e-dim); line-height:1.6; max-width:62ch; }
+.err-path{
+  display:inline-block; font-family:'JetBrains Mono',monospace; font-size:.85em;
+  color:var(--e-accent-2); background:var(--e-surface); border:1px solid var(--e-line);
+  border-radius:6px; padding:2px 9px; margin:0 2px; word-break:break-all;
+}
+
+/* staged entrance */
+.rise{ opacity:0; transform:translateY(16px); animation:rise .7s cubic-bezier(.22,1,.36,1) forwards; }
+@keyframes rise{ to{ opacity:1; transform:none; } }
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}
+.d4{animation-delay:.35s}.d5{animation-delay:.45s}.d6{animation-delay:.55s}
+@media (prefers-reduced-motion: reduce){ .rise{ animation:none; opacity:1; transform:none; } }
+
+/* ── terminal diagnostic ── */
+.err-term{
+  background:var(--e-surface); border:1px solid var(--e-line); border-radius:12px;
+  overflow:hidden; margin-bottom:22px; box-shadow:0 24px 60px -30px rgba(0,0,0,.7);
+}
+.err-term-head{
+  display:flex; align-items:center; gap:8px; padding:12px 16px;
+  background:var(--e-surface-2); border-bottom:1px solid var(--e-line);
+}
+.err-term-head .td{ width:10px; height:10px; border-radius:50%; }
+.err-term-head .td.r{background:#FF5F57}.err-term-head .td.y{background:#FEBC2E}.err-term-head .td.g{background:#28C840}
+.err-term-head .ttl{ margin-left:8px; font-family:'JetBrains Mono',monospace; font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--e-faint); }
+.err-term-body{ padding:18px 20px; font-family:'JetBrains Mono',monospace; font-size:.8125rem; line-height:1.9; }
+.err-term-body .ln{ display:block; white-space:pre-wrap; word-break:break-all; }
+.err-term-body .prompt{ color:var(--e-accent); }
+.err-term-body .cmd{ color:var(--e-text); }
+.err-term-body .ok{ color:var(--e-good); }
+.err-term-body .bad{ color:var(--e-accent); }
+.err-term-body .dim{ color:var(--e-faint); }
+.err-term-body .info{ color:var(--e-info); }
+.caret{ display:inline-block; width:8px; height:1em; background:var(--e-accent); vertical-align:-2px; animation:blink 1s steps(1) infinite; }
+@keyframes blink{ 50%{ opacity:0; } }
+@media (prefers-reduced-motion: reduce){ .caret{ animation:none; } }
+
+/* ── state banner ── */
+.err-state{
+  display:flex; gap:14px; align-items:flex-start;
+  border:1px solid var(--e-line); border-left:4px solid var(--e-accent);
+  background:var(--e-surface); border-radius:10px; padding:18px 20px; margin-bottom:22px;
+}
+.err-state .ic{ font-family:'JetBrains Mono',monospace; font-size:1.125rem; line-height:1.4; color:var(--e-accent); }
+.err-state h2{ font-family:'Instrument Serif',serif; font-weight:400; font-size:1.375rem; letter-spacing:-.01em; margin-bottom:6px; }
+.err-state p{ font-size:.9375rem; color:var(--e-dim); line-height:1.6; }
+.err-state p a{ color:var(--e-accent-2); font-weight:600; }
+.err-state p a:hover{ color:var(--e-accent); }
+.err-state.moved{ border-left-color:var(--e-good); } .err-state.moved .ic{ color:var(--e-good); }
+.err-state.gone{ border-left-color:var(--e-warn); } .err-state.gone .ic{ color:var(--e-warn); }
+.err-state.wp{ border-left-color:var(--e-info); } .err-state.wp .ic{ color:var(--e-info); }
+
+/* ── redirect countdown ── */
+.err-redirect{ display:none; align-items:center; gap:14px; flex-wrap:wrap; margin-top:14px; }
+.err-redirect.on{ display:flex; }
+.err-redirect .bar{ flex:1 1 160px; height:4px; background:var(--e-surface-2); border-radius:2px; overflow:hidden; min-width:120px; }
+.err-redirect .bar i{ display:block; height:100%; width:100%; background:var(--e-good); transform-origin:left; }
+.err-redirect .cnt{ font-family:'JetBrains Mono',monospace; font-size:.75rem; color:var(--e-dim); letter-spacing:.06em; }
+
+/* ── recovery panels ── */
+.err-cols{ display:grid; grid-template-columns:1fr; gap:22px; margin-bottom:26px; }
+@media (min-width:900px){ .err-cols{ grid-template-columns:1.35fr 1fr; } }
+.err-panel{ background:var(--e-surface); border:1px solid var(--e-line); border-radius:12px; padding:22px; }
+.err-panel .plabel{
+  font-family:'JetBrains Mono',monospace; font-size:.625rem; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--e-accent); margin-bottom:14px; font-weight:600;
+}
+.err-search{ position:relative; }
+.err-search input{
+  width:100%; padding:14px 16px 14px 44px; font-size:1rem; font-family:'Inter',sans-serif;
+  background:var(--e-bg); color:var(--e-text); border:1px solid var(--e-line); border-radius:8px;
+  outline:none; transition:border-color .15s, box-shadow .15s;
+}
+.err-search input::placeholder{ color:var(--e-faint); }
+.err-search input:focus{ border-color:var(--e-accent); box-shadow:0 0 0 4px rgba(255,90,31,.15); }
+.err-search .mag{ position:absolute; left:15px; top:50%; transform:translateY(-50%); color:var(--e-faint); font-size:1.125rem; pointer-events:none; }
+.err-results{ list-style:none; margin:12px 0 0; max-height:280px; overflow-y:auto; display:none;
+  scrollbar-width:thin; scrollbar-color:var(--e-accent) var(--e-surface-2); }
+.err-results.on{ display:block; }
+.err-results::-webkit-scrollbar{ width:8px; }
+.err-results::-webkit-scrollbar-track{ background:var(--e-surface-2); border-radius:4px; }
+.err-results::-webkit-scrollbar-thumb{ background:var(--e-accent); border-radius:4px; }
+.err-results::-webkit-scrollbar-thumb:hover{ background:var(--e-accent-2); }
+.err-results li a{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:11px 12px; border-radius:8px; color:var(--e-text); font-size:.9375rem;
+  border:1px solid transparent; transition:background .12s, border-color .12s;
+}
+.err-results li a .rp{ font-family:'JetBrains Mono',monospace; font-size:.6875rem; color:var(--e-faint); }
+.err-results li a:hover, .err-results li a.active{ background:var(--e-surface-2); border-color:var(--e-line); }
+.err-results li a.active{ border-color:var(--e-accent); }
+.err-results li a.active .rp{ color:var(--e-accent-2); }
+.err-empty{ display:none; margin-top:12px; font-size:.875rem; color:var(--e-dim); line-height:1.6; }
+.err-empty.on{ display:block; }
+.err-empty a{ color:var(--e-accent-2); font-weight:600; }
+.err-hint{ margin-top:12px; font-size:.8125rem; color:var(--e-faint); line-height:1.6; }
+.err-hint kbd{
+  font-family:'JetBrains Mono',monospace; font-size:.6875rem; background:var(--e-surface-2);
+  border:1px solid var(--e-line); border-bottom-width:2px; border-radius:4px; padding:1px 6px; color:var(--e-dim);
+}
+
+/* did-you-mean */
+.err-meant{ display:none; flex-wrap:wrap; gap:8px; margin-top:16px; }
+.err-meant.on{ display:flex; }
+.err-meant .ml{ width:100%; font-family:'JetBrains Mono',monospace; font-size:.625rem; letter-spacing:.16em; text-transform:uppercase; color:var(--e-faint); margin-bottom:2px; }
+.err-meant a{
+  font-family:'JetBrains Mono',monospace; font-size:.75rem; font-weight:600; letter-spacing:.04em;
+  color:var(--e-accent-2); background:var(--e-bg); border:1px solid var(--e-line);
+  border-radius:999px; padding:8px 15px; transition:border-color .15s, color .15s, transform .15s;
+}
+.err-meant a:hover{ border-color:var(--e-accent); color:var(--e-accent); transform:translateY(-2px); }
+
+/* actions */
+.err-actions{ display:flex; flex-direction:column; gap:10px; }
+.ebtn{
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  font-family:'JetBrains Mono',monospace; font-size:.75rem; font-weight:600; letter-spacing:.1em;
+  text-transform:uppercase; padding:14px 18px; border-radius:8px; cursor:pointer;
+  border:1px solid transparent; min-height:48px; transition:transform .15s, background .15s, border-color .15s, box-shadow .15s;
+  text-decoration:none;
+}
+.ebtn:hover{ transform:translateY(-1px); }
+.ebtn:active{ transform:translateY(0); }
+.ebtn.primary{ background:var(--e-accent); color:var(--e-bg); border-color:var(--e-accent); }
+.ebtn.primary:hover{ box-shadow:0 8px 26px -10px var(--e-accent); }
+.ebtn.good{ background:var(--e-good); color:var(--e-bg); border-color:var(--e-good); }
+.ebtn.ghost{ background:transparent; color:var(--e-text); border-color:var(--e-line); }
+.ebtn.ghost:hover{ border-color:var(--e-faint); background:var(--e-surface-2); }
+.ebtn.copied{ background:var(--e-good); color:var(--e-bg); border-color:var(--e-good); }
+.err-actions .row{ display:flex; gap:10px; } .err-actions .row .ebtn{ flex:1; }
+
+/* quick links */
+.err-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:10px; }
+.err-grid a{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  background:var(--e-surface); border:1px solid var(--e-line); border-radius:10px;
+  padding:15px 17px; font-size:.9375rem; font-weight:500; color:var(--e-text);
+  transition:border-color .15s, transform .15s, color .15s, background .15s;
+}
+.err-grid a:hover{ border-color:var(--e-accent); color:var(--e-accent-2); transform:translateY(-2px); background:var(--e-surface-2); }
+.err-grid a .arrow{ color:var(--e-accent); font-family:'JetBrains Mono',monospace; }
+.err-grid a .sub{ display:block; font-family:'JetBrains Mono',monospace; font-size:.625rem; color:var(--e-faint); letter-spacing:.06em; margin-top:3px; }
+
+.err-section-label{
+  font-family:'JetBrains Mono',monospace; font-size:.6875rem; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--e-faint); margin:0 0 14px; font-weight:600;
+}
+.err-note{ margin-top:26px; font-size:.875rem; color:var(--e-dim); line-height:1.6; }
+.err-note a{ color:var(--e-accent-2); font-weight:600; } .err-note a:hover{ color:var(--e-accent); }
+
+/* anchor offset below fixed bar */
+[id]{ scroll-margin-top:calc(var(--e-nav-h) + 16px); }
+
+/* footer sits on the dark field */
+.page-footer{ position:relative; z-index:1; margin-top:0; border-top:1px solid var(--e-line); }
+</style>
 </head>
 <body>
 
-<header class="page-header">
-  <a class="page-header-home" href="./index.html">← ODW.AI</a>
-  <span class="kicker">404</span>
-  <div class="notfound-code" aria-hidden="true">404</div>
-  <h1>This page has <em>moved</em>.</h1>
-  <p class="lead">Looking for something from ondemandworld.com? The site now lives on ODW.ai — the main pages were carried over and kept their addresses. Try one of these:</p>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="err-bg" aria-hidden="true">
+  <div class="grid"></div>
+  <div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+  <div class="scan"></div>
+  <div class="grain"></div>
+</div>
+
+<header class="err-topbar" role="banner">
+  <a class="brand" href="./index.html" aria-label="ODW.ai home">
+    <img src="./odwai-logo-dark-600x191.png" alt="ODW.AI" width="82" height="26">
+  </a>
+  <nav aria-label="Error page">
+    <a href="./index.html">Home</a>
+    <a href="./faq/index.html" class="hide-sm">FAQ</a>
+    <a href="./our-products/" class="hide-sm">Products</a>
+    <a href="./contact-us/" class="hide-sm">Contact</a>
+    <span class="err-net" id="errNet" role="status"><span class="dot" aria-hidden="true"></span><span id="errNetTxt">online</span></span>
+  </nav>
 </header>
 
-<main class="page-container" id="main">
-  <div class="notfound-grid">
-    <a href="./index.html">ODW.ai Home <span class="arrow">→</span></a>
-    <a href="./faq/index.html">FAQ <span class="arrow">→</span></a>
-    <a href="./about-us/">About Us <span class="arrow">→</span></a>
-    <a href="./contact-us/">Contact Us <span class="arrow">→</span></a>
-    <a href="./our-products/">Our Products <span class="arrow">→</span></a>
-    <a href="./privacy-policy/">Privacy Policy <span class="arrow">→</span></a>
-    <a href="./terms-and-conditions/">Terms &amp; Conditions <span class="arrow">→</span></a>
-    <a href="./house-rules/">House Rules <span class="arrow">→</span></a>
-    <a href="https://github.com/OnDemandWorld" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow">↗</span></a>
+<main class="err-wrap" id="main">
+
+  <section class="err-hero">
+    <span class="err-eyebrow rise d1">Error 404 · route not found</span>
+    <h1 class="rise d2">This page is <em>off the map.</em></h1>
+    <p class="lead rise d3">
+      Nothing on ODW.ai lives at <span class="err-path" id="missPath">this address</span>.
+      It may be a typo, an old bookmark, or a link that predates the move from
+      ondemandworld.com. Let's route you somewhere real.
+    </p>
+  </section>
+
+  <figure class="err-term rise d4" aria-label="Route diagnostic">
+    <figcaption class="err-term-head">
+      <span class="td r"></span><span class="td y"></span><span class="td g"></span>
+      <span class="ttl">odw · route resolver</span>
+    </figcaption>
+    <div class="err-term-body">
+      <span class="ln"><span class="prompt">$</span> <span class="cmd" id="termCmd">odw resolve …</span><span class="caret" id="termCaret" aria-hidden="true"></span></span>
+      <span class="ln bad" id="termStatus">✗ 404 — no route matched</span>
+      <span class="ln dim" id="termHint">scanning known routes…</span>
+    </div>
+  </figure>
+
+  <div class="err-state rise d5" id="errState" role="status" aria-live="polite">
+    <span class="ic" id="errStateIc" aria-hidden="true">✗</span>
+    <div>
+      <h2 id="errStateTitle">No route matched.</h2>
+      <p id="errStateBody">We checked every page on odw.ai and nothing lives at this address. Search below, or pick a destination — the main pages all kept their addresses when the site moved.</p>
+      <div class="err-redirect" id="errRedirect">
+        <a class="ebtn good" id="errGo" href="./index.html">Continue →</a>
+        <div class="bar" aria-hidden="true"><i id="errBar"></i></div>
+        <span class="cnt" id="errCount">redirecting in 6s</span>
+        <button class="ebtn ghost" id="errCancel" type="button">Stay here</button>
+      </div>
+    </div>
   </div>
 
-  <div class="note" style="margin-top:24px;">
-    <strong>Still lost?</strong>
-    Email <a href="mailto:hello@odw.ai">hello@odw.ai</a> and we'll point you in the right direction.
+  <div class="err-cols">
+    <section class="err-panel rise d5" aria-label="Search the site">
+      <div class="plabel">Search every page</div>
+      <div class="err-search">
+        <span class="mag" aria-hidden="true">⌕</span>
+        <input type="search" id="errSearch" placeholder="Try “privacy”, “contact”, “assettech”…"
+               autocomplete="off" spellcheck="false" aria-label="Search all pages"
+               aria-controls="errResults" aria-expanded="false">
+      </div>
+      <ul class="err-results" id="errResults" role="listbox" aria-label="Search results"></ul>
+      <p class="err-empty" id="errEmpty"></p>
+      <p class="err-hint" id="errHint"><kbd>↑</kbd> <kbd>↓</kbd> to move · <kbd>enter</kbd> to open · <kbd>esc</kbd> to clear</p>
+      <div class="err-meant" id="errMeant" aria-label="Suggested pages"></div>
+      <div class="err-meant on" id="errPopular" aria-label="Popular pages">
+        <span class="ml">Popular routes</span>
+        <a href="./privacy-policy/">Privacy Policy</a>
+        <a href="./contact-us/">Contact Us</a>
+        <a href="./our-products/">Our Products</a>
+        <a href="./faq/index.html">FAQ library</a>
+        <a href="./about-us/">About Us</a>
+      </div>
+    </section>
+
+    <section class="err-panel rise d6" aria-label="Recovery actions">
+      <div class="plabel">Quick recovery</div>
+      <div class="err-actions">
+        <a class="ebtn primary" href="./index.html">★ Take me home</a>
+        <div class="row">
+          <button class="ebtn ghost" id="errCopy" type="button">Copy path</button>
+          <button class="ebtn ghost" id="errBack" type="button">← Back</button>
+        </div>
+        <a class="ebtn ghost" id="errReport" href="mailto:hello@odw.ai">Report broken link</a>
+      </div>
+      <p class="err-hint" style="margin-top:16px;">Found a link that led you here? Reporting it helps us fix the map for everyone.</p>
+    </section>
   </div>
+
+  <p class="err-section-label rise d6">Or jump straight to</p>
+  <div class="err-grid rise d6">
+    <a href="./index.html"><span>ODW.ai Home<span class="sub">/</span></span><span class="arrow">→</span></a>
+    <a href="./faq/index.html"><span>FAQ library<span class="sub">/faq/</span></span><span class="arrow">→</span></a>
+    <a href="./about-us/"><span>About Us<span class="sub">/about-us/</span></span><span class="arrow">→</span></a>
+    <a href="./contact-us/"><span>Contact Us<span class="sub">/contact-us/</span></span><span class="arrow">→</span></a>
+    <a href="./our-products/"><span>Our Products<span class="sub">/our-products/</span></span><span class="arrow">→</span></a>
+    <a href="./privacy-policy/"><span>Privacy Policy<span class="sub">/privacy-policy/</span></span><span class="arrow">→</span></a>
+    <a href="./terms-and-conditions/"><span>Terms &amp; Conditions<span class="sub">/terms-and-conditions/</span></span><span class="arrow">→</span></a>
+    <a href="./house-rules/"><span>House Rules<span class="sub">/house-rules/</span></span><span class="arrow">→</span></a>
+    <a href="https://github.com/OnDemandWorld" target="_blank" rel="noopener noreferrer"><span>GitHub<span class="sub">source code</span></span><span class="arrow">↗</span></a>
+  </div>
+
+  <p class="err-note">Still lost? Email <a href="mailto:hello@odw.ai">hello@odw.ai</a> and a human will point you in the right direction.</p>
+
+  <noscript>
+    <p class="err-note">JavaScript is off, so smart suggestions and search are unavailable — but every link above works, and the main pages kept their addresses when the site moved from ondemandworld.com.</p>
+  </noscript>
 </main>
 
 <footer class="page-footer">
   <div class="page-footer-inner">
-    <div class="page-footer-meta" style="border-top:none; padding-top:0;">
+    <div class="page-footer-grid">
+      <div class="page-footer-col">
+        <div class="col-label">Company</div>
+        <a href="./about-us/">About Us</a>
+        <a href="./contact-us/">Contact Us</a>
+        <a href="./our-products/">Our Products</a>
+      </div>
+      <div class="page-footer-col">
+        <div class="col-label">Legal</div>
+        <a href="./privacy-policy/">Privacy Policy</a>
+        <a href="./terms-and-conditions/">Terms &amp; Conditions</a>
+        <a href="./house-rules/">House Rules</a>
+      </div>
+      <div class="page-footer-col">
+        <div class="col-label">ODW.ai</div>
+        <a href="./index.html">Home</a>
+        <a href="./faq/index.html">FAQ</a>
+        <a href="https://github.com/OnDemandWorld" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+      <div class="page-footer-col">
+        <div class="col-label">Legacy apps</div>
+        <a href="./about/apps/echo/">Echo</a>
+        <a href="./about/apps/pinyinchart/">PinyinChart</a>
+        <a href="./about/apps/techhub/">TechHub</a>
+      </div>
+    </div>
+    <div class="page-footer-meta">
       <span class="mono">© 2026 ODW.AI · ONDEMANDWORLD LIMITED</span>
       <span>Built in the open · Apache 2.0 and MIT · Made for the world's SMBs</span>
     </div>
   </div>
 </footer>
 
-<script src="./company.js"></script>
+<script>
+(function () {
+  'use strict';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* The path the visitor actually asked for. */
+  var rawPath = window.location.pathname || '/';
+  var path = rawPath.replace(/\/+$/, '') || '/';
+  var query = window.location.search || '';
+
+  /* ── page index (real routes on this site) ── */
+  var INDEX = [
+    { t: 'ODW.ai Home', p: './index.html', k: 'home main modules suite operational ai smb' },
+    { t: 'FAQ library', p: './faq/index.html', k: 'faq questions help answers' },
+    { t: 'Suite FAQ', p: './faq/suite.html', k: 'faq sovereignty security compliance pricing deployment' },
+    { t: 'Desk FAQ', p: './faq/desk.html', k: 'faq desk customer support whatsapp' },
+    { t: 'Vault FAQ', p: './faq/vault.html', k: 'faq vault knowledge rag' },
+    { t: 'Loop FAQ', p: './faq/loop.html', k: 'faq loop workflow orchestration' },
+    { t: 'Recap FAQ', p: './faq/recap.html', k: 'faq recap meetings transcription' },
+    { t: 'Pulse FAQ', p: './faq/pulse.html', k: 'faq pulse marketing content' },
+    { t: 'Voice FAQ', p: './faq/voice.html', k: 'faq voice receptionist phone' },
+    { t: 'Hunt FAQ', p: './faq/hunt.html', k: 'faq hunt sales sdr outbound' },
+    { t: 'Books FAQ', p: './faq/books.html', k: 'faq books bookkeeping accounting' },
+    { t: 'People FAQ', p: './faq/people.html', k: 'faq people hiring hr' },
+    { t: 'Shield FAQ', p: './faq/shield.html', k: 'faq shield security cybersecurity' },
+    { t: 'About Us', p: './about-us/', k: 'about company history team hiring timeline' },
+    { t: 'Contact Us', p: './contact-us/', k: 'contact email meeting calendly office hours' },
+    { t: 'Our Products', p: './our-products/', k: 'products legacy assettech niftnack techhub domains' },
+    { t: 'Privacy Policy', p: './privacy-policy/', k: 'privacy policy data protection gdpr' },
+    { t: 'Terms & Conditions', p: './terms-and-conditions/', k: 'terms conditions legal licence warranty' },
+    { t: 'House Rules', p: './house-rules/', k: 'house rules community moderation conduct' },
+    { t: 'AssetTech — open source', p: './2024/01/assettech-a-tokenization-solution-based-on-the-erc-1400-sto-security-token-offering-standard/', k: 'assettech erc1400 sto rwa tokenization blockchain open source' },
+    { t: 'Niftnack — NFT platform', p: './2024/01/niftnack-nft-platform-for-collecting-digital-assets-memberships-and-loyalty-points/', k: 'niftnack nft digital assets loyalty memberships' },
+    { t: 'TechHub Jobs — tokenomics', p: './2024/01/techhub-jobs-recruitment-platform-with-tokenomics/', k: 'techhub jobs recruitment tokenomics hiring' },
+    { t: 'Echo (legacy app)', p: './about/apps/echo/', k: 'echo legacy app about' },
+    { t: 'Fizzy (legacy app)', p: './about/apps/fizzy/', k: 'fizzy legacy app about' },
+    { t: 'Niftnack (legacy app)', p: './about/apps/niftnack/', k: 'niftnack legacy app about' },
+    { t: 'PinyinChart (legacy app)', p: './about/apps/pinyinchart/', k: 'pinyinchart chinese language legacy app' },
+    { t: 'TechHub (legacy app)', p: './about/apps/techhub/', k: 'techhub legacy app about' }
+  ];
+
+  /* ── high-confidence legacy aliases → live routes ── */
+  var ALIAS = {
+    '/privacy': './privacy-policy/', '/privacy-policy/feed': './privacy-policy/',
+    '/terms': './terms-and-conditions/', '/terms-of-use': './terms-and-conditions/',
+    '/terms-of-service': './terms-and-conditions/', '/terms-and-conditions/feed': './terms-and-conditions/',
+    '/house-rules/feed': './house-rules/',
+    '/about': './about-us/', '/about-ondemandworld': './about-us/', '/about-us/feed': './about-us/',
+    '/contact': './contact-us/', '/contact-us/feed': './contact-us/',
+    '/products': './our-products/', '/product': './our-products/', '/our-products/feed': './our-products/',
+    '/2024': './our-products/', '/2024/01': './our-products/',
+    '/category/assettech': './2024/01/assettech-a-tokenization-solution-based-on-the-erc-1400-sto-security-token-offering-standard/',
+    '/category/niftnack': './2024/01/niftnack-nft-platform-for-collecting-digital-assets-memberships-and-loyalty-points/',
+    '/category/techhub-jobs': './2024/01/techhub-jobs-recruitment-platform-with-tokenomics/',
+    '/author/eplt': './about-us/'
+  };
+  /* WordPress ?p= / ?page_id= IDs from the old database */
+  var WP_IDS = { '3': './privacy-policy/', '59': './terms-and-conditions/', '197': './house-rules/',
+                 '27': './about-us/', '28': './contact-us/', '23': './index.html' };
+  var WP_RX = /^\/(wp-admin|wp-login\.php|wp-content|wp-includes|xmlrpc\.php|feed|comments\/feed|.*\/feed)(\/|$)/;
+  var GONE = ['/techhub-jobs', '/niftnack', '/assettech', '/apps', '/download', '/downloads', '/pricing'];
+
+  /* ── classify the request ── */
+  function classify() {
+    var idMatch = query.match(/[?&](?:p|page_id)=(\d+)/);
+    if (idMatch && WP_IDS[idMatch[1]]) return { kind: 'moved', target: WP_IDS[idMatch[1]] };
+    if (ALIAS[path]) return { kind: 'moved', target: ALIAS[path] };
+    if (WP_RX.test(path)) return { kind: 'wp' };
+    if (GONE.indexOf(path) !== -1) return { kind: 'gone' };
+    return { kind: 'notfound' };
+  }
+  var state = classify();
+  var countdownTimer = null;
+
+  /* ── show the missing path (textContent only — never inject markup) ── */
+  $('missPath').textContent = rawPath + query;
+
+  /* ── terminal typing ── */
+  var cmdText = 'odw resolve "' + rawPath + query + '"';
+  var cmdEl = $('termCmd');
+  function finishTerm() {
+    cmdEl.textContent = cmdText;
+    $('termCaret').style.display = 'none';
+    var hint = $('termHint');
+    if (state.kind === 'moved') {
+      $('termStatus').textContent = '→ 301 — legacy route located';
+      $('termStatus').className = 'ln ok';
+      hint.textContent = 'match: ' + state.target + '  ·  handing off…';
+      hint.className = 'ln info';
+    } else if (state.kind === 'wp') {
+      $('termStatus').textContent = '✗ 410 — WordPress endpoint retired';
+      hint.textContent = 'this site is static HTML now; no wp-* routes exist';
+    } else if (state.kind === 'gone') {
+      $('termStatus').textContent = '✗ 410 — content retired';
+      hint.textContent = 'not carried over in the migration to odw.ai';
+    } else {
+      $('termStatus').textContent = '✗ 404 — no route matched';
+      hint.textContent = INDEX.length + ' known routes scanned · 0 matches · suggestions below';
+    }
+  }
+  if (reduce) { finishTerm(); }
+  else {
+    var i = 0;
+    cmdEl.textContent = '';
+    var typer = setInterval(function () {
+      i++;
+      cmdEl.textContent = cmdText.slice(0, i);
+      if (i >= cmdText.length) { clearInterval(typer); setTimeout(finishTerm, 220); }
+    }, 16);
+  }
+
+  /* ── state banner ── */
+  var box = $('errState');
+  function setState(kind, title, body, ic) {
+    box.className = 'err-state rise d5 ' + kind;
+    $('errStateIc').textContent = ic;
+    $('errStateTitle').textContent = title;
+    $('errStateBody').textContent = body;
+  }
+  if (state.kind === 'moved') {
+    setState('moved', 'Good news — that address moved.',
+      'This was a permalink on the old ondemandworld.com WordPress site. The page now lives at a new address on ODW.ai, and we can take you straight there.', '→');
+    var go = $('errGo');
+    go.href = state.target;
+    go.textContent = 'Continue to ' + state.target.replace('./', '/').replace(/\/$/, '') + ' →';
+    $('errRedirect').classList.add('on');
+    startCountdown(state.target);
+  } else if (state.kind === 'wp') {
+    setState('wp', 'That’s a WordPress endpoint.',
+      'ondemandworld.com used to run on WordPress. This site is now plain static HTML on GitHub Pages, so wp-admin, feeds and xmlrpc no longer exist. Everything worth reading moved to the pages below.', '⌁');
+  } else if (state.kind === 'gone') {
+    setState('gone', 'This content was retired.',
+      'That address belonged to legacy catalogue content that wasn’t carried over in the move to ODW.ai. The closest living pages are Our Products and About Us.', '⊘');
+  } else {
+    setState('', 'No route matched.',
+      'We checked every page on odw.ai and nothing lives at this address. Search below, or pick a destination — the main pages all kept their addresses when the site moved.', '✗');
+  }
+
+  /* ── auto-redirect with a visible, cancellable countdown ── */
+  function startCountdown(target) {
+    var secs = 6, left = secs;
+    var bar = $('errBar'), cnt = $('errCount');
+    function tick() {
+      cnt.textContent = 'redirecting in ' + left + 's';
+      bar.style.transform = 'scaleX(' + (left / secs) + ')';
+      if (left <= 0) { clearInterval(countdownTimer); window.location.replace(target); return; }
+      left--;
+    }
+    tick();
+    countdownTimer = setInterval(tick, 1000);
+    $('errCancel').addEventListener('click', function () {
+      clearInterval(countdownTimer);
+      $('errRedirect').classList.remove('on');
+      cnt.textContent = 'redirect cancelled';
+    });
+  }
+
+  /* ── did-you-mean (fuzzy) ── */
+  function lev(a, b) {
+    if (a === b) return 0;
+    var m = a.length, n = b.length;
+    if (!m) return n; if (!n) return m;
+    var prev = [], cur = [], i, j;
+    for (j = 0; j <= n; j++) prev[j] = j;
+    for (i = 1; i <= m; i++) {
+      cur[0] = i;
+      for (j = 1; j <= n; j++) {
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      }
+      var tmp = prev; prev = cur; cur = tmp;
+    }
+    return prev[n];
+  }
+  function slugOf(p) { return p.replace(/^\.\//, '').replace(/\/$/, '').split('/').pop() || 'home'; }
+  var needle = slugOf(path).toLowerCase().replace(/[^a-z0-9]/g, '');
+  var meant = [];
+  if (needle && needle.length > 2) {
+    INDEX.forEach(function (e) {
+      var s = slugOf(e.p).toLowerCase().replace(/[^a-z0-9]/g, '');
+      var d = lev(needle, s);
+      if (d <= 3 || s.indexOf(needle) === 0 || needle.indexOf(s) === 0) meant.push({ e: e, d: d });
+    });
+    meant.sort(function (a, b) { return a.d - b.d; });
+    meant = meant.slice(0, 3);
+  }
+  if (meant.length) {
+    var mw = $('errMeant');
+    mw.classList.add('on');
+    var lbl = document.createElement('span');
+    lbl.className = 'ml'; lbl.textContent = 'Did you mean';
+    mw.appendChild(lbl);
+    meant.forEach(function (m) {
+      var a = document.createElement('a');
+      a.href = m.e.p; a.textContent = m.e.t;
+      mw.appendChild(a);
+    });
+  }
+
+  /* ── live search with keyboard navigation ── */
+  var input = $('errSearch'), list = $('errResults'), empty = $('errEmpty'), hint = $('errHint');
+  var popular = $('errPopular');
+  function syncPopular() { popular.classList.toggle('on', !input.value.trim() && !meant.length); }
+  syncPopular();
+  var active = -1, current = [];
+  function score(e, tokens) {
+    var t = e.t.toLowerCase(), k = e.k.toLowerCase(), p = e.p.toLowerCase(), s = 0;
+    tokens.forEach(function (tok) {
+      if (t.indexOf(tok) !== -1) s += 3;
+      if (k.indexOf(tok) !== -1) s += 2;
+      if (p.indexOf(tok) !== -1) s += 1;
+    });
+    return s;
+  }
+  function render() {
+    var q = input.value.trim().toLowerCase();
+    list.innerHTML = '';
+    active = -1; current = [];
+    if (!q) {
+      list.classList.remove('on'); empty.classList.remove('on');
+      hint.style.display = ''; input.setAttribute('aria-expanded', 'false');
+      syncPopular();
+      return;
+    }
+    hint.style.display = 'none';
+    popular.classList.remove('on');
+    var tokens = q.split(/\s+/).filter(Boolean);
+    current = INDEX.map(function (e) { return { e: e, s: score(e, tokens) }; })
+                   .filter(function (r) { return r.s > 0; })
+                   .sort(function (a, b) { return b.s - a.s; })
+                   .slice(0, 8).map(function (r) { return r.e; });
+    if (!current.length) {
+      list.classList.remove('on');
+      empty.classList.add('on');
+      empty.textContent = 'No matches for “' + input.value.trim() + '”. Try “privacy”, “contact”, “products” or “faq” — or email hello@odw.ai and we’ll find it for you.';
+      input.setAttribute('aria-expanded', 'false');
+      return;
+    }
+    empty.classList.remove('on');
+    list.classList.add('on');
+    input.setAttribute('aria-expanded', 'true');
+    current.forEach(function (e, idx) {
+      var li = document.createElement('li');
+      li.setAttribute('role', 'option');
+      li.id = 'errOpt' + idx;
+      var a = document.createElement('a');
+      a.href = e.p;
+      var name = document.createElement('span'); name.textContent = e.t;
+      var rp = document.createElement('span'); rp.className = 'rp'; rp.textContent = e.p.replace('./', '/');
+      a.appendChild(name); a.appendChild(rp);
+      a.addEventListener('mouseenter', function () { setActive(idx); });
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+  }
+  function setActive(idx) {
+    active = idx;
+    var links = list.querySelectorAll('a');
+    links.forEach(function (a, i) {
+      a.classList.toggle('active', i === idx);
+      a.parentElement.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+    if (idx >= 0 && links[idx]) {
+      input.setAttribute('aria-activedescendant', 'errOpt' + idx);
+      links[idx].scrollIntoView({ block: 'nearest' });
+    } else {
+      input.removeAttribute('aria-activedescendant');
+    }
+  }
+  input.addEventListener('input', render);
+  input.addEventListener('keydown', function (ev) {
+    if (ev.key === 'ArrowDown') { ev.preventDefault(); if (current.length) setActive(Math.min(active + 1, current.length - 1)); }
+    else if (ev.key === 'ArrowUp') { ev.preventDefault(); if (current.length) setActive(Math.max(active - 1, 0)); }
+    else if (ev.key === 'Enter') { if (active >= 0 && current[active]) { ev.preventDefault(); window.location.assign(current[active].p); } }
+    else if (ev.key === 'Escape') { input.value = ''; render(); }
+  });
+
+  /* ── copy path / report / back ── */
+  var copyBtn = $('errCopy');
+  function copied() {
+    var old = copyBtn.textContent;
+    copyBtn.textContent = '✓ Copied';
+    copyBtn.classList.add('copied');
+    setTimeout(function () { copyBtn.textContent = old; copyBtn.classList.remove('copied'); }, 1600);
+  }
+  copyBtn.addEventListener('click', function () {
+    var text = window.location.origin + rawPath + query;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(copied, function () { fallbackCopy(text); });
+    } else { fallbackCopy(text); }
+  });
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); copied(); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+  var report = $('errReport');
+  report.href = 'mailto:hello@odw.ai?subject=' + encodeURIComponent('Broken link on odw.ai') +
+    '&body=' + encodeURIComponent('Hi ODW team,\n\nI followed a link that led to a 404:\n' +
+      window.location.origin + rawPath + query + '\n\nReferrer: ' + (document.referrer || '(direct / unknown)') +
+      '\n\nCould you fix or redirect it?\n\nThanks!');
+  $('errBack').addEventListener('click', function () {
+    if (window.history.length > 1) window.history.back();
+    else window.location.assign('./index.html');
+  });
+
+  /* ── online / offline status pill ── */
+  function net() {
+    var on = navigator.onLine !== false;
+    $('errNet').classList.toggle('offline', !on);
+    $('errNetTxt').textContent = on ? 'online' : 'offline';
+  }
+  window.addEventListener('online', net);
+  window.addEventListener('offline', net);
+  net();
+})();
+</script>
 </body>
 </html>

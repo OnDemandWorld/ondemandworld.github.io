@@ -82,8 +82,9 @@
 .DS_Store
 v2-wip/
 
-# ...but robots.txt is a site file, not a doc (must come after *.txt)
+# ...but robots.txt / ads.txt are site files, not docs (must come after *.txt)
 !robots.txt
+!ads.txt
 
 # Tracked documentation (must come after *.md)
 !README.md
