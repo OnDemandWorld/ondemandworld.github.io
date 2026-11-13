@@ -2,6 +2,17 @@
 
 All notable changes to this site are documented here. Dates are YYYY-MM-DD.
 
+## 2026-11-14 — Google AdSense integration
+
+- Added the AdSense head snippet (`adsbygoogle.js?client=ca-pub-8132571525903363`,
+  `async` + `crossorigin="anonymous"`) to all 48 content pages: home + both locale
+  homes, the 12 FAQ documents ×3 locales, the six company/legal pages, and the three
+  `/2024/01/` product posts. Publisher ID matches the existing `ads.txt`.
+- Deliberately **not** added to `404.html` (error pages must not carry ads) or the
+  legacy `about/` app pages (kept as-is per owner instruction).
+- Verified in a real browser: snippet present in the DOM on home/FAQ/legal, existing
+  page JS and layout unaffected, zero page errors; home screenshot unchanged.
+
 ## 2026-11-13 — Smarter error surface; ads.txt
 
 ### Changed — `404.html` rebuilt as a "route resolver"

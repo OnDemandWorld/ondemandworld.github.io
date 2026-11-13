@@ -89,6 +89,17 @@ of truth; ZH files carry a `DRAFT — needs native-speaker review` marker and a
 and bump the date. `hreflang` alternates are bidirectional across all three. Product
 names and the ODW.ai brand stay English. See `CLAUDE.md` for the full workflow.
 
+## Advertising
+
+The site is monetized with Google AdSense (publisher `ca-pub-8132571525903363`):
+
+- `ads.txt` at the root declares the authorized seller line.
+- The AdSense head snippet (`adsbygoogle.js`, `async`, `crossorigin="anonymous"`) is
+  included on every content page: home + locale homes, all FAQ documents, the
+  company/legal pages, and the product posts.
+- It is intentionally **omitted** from `404.html` (error pages must not serve ads) and
+  from the legacy `about/` app pages, which are preserved as-is.
+
 ## Deployment
 
 Pushes to `main` trigger `.github/workflows/static.yml`, which checks out the repo,
