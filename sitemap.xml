@@ -1,16 +1,371 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://odw.ai/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://odw.ai/zh-cn/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://odw.ai/zh-hk/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://odw.ai/faq/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://odw.ai/about-us/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://odw.ai/contact-us/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://odw.ai/our-products/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://odw.ai/privacy-policy/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://odw.ai/terms-and-conditions/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://odw.ai/house-rules/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://odw.ai/2024/01/assettech-a-tokenization-solution-based-on-the-erc-1400-sto-security-token-offering-standard/</loc><lastmod>2025-12-30</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://odw.ai/2024/01/niftnack-nft-platform-for-collecting-digital-assets-memberships-and-loyalty-points/</loc><lastmod>2024-01-16</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://odw.ai/2024/01/techhub-jobs-recruitment-platform-with-tokenomics/</loc><lastmod>2024-01-16</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://odw.ai/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/suite.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/suite.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/suite.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/suite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/suite.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/suite.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/suite.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/suite.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/suite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/suite.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/suite.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/suite.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/suite.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/suite.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/suite.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/desk.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/desk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/desk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/desk.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/desk.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/desk.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/desk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/desk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/desk.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/desk.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/desk.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/desk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/desk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/desk.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/desk.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/vault.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/vault.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/vault.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/vault.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/vault.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/vault.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/vault.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/vault.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/vault.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/vault.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/vault.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/vault.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/vault.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/vault.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/vault.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/loop.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/loop.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/loop.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/loop.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/loop.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/loop.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/loop.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/loop.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/loop.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/loop.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/loop.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/loop.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/loop.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/loop.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/loop.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/recap.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/recap.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/recap.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/recap.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/recap.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/recap.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/recap.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/recap.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/recap.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/recap.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/recap.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/recap.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/recap.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/recap.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/recap.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/pulse.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/pulse.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/pulse.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/pulse.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/pulse.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/pulse.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/pulse.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/pulse.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/pulse.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/pulse.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/pulse.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/pulse.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/pulse.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/pulse.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/pulse.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/voice.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/voice.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/voice.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/voice.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/voice.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/voice.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/voice.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/voice.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/voice.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/voice.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/voice.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/voice.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/voice.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/voice.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/voice.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/hunt.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/hunt.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/hunt.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/hunt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/hunt.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/hunt.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/hunt.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/hunt.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/hunt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/hunt.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/hunt.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/hunt.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/hunt.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/hunt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/hunt.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/books.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/books.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/books.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/books.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/books.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/books.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/books.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/books.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/books.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/books.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/books.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/books.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/books.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/books.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/books.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/people.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/people.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/people.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/people.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/people.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/people.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/people.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/people.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/people.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/people.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/people.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/people.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/people.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/people.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/people.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/faq/shield.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/shield.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/shield.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/shield.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/shield.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-cn/faq/shield.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/shield.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/shield.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/shield.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/shield.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/zh-hk/faq/shield.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://odw.ai/faq/shield.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://odw.ai/zh-cn/faq/shield.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-HK" href="https://odw.ai/zh-hk/faq/shield.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://odw.ai/faq/shield.html"/>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/about-us/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/contact-us/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/our-products/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/privacy-policy/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/terms-and-conditions/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/house-rules/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/2024/01/assettech-a-tokenization-solution-based-on-the-erc-1400-sto-security-token-offering-standard/</loc>
+    <lastmod>2025-12-30</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/2024/01/niftnack-nft-platform-for-collecting-digital-assets-memberships-and-loyalty-points/</loc>
+    <lastmod>2024-01-16</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/2024/01/techhub-jobs-recruitment-platform-with-tokenomics/</loc>
+    <lastmod>2024-01-16</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/about/apps/echo/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/about/apps/fizzy/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/about/apps/niftnack/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/about/apps/pinyinchart/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://odw.ai/about/apps/techhub/</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
 </urlset>

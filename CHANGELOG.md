@@ -2,6 +2,30 @@
 
 All notable changes to this site are documented here. Dates are YYYY-MM-DD.
 
+## 2026-11-20 — Full-site SEO refactor
+
+Head-only refactor across 53 pages (bodies verified byte-identical to before):
+
+- **Canonical URLs** added everywhere they were missing (home, locales, all 36 FAQ
+  docs, legacy app pages); company/posts already had them. All point at `https://odw.ai`.
+- **Meta descriptions** authored for all 41 pages that lacked them (36 FAQ + 5 legacy);
+  over-long descriptions/titles trimmed (home, products, posts, suite FAQ) to search-friendly lengths.
+- **hreflang** fixed and completed: home triad previously pointed at
+  `ondemandworld.github.io`; now `odw.ai`. Added full en/zh-CN/zh-HK/x-default alternates
+  to all 36 FAQ pages (which have translations but had none).
+- **Open Graph + Twitter cards** added to every page (FAQ and legacy had none; company/posts
+  lacked Twitter), with `og:site_name`, `og:locale` (+alternates), and per-page images.
+- **Structured data (JSON-LD)** added site-wide: Organization + WebSite (home),
+  BreadcrumbList (subpages), FAQPage with all Q&A (33 FAQ docs), CollectionPage/ItemList
+  (FAQ hubs), BlogPosting (3 posts), WebPage (company + legacy).
+- **Unique titles** for the 5 legacy app pages (previously all "OnDemandWorld: About Us")
+  and `lang="en"` added; legacy bodies left as-is.
+- **Sitemap rebuilt**: 13 → 53 URLs (adds all FAQ docs ×3 locales, locale FAQ hubs, legacy
+  pages), with `lastmod` and `xhtml:link` hreflang alternates; XML validated.
+- Verified: 0 duplicate/missing head tags, all JSON-LD parses, FAQ schema question counts
+  match on-page buttons, titles ≤70 / descriptions ≤165 chars, real-browser render check
+  across page types with zero page errors.
+
 ## 2026-11-14 — Google AdSense integration
 
 - Added the AdSense head snippet (`adsbygoogle.js?client=ca-pub-8132571525903363`,

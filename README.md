@@ -89,6 +89,22 @@ of truth; ZH files carry a `DRAFT — needs native-speaker review` marker and a
 and bump the date. `hreflang` alternates are bidirectional across all three. Product
 names and the ODW.ai brand stay English. See `CLAUDE.md` for the full workflow.
 
+## SEO
+
+Every indexable page carries a consistent, complete head:
+
+- Unique `<title>` (≤70 chars) and `<meta name="description">` (≤165 chars).
+- `<link rel="canonical">` at the `https://odw.ai` URL.
+- `hreflang` alternates (en / zh-CN / zh-HK / x-default) on the home and FAQ translation
+  groups, mirrored in `sitemap.xml` via `xhtml:link`.
+- Open Graph (`og:site_name/title/description/type/url/image/locale`) + Twitter cards.
+- JSON-LD structured data: Organization + WebSite (home), BreadcrumbList (subpages),
+  FAQPage (FAQ docs), CollectionPage/ItemList (FAQ hubs), BlogPosting (posts), WebPage.
+- `sitemap.xml` lists all 53 indexable URLs with `lastmod`; `404.html` is `noindex` and
+  excluded. `robots.txt` points at the sitemap.
+
+When adding a page, give it the same head treatment and add it to `sitemap.xml`.
+
 ## Advertising
 
 The site is monetized with Google AdSense (publisher `ca-pub-8132571525903363`):
