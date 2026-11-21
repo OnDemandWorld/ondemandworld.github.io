@@ -2,6 +2,17 @@
 
 All notable changes to this site are documented here. Dates are YYYY-MM-DD.
 
+## 2026-11-22 — app-ads.txt for AdMob
+
+- Added `app-ads.txt` at the root (IAB Tech Lab app-ads.txt spec) with the AdMob seller
+  line `google.com, pub-8132571525903363, DIRECT, f08c47fec0942fa0`, allowlisted in
+  `.gitignore`, served at `https://odw.ai/app-ads.txt`.
+- Domain-match review: Molten (App Store id6758496039) lists developer website
+  `https://odw.ai/` → covered. Fizzy Dating (id1195411966) lists
+  `http://www.ondemandworld.com` → its crawler targets that domain, so either update the
+  App Store Connect developer website to `https://odw.ai` or also serve `app-ads.txt`
+  at `ondemandworld.com` (apex + www) until the domain move completes.
+
 ## 2026-11-20 — Full-site SEO refactor
 
 Head-only refactor across 53 pages (bodies verified byte-identical to before):

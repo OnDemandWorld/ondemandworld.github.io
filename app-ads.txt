@@ -1,0 +1,3 @@
+# app-ads.txt — IAB Tech Lab app-ads.txt for Google AdMob (mobile apps).
+# Served at https://odw.ai/app-ads.txt (developer website root).
+google.com, pub-8132571525903363, DIRECT, f08c47fec0942fa0

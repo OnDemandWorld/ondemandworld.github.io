@@ -109,7 +109,10 @@ When adding a page, give it the same head treatment and add it to `sitemap.xml`.
 
 The site is monetized with Google AdSense (publisher `ca-pub-8132571525903363`):
 
-- `ads.txt` at the root declares the authorized seller line.
+- `ads.txt` at the root declares the authorized seller line (web).
+- `app-ads.txt` at the root declares the same seller for **AdMob (mobile apps)**, per the
+  IAB Tech Lab app-ads.txt spec. It must sit at the root of the developer website exactly
+  as listed in App Store Connect / Google Play Console for each app.
 - The AdSense head snippet (`adsbygoogle.js`, `async`, `crossorigin="anonymous"`) is
   included on every content page: home + locale homes, all FAQ documents, the
   company/legal pages, and the product posts.
